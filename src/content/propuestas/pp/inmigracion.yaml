@@ -1,6 +1,36 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resume el Contrato con España.
 partido: pp
 tema: inmigracion
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: fronteras
+    resumen: >-
+      Propone reforzar las fronteras con medios humanos, materiales y tecnológicos, y con los
+      instrumentos europeos disponibles.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - subtema: integración
+    resumen: >-
+      Se compromete a reducir la inmigración irregular, a ofrecer vías legales a quien venga a
+      prosperar y contribuir, y a promover la integración de quien quiera quedarse.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - subtema: regularización
+    resumen: >-
+      Propone prohibir por ley las regularizaciones colectivas, de modo que la entrada o la
+      permanencia irregular no sirva para obtener la residencia.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - resumen: Plantea que los extranjeros que cometan delitos tengan que abandonar España.
+    cita: "Quien venga a delinquir, deberá marcharse"
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - subtema: nacionalidad
+    resumen: Propone reforzar los criterios de acceso a la nacionalidad española.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-nueva-generacion-propietarios
+  - pp-argumentario-menos-impuestos
