@@ -22,6 +22,7 @@
  * - src/content/partidos/ejemplo.yaml
  * - src/content/fuentes/ejemplo-*.yaml
  * - src/content/propuestas/ejemplo/*.yaml
+ * La misma regla está replicada en `esEjemplo` de scripts/check-content.ts.
  * Las entradas ficticias deben llevar `ficticio: true` (partidos y fuentes)
  * para que la UI las etiquete.
  */

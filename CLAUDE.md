@@ -24,7 +24,7 @@ Astro (salida estática) + TypeScript, content collections con Zod, Vercel, GitH
 - `npm run build` — build estático a `dist/`
 - `npm run preview` — sirve el build
 - `npm run check` — `astro check` (tipos TS/Astro)
-- `npm run check:content` — (pendiente: lo añade la tarea 7)
+- `npm run check:content` — valida referencias fuente/partido/tema y fuentes huérfanas (`ELECCIONES_EJEMPLO=1` incluye los datos ficticios)
 
 ## Autor
 Jose es ingeniero senior (Android/Kotlin); no hace falta explicar fundamentos. Prefiere diffs a reescrituras completas.
