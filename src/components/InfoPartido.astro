@@ -1,0 +1,28 @@
+---
+import type { Partido } from '../lib/modelo';
+
+interface Props {
+  partido: Partido;
+}
+
+// Ámbito visible y notas de coalición plegadas; mismo marcado para todos los partidos.
+const { partido } = Astro.props;
+const { ambito, ficticio } = partido.data;
+---
+
+{ficticio && <span class="marca-prueba">FICTICIO</span>}
+<span class="ambito">{ambito.etiqueta}</span>
+{
+  ambito.notas && ambito.notas.length > 0 && (
+    <details class="notas">
+      <summary>
+        Notas de ámbito<span class="sr-only"> de {partido.data.nombre_corto}</span>
+      </summary>
+      <ul>
+        {ambito.notas.map((n) => (
+          <li>{n}</li>
+        ))}
+      </ul>
+    </details>
+  )
+}
