@@ -1,5 +1,6 @@
 # Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen el
 # Contrato con España y los argumentarios de impuestos y vivienda.
+# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
 partido: pp
 tema: impuestos
 estado: parcial
