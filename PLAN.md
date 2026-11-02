@@ -175,11 +175,11 @@ Los subtemas son cerrados: cada propuesta lleva uno o varios de la lista de su t
 - [x] Índice de temas al principio de la página.
 - [x] Comparaciones compartibles: la selección de partidos se guarda en la URL (`?partidos=pp,psoe`).
 - [x] Filtro por subtema dentro de cada tema, con los subtemas que usan sus propuestas.
-- [ ] Etiquetas de ámbito (D21 solo Madrid/Barcelona; coaliciones regionales).
-- [ ] Indicadores de `estado` y fecha de última revisión por celda.
-- [ ] Página `/fuentes` generada desde la colección `fuentes`.
-- [ ] Accesibilidad básica: contraste, navegación por teclado, las secciones legibles con lector de pantalla.
-- [ ] Colores de partido solo como apoyo, nunca como único portador de información.
+- [x] Etiquetas de ámbito (D21 solo Madrid/Barcelona; coaliciones regionales).
+- [x] Indicadores de `estado` y fecha de última revisión por celda.
+- [x] Página `/fuentes` generada desde la colección `fuentes`.
+- [x] Accesibilidad básica: contraste, navegación por teclado, las secciones legibles con lector de pantalla.
+- [x] Colores de partido solo como apoyo, nunca como único portador de información.
 
 ### Fase 4 · Resto de temas
 - [ ] Completar los 11 temas restantes para los 6 partidos.
@@ -192,8 +192,8 @@ Los subtemas son cerrados: cada propuesta lleva uno o varios de la lista de su t
 
 ### Fase 6 · Pulido y publicación
 - [ ] Página "Quién soy y por qué lo hago".
-- [ ] Aviso visible: "Resúmenes propios; la fuente oficial siempre prevalece. Última actualización: …".
-- [ ] Formulario o enlace para reportar errores (issue de GitHub).
+- [x] Aviso visible: "Resúmenes propios; la fuente oficial siempre prevalece. Última actualización: …".
+- [x] Formulario o enlace para reportar errores (issue de GitHub).
 - [ ] Dominio propio (opcional).
 
 ---
