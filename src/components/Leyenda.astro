@@ -12,7 +12,7 @@ const estados: EstadoVista[] = [...ESTADOS, ...(Astro.props.conSinRevisar ? (['s
 ---
 
 <section class="leyenda" aria-labelledby="leyenda-titulo">
-  <h2 id="leyenda-titulo">Cómo leer cada celda</h2>
+  <h2 id="leyenda-titulo">Cómo leer el estado de cada partido</h2>
   <dl>
     {
       estados.map((e) => (

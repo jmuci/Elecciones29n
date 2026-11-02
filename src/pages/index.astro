@@ -8,6 +8,10 @@ import { cargarDatos } from '../lib/ui';
 const MAX_COMPARAR = 3;
 const { partidos, temas, temasMostrados, celda, fuente } = await cargarDatos();
 const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id, t.id)));
+
+/** Partidos con al menos una propuesta en el tema (para el resumen de cada sección). */
+const conPropuestas = (tema: string): number =>
+  partidos.filter((p) => (celda(p.id, tema)?.data.propuestas.length ?? 0) > 0).length;
 ---
 
 <Base
@@ -22,10 +26,9 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
         documento oficial del partido, con su página o sección.
       </p>
       <p>
-        Los partidos aparecen siempre en el mismo orden: por escaños obtenidos en las generales de julio de 2023, y los
-        partidos nuevos al final. Bajo cada nombre se indica dónde se presenta. Por ahora se muestran {
-          temasMostrados.length
-        } de {temas.length} temas; el resto se irá añadiendo.
+        Despliega un tema para ver las propuestas de cada partido. Los partidos aparecen siempre en el mismo orden: por
+        escaños obtenidos en las generales de julio de 2023, y los partidos nuevos al final. Junto a cada nombre se indica
+        dónde se presenta. Por ahora se muestran {temasMostrados.length} de {temas.length} temas; el resto se irá añadiendo.
       </p>
     </div>
     <Leyenda conSinRevisar={faltanCeldas} />
@@ -35,124 +38,108 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
     temasMostrados.length === 0 ? (
       <p class="contenedor vacio">Aún no hay temas revisados.</p>
     ) : (
-      <>
-        <div class="contenedor vista-tabla">
-          <div class="desplazable" role="region" aria-labelledby="tabla-titulo" tabindex="0">
-            <table style={`--columnas: ${partidos.length}`}>
-              <caption id="tabla-titulo">
-                Propuestas por tema (filas) y partido (columnas)
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col" class="esquina">
-                    Tema
-                  </th>
-                  {partidos.map((p) => (
-                    <th scope="col">
-                      <span class="partido">{p.data.nombre_corto}</span>
-                      <InfoPartido partido={p} />
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {temasMostrados.map((t) => (
-                  <tr>
-                    <th scope="row">{t.data.nombre}</th>
-                    {partidos.map((p) => (
-                      <td>
-                        <ContenidoCelda celda={celda(p.id, t.id)} partido={p} fuente={fuente} />
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+      <div class="contenedor temas">
+        <form class="controles" id="controles" hidden>
+          <fieldset class="control">
+            <legend>Comparar partidos</legend>
+            <p class="ayuda" id="ayuda-comparar">
+              Elige hasta {MAX_COMPARAR}. Si no marcas ninguno, se muestran todos.
+            </p>
+            <ul class="opciones">
+              {partidos.map((p) => (
+                <li>
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="partido"
+                      value={p.id}
+                      aria-describedby="ayuda-comparar estado-comparar"
+                    />
+                    {p.data.nombre_corto}
+                    {p.data.ficticio && <span class="marca-prueba">FICTICIO</span>}
+                  </label>
+                </li>
+              ))}
+            </ul>
+            <p class="ayuda" id="estado-comparar" role="status" data-max={MAX_COMPARAR} data-total={partidos.length} />
+          </fieldset>
+          <div class="acciones">
+            <button type="button" data-accion="abrir">Desplegar todos los temas</button>
+            <button type="button" data-accion="cerrar">Plegar todos</button>
           </div>
-        </div>
+        </form>
 
-        <div class="contenedor vista-tarjetas">
-          <form class="controles" id="controles" hidden>
-            <div class="control">
-              <label for="selector-tema">Tema</label>
-              <select id="selector-tema">
-                {temasMostrados.map((t) => (
-                  <option value={t.id}>{t.data.nombre}</option>
-                ))}
-              </select>
-            </div>
-            <fieldset class="control">
-              <legend>Comparar partidos</legend>
-              <p class="ayuda" id="ayuda-comparar">
-                Elige hasta {MAX_COMPARAR}. Si no marcas ninguno, se muestran todos.
-              </p>
-              <ul class="opciones">
+        {temasMostrados.map((t) => (
+          <details class="tema" id={t.id}>
+            <summary>
+              <h2>{t.data.nombre}</h2>
+              <span class="resumen">
+                {conPropuestas(t.id)} de {partidos.length} partidos con propuestas
+              </span>
+            </summary>
+            <div class="cuerpo">
+              {t.data.descripcion && <p class="descripcion">{t.data.descripcion}</p>}
+              <ol class="partidos">
                 {partidos.map((p) => (
-                  <li>
-                    <label>
-                      <input
-                        type="checkbox"
-                        name="partido"
-                        value={p.id}
-                        aria-describedby="ayuda-comparar estado-comparar"
-                      />
-                      {p.data.nombre_corto}
-                      {p.data.ficticio && <span class="marca-prueba">FICTICIO</span>}
-                    </label>
-                  </li>
-                ))}
-              </ul>
-              <p class="ayuda" id="estado-comparar" role="status" data-max={MAX_COMPARAR} data-total={partidos.length} />
-            </fieldset>
-          </form>
-
-          {temasMostrados.map((t) => (
-            <section class="tema" data-tema={t.id} aria-labelledby={`tema-${t.id}`}>
-              <h2 id={`tema-${t.id}`}>{t.data.nombre}</h2>
-              <ul class="tarjetas">
-                {partidos.map((p) => (
-                  <li class="tarjeta" data-partido={p.id}>
-                    <article aria-labelledby={`tarjeta-${t.id}-${p.id}`}>
+                  <li class="partido" data-partido={p.id}>
+                    <section aria-labelledby={`${t.id}-${p.id}`}>
                       <header>
-                        <h3 id={`tarjeta-${t.id}-${p.id}`}>{p.data.nombre_corto}</h3>
+                        <h3 id={`${t.id}-${p.id}`}>{p.data.nombre_corto}</h3>
                         <InfoPartido partido={p} />
                       </header>
                       <ContenidoCelda celda={celda(p.id, t.id)} partido={p} fuente={fuente} />
-                    </article>
+                    </section>
                   </li>
                 ))}
-              </ul>
-            </section>
-          ))}
-        </div>
-      </>
+              </ol>
+            </div>
+          </details>
+        ))}
+      </div>
     )
   }
 </Base>
 
 <script>
   const form = document.querySelector<HTMLFormElement>('#controles');
-  const selector = document.querySelector<HTMLSelectElement>('#selector-tema');
   const estado = document.querySelector<HTMLElement>('#estado-comparar');
+  const temas = [...document.querySelectorAll<HTMLDetailsElement>('details.tema')];
 
-  if (form && selector && estado) {
+  // Abre el tema enlazado con #id (p. ej. /#vivienda).
+  const abrirEnlazado = (): void => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const tema = temas.find((t) => t.id === id);
+    if (tema) {
+      tema.open = true;
+      tema.scrollIntoView();
+    }
+  };
+  abrirEnlazado();
+  window.addEventListener('hashchange', abrirEnlazado);
+
+  // Al imprimir se muestran todos los temas; después se restaura el estado.
+  let abiertos: boolean[] = [];
+  window.addEventListener('beforeprint', () => {
+    abiertos = temas.map((t) => t.open);
+    for (const t of temas) t.open = true;
+  });
+  window.addEventListener('afterprint', () => temas.forEach((t, i) => (t.open = abiertos[i] ?? false)));
+
+  if (form && estado) {
     const max = Number(estado.dataset.max);
     const total = Number(estado.dataset.total);
     const casillas = [...form.querySelectorAll<HTMLInputElement>('input[name="partido"]')];
-    const temas = [...document.querySelectorAll<HTMLElement>('.vista-tarjetas .tema')];
-    const tarjetas = [...document.querySelectorAll<HTMLElement>('.vista-tarjetas .tarjeta')];
+    const bloques = [...document.querySelectorAll<HTMLElement>('details.tema .partido')];
 
     const marcados = (): string[] => casillas.filter((c) => c.checked).map((c) => c.value);
 
     const aplicar = (aviso?: string): void => {
-      for (const t of temas) t.hidden = t.dataset.tema !== selector.value;
       const elegidos = marcados();
-      for (const t of tarjetas) t.hidden = elegidos.length > 0 && !elegidos.includes(t.dataset.partido ?? '');
+      for (const b of bloques) b.hidden = elegidos.length > 0 && !elegidos.includes(b.dataset.partido ?? '');
       const n = elegidos.length || total;
       estado.textContent = aviso ?? `Se muestran ${n} de ${total} partidos.`;
     };
 
-    selector.addEventListener('change', () => aplicar());
     form.addEventListener('change', (e) => {
       const c = e.target;
       if (!(c instanceof HTMLInputElement) || c.name !== 'partido') return;
@@ -162,6 +149,10 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
         return;
       }
       aplicar();
+    });
+    form.addEventListener('click', (e) => {
+      const accion = e.target instanceof HTMLButtonElement ? e.target.dataset.accion : undefined;
+      if (accion) for (const t of temas) t.open = accion === 'abrir';
     });
     form.addEventListener('submit', (e) => e.preventDefault());
 
@@ -192,115 +183,17 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
     color: var(--muted);
   }
 
-  /* — Escritorio: tabla — */
-
-  .vista-tabla {
-    display: none;
+  .temas {
+    display: grid;
+    gap: var(--space-4);
   }
 
-  .desplazable {
-    position: relative;
-    overflow: auto;
-    max-height: calc(100dvh - 2rem);
-    /* Que el foco por teclado no quede oculto bajo la cabecera o la columna fijas. */
-    scroll-padding: 9rem 0 0 9.5rem;
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-    background: var(--surface);
-  }
-
-  table {
-    /* 6 partidos caben sin scroll horizontal a 1280px. */
-    --col-tema: 9rem;
-    width: max(100%, calc(var(--col-tema) + var(--columnas) * 10.75rem));
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 0;
-  }
-
-  caption {
-    padding: var(--space-3) var(--space-4);
-    text-align: left;
-    color: var(--muted);
-    font-size: var(--step--1);
-    background: var(--surface);
-  }
-
-  th,
-  td {
-    padding: var(--space-4);
-    text-align: left;
-    vertical-align: top;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  td + td,
-  thead th + th {
-    border-left: 1px solid var(--rule);
-  }
-
-  thead th {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background: var(--head);
-    border-bottom: 1px solid var(--border-strong);
-    font-weight: 400;
-    vertical-align: bottom;
-  }
-
-  thead th > :global(*) {
-    display: block;
-  }
-
-  thead th > :global(* + *) {
-    margin-top: var(--space-1);
-  }
-
-  thead th :global(.marca-prueba) {
-    justify-self: start;
-    width: max-content;
-  }
-
-  .partido {
-    font-family: var(--font-serif);
-    font-size: var(--step-1);
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .esquina,
-  tbody th {
-    position: sticky;
-    left: 0;
-    width: var(--col-tema);
-    background: var(--head);
-    border-right: 1px solid var(--border-strong);
-  }
-
-  thead th.esquina {
-    z-index: 3;
-    font-family: var(--font-sans);
-    font-size: var(--step--1);
-    font-weight: 600;
-    color: var(--muted);
-  }
-
-  tbody th {
-    z-index: 1;
-    font-family: var(--font-serif);
-    font-size: 1.0625rem;
-    font-weight: 600;
-    hyphens: auto;
-    overflow-wrap: break-word;
-  }
-
-  /* — Móvil: tarjetas por tema — */
+  /* — Controles — */
 
   .controles {
     display: grid;
     gap: var(--space-5);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
     padding: var(--space-4);
     background: var(--surface);
     border: 1px solid var(--rule);
@@ -320,20 +213,9 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
     min-width: 0;
   }
 
-  .control > label,
   legend {
     padding: 0;
     font-weight: 600;
-  }
-
-  select {
-    min-height: 2.75rem;
-    padding: var(--space-2) var(--space-3);
-    font: inherit;
-    color: var(--text);
-    background: var(--bg);
-    border: 1px solid var(--border-strong);
-    border-radius: var(--radius);
   }
 
   .ayuda {
@@ -347,7 +229,7 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
 
   .opciones {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
     gap: var(--space-1) var(--space-4);
     padding: 0;
     list-style: none;
@@ -369,57 +251,136 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
     accent-color: var(--link);
   }
 
-  .tema + .tema {
-    margin-top: var(--space-7);
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
   }
 
-  .tema[hidden],
-  .tarjeta[hidden] {
+  button {
+    min-height: 2.75rem;
+    padding: var(--space-2) var(--space-4);
+    font: inherit;
+    color: var(--link);
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+
+  /* — Temas desplegables — */
+
+  .tema {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    scroll-margin-top: var(--space-4);
+  }
+
+  summary {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    gap: var(--space-1) var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
     display: none;
   }
 
-  .tema h2 {
-    font-size: var(--step-2);
-    margin-bottom: var(--space-4);
+  /* Indicador propio: flecha a la derecha plegado, hacia abajo desplegado. */
+  summary::before {
+    content: '';
+    grid-row: 1;
+    align-self: center;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: var(--space-1);
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: rotate(-45deg);
+    transition: transform 0.15s;
   }
 
-  .tarjetas {
+  .tema[open] > summary::before {
+    transform: rotate(45deg);
+  }
+
+  summary:hover h2 {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .tema[open] > summary {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  summary h2 {
+    font-size: var(--step-2);
+    line-height: 1.2;
+  }
+
+  .resumen {
+    grid-column: 2;
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .cuerpo {
+    padding: var(--space-5);
+  }
+
+  .descripcion {
+    max-width: var(--measure);
+    margin-bottom: var(--space-5);
+    color: var(--muted);
+  }
+
+  .partidos {
     display: grid;
-    gap: var(--space-4);
+    gap: var(--space-6);
+    max-width: var(--measure);
     padding: 0;
     list-style: none;
   }
 
-  .tarjeta article {
+  .partido[hidden] {
+    display: none;
+  }
+
+  .partido + .partido {
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--rule);
+  }
+
+  .partido section {
     display: grid;
-    gap: var(--space-4);
-    padding: var(--space-4);
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
+    gap: var(--space-3);
   }
 
-  .tarjeta header {
-    display: grid;
-    gap: var(--space-1);
-    padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--rule);
+  .partido header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-1) var(--space-3);
   }
 
-  .tarjeta header :global(.marca-prueba) {
-    justify-self: start;
-  }
-
-  .tarjeta h3 {
+  .partido h3 {
+    font-family: var(--font-serif);
     font-size: var(--step-1);
   }
 
-  @media (width >= 48rem) {
-    .vista-tabla {
-      display: block;
+  @media (prefers-reduced-motion: reduce) {
+    summary::before {
+      transition: none;
     }
+  }
 
-    .vista-tarjetas {
+  @media print {
+    .controles {
       display: none;
     }
   }

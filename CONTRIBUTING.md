@@ -18,7 +18,7 @@ Este proyecto resume las propuestas de los partidos. El objetivo es que cualquie
 7. **Verbos neutros:** *propone*, *plantea*, *prevé*, *se compromete a*. Evitar *promete*, *pretende*, *asegura*, *dice que*, que insinúan duda o ironía.
 8. **Sin adjetivos valorativos.** Nada de *ambicioso*, *polémico*, *radical*, *populista*, *valiente*, *insuficiente*… ni siquiera si los usa el propio partido sobre sí mismo.
 9. **Sin interpretar.** Recoger lo que el documento dice, no lo que "en realidad significa" ni sus consecuencias previstas. Si una propuesta es ambigua, se resume con la misma ambigüedad.
-10. **Sin evaluar viabilidad, coste ni constitucionalidad.** La tabla describe propuestas; no las juzga.
+10. **Sin evaluar viabilidad, coste ni constitucionalidad.** La web describe propuestas; no las juzga.
 11. **Mismos términos para lo mismo.** Si dos partidos proponen lo mismo, se describe con las mismas palabras. Usar terminología descriptiva y estable ("inmigración irregular", "vivienda protegida"), no la etiqueta preferida por cada bando.
 12. **Cifras tal cual.** Importes, porcentajes y plazos como aparecen en la fuente, sin redondear ni convertir.
 
