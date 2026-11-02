@@ -48,6 +48,11 @@ export function localizador(pagina: Propuesta['pagina']): string {
   return typeof pagina === 'number' ? `p. ${pagina}` : `sección ${pagina}`;
 }
 
+/** Clave para agrupar subtemas escritos de forma distinta ("Alquiler" = "alquiler"). Vacía si no hay subtema. */
+export function claveSubtema(subtema: string | undefined): string {
+  return subtema?.trim().toLocaleLowerCase('es') ?? '';
+}
+
 /** URL de la fuente; en PDFs con página numérica añade `#page=N`. */
 export function urlPropuesta(fuente: Fuente, pagina: Propuesta['pagina']): string {
   const url = new URL(fuente.data.url);

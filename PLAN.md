@@ -169,7 +169,10 @@ Lista cerrada. Añadir un tema requiere un PR que lo cree para **todos** los par
 
 ### Fase 3 · Interfaz del comparador
 - [x] **Una sola vista (escritorio y móvil):** una sección desplegable por tema, plegada por defecto. Al desplegarla aparecen los 6 partidos en el orden fijo, cada uno con sus propuestas y el enlace a la fuente con página. Sustituye a la tabla temas × partidos, que se leía mal.
-- [x] Selector para comparar 2–3 partidos (se aplica a todos los temas), botones para desplegar o plegar todo y enlace directo a un tema (`/#vivienda`).
+- [x] Selector para comparar 2–3 partidos (se aplica a todos los temas y, en pantallas anchas, los muestra en columnas), botones para desplegar o plegar todo y enlace directo a un tema (`/#vivienda`).
+- [x] Índice de temas al principio de la página.
+- [x] Comparaciones compartibles: la selección de partidos se guarda en la URL (`?partidos=pp,psoe`).
+- [x] Filtro por subtema dentro de cada tema, con los subtemas que usan sus propuestas.
 - [ ] Etiquetas de ámbito (D21 solo Madrid/Barcelona; coaliciones regionales).
 - [ ] Indicadores de `estado` y fecha de última revisión por celda.
 - [ ] Página `/fuentes` generada desde la colección `fuentes`.
