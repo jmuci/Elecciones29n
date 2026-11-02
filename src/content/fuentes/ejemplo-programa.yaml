@@ -1,0 +1,7 @@
+# FICTICIO: solo para desarrollo. Excluido de `npm run build` (ver src/lib/ejemplo.ts).
+ficticio: true
+partido: ejemplo
+titulo: Documento ficticio de prueba
+url: https://example.org/programa-ficticio.pdf
+tipo: programa
+consultado: 2026-11-02

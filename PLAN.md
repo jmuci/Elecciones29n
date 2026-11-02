@@ -180,6 +180,7 @@ Lista cerrada. Añadir un tema requiere un PR que lo cree para **todos** los par
 ### Fase 5 · Flujo de actualización
 - [ ] `validate.yml`: build de Astro (que valida los schemas), comprobación de que cada propuesta tiene `fuente` existente y `pagina`, y comprobación de que las URLs responden.
 - [ ] `sources-watch.yml`: cron diario durante la campaña (semanal fuera de ella). Descarga cada fuente, compara su `sha256` y, si cambia, abre un issue automático para revisarla.
+  - TODO: pendiente; se hará en otra sesión (validate.yml ya existe desde la Fase 0).
 - [ ] Ciclo de edición: editar YAML → PR → preview de Vercel → merge.
 
 ### Fase 6 · Pulido y publicación

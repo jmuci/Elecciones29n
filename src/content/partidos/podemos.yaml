@@ -1,0 +1,11 @@
+nombre: Podemos
+nombre_corto: Podemos
+orden: 5
+ambito:
+  tipo: casi_toda_espana
+  etiqueta: Casi toda España
+  notas:
+    - En Canarias concurre en una candidatura conjunta con Frente Amplio.
+    - En la Comunidad Valenciana concurre en una candidatura conjunta con Frente Amplio (coalición Compromís-Front Valencià).
+    - En Cataluña tiene un acuerdo con ERC.
+web: https://podemos.info/

@@ -1,0 +1,42 @@
+name: Validar
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run check:content
+      - run: npm run check
+      - run: npm run build
+      - name: Comprobar que nada ficticio llega a producción
+        run: |
+          if grep -riE 'ejemplo|ficticio' dist/; then
+            echo "::error::dist/ contiene datos de ejemplo o ficticios"
+            exit 1
+          fi
+
+  fixtures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run check:content
+        env:
+          ELECCIONES_EJEMPLO: '1'

@@ -1,0 +1,9 @@
+# FICTICIO: solo para desarrollo. Excluido de `npm run build` (ver src/lib/ejemplo.ts).
+ficticio: true
+nombre: Partido de ejemplo (ficticio)
+nombre_corto: Ejemplo
+orden: 99
+ambito:
+  tipo: algunas_circunscripciones
+  etiqueta: "Ficticio: solo para pruebas"
+web: https://example.org/

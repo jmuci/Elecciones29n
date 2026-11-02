@@ -1,0 +1,13 @@
+nombre: Frente Amplio (Movimiento Sumar, IU, Más Madrid, Comuns y aliados)
+nombre_corto: Frente Amplio
+orden: 4
+ambito:
+  tipo: casi_toda_espana
+  etiqueta: Casi toda España, con marcas regionales
+  notas:
+    - En la Comunidad Valenciana concurre en la coalición Compromís-Front Valencià, que incluye a Podemos.
+    - En Aragón concurre como Chunta Aragonesista-Frente Amplio Aragón.
+    - En Baleares concurre como Ara Més-Frente Amplio.
+    - En Andalucía concurre como Frente Amplio por Andalucía.
+    - En Canarias presenta una candidatura conjunta con Podemos.
+web: https://frenteamplio.info/

@@ -19,7 +19,12 @@ Web estática en español que compara, tema a tema, las propuestas de 6 partidos
 Astro (salida estática) + TypeScript, content collections con Zod, Vercel, GitHub Actions.
 
 ## Comandos
-(Rellenar al inicializar Astro: `npm run dev`, `npm run build`, etc.)
+- `npm ci` — instala dependencias (Node 26, ver `.nvmrc`)
+- `npm run dev` — servidor de desarrollo
+- `npm run build` — build estático a `dist/`
+- `npm run preview` — sirve el build
+- `npm run check` — `astro check` (tipos TS/Astro)
+- `npm run check:content` — valida referencias fuente/partido/tema y fuentes huérfanas (`ELECCIONES_EJEMPLO=1` incluye los datos ficticios)
 
 ## Autor
 Jose es ingeniero senior (Android/Kotlin); no hace falta explicar fundamentos. Prefiere diffs a reescrituras completas.
