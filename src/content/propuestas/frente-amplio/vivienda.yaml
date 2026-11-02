@@ -1,6 +1,14 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; solo notas de prensa.
 partido: frente-amplio
 tema: vivienda
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: vivienda pública
+    resumen: >-
+      Propone invertir hasta el 1 % del PIB en ampliar el parque público de vivienda asequible,
+      protegida de forma permanente, mediante construcción, adquisición y rehabilitación.
+    fuente: frente-amplio-nota-impuesto-acumulacion-vivienda
+    pagina: último párrafo
+fuentes_revisadas:
+  - frente-amplio-nota-impuesto-acumulacion-vivienda

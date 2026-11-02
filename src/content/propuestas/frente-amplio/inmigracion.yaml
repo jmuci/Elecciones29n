@@ -1,6 +1,8 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Revisado en Fase 1: frenteamplio.info no tiene programa ni documento sobre inmigración (solo notas de prensa de otros temas).
 partido: frente-amplio
 tema: inmigracion
 estado: no_publicado
 revisado: 2026-11-02
 propuestas: []
+fuentes_revisadas:
+  - frente-amplio-nota-impuesto-acumulacion-vivienda
