@@ -1,0 +1,132 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  titulo: string;
+  descripcion: string;
+}
+
+const { titulo, descripcion } = Astro.props;
+const ruta = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const enlaces = [
+  { href: '/', texto: 'Tabla' },
+  { href: '/fuentes', texto: 'Fuentes' },
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={descripcion} />
+    <title>{titulo}</title>
+  </head>
+  <body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+    <header class="cabecera">
+      <div class="contenedor cabecera__fila">
+        <a class="marca" href="/">Elecciones 29-N · 2026</a>
+        <nav aria-label="Principal">
+          <ul>
+            {
+              enlaces.map(({ href, texto }) => (
+                <li>
+                  <a href={href} aria-current={ruta === href ? 'page' : undefined}>
+                    {texto}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="contenido" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="pie">
+      <div class="contenedor">
+        <p>Resúmenes propios; la fuente oficial siempre prevalece.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .saltar {
+    position: absolute;
+    left: var(--space-4);
+    top: -100vh;
+    z-index: 100;
+    padding: var(--space-2) var(--space-4);
+    background: var(--surface);
+    color: var(--link);
+    border: 2px solid var(--focus);
+    border-radius: var(--radius);
+  }
+
+  .saltar:focus {
+    top: var(--space-4);
+  }
+
+  .cabecera {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .cabecera__fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-5);
+    padding-block: var(--space-4);
+  }
+
+  .marca {
+    color: var(--text);
+    font-family: var(--font-serif);
+    font-size: var(--step-1);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: var(--space-5);
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding-block: var(--space-1);
+    border-bottom: 2px solid transparent;
+  }
+
+  nav a:hover {
+    border-bottom-color: var(--border-strong);
+  }
+
+  nav a[aria-current='page'] {
+    border-bottom-color: var(--text);
+    font-weight: 600;
+  }
+
+  main {
+    display: block;
+    padding-block: var(--space-6) var(--space-7);
+  }
+
+  main:focus {
+    outline: none;
+  }
+
+  .pie {
+    border-top: 1px solid var(--rule);
+    padding-block: var(--space-5);
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+</style>

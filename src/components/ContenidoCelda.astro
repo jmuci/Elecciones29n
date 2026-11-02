@@ -1,0 +1,135 @@
+---
+import IconoEstado from './IconoEstado.astro';
+import { ESTADO_VISTA, fecha, localizador, urlPropuesta, type Datos } from '../lib/ui';
+import type { Celda, Partido } from '../lib/modelo';
+
+interface Props {
+  celda: Celda | undefined;
+  partido: Partido;
+  fuente: Datos['fuente'];
+}
+
+const { celda, partido, fuente } = Astro.props;
+const estado = celda?.data.estado ?? 'sin_revisar';
+const revisado = celda && fecha(celda.data.revisado);
+---
+
+<div class="celda" data-estado={estado}>
+  <p class="estado">
+    <IconoEstado estado={estado} />
+    <span>{ESTADO_VISTA[estado].etiqueta}</span>
+  </p>
+  {
+    revisado && (
+      <p class="revisado">
+        Revisado: <time datetime={revisado.iso}>{revisado.texto}</time>
+      </p>
+    )
+  }
+  {
+    celda && celda.data.propuestas.length > 0 && (
+      <ul class="propuestas">
+        {celda.data.propuestas.map((p) => {
+          const f = fuente(p.fuente.id);
+          return (
+            <li>
+              {p.subtema && <p class="subtema">{p.subtema}</p>}
+              <p>{p.resumen}</p>
+              {p.cita && (
+                <p class="cita">
+                  <q>{p.cita}</q>
+                </p>
+              )}
+              <p class="fuente">
+                Fuente:{' '}
+                <a href={urlPropuesta(f, p.pagina)} rel="noopener">
+                  {f.data.titulo}
+                  <span class="sr-only"> ({partido.data.nombre_corto})</span>, {localizador(p.pagina)}
+                </a>
+              </p>
+            </li>
+          );
+        })}
+      </ul>
+    )
+  }
+</div>
+
+<style>
+  .celda {
+    display: grid;
+    gap: var(--space-2);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .estado {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-size: var(--step--1);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .estado :global(.icono) {
+    margin-top: 0.1em;
+  }
+
+  [data-estado='completo'] .estado {
+    color: var(--text);
+  }
+
+  [data-estado='parcial'] .estado {
+    color: var(--parcial);
+  }
+
+  [data-estado='sin_propuesta'] .estado {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  [data-estado='no_publicado'] .estado,
+  [data-estado='sin_revisar'] .estado {
+    color: var(--pendiente);
+    font-weight: 500;
+  }
+
+  .revisado {
+    color: var(--muted);
+    font-size: 0.8125rem;
+  }
+
+  .propuestas {
+    display: grid;
+    gap: var(--space-4);
+    margin-top: var(--space-2);
+    padding: 0;
+    list-style: none;
+  }
+
+  .propuestas > li {
+    display: grid;
+    gap: var(--space-1);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--rule);
+  }
+
+  .subtema {
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .cita {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+
+  .fuente {
+    font-size: var(--step--1);
+    color: var(--muted);
+  }
+</style>

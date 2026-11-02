@@ -1,0 +1,76 @@
+---
+import IconoEstado from './IconoEstado.astro';
+import { ESTADO_VISTA, type EstadoVista } from '../lib/ui';
+import { ESTADOS } from '../lib/modelo';
+
+interface Props {
+  /** Incluye "Sin revisar" solo si alguna celda mostrada falta. */
+  conSinRevisar: boolean;
+}
+
+const estados: EstadoVista[] = [...ESTADOS, ...(Astro.props.conSinRevisar ? (['sin_revisar'] as const) : [])];
+---
+
+<section class="leyenda" aria-labelledby="leyenda-titulo">
+  <h2 id="leyenda-titulo">Cómo leer cada celda</h2>
+  <dl>
+    {
+      estados.map((e) => (
+        <div data-estado={e}>
+          <dt>
+            <IconoEstado estado={e} />
+            {ESTADO_VISTA[e].etiqueta}
+          </dt>
+          <dd>{ESTADO_VISTA[e].descripcion}</dd>
+        </div>
+      ))
+    }
+  </dl>
+</section>
+
+<style>
+  .leyenda {
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  h2 {
+    font-size: var(--step-1);
+    margin-bottom: var(--space-4);
+  }
+
+  dl {
+    display: grid;
+    gap: var(--space-4) var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  dt {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  dt :global(.icono) {
+    margin-top: 0.15em;
+  }
+
+  dd {
+    margin: var(--space-1) 0 0 calc(1em + var(--space-2));
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  [data-estado='parcial'] dt {
+    color: var(--parcial);
+  }
+
+  [data-estado='no_publicado'] dt,
+  [data-estado='sin_revisar'] dt {
+    color: var(--pendiente);
+  }
+</style>

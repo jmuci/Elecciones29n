@@ -1,0 +1,52 @@
+---
+import type { EstadoVista } from '../lib/ui';
+
+interface Props {
+  estado: EstadoVista;
+}
+
+// Formas distintas para cada estado: la información nunca depende solo del color.
+const { estado } = Astro.props;
+---
+
+<svg class="icono" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+  {
+    estado === 'completo' && (
+      <>
+        <circle cx="8" cy="8" r="7" fill="currentColor" />
+        <path d="M4.6 8.2l2.3 2.3 4.5-4.8" fill="none" stroke="var(--surface)" stroke-width="1.8" />
+      </>
+    )
+  }
+  {
+    estado === 'parcial' && (
+      <>
+        <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor" />
+      </>
+    )
+  }
+  {
+    estado === 'sin_propuesta' && (
+      <>
+        <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <path d="M4.5 8h7" stroke="currentColor" stroke-width="1.6" />
+      </>
+    )
+  }
+  {
+    estado === 'no_publicado' && (
+      <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2.4 2" />
+    )
+  }
+  {estado === 'sin_revisar' && <rect x="2" y="2" width="12" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2.4 2" />}
+</svg>
+
+<style>
+  .icono {
+    flex: none;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+  }
+</style>
