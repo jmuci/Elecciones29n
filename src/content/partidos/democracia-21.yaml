@@ -1,0 +1,9 @@
+nombre: Democracia 21 (en coalición con Ciudadanos y UCIN)
+nombre_corto: Democracia 21
+orden: 6
+ambito:
+  tipo: algunas_circunscripciones
+  etiqueta: Solo Madrid y Barcelona
+  notas:
+    - Partido nuevo. Concurre en coalición con Ciudadanos y UCIN.
+web: https://democracia21.es/
