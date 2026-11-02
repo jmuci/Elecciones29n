@@ -143,6 +143,12 @@ const propuestas = defineCollection({
       estado: z.enum(ESTADOS),
       revisado: fecha,
       propuestas: z.array(propuesta),
+      /**
+       * Documentos del partido revisados para esta celda, citen o no alguna
+       * propuesta (p. ej. los que se comprobaron para un `no_publicado`).
+       * `check:content` los cuenta como referencia de la fuente.
+       */
+      fuentes_revisadas: z.array(reference('fuentes')).optional(),
     })
     .superRefine((celda, ctx) => {
       const n = celda.propuestas.length;

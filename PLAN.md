@@ -83,7 +83,7 @@ id: pp-programa-29n
 partido: pp
 titulo: "Programa electoral elecciones generales 2026"
 url: https://...                 # URL oficial en la web del partido
-tipo: programa                   # programa | plan_sectorial | web | nota_prensa
+tipo: programa                   # programa | manifiesto | plan_sectorial | argumentario | web | nota_prensa
 publicado: 2026-11-xx            # si se conoce
 consultado: 2026-11-xx           # obligatorio
 archivo: https://web.archive.org/web/...   # snapshot en Wayback Machine
@@ -106,6 +106,8 @@ propuestas:
     fuente: pp-programa-29n
     pagina: 34
     # posicion: reservado para el test de afinidad (fase posterior)
+fuentes_revisadas:   # opcional: documentos revisados para esta celda, citen o no propuestas
+  - pp-programa-29n
 ```
 
 ### Significado de `estado`
