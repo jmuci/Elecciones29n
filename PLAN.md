@@ -149,10 +149,10 @@ Lista cerrada. Añadir un tema requiere un PR que lo cree para **todos** los par
 ## 5. Fases y tareas
 
 ### Fase 0 · Arranque del repo
-- [ ] Inicializar Astro + TypeScript en este repo.
-- [ ] Definir los schemas Zod de `partidos`, `temas`, `fuentes` y `propuestas`.
-- [ ] Crear los YAML de los 6 partidos y los 14 temas.
-- [ ] Conectar el repo a Vercel. Comprobar que se despliega y que los PRs generan preview.
+- [x] Inicializar Astro + TypeScript en este repo.
+- [x] Definir los schemas Zod de `partidos`, `temas`, `fuentes` y `propuestas`.
+- [x] Crear los YAML de los 6 partidos y los 14 temas.
+- [x] Conectar el repo a Vercel. Comprobar que se despliega y que los PRs generan preview.
 
 ### Fase 1 · Inventario de fuentes oficiales
 - [ ] Localizar, para cada partido, el programa electoral del 29N y los planes sectoriales en su web oficial.
