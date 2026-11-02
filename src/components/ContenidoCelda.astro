@@ -1,6 +1,6 @@
 ---
 import IconoEstado from './IconoEstado.astro';
-import { ESTADO_VISTA, TIPO_FUENTE, fecha, localizador, urlPropuesta, type Datos } from '../lib/ui';
+import { ESTADO_VISTA, TIPO_FUENTE, claveSubtema, fecha, localizador, urlPropuesta, type Datos } from '../lib/ui';
 import type { Celda, Partido } from '../lib/modelo';
 
 interface Props {
@@ -32,7 +32,7 @@ const revisado = celda && fecha(celda.data.revisado);
         {celda.data.propuestas.map((p) => {
           const f = fuente(p.fuente.id);
           return (
-            <li>
+            <li data-subtema={claveSubtema(p.subtema)}>
               {p.subtema && <p class="subtema">{p.subtema}</p>}
               <p>{p.resumen}</p>
               {p.cita && (

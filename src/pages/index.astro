@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import ContenidoCelda from '../components/ContenidoCelda.astro';
 import InfoPartido from '../components/InfoPartido.astro';
 import Leyenda from '../components/Leyenda.astro';
-import { cargarDatos } from '../lib/ui';
+import { cargarDatos, claveSubtema } from '../lib/ui';
 
 const MAX_COMPARAR = 3;
 const { partidos, temas, temasMostrados, celda, fuente } = await cargarDatos();
@@ -12,6 +12,19 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
 /** Partidos con al menos una propuesta en el tema (para el resumen de cada sección). */
 const conPropuestas = (tema: string): number =>
   partidos.filter((p) => (celda(p.id, tema)?.data.propuestas.length ?? 0) > 0).length;
+
+/** Subtemas usados en las propuestas del tema, sin repetir y en orden alfabético. */
+const subtemas = (tema: string): { clave: string; nombre: string }[] => {
+  const porClave = new Map<string, string>();
+  for (const p of partidos)
+    for (const prop of celda(p.id, tema)?.data.propuestas ?? []) {
+      const clave = claveSubtema(prop.subtema);
+      if (clave && !porClave.has(clave)) porClave.set(clave, (prop.subtema ?? '').trim());
+    }
+  return [...porClave]
+    .map(([clave, nombre]) => ({ clave, nombre }))
+    .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+};
 ---
 
 <Base
@@ -38,12 +51,26 @@ const conPropuestas = (tema: string): number =>
     temasMostrados.length === 0 ? (
       <p class="contenedor vacio">Aún no hay temas revisados.</p>
     ) : (
-      <div class="contenedor temas">
+      <div class="contenedor temas" id="temas">
+        <nav class="indice" aria-labelledby="indice-titulo">
+          <h2 id="indice-titulo">Temas</h2>
+          <ul>
+            {temasMostrados.map((t) => (
+              <li>
+                <a href={`#${t.id}`} data-tema={t.id}>
+                  {t.data.nombre}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <form class="controles" id="controles" hidden>
           <fieldset class="control">
             <legend>Comparar partidos</legend>
             <p class="ayuda" id="ayuda-comparar">
-              Elige hasta {MAX_COMPARAR}. Si no marcas ninguno, se muestran todos.
+              Elige hasta {MAX_COMPARAR}; en pantallas anchas se muestran en columnas. Si no marcas ninguno, se muestran
+              todos. La dirección de la página guarda la selección para compartirla.
             </p>
             <ul class="opciones">
               {partidos.map((p) => (
@@ -69,55 +96,89 @@ const conPropuestas = (tema: string): number =>
           </div>
         </form>
 
-        {temasMostrados.map((t) => (
-          <details class="tema" id={t.id}>
-            <summary>
-              <h2>{t.data.nombre}</h2>
-              <span class="resumen">
-                {conPropuestas(t.id)} de {partidos.length} partidos con propuestas
-              </span>
-            </summary>
-            <div class="cuerpo">
-              {t.data.descripcion && <p class="descripcion">{t.data.descripcion}</p>}
-              <ol class="partidos">
-                {partidos.map((p) => (
-                  <li class="partido" data-partido={p.id}>
-                    <section aria-labelledby={`${t.id}-${p.id}`}>
-                      <header>
-                        <h3 id={`${t.id}-${p.id}`}>{p.data.nombre_corto}</h3>
-                        <InfoPartido partido={p} />
-                      </header>
-                      <ContenidoCelda celda={celda(p.id, t.id)} partido={p} fuente={fuente} />
-                    </section>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </details>
-        ))}
+        {temasMostrados.map((t) => {
+          const lista = subtemas(t.id);
+          return (
+            <details class="tema" id={t.id}>
+              <summary>
+                <h2>{t.data.nombre}</h2>
+                <span class="resumen">
+                  {conPropuestas(t.id)} de {partidos.length} partidos con propuestas
+                </span>
+              </summary>
+              <div class="cuerpo">
+                {t.data.descripcion && <p class="descripcion">{t.data.descripcion}</p>}
+                {lista.length > 1 && (
+                  <fieldset class="filtro-subtema" hidden>
+                    <legend>Filtrar por subtema</legend>
+                    <div class="chips">
+                      <label>
+                        <input type="radio" name={`subtema-${t.id}`} value="" checked />
+                        Todos
+                      </label>
+                      {lista.map((s) => (
+                        <label>
+                          <input type="radio" name={`subtema-${t.id}`} value={s.clave} />
+                          {s.nombre}
+                        </label>
+                      ))}
+                    </div>
+                    <p class="ayuda">
+                      Los subtemas son una clasificación propia de esta web. Las propuestas sin subtema se ocultan al
+                      filtrar.
+                    </p>
+                  </fieldset>
+                )}
+                <ol class="partidos">
+                  {partidos.map((p) => (
+                    <li class="partido" data-partido={p.id}>
+                      <section aria-labelledby={`${t.id}-${p.id}`}>
+                        <header>
+                          <h3 id={`${t.id}-${p.id}`}>{p.data.nombre_corto}</h3>
+                          <InfoPartido partido={p} />
+                        </header>
+                        <ContenidoCelda celda={celda(p.id, t.id)} partido={p} fuente={fuente} />
+                        <p class="sin-subtema" hidden>
+                          Ninguna de las propuestas recogidas de este partido está clasificada en este subtema.
+                        </p>
+                      </section>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </details>
+          );
+        })}
       </div>
     )
   }
 </Base>
 
 <script>
+  const contenedor = document.querySelector<HTMLElement>('#temas');
   const form = document.querySelector<HTMLFormElement>('#controles');
   const estado = document.querySelector<HTMLElement>('#estado-comparar');
   const temas = [...document.querySelectorAll<HTMLDetailsElement>('details.tema')];
 
-  // Abre el tema enlazado con #id (p. ej. /#vivienda).
-  const abrirEnlazado = (): void => {
-    const id = decodeURIComponent(location.hash.slice(1));
-    const tema = temas.find((t) => t.id === id);
-    if (tema) {
-      tema.open = true;
-      tema.scrollIntoView();
-    }
-  };
-  abrirEnlazado();
-  window.addEventListener('hashchange', abrirEnlazado);
+  // — Abrir temas desde el índice o desde un enlace con #id (p. ej. /#vivienda) —
 
-  // Al imprimir se muestran todos los temas; después se restaura el estado.
+  const abrir = (id: string): void => {
+    const tema = temas.find((t) => t.id === id);
+    if (!tema) return;
+    tema.open = true;
+    tema.scrollIntoView();
+    tema.querySelector('summary')?.focus({ preventScroll: true });
+  };
+  abrir(decodeURIComponent(location.hash.slice(1)));
+  window.addEventListener('hashchange', () => abrir(decodeURIComponent(location.hash.slice(1))));
+  // Si el hash ya es el del tema (p. ej. se plegó después), hashchange no salta: se abre igual.
+  document.querySelector('.indice')?.addEventListener('click', (e) => {
+    const id = e.target instanceof HTMLAnchorElement ? e.target.dataset.tema : undefined;
+    if (id && location.hash === `#${id}`) abrir(id);
+  });
+
+  // — Al imprimir se muestran todos los temas; después se restaura el estado —
+
   let abiertos: boolean[] = [];
   window.addEventListener('beforeprint', () => {
     abiertos = temas.map((t) => t.open);
@@ -125,7 +186,27 @@ const conPropuestas = (tema: string): number =>
   });
   window.addEventListener('afterprint', () => temas.forEach((t, i) => (t.open = abiertos[i] ?? false)));
 
-  if (form && estado) {
+  // — Filtro por subtema (uno por tema) —
+
+  for (const tema of temas) {
+    const filtro = tema.querySelector<HTMLFieldSetElement>('.filtro-subtema');
+    if (!filtro) continue;
+    filtro.addEventListener('change', () => {
+      const elegido = filtro.querySelector<HTMLInputElement>('input:checked')?.value ?? '';
+      for (const partido of tema.querySelectorAll<HTMLElement>('.partido')) {
+        const propuestas = [...partido.querySelectorAll<HTMLElement>('li[data-subtema]')];
+        for (const p of propuestas) p.hidden = elegido !== '' && p.dataset.subtema !== elegido;
+        const aviso = partido.querySelector<HTMLElement>('.sin-subtema');
+        // Solo para partidos con propuestas: sin ellas ya se muestra su estado (p. ej. pendiente de publicación).
+        if (aviso) aviso.hidden = elegido === '' || propuestas.length === 0 || propuestas.some((p) => !p.hidden);
+      }
+    });
+    filtro.hidden = false;
+  }
+
+  // — Comparar partidos, con la selección guardada en ?partidos=pp,psoe —
+
+  if (contenedor && form && estado) {
     const max = Number(estado.dataset.max);
     const total = Number(estado.dataset.total);
     const casillas = [...form.querySelectorAll<HTMLInputElement>('input[name="partido"]')];
@@ -133,12 +214,27 @@ const conPropuestas = (tema: string): number =>
 
     const marcados = (): string[] => casillas.filter((c) => c.checked).map((c) => c.value);
 
+    const guardarEnUrl = (elegidos: string[]): void => {
+      const params = new URLSearchParams(location.search);
+      params.delete('partidos');
+      const resto = params.toString();
+      const query = [resto, elegidos.length > 0 ? `partidos=${elegidos.join(',')}` : ''].filter(Boolean).join('&');
+      history.replaceState(null, '', `${location.pathname}${query ? `?${query}` : ''}${location.hash}`);
+    };
+
     const aplicar = (aviso?: string): void => {
       const elegidos = marcados();
       for (const b of bloques) b.hidden = elegidos.length > 0 && !elegidos.includes(b.dataset.partido ?? '');
+      contenedor.dataset.comparando = String(elegidos.length);
       const n = elegidos.length || total;
       estado.textContent = aviso ?? `Se muestran ${n} de ${total} partidos.`;
+      guardarEnUrl(elegidos);
     };
+
+    // Selección inicial desde la URL: solo ids existentes y como mucho `max`.
+    const desdeUrl = (new URLSearchParams(location.search).get('partidos') ?? '').split(',');
+    const validos = casillas.filter((c) => desdeUrl.includes(c.value)).slice(0, max);
+    for (const c of validos) c.checked = true;
 
     form.addEventListener('change', (e) => {
       const c = e.target;
@@ -188,6 +284,40 @@ const conPropuestas = (tema: string): number =>
     gap: var(--space-4);
   }
 
+  .ayuda {
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .ayuda:empty {
+    display: none;
+  }
+
+  /* — Índice de temas — */
+
+  .indice h2 {
+    font-size: var(--step-1);
+    margin-bottom: var(--space-3);
+  }
+
+  .indice ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    padding: 0;
+    list-style: none;
+  }
+
+  .indice a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: var(--space-2) var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+  }
+
   /* — Controles — */
 
   .controles {
@@ -200,11 +330,13 @@ const conPropuestas = (tema: string): number =>
     border-radius: var(--radius);
   }
 
-  .controles[hidden] {
+  .controles[hidden],
+  .filtro-subtema[hidden] {
     display: none;
   }
 
-  .control {
+  .control,
+  .filtro-subtema {
     display: grid;
     gap: var(--space-2);
     margin: 0;
@@ -216,15 +348,6 @@ const conPropuestas = (tema: string): number =>
   legend {
     padding: 0;
     font-weight: 600;
-  }
-
-  .ayuda {
-    color: var(--muted);
-    font-size: var(--step--1);
-  }
-
-  .ayuda:empty {
-    display: none;
   }
 
   .opciones {
@@ -330,14 +453,56 @@ const conPropuestas = (tema: string): number =>
   }
 
   .cuerpo {
+    display: grid;
+    gap: var(--space-5);
     padding: var(--space-5);
   }
 
   .descripcion {
     max-width: var(--measure);
-    margin-bottom: var(--space-5);
     color: var(--muted);
   }
+
+  /* — Filtro por subtema — */
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .chips label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 2.75rem;
+    padding: var(--space-1) var(--space-3);
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .chips label:has(input:checked) {
+    font-weight: 600;
+    background: var(--head);
+  }
+
+  .chips input {
+    margin: 0;
+    accent-color: var(--link);
+  }
+
+  .partido :global(li[hidden]),
+  .sin-subtema[hidden] {
+    display: none;
+  }
+
+  .sin-subtema {
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  /* — Partidos dentro de cada tema — */
 
   .partidos {
     display: grid;
@@ -373,6 +538,31 @@ const conPropuestas = (tema: string): number =>
     font-size: var(--step-1);
   }
 
+  /* Comparación lado a lado: 2 o 3 partidos elegidos, en pantallas anchas. */
+  @media (width >= 64rem) {
+    .temas[data-comparando='2'] .partidos,
+    .temas[data-comparando='3'] .partidos {
+      grid-template-columns: repeat(var(--columnas), minmax(0, 1fr));
+      align-items: start;
+      max-width: none;
+    }
+
+    .temas[data-comparando='2'] {
+      --columnas: 2;
+    }
+
+    .temas[data-comparando='3'] {
+      --columnas: 3;
+    }
+
+    .temas[data-comparando='2'] .partido,
+    .temas[data-comparando='3'] .partido {
+      padding: var(--space-4);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     summary::before {
       transition: none;
@@ -380,7 +570,9 @@ const conPropuestas = (tema: string): number =>
   }
 
   @media print {
-    .controles {
+    .controles,
+    .indice,
+    .filtro-subtema {
       display: none;
     }
   }
