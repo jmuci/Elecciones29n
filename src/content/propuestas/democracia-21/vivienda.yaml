@@ -1,6 +1,42 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): D21 no tiene programa; se resume su plan "Vivienda, prioridad nº1".
 partido: democracia-21
 tema: vivienda
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: alquiler
+    resumen: >-
+      Propone limitar de forma temporal y excepcional los alquileres en zonas tensionadas. A cambio,
+      el Estado cubriría los impagos y asumiría el realojo o el alquiler de las personas vulnerables.
+    fuente: democracia-21-vivienda-prioridad-1
+    pagina: 2
+  - subtema: alquiler
+    resumen: >-
+      Plantea un servicio gratuito y vinculante de mediación en arrendamientos (30 días) y juzgados
+      especializados (60 días más), y tipificar como estafa firmar un contrato con intención
+      premeditada de no pagar.
+    fuente: democracia-21-vivienda-prioridad-1
+    pagina: 4
+  - subtema: vivienda pública
+    resumen: >-
+      Propone reasignar los fondos europeos no ejecutados a un Fondo Público Soberano para construir
+      vivienda asequible y protegida.
+    cita: "10.000 Millones de Fondos Europeos"
+    fuente: democracia-21-vivienda-prioridad-1
+    pagina: 3
+  - subtema: oferta y construcción
+    resumen: >-
+      Propone un Plan Nacional de Barrios a 10 años con colaboración público-privada, sobre suelo
+      público cedido en derecho de superficie a 75 años.
+    fuente: democracia-21-vivienda-prioridad-1
+    pagina: 7
+  - subtema: oferta y construcción
+    resumen: >-
+      Plantea un plazo máximo de 30 días para las licencias de obra mayor y que la comunidad autónoma
+      asuma la competencia urbanística de los ayuntamientos que bloqueen proyectos de vivienda
+      asequible.
+    fuente: democracia-21-vivienda-prioridad-1
+    pagina: 8
+fuentes_revisadas:
+  - democracia-21-vivienda-prioridad-1
+  - democracia-21-espana-limpia
