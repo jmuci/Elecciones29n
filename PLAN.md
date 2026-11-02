@@ -88,6 +88,7 @@ publicado: 2026-11-xx            # si se conoce
 consultado: 2026-11-xx           # obligatorio
 archivo: https://web.archive.org/web/...   # snapshot en Wayback Machine
 sha256: "..."                    # hash del fichero descargado (para detectar cambios)
+anterior_a_convocatoria: false   # true si es anterior a la convocatoria del 29N (CONTRIBUTING §1.4); se muestra un aviso
 ```
 
 Solo se admiten **fuentes oficiales del partido**: su web, sus PDFs y sus notas de prensa. La prensa puede servir para *descubrir* una propuesta, pero la celda debe enlazar al documento del partido. Si no existe documento oficial, la propuesta no entra.

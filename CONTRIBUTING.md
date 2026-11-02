@@ -10,7 +10,10 @@ Este proyecto resume las propuestas de los partidos. El objetivo es que cualquie
 1. **Solo fuentes oficiales del partido**: programa electoral, manifiestos, planes sectoriales, documentos políticos del partido, argumentarios de campaña, web oficial y notas de prensa oficiales. Mientras no haya programa, se puede citar cualquiera de los otros, y el `tipo` de la fuente lo deja claro. Un artículo de prensa puede servir para *encontrar* una propuesta, pero nunca es la fuente que se enlaza.
 2. **Toda propuesta lleva fuente, página (o sección) y fecha de consulta.** Sin fuente verificable, la propuesta no entra.
 3. **Archivar cada documento** en Wayback Machine al registrarlo. Los partidos cambian sus PDFs y el enlace tiene que seguir siendo comprobable.
-4. **No mezclar convocatorias.** Solo documentos para el 29N. Si un partido aún no ha publicado nada sobre un tema, el estado es `no_publicado`. No se rellena con el programa de 2023 ni con declaraciones sueltas.
+4. **No mezclar convocatorias.** La referencia son los documentos publicados para el 29N. Un documento oficial anterior a la convocatoria solo se admite si el partido no ha publicado nada para el 29N sobre ese tema, y con aviso:
+   - La fuente lleva `anterior_a_convocatoria: true` y la web lo indica junto a cada propuesta que la cita y en `/fuentes`. El campo se marca a mano y solo con evidencia de la fecha del documento (fecha impresa, metadatos del PDF, ruta del fichero), no por suposición ni por la fecha de consulta.
+   - En cuanto el partido publique un documento para el 29N sobre ese tema, las propuestas se rehacen con él y la fuente anterior deja de citarse.
+   - Nunca se usa el programa de otras elecciones (el de 2023, por ejemplo) ni declaraciones sueltas. Si no hay ningún documento admisible, el estado es `no_publicado`.
 
 ### Redacción
 5. **Paráfrasis propia.** Cada resumen se escribe con palabras propias, en 1–2 frases. No copiar párrafos del programa.
@@ -20,6 +23,7 @@ Este proyecto resume las propuestas de los partidos. El objetivo es que cualquie
 9. **Sin interpretar.** Recoger lo que el documento dice, no lo que "en realidad significa" ni sus consecuencias previstas. Si una propuesta es ambigua, se resume con la misma ambigüedad.
 10. **Sin evaluar viabilidad, coste ni constitucionalidad.** La web describe propuestas; no las juzga.
 11. **Mismos términos para lo mismo.** Si dos partidos proponen lo mismo, se describe con las mismas palabras. Usar terminología descriptiva y estable ("inmigración irregular", "vivienda protegida"), no la etiqueta preferida por cada bando.
+    - **Términos del propio partido** (precisa las reglas 6, 8 y 11). La medida se describe con términos descriptivos (*ocupación ilegal*, no *okupación*; *a gran escala*, no *masiva*). Un término valorativo o una etiqueta del partido solo aparece si define el alcance de la medida y no se puede sustituir sin interpretar. En ese caso va entre comillas y atribuido al partido: *la expulsión de quienes califica de "invasores"*. Nunca es el motivo de una cita literal: la cita se reserva para lo que dice la regla 6.
 12. **Cifras tal cual.** Importes, porcentajes y plazos como aparecen en la fuente, sin redondear ni convertir.
 
 ### Equilibrio
@@ -59,6 +63,8 @@ Este proyecto resume las propuestas de los partidos. El objetivo es que cualquie
 - [ ] He comprobado cada resumen contra el documento original, en la página indicada.
 - [ ] Redacción neutra: verbos neutros y ningún adjetivo valorativo.
 - [ ] Como mucho una cita literal breve por propuesta.
+- [ ] Ningún término valorativo del partido salvo si define el alcance de la medida, y entonces entre comillas y atribuido; nunca como motivo de una cita.
+- [ ] Las fuentes anteriores a la convocatoria llevan `anterior_a_convocatoria: true` y solo se citan en temas sobre los que el partido no ha publicado nada para el 29N.
 - [ ] La extensión es comparable a la de los otros partidos en el mismo tema.
 - [ ] El `estado` es correcto (`sin_propuesta` solo tras revisión completa).
 - [ ] `npm run build` pasa en local.

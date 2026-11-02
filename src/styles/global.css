@@ -158,6 +158,22 @@ time {
   line-height: 1.5;
 }
 
+/* Fuente anterior a la convocatoria (CONTRIBUTING §1.4): igual para todos los partidos. */
+.aviso-convocatoria {
+  justify-self: start;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.aviso-convocatoria a {
+  color: inherit;
+}
+
 .ambito {
   color: var(--muted);
   font-size: var(--step--1);
