@@ -1,0 +1,14 @@
+# FICTICIO: solo para desarrollo. Excluido de `npm run build` (ver src/lib/ejemplo.ts).
+partido: ejemplo
+tema: vivienda
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: alquiler
+    resumen: "[FICTICIO] Propuesta inventada sobre alquiler, solo para probar la interfaz."
+    cita: "Texto ficticio de cita breve"
+    fuente: ejemplo-programa
+    pagina: 12
+  - resumen: "[FICTICIO] Propuesta inventada sin subtema, para probar la sección en lugar de página."
+    fuente: ejemplo-programa
+    pagina: "Anexo II"
