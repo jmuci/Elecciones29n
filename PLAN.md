@@ -179,8 +179,8 @@ Lista cerrada. Añadir un tema requiere un PR que lo cree para **todos** los par
 
 ### Fase 5 · Flujo de actualización
 - [ ] `validate.yml`: build de Astro (que valida los schemas), comprobación de que cada propuesta tiene `fuente` existente y `pagina`, y comprobación de que las URLs responden.
-- [ ] `sources-watch.yml`: cron diario durante la campaña (semanal fuera de ella). Descarga cada fuente, compara su `sha256` y, si cambia, abre un issue automático para revisarla.
-  - TODO: pendiente; se hará en otra sesión (validate.yml ya existe desde la Fase 0).
+- [x] `sources-watch.yml`: cron diario hasta el 29-nov-2026 (el job se omite después) y `workflow_dispatch`. Ejecuta `scripts/check-sources.ts`, que descarga cada fuente con `sha256`, compara el hash y distingue hash distinto, error HTTP/red y redirección; las fuentes sin hash se listan aparte sin contar como error. Abre o actualiza un único issue por fuente (label `fuente-cambiada`, título `Fuente cambiada: <id>`) y no hace commits.
+  - Nota: pasada la campaña, cambiar el cron a semanal (p. ej. `17 6 * * 1`) y quitar la guarda de fecha.
 - [ ] Ciclo de edición: editar YAML → PR → preview de Vercel → merge.
 
 ### Fase 6 · Pulido y publicación

@@ -12,7 +12,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "check:content": "node scripts/check-content.ts"
+    "check:content": "node scripts/check-content.ts",
+    "check:sources": "node scripts/check-sources.ts"
   },
   "dependencies": {
     "astro": "^7.4.5"
