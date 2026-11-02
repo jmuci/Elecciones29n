@@ -1,6 +1,39 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): Podemos no tiene programa publicado; se resume su documento
+# político de la V Asamblea (2025).
 partido: podemos
 tema: vivienda
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: alquiler
+    resumen: Propone regular los precios del alquiler y bajarlos en todo el Estado como medida de choque.
+    cita: "bajándolos un 40% en el conjunto del Estado"
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 31
+  - subtema: alquiler
+    resumen: >-
+      Plantea prohibir el uso de viviendas como piso turístico y sancionar el uso fraudulento del
+      alquiler de temporada.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 31
+  - subtema: oferta y construcción
+    resumen: >-
+      Propone una moratoria a la compra de vivienda que no sea para vivir en ella, para un pariente
+      cercano o como segunda residencia, y un máximo de viviendas en propiedad por persona física y
+      jurídica.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 31
+  - subtema: vivienda pública
+    resumen: >-
+      Propone ampliar el parque público de alquiler social expropiando el uso del 50 % de las
+      viviendas de grandes tenedores y con un programa de compra masiva en el mercado privado.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 31
+  - subtema: desahucios
+    resumen: >-
+      Plantea proteger frente a los desalojos sin alternativa habitacional a las familias
+      vulnerables.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 31
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
