@@ -2,11 +2,13 @@
 # convocatoria del 29N; no es un programa electoral (el propio texto lo dice, p. 31). Se admite
 # mientras Podemos no publique programa. Enlazado en https://podemos.info/documentos/.
 # podemos.info bloquea el acceso automatizado (Cloudflare): URL y fichero los aportó el autor,
-# que lo descargó de la web del partido el 2-nov-2026; el sha256 es de ese fichero.
+# que lo descargó de la web del partido el 2-nov-2026; el sha256 es de ese fichero y coincide
+# con la captura de Wayback Machine del 24-oct-2026.
 # Fecha de publicación: no consta (PDF creado el 7-abr-2025). El año va en el título.
 partido: podemos
 titulo: "Documento político de la V Asamblea Ciudadana Estatal (2025)"
 url: https://podemos.info/wp-content/uploads/2025/04/Documento-Politico-V-ACE.pdf
 tipo: documento_politico
 consultado: 2026-11-02
+archivo: https://web.archive.org/web/20261024164855/https://podemos.info/wp-content/uploads/2025/04/Documento-Politico-V-ACE.pdf
 sha256: 01f0a07fffd89f1f2b520a71d0d86052d2b47c44bb0eabe66316e589dd1f6e03
