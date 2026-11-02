@@ -28,6 +28,18 @@ jobs:
             exit 1
           fi
 
+  enlaces:
+    # Independiente del job `validate`: una web caída de un partido no debe bloquear el build.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run check:links
+
   fixtures:
     runs-on: ubuntu-latest
     steps:

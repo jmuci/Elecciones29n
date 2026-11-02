@@ -185,7 +185,7 @@ Los subtemas son cerrados: cada propuesta lleva uno o varios de la lista de su t
 - [ ] Completar los 11 temas restantes para los 6 partidos.
 
 ### Fase 5 · Flujo de actualización
-- [ ] `validate.yml`: build de Astro (que valida los schemas), comprobación de que cada propuesta tiene `fuente` existente y `pagina`, y comprobación de que las URLs responden.
+- [x] `validate.yml`: build de Astro (que valida los schemas), comprobación de que cada propuesta tiene `fuente` existente y `pagina`, y comprobación de que las URLs responden (job `enlaces`, `scripts/check-links.ts`: HEAD y, si falla, GET; clasifica ok/redirección/bloqueado antibots/roto; solo falla si `archivo` está roto o `url` rota sin snapshot, el resto es warning; no bloquea el job `validate`).
 - [x] `sources-watch.yml`: cron diario hasta el 29-nov-2026 (el job se omite después) y `workflow_dispatch`. Ejecuta `scripts/check-sources.ts`, que descarga cada fuente con `sha256`, compara el hash y distingue hash distinto, error HTTP/red y redirección; las fuentes sin hash se listan aparte sin contar como error. Abre o actualiza un único issue por fuente (label `fuente-cambiada`, título `Fuente cambiada: <id>`) y no hace commits.
   - Nota: pasada la campaña, cambiar el cron a semanal (p. ej. `17 6 * * 1`) y quitar la guarda de fecha.
 - [ ] Ciclo de edición: editar YAML → PR → preview de Vercel → merge.
