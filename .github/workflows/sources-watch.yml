@@ -1,0 +1,60 @@
+name: Vigilar fuentes
+
+# Diario durante la campaña; ver PLAN.md (Fase 5) para el cambio a semanal.
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fin de campaña
+        id: fecha
+        run: |
+          if [ "${{ github.event_name }}" = schedule ] && [[ "$(date -u +%F)" > "2026-11-29" ]]; then
+            echo "activo=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "activo=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.fecha.outputs.activo == 'true'
+      - uses: actions/setup-node@v7
+        if: steps.fecha.outputs.activo == 'true'
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+        if: steps.fecha.outputs.activo == 'true'
+      - name: Comprobar fuentes
+        if: steps.fecha.outputs.activo == 'true'
+        run: node scripts/check-sources.ts src/content --json "$RUNNER_TEMP/informe.json"
+        continue-on-error: true
+      - name: Abrir o actualizar issues
+        if: steps.fecha.outputs.activo == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INFORME: ${{ runner.temp }}/informe.json
+        run: |
+          [ -f "$INFORME" ] || exit 0
+          gh label create fuente-cambiada --description "Una fuente oficial ha cambiado o no responde" --color d93f0b 2>/dev/null || true
+          url_pasos="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/blob/main/CONTRIBUTING.md#4-cuando-una-fuente-cambia"
+          jq -c '.[]' "$INFORME" | while read -r r; do
+            id=$(jq -r .id <<<"$r")
+            titulo="Fuente cambiada: ${id}"
+            jq -r --arg pasos "$url_pasos" '
+              "**Fuente:** `\(.id)`\n**URL:** \(.url)\n**Problema:** \(.estado)\(if .detalle then " (\(.detalle))" else "" end)\n**sha256 anterior:** `\(.hashAnterior // "-")`\n**sha256 nuevo:** `\(.hashNuevo // "-")`\n\nPasos a seguir: [CONTRIBUTING.md §4](\($pasos)).\n\n_Detectado por sources-watch; el issue se actualiza en cada ejecución._"
+            ' <<<"$r" > "$RUNNER_TEMP/cuerpo.md"
+            n=$(gh issue list --label fuente-cambiada --state open --limit 200 --json number,title \
+              --jq "map(select(.title == \"${titulo}\")) | .[0].number // empty")
+            if [ -n "$n" ]; then
+              gh issue edit "$n" --body-file "$RUNNER_TEMP/cuerpo.md"
+            else
+              gh issue create --title "$titulo" --label fuente-cambiada --body-file "$RUNNER_TEMP/cuerpo.md"
+            fi
+          done
