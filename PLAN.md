@@ -29,7 +29,7 @@ El orden sigue los escaños obtenidos en las generales de julio de 2023, y los p
 
 | # | Sección | Estado |
 |---|---|---|
-| 1 | **Tabla comparativa de propuestas** (temas × partidos, con enlace a fuente) | 🟡 En curso (prioridad) |
+| 1 | **Comparador de propuestas** (un desplegable por tema con los partidos en orden fijo, con enlace a fuente) | 🟡 En curso (prioridad) |
 | 2 | **Fuentes**: listado de todos los documentos oficiales usados | 🟡 Sale del mismo modelo de datos |
 | 3 | **Quién soy y por qué lo hago** | ⚪ Pendiente (texto) |
 | 4 | **Estadísticas / encuestas**: gráficos con las proyecciones de escaños y sus fuentes | ⚪ Pendiente |
@@ -167,13 +167,13 @@ Lista cerrada. Añadir un tema requiere un PR que lo cree para **todos** los par
 - [ ] Revisión humana de cada celda contra la fuente (página incluida).
 - [ ] Ajustar el schema si el piloto revela carencias.
 
-### Fase 3 · Interfaz de la tabla
-- [ ] **Escritorio:** tabla con temas en filas y partidos en columnas, cabecera fija, enlace a la fuente con página en cada propuesta.
-- [ ] **Móvil:** vista por tema con un selector de tema y tarjetas por partido apiladas, más un selector para comparar 2–3 partidos.
+### Fase 3 · Interfaz del comparador
+- [x] **Una sola vista (escritorio y móvil):** una sección desplegable por tema, plegada por defecto. Al desplegarla aparecen los 6 partidos en el orden fijo, cada uno con sus propuestas y el enlace a la fuente con página. Sustituye a la tabla temas × partidos, que se leía mal.
+- [x] Selector para comparar 2–3 partidos (se aplica a todos los temas), botones para desplegar o plegar todo y enlace directo a un tema (`/#vivienda`).
 - [ ] Etiquetas de ámbito (D21 solo Madrid/Barcelona; coaliciones regionales).
 - [ ] Indicadores de `estado` y fecha de última revisión por celda.
 - [ ] Página `/fuentes` generada desde la colección `fuentes`.
-- [ ] Accesibilidad básica: contraste, navegación por teclado, la tabla legible con lector de pantalla.
+- [ ] Accesibilidad básica: contraste, navegación por teclado, las secciones legibles con lector de pantalla.
 - [ ] Colores de partido solo como apoyo, nunca como único portador de información.
 
 ### Fase 4 · Resto de temas
