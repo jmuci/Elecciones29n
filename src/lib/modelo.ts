@@ -7,7 +7,7 @@ export type Estado = (typeof ESTADOS)[number];
 /** Estados cuya lista `propuestas` debe estar vacía. */
 export const ESTADOS_SIN_PROPUESTAS = ['sin_propuesta', 'no_publicado'] as const satisfies readonly Estado[];
 
-export const TIPOS_FUENTE = ['programa', 'plan_sectorial', 'web', 'nota_prensa'] as const;
+export const TIPOS_FUENTE = ['programa', 'manifiesto', 'plan_sectorial', 'argumentario', 'web', 'nota_prensa'] as const;
 export type TipoFuente = (typeof TIPOS_FUENTE)[number];
 
 export const TIPOS_AMBITO = ['toda_espana', 'casi_toda_espana', 'algunas_circunscripciones'] as const;

@@ -16,6 +16,7 @@ export interface Celda {
   partido?: unknown;
   tema?: unknown;
   propuestas: { fuente?: unknown; pagina?: unknown }[];
+  fuentes_revisadas?: unknown[];
 }
 
 export interface Contenido {
@@ -62,11 +63,19 @@ export function validar({ partidos, temas, fuentes, celdas }: Contenido): string
       if (p.pagina === undefined || p.pagina === null || p.pagina === '')
         errores.push(`${donde}: falta \`pagina\``);
     });
+
+    celda.fuentes_revisadas?.forEach((id, i) => {
+      if (!fuentes.has(String(id)))
+        errores.push(`${celda.ruta}: fuentes_revisadas[${i}]: la fuente \`${String(id)}\` no existe en src/content/fuentes/`);
+      else usadas.add(String(id));
+    });
   }
 
   for (const id of fuentes)
     if (!usadas.has(id))
-      errores.push(`fuentes/${id}.yaml: la fuente no está referenciada por ninguna propuesta`);
+      errores.push(
+        `fuentes/${id}.yaml: la fuente no está referenciada por ninguna propuesta ni en \`fuentes_revisadas\``,
+      );
 
   return errores;
 }
@@ -91,7 +100,13 @@ export function cargar(base: string, incluirEjemplo: boolean): Contenido {
     .filter((f) => /^propuestas\/[^/]+\/[^/]+\.ya?ml$/.test(f))
     .map((ruta) => {
       const d = leer(ruta);
-      return { ruta, partido: d.partido, tema: d.tema, propuestas: Array.isArray(d.propuestas) ? d.propuestas : [] };
+      return {
+        ruta,
+        partido: d.partido,
+        tema: d.tema,
+        propuestas: Array.isArray(d.propuestas) ? d.propuestas : [],
+        fuentes_revisadas: Array.isArray(d.fuentes_revisadas) ? d.fuentes_revisadas : undefined,
+      };
     });
   return { partidos: ids('partidos'), temas: ids('temas'), fuentes: ids('fuentes'), celdas };
 }

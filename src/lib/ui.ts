@@ -29,7 +29,9 @@ export const ESTADO_VISTA: Record<EstadoVista, { etiqueta: string; descripcion: 
 
 export const TIPO_FUENTE: Record<TipoFuente, string> = {
   programa: 'Programa electoral',
+  manifiesto: 'Manifiesto o documento de compromisos',
   plan_sectorial: 'Plan sectorial',
+  argumentario: 'Argumentario de campaña',
   web: 'Página web oficial',
   nota_prensa: 'Nota de prensa',
 };

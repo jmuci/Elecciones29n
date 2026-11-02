@@ -1,6 +1,36 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen
+# "Recuperar España" (2026) y el Programa económico y de vivienda (2025).
 partido: vox
 tema: vivienda
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: oferta y construcción
+    resumen: >-
+      Propone liberar suelo, invertir en vivienda protegida y acabar con la ocupación ilegal de
+      viviendas.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - subtema: vivienda pública
+    resumen: Propone que los españoles tengan acceso preferente a la vivienda pública.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - subtema: alquiler
+    resumen: >-
+      Plantea derogar las medidas de intervención en el mercado del alquiler, con incentivos fiscales
+      al alquiler de larga duración y asequible y deducciones en el IRPF para jóvenes inquilinos.
+    fuente: vox-programa-economico-vivienda
+    pagina: 45
+  - subtema: alquiler
+    resumen: Propone prohibir el alquiler de vivienda a inmigrantes en situación irregular.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - subtema: jóvenes
+    resumen: >-
+      Plantea avales públicos para la compra de vivienda y créditos blandos para parejas jóvenes
+      vinculados al número de hijos, con condonación parcial según objetivos de natalidad.
+    fuente: vox-programa-economico-vivienda
+    pagina: 47
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

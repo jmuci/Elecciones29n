@@ -21,7 +21,7 @@ El orden sigue los escaños obtenidos en las generales de julio de 2023, y los p
 | `vox` | Vox | Toda España | |
 | `frente-amplio` | Frente Amplio (Movimiento Sumar, IU, Más Madrid, Comuns y aliados) | Casi toda España, con marcas regionales | Candidata: Ada Colau. Coaliciones regionales: Compromís-Front Valencià (incluye a Podemos), Chunta Aragonesista-Frente Amplio Aragón, Ara Més-Frente Amplio (Baleares), Frente Amplio por Andalucía, candidatura conjunta con Podemos en Canarias. |
 | `podemos` | Podemos | Casi toda España | En Canarias y en la Comunidad Valenciana concurre en candidaturas conjuntas con Frente Amplio. En Cataluña tiene un acuerdo con ERC. |
-| `democracia-21` | Democracia 21 (en coalición con Ciudadanos y UCIN) | **Solo Madrid y Barcelona** | Partido nuevo. A 2 de noviembre de 2026 solo ha publicado su plan de vivienda. |
+| `democracia-21` | Democracia 21 (en coalición con Ciudadanos y UCIN) | **Solo Madrid y Barcelona** | Partido nuevo. A 2 de noviembre de 2026 ha publicado dos planes: vivienda y regeneración ("España limpia"). |
 
 > El ámbito de cada partido debe mostrarse siempre en la UI (etiqueta visible), para que nadie crea que puede votar a un partido que no se presenta en su provincia.
 
@@ -83,7 +83,7 @@ id: pp-programa-29n
 partido: pp
 titulo: "Programa electoral elecciones generales 2026"
 url: https://...                 # URL oficial en la web del partido
-tipo: programa                   # programa | plan_sectorial | web | nota_prensa
+tipo: programa                   # programa | manifiesto | plan_sectorial | argumentario | web | nota_prensa
 publicado: 2026-11-xx            # si se conoce
 consultado: 2026-11-xx           # obligatorio
 archivo: https://web.archive.org/web/...   # snapshot en Wayback Machine
@@ -106,6 +106,8 @@ propuestas:
     fuente: pp-programa-29n
     pagina: 34
     # posicion: reservado para el test de afinidad (fase posterior)
+fuentes_revisadas:   # opcional: documentos revisados para esta celda, citen o no propuestas
+  - pp-programa-29n
 ```
 
 ### Significado de `estado`
@@ -155,9 +157,9 @@ Lista cerrada. Añadir un tema requiere un PR que lo cree para **todos** los par
 - [x] Conectar el repo a Vercel. Comprobar que se despliega y que los PRs generan preview.
 
 ### Fase 1 · Inventario de fuentes oficiales
-- [ ] Localizar, para cada partido, el programa electoral del 29N y los planes sectoriales en su web oficial.
-- [ ] Registrar cada documento en `fuentes/` con fecha de consulta, snapshot en Wayback Machine y hash.
-- [ ] Marcar como `no_publicado` lo que aún no exista.
+- [x] Localizar, para cada partido, el programa electoral del 29N y los planes sectoriales en su web oficial (primera pasada, 2-nov). Pendiente: Podemos (podemos.info bloquea el acceso con una verificación de Cloudflare).
+- [x] Registrar cada documento en `fuentes/` con fecha de consulta, snapshot en Wayback Machine y hash.
+- [x] Marcar como `no_publicado` lo que aún no exista. Las celdas piloto con documento se han redactado ya (adelanto de la Fase 2).
 - [ ] **Segunda pasada el 13–14 de noviembre** (inicio de campaña): es probable que se publiquen o actualicen programas.
 
 ### Fase 2 · Piloto (vivienda, inmigración, impuestos)

@@ -1,6 +1,6 @@
 ---
 import IconoEstado from './IconoEstado.astro';
-import { ESTADO_VISTA, fecha, localizador, urlPropuesta, type Datos } from '../lib/ui';
+import { ESTADO_VISTA, TIPO_FUENTE, fecha, localizador, urlPropuesta, type Datos } from '../lib/ui';
 import type { Celda, Partido } from '../lib/modelo';
 
 interface Props {
@@ -46,6 +46,7 @@ const revisado = celda && fecha(celda.data.revisado);
                   {f.data.titulo}
                   <span class="sr-only"> ({partido.data.nombre_corto})</span>, {localizador(p.pagina)}
                 </a>
+                {f.data.tipo !== 'programa' && <> ({TIPO_FUENTE[f.data.tipo].toLowerCase()})</>}
               </p>
             </li>
           );

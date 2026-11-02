@@ -1,6 +1,15 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; solo notas de prensa.
 partido: frente-amplio
 tema: impuestos
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: vivienda
+    resumen: >-
+      Propone un impuesto a la acumulación de vivienda del 10 % del valor de cada vivienda: para las
+      empresas desde la primera y para las personas físicas desde la cuarta, si su valor conjunto
+      supera 800.000 €. Quedan exentas las viviendas alquiladas de forma asequible y estable.
+    fuente: frente-amplio-nota-impuesto-acumulacion-vivienda
+    pagina: entradilla
+fuentes_revisadas:
+  - frente-amplio-nota-impuesto-acumulacion-vivienda

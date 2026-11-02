@@ -1,6 +1,29 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen el
+# Contrato con España y los argumentarios de impuestos y vivienda.
 partido: pp
 tema: impuestos
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - resumen: >-
+      Se compromete a revisar una a una las más de cien subidas fiscales de los últimos años y a
+      bajar los impuestos.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - subtema: IRPF
+    resumen: Propone bajar el IRPF, especialmente a las familias con hijos.
+    fuente: pp-argumentario-menos-impuestos
+    pagina: 1
+  - subtema: IVA
+    resumen: Propone bajar el IVA de los productos básicos y de la luz.
+    fuente: pp-argumentario-menos-impuestos
+    pagina: 1
+  - subtema: compra de vivienda
+    resumen: >-
+      Plantea, para los jóvenes que compren vivienda, menos IRPF y un 60 % menos de IVA e ITP.
+    fuente: pp-argumentario-nueva-generacion-propietarios
+    pagina: 1
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-nueva-generacion-propietarios
+  - pp-argumentario-menos-impuestos

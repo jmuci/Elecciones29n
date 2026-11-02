@@ -7,7 +7,7 @@ Este proyecto resume las propuestas de los partidos. El objetivo es que cualquie
 ## 1. Reglas de neutralidad
 
 ### Fuentes
-1. **Solo fuentes oficiales del partido**: programa electoral, planes sectoriales, web oficial y notas de prensa oficiales. Un artículo de prensa puede servir para *encontrar* una propuesta, pero nunca es la fuente que se enlaza.
+1. **Solo fuentes oficiales del partido**: programa electoral, manifiestos, planes sectoriales, argumentarios de campaña, web oficial y notas de prensa oficiales. Mientras no haya programa, se puede citar cualquiera de los otros, y el `tipo` de la fuente lo deja claro. Un artículo de prensa puede servir para *encontrar* una propuesta, pero nunca es la fuente que se enlaza.
 2. **Toda propuesta lleva fuente, página (o sección) y fecha de consulta.** Sin fuente verificable, la propuesta no entra.
 3. **Archivar cada documento** en Wayback Machine al registrarlo. Los partidos cambian sus PDFs y el enlace tiene que seguir siendo comprobable.
 4. **No mezclar convocatorias.** Solo documentos para el 29N. Si un partido aún no ha publicado nada sobre un tema, el estado es `no_publicado`. No se rellena con el programa de 2023 ni con declaraciones sueltas.
