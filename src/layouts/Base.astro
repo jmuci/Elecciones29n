@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { cargarDatos, fecha } from '../lib/ui';
 
 interface Props {
   titulo: string;
@@ -7,6 +8,8 @@ interface Props {
 }
 
 const { titulo, descripcion } = Astro.props;
+const { celdas } = await cargarDatos();
+const ultima = fecha(new Date(Math.max(...celdas.map((c) => c.data.revisado.getTime()))), true);
 const ruta = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const enlaces = [
   { href: '/', texto: 'Propuestas' },
@@ -47,7 +50,15 @@ const enlaces = [
     </main>
     <footer class="pie">
       <div class="contenedor">
-        <p>Resúmenes propios; la fuente oficial siempre prevalece.</p>
+        <p>
+          Resúmenes propios; la fuente oficial siempre prevalece. Última actualización:{' '}
+          <time datetime={ultima.iso}>{ultima.texto}</time>.
+        </p>
+        <p>
+          <a href="https://github.com/jmuci/Elecciones29n/issues/new?template=error-contenido.yml" rel="noopener">
+            Reportar un error
+          </a>
+        </p>
       </div>
     </footer>
   </body>

@@ -1,0 +1,44 @@
+name: Error de contenido
+description: Un resumen no coincide con la fuente oficial, o falta o sobra una propuesta.
+title: "Error: "
+labels: ["error-contenido"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisar. Solo se aceptan correcciones respaldadas por un documento oficial del partido.
+  - type: input
+    id: partido
+    attributes:
+      label: Partido
+      placeholder: PP, PSOE, Vox, Frente Amplio, Podemos o Democracia 21
+    validations:
+      required: true
+  - type: input
+    id: tema
+    attributes:
+      label: Tema
+      placeholder: Vivienda
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Qué está mal
+      description: Qué dice la web y en qué se aparta de la fuente.
+    validations:
+      required: true
+  - type: input
+    id: enlace
+    attributes:
+      label: Enlace a la fuente correcta
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: pagina
+    attributes:
+      label: Página o sección de la fuente correcta
+      placeholder: p. 12
+    validations:
+      required: true

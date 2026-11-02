@@ -92,9 +92,13 @@ const porPartido = (id: string): Fuente[] =>
                             <dd>
                               {citadaEn.length === 0
                                 ? 'Ninguna celda la cita todavía.'
-                                : citadaEn
-                                    .map(({ tema, n }) => `${tema.data.nombre} (${n} ${n === 1 ? 'propuesta' : 'propuestas'})`)
-                                    .join(', ')}
+                                : citadaEn.map(({ tema, n }, i) => (
+                                    <>
+                                      {i > 0 && ', '}
+                                      <a href={`/#${tema.id}`}>{tema.data.nombre}</a> ({n}{' '}
+                                      {n === 1 ? 'propuesta' : 'propuestas'})
+                                    </>
+                                  ))}
                             </dd>
                           </div>
                         </dl>
