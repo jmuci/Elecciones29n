@@ -1,6 +1,34 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): Podemos no tiene programa publicado; se resume su documento
+# político de la V Asamblea (2025).
 partido: podemos
 tema: impuestos
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: patrimonio
+    resumen: Propone un impuesto a los grandes patrimonios.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - subtema: sociedades
+    resumen: >-
+      Propone un tipo mínimo efectivo en el impuesto de sociedades para que las grandes empresas no
+      tributen porcentualmente menos que una pyme.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - subtema: sociedades
+    resumen: >-
+      Plantea impuestos extraordinarios a sectores con beneficios desproporcionados, como la banca o
+      las grandes energéticas, y un impuesto a los beneficios extraordinarios de las empresas del IBEX.
+    cita: "que alcance el 50% de los mismos"
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 37
+  - subtema: IRPF
+    resumen: Propone igualar en el IRPF la tributación de los rendimientos del capital a la del trabajo.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 37
+  - subtema: vivienda
+    resumen: Propone un impuesto a las viviendas vacías.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 31
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea

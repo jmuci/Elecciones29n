@@ -1,6 +1,34 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): Podemos no tiene programa publicado; se resume su documento
+# político de la V Asamblea (2025).
 partido: podemos
 tema: inmigracion
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: regularización
+    resumen: >-
+      Propone regularizar de inmediato a las personas que viven y trabajan en España y concederles la
+      nacionalidad por carta de naturaleza mediante un procedimiento exprés del Consejo de Ministros.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 34
+  - subtema: integración
+    resumen: Plantea que quien vive y trabaja en España tenga DNI español y derecho al voto.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 34
+  - subtema: integración
+    resumen: >-
+      Propone que todos los servicios públicos y derechos de ciudadanía sean universales para todas
+      las personas que viven en España, sin distinción.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 34
+  - resumen: >-
+      Propone derogar la ley de extranjería y cerrar los Centros de Internamiento de Extranjeros
+      (CIE), y que denunciar un delito de odio o racismo no conlleve riesgo de deportación.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 34
+  - subtema: asilo
+    resumen: Plantea trabajar en la UE para derogar el Pacto Europeo de Migración y Asilo.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 34
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
