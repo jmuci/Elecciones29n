@@ -202,14 +202,17 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
     position: relative;
     overflow: auto;
     max-height: calc(100dvh - 2rem);
+    /* Que el foco por teclado no quede oculto bajo la cabecera o la columna fijas. */
+    scroll-padding: 9rem 0 0 9.5rem;
     border: 1px solid var(--rule);
     border-radius: var(--radius);
     background: var(--surface);
   }
 
   table {
-    --col-tema: 9.5rem;
-    width: max(100%, calc(var(--col-tema) + var(--columnas) * 12.5rem));
+    /* 6 partidos caben sin scroll horizontal a 1280px. */
+    --col-tema: 9rem;
+    width: max(100%, calc(var(--col-tema) + var(--columnas) * 10.75rem));
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
@@ -286,8 +289,10 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
   tbody th {
     z-index: 1;
     font-family: var(--font-serif);
-    font-size: var(--step-1);
+    font-size: 1.0625rem;
     font-weight: 600;
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   /* — Móvil: tarjetas por tema — */

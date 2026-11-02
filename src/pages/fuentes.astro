@@ -1,0 +1,220 @@
+---
+import Base from '../layouts/Base.astro';
+import InfoPartido from '../components/InfoPartido.astro';
+import { cargarDatos, fecha, TIPO_FUENTE } from '../lib/ui';
+import { TIPOS_FUENTE } from '../lib/modelo';
+import type { Fuente, Tema } from '../lib/modelo';
+
+const { partidos, temas, fuentes, celdas } = await cargarDatos();
+
+/** Temas (en orden) cuyas celdas citan la fuente, con el número de propuestas. */
+const citas = (f: Fuente): { tema: Tema; n: number }[] =>
+  temas.flatMap((tema) => {
+    const n = celdas
+      .filter((c) => c.data.tema.id === tema.id)
+      .flatMap((c) => c.data.propuestas)
+      .filter((p) => p.fuente.id === f.id).length;
+    return n > 0 ? [{ tema, n }] : [];
+  });
+
+const porPartido = (id: string): Fuente[] =>
+  fuentes
+    .filter((f) => f.data.partido.id === id)
+    .sort(
+      (a, b) =>
+        TIPOS_FUENTE.indexOf(a.data.tipo) - TIPOS_FUENTE.indexOf(b.data.tipo) ||
+        a.data.titulo.localeCompare(b.data.titulo, 'es'),
+    );
+---
+
+<Base
+  titulo="Fuentes · Elecciones 29-N-2026"
+  descripcion="Documentos oficiales de los partidos usados en el comparador de propuestas del 29 de noviembre de 2026."
+>
+  <div class="contenedor">
+    <div class="prosa intro">
+      <h1>Fuentes</h1>
+      <p class="entradilla">Documentos oficiales de cada partido en los que se basan los resúmenes de la tabla.</p>
+      <p>
+        Solo se usan programas electorales, planes sectoriales, páginas web y notas de prensa publicados por los propios
+        partidos para estas elecciones. Cuando existe, se enlaza también una copia archivada en Wayback Machine para que el
+        documento siga siendo comprobable aunque cambie.
+      </p>
+    </div>
+
+    {
+      partidos.map((p) => {
+        const lista = porPartido(p.id);
+        return (
+          <section class="partido" aria-labelledby={`partido-${p.id}`}>
+            <header>
+              <h2 id={`partido-${p.id}`}>{p.data.nombre}</h2>
+              <InfoPartido partido={p} />
+            </header>
+            {lista.length === 0 ? (
+              <p class="vacio">Aún no hay fuentes registradas.</p>
+            ) : (
+              <ul class="fuentes">
+                {lista.map((f) => {
+                  const consultado = fecha(f.data.consultado, true);
+                  const publicado = f.data.publicado && fecha(f.data.publicado, true);
+                  const citadaEn = citas(f);
+                  return (
+                    <li>
+                      <article aria-labelledby={`fuente-${f.id}`}>
+                        <h3 id={`fuente-${f.id}`}>
+                          {f.data.titulo}
+                          {f.data.ficticio && <span class="marca-prueba">FICTICIO</span>}
+                        </h3>
+                        <dl>
+                          <div>
+                            <dt>Tipo</dt>
+                            <dd>{TIPO_FUENTE[f.data.tipo]}</dd>
+                          </div>
+                          {publicado && (
+                            <div>
+                              <dt>Publicado</dt>
+                              <dd>
+                                <time datetime={publicado.iso}>{publicado.texto}</time>
+                              </dd>
+                            </div>
+                          )}
+                          <div>
+                            <dt>Consultado</dt>
+                            <dd>
+                              <time datetime={consultado.iso}>{consultado.texto}</time>
+                            </dd>
+                          </div>
+                          <div>
+                            <dt>Citada en</dt>
+                            <dd>
+                              {citadaEn.length === 0
+                                ? 'Ninguna celda la cita todavía.'
+                                : citadaEn
+                                    .map(({ tema, n }) => `${tema.data.nombre} (${n} ${n === 1 ? 'propuesta' : 'propuestas'})`)
+                                    .join(', ')}
+                            </dd>
+                          </div>
+                        </dl>
+                        <ul class="enlaces">
+                          <li>
+                            <a href={f.data.url} rel="noopener">
+                              Documento oficial<span class="sr-only">: {f.data.titulo} ({p.data.nombre_corto})</span>
+                            </a>
+                          </li>
+                          {f.data.archivo && (
+                            <li>
+                              <a href={f.data.archivo} rel="noopener">
+                                Copia archivada en Wayback Machine
+                                <span class="sr-only">: {f.data.titulo} ({p.data.nombre_corto})</span>
+                              </a>
+                            </li>
+                          )}
+                        </ul>
+                      </article>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </section>
+        );
+      })
+    }
+  </div>
+</Base>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-7);
+  }
+
+  h1 {
+    font-size: var(--step-3);
+    letter-spacing: -0.01em;
+  }
+
+  .entradilla {
+    font-family: var(--font-serif);
+    font-size: var(--step-1);
+    line-height: 1.45;
+  }
+
+  .partido {
+    max-width: 52rem;
+    padding-block: var(--space-5) var(--space-6);
+    border-top: 1px solid var(--border-strong);
+  }
+
+  .partido > header {
+    display: grid;
+    gap: var(--space-1);
+    margin-bottom: var(--space-4);
+  }
+
+  .partido > header :global(.marca-prueba) {
+    justify-self: start;
+  }
+
+  h2 {
+    font-size: var(--step-2);
+  }
+
+  .vacio {
+    color: var(--pendiente);
+  }
+
+  .fuentes {
+    display: grid;
+    gap: var(--space-4);
+    padding: 0;
+    list-style: none;
+  }
+
+  article {
+    display: grid;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  h3 {
+    font-size: var(--step-1);
+  }
+
+  h3 .marca-prueba {
+    margin-left: var(--space-2);
+    vertical-align: 0.2em;
+  }
+
+  dl {
+    display: grid;
+    gap: var(--space-1);
+    font-size: 0.9375rem;
+  }
+
+  dl > div {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  dt {
+    color: var(--muted);
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  .enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+    padding: 0;
+    list-style: none;
+    font-size: 0.9375rem;
+  }
+</style>
