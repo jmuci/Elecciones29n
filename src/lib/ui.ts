@@ -49,9 +49,11 @@ export function localizador(pagina: Propuesta['pagina']): string {
   return typeof pagina === 'number' ? `p. ${pagina}` : `sección ${pagina}`;
 }
 
-/** Clave para agrupar subtemas escritos de forma distinta ("Alquiler" = "alquiler"). Vacía si no hay subtema. */
-export function claveSubtema(subtema: string | undefined): string {
-  return subtema?.trim().toLocaleLowerCase('es') ?? '';
+/** Subtemas de una propuesta como lista (en el YAML puede ser uno o varios). */
+export function subtemasDe(propuesta: Propuesta): string[] {
+  const { subtema } = propuesta;
+  if (subtema === undefined) return [];
+  return typeof subtema === 'string' ? [subtema] : subtema;
 }
 
 /** URL de la fuente; en PDFs con página numérica añade `#page=N`. */

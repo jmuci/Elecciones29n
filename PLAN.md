@@ -129,9 +129,9 @@ Lista cerrada. Añadir un tema requiere un PR que lo cree para **todos** los par
 
 | Orden | id | Tema | Subtemas orientativos |
 |---|---|---|---|
-| 1 | `vivienda` | Vivienda | alquiler, oferta y construcción, vivienda pública, jóvenes, okupación |
-| 2 | `inmigracion` | Inmigración | regularización, fronteras, integración, asilo |
-| 3 | `impuestos` | Impuestos | IRPF, IVA, sociedades, patrimonio y sucesiones, autónomos |
+| 1 | `vivienda` | Vivienda | alquiler, oferta y construcción, vivienda pública, compra y propiedad, jóvenes, okupación, desahucios |
+| 2 | `inmigracion` | Inmigración | regularización, fronteras, expulsiones, nacionalidad, integración, servicios y prestaciones, asilo |
+| 3 | `impuestos` | Impuestos | fiscalidad general, IRPF, IVA, sociedades, patrimonio y sucesiones, autónomos, vivienda, otros |
 | 4 | `empleo` | Empleo y salarios | SMI, jornada, contratación, desempleo |
 | 5 | `pensiones` | Pensiones | revalorización, sostenibilidad, edad de jubilación |
 | 6 | `sanidad` | Sanidad | listas de espera, atención primaria, salud mental |
@@ -145,6 +145,8 @@ Lista cerrada. Añadir un tema requiere un PR que lo cree para **todos** los par
 | 14 | `exterior-defensa` | Exterior y defensa | UE, OTAN, gasto en defensa |
 
 **Piloto:** `vivienda`, `inmigracion` e `impuestos`.
+
+Los subtemas son cerrados: cada propuesta lleva uno o varios de la lista de su tema (`src/content/temas/<tema>.yaml`), y `check:content` falla si no. Los de los temas piloto se ampliaron en la Fase 1 con lo que traían los documentos; los demás temas son orientativos hasta que se revisen.
 
 ---
 

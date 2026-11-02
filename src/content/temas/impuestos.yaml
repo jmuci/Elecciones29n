@@ -1,8 +1,11 @@
 nombre: Impuestos
 orden: 3
 subtemas:
+  - fiscalidad general
   - IRPF
   - IVA
   - sociedades
   - patrimonio y sucesiones
   - autónomos
+  - vivienda
+  - otros

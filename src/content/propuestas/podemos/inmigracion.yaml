@@ -5,23 +5,24 @@ tema: inmigracion
 estado: parcial
 revisado: 2026-11-02
 propuestas:
-  - subtema: regularización
+  - subtema: [regularización, nacionalidad]
     resumen: >-
       Propone regularizar de inmediato a las personas que viven y trabajan en España y concederles la
       nacionalidad por carta de naturaleza mediante un procedimiento exprés del Consejo de Ministros.
     fuente: podemos-documento-politico-v-asamblea
     pagina: 34
-  - subtema: integración
+  - subtema: [nacionalidad, integración]
     resumen: Plantea que quien vive y trabaja en España tenga DNI español y derecho al voto.
     fuente: podemos-documento-politico-v-asamblea
     pagina: 34
-  - subtema: integración
+  - subtema: servicios y prestaciones
     resumen: >-
       Propone que todos los servicios públicos y derechos de ciudadanía sean universales para todas
       las personas que viven en España, sin distinción.
     fuente: podemos-documento-politico-v-asamblea
     pagina: 34
-  - resumen: >-
+  - subtema: expulsiones
+    resumen: >-
       Propone derogar la ley de extranjería y cerrar los Centros de Internamiento de Extranjeros
       (CIE), y que denunciar un delito de odio o racismo no conlleve riesgo de deportación.
     fuente: podemos-documento-politico-v-asamblea

@@ -5,7 +5,7 @@ tema: vivienda
 estado: parcial
 revisado: 2026-11-02
 propuestas:
-  - subtema: oferta y construcción
+  - subtema: [oferta y construcción, vivienda pública, okupación]
     resumen: >-
       Propone liberar suelo, invertir en vivienda protegida y acabar con la ocupación ilegal de
       viviendas.
@@ -15,7 +15,7 @@ propuestas:
     resumen: Propone que los españoles tengan acceso preferente a la vivienda pública.
     fuente: vox-recuperar-espana
     pagina: 3
-  - subtema: alquiler
+  - subtema: [alquiler, jóvenes]
     resumen: >-
       Plantea derogar las medidas de intervención en el mercado del alquiler, con incentivos fiscales
       al alquiler de larga duración y asequible y deducciones en el IRPF para jóvenes inquilinos.
@@ -25,7 +25,7 @@ propuestas:
     resumen: Propone prohibir el alquiler de vivienda a inmigrantes en situación irregular.
     fuente: vox-recuperar-espana
     pagina: 3
-  - subtema: jóvenes
+  - subtema: [jóvenes, compra y propiedad]
     resumen: >-
       Plantea avales públicos para la compra de vivienda y créditos blandos para parejas jóvenes
       vinculados al número de hijos, con condonación parcial según objetivos de natalidad.

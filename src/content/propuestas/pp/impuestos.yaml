@@ -5,7 +5,8 @@ tema: impuestos
 estado: parcial
 revisado: 2026-11-02
 propuestas:
-  - resumen: >-
+  - subtema: fiscalidad general
+    resumen: >-
       Se compromete a revisar una a una las más de cien subidas fiscales de los últimos años y a
       bajar los impuestos.
     fuente: pp-contrato-con-espana
@@ -18,7 +19,7 @@ propuestas:
     resumen: Propone bajar el IVA de los productos básicos y de la luz.
     fuente: pp-argumentario-menos-impuestos
     pagina: 1
-  - subtema: compra de vivienda
+  - subtema: [IRPF, IVA, vivienda]
     resumen: >-
       Plantea, para los jóvenes que compren vivienda, menos IRPF y un 60 % menos de IVA e ITP.
     fuente: pp-argumentario-nueva-generacion-propietarios
