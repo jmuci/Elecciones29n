@@ -1,6 +1,40 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resume "Recuperar España" (2026).
 partido: vox
 tema: inmigracion
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: regularización
+    resumen: >-
+      Propone prohibir las regularizaciones masivas, de modo que quien entre de forma irregular no
+      pueda regularizar nunca su situación.
+    fuente: vox-recuperar-espana
+    pagina: 5
+  - subtema: fronteras
+    resumen: >-
+      Propone repatriar a quienes permanezcan en España de forma irregular, deportar a quienes
+      cometan delitos graves o hagan de los delitos leves su forma de vida, y devolver a sus familias a los menores extranjeros no
+      acompañados.
+    fuente: vox-recuperar-espana
+    pagina: 5
+  - subtema: integración
+    resumen: >-
+      Plantea suprimir las ayudas y beneficios sociales a los inmigrantes en situación irregular y
+      limitar su acceso a la sanidad a las urgencias vitales.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - subtema: nacionalidad
+    resumen: >-
+      Propone revisar las concesiones de nacionalidad que considera fraudulentas y endurecer los
+      requisitos para obtenerla.
+    fuente: vox-recuperar-espana
+    pagina: 5
+  - subtema: fronteras
+    resumen: >-
+      Plantea en Ceuta la suspensión de los acuerdos con Marruecos y la militarización de la frontera.
+    cita: "expulsión de todos los invasores con carácter inmediato"
+    fuente: vox-recuperar-espana
+    pagina: 3
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

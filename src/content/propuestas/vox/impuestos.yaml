@@ -1,6 +1,32 @@
-# Placeholder de Fase 0: pendiente de revisar contra fuentes oficiales (Fase 1).
+# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen
+# "Recuperar España" (2026) y el Programa económico y de vivienda (2025).
 partido: vox
 tema: impuestos
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - resumen: Propone una rebaja fiscal para familias, trabajadores, autónomos y empresas.
+    fuente: vox-recuperar-espana
+    pagina: 4
+  - subtema: IRPF
+    resumen: >-
+      Propone un IRPF con un mínimo exento de 22.000 €, un tipo del 15 % hasta 70.000 € y del 25 % a
+      partir de esa cifra, con 4 puntos menos por cada descendiente.
+    fuente: vox-programa-economico-vivienda
+    pagina: 36
+  - subtema: IVA y sociedades
+    resumen: >-
+      Plantea bajar el IVA reducido al 8 % y el general al 18 %, y el impuesto de sociedades del 25 %
+      al 15 %.
+    fuente: vox-programa-economico-vivienda
+    pagina: 37
+  - subtema: compra de vivienda
+    resumen: Propone suprimir los impuestos en la compra de la primera vivienda.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - resumen: Propone un gravamen sobre las remesas de dinero enviadas al extranjero.
+    fuente: vox-recuperar-espana
+    pagina: 3
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda
