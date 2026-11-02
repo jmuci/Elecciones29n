@@ -98,7 +98,8 @@ const fuentes = defineCollection({
 const MAX_PALABRAS_CITA = 14; // "menos de 15 palabras" (CONTRIBUTING §1.6)
 
 const propuesta = z.strictObject({
-  subtema: textoNoVacio.optional(),
+  /** Uno o varios de los `subtemas` del tema (lo comprueba `check:content`). */
+  subtema: z.union([textoNoVacio, z.array(textoNoVacio).min(1)]).optional(),
   resumen: textoNoVacio,
   cita: textoNoVacio
     .refine((s) => s.split(/\s+/).length <= MAX_PALABRAS_CITA, {

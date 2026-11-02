@@ -3,7 +3,8 @@ import Base from '../layouts/Base.astro';
 import ContenidoCelda from '../components/ContenidoCelda.astro';
 import InfoPartido from '../components/InfoPartido.astro';
 import Leyenda from '../components/Leyenda.astro';
-import { cargarDatos, claveSubtema } from '../lib/ui';
+import { cargarDatos, subtemasDe } from '../lib/ui';
+import type { Tema } from '../lib/modelo';
 
 const MAX_COMPARAR = 3;
 const { partidos, temas, temasMostrados, celda, fuente } = await cargarDatos();
@@ -13,17 +14,10 @@ const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id
 const conPropuestas = (tema: string): number =>
   partidos.filter((p) => (celda(p.id, tema)?.data.propuestas.length ?? 0) > 0).length;
 
-/** Subtemas usados en las propuestas del tema, sin repetir y en orden alfabético. */
-const subtemas = (tema: string): { clave: string; nombre: string }[] => {
-  const porClave = new Map<string, string>();
-  for (const p of partidos)
-    for (const prop of celda(p.id, tema)?.data.propuestas ?? []) {
-      const clave = claveSubtema(prop.subtema);
-      if (clave && !porClave.has(clave)) porClave.set(clave, (prop.subtema ?? '').trim());
-    }
-  return [...porClave]
-    .map(([clave, nombre]) => ({ clave, nombre }))
-    .sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+/** Subtemas del tema que usa al menos una propuesta, en el orden de `temas/<tema>.yaml`. */
+const subtemasUsados = (tema: Tema): string[] => {
+  const usados = new Set(partidos.flatMap((p) => (celda(p.id, tema.id)?.data.propuestas ?? []).flatMap(subtemasDe)));
+  return tema.data.subtemas.filter((s) => usados.has(s));
 };
 ---
 
@@ -97,7 +91,7 @@ const subtemas = (tema: string): { clave: string; nombre: string }[] => {
         </form>
 
         {temasMostrados.map((t) => {
-          const lista = subtemas(t.id);
+          const lista = subtemasUsados(t);
           return (
             <details class="tema" id={t.id}>
               <summary>
@@ -118,14 +112,13 @@ const subtemas = (tema: string): { clave: string; nombre: string }[] => {
                       </label>
                       {lista.map((s) => (
                         <label>
-                          <input type="radio" name={`subtema-${t.id}`} value={s.clave} />
-                          {s.nombre}
+                          <input type="radio" name={`subtema-${t.id}`} value={s} />
+                          {s}
                         </label>
                       ))}
                     </div>
                     <p class="ayuda">
-                      Los subtemas son una clasificación propia de esta web. Las propuestas sin subtema se ocultan al
-                      filtrar.
+                      Los subtemas son una clasificación propia de esta web; una propuesta puede tener varios.
                     </p>
                   </fieldset>
                 )}
@@ -195,7 +188,7 @@ const subtemas = (tema: string): { clave: string; nombre: string }[] => {
       const elegido = filtro.querySelector<HTMLInputElement>('input:checked')?.value ?? '';
       for (const partido of tema.querySelectorAll<HTMLElement>('.partido')) {
         const propuestas = [...partido.querySelectorAll<HTMLElement>('li[data-subtema]')];
-        for (const p of propuestas) p.hidden = elegido !== '' && p.dataset.subtema !== elegido;
+        for (const p of propuestas) p.hidden = elegido !== '' && !(p.dataset.subtema ?? '').split('|').includes(elegido);
         const aviso = partido.querySelector<HTMLElement>('.sin-subtema');
         // Solo para partidos con propuestas: sin ellas ya se muestra su estado (p. ej. pendiente de publicación).
         if (aviso) aviso.hidden = elegido === '' || propuestas.length === 0 || propuestas.some((p) => !p.hidden);

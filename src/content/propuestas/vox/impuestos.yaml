@@ -5,7 +5,8 @@ tema: impuestos
 estado: parcial
 revisado: 2026-11-02
 propuestas:
-  - resumen: Propone una rebaja fiscal para familias, trabajadores, autónomos y empresas.
+  - subtema: fiscalidad general
+    resumen: Propone una rebaja fiscal para familias, trabajadores, autónomos y empresas.
     fuente: vox-recuperar-espana
     pagina: 4
   - subtema: IRPF
@@ -14,17 +15,18 @@ propuestas:
       partir de esa cifra, con 4 puntos menos por cada descendiente.
     fuente: vox-programa-economico-vivienda
     pagina: 36
-  - subtema: IVA y sociedades
+  - subtema: [IVA, sociedades]
     resumen: >-
       Plantea bajar el IVA reducido al 8 % y el general al 18 %, y el impuesto de sociedades del 25 %
       al 15 %.
     fuente: vox-programa-economico-vivienda
     pagina: 37
-  - subtema: compra de vivienda
+  - subtema: vivienda
     resumen: Propone suprimir los impuestos en la compra de la primera vivienda.
     fuente: vox-recuperar-espana
     pagina: 3
-  - resumen: Propone un gravamen sobre las remesas de dinero enviadas al extranjero.
+  - subtema: otros
+    resumen: Propone un gravamen sobre las remesas de dinero enviadas al extranjero.
     fuente: vox-recuperar-espana
     pagina: 3
 fuentes_revisadas:

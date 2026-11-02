@@ -5,31 +5,31 @@ tema: impuestos
 estado: parcial
 revisado: 2026-11-02
 propuestas:
-  - subtema: compra de vivienda
+  - subtema: [IVA, vivienda]
     resumen: >-
       Propone eliminar el IVA, el ITP y el AJD en la compra de vivienda habitual para menores de 35
       años, hasta un máximo de 400.000 €.
     fuente: democracia-21-vivienda-prioridad-1
     pagina: 5
-  - subtema: compra de vivienda
+  - subtema: [IVA, vivienda]
     resumen: >-
       Plantea para el resto de compradores de vivienda habitual (hasta 400.000 €) un ITP único del
       2 %, el AJD al 0 % y el IVA superreducido del 4 %.
     fuente: democracia-21-vivienda-prioridad-1
     pagina: 5
-  - subtema: IVA
+  - subtema: [IVA, vivienda]
     resumen: >-
       Propone el IVA superreducido del 4 % para la construcción o rehabilitación integral de vivienda
       asequible, y reducir tasas municipales, ICIO y plusvalías.
     fuente: democracia-21-vivienda-prioridad-1
     pagina: 8
-  - subtema: no residentes
+  - subtema: vivienda
     resumen: >-
       Propone un recargo mínimo del 10 % (ampliable por las comunidades autónomas hasta el 25 %) en
       la compra de vivienda no habitual por inversores extracomunitarios.
     fuente: democracia-21-vivienda-prioridad-1
     pagina: 6
-  - subtema: IVA
+  - subtema: [IVA, vivienda]
     resumen: Propone aplicar el IVA del 10 % a los alquileres turísticos de corta estancia.
     fuente: democracia-21-vivienda-prioridad-1
     pagina: 6

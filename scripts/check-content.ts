@@ -1,6 +1,6 @@
 /**
- * Validaciones de contenido que el schema de Zod no cubre (referencias y
- * fuentes huérfanas). Se ejecuta con Node de forma nativa:
+ * Validaciones de contenido que el schema de Zod no cubre (referencias,
+ * fuentes huérfanas y subtemas fuera de la lista del tema). Se ejecuta con Node de forma nativa:
  *   node scripts/check-content.ts [directorio-content]
  *
  * Reglas de inclusión de ejemplos: las mismas que content.config.ts, vía
@@ -15,13 +15,14 @@ export interface Celda {
   ruta: string;
   partido?: unknown;
   tema?: unknown;
-  propuestas: { fuente?: unknown; pagina?: unknown }[];
+  propuestas: { fuente?: unknown; pagina?: unknown; subtema?: unknown }[];
   fuentes_revisadas?: unknown[];
 }
 
 export interface Contenido {
   partidos: Set<string>;
-  temas: Set<string>;
+  /** id del tema → sus `subtemas` permitidos. */
+  temas: Map<string, string[]>;
   fuentes: Set<string>;
   celdas: Celda[];
 }
@@ -62,6 +63,13 @@ export function validar({ partidos, temas, fuentes, celdas }: Contenido): string
       else usadas.add(String(p.fuente));
       if (p.pagina === undefined || p.pagina === null || p.pagina === '')
         errores.push(`${donde}: falta \`pagina\``);
+      const permitidos = temas.get(String(celda.tema));
+      const subtemas = p.subtema === undefined ? [] : Array.isArray(p.subtema) ? p.subtema : [p.subtema];
+      for (const s of subtemas)
+        if (permitidos && !permitidos.includes(String(s)))
+          errores.push(
+            `${donde}: el subtema \`${String(s)}\` no está en temas/${String(celda.tema)}.yaml (${permitidos.join(', ')})`,
+          );
     });
 
     celda.fuentes_revisadas?.forEach((id, i) => {
@@ -108,7 +116,13 @@ export function cargar(base: string, incluirEjemplo: boolean): Contenido {
         fuentes_revisadas: Array.isArray(d.fuentes_revisadas) ? d.fuentes_revisadas : undefined,
       };
     });
-  return { partidos: ids('partidos'), temas: ids('temas'), fuentes: ids('fuentes'), celdas };
+  const temas = new Map(
+    [...ids('temas')].map((id) => {
+      const { subtemas } = leer(`temas/${id}.yaml`);
+      return [id, Array.isArray(subtemas) ? subtemas.map(String) : []];
+    }),
+  );
+  return { partidos: ids('partidos'), temas, fuentes: ids('fuentes'), celdas };
 }
 
 function main(): void {
