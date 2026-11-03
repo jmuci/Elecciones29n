@@ -20,6 +20,119 @@ destacados:
     cargo: "Ministra de Defensa (2016-2018)"
 nota_revision: "Primera pasada: de momento hay menos logros que críticas documentados con fuente. No es una valoración; se buscan más fuentes para los logros."
 revisado: 2026-11-02
+contexto:
+  internacional:
+    - titulo: Crisis del euro y «whatever it takes» (2012)
+      descripcion: "El 26 de julio de 2012, en plena crisis de deuda de la zona euro, el presidente del BCE, Mario Draghi, afirmó que el BCE estaba dispuesto a hacer «whatever it takes» para preservar el euro dentro de su mandato."
+      fuentes:
+        - medio: "Banco Central Europeo"
+          titulo: "Verbatim of the remarks made by Mario Draghi"
+          url: "https://www.ecb.europa.eu/press/key/date/2012/html/sp120726.en.html"
+          tipo: institucion
+          fecha: 2012-07-26
+    - titulo: Asistencia financiera europea a la banca (2012-2014)
+      descripcion: "En 2012 España recurrió a una línea de asistencia financiera europea para recapitalizar parte de su sector bancario. Según las fuentes citadas en Logros, se usaron 41.300 de los 100.000 millones de euros previstos y el programa concluyó sin prórroga ni línea preventiva de crédito. El Mecanismo Europeo de Estabilidad mantiene vigilancia posterior al programa."
+      fuentes:
+        - medio: "Mecanismo Europeo de Estabilidad"
+          titulo: "Spain"
+          url: "https://www.esm.europa.eu/assistance/spain"
+          tipo: institucion
+        - medio: "Público"
+          titulo: "El fondo de rescate de la UE da por concluido con éxito el plan de ayuda a los bancos españoles"
+          url: "https://www.publico.es/actualidad/fondo-rescate-ue-da-concluido-exitoso-plan-ayuda-bancos-espanoles.html"
+          tipo: prensa
+    - titulo: Referéndum del Brexit (2016)
+      descripcion: "El 23 de junio de 2016 el Reino Unido votó salir de la Unión Europea. Según el Real Instituto Elcano, España es uno de los países con más que perder por los vínculos económicos y humanos con el Reino Unido (comercio, inversión y turismo). El Banco de España analizó la exposición comercial y financiera de la economía española al Reino Unido."
+      fuentes:
+        - medio: "Real Instituto Elcano"
+          titulo: "The consequences of Brexit for Spain"
+          url: "https://www.realinstitutoelcano.org/en/analyses/the-consequences-of-brexit-for-spain/"
+          tipo: estudio
+        - medio: "Banco de España"
+          titulo: "Brexit: balance de situación y perspectivas (Documento Ocasional 1905)"
+          url: "https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/19/Fich/do1905.pdf"
+          tipo: institucion
+  economia_global:
+    - titulo: Compra de activos del BCE (desde 2015)
+      descripcion: "El 22 de enero de 2015 el BCE anunció un programa ampliado de compra de activos, con compras mensuales combinadas de 60.000 millones de euros, previstas al menos hasta septiembre de 2016."
+      fuentes:
+        - medio: "Banco Central Europeo"
+          titulo: "ECB announces expanded asset purchase programme"
+          url: "https://www.ecb.europa.eu/press/pr/date/2015/html/pr150122_1.en.html"
+          tipo: institucion
+          fecha: 2015-01-22
+    - titulo: Tipos de interés del BCE (2011-2016)
+      descripcion: "Según el BCE, el tipo de las operaciones principales de financiación pasó del 1,00 % (diciembre de 2011) al 0,75 % (julio de 2012), al 0,25 % (noviembre de 2013), al 0,05 % (septiembre de 2014) y al 0,00 % (marzo de 2016), con el tipo de la facilidad de depósito en −0,40 %."
+      fuentes:
+        - medio: "Banco Central Europeo"
+          titulo: "Official interest rates"
+          url: "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html"
+          tipo: institucion
+economia:
+  macro:
+    - titulo: Crecimiento e inflación (2012-2017)
+      descripcion: "Según Eurostat, el PIB real varió un −2,9 % en 2012 y un −1,4 % en 2013, y creció un 1,5 % en 2014, un 4,1 % en 2015 y un 2,9 % en 2016 y 2017. La inflación media (IPCA) fue del 2,4 % en 2012 y del 1,5 % en 2013, negativa en 2014, 2015 y 2016 (−0,2 %, −0,6 % y −0,3 %) y del 2,0 % en 2017."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Gross domestic product (GDP) and main components - annual data (nama_10_gdp)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "HICP - annual data (prc_hicp_aind)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table?lang=en"
+          tipo: institucion
+    - titulo: Paro (2011-2018)
+      descripcion: "La tasa de paro (Eurostat, población de 15 a 74 años) fue del 21,4 % en 2011, subió al 24,8 % en 2012 y al 26,1 % en 2013, y bajó después al 24,5 % (2014), 22,1 % (2015), 19,6 % (2016), 17,2 % (2017) y 15,3 % (2018). La serie tiene cambios metodológicos de la Encuesta de Población Activa, por lo que los saltos entre años concretos deben leerse con cautela."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+          tipo: institucion
+    - titulo: Saldo y deuda de las administraciones públicas
+      descripcion: "Según Eurostat, el saldo fue del −9,7 % del PIB en 2011, del −11,5 % en 2012 y del −3,1 % en 2017. La deuda pasó del 69,5 % del PIB en 2011 al 89,6 % en 2012, al 100,0 % en 2013 y al 101,2 % en 2017."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Government deficit/surplus, debt and associated data (gov_10dd_edpt1)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+          tipo: institucion
+  percepcion:
+    - titulo: Valoración de la economía en el CIS (2014 y 2018)
+      descripcion: "En febrero de 2014 el 0,7 % calificó de buena la situación económica general de España, el 12,1 % de regular y el 86,9 % de mala o muy mala. En junio de 2018, mes en que terminó el Gobierno, el 6,7 % la calificó de buena o muy buena, el 42,5 % de regular y el 49,7 % de mala o muy mala."
+      fuentes:
+        - medio: "CIS"
+          titulo: "Barómetro de febrero 2014 (estudio 3013)"
+          url: "https://www.cis.es/estudios/barometro-de-febrero-2014"
+          tipo: institucion
+        - medio: "CIS"
+          titulo: "Barómetro de junio 2018 (estudio 3217)"
+          url: "https://www.cis.es/estudios/barometro-de-junio-2018"
+          tipo: institucion
+    - titulo: Principales problemas del país según el CIS (2014 y 2018)
+      descripcion: "Como primer problema, en febrero de 2014 el paro fue citado por el 56,3 % (81,1 % sumando las tres respuestas) y la corrupción y el fraude por el 15,3 % (44,2 % en total). En junio de 2018, el paro por el 37,1 % (62,4 % en total) y la corrupción y el fraude por el 18,1 % (39,2 % en total)."
+      fuentes:
+        - medio: "CIS"
+          titulo: "Barómetro de febrero 2014 (estudio 3013)"
+          url: "https://www.cis.es/estudios/barometro-de-febrero-2014"
+          tipo: institucion
+        - medio: "CIS"
+          titulo: "Barómetro de junio 2018 (estudio 3217)"
+          url: "https://www.cis.es/estudios/barometro-de-junio-2018"
+          tipo: institucion
+    - titulo: Condiciones de vida y vivienda (2012-2018)
+      descripcion: "Según Eurostat, el riesgo de pobreza o exclusión social (AROPE) llegó al 29,2 % en 2014 (máximo de la serie 2004-2020) y fue del 26,1 % en 2018. El porcentaje que declaraba llegar a fin de mes «con mucha dificultad» fue del 18,6 % en 2013 y del 10,4 % en 2018. El precio de la vivienda varió un −14,8 % en 2012 y un −9,1 % en 2013, y subió un 6,7 % en 2018."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Persons at risk of poverty or social exclusion by age and sex - EU 2020 strategy (ilc_peps01)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Inability to make ends meet (ilc_mdes09)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes09/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "House price index - annual data (prc_hpi_a)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a/default/table?lang=en"
+          tipo: institucion
 logros:
   - titulo: Salida de la recesión y crecimiento (2013-2015)
     descripcion: "El Gobierno situó la salida de la recesión a finales de 2013 (el PIB creció un 0,3 % en el cuarto trimestre), cifró el crecimiento de 2014 en el 1,4 % y estimó el de 2015 en el 3,2 %, con unos 600.000 empleos creados ese año. Son cifras del propio Ejecutivo; la calidad del empleo creado fue discutida."

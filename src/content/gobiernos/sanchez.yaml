@@ -18,6 +18,176 @@ destacados:
   - nombre: "José Luis Ábalos"
     cargo: "Ministro de Fomento y Transportes (2018-2021)"
 revisado: 2026-11-02
+contexto:
+  internacional:
+    - titulo: Pandemia de COVID-19 (2020-2021)
+      descripcion: "El Real Decreto 463/2020, de 14 de marzo, declaró el estado de alarma en España para gestionar la crisis sanitaria del COVID-19. Según Eurostat, el PIB cayó un 10,9 % en 2020 (ver Macroeconomía)."
+      fuentes:
+        - medio: "BOE"
+          titulo: "Real Decreto 463/2020, de 14 de marzo, por el que se declara el estado de alarma para la gestión de la situación de crisis sanitaria ocasionada por el COVID-19"
+          url: "https://www.boe.es/buscar/act.php?id=BOE-A-2020-3692"
+          tipo: institucion
+          fecha: 2020-03-14
+    - titulo: Invasión rusa de Ucrania y crisis energética (2022)
+      descripcion: "Según el FMI, tras la invasión rusa de Ucrania los precios del gas en Europa llegaron a multiplicar por más de cuatro los de 2021 al reducirse las entregas de Rusia a menos del 20 % del volumen de 2021. En mayo de 2022 el Gobierno aprobó un mecanismo temporal que limita el efecto del precio del gas sobre el precio mayorista de la electricidad (la llamada «excepción ibérica»), que empezó a aplicarse el 14 de junio de 2022."
+      fuentes:
+        - medio: "FMI"
+          titulo: "World Economic Outlook, October 2022: Countering the Cost-of-Living Crisis"
+          url: "https://www.imf.org/-/media/files/publications/weo/2022/october/english/execsum.pdf"
+          tipo: institucion
+          fecha: 2022-10-11
+        - medio: "BOE"
+          titulo: "Real Decreto-ley 10/2022, de 13 de mayo, por el que se establece con carácter temporal un mecanismo de ajuste de costes de producción para la reducción del precio de la electricidad en el mercado mayorista"
+          url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7843"
+          tipo: institucion
+          fecha: 2022-05-14
+    - titulo: Conflicto en Oriente Medio y guerra en Irán (2026)
+      descripcion: "Según el Banco de España, el conflicto en Oriente Medio ha provocado un choque energético en 2026: tras romperse en julio el memorando de entendimiento entre Estados Unidos e Irán, entre el 21 de mayo y el 24 de septiembre el petróleo subió un 4 % y el gas natural un 52 %. El Banco de España cita las perturbaciones en los mercados de la energía, el alza de los precios de los bienes y la persistencia de la inflación en los servicios como impulsores del aumento de la inflación de 2026, y señala que la confianza del consumidor retrocedió tras el estallido de la guerra en Irán y se ha recuperado en parte."
+      fuentes:
+        - medio: "Banco de España"
+          titulo: "Proyecciones macroeconómicas e informe trimestral de la economía española. Tercer trimestre 2026"
+          url: "https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/proyecciones-macro-informe-trimestral/proyecciones-e-informe-trimestral-de-la-economia-espanola-tercer-trimestre-2026.html"
+          tipo: institucion
+  economia_global:
+    - titulo: Inflación mundial y tipos de interés (2022-2026)
+      descripcion: "El FMI proyectó en octubre de 2022 que la inflación mundial pasaría del 4,7 % en 2021 al 8,8 % en 2022. Según el BCE, el tipo de las operaciones principales de financiación subió del 0,00 % al 0,50 % el 27 de julio de 2022 y llegó al 4,50 % en septiembre de 2023; después bajó (el tipo de depósito, al 2,00 % en junio de 2025) y volvió a subir 25 puntos básicos el 17 de junio y el 16 de septiembre de 2026. El Banco de España señala que desde el 21 de mayo de 2026 el rendimiento del bono español a diez años ha subido 55 puntos básicos."
+      fuentes:
+        - medio: "FMI"
+          titulo: "World Economic Outlook, October 2022: Countering the Cost-of-Living Crisis"
+          url: "https://www.imf.org/-/media/files/publications/weo/2022/october/english/execsum.pdf"
+          tipo: institucion
+          fecha: 2022-10-11
+        - medio: "Banco Central Europeo"
+          titulo: "Official interest rates"
+          url: "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html"
+          tipo: institucion
+        - medio: "Banco de España"
+          titulo: "Proyecciones macroeconómicas e informe trimestral de la economía española. Tercer trimestre 2026"
+          url: "https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/proyecciones-macro-informe-trimestral/proyecciones-e-informe-trimestral-de-la-economia-espanola-tercer-trimestre-2026.html"
+          tipo: institucion
+    - titulo: Fondos europeos NextGenerationEU (2021 en adelante)
+      descripcion: "La Comisión Europea valoró positivamente en 2021 el plan de recuperación español, financiado con 69.500 millones de euros en subvenciones del Mecanismo de Recuperación y Resiliencia, con 211 medidas (102 reformas y 109 inversiones) que el Consejo aprobó el 13 de julio de 2021. El plan se modificó después y su importe total, con préstamos, ha cambiado en las revisiones posteriores."
+      fuentes:
+        - medio: "Comisión Europea"
+          titulo: "Spain's recovery and resilience plan"
+          url: "https://commission.europa.eu/business-economy-euro/economic-recovery/spains-recovery-and-resilience-plan_en"
+          tipo: institucion
+        - medio: "Comisión Europea"
+          titulo: "Recovery and Resilience Facility: Spain factsheet (NextGenEU)"
+          url: "https://commission.europa.eu/system/files/2021-06/spain-recovery-resilience-factsheet_en.pdf"
+          tipo: institucion
+    - titulo: Política comercial de Estados Unidos (2025-2026)
+      descripcion: "Según el Banco de España, la política comercial estadounidense sigue marcada por la incertidumbre: un recargo a las importaciones impuesto de forma temporal (hasta julio) en sustitución de los «aranceles recíprocos», la posibilidad de nuevos aranceles tras una investigación sobre exceso de capacidad en sectores manufactureros de varias economías, entre ellas la Unión Europea, y tensiones comerciales entre Estados Unidos y Canadá."
+      fuentes:
+        - medio: "Banco de España"
+          titulo: "Proyecciones macroeconómicas e informe trimestral de la economía española. Tercer trimestre 2026"
+          url: "https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/proyecciones-macro-informe-trimestral/proyecciones-e-informe-trimestral-de-la-economia-espanola-tercer-trimestre-2026.html"
+          tipo: institucion
+economia:
+  macro:
+    - titulo: Crecimiento y empleo (2018-2026)
+      descripcion: "Según Eurostat, el PIB real creció un 2,4 % en 2018 y un 2,0 % en 2019, cayó un 10,9 % en 2020 y creció un 6,7 % en 2021, un 6,4 % en 2022, un 2,4 % en 2023, un 3,7 % en 2024 y un 2,6 % en 2025. El INE sitúa el crecimiento del segundo trimestre de 2026 en el 2,6 % interanual. La tasa de paro (Eurostat) fue del 15,3 % en 2018, del 14,1 % en 2019, del 15,5 % en 2020 y del 10,5 % en 2025. En el tercer trimestre de 2026 la EPA da un 10,18 % de paro (31 centésimas más que en el trimestre anterior) y 22.852.600 ocupados, 465.500 más que un año antes."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Gross domestic product (GDP) and main components - annual data (nama_10_gdp)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en"
+          tipo: institucion
+        - medio: "INE"
+          titulo: "Contabilidad Nacional Trimestral de España. Segundo trimestre 2026"
+          url: "https://www.ine.es/dyngs/Prensa/CNTR2T26.htm"
+          tipo: institucion
+          fecha: 2026-09-25
+        - medio: "INE"
+          titulo: "Encuesta de Población Activa (EPA). Tercer trimestre 2026"
+          url: "https://www.ine.es/dyngs/Prensa/EPA3T26.htm"
+          tipo: institucion
+          fecha: 2026-10-27
+        - medio: "Eurostat"
+          titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+          tipo: institucion
+    - titulo: Precios (2021-2026)
+      descripcion: "La inflación media (IPCA, Eurostat) fue del 3,0 % en 2021, del 8,3 % en 2022, del 3,4 % en 2023, del 2,9 % en 2024 y del 2,7 % en 2025. El indicador adelantado del INE sitúa el IPC de octubre de 2026 en el 4,9 % interanual, igual que en septiembre, con la subyacente en el 3,1 %. El Banco de España proyecta una inflación media del 3,9 % en 2026 y del 3,7 % en 2027."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "HICP - annual data (prc_hicp_aind)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table?lang=en"
+          tipo: institucion
+        - medio: "INE"
+          titulo: "Indicador adelantado del IPC. Octubre 2026"
+          url: "https://www.ine.es/dyngs/Prensa/adIPC1026.htm"
+          tipo: institucion
+          fecha: 2026-10-30
+        - medio: "Banco de España"
+          titulo: "Proyecciones macroeconómicas e informe trimestral de la economía española. Tercer trimestre 2026"
+          url: "https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/proyecciones-macro-informe-trimestral/proyecciones-e-informe-trimestral-de-la-economia-espanola-tercer-trimestre-2026.html"
+          tipo: institucion
+    - titulo: Saldo y deuda de las administraciones públicas
+      descripcion: "Según Eurostat, el saldo fue del −3,1 % del PIB en 2019, del −9,9 % en 2020 y del −2,4 % en 2025. La deuda pasó del 97,7 % del PIB en 2019 al 119,3 % en 2020 y al 100,5 % en 2025."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Government deficit/surplus, debt and associated data (gov_10dd_edpt1)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+          tipo: institucion
+  percepcion:
+    - titulo: Valoración de la economía en el CIS (2020, 2022 y 2026)
+      descripcion: "En enero de 2020 el 6,4 % calificó de buena o muy buena la situación económica general de España, el 46,4 % de regular y el 46,5 % de mala o muy mala; sobre la propia, el 35,4 %, el 48,0 % y el 16,2 %. En octubre de 2022 (sin «regular» entre las opciones leídas) la general era buena o muy buena para el 17,4 % y mala o muy mala para el 73,2 %; la personal, buena o muy buena para el 62,9 % y mala o muy mala para el 25,3 %. En octubre de 2026, la general: 36,2 % buena o muy buena y 57,8 % mala o muy mala; la personal: 68,4 % y 22,9 %. Como la formulación cambió, las cifras de 2020 y las posteriores no son directamente comparables."
+      fuentes:
+        - medio: "CIS"
+          titulo: "Barómetro de enero 2020 (estudio 3271)"
+          url: "https://www.cis.es/estudios/barometro-de-enero-2020"
+          tipo: institucion
+        - medio: "CIS"
+          titulo: "Barómetro de octubre 2022 (estudio 3380)"
+          url: "https://www.cis.es/estudios/barometro-de-octubre-2022"
+          tipo: institucion
+        - medio: "CIS"
+          titulo: "Barómetro de octubre 2026 (estudio 3582)"
+          url: "https://www.cis.es/estudios/barometro-de-octubre-2026"
+          tipo: institucion
+    - titulo: Principales problemas del país según el CIS (2020-2026)
+      descripcion: "Como primer problema, en enero de 2020 el paro fue citado por el 36,8 % (58,9 % en total). En octubre de 2022, la crisis económica por el 24,3 % (44,1 % en total) y el paro por el 12,7 %. En octubre de 2025 la vivienda fue primer problema para el 19,2 % (37,1 % en total) y en octubre de 2026 para el 29,9 % (55,7 % en total), por delante de la inmigración (20,9 % en total), la crisis económica (20,3 %) y la calidad del empleo (19,4 %). El CIS recodificó categorías desde 2025, así que la comparación con años anteriores es aproximada."
+      fuentes:
+        - medio: "CIS"
+          titulo: "Barómetro de enero 2020 (estudio 3271)"
+          url: "https://www.cis.es/estudios/barometro-de-enero-2020"
+          tipo: institucion
+        - medio: "CIS"
+          titulo: "Barómetro de octubre 2022 (estudio 3380)"
+          url: "https://www.cis.es/estudios/barometro-de-octubre-2022"
+          tipo: institucion
+        - medio: "CIS"
+          titulo: "Barómetro de octubre 2025 (estudio 3528)"
+          url: "https://www.cis.es/estudios/barometro-de-octubre-2025"
+          tipo: institucion
+        - medio: "CIS"
+          titulo: "Barómetro de octubre 2026 (estudio 3582)"
+          url: "https://www.cis.es/estudios/barometro-de-octubre-2026"
+          tipo: institucion
+    - titulo: Condiciones de vida, salarios y vivienda (2018-2026)
+      descripcion: "Según Eurostat, el riesgo de pobreza o exclusión social (AROPE) pasó del 27,3 % en 2018 al 25,7 % en 2025. El porcentaje que declaraba llegar a fin de mes «con mucha dificultad» fue del 7,8 % en 2019, del 10,0 % en 2020 y del 8,5 % en 2025 (6,4 % en la UE ese año). El precio de la vivienda subió de media un 8,5 % en 2024 y un 12,7 % en 2025. Según el Banco de España, el aumento salarial pactado en convenios en 2026 es del 3,0 % (datos hasta agosto), frente al 3,5 % de 2025; el IPC de octubre de 2026 es del 4,9 %."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Persons at risk of poverty or social exclusion by age and sex (ilc_peps01n)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Inability to make ends meet (ilc_mdes09)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes09/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "House price index - annual data (prc_hpi_a)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a/default/table?lang=en"
+          tipo: institucion
+        - medio: "Banco de España"
+          titulo: "Proyecciones macroeconómicas e informe trimestral de la economía española. Tercer trimestre 2026"
+          url: "https://www.bde.es/wbe/en/publicaciones/analisis-economico-investigacion/proyecciones-macro-informe-trimestral/proyecciones-e-informe-trimestral-de-la-economia-espanola-tercer-trimestre-2026.html"
+          tipo: institucion
+        - medio: "INE"
+          titulo: "Indicador adelantado del IPC. Octubre 2026"
+          url: "https://www.ine.es/dyngs/Prensa/adIPC1026.htm"
+          tipo: institucion
+          fecha: 2026-10-30
 logros:
   - titulo: Subidas del salario mínimo (SMI)
     descripcion: "El SMI pasó de 735 euros mensuales en 14 pagas en 2017-2018 a 1.184 en 2025, una subida del 61 % según Sánchez, y a 1.221 en 2026 (+3,1 %). La patronal CEOE se desmarcó de la subida de 2026."
