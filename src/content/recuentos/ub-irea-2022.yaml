@@ -1,0 +1,22 @@
+titulo: "La corrupción política en España: un análisis descriptivo (UB-IREA, documento de trabajo 2022/21)"
+autoria: Universidad de Barcelona, Institut de Recerca en Economia Aplicada (IREA)
+url: https://www.ub.edu/irea/working_papers/2022/202221.pdf
+publicado: 2022-01-01
+alcance: "Corrupción política en España, 2000-2020, todos los niveles territoriales."
+metodologia: "Base de datos propia de casos de corrupción política detectados entre 2000 y 2020. Los porcentajes por partido son sobre el total de procedimientos."
+cifras:
+  - concepto: "Casos de corrupción detectados"
+    valor: "3.743"
+  - concepto: "Porcentaje de procedimientos"
+    partido: "PP"
+    valor: "40,5 %"
+  - concepto: "Porcentaje de procedimientos"
+    partido: "PSOE"
+    valor: "38,3 %"
+limitaciones:
+  - "Los datos son del resumen (abstract) del documento; no se ha revisado el texto completo."
+  - "Cuenta procedimientos, no condenas firmes ni importes."
+  - "El resumen indica que ambos partidos suman el 75,8 %, cifra que no coincide con la suma de sus dos porcentajes (78,8 %). Se reproducen las cifras tal cual."
+  - "No cubre 2021-2026."
+orden: 1
+revisado: 2026-11-02

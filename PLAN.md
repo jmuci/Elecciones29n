@@ -34,8 +34,8 @@ El orden sigue los escaños obtenidos en las generales de julio de 2023, y los p
 | 3 | **Quién soy y por qué lo hago** | ⚪ Pendiente (texto) |
 | 4 | **Estadísticas / encuestas**: gráficos con las proyecciones de escaños y sus fuentes | ⚪ Pendiente |
 | 5 | **Test de afinidad** basado en los programas | ⚪ Pendiente |
-| 6 | **Repaso histórico** de los últimos ~20 años de gobiernos: qué prometieron, qué cumplieron, críticas y logros que reivindican | ⚪ Roadmap (al final) |
-| 7 | **Corrupción**: casos por partido y cuantía | ⚪ Roadmap (al final) |
+| 6 | **Historia** (`/historia`): línea de tiempo 2000–2026 coloreada por bloque (derecha = rojo, izquierda = azul), una sección por gobierno con presidente, cargos destacados, logros y críticas con fuentes de prensa, datos oficiales, sentencias o estudios | 🟡 Primera pasada (4 gobiernos; faltan logros de Aznar y Rajoy) |
+| 7 | **Corrupción** (`/historia#corrupcion`): recuentos de terceros con su metodología y límites, y casos con sentencia firme desde 2000 | 🟡 Primera pasada (6 casos; no exhaustivo) |
 
 ---
 
@@ -219,5 +219,5 @@ Los subtemas son cerrados: cada propuesta lleva uno o varios de la lista de su t
 
 - **Test de afinidad:** presentarlo como "afinidad con cada partido" (porcentaje global y por tema), no como "deberías votar X". Se alimentará del campo `posicion` de las propuestas, ya reservado en el schema. Los partidos que no se presentan en la provincia del usuario deben indicarse claramente.
 - **Estadísticas:** citar cada encuesta con instituto, medio, fecha de campo y tamaño muestral. Mostrar el CIS por separado de la media de institutos privados, porque sus estimaciones divergen mucho. No publicar encuestas nuevas entre el 24 y el 28 de noviembre.
-- **Repaso histórico:** mismo formato para cada gobierno (qué prometía, qué hizo, críticas, logros que reivindica), con fuentes.
+- **Historia:** mismo formato para cada gobierno (logros y críticas, cada punto con fuentes y tipo de fuente visible). Aquí sí se admite prensa, porque se documentan hechos y no propuestas de partido; las reglas de neutralidad de `CONTRIBUTING.md` sobre redacción siguen valiendo (verbos neutros, sin adjetivos valorativos, cifras tal cual). Las opiniones se marcan como tal. Colecciones: `gobiernos`, `casos` y `recuentos` en `src/content/`.
 - **Corrupción:** basarse solo en **sentencias firmes** y en las cuantías que fijan los tribunales, citando cada sentencia. Distinguir condenas a personas de responsabilidad civil o a título lucrativo del partido. Nada de casos en instrucción presentados como hechos probados.

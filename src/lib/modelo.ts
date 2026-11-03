@@ -26,3 +26,15 @@ export type Tema = CollectionEntry<'temas'>;
 export type Fuente = CollectionEntry<'fuentes'>;
 export type Celda = CollectionEntry<'propuestas'>;
 export type Propuesta = Celda['data']['propuestas'][number];
+
+/** Tipos de fuente de la sección /historia (no confundir con `TIPOS_FUENTE`, que es de documentos de partido). */
+export const TIPOS_FUENTE_HISTORIA = ['prensa', 'opinion', 'institucion', 'organizacion', 'sentencia', 'estudio'] as const;
+export type TipoFuenteHistoria = (typeof TIPOS_FUENTE_HISTORIA)[number];
+
+/** Bloque político del partido que gobierna, solo para la línea de tiempo. */
+export const BLOQUES = ['derecha', 'izquierda'] as const;
+export type Bloque = (typeof BLOQUES)[number];
+
+export type Gobierno = CollectionEntry<'gobiernos'>;
+export type Caso = CollectionEntry<'casos'>;
+export type Recuento = CollectionEntry<'recuentos'>;

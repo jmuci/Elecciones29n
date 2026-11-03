@@ -13,6 +13,7 @@ const ultima = fecha(new Date(Math.max(...celdas.map((c) => c.data.revisado.getT
 const ruta = Astro.url.pathname.replace(/\/+$/, '') || '/';
 const enlaces = [
   { href: '/', texto: 'Propuestas' },
+  { href: '/historia', texto: 'Historia' },
   { href: '/fuentes', texto: 'Fuentes' },
 ];
 ---

@@ -1,0 +1,31 @@
+titulo: "El PP es responsable del 40 % de la corrupción judicializada en España, por delante del 16 % del PSOE y el 4 % de Convergència (Verificat)"
+autoria: Verificat (medio verificador de datos)
+url: https://www.verificat.cat/es/pp-responsable-40-corrupcion-delante-15-psoe-4-cdc/
+publicado: 2025-12-02
+alcance: "Desde el inicio de la democracia (no solo desde 2000). 259 casos condenados o en investigación o juicio; 178 con condena firme."
+metodologia: "Parte del listado de la web colaborativa Casos Aislados; Verificat comprobó los casos uno por uno y eliminó archivados y absolutorios. Los importes salen de sentencias, autos o, si no hay, de hemeroteca, e incluyen dinero, inmuebles, vehículos u obras de arte."
+cifras:
+  - concepto: "Casos con condena firme (total)"
+    valor: "178, por más de 3.433 millones de euros"
+  - concepto: "Casos con condena"
+    partido: "PP"
+    valor: "87, por casi 329 millones de euros"
+  - concepto: "Casos en investigación o juicio"
+    partido: "PP"
+    valor: "51, por más de 2.698 millones de euros"
+  - concepto: "Casos con condena"
+    partido: "PSOE (incluye PSC)"
+    valor: "35, por 51 millones de euros"
+  - concepto: "Casos en investigación o juicio"
+    partido: "PSOE (incluye PSC)"
+    valor: "18, por más de 1.145 millones de euros"
+  - concepto: "Casos con condena"
+    partido: "GIL (extinto)"
+    valor: "Condenas por 2.492 millones de euros (Marbella)"
+limitaciones:
+  - "Incluye casos anteriores a 2000 (por ejemplo, Filesa) y casos aún sin sentencia firme, que no se pueden comparar con los de la sección de casos de abajo."
+  - "El texto cita el caso de los ERE (más de 854 millones) entre los casos con condena del PSOE, pero atribuye al PSOE 51 millones en condenas; esta web no ha podido conciliar ambas cifras."
+  - "Atribuir un caso a un partido depende del criterio del recuento; los importes mezclan conceptos distintos."
+  - "Cuenta casos e importes, no personas condenadas."
+orden: 2
+revisado: 2026-11-02

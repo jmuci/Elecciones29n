@@ -1,0 +1,95 @@
+presidente: José Luis Rodríguez Zapatero
+partido: psoe
+bloque: izquierda
+inicio: 2004-04-17
+fin: 2011-12-21
+orden: 2
+resumen: "El PSOE ganó las elecciones de marzo de 2004 y de marzo de 2008 y gobernó en minoría, con apoyos parlamentarios variables. El periodo incluye el inicio de la crisis financiera de 2008."
+destacados:
+  - nombre: "María Teresa Fernández de la Vega"
+    cargo: "Vicepresidenta primera y portavoz del Gobierno"
+  - nombre: "Pedro Solbes"
+    cargo: "Vicepresidente segundo y ministro de Economía"
+  - nombre: "Alfredo Pérez Rubalcaba"
+    cargo: "Ministro del Interior y vicepresidente primero"
+  - nombre: "Miguel Ángel Moratinos"
+    cargo: "Ministro de Asuntos Exteriores"
+  - nombre: "Elena Salgado"
+    cargo: "Vicepresidenta segunda y ministra de Economía"
+  - nombre: "Carme Chacón"
+    cargo: "Ministra de Vivienda y de Defensa"
+revisado: 2026-11-02
+logros:
+  - titulo: Matrimonio entre personas del mismo sexo (2005)
+    descripcion: "La Ley 13/2005 reconoció el derecho a contraer matrimonio a las parejas del mismo sexo. El Congreso la aprobó definitivamente el 30 de junio de 2005 con 187 votos a favor, 147 en contra y 4 abstenciones, tras el veto del Senado. El PP votó en contra."
+    fuentes:
+      - medio: "Cooperativa.cl"
+        titulo: "Congreso español aprobó, definitivamente, el matrimonio homosexual"
+        url: "https://cooperativa.cl/noticias/sociedad/homosexualidad/congreso-espanol-aprobo-definitivamente-el-matrimonio-homosex/2005-06-30/061652.html"
+        tipo: prensa
+        fecha: 2005-06-30
+      - medio: "The Objective"
+        titulo: "El matrimonio igualitario cumple 15 años tras unir a más de 55.000 parejas"
+        url: "https://theobjective.com/sociedad/2020-06-30/el-matrimonio-igualitario-cumple-15-anos-tras-unir-a-mas-de-55-000-parejas/"
+        tipo: prensa
+        fecha: 2020-06-30
+  - titulo: Ley de Dependencia (2006)
+    descripcion: "La Ley 39/2006 creó el derecho a recibir atención para las personas en situación de dependencia. Según la Asociación de Directores y Gerentes de Servicios Sociales, citada por Menorca.info en 2025, se ha atendido a casi cuatro millones de personas desde entonces, aunque casi un millón falleció en lista de espera; la lista de espera tuvo su máximo en 2015, con 384.326 personas."
+    fuentes:
+      - medio: "Menorca.info"
+        titulo: "La dependencia en España: más personas atendidas, pero con un sistema «low cost» que se consolida"
+        url: "https://www.menorca.info/actualidad/nacional/2025/03/01/2336673/dependencia-espana-mas-personas-atendidas-pero-sistema-low-cost-consolida.html"
+        tipo: prensa
+        fecha: 2025-03-01
+      - medio: "El Derecho"
+        titulo: "El año 2015 se cerró con 384.326 personas en lista de espera para recibir atención por dependencia"
+        url: "https://elderecho.com/el-ano-2015-se-cerro-con-384-326-personas-en-lista-de-espera-para-recibir-atencion-por-dependencia"
+        tipo: prensa
+  - titulo: Fin de la actividad armada de ETA (2011)
+    descripcion: "El 20 de octubre de 2011 ETA anunció el cese definitivo de su actividad armada; no se disolvió hasta 2018. Zapatero destacó la acción de las Fuerzas y Cuerpos de Seguridad del Estado. Cuánto contribuyó el Gobierno a ese desenlace es objeto de debate: un artículo de opinión de 2026 sostiene que no fue quien más contribuyó."
+    fuentes:
+      - medio: "Público"
+        titulo: "ETA anuncia el cese definitivo de su actividad"
+        url: "https://www.publico.es/espana/eta-anuncia-cese-definitivo-actividad.html"
+        tipo: prensa
+        fecha: 2011-10-20
+      - medio: "The Objective"
+        titulo: "Lo siento, pero Zapatero no acabó con ETA, ni fue el que más contribuyó a su final"
+        url: "https://theobjective.com/opinion/2026-05-23/siento-zapatero-no-eta-contribuyo-final/"
+        tipo: opinion
+        fecha: 2026-05-23
+criticas:
+  - titulo: Recortes de mayo de 2010
+    descripcion: "El 12 de mayo de 2010 Zapatero anunció una rebaja media del 5 % en las retribuciones del sector público, la suspensión de la revalorización de las pensiones en 2011 (salvo mínimas y no contributivas) y un recorte de inversión. Una semana antes había rechazado acelerar la reducción del déficit. El decreto salió adelante en el Congreso por un voto de diferencia."
+    fuentes:
+      - medio: "LegalToday (Reuters)"
+        titulo: "Zapatero anuncia un duro recorte de gasto social e inversiones"
+        url: "https://www.legaltoday.com/rincon-de-reuters/zapatero-anuncia-un-duro-recorte-de-gasto-social-e-inversiones-2010-05-13/"
+        tipo: prensa
+        fecha: 2010-05-13
+  - titulo: Paro al final de la legislatura (2011)
+    descripcion: "La Encuesta de Población Activa del cuarto trimestre de 2011 contabilizó 5.273.600 parados y una tasa de paro del 22,85 %, la más alta de los países industrializados según la cadena irlandesa RTÉ. Los datos se publicaron en enero de 2012, con el Gobierno ya en funciones."
+    fuentes:
+      - medio: "La Moncloa (Ministerio de Economía)"
+        titulo: "Datos de la Encuesta de Población Activa (EPA) del cuarto trimestre de 2011"
+        url: "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/mineco/paginas/2012/270112EPA.aspx"
+        tipo: institucion
+        fecha: 2012-01-27
+      - medio: "LegalToday (Reuters)"
+        titulo: "España cierra 2011 con un récord de 5,27 millones de parados"
+        url: "https://www.legaltoday.com/rincon-de-reuters/espana-cierra-2011-con-un-record-de-527-millones-de-parados-2012-01-27/"
+        tipo: prensa
+        fecha: 2012-01-27
+  - titulo: Proceso de diálogo con ETA y atentado de la T4 (2006)
+    descripcion: "Tras el alto el fuego de ETA de marzo de 2006, el Gobierno abrió un proceso de diálogo. El 30 de diciembre de 2006 ETA hizo estallar un coche bomba en la T4 de Barajas, con dos muertos, y el Gobierno suspendió las iniciativas de diálogo. El PP pidió una declaración formal de ruptura de la negociación."
+    fuentes:
+      - medio: "RTVC"
+        titulo: "15 años del atentado de ETA en la T4"
+        url: "https://rtvc.es/15-anos-del-atentado-de-eta-en-la-t4/"
+        tipo: prensa
+        fecha: 2021-12-30
+      - medio: "Minuto Uno (EFE)"
+        titulo: "Se rompe el acuerdo de paz con los terroristas"
+        url: "https://www.minutouno.com/mundo/se-rompe-el-acuerdo-paz-los-terroristas-n8073"
+        tipo: prensa
+        fecha: 2006-12-30

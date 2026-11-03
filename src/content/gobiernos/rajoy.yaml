@@ -1,0 +1,85 @@
+presidente: Mariano Rajoy
+partido: pp
+bloque: derecha
+inicio: 2011-12-21
+fin: 2018-06-02
+orden: 3
+resumen: "El PP obtuvo mayoría absoluta en las elecciones de noviembre de 2011 y gobernó en minoría tras las de 2015 y 2016. El Gobierno terminó con la moción de censura de junio de 2018, presentada tras conocerse la sentencia de la primera época de la trama Gürtel."
+destacados:
+  - nombre: "Soraya Sáenz de Santamaría"
+    cargo: "Vicepresidenta y portavoz del Gobierno"
+  - nombre: "Cristóbal Montoro"
+    cargo: "Ministro de Hacienda"
+  - nombre: "Luis de Guindos"
+    cargo: "Ministro de Economía"
+  - nombre: "José Manuel García-Margallo"
+    cargo: "Ministro de Asuntos Exteriores (2011-2016)"
+  - nombre: "Jorge Fernández Díaz"
+    cargo: "Ministro del Interior (2011-2016)"
+  - nombre: "María Dolores de Cospedal"
+    cargo: "Ministra de Defensa (2016-2018)"
+nota_revision: "Primera pasada: de momento hay menos logros que críticas documentados con fuente. No es una valoración; se buscan más fuentes para los logros."
+revisado: 2026-11-02
+logros:
+  - titulo: Salida de la recesión y crecimiento (2013-2015)
+    descripcion: "El Gobierno situó la salida de la recesión a finales de 2013 (el PIB creció un 0,3 % en el cuarto trimestre), cifró el crecimiento de 2014 en el 1,4 % y estimó el de 2015 en el 3,2 %, con unos 600.000 empleos creados ese año. Son cifras del propio Ejecutivo; la calidad del empleo creado fue discutida."
+    fuentes:
+      - medio: "La Moncloa"
+        titulo: "Balance de 2014: España ha conseguido superar la peor etapa de la crisis"
+        url: "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2014/261214balance.aspx"
+        tipo: institucion
+        fecha: 2014-12-26
+      - medio: "Periódico de Ibiza (agencias)"
+        titulo: "La economía española cerrará 2015 con un crecimiento del 3,2 %, según el Gobierno"
+        url: "https://www.periodicodeibiza.es/noticias/nacional/2015/12/29/170867/economia-espanola-cerrara-2015-crecimiento-del-segun-gobierno.html"
+        tipo: prensa
+        fecha: 2015-12-29
+  - titulo: Salida del programa de asistencia financiera a la banca (2013-2014)
+    descripcion: "España usó 41.300 millones de los 100.000 millones de euros de la línea europea para reestructurar su banca y salió del programa sin prórroga ni línea preventiva de crédito. El fondo europeo lo consideró un plan exitoso, y España ha devuelto más del 75 % del préstamo, según Público."
+    fuentes:
+      - medio: "Público"
+        titulo: "El fondo de rescate de la UE da por concluido con éxito el plan de ayuda a los bancos españoles"
+        url: "https://www.publico.es/actualidad/fondo-rescate-ue-da-concluido-exitoso-plan-ayuda-bancos-espanoles.html"
+        tipo: prensa
+      - medio: "Público"
+        titulo: "Adiós a los 'hombres de negro': España ya ha devuelto más del 75 % del rescate de la banca"
+        url: "https://www.publico.es/economia/adios-hombres-negro-espana-devuelto-75-rescate-banca.amp.html"
+        tipo: prensa
+criticas:
+  - titulo: Subida del IRPF pese a la promesa electoral (2011)
+    descripcion: "Durante la campaña de 2011 el PP afirmó que no subiría impuestos. El 30 de diciembre de 2011 el Gobierno aprobó un recargo temporal en el IRPF y subió el IBI, que atribuyó al déficit público más alto de lo previsto heredado del Gobierno anterior."
+    fuentes:
+      - medio: "Público"
+        titulo: "Rajoy incumple su palabra y sube los impuestos"
+        url: "https://www.publico.es/actualidad/rajoy-incumple-palabra-sube-impuestos.html"
+        tipo: prensa
+      - medio: "Noticias de Navarra"
+        titulo: "Rajoy ha subido todos los impuestos desde que llegó a la Moncloa hace cinco años"
+        url: "https://www.noticiasdenavarra.com/actualidad/2017/01/08/rajoy-subido-impuestos-llego-moncloa-2690640.html"
+        tipo: prensa
+        fecha: 2017-01-08
+  - titulo: Sentencia de la trama Gürtel y condena al PP (2018-2020)
+    descripcion: "La Audiencia Nacional condenó en mayo de 2018 a Francisco Correa a 51 años de prisión y a Luis Bárcenas, extesorero del PP, a 33, y al PP como partícipe a título lucrativo. El Tribunal Supremo confirmó la sentencia en octubre de 2020, rebajó las penas de Bárcenas a 29 años y 1 mes y eliminó las alusiones a una «caja B» del partido. Ver el detalle en la sección de corrupción."
+    fuentes:
+      - medio: "Diari de Tarragona (agencias)"
+        titulo: "Sentencia del Caso Gürtel: 51 años para Correa y 33 para Bárcenas"
+        url: "https://www.diaridetarragona.com/espana/144829/sentencia-del-caso-gurtel-51-anos-para-correa-y-33-para-barcenas-20180524-0020-ysdt201805240020.html"
+        tipo: prensa
+        fecha: 2018-05-24
+      - medio: "Público"
+        titulo: "El Supremo confirma la condena al PP por beneficiarse de la Gürtel"
+        url: "https://www.publico.es/politica/supremo-confirma-condena-al-pp-guertel.html"
+        tipo: prensa
+        fecha: 2020-10-14
+  - titulo: Ley de Seguridad Ciudadana («ley mordaza», 2015)
+    descripcion: "La ley, aprobada por el Congreso en diciembre de 2014 y en vigor en 2015, fue criticada por Amnistía Internacional, el Comité de Derechos Humanos de la ONU y la Comisión de Venecia por su efecto sobre la libertad de expresión y de reunión. Sigue en vigor: su reforma, prometida por el PSOE, está bloqueada en el Congreso."
+    fuentes:
+      - medio: "Amnistía Internacional"
+        titulo: "Ley Mordaza: diez años de vulneraciones de derechos humanos y promesas incumplidas"
+        url: "https://www.es.amnesty.org/en-que-estamos/noticias/noticia/articulo/ley-mordaza-diez-anos-de-vulneraciones-de-derechos-humanos-y-promesas-incumplidas/"
+        tipo: organizacion
+      - medio: "LegalToday (Reuters)"
+        titulo: "El Congreso aprueba la polémica Ley de Seguridad Ciudadana"
+        url: "https://www.legaltoday.com/rincon-de-reuters/el-congreso-aprueba-la-polemica-ley-de-seguridad-ciudadana-2014-12-12/"
+        tipo: prensa
+        fecha: 2014-12-12

@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
  * que no existe), sin hacer fallar el build. Esta comprobación lanza un error
  * con todas las referencias rotas. La invoca `src/middleware.ts`.
  */
-const COLECCIONES = ['partidos', 'temas', 'fuentes', 'propuestas'] as const;
+const COLECCIONES = ['partidos', 'temas', 'fuentes', 'propuestas', 'gobiernos', 'casos'] as const;
 
 type Referencia = { collection: string; id: string };
 

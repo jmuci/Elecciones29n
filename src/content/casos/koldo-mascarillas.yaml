@@ -1,0 +1,30 @@
+nombre: Caso Koldo o de las mascarillas
+partido: psoe
+territorio: Estado (Ministerio de Transportes)
+resumen: "Primera sentencia del caso: el Tribunal Supremo condenó en junio de 2026 al exministro de Transportes José Luis Ábalos y a su asesor Koldo García por organización criminal, cohecho, malversación y tráfico de influencias. Se juzgó su actuación durante la etapa de Ábalos como ministro, en un Gobierno del PSOE. Víctor de Aldama, que colaboró con la justicia, evitó la prisión."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2026-06-22
+condenas:
+  - persona: "José Luis Ábalos"
+    cargo: "Exministro de Fomento y Transportes"
+    pena: "24 años y 3 meses de prisión y multa de 52.500 euros"
+  - persona: "Koldo García"
+    cargo: "Exasesor del ministro"
+    pena: "19 años y 8 meses de prisión (algunos medios dicen 19 años y medio) y multa de 45.750 euros"
+  - persona: "Víctor de Aldama"
+    cargo: "Empresario"
+    pena: "Pena suspendida por su colaboración; trabajos comunitarios y multa de 72.000 euros"
+nota: "Ábalos ha anunciado que recurrirá en amparo al Tribunal Constitucional. Quedan otras piezas del caso sin sentencia."
+fuentes:
+  - medio: "RTVC"
+    titulo: "El Supremo condena a Ábalos a 24 años de cárcel"
+    url: "https://rtvc.es/el-supremo-condena-a-abalos-a-24-anos-de-carcel-22-junio-2026/"
+    tipo: prensa
+    fecha: 2026-06-22
+  - medio: "Ara"
+    titulo: "El Supremo condena a Ábalos a 24 años de prisión por «corrupción orgánica, organizada y continuada»"
+    url: "https://es.ara.cat/politica/supremo-condena-exministro-abalos-24-anos-prision_1_5776792.html"
+    tipo: prensa
+    fecha: 2026-06-22
+revisado: 2026-11-02

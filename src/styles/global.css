@@ -19,6 +19,10 @@
   --border-strong: #8c857a;
   --rule: #e2ddd3;
   --focus: #1d4f91;
+  /* Línea de tiempo de /historia: derecha = azul, izquierda = rojo (decisión editorial; texto blanco ≥ 6:1). */
+  --bloque-derecha: #1d4f91;
+  --bloque-izquierda: #b3261e;
+  --sobre-bloque: #ffffff;
 
   --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, ui-serif, serif;

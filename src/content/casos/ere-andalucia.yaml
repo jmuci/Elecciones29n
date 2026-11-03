@@ -1,0 +1,27 @@
+nombre: ERE de Andalucía
+partido: psoe
+territorio: Andalucía
+resumen: "Sistema de ayudas de la Junta de Andalucía a empresas y trabajadores en crisis, concedidas sin control. La Audiencia de Sevilla condenó en 2019 a 19 altos cargos de la Junta; el Supremo confirmó en julio de 2022 las penas a los expresidentes José Antonio Griñán (seis años de prisión) y Manuel Chaves (nueve de inhabilitación)."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2022-07-26
+condenas:
+  - persona: "José Antonio Griñán"
+    cargo: "Expresidente de la Junta de Andalucía (PSOE)"
+    pena: "Seis años de prisión (sentencia del Supremo de 2022)"
+  - persona: "Manuel Chaves"
+    cargo: "Expresidente de la Junta de Andalucía (PSOE)"
+    pena: "Nueve años de inhabilitación por prevaricación (sentencia del Supremo de 2022)"
+nota: "En julio de 2024 el Tribunal Constitucional anuló las condenas por malversación (incluida la de Griñán) y la de prevaricación de Chaves, y ordenó dictar nuevas sentencias. La Audiencia de Sevilla debe pronunciarse de nuevo. Se incluye por la relevancia del caso, pero la sentencia original ya no es plenamente vigente."
+fuentes:
+  - medio: "The Objective"
+    titulo: "El Supremo confirma las penas a Griñán y Chaves por el caso de los ERE de Andalucía"
+    url: "https://theobjective.com/espana/2022-07-26/el-supremo-confirma-las-penas-a-grinan-y-chaves-por-el-caso-de-los-ere-de-andalucia/"
+    tipo: prensa
+    fecha: 2022-07-26
+  - medio: "The Objective"
+    titulo: "El TC completa la amnistía encubierta de los ERE y libra de la cárcel a Chaves y Griñán"
+    url: "https://theobjective.com/espana/tribunales/2024-07-16/constitucional-grinan-chaves-ere-amnistia/"
+    tipo: prensa
+    fecha: 2024-07-16
+revisado: 2026-11-02
