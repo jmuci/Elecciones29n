@@ -270,6 +270,24 @@ const gobiernos = defineCollection({
     resumen: textoNoVacio,
     apoyos: textoNoVacio.optional(),
     destacados: z.array(z.strictObject({ nombre: textoNoVacio, cargo: textoNoVacio })).min(1),
+    /**
+     * Entorno en el que gobernó, sin atribuir causas ni méritos al Gobierno:
+     * `internacional` recoge guerras, crisis y decisiones exteriores que afectaron a España;
+     * `economia_global` el ciclo económico y monetario mundial y europeo.
+     */
+    contexto: z.strictObject({
+      internacional: z.array(hecho),
+      economia_global: z.array(hecho),
+    }),
+    /**
+     * Dos lecturas de la misma economía: `macro` son las cifras agregadas (PIB, empleo, precios,
+     * cuentas públicas); `percepcion` cómo la valoró y la vivió la ciudadanía (encuestas, condiciones
+     * de vida). Pueden no coincidir, y la web las muestra por separado a propósito.
+     */
+    economia: z.strictObject({
+      macro: z.array(hecho),
+      percepcion: z.array(hecho),
+    }),
     logros: z.array(hecho),
     criticas: z.array(hecho),
     /** Aviso visible cuando la revisión de fuentes no está terminada. */
