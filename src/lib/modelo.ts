@@ -38,3 +38,28 @@ export type Bloque = (typeof BLOQUES)[number];
 export type Gobierno = CollectionEntry<'gobiernos'>;
 export type Caso = CollectionEntry<'casos'>;
 export type Recuento = CollectionEntry<'recuentos'>;
+
+/** Partidos que desglosan las encuestas (Democracia 21 no aparece en ninguna), en el orden fijo de la web. */
+export const PARTIDOS_ENCUESTA = ['pp', 'psoe', 'vox', 'frente-amplio', 'podemos'] as const;
+export type PartidoEncuesta = (typeof PARTIDOS_ENCUESTA)[number];
+
+/** Otras fuerzas que desglosan las encuestas (el «Resto» del hemiciclo), en orden alfabético. */
+export const OTROS_PARTIDOS = {
+  adelante: 'Adelante Andalucía',
+  bng: 'BNG',
+  cca: 'Coalición Canaria',
+  compromis: 'Compromís-Front Valencià',
+  'eh-bildu': 'EH Bildu',
+  erc: 'ERC',
+  junts: 'Junts',
+  pnv: 'PNV',
+} as const;
+export type OtroPartido = keyof typeof OTROS_PARTIDOS;
+export const IDS_OTROS = Object.keys(OTROS_PARTIDOS) as OtroPartido[];
+
+export const TIPOS_FUENTE_ENCUESTA = ['original', 'medio', 'recopilacion'] as const;
+
+export const TOTAL_ESCANOS = 350;
+export const MAYORIA_ABSOLUTA = 176;
+
+export type Encuesta = CollectionEntry<'encuestas'>;

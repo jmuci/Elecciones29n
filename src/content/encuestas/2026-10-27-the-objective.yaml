@@ -1,0 +1,16 @@
+instituto: The Objective
+medio: The Objective
+tipo: privada
+campo_inicio: 2026-10-27
+campo_fin: 2026-10-27
+muestra: 1500
+votos: { pp: 28.1, psoe: 29.6, vox: 20.2, frente-amplio: 6.2 }
+escanos:
+  pp: { min: 114, max: 118 }
+  psoe: { min: 117, max: 121 }
+  vox: { min: 67, max: 71 }
+  frente-amplio: { min: 12, max: 14 }
+fuentes:
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+nota: Wikipedia no indica qué instituto la realizó. No se desglosan los escaños de Podemos.
+consultado: 2026-11-02

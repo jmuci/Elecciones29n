@@ -9,6 +9,7 @@
  * - gobiernos:  src/content/gobiernos/<id>.yaml          → id = <id>   (sección /historia)
  * - casos:      src/content/casos/<id>.yaml              → id = <id>   (sección /historia#corrupcion)
  * - recuentos:  src/content/recuentos/<id>.yaml          → id = <id>   (estudios de terceros)
+ * - encuestas:  src/content/encuestas/<id>.yaml           → id = <id>
  *
  * El id sale siempre de la ruta del fichero. Los YAML no llevan campo `id`:
  * todos los objetos son estrictos, así que un `id` (o cualquier clave mal
@@ -37,9 +38,13 @@ import {
   BLOQUES,
   ESTADOS,
   ESTADOS_SIN_PROPUESTAS,
+  IDS_OTROS,
+  PARTIDOS_ENCUESTA,
   TIPOS_AMBITO,
   TIPOS_FUENTE,
+  TIPOS_FUENTE_ENCUESTA,
   TIPOS_FUENTE_HISTORIA,
+  TOTAL_ESCANOS,
 } from './lib/modelo';
 
 const yamlGlob = (base: string, pattern: string, excluirEjemplo?: string) =>
@@ -273,4 +278,61 @@ const recuentos = defineCollection({
   }),
 });
 
-export const collections = { partidos, temas, fuentes, propuestas, gobiernos, casos, recuentos };
+const porcentaje = z.number().min(0).max(100);
+const rangoEscanos = z
+  .strictObject({
+    min: z.number().int().min(0).max(TOTAL_ESCANOS),
+    max: z.number().int().min(0).max(TOTAL_ESCANOS),
+  })
+  .refine((r) => r.min <= r.max, { message: '`min` no puede superar a `max`' });
+/** Escaños de un partido: una cifra o una horquilla {min, max}. */
+const escanos = z.union([z.number().int().min(0).max(TOTAL_ESCANOS), rangoEscanos]);
+
+const porClaves = <K extends string, T extends z.ZodType>(claves: readonly K[], valor: T) =>
+  z.strictObject(Object.fromEntries(claves.map((k) => [k, valor.optional()])) as Record<K, z.ZodOptional<T>>);
+
+const encuestas = defineCollection({
+  loader: yamlGlob('./src/content/encuestas', '*.yaml'),
+  schema: z
+    .strictObject({
+      instituto: textoNoVacio,
+      /** Medio que la publica o encarga; ausente en el CIS. */
+      medio: textoNoVacio.optional(),
+      /** `cis` se muestra aparte de las demás (PLAN.md §7). */
+      tipo: z.enum(['privada', 'cis']),
+      campo_inicio: fecha,
+      campo_fin: fecha,
+      muestra: z.number().int().positive().optional(),
+      /** Seguimiento continuo cuyo campo abarca varias semanas. */
+      acumulada: z.boolean().default(false),
+      /** % de voto por partido; solo los que la encuesta desglosa. */
+      votos: porClaves(PARTIDOS_ENCUESTA, porcentaje),
+      /** Escaños por partido; omitido el partido que la fuente no desglosa. */
+      escanos: porClaves(PARTIDOS_ENCUESTA, escanos).optional(),
+      /** Escaños de otras fuerzas (el «Resto»), solo si la fuente los desglosa con fiabilidad. */
+      otros_escanos: porClaves(IDS_OTROS, escanos).optional(),
+      fuentes: z
+        .array(
+          z.strictObject({
+            titulo: textoNoVacio,
+            url: z.url(),
+            tipo: z.enum(TIPOS_FUENTE_ENCUESTA),
+          }),
+        )
+        .min(1),
+      nota: textoNoVacio.optional(),
+      consultado: fecha,
+    })
+    .superRefine((e, ctx) => {
+      if (e.campo_fin < e.campo_inicio)
+        ctx.addIssue({ code: 'custom', path: ['campo_fin'], message: '`campo_fin` es anterior a `campo_inicio`' });
+      const suma = [...Object.values(e.escanos ?? {}), ...Object.values(e.otros_escanos ?? {})].reduce<number>(
+        (acc, v) => acc + (v === undefined ? 0 : typeof v === 'number' ? v : v.min),
+        0,
+      );
+      if (suma > TOTAL_ESCANOS)
+        ctx.addIssue({ code: 'custom', path: ['escanos'], message: `Los escaños suman más de ${TOTAL_ESCANOS} (${suma})` });
+    }),
+});
+
+export const collections = { partidos, temas, fuentes, propuestas, encuestas, gobiernos, casos, recuentos };

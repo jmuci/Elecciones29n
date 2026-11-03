@@ -1,0 +1,19 @@
+instituto: NC Report
+medio: La Razón
+tipo: privada
+campo_inicio: 2026-10-26
+campo_fin: 2026-10-29
+muestra: 1000
+votos: { pp: 32.6, psoe: 25.6, vox: 19.3, frente-amplio: 6.9, podemos: 2.4 }
+escanos:
+  pp: { min: 138, max: 140 }
+  psoe: { min: 100, max: 102 }
+  vox: { min: 66, max: 68 }
+  frente-amplio: { min: 9, max: 10 }
+  podemos: { min: 0, max: 1 }
+fuentes:
+  - { titulo: "Democrata: PP pierde tres escaños, Vox gana dos y el PSOE resiste en los cien, según NC Report", url: "https://www.democrata.es/encuestas/elecciones-generales/encuesta-elecciones-generales-pp-pierde-tres-escanos-vox-gana-dos-psoe-resiste-en-cien-segun-nc-report/", tipo: medio }
+  - { titulo: "La Razón: ficha y global de la encuesta", url: "https://www.larazon.es/espana/psoe-frena-efecto-remontada-derecha-consolida-mayoria-absoluta_202611026ae783220250123215703bb1.html", tipo: original }
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+nota: Wikipedia recoge 33,0 % y 140–142 escaños para el PP; se usan las cifras de la prensa (32,6 % y 138–140).
+consultado: 2026-11-02

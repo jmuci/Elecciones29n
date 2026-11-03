@@ -32,7 +32,7 @@ El orden sigue los escaños obtenidos en las generales de julio de 2023, y los p
 | 1 | **Comparador de propuestas** (un desplegable por tema con los partidos en orden fijo, con enlace a fuente) | 🟡 En curso (prioridad) |
 | 2 | **Fuentes**: listado de todos los documentos oficiales usados | 🟡 Sale del mismo modelo de datos |
 | 3 | **Quién soy y por qué lo hago** | ⚪ Pendiente (texto) |
-| 4 | **Estadísticas / encuestas**: gráficos con las proyecciones de escaños y sus fuentes | ⚪ Pendiente |
+| 4 | **Estadísticas / encuestas**: hemiciclos con las proyecciones de escaños y sus fuentes (`/encuestas`, colección `encuestas`) | 🟡 Primera versión (2-nov): 10 encuestas con escaños + CIS aparte. Pendiente: contrastar cada cifra con la ficha original y actualizar hasta el 23-nov |
 | 5 | **Test de afinidad** basado en los programas | ⚪ Pendiente |
 | 6 | **Historia** (`/historia`): línea de tiempo 2000–2026 coloreada por bloque (derecha = rojo, izquierda = azul), una sección por gobierno con presidente, cargos destacados, logros y críticas con fuentes de prensa, datos oficiales, sentencias o estudios | 🟡 Primera pasada (4 gobiernos; faltan logros de Aznar y Rajoy) |
 | 7 | **Corrupción** (`/historia#corrupcion`): recuentos de terceros con su metodología y límites, y casos con sentencia firme desde 2000 | 🟡 Primera pasada (6 casos; no exhaustivo) |

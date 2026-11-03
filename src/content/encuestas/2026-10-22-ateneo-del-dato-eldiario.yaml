@@ -1,0 +1,16 @@
+instituto: Ateneo del Dato
+medio: elDiario.es
+tipo: privada
+campo_inicio: 2026-10-20
+campo_fin: 2026-10-22
+muestra: 2000
+votos: { pp: 31.1, psoe: 27.6, vox: 19.8, frente-amplio: 6.8 }
+escanos:
+  pp: { min: 119, max: 134 }
+  psoe: { min: 102, max: 117 }
+  vox: { min: 64, max: 77 }
+  frente-amplio: { min: 11, max: 17 }
+fuentes:
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+nota: Horquillas amplias. No se desglosan los escaños de Podemos.
+consultado: 2026-11-02

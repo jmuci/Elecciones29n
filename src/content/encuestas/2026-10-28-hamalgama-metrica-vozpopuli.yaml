@@ -1,0 +1,12 @@
+instituto: Hamalgama Métrica
+medio: Vozpópuli
+tipo: privada
+campo_inicio: 2026-10-22
+campo_fin: 2026-10-28
+muestra: 1000
+votos: { pp: 32.4, psoe: 26.4, vox: 19.9, frente-amplio: 5.4 }
+escanos: { pp: 137, psoe: 106, vox: 70, frente-amplio: 7 }
+fuentes:
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+nota: No se desglosan los escaños de Podemos.
+consultado: 2026-11-02

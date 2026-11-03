@@ -1,0 +1,11 @@
+instituto: IMOP
+medio: El Confidencial
+tipo: privada
+campo_inicio: 2026-10-13
+campo_fin: 2026-10-16
+muestra: 1000
+votos: { pp: 28.5, psoe: 27.1, vox: 20.0, frente-amplio: 8.9, podemos: 1.2 }
+escanos: { pp: 123, psoe: 113, vox: 72, frente-amplio: 14, podemos: 0 }
+fuentes:
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+consultado: 2026-11-02
