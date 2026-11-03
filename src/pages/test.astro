@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import AvisoConvocatoria from '../components/AvisoConvocatoria.astro';
 import { cargarDatos, localizador, urlPropuesta } from '../lib/ui';
 import { IMPORTANCIAS, IMPORTANCIA_INICIAL, cargarPreguntas, type DatosCliente } from '../lib/test';
+import { NOMBRE_MAX } from '../lib/test-estado';
 
 const datos = await cargarDatos();
 const { temas, fuente } = datos;
@@ -29,6 +30,19 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   descripcion="Test de afinidad con las propuestas de los partidos para las elecciones generales del 29 de noviembre de 2026: elige la respuesta que más se acerca a lo que piensas y cuánto te importa cada pregunta."
 >
   <div class="contenedor">
+    <div class="prosa compartido" id="compartido" hidden>
+      <p class="entradilla">Estás viendo el resultado que ha compartido <strong id="compartido-nombre"></strong>.</p>
+      <p class="ayuda">
+        El nombre lo escribe quien comparte el enlace; esta web no lo comprueba. Las respuestas viajan en el propio
+        enlace y no se guardan en ningún servidor. El porcentaje se calcula con las propuestas publicadas hoy, que pueden
+        haber cambiado desde que se compartió.
+      </p>
+      <p class="ayuda" id="compartido-descartadas" hidden></p>
+      <div class="acciones">
+        <a class="boton principal" href="/test">Haz tú el test</a>
+      </div>
+    </div>
+
     <div class="prosa intro">
       <h1>Test de afinidad</h1>
       <p class="entradilla">
@@ -104,9 +118,16 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
         }
       </ol>
 
+      <div class="barra-test">
+        <p class="estado" aria-live="polite">
+          <span id="progreso"></span>
+          <span class="guardado">Se guarda automáticamente en este navegador.</span>
+        </p>
+        <button type="button" id="reiniciar">Reiniciar</button>
+      </div>
+
       <div class="acciones">
         <button type="submit" class="principal">Ver mi resultado</button>
-        <button type="button" id="reiniciar">Borrar respuestas</button>
       </div>
     </form>
 
@@ -114,7 +135,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
       <h2 id="resultado-titulo">Tu resultado</h2>
       <p class="prosa ayuda" id="resumen"></p>
       <p class="prosa ayuda">
-        Porcentaje del peso de tus respuestas que coincide con las propuestas de cada partido, contando solo las preguntas
+        Porcentaje del peso de las respuestas que coincide con las propuestas de cada partido, contando solo las preguntas
         en las que ese partido tiene alguna propuesta. Los partidos aparecen en el orden fijo de la web, no ordenados por
         el resultado.
       </p>
@@ -181,7 +202,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
                     <li data-opcion={j}>
                       <p>
                         <span class="sr-only">Respuesta {letra(j)}: </span>
-                        {o.texto} <strong class="tuya" hidden>(tu respuesta)</strong>
+                        {o.texto} <strong class="tuya" hidden />
                       </p>
                       <ul class="fuentes">
                         {o.partidos.map(({ partido, fuente: idFuente, pagina }) => {
@@ -206,9 +227,28 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
         </ol>
       </details>
 
-      <div class="acciones">
+      <div class="acciones" id="acciones-propias">
         <button type="button" id="volver">Cambiar respuestas</button>
       </div>
+
+      <section class="compartir" id="compartir" aria-labelledby="compartir-titulo">
+        <h3 id="compartir-titulo">Compartir el resultado</h3>
+        <p class="ayuda">
+          Se crea un enlace con tus respuestas dentro. No se guarda en ningún servidor: quien tenga el enlace verá este
+          resultado.
+        </p>
+        <form id="compartir-form" class="compartir__fila">
+          <label for="compartir-nombre">Tu nombre o pseudónimo</label>
+          <input id="compartir-nombre" type="text" maxlength={NOMBRE_MAX} autocomplete="nickname" required />
+          <button type="submit" class="principal">Crear enlace</button>
+        </form>
+        <div class="compartir__fila" id="compartir-enlace" hidden>
+          <label for="compartir-url">Enlace</label>
+          <input id="compartir-url" type="url" readonly />
+          <button type="button" id="copiar">Copiar</button>
+          <p class="ayuda" id="copiado" aria-live="polite"></p>
+        </div>
+      </section>
     </section>
   </div>
 </Base>
@@ -217,15 +257,20 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
 
 <script>
   import type { DatosCliente } from '../lib/test';
+  import {
+    CLAVE_ESTADO,
+    PREFIJO_COMPARTIR,
+    codificar,
+    decodificar,
+    progreso,
+    type Estado,
+  } from '../lib/test-estado';
 
-  const CLAVE = 'test-afinidad-v1';
   const datos = JSON.parse(document.getElementById('datos-test')?.textContent ?? '{}') as DatosCliente;
   const form = document.querySelector<HTMLFormElement>('#test');
   const errores = document.querySelector<HTMLElement>('#errores');
   const resultado = document.querySelector<HTMLElement>('#resultado');
   if (!form || !errores || !resultado) throw new Error('Faltan elementos del test');
-
-  type Estado = Record<string, { importancia: number; respuesta: number | null }>;
 
   const bloque = (id: string): HTMLElement | null => form.querySelector(`.pregunta[data-id="${CSS.escape(id)}"]`);
 
@@ -257,7 +302,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
 
   const guardar = (): void => {
     try {
-      localStorage.setItem(CLAVE, JSON.stringify(leer()));
+      localStorage.setItem(CLAVE_ESTADO, JSON.stringify(leer()));
     } catch {
       /* almacenamiento no disponible */
     }
@@ -266,7 +311,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   const restaurar = (): void => {
     let guardado: Estado = {};
     try {
-      guardado = JSON.parse(localStorage.getItem(CLAVE) ?? '{}') as Estado;
+      guardado = JSON.parse(localStorage.getItem(CLAVE_ESTADO) ?? '{}') as Estado;
     } catch {
       return;
     }
@@ -282,8 +327,15 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     }
   };
 
+  const textoProgreso = document.querySelector<HTMLElement>('#progreso');
+  const pintarProgreso = (): void => {
+    const { respondidas, total } = progreso(leer());
+    if (textoProgreso) textoProgreso.textContent = `${respondidas} de ${total} respondidas.`;
+  };
+
   restaurar();
   datos.preguntas.forEach(({ id }) => actualizar(id));
+  pintarProgreso();
 
   form.addEventListener('change', (e) => {
     const id = e.target instanceof HTMLInputElement ? e.target.closest<HTMLElement>('.pregunta')?.dataset.id : undefined;
@@ -292,12 +344,15 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
       if (leer()[id]?.respuesta !== null) bloque(id)?.classList.remove('pregunta--falta');
     }
     guardar();
+    pintarProgreso();
   });
 
   document.querySelector('#reiniciar')?.addEventListener('click', () => {
+    if (!confirm('¿Borrar todas tus respuestas y empezar de nuevo?')) return;
     form.reset();
+    pintarProgreso();
     try {
-      localStorage.removeItem(CLAVE);
+      localStorage.removeItem(CLAVE_ESTADO);
     } catch {
       /* almacenamiento no disponible */
     }
@@ -350,7 +405,13 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     return { global, porTema, pesoTotal, cuentan };
   };
 
-  const mostrar = (estado: Estado): void => {
+  /** `nombre` solo en un resultado compartido. */
+  const mostrar = (estado: Estado, nombre?: string): void => {
+    const ajeno = nombre !== undefined;
+    const titulo = resultado.querySelector<HTMLElement>('#resultado-titulo');
+    if (titulo) titulo.textContent = ajeno ? `Resultado de ${nombre}` : 'Tu resultado';
+    for (const id of ['#acciones-propias', '#compartir'])
+      resultado.querySelector<HTMLElement>(id)?.toggleAttribute('hidden', ajeno);
     const { global, porTema, pesoTotal, cuentan } = calcular(estado);
     const resumen = resultado.querySelector<HTMLElement>('#resumen');
     if (resumen)
@@ -400,14 +461,83 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
         const tuya = cuenta && Number(op.dataset.opcion) === respuesta;
         op.classList.toggle('elegida', tuya);
         const marca = op.querySelector<HTMLElement>('.tuya');
-        if (marca) marca.hidden = !tuya;
+        if (marca) {
+          marca.hidden = !tuya;
+          marca.textContent = ajeno ? '(respuesta elegida)' : '(tu respuesta)';
+        }
       }
     }
 
     resultado.hidden = false;
+    if (ajeno) return;
     resultado.scrollIntoView();
     resultado.focus({ preventScroll: true });
   };
+
+  // — Compartir: las respuestas van en el fragmento de la URL, que no llega al servidor —
+
+  const formCompartir = document.querySelector<HTMLFormElement>('#compartir-form');
+  const campoNombre = document.querySelector<HTMLInputElement>('#compartir-nombre');
+  const bloqueEnlace = document.querySelector<HTMLElement>('#compartir-enlace');
+  const campoUrl = document.querySelector<HTMLInputElement>('#compartir-url');
+  const copiado = document.querySelector<HTMLElement>('#copiado');
+
+  formCompartir?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nombre = campoNombre?.value.trim() ?? '';
+    if (!nombre || !campoUrl || !bloqueEnlace) return;
+    campoUrl.value = `${location.origin}${location.pathname}${PREFIJO_COMPARTIR}${codificar(nombre, leer())}`;
+    bloqueEnlace.hidden = false;
+    if (copiado) copiado.textContent = '';
+    campoUrl.select();
+  });
+
+  // Si se cambia el nombre, el enlace anterior ya no corresponde.
+  campoNombre?.addEventListener('input', () => {
+    if (bloqueEnlace) bloqueEnlace.hidden = true;
+  });
+
+  document.querySelector('#copiar')?.addEventListener('click', async () => {
+    if (!campoUrl || !copiado) return;
+    try {
+      await navigator.clipboard.writeText(campoUrl.value);
+      copiado.textContent = 'Enlace copiado.';
+    } catch {
+      campoUrl.select();
+      copiado.textContent = 'Selecciona el enlace y cópialo.';
+    }
+  });
+
+  // — Resultado compartido (`/test#r=…`): solo lectura, no toca las respuestas guardadas —
+
+  const verCompartido = (): boolean => {
+    if (!location.hash.startsWith(PREFIJO_COMPARTIR)) return false;
+    const compartido = decodificar(location.hash.slice(PREFIJO_COMPARTIR.length), datos.preguntas);
+    const aviso = document.querySelector<HTMLElement>('#compartido');
+    if (!compartido || !aviso) return false;
+    const nombre = compartido.nombre || 'alguien';
+    const destino = aviso.querySelector<HTMLElement>('#compartido-nombre');
+    if (destino) destino.textContent = nombre;
+    const descartadas = aviso.querySelector<HTMLElement>('#compartido-descartadas');
+    if (descartadas && compartido.descartadas > 0) {
+      descartadas.hidden = false;
+      descartadas.textContent =
+        compartido.descartadas === 1
+          ? 'Una respuesta del enlace corresponde a una pregunta que ha cambiado o ya no está en el test y no cuenta.'
+          : `${compartido.descartadas} respuestas del enlace corresponden a preguntas que han cambiado o ya no están en el test y no cuentan.`;
+    }
+    aviso.hidden = false;
+    document.querySelector<HTMLElement>('.intro')?.setAttribute('hidden', '');
+    form.hidden = true;
+    mostrar(compartido.estado, nombre);
+    return true;
+  };
+
+  verCompartido();
+  // Un enlace compartido abierto con /test ya cargado solo cambia el fragmento.
+  window.addEventListener('hashchange', () => {
+    if (location.hash.startsWith(PREFIJO_COMPARTIR)) location.reload();
+  });
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -473,7 +603,11 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     font-size: var(--step--1);
   }
 
-  button {
+  button,
+  .boton {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
     min-height: 2.75rem;
     padding: var(--space-2) var(--space-4);
     font: inherit;
@@ -484,7 +618,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     cursor: pointer;
   }
 
-  button.principal {
+  .principal {
     color: var(--bg);
     background: var(--link);
     border-color: var(--link);
@@ -496,6 +630,117 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     flex-wrap: wrap;
     gap: var(--space-2);
     margin-top: var(--space-5);
+  }
+
+  /* `display` de estas cajas anularía el atributo `hidden`. */
+  .acciones[hidden],
+  .compartir[hidden],
+  .compartir__fila[hidden],
+  .intro[hidden] {
+    display: none;
+  }
+
+  /* — Resultado compartido — */
+
+  .compartido {
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+
+  .compartido[hidden] {
+    display: none;
+  }
+
+  .compartido .acciones {
+    margin-top: var(--space-2);
+  }
+
+  /* — Barra fija mientras se responde — */
+
+  .barra-test {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-4);
+    max-width: 52rem;
+    margin-top: var(--space-4);
+    padding: var(--space-2) var(--space-4);
+    background: color-mix(in srgb, var(--surface) 94%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .estado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-2);
+    font-size: var(--step--1);
+  }
+
+  #progreso {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .guardado {
+    color: var(--muted);
+  }
+
+  /* — Compartir — */
+
+  .compartir {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .compartir h3 {
+    font-size: var(--step-1);
+  }
+
+  .compartir__fila {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-1) var(--space-2);
+  }
+
+  .compartir__fila label,
+  .compartir__fila .ayuda {
+    grid-column: 1 / -1;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .compartir__fila .ayuda {
+    font-weight: 400;
+  }
+
+  .compartir input {
+    min-width: 0;
+    min-height: 2.75rem;
+    padding: var(--space-2) var(--space-3);
+    font: inherit;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+  }
+
+  .compartir input[readonly] {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
   }
 
   /* — Errores — */

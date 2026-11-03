@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SelectorTema from '../components/SelectorTema.astro';
 import SobreElAutor from '../components/SobreElAutor.astro';
+import AvisoTestPendiente from '../components/AvisoTestPendiente.astro';
 import { cargarDatos, fecha } from '../lib/ui';
 
 interface Props {
@@ -61,6 +62,8 @@ const enlaces = [
         <SelectorTema />
       </div>
     </header>
+    {/* En /test ya se ve el progreso en la barra del propio test. */}
+    {ruta !== '/test' && <AvisoTestPendiente />}
     <main id="contenido" tabindex="-1">
       <slot />
     </main>
