@@ -7,7 +7,7 @@ Este proyecto resume las propuestas de los partidos. El objetivo es que cualquie
 ## 1. Reglas de neutralidad
 
 ### Fuentes
-1. **Solo fuentes oficiales del partido**: programa electoral, manifiestos, planes sectoriales, documentos políticos del partido, argumentarios de campaña, web oficial y notas de prensa oficiales. Mientras no haya programa, se puede citar cualquiera de los otros, y el `tipo` de la fuente lo deja claro. Un artículo de prensa puede servir para *encontrar* una propuesta, pero nunca es la fuente que se enlaza.
+1. **Solo fuentes oficiales del partido**: programa electoral, manifiestos, planes sectoriales, documentos políticos del partido, argumentarios de campaña, web oficial y notas de prensa oficiales. Mientras no haya programa, se puede citar cualquiera de los otros, notas de prensa incluidas, y el `tipo` de la fuente lo deja claro. Cuando haya programa, es la referencia; una nota de prensa solo se cita además si detalla una propuesta mucho más que el programa, y entonces se recoge la información de los dos. Un artículo de prensa puede servir para *encontrar* una propuesta, pero nunca es la fuente que se enlaza.
 2. **Toda propuesta lleva fuente, página (o sección) y fecha de consulta.** Sin fuente verificable, la propuesta no entra.
 3. **Archivar cada documento** en Wayback Machine al registrarlo. Los partidos cambian sus PDFs y el enlace tiene que seguir siendo comprobable.
 4. **No mezclar convocatorias.** La referencia son los documentos publicados para el 29N. Un documento oficial anterior a la convocatoria solo se admite si el partido no ha publicado nada para el 29N sobre ese tema, y con aviso:
