@@ -166,9 +166,9 @@ Los subtemas son cerrados: cada propuesta lleva uno o varios de la lista de su t
 - [ ] **Segunda pasada el 13–14 de noviembre** (inicio de campaña): es probable que se publiquen o actualicen programas.
 
 ### Fase 2 · Piloto (vivienda, inmigración, impuestos)
-- [ ] Extraer y redactar las propuestas de los 6 partidos en los 3 temas, siguiendo `CONTRIBUTING.md`.
+- [x] Extraer y redactar las propuestas de los 6 partidos en los 3 temas, siguiendo `CONTRIBUTING.md` (auditadas contra la fuente en #12 y #13; criterios de Jose en #14).
 - [ ] Revisión humana de cada celda contra la fuente (página incluida).
-- [ ] Ajustar el schema si el piloto revela carencias.
+- [x] Ajustar el schema si el piloto revela carencias (subtemas cerrados por tema, `fuentes_revisadas`, tipos `manifiesto` y `argumentario`, `anterior_a_convocatoria`).
 
 ### Fase 3 · Interfaz del comparador
 - [x] **Una sola vista (escritorio y móvil):** una sección desplegable por tema, plegada por defecto. Al desplegarla aparecen los 6 partidos en el orden fijo, cada uno con sus propuestas y el enlace a la fuente con página. Sustituye a la tabla temas × partidos, que se leía mal.
@@ -183,13 +183,15 @@ Los subtemas son cerrados: cada propuesta lleva uno o varios de la lista de su t
 - [x] Colores de partido solo como apoyo, nunca como único portador de información.
 
 ### Fase 4 · Resto de temas
-- [ ] Completar los 11 temas restantes para los 6 partidos.
+- [x] Completar los 11 temas restantes para los 6 partidos (primera pasada, 2–3 nov, PRs #15–#18). Las 84 celdas: 53 `parcial`, 31 `no_publicado`, ninguna `completo`.
+- [ ] Revisión humana de los 11 temas contra la fuente (dudas de neutralidad y selección anotadas en la descripción de cada PR).
+- [ ] Archivar en Wayback la nota del PSOE de Gijón (`psoe-nota-pensiones-constitucion-gijon`): la captura automática guarda el muro de Incapsula.
 
 ### Fase 5 · Flujo de actualización
 - [x] `validate.yml`: build de Astro (que valida los schemas), comprobación de que cada propuesta tiene `fuente` existente y `pagina`, y comprobación de que las URLs responden (job `enlaces`, `scripts/check-links.ts`: HEAD y, si falla, GET; clasifica ok/redirección/bloqueado antibots/roto; solo falla si `archivo` está roto o `url` rota sin snapshot, el resto es warning; no bloquea el job `validate`).
 - [x] `sources-watch.yml`: cron diario hasta el 29-nov-2026 (el job se omite después) y `workflow_dispatch`. Ejecuta `scripts/check-sources.ts`, que descarga cada fuente con `sha256`, compara el hash y distingue hash distinto, error HTTP/red y redirección; las fuentes sin hash se listan aparte sin contar como error. Abre o actualiza un único issue por fuente (label `fuente-cambiada`, título `Fuente cambiada: <id>`) y no hace commits.
   - Nota: pasada la campaña, cambiar el cron a semanal (p. ej. `17 6 * * 1`) y quitar la guarda de fecha.
-- [ ] Ciclo de edición: editar YAML → PR → preview de Vercel → merge.
+- [x] Ciclo de edición: editar YAML → PR → preview de Vercel → merge (usado en #12–#19).
 
 ### Fase 6 · Pulido y publicación
 - [ ] Página "Quién soy y por qué lo hago".
