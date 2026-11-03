@@ -1,0 +1,38 @@
+# Fase 4: no hay programa electoral publicado; se resume el Contrato con España. El argumentario
+# "La revolución de la decencia" (27-oct, pp.es/actualidad/documentos/) repite estos compromisos
+# (auditoría de cuentas, presupuestos, independencia judicial) sin añadir medidas.
+partido: pp
+tema: regeneracion
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: [justicia, independencia de órganos]
+    resumen: >-
+      Se compromete a que los jueces elijan a los jueces y a que el Gobierno no los cuestione.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - subtema: independencia de órganos
+    resumen: >-
+      Propone que los órganos reguladores, el Tribunal Constitucional y la Fiscalía General del
+      Estado estén dirigidos por personas independientes.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - resumen: >-
+      Se compromete a presentar presupuestos cada año y a convocar elecciones de forma obligatoria si
+      el Gobierno acumula más de una prórroga.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - subtema: corrupción
+    resumen: >-
+      Propone auditar el gasto y reducir ministerios, altos cargos y asesores, con atención especial
+      a las áreas afectadas por causas judiciales y a los nombramientos indebidos.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - subtema: corrupción
+    resumen: Plantea que todo cargo político responda por la corrupción de sus subordinados.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-nueva-generacion-propietarios
+  - pp-argumentario-menos-impuestos

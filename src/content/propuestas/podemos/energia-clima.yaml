@@ -1,0 +1,36 @@
+# Fase 4: Podemos no tiene programa publicado (podemos.info sigue bloqueado por Cloudflare el 2-nov; en
+# Wayback no hay documentos nuevos para el 29N). Se resume su documento político de la V Asamblea (2025).
+partido: podemos
+tema: energia-clima
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: [precio de la luz, renovables]
+    resumen: >-
+      Propone intervenir el mercado eléctrico para acabar con la fijación marginalista de precios y
+      retribuir cada megavatio-hora según su coste de producción.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 37
+  - subtema: precio de la luz
+    resumen: Plantea un pago progresivo de la factura de la luz según el consumo.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 38
+  - subtema: [precio de la luz, renovables]
+    resumen: >-
+      Propone crear una empresa pública de energía que compita con las grandes compañías privadas y
+      gestione la transición energética.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 38
+  - resumen: >-
+      Plantea ampliar las zonas de bajas emisiones y un plan de ayudas para que las familias con menos
+      recursos puedan comprar un coche eléctrico al mismo precio que uno de gasolina o diésel.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 38
+  - subtema: agua
+    resumen: >-
+      Propone retirar los derechos extensivos de riego acumulados por fondos de inversión, para
+      garantizar la sostenibilidad hídrica.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 39
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea

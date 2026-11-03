@@ -1,0 +1,46 @@
+# Fase 4: D21 no tiene programa; se resume su plan "España limpia". Selección (CONTRIBUTING §1.14): una
+# medida por cada bloque que el plan destaca en su presentación (p. 2: clientelismo, corrupción,
+# instituciones independientes), priorizando las más concretas. Quedan fuera, entre otras, la Oficina
+# Anticorrupción (p. 6), la suspensión de la financiación pública a partidos investigados (p. 7), las
+# asambleas ciudadanas (p. 10), el límite de ocho años en el cargo (p. 12) y las listas abiertas (p. 13).
+partido: democracia-21
+tema: regeneracion
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: corrupción
+    resumen: >-
+      Propone reducir un 90 % los asesores, cubrir todos los cargos de la Administración y las
+      empresas públicas por mérito y capacidad salvo el de secretario de Estado, y tipificar un delito
+      de "enchufismo".
+    fuente: democracia-21-espana-limpia
+    pagina: 3
+  - subtema: [corrupción, justicia]
+    resumen: >-
+      Plantea juzgados especializados en corrupción y que los casos de corrupción de políticos de una
+      comunidad autónoma los juzgue el tribunal de una comunidad adyacente.
+    fuente: democracia-21-espana-limpia
+    pagina: 5
+  - subtema: corrupción
+    resumen: >-
+      Propone que los delitos de corrupción no prescriban y que los condenados por sentencia firme por
+      corrupción, malversación, tráfico de influencias o desvío de fondos públicos queden inhabilitados
+      de por vida.
+    fuente: democracia-21-espana-limpia
+    pagina: 7
+  - subtema: [justicia, independencia de órganos]
+    resumen: >-
+      Plantea que los jueces elijan a los vocales judiciales del CGPJ sin intervención de las
+      asociaciones judiciales, y que el Gobierno elija al fiscal general entre una terna votada por el
+      Congreso por mayoría de 3/5.
+    fuente: democracia-21-espana-limpia
+    pagina: 8
+  - subtema: justicia
+    resumen: >-
+      Propone eliminar los aforamientos no previstos en la Constitución y reformarla para suprimir los
+      de diputados y senadores y limitar los de los miembros del Gobierno.
+    fuente: democracia-21-espana-limpia
+    pagina: 9
+fuentes_revisadas:
+  - democracia-21-vivienda-prioridad-1
+  - democracia-21-espana-limpia
