@@ -1,0 +1,13 @@
+# Fase 4: Podemos no tiene programa publicado (podemos.info sigue bloqueado por Cloudflare; Wayback
+# no tiene documentos nuevos desde la convocatoria); se resume su documento político de la V Asamblea (2025).
+partido: podemos
+tema: empleo
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: SMI
+    resumen: Propone mejorar los salarios y, en particular, aumentar el salario mínimo.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 37
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea

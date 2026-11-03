@@ -1,0 +1,25 @@
+# Fase 4: "Recuperar España" (2026) no trata el empleo, así que se resume el Programa económico y
+# de vivienda (2025), anterior a la convocatoria (CONTRIBUTING §1.4, con aviso).
+partido: vox
+tema: empleo
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: contratación
+    resumen: >-
+      Propone incentivos y bonificaciones fiscales a la contratación de españoles, y criterios de
+      reciprocidad con los países que limiten la contratación de españoles.
+    fuente: vox-programa-economico-vivienda
+    pagina: 44
+  - resumen: >-
+      Propone eliminar la cuota de autónomos para quienes ingresen menos que el salario mínimo.
+    fuente: vox-programa-economico-vivienda
+    pagina: 37
+  - resumen: >-
+      Plantea que la nómina de los trabajadores incluya las cotizaciones a la Seguridad Social a
+      cargo de la empresa, para mostrar el coste real del trabajo.
+    fuente: vox-programa-economico-vivienda
+    pagina: 37
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda
