@@ -1,0 +1,19 @@
+# Fase 4: no hay programa electoral publicado; se resume el Contrato con España.
+partido: pp
+tema: territorial
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: Se compromete a defender la soberanía nacional y la integridad territorial.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - subtema: lenguas
+    resumen: >-
+      Plantea garantizar la enseñanza del castellano en toda España y la de las lenguas cooficiales
+      en sus respectivas comunidades autónomas.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-nueva-generacion-propietarios
+  - pp-argumentario-menos-impuestos

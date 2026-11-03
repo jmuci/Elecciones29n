@@ -1,0 +1,19 @@
+# Fase 4: Podemos no tiene programa publicado (podemos.info sigue bloqueado por Cloudflare el 2-nov; en
+# Wayback no hay documentos nuevos para el 29N). Se resume su documento político de la V Asamblea (2025).
+partido: podemos
+tema: territorial
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: >-
+      Plantea reconocer el derecho a decidir de todos los pueblos que, según el documento, forman
+      España como "país de países".
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 41
+  - resumen: >-
+      Plantea avanzar hacia lo que llama la "República plurinacional", con un modelo "confederal de
+      soberanías compartidas".
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 41
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
