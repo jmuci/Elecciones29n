@@ -201,6 +201,35 @@ const ultima = fecha(
       </div>
       <GraficoCorrupcion resumen={resumenCorrupcion} etiquetaPartido={etiquetaPartido} />
 
+      <div class="prosa">
+        <h4 id="por-que-pocas">¿Por qué parecen pocos casos y cifras bajas?</h4>
+        <ul>
+          <li>
+            <strong>La lista es una muestra, no el total.</strong> Verificat cuenta 178 casos con condena firme desde
+            1978 (más abajo); aquí hay una parte, verificada uno a uno. Las gráficas no miden cuánta corrupción hay.
+          </li>
+          <li>
+            <strong>Los tribunales solo cifran lo que prueban.</strong> Una sentencia fija el dinero malversado, la
+            cuota defraudada o la comisión demostrada en esa causa, que suele ser menos que lo investigado o lo que
+            cuenta la prensa. Cuando las fuentes no coinciden, esta web no pone cifra.
+          </li>
+          <li>
+            <strong>Delitos distintos, cifras distintas.</strong> Cobrar comisiones, pagar en negro, desviar dinero
+            público o financiar un partido de forma irregular son delitos diferentes (cohecho, delito fiscal,
+            malversación…) y cada sentencia mide algo propio. Por eso los importes no se suman.
+          </li>
+          <li>
+            <strong>Pocos procesos acaban en condena firme y tardan años.</strong> El CGPJ contó 200 personas
+            procesadas por corrupción en 2022 y 146 en 2024, con 61 y 51 sentencias al año; el 59-74 % fueron
+            condenatorias, y una parte por conformidad. Una causa grande puede tardar más de una década.
+          </li>
+          <li>
+            <strong>Una sentencia puede deshacerse.</strong> Los ERE de Andalucía y la «caja B» de la Gürtel muestran
+            que recursos posteriores recortan penas o anulan condenas.
+          </li>
+        </ul>
+      </div>
+
       <h3 id="recuentos">Recuentos de terceros</h3>
       <ul class="recuentos">
         {
@@ -240,8 +269,8 @@ const ultima = fecha(
         }
       </ul>
       <p class="aviso">
-        Los dos recuentos miden cosas distintas (procedimientos frente a casos e importes) y cubren periodos distintos:
-        no se suman ni se comparan entre sí.
+        Los recuentos miden cosas distintas (procedimientos, casos e importes, o sentencias del año) y cubren periodos
+        distintos: no se suman ni se comparan entre sí.
       </p>
 
       <h3 id="casos">Casos con sentencia firme</h3>
@@ -300,6 +329,13 @@ const ultima = fecha(
           <li>Más casos con sentencia firme desde 2000, para todos los partidos, con un criterio de inclusión fijo.</li>
           <li>Un recuento fiable del número de personas condenadas por partido: hoy no hay cifra verificada.</li>
           <li>El importe fijado por los tribunales en los casos que hoy no tienen cifra verificada (Gürtel, ERE, Koldo, Marea…).</li>
+          <li>
+            Una estimación fiable del coste total de la corrupción. Se citan cifras de decenas de miles de millones de
+            euros (por ejemplo, la que se atribuye a la CNMC mide sobrecostes por falta de competencia en la
+            contratación, no corrupción), pero aún no se ha podido leer el estudio original; hasta entonces no se
+            publica ninguna.
+          </li>
+          <li>Un recuento de personas imputadas por partido: imputado no es culpable y ninguna fuente oficial lo publica.</li>
           <li>Casos firmes que aún no están en la lista, como Malaya (Marbella) o Nóos, pendientes de verificar.</li>
         </ul>
       </div>

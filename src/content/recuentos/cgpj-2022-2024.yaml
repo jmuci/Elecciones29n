@@ -1,0 +1,23 @@
+titulo: "Repositorio de datos sobre procesos por corrupción (CGPJ): balances anuales de 2022 y 2024"
+autoria: Consejo General del Poder Judicial (CGPJ)
+url: https://www.poderjudicial.es/cgpj/es/Temas/Transparencia/Repositorio-de-datos-sobre-procesos-por-corrupcion/Informacion--general/
+publicado: 2025-04-04
+alcance: "Corrupción pública en toda España; procesos penales con auto de apertura de juicio oral o de procesamiento y sentencias dictadas en cada año. Se usan los balances de 2022 y 2024; no se han localizado los de 2023 y 2025."
+metodologia: "Recuento oficial a partir de los boletines estadísticos de los juzgados, el Ministerio de Justicia e Instituciones Penitenciarias. Incluye malversación, cohecho, prevaricación, tráfico de influencias, fraudes y exacciones ilegales, entre otros. Se actualiza cada trimestre."
+cifras:
+  - concepto: "Personas físicas y jurídicas con juicio oral o procesadas en 2022"
+    valor: "200 (164 físicas y 36 jurídicas)"
+  - concepto: "Sentencias dictadas en 2022"
+    valor: "61, de ellas 45 total o parcialmente condenatorias (73,8 %)"
+  - concepto: "Personas físicas y jurídicas con juicio oral o procesadas en 2024"
+    valor: "146 (108 físicas y 38 jurídicas)"
+  - concepto: "Sentencias dictadas en 2024"
+    valor: "51, de ellas 30 total o parcialmente condenatorias (58,8 %)"
+limitaciones:
+  - "Procesado o enviado a juicio no es culpable: solo cuentan como condena las sentencias condenatorias."
+  - "No asigna cada causa a un partido ni da importes."
+  - "Las sentencias del año no son las de los procesos de ese mismo año: un caso grande tarda años en llegar a sentencia."
+  - "Cuenta sentencias, no condenados; una sentencia puede condenar a decenas de personas o a una."
+  - "Parte de las condenas son por conformidad (12 de las 30 de 2024)."
+orden: 3
+revisado: 2026-11-03

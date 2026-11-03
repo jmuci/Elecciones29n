@@ -1,0 +1,42 @@
+nombre: Obras de la sede del PP en Génova (caja B)
+partido: pp
+territorio: Madrid
+resumen: "Pieza de la Gürtel sobre la reforma de la sede nacional del PP (2005-2010), pagada en parte con dinero en negro de la «caja B» del partido. La Audiencia Nacional condenó en octubre de 2021 al extesorero Luis Bárcenas y a los dueños de la constructora Unifica por delitos fiscales y falsedad, y declaró al PP responsable civil subsidiario. El Supremo confirmó la sentencia en lo esencial en noviembre de 2024 y rebajó las penas."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2024-11-15
+condenas:
+  - persona: "Luis Bárcenas"
+    cargo: "Extesorero del PP"
+    pena: "Dos años de prisión y multa de 1,2 millones de euros en la Audiencia Nacional; el Supremo rebajó la prisión a ocho meses"
+  - persona: "Gonzalo Urquijo y Belén García"
+    cargo: "Responsables de la constructora Unifica"
+    pena: "Dos años y nueve meses de prisión y multa de 2,6 millones de euros en la Audiencia Nacional; el Supremo rebajó la prisión a nueve meses"
+responsabilidad_partido: "El PP no fue condenado penalmente: la Audiencia Nacional lo declaró responsable civil subsidiario por 123.669 euros, importe que el Supremo mantuvo."
+cuantia:
+  euros: 1072000
+  concepto: "Pagos en negro a Unifica por parte de las obras, según la Audiencia Nacional (no es el importe defraudado a Hacienda ni lo que debe devolverse)"
+  fuentes:
+    - medio: "elDiario.es"
+      titulo: "La Audiencia Nacional condena a Luis Bárcenas y al PP por la reforma de su sede con dinero negro"
+      url: "https://www.eldiario.es/politica/audiencia-nacional-condena-luis-barcenas-pp-reforma-sede-genova-dinero-negro_1_8439000.amp.html"
+      tipo: prensa
+      fecha: 2021-10-28
+    - medio: "El Debate"
+      titulo: "La Audiencia Nacional condena a Bárcenas y absuelve de delito fiscal al PP por las obras de Génova"
+      url: "https://www.eldebate.com/espana/20211028/audiencia-nacional-condena-barcenas-absuelve-pp-obras-reforma-genova.html"
+      tipo: prensa
+      fecha: 2021-10-28
+nota: "La fecha firme es la de la noticia del fallo del Supremo (15 de noviembre de 2024); las fuentes no dan la fecha de la sentencia. Bárcenas renunció a recurrir en 2021 y el PP no recurrió su responsabilidad civil. La cifra de la cuota defraudada que recoge la prensa tras el Supremo no es coherente entre pasajes (374.000 o 384.000 euros), por eso no se usa."
+fuentes:
+  - medio: "elDiario.es"
+    titulo: "El Supremo confirma que el PP reformó su sede con dinero negro de la caja B"
+    url: "https://www.eldiario.es/politica/supremo-confirma-pp-reformo-sede-dinero-negro-caja-b_1_11416358.amp.html"
+    tipo: prensa
+    fecha: 2024-11-15
+  - medio: "Onda Vasca"
+    titulo: "Bárcenas renuncia a recurrir la sentencia sobre la reforma del PP en Génova"
+    url: "https://www.ondavasca.com/barcenas-renuncia-a-recurrir-la-sentencia-sobre-la-reforma-del-pp-en-genova/"
+    tipo: prensa
+    fecha: 2021-12-30
+revisado: 2026-11-03
