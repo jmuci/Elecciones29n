@@ -1,0 +1,33 @@
+# Fase 4: Podemos no tiene programa publicado (podemos.info sigue tras la verificación de Cloudflare
+# a 2-nov); se resume su documento político de la V Asamblea (2025).
+partido: podemos
+tema: exterior-defensa
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: OTAN
+    resumen: >-
+      Propone abandonar la OTAN a la mayor brevedad y que España y la Unión Europea dejen de seguir las
+      decisiones de Estados Unidos.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 33
+  - subtema: gasto en defensa
+    resumen: >-
+      Se opone a aumentar el gasto en armamento y plantea aumentar en su lugar las partidas de
+      sanidad, educación y cuidados.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - subtema: política exterior
+    resumen: >-
+      Propone romper todas las relaciones diplomáticas y comerciales con Israel y un embargo a la
+      compra y venta de armamento a ese país.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 33
+  - subtema: política exterior
+    resumen: >-
+      Plantea dar prioridad a las alianzas con América Latina, en especial con los países con
+      gobiernos progresistas, y establecer relaciones de igual a igual con los países de África.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 33
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
