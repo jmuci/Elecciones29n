@@ -1,37 +1,42 @@
 /*
- * Tokens y estilos base. Ratios WCAG comprobados (texto sobre --bg / --surface / --head):
- * claro:  text 16.6/17.4/15.0 · muted 7.3/7.6/6.6 · link 7.8/8.1/7.0 · parcial 6.5/6.8/5.9
- *         pendiente 6.5/6.7/5.8 · borde fuerte y foco ≥3.1
- * oscuro: text 15.1/14.0/12.7 · muted 8.4/7.7/7.0 · link 10.2/9.4/8.5 · parcial 9.9/9.2/8.3
- *         pendiente 7.5/7.0/6.3 · borde fuerte y foco ≥3.5
+ * Tokens y estilos base. Paleta neutra (sin tonos cálidos ni colores asociables a un partido).
+ * Ratios WCAG comprobados (texto sobre --bg / --surface / --head):
+ * claro:  text 19.0/19.8/18.0 · muted 7.4/7.7/7.0 · link 7.7/8.0/7.3 · parcial 6.5/6.8/6.2
+ *         pendiente 6.3/6.6/6.0 · borde fuerte y foco ≥3.1
+ * oscuro: text 16.8/15.9/14.5 · muted 7.7/7.2/6.6 · link 9.6/9.1/8.3 · parcial 10.6/10.0/9.1
+ *         pendiente 7.9/7.4/6.8 · borde fuerte y foco ≥3.2
  */
 :root {
   color-scheme: light dark;
 
-  --bg: #fbfaf7;
+  --bg: #fafafa;
   --surface: #ffffff;
-  --head: #f1eee7;
-  --text: #1c1a17;
-  --muted: #595349;
-  --link: #1d4f91;
+  --head: #f4f4f5;
+  --text: #0a0a0b;
+  --muted: #52525b;
+  --link: #2f3fc4;
   --parcial: #8a4b00;
-  --pendiente: #5f5b55;
-  --border-strong: #8c857a;
-  --rule: #e2ddd3;
-  --focus: #1d4f91;
+  --pendiente: #5c5c66;
+  --border-strong: #8b8b94;
+  --rule: #e4e4e7;
+  --focus: #2f3fc4;
+  --shadow: 0 1px 2px rgb(10 10 11 / 0.04), 0 1px 3px rgb(10 10 11 / 0.06);
+  --shadow-hover: 0 2px 4px rgb(10 10 11 / 0.05), 0 8px 24px rgb(10 10 11 / 0.08);
   /* Línea de tiempo de /historia: derecha = azul, izquierda = rojo (decisión editorial; texto blanco ≥ 6:1). */
   --bloque-derecha: #1d4f91;
   --bloque-izquierda: #b3261e;
   --sobre-bloque: #ffffff;
 
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, ui-serif, serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
 
+  --step--2: 0.75rem;
   --step--1: 0.875rem;
   --step-0: 1rem;
   --step-1: 1.25rem;
-  --step-2: 1.75rem;
-  --step-3: clamp(2rem, 1.5rem + 2vw, 2.75rem);
+  --step-2: 1.625rem;
+  --step-3: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -40,25 +45,31 @@
   --space-5: 1.5rem;
   --space-6: 2rem;
   --space-7: 3rem;
+  --space-8: 4.5rem;
 
   --gutter: clamp(1rem, 4vw, 2.5rem);
   --measure: 68ch;
-  --radius: 4px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --tracking-tight: -0.022em;
+  --header-h: 3.75rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #151412;
-    --surface: #1d1c19;
-    --head: #26241f;
-    --text: #ece8e0;
-    --muted: #b5aea2;
-    --link: #9cc2ff;
+    --bg: #0b0b0d;
+    --surface: #131316;
+    --head: #1c1c20;
+    --text: #ededef;
+    --muted: #a1a1aa;
+    --link: #a5b0ff;
     --parcial: #f0b35a;
-    --pendiente: #aaa59c;
-    --border-strong: #7d776c;
-    --rule: #34322d;
-    --focus: #9cc2ff;
+    --pendiente: #a3a3ad;
+    --border-strong: #6b6b74;
+    --rule: #27272a;
+    --focus: #a5b0ff;
+    --shadow: 0 0 0 1px rgb(255 255 255 / 0.02);
+    --shadow-hover: 0 0 0 1px rgb(255 255 255 / 0.04), 0 8px 24px rgb(0 0 0 / 0.4);
   }
 }
 
@@ -71,6 +82,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + var(--space-4));
 }
 
 body {
@@ -79,17 +91,27 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   font-size: var(--step-0);
-  line-height: 1.55;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  line-height: 1.2;
+  font-family: var(--font-display);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: var(--tracking-tight);
   margin: 0;
   text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--step-3);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
 }
 
 p,
@@ -97,6 +119,13 @@ ul,
 ol,
 dl {
   margin: 0;
+}
+
+.entradilla {
+  max-width: 44rem;
+  color: var(--muted);
+  font-size: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  line-height: 1.55;
 }
 
 a {
@@ -149,12 +178,48 @@ time {
   margin-top: var(--space-4);
 }
 
+/* Antetítulo: etiqueta corta encima de un título. */
+.antetitulo {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Botón secundario compartido. */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-4);
+  font: inherit;
+  font-size: var(--step--1);
+  font-weight: 550;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.boton:hover {
+  border-color: var(--border-strong);
+  background: var(--head);
+}
+
 /* Marca de datos de prueba (solo existe en desarrollo). */
 .marca-prueba {
   display: inline-block;
   padding: 0 var(--space-1);
   border: 1px dashed currentColor;
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   color: var(--parcial);
   font-size: 0.75rem;
   font-weight: 700;
@@ -167,7 +232,7 @@ time {
   justify-self: start;
   padding: 0 var(--space-2);
   border: 1px solid var(--border-strong);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   color: var(--text);
   font-size: 0.8125rem;
   font-weight: 600;
@@ -200,4 +265,13 @@ time {
 
 .notas li + li {
   margin-top: var(--space-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
