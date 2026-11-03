@@ -62,7 +62,7 @@ const descripcion = `${titulo}: ${segmentos.map((s) => `${s.etiqueta} ${s.escano
   }
 
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme='light']) {
       --s-pp: #5aa2f0;
       --s-psoe: #ff6b6b;
       --s-vox: #7fd44a;
@@ -78,6 +78,23 @@ const descripcion = `${titulo}: ${segmentos.map((s) => `${s.etiqueta} ${s.escano
       --s-pnv: #34b27d;
       --s-resto: #9a9488;
     }
+  }
+
+  :root[data-theme='dark'] {
+    --s-pp: #5aa2f0;
+    --s-psoe: #ff6b6b;
+    --s-vox: #7fd44a;
+    --s-frente-amplio: #f2b632;
+    --s-podemos: #b27de0;
+    --s-adelante: #6fd39b;
+    --s-bng: #8ccaf0;
+    --s-cca: #f2d044;
+    --s-compromis: #ff9a4d;
+    --s-eh-bildu: #b3dc4a;
+    --s-erc: #e8b84a;
+    --s-junts: #3fd6cd;
+    --s-pnv: #34b27d;
+    --s-resto: #9a9488;
   }
 
   .s-pp { fill: var(--s-pp); background: var(--s-pp); }
