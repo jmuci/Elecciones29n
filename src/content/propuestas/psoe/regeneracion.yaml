@@ -1,8 +1,44 @@
-# Revisado en Fase 4 (2-nov): psoe.es no tiene programa ni documentos para el 29N (/programa-electoral
-# sigue mostrando el de 2019; captura de Wayback del 19-oct y portada del 23-oct). La web pide una
-# verificación de Imperva al acceso automatizado.
+# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
+# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
+# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
+# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
 partido: psoe
 tema: regeneracion
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - resumen: >-
+      Propone crear un "escaño ciudadano" en el Congreso, el Senado y los parlamentos autonómicos,
+      sin titular fijo ni voto, desde el que representantes de la sociedad civil puedan preguntar al
+      Gobierno y presentar iniciativas.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 144
+  - resumen: Propone reformar la LOREG para reconocer el derecho al voto a partir de los 16 años.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 144
+  - subtema: corrupción
+    resumen: >-
+      Propone regular la actividad de los grupos de interés con registro, código de conducta, huella
+      legislativa y publicidad de las agendas de parlamentarios y miembros del Gobierno.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 145
+  - subtema: corrupción
+    resumen: >-
+      Fija como objetivo situar a España entre las 20 primeras democracias en los rankings de
+      percepción de la corrupción.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 142
+  - subtema: [justicia, independencia de órganos]
+    resumen: >-
+      Plantea reformas legales para corregir disfunciones del sistema judicial y evitar dilaciones, y
+      que cualquier reforma del CGPJ evite que se repita un bloqueo como el vivido.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 138
+fuentes_revisadas:
+  - psoe-resolucion-politica-41-congreso
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-esperanza-dos-hermanas

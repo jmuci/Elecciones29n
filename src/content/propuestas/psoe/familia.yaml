@@ -1,11 +1,33 @@
-# Revisado en Fase 4: psoe.es no tiene programa ni documentos para el 29N, y sus notas de prensa de
-# campaña no incluyen propuestas de familia. Las noticias sobre permisos y prestaciones aprobados por
-# el Consejo de Ministros son acción de gobierno, no propuestas, y no se recogen.
+# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
+# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
+# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
+# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
 partido: psoe
 tema: familia
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: permisos
+    resumen: Se compromete a extender el permiso de nacimiento y cuidado del menor hasta las 20 semanas.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 85
+  - subtema: permisos
+    resumen: >-
+      Propone dar a las familias monoparentales una protección especial equivalente a la de las
+      familias numerosas y estudiar que puedan extender los permisos de nacimiento.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 85
+  - subtema: conciliación
+    resumen: >-
+      Propone una Ley de Usos del Tiempo que haga obligatorias la flexibilidad horaria, la
+      concentración de la jornada o el teletrabajo con derecho a la desconexión.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 122
 fuentes_revisadas:
+  - psoe-resolucion-politica-41-congreso
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
   - psoe-nota-pensiones-constitucion-gijon
   - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-esperanza-dos-hermanas

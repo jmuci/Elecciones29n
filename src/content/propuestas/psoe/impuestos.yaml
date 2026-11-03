@@ -1,6 +1,48 @@
-# Revisado en Fase 1: psoe.es no tiene programa ni documentos para el 29N (lo que hay en /propuestas es de 2019).
+# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
+# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
+# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
+# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
 partido: psoe
 tema: impuestos
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: IRPF
+    resumen: >-
+      Propone una tributación mínima del 50 % en la tarifa general del IRPF para las rentas
+      superiores a 300.000 euros anuales.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 107
+  - subtema: IRPF
+    resumen: >-
+      Plantea un gravamen efectivo mínimo sobre las rentas del capital, para acercarlo al del
+      trabajo, con un tipo marginal máximo del 30 %.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 107
+  - subtema: patrimonio y sucesiones
+    resumen: >-
+      Propone subir hasta un 5 % el tipo del impuesto sobre el patrimonio de los mayores
+      patrimonios, con un tratamiento especial de los bienes improductivos.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 107
+  - subtema: patrimonio y sucesiones
+    resumen: >-
+      Propone un impuesto estatal sobre las grandes herencias y donaciones que actúe como impuesto
+      mínimo e impida que las comunidades autónomas dejen sin efecto el de Sucesiones y Donaciones.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 107
+  - subtema: sociedades
+    resumen: >-
+      Plantea un acuerdo global de impuestos que haga efectivo el impuesto del 15 % a todas las
+      multinacionales e instaure impuestos globales a las transacciones financieras y a los grandes
+      patrimonios.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 107
+fuentes_revisadas:
+  - psoe-resolucion-politica-41-congreso
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-esperanza-dos-hermanas
