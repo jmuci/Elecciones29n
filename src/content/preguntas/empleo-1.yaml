@@ -1,0 +1,12 @@
+tema: empleo
+orden: 1
+pregunta: ¿Qué medida sobre el salario mínimo te parece prioritaria?
+opciones:
+  - texto: Seguir subiendo el salario mínimo.
+    partidos:
+      - { partido: psoe, fuente: psoe-nota-aborto-constitucion-granada, pagina: 6.º párrafo }
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 37 }
+  - texto: Que el salario mínimo quede exento de IRPF.
+    partidos:
+      - { partido: pp, fuente: pp-argumentario-donde-esta-el-dinero, pagina: 1 }
+revisado: 2026-11-02

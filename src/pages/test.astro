@@ -1,0 +1,861 @@
+---
+import Base from '../layouts/Base.astro';
+import AvisoConvocatoria from '../components/AvisoConvocatoria.astro';
+import { cargarDatos, localizador, urlPropuesta } from '../lib/ui';
+import { IMPORTANCIAS, IMPORTANCIA_INICIAL, cargarPreguntas, type DatosCliente } from '../lib/test';
+
+const datos = await cargarDatos();
+const { temas, fuente } = datos;
+// El test no tiene preguntas de ejemplo: los partidos ficticios no aparecen.
+const partidos = datos.partidos.filter((p) => !p.data.ficticio);
+const preguntas = await cargarPreguntas(temas);
+const nombre = new Map(partidos.map((p) => [p.id, p.data.nombre_corto]));
+const nombreTema = new Map(temas.map((t) => [t.id, t.data.nombre]));
+const temasTest = temas.filter((t) => preguntas.some((p) => p.data.tema.id === t.id));
+
+const cliente: DatosCliente = {
+  partidos: partidos.map((p) => p.id),
+  preguntas: preguntas.map((p) => ({
+    id: p.id,
+    tema: p.data.tema.id,
+    opciones: p.data.opciones.map((o) => o.partidos.map((x) => x.partido.id)),
+  })),
+};
+const letra = (i: number): string => String.fromCharCode(97 + i);
+---
+
+<Base
+  titulo="Test de afinidad · Elecciones 29-N-2026"
+  descripcion="Test de afinidad con las propuestas de los partidos para las elecciones generales del 29 de noviembre de 2026: elige la respuesta que más se acerca a lo que piensas y cuánto te importa cada pregunta."
+>
+  <div class="contenedor">
+    <div class="prosa intro">
+      <h1>Test de afinidad</h1>
+      <p class="entradilla">
+        {preguntas.length} preguntas sobre los {temasTest.length} temas de la web. Cada respuesta resume lo que propone al
+        menos un partido, sin decir cuál.
+      </p>
+      <p>
+        Elige la respuesta que más se acerque a lo que piensas e indica cuánto te importa la pregunta, de 5 (muy
+        importante) a 0 (no te importa). Las preguntas con importancia 0 no cuentan y no hace falta responderlas. Al
+        final verás qué porcentaje de tus respuestas coincide con las propuestas de cada partido, ponderado por la
+        importancia que les has dado, y qué partido propone cada respuesta, con enlace a su fuente.
+      </p>
+      <p class="aviso">
+        Es una medida de coincidencia con las propuestas publicadas, no una recomendación de voto. Varios partidos aún no
+        han publicado propuestas sobre muchos temas: su porcentaje se calcula solo con las preguntas en las que tienen
+        alguna, y se indica sobre cuántas.
+      </p>
+    </div>
+
+    <form id="test" class="test" novalidate>
+      <div class="errores" id="errores" tabindex="-1" hidden>
+        <h2>Faltan respuestas</h2>
+        <p>Responde estas preguntas o ponles importancia 0:</p>
+        <ul></ul>
+      </div>
+
+      <ol class="preguntas">
+        {
+          preguntas.map((p, i) => (
+            <li class="pregunta" id={`p-${p.id}`} data-id={p.id}>
+              <p class="tema">{nombreTema.get(p.data.tema.id)}</p>
+              <h2 id={`t-${p.id}`}>
+                <span class="numero">{i + 1}.</span> {p.data.pregunta}
+              </h2>
+              <fieldset class="opciones" aria-labelledby={`t-${p.id}`} aria-describedby={`nota-${p.id}`}>
+                <ul>
+                  {p.data.opciones.map((o, j) => (
+                    <li>
+                      <label>
+                        <input type="radio" name={`r-${p.id}`} value={j} />
+                        <span>{o.texto}</span>
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+              </fieldset>
+              <p class="nota" id={`nota-${p.id}`} aria-live="polite" />
+              <fieldset class="importancia">
+                <legend>
+                  ¿Cuánto te importa?<span class="sr-only"> Pregunta {i + 1}.</span>
+                </legend>
+                <div class="escala">
+                  {IMPORTANCIAS.map((n) => (
+                    <label>
+                      <input
+                        type="radio"
+                        name={`i-${p.id}`}
+                        value={n}
+                        checked={n === IMPORTANCIA_INICIAL}
+                        aria-label={n === 0 ? '0, no me importa' : n === 5 ? '5, muy importante' : String(n)}
+                      />
+                      <span aria-hidden="true">{n}</span>
+                    </label>
+                  ))}
+                  <span class="extremos" aria-hidden="true">
+                    <span>Nada</span>
+                    <span>Mucho</span>
+                  </span>
+                </div>
+              </fieldset>
+            </li>
+          ))
+        }
+      </ol>
+
+      <div class="acciones">
+        <button type="submit" class="principal">Ver mi resultado</button>
+        <button type="button" id="reiniciar">Borrar respuestas</button>
+      </div>
+    </form>
+
+    <section id="resultado" class="resultado" aria-labelledby="resultado-titulo" tabindex="-1" hidden>
+      <h2 id="resultado-titulo">Tu resultado</h2>
+      <p class="prosa ayuda" id="resumen"></p>
+      <p class="prosa ayuda">
+        Porcentaje del peso de tus respuestas que coincide con las propuestas de cada partido, contando solo las preguntas
+        en las que ese partido tiene alguna propuesta. Los partidos aparecen en el orden fijo de la web, no ordenados por
+        el resultado.
+      </p>
+
+      <ul class="afinidad">
+        {
+          partidos.map((p) => (
+            <li data-partido={p.id}>
+              <div class="afinidad__cabecera">
+                <strong>{p.data.nombre_corto}</strong>
+                <span class="ambito">{p.data.ambito.etiqueta}</span>
+              </div>
+              <div class="afinidad__fila">
+                <span class="barra" aria-hidden="true">
+                  <span />
+                </span>
+                <span class="pct" />
+              </div>
+              <p class="cobertura" />
+            </li>
+          ))
+        }
+      </ul>
+
+      <details class="detalle">
+        <summary>Afinidad por tema</summary>
+        <div class="tabla">
+          <table>
+            <caption class="sr-only">Porcentaje de coincidencia por tema y partido</caption>
+            <thead>
+              <tr>
+                <th scope="col">Tema</th>
+                {partidos.map((p) => <th scope="col">{p.data.nombre_corto}</th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {
+                temasTest.map((t) => (
+                  <tr data-tema={t.id}>
+                    <th scope="row">{t.data.nombre}</th>
+                    {partidos.map((p) => (
+                      <td data-partido={p.id} />
+                    ))}
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <p class="ayuda">«—»: no cuenta ninguna pregunta del tema con propuesta de ese partido.</p>
+      </details>
+
+      <details class="detalle">
+        <summary>Qué partido propone cada respuesta</summary>
+        <ol class="claves">
+          {
+            preguntas.map((p, i) => (
+              <li data-id={p.id}>
+                <p class="clave__pregunta">
+                  {i + 1}. {p.data.pregunta} <span class="clave__importancia" />
+                </p>
+                <ul>
+                  {p.data.opciones.map((o, j) => (
+                    <li data-opcion={j}>
+                      <p>
+                        <span class="sr-only">Respuesta {letra(j)}: </span>
+                        {o.texto} <strong class="tuya" hidden>(tu respuesta)</strong>
+                      </p>
+                      <ul class="fuentes">
+                        {o.partidos.map(({ partido, fuente: idFuente, pagina }) => {
+                          const f = fuente(idFuente.id);
+                          return (
+                            <li>
+                              <span class="clave__partido">{nombre.get(partido.id) ?? partido.id}:</span>{' '}
+                              <a href={urlPropuesta(f, pagina)} rel="noopener">
+                                {f.data.titulo}, {localizador(pagina)}
+                              </a>
+                              <AvisoConvocatoria fuente={f} />
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))
+          }
+        </ol>
+      </details>
+
+      <div class="acciones">
+        <button type="button" id="volver">Cambiar respuestas</button>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<script is:inline type="application/json" id="datos-test" set:html={JSON.stringify(cliente)} />
+
+<script>
+  import type { DatosCliente } from '../lib/test';
+
+  const CLAVE = 'test-afinidad-v1';
+  const datos = JSON.parse(document.getElementById('datos-test')?.textContent ?? '{}') as DatosCliente;
+  const form = document.querySelector<HTMLFormElement>('#test');
+  const errores = document.querySelector<HTMLElement>('#errores');
+  const resultado = document.querySelector<HTMLElement>('#resultado');
+  if (!form || !errores || !resultado) throw new Error('Faltan elementos del test');
+
+  type Estado = Record<string, { importancia: number; respuesta: number | null }>;
+
+  const bloque = (id: string): HTMLElement | null => form.querySelector(`.pregunta[data-id="${CSS.escape(id)}"]`);
+
+  const leer = (): Estado =>
+    Object.fromEntries(
+      datos.preguntas.map(({ id }) => {
+        const valor = (nombre: string) =>
+          form.querySelector<HTMLInputElement>(`input[name="${CSS.escape(nombre)}"]:checked`)?.value;
+        const r = valor(`r-${id}`);
+        return [id, { importancia: Number(valor(`i-${id}`) ?? 0), respuesta: r === undefined ? null : Number(r) }];
+      }),
+    );
+
+  // — Importancia 0: las respuestas se desactivan y no cuentan (se conserva la elección) —
+
+  const actualizar = (id: string): void => {
+    const el = bloque(id);
+    const opciones = el?.querySelector<HTMLFieldSetElement>('.opciones');
+    const nota = el?.querySelector<HTMLElement>('.nota');
+    if (!el || !opciones || !nota) return;
+    const cero = leer()[id]?.importancia === 0;
+    opciones.disabled = cero;
+    el.classList.toggle('pregunta--cero', cero);
+    nota.textContent = cero ? 'Importancia 0: esta pregunta no cuenta en el resultado.' : '';
+    if (cero) el.classList.remove('pregunta--falta');
+  };
+
+  // — Guardar en este navegador (opcional; si falla, el test funciona igual) —
+
+  const guardar = (): void => {
+    try {
+      localStorage.setItem(CLAVE, JSON.stringify(leer()));
+    } catch {
+      /* almacenamiento no disponible */
+    }
+  };
+
+  const restaurar = (): void => {
+    let guardado: Estado = {};
+    try {
+      guardado = JSON.parse(localStorage.getItem(CLAVE) ?? '{}') as Estado;
+    } catch {
+      return;
+    }
+    for (const { id } of datos.preguntas) {
+      const g = guardado[id];
+      if (!g) continue;
+      const marcar = (nombre: string, valor: number) => {
+        const input = form.querySelector<HTMLInputElement>(`input[name="${CSS.escape(nombre)}"][value="${valor}"]`);
+        if (input) input.checked = true;
+      };
+      marcar(`i-${id}`, g.importancia);
+      if (g.respuesta !== null) marcar(`r-${id}`, g.respuesta);
+    }
+  };
+
+  restaurar();
+  datos.preguntas.forEach(({ id }) => actualizar(id));
+
+  form.addEventListener('change', (e) => {
+    const id = e.target instanceof HTMLInputElement ? e.target.closest<HTMLElement>('.pregunta')?.dataset.id : undefined;
+    if (id) {
+      actualizar(id);
+      if (leer()[id]?.respuesta !== null) bloque(id)?.classList.remove('pregunta--falta');
+    }
+    guardar();
+  });
+
+  document.querySelector('#reiniciar')?.addEventListener('click', () => {
+    form.reset();
+    try {
+      localStorage.removeItem(CLAVE);
+    } catch {
+      /* almacenamiento no disponible */
+    }
+    datos.preguntas.forEach(({ id }) => {
+      actualizar(id);
+      bloque(id)?.classList.remove('pregunta--falta');
+    });
+    errores.hidden = true;
+    resultado.hidden = true;
+  });
+
+  document.querySelector('#volver')?.addEventListener('click', () => {
+    form.scrollIntoView();
+    form.querySelector<HTMLInputElement>('input')?.focus({ preventScroll: true });
+  });
+
+  // — Cálculo —
+
+  interface Suma {
+    acierto: number;
+    peso: number;
+    preguntas: number;
+  }
+
+  const vacia = (): Suma => ({ acierto: 0, peso: 0, preguntas: 0 });
+  const pct = (s: Suma): number | null => (s.peso > 0 ? Math.round((100 * s.acierto) / s.peso) : null);
+
+  const calcular = (estado: Estado) => {
+    const global = new Map(datos.partidos.map((p) => [p, vacia()]));
+    const porTema = new Map<string, Map<string, Suma>>();
+    let pesoTotal = 0;
+    let cuentan = 0;
+    for (const q of datos.preguntas) {
+      const { importancia, respuesta } = estado[q.id] ?? { importancia: 0, respuesta: null };
+      if (importancia === 0 || respuesta === null) continue;
+      pesoTotal += importancia;
+      cuentan += 1;
+      const elegida = new Set(q.opciones[respuesta] ?? []);
+      const tema = porTema.get(q.tema) ?? new Map(datos.partidos.map((p) => [p, vacia()]));
+      porTema.set(q.tema, tema);
+      for (const partido of q.opciones.flat()) {
+        for (const s of [global.get(partido), tema.get(partido)]) {
+          if (!s) continue;
+          s.peso += importancia;
+          s.preguntas += 1;
+          if (elegida.has(partido)) s.acierto += importancia;
+        }
+      }
+    }
+    return { global, porTema, pesoTotal, cuentan };
+  };
+
+  const mostrar = (estado: Estado): void => {
+    const { global, porTema, pesoTotal, cuentan } = calcular(estado);
+    const resumen = resultado.querySelector<HTMLElement>('#resumen');
+    if (resumen)
+      resumen.textContent =
+        cuentan === 0
+          ? 'Todas las preguntas tienen importancia 0: no hay nada que calcular.'
+          : `Cuentan ${cuentan} de ${datos.preguntas.length} preguntas.`;
+
+    for (const partido of datos.partidos) {
+      const li = resultado.querySelector<HTMLElement>(`.afinidad [data-partido="${CSS.escape(partido)}"]`);
+      const s = global.get(partido);
+      if (!li || !s) continue;
+      const valor = pct(s);
+      const barra = li.querySelector<HTMLElement>('.barra > span');
+      const texto = li.querySelector<HTMLElement>('.pct');
+      const cobertura = li.querySelector<HTMLElement>('.cobertura');
+      if (barra) barra.style.width = `${valor ?? 0}%`;
+      li.classList.toggle('afinidad--sin', valor === null);
+      if (texto) texto.textContent = valor === null ? 'Sin datos' : `${valor} %`;
+      if (cobertura) {
+        const parte = pesoTotal > 0 ? s.peso / pesoTotal : 0;
+        cobertura.textContent =
+          valor === null
+            ? 'No tiene propuestas publicadas sobre las preguntas que cuentan.'
+            : `Calculado sobre ${s.preguntas} de ${cuentan} preguntas (${Math.round(100 * parte)} % del peso).` +
+              (parte < 0.5 ? ' Con tan pocas preguntas, el porcentaje es poco representativo.' : '');
+      }
+    }
+
+    for (const fila of resultado.querySelectorAll<HTMLTableRowElement>('tbody tr')) {
+      const tema = porTema.get(fila.dataset.tema ?? '');
+      for (const celda of fila.querySelectorAll<HTMLTableCellElement>('td')) {
+        const s = tema?.get(celda.dataset.partido ?? '');
+        const valor = s ? pct(s) : null;
+        celda.textContent = valor === null ? '—' : `${valor} %`;
+      }
+    }
+
+    for (const q of datos.preguntas) {
+      const li = resultado.querySelector<HTMLElement>(`.claves > li[data-id="${CSS.escape(q.id)}"]`);
+      if (!li) continue;
+      const { importancia, respuesta } = estado[q.id] ?? { importancia: 0, respuesta: null };
+      const cuenta = importancia > 0 && respuesta !== null;
+      const etiqueta = li.querySelector<HTMLElement>('.clave__importancia');
+      if (etiqueta) etiqueta.textContent = cuenta ? `(importancia ${importancia})` : '(no cuenta)';
+      for (const op of li.querySelectorAll<HTMLElement>('[data-opcion]')) {
+        const tuya = cuenta && Number(op.dataset.opcion) === respuesta;
+        op.classList.toggle('elegida', tuya);
+        const marca = op.querySelector<HTMLElement>('.tuya');
+        if (marca) marca.hidden = !tuya;
+      }
+    }
+
+    resultado.hidden = false;
+    resultado.scrollIntoView();
+    resultado.focus({ preventScroll: true });
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const estado = leer();
+    const faltan = datos.preguntas
+      .map((q, i) => ({ ...q, n: i + 1 }))
+      .filter((q) => (estado[q.id]?.importancia ?? 0) > 0 && estado[q.id]?.respuesta === null);
+    for (const q of datos.preguntas)
+      bloque(q.id)?.classList.toggle(
+        'pregunta--falta',
+        faltan.some((f) => f.id === q.id),
+      );
+    if (faltan.length > 0) {
+      const lista = errores.querySelector('ul');
+      if (lista)
+        lista.replaceChildren(
+          ...faltan.map((q) => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = `#p-${q.id}`;
+            a.textContent = `Pregunta ${q.n}: ${bloque(q.id)?.querySelector('h2')?.textContent?.replace(/^\s*\d+\.\s*/, '') ?? ''}`;
+            li.append(a);
+            return li;
+          }),
+        );
+      resultado.hidden = true;
+      errores.hidden = false;
+      errores.scrollIntoView();
+      errores.focus({ preventScroll: true });
+      return;
+    }
+    errores.hidden = true;
+    mostrar(estado);
+  });
+</script>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-6);
+  }
+
+  h1 {
+    font-size: var(--step-3);
+    letter-spacing: -0.01em;
+  }
+
+  .entradilla {
+    font-family: var(--font-serif);
+    font-size: var(--step-1);
+    line-height: 1.45;
+  }
+
+  .aviso {
+    padding: var(--space-3) var(--space-4);
+    background: var(--head);
+    border-left: 3px solid var(--border-strong);
+  }
+
+  .ayuda {
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+  }
+
+  legend {
+    padding: 0;
+    font-weight: 600;
+    font-size: var(--step--1);
+  }
+
+  button {
+    min-height: 2.75rem;
+    padding: var(--space-2) var(--space-4);
+    font: inherit;
+    color: var(--link);
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+
+  button.principal {
+    color: var(--bg);
+    background: var(--link);
+    border-color: var(--link);
+    font-weight: 600;
+  }
+
+  .acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-5);
+  }
+
+  /* — Errores — */
+
+  .errores {
+    display: grid;
+    gap: var(--space-2);
+    max-width: var(--measure);
+    margin-bottom: var(--space-5);
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 2px solid var(--parcial);
+    border-radius: var(--radius);
+  }
+
+  .errores[hidden] {
+    display: none;
+  }
+
+  .errores h2 {
+    font-size: var(--step-1);
+  }
+
+  .errores ul {
+    padding-left: 1.1em;
+  }
+
+  /* — Preguntas — */
+
+  .preguntas {
+    display: grid;
+    gap: var(--space-4);
+    max-width: 52rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pregunta {
+    display: grid;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    scroll-margin-top: var(--space-4);
+  }
+
+  .pregunta--falta {
+    border: 2px solid var(--parcial);
+  }
+
+  .tema {
+    color: var(--muted);
+    font-size: var(--step--1);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .pregunta h2 {
+    font-size: var(--step-1);
+  }
+
+  .numero {
+    color: var(--muted);
+  }
+
+  .opciones ul {
+    display: grid;
+    gap: var(--space-2);
+    padding: 0;
+    list-style: none;
+  }
+
+  .opciones label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: var(--space-3);
+    min-height: 2.75rem;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    cursor: pointer;
+    line-height: 1.4;
+  }
+
+  .opciones label:has(input:checked) {
+    border-color: var(--link);
+    box-shadow: inset 0 0 0 1px var(--link);
+  }
+
+  .opciones:disabled {
+    opacity: 0.45;
+  }
+
+  .opciones:disabled label {
+    cursor: not-allowed;
+  }
+
+  .opciones:disabled label:has(input:checked) {
+    border-color: var(--rule);
+    box-shadow: none;
+  }
+
+  input[type='radio'] {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0.1rem 0 0;
+    accent-color: var(--link);
+  }
+
+  .nota {
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .nota:empty {
+    display: none;
+  }
+
+  .importancia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--rule);
+  }
+
+  .importancia legend {
+    float: left;
+  }
+
+  .escala {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(2.5rem, 3rem));
+    gap: var(--space-1);
+  }
+
+  .extremos {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .escala label {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 2.75rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+  }
+
+  .escala input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .escala label:has(input:checked) {
+    color: var(--bg);
+    background: var(--link);
+    border-color: var(--link);
+    font-weight: 600;
+  }
+
+  .escala label:has(input:focus-visible) {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  /* — Resultado — */
+
+  .resultado {
+    display: grid;
+    /* minmax(0, …): la tabla por tema se desplaza dentro de su caja sin ensanchar la página. */
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-7);
+    max-width: 52rem;
+    scroll-margin-top: var(--space-4);
+  }
+
+  .resultado[hidden] {
+    display: none;
+  }
+
+  .resultado:focus {
+    outline: none;
+  }
+
+  .resultado > h2 {
+    font-size: var(--step-2);
+  }
+
+  .afinidad {
+    display: grid;
+    gap: var(--space-3);
+    padding: 0;
+    list-style: none;
+  }
+
+  .afinidad > li {
+    display: grid;
+    gap: var(--space-1);
+    padding: var(--space-3) var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .afinidad__cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-1) var(--space-3);
+  }
+
+  .afinidad__fila {
+    display: grid;
+    grid-template-columns: 1fr 5.5rem;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  /* Misma barra neutra para todos los partidos (CONTRIBUTING §1.16). */
+  .barra {
+    height: 0.75rem;
+    background: var(--head);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .barra > span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--border-strong);
+  }
+
+  .pct {
+    font-size: var(--step-1);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+
+  .afinidad--sin .pct {
+    color: var(--muted);
+    font-size: var(--step--1);
+    font-weight: 400;
+  }
+
+  .cobertura {
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .detalle {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .detalle summary {
+    min-height: 2.75rem;
+    padding: var(--space-3) var(--space-4);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .detalle[open] summary {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .detalle > :not(summary) {
+    margin: var(--space-4);
+  }
+
+  .tabla {
+    overflow-x: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+    font-size: var(--step--1);
+    font-variant-numeric: tabular-nums;
+  }
+
+  th,
+  td {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--rule);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  th[scope='row'],
+  thead th:first-child {
+    text-align: left;
+  }
+
+  .claves {
+    display: grid;
+    gap: var(--space-5);
+    padding: 0;
+    list-style: none;
+  }
+
+  .clave__pregunta {
+    font-weight: 600;
+  }
+
+  .clave__importancia {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .claves > li > ul {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+    padding-left: 1.1em;
+  }
+
+  .claves [data-opcion].elegida > p {
+    font-weight: 600;
+  }
+
+  .fuentes {
+    display: grid;
+    gap: var(--space-1);
+    margin-top: var(--space-1);
+    padding: 0;
+    list-style: none;
+    font-size: var(--step--1);
+  }
+
+  .clave__partido {
+    font-weight: 600;
+  }
+</style>

@@ -1,0 +1,19 @@
+tema: regeneracion
+orden: 2
+pregunta: ¿Qué medida de regeneración te parece más importante?
+opciones:
+  - texto: >-
+      Que los delitos de corrupción no prescriban y que los condenados por sentencia firme queden inhabilitados
+      de por vida.
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-espana-limpia, pagina: 7 }
+  - texto: Que todo cargo político responda por la corrupción de sus subordinados.
+    partidos:
+      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 2 }
+  - texto: Que quienes cometan delitos de corrupción devuelvan todo lo sustraído.
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 22 }
+  - texto: Eliminar las subvenciones a partidos, sindicatos y patronales, entre otros.
+    partidos:
+      - { partido: vox, fuente: vox-recuperar-espana, pagina: 4 }
+revisado: 2026-11-02

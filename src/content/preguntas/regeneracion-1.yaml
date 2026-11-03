@@ -1,0 +1,12 @@
+tema: regeneracion
+orden: 1
+pregunta: ¿Qué reforma de la justicia prefieres?
+opciones:
+  - texto: Que los jueces elijan a los jueces que forman parte de su órgano de gobierno.
+    partidos:
+      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 2 }
+      - { partido: democracia-21, fuente: democracia-21-espana-limpia, pagina: 8 }
+  - texto: Democratizar el poder judicial.
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 40 }
+revisado: 2026-11-02

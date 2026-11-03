@@ -1,0 +1,14 @@
+tema: impuestos
+orden: 1
+pregunta: ¿Hacia dónde debería ir la fiscalidad en general?
+opciones:
+  - texto: Bajar los impuestos en general.
+    partidos:
+      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 3 }
+      - { partido: vox, fuente: vox-recuperar-espana, pagina: 4 }
+  - texto: >-
+      Que paguen más los grandes patrimonios y las grandes empresas, con un impuesto a los grandes patrimonios
+      y un tipo mínimo efectivo en el impuesto de sociedades.
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 36 }
+revisado: 2026-11-02

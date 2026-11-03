@@ -10,6 +10,7 @@
  * - casos:      src/content/casos/<id>.yaml              → id = <id>   (sección /historia#corrupcion)
  * - recuentos:  src/content/recuentos/<id>.yaml          → id = <id>   (estudios de terceros)
  * - encuestas:  src/content/encuestas/<id>.yaml           → id = <id>
+ * - preguntas:  src/content/preguntas/<id>.yaml          → id = <id>   (test de afinidad, /test)
  *
  * El id sale siempre de la ruta del fichero. Los YAML no llevan campo `id`:
  * todos los objetos son estrictos, así que un `id` (o cualquier clave mal
@@ -120,6 +121,14 @@ const fuentes = defineCollection({
 
 const MAX_PALABRAS_CITA = 14; // "menos de 15 palabras" (CONTRIBUTING §1.6)
 
+/** Número de página del documento, o el nombre de la sección si no hay paginación. */
+const pagina = z.union([z.number().int().positive(), textoNoVacio], {
+  error: (issue) =>
+    issue.input === undefined
+      ? 'Falta `pagina`: indica la página (entero positivo) o la sección'
+      : '`pagina` debe ser un entero positivo o el nombre de una sección',
+});
+
 const propuesta = z.strictObject({
   /** Uno o varios de los `subtemas` del tema (lo comprueba `check:content`). */
   subtema: z.union([textoNoVacio, z.array(textoNoVacio).min(1)]).optional(),
@@ -130,16 +139,10 @@ const propuesta = z.strictObject({
     })
     .optional(),
   fuente: reference('fuentes'),
-  /** Número de página del documento, o el nombre de la sección si no hay paginación. */
-  pagina: z.union([z.number().int().positive(), textoNoVacio], {
-    error: (issue) =>
-      issue.input === undefined
-        ? 'Falta `pagina`: indica la página (entero positivo) o la sección'
-        : '`pagina` debe ser un entero positivo o el nombre de una sección',
-  }),
+  pagina,
   /**
-   * Reservado para el test de afinidad (fase posterior). Sin forma definida
-   * todavía: se acepta cualquier valor y la UI no lo usa.
+   * Reservado para el test de afinidad. Sin uso: el test (colección
+   * `preguntas`) enlaza cada respuesta a la propuesta por `fuente` y `pagina`.
    */
   posicion: z.unknown().optional(),
 });
@@ -191,6 +194,49 @@ const propuestas = defineCollection({
           message: `Con estado \`${celda.estado}\` hace falta al menos una propuesta. Si no hay ninguna, usa \`sin_propuesta\` o \`no_publicado\`.`,
         });
       }
+    }),
+});
+
+/**
+ * Pregunta del test de afinidad (/test). Cada respuesta recoge lo que propone
+ * uno o varios partidos, sin nombrarlos, y enlaza la propuesta en que se basa
+ * con `fuente` + `pagina`. `check:content` comprueba que ese par aparece en
+ * alguna propuesta del partido. Un partido puede aparecer como mucho en una
+ * respuesta por pregunta; si no tiene propuesta sobre la pregunta, no aparece.
+ */
+const preguntas = defineCollection({
+  loader: yamlGlob('./src/content/preguntas', '*.yaml'),
+  schema: z
+    .strictObject({
+      tema: reference('temas'),
+      /** Orden dentro del tema; el test sigue el orden de los temas. */
+      orden: z.number().int().positive(),
+      pregunta: textoNoVacio,
+      opciones: z
+        .array(
+          z.strictObject({
+            texto: textoNoVacio,
+            partidos: z
+              .array(z.strictObject({ partido: reference('partidos'), fuente: reference('fuentes'), pagina }))
+              .min(1, 'Cada respuesta debe basarse en la propuesta de al menos un partido'),
+          }),
+        )
+        .min(2),
+      revisado: fecha,
+    })
+    .superRefine((p, ctx) => {
+      const vistos = new Set<string>();
+      p.opciones.forEach((o, i) =>
+        o.partidos.forEach(({ partido }, j) => {
+          if (vistos.has(partido.id))
+            ctx.addIssue({
+              code: 'custom',
+              path: ['opciones', i, 'partidos', j, 'partido'],
+              message: `El partido \`${partido.id}\` aparece en más de una respuesta`,
+            });
+          vistos.add(partido.id);
+        }),
+      );
     }),
 });
 
@@ -335,4 +381,4 @@ const encuestas = defineCollection({
     }),
 });
 
-export const collections = { partidos, temas, fuentes, propuestas, encuestas, gobiernos, casos, recuentos };
+export const collections = { partidos, temas, fuentes, propuestas, preguntas, encuestas, gobiernos, casos, recuentos };

@@ -33,7 +33,7 @@ El orden sigue los escaños obtenidos en las generales de julio de 2023, y los p
 | 2 | **Fuentes**: listado de todos los documentos oficiales usados | 🟡 Sale del mismo modelo de datos |
 | 3 | **Quién soy y por qué lo hago** | ⚪ Pendiente (texto) |
 | 4 | **Estadísticas / encuestas**: hemiciclos con las proyecciones de escaños y sus fuentes (`/encuestas`, colección `encuestas`) | 🟡 Primera versión (2-nov): 10 encuestas con escaños + CIS aparte. Pendiente: contrastar cada cifra con la ficha original y actualizar hasta el 23-nov |
-| 5 | **Test de afinidad** basado en los programas | ⚪ Pendiente |
+| 5 | **Test de afinidad** (`/test`, colección `preguntas`): 1–2 preguntas por tema; cada respuesta resume la propuesta de uno o varios partidos sin nombrarlos y enlaza su fuente y página; importancia 0–5 por pregunta (0 = no cuenta) | 🟡 Primera versión (2-nov): 23 preguntas. Pendiente: revisión humana y rehacerlas cuando se publiquen los programas |
 | 6 | **Historia** (`/historia`): línea de tiempo 2000–2026 coloreada por bloque (derecha = rojo, izquierda = azul), una sección por gobierno con presidente, cargos destacados, logros y críticas con fuentes de prensa, datos oficiales, sentencias o estudios | 🟡 Primera pasada (4 gobiernos; faltan logros de Aznar y Rajoy) |
 | 7 | **Corrupción** (`/historia#corrupcion`): recuentos de terceros con su metodología y límites, y casos con sentencia firme desde 2000 | 🟡 Primera pasada (6 casos; no exhaustivo) |
 
@@ -217,7 +217,11 @@ Los subtemas son cerrados: cada propuesta lleva uno o varios de la lista de su t
 
 ## 7. Notas para fases posteriores
 
-- **Test de afinidad:** presentarlo como "afinidad con cada partido" (porcentaje global y por tema), no como "deberías votar X". Se alimentará del campo `posicion` de las propuestas, ya reservado en el schema. Los partidos que no se presentan en la provincia del usuario deben indicarse claramente.
+- **Test de afinidad:** presentarlo como "afinidad con cada partido" (porcentaje global y por tema), no como "deberías votar X". Los partidos que no se presentan en la provincia del usuario deben indicarse claramente.
+  - Implementado sin usar `posicion`: cada respuesta de `src/content/preguntas/` enlaza la propuesta del partido por `fuente` + `pagina`, y `check:content` comprueba que existe. Un partido aparece como mucho en una respuesta por pregunta, y no aparece si no tiene propuesta sobre ella.
+  - Cálculo: por partido, suma de la importancia de las preguntas en las que coincide la respuesta ÷ suma de la importancia de las preguntas en las que tiene propuesta. Se muestra sobre cuántas preguntas se calcula y un aviso si cubre menos de la mitad del peso. Resultados en el orden fijo de partidos, con la misma barra neutra para todos.
+  - El orden de las respuestas se baraja con una semilla fija por pregunta, para que no siga el orden de los partidos.
+  - Las respuestas siguen las reglas de redacción de `CONTRIBUTING.md` y evitan etiquetas propias de un partido que lo identifiquen.
 - **Estadísticas:** citar cada encuesta con instituto, medio, fecha de campo y tamaño muestral. Mostrar el CIS por separado de la media de institutos privados, porque sus estimaciones divergen mucho. No publicar encuestas nuevas entre el 24 y el 28 de noviembre.
 - **Historia:** mismo formato para cada gobierno (logros y críticas, cada punto con fuentes y tipo de fuente visible). Aquí sí se admite prensa, porque se documentan hechos y no propuestas de partido; las reglas de neutralidad de `CONTRIBUTING.md` sobre redacción siguen valiendo (verbos neutros, sin adjetivos valorativos, cifras tal cual). Las opiniones se marcan como tal. Colecciones: `gobiernos`, `casos` y `recuentos` en `src/content/`.
 - **Corrupción:** basarse solo en **sentencias firmes** y en las cuantías que fijan los tribunales, citando cada sentencia. Distinguir condenas a personas de responsabilidad civil o a título lucrativo del partido. Nada de casos en instrucción presentados como hechos probados.
