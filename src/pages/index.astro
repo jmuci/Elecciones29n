@@ -7,8 +7,10 @@ import { cargarDatos, subtemasDe } from '../lib/ui';
 import type { Tema } from '../lib/modelo';
 
 const MAX_COMPARAR = 3;
-const { partidos, temas, temasMostrados, celda, fuente } = await cargarDatos();
+const { partidos, temas, temasMostrados, celda, celdas, fuente, fuentes } = await cargarDatos();
 const faltanCeldas = temasMostrados.some((t) => partidos.some((p) => !celda(p.id, t.id)));
+const totalPropuestas = celdas.reduce((n, c) => n + c.data.propuestas.length, 0);
+const numero = new Intl.NumberFormat('es-ES');
 
 /** Partidos con al menos una propuesta en el tema (para el resumen de cada sección). */
 const conPropuestas = (tema: string): number =>
@@ -26,19 +28,58 @@ const subtemasUsados = (tema: Tema): string[] => {
   descripcion="Propuestas de los partidos para las elecciones generales del 29 de noviembre de 2026, tema a tema y con enlace a la fuente oficial."
 >
   <div class="contenedor intro">
-    <div class="prosa">
+    <div class="hero">
+      <p class="antetitulo">
+        Elecciones generales · <time datetime="2026-11-29">29 de noviembre de 2026</time>
+        <span class="cuenta" data-fecha="2026-11-29" hidden></span>
+      </p>
       <h1>Qué propone cada partido, tema a tema</h1>
       <p class="entradilla">
         Resumen de las propuestas para las elecciones generales del 29 de noviembre de 2026. Cada propuesta enlaza al
         documento oficial del partido, con su página o sección.
       </p>
-      <p>
-        Despliega un tema para ver las propuestas de cada partido. Los partidos aparecen siempre en el mismo orden: por
-        escaños obtenidos en las generales de julio de 2023, y los partidos nuevos al final. Junto a cada nombre se indica
-        dónde se presenta. Por ahora se muestran {temasMostrados.length} de {temas.length} temas; el resto se irá añadiendo.
+      <p class="cta">
+        <a class="boton boton--primario" href="#temas">Ver los temas</a>
+        <a class="boton" href="/test">Hacer el test de afinidad</a>
       </p>
     </div>
-    <Leyenda conSinRevisar={faltanCeldas} />
+
+    <dl class="cifras">
+      <div>
+        <dt>Partidos</dt>
+        <dd>{partidos.length}</dd>
+      </div>
+      <div>
+        <dt>Temas</dt>
+        <dd>
+          {temasMostrados.length}
+          {temasMostrados.length < temas.length && <span class="cifras__de">de {temas.length}</span>}
+        </dd>
+      </div>
+      <div>
+        <dt>Propuestas</dt>
+        <dd>{numero.format(totalPropuestas)}</dd>
+      </div>
+      <div>
+        <dt>Fuentes oficiales</dt>
+        <dd>{fuentes.length}</dd>
+      </div>
+    </dl>
+
+    <details class="como-leer">
+      <summary>Cómo leer esta web</summary>
+      <div class="como-leer__cuerpo">
+        <p class="prosa">
+          Despliega un tema para ver las propuestas de cada partido. Junto a cada nombre se indica dónde se presenta.
+          {temasMostrados.length < temas.length && (
+            <>
+              Por ahora se muestran {temasMostrados.length} de {temas.length} temas; el resto se irá añadiendo.
+            </>
+          )}
+        </p>
+        <Leyenda conSinRevisar={faltanCeldas} />
+      </div>
+    </details>
   </div>
 
   {
@@ -47,15 +88,32 @@ const subtemasUsados = (tema: Tema): string[] => {
     ) : (
       <div class="contenedor temas" id="temas">
         <nav class="indice" aria-labelledby="indice-titulo">
-          <h2 id="indice-titulo">Temas</h2>
+          <div class="indice__cabecera">
+            <h2 id="indice-titulo">Temas</h2>
+            <p class="ayuda">
+              Los partidos aparecen siempre en el mismo orden: por escaños obtenidos en las generales de julio de 2023, y
+              los partidos nuevos al final.
+            </p>
+          </div>
           <ul>
-            {temasMostrados.map((t) => (
-              <li>
-                <a href={`#${t.id}`} data-tema={t.id}>
-                  {t.data.nombre}
-                </a>
-              </li>
-            ))}
+            {temasMostrados.map((t) => {
+              const n = conPropuestas(t.id);
+              return (
+                <li>
+                  <a href={`#${t.id}`} data-tema={t.id}>
+                    <span class="indice__nombre">{t.data.nombre}</span>
+                    <span class="cobertura" aria-hidden="true">
+                      {partidos.map((_, i) => (
+                        <span class:list={['cobertura__tramo', { lleno: i < n }]} />
+                      ))}
+                    </span>
+                    <span class="indice__resumen">
+                      {n} de {partidos.length} partidos con propuestas
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -85,8 +143,8 @@ const subtemasUsados = (tema: Tema): string[] => {
             <p class="ayuda" id="estado-comparar" role="status" data-max={MAX_COMPARAR} data-total={partidos.length} />
           </fieldset>
           <div class="acciones">
-            <button type="button" data-accion="abrir">Desplegar todos los temas</button>
-            <button type="button" data-accion="cerrar">Plegar todos</button>
+            <button class="boton" type="button" data-accion="abrir">Desplegar todos los temas</button>
+            <button class="boton" type="button" data-accion="cerrar">Plegar todos</button>
           </div>
         </form>
 
@@ -99,6 +157,7 @@ const subtemasUsados = (tema: Tema): string[] => {
                 <span class="resumen">
                   {conPropuestas(t.id)} de {partidos.length} partidos con propuestas
                 </span>
+                <span class="chevron" aria-hidden="true" />
               </summary>
               <div class="cuerpo">
                 {t.data.descripcion && <p class="descripcion">{t.data.descripcion}</p>}
@@ -148,6 +207,19 @@ const subtemasUsados = (tema: Tema): string[] => {
 </Base>
 
 <script>
+  // — Cuenta atrás hasta el día de la votación (solo antes de esa fecha) —
+
+  const cuenta = document.querySelector<HTMLElement>('.cuenta');
+  if (cuenta?.dataset.fecha) {
+    const hoy = new Date();
+    const dia = new Date(`${cuenta.dataset.fecha}T00:00:00`);
+    const dias = Math.round((dia.getTime() - new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()).getTime()) / 864e5);
+    if (dias >= 0) {
+      cuenta.textContent = dias === 0 ? 'Hoy se vota' : dias === 1 ? 'Falta 1 día' : `Faltan ${dias} días`;
+      cuenta.hidden = false;
+    }
+  }
+
   const contenedor = document.querySelector<HTMLElement>('#temas');
   const form = document.querySelector<HTMLFormElement>('#controles');
   const estado = document.querySelector<HTMLElement>('#estado-comparar');
@@ -251,21 +323,142 @@ const subtemasUsados = (tema: Tema): string[] => {
 </script>
 
 <style>
+  /* — Cabecera de la portada — */
+
   .intro {
     display: grid;
-    gap: var(--space-6);
-    margin-bottom: var(--space-7);
+    gap: var(--space-7);
+    margin-bottom: var(--space-8);
   }
 
-  h1 {
-    font-size: var(--step-3);
-    letter-spacing: -0.01em;
+  .hero {
+    display: grid;
+    gap: var(--space-5);
+    max-width: 52rem;
   }
 
-  .entradilla {
-    font-family: var(--font-serif);
-    font-size: var(--step-1);
-    line-height: 1.45;
+  .hero .antetitulo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
+  }
+
+  .cuenta {
+    padding: 0.1rem 0.5rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+  }
+
+  .cuenta[hidden] {
+    display: none;
+  }
+
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+  }
+
+  .boton--primario {
+    color: var(--bg);
+    background: var(--text);
+    border-color: var(--text);
+  }
+
+  .boton--primario:hover {
+    color: var(--bg);
+    background: color-mix(in srgb, var(--text) 85%, var(--bg));
+    border-color: transparent;
+  }
+
+  /* Cifras clave en una franja con separadores. */
+  .cifras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .cifras > div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--space-1);
+    padding: var(--space-5);
+    background: var(--surface);
+  }
+
+  .cifras dt {
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .cifras dd {
+    margin: 0;
+    font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem);
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  .cifras__de {
+    color: var(--muted);
+    font-size: var(--step-0);
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  /* — Cómo leer esta web — */
+
+  .como-leer {
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .como-leer > summary {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .como-leer > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .como-leer > summary::before {
+    content: '+';
+    display: inline-grid;
+    place-items: center;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-family: var(--font-mono);
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+    line-height: 1;
+  }
+
+  .como-leer[open] > summary::before {
+    content: '−';
+  }
+
+  .como-leer__cuerpo {
+    display: grid;
+    gap: var(--space-5);
+    padding-bottom: var(--space-5);
+    color: var(--muted);
   }
 
   .vacio {
@@ -274,7 +467,7 @@ const subtemasUsados = (tema: Tema): string[] => {
 
   .temas {
     display: grid;
-    gap: var(--space-4);
+    gap: var(--space-3);
   }
 
   .ayuda {
@@ -288,39 +481,96 @@ const subtemasUsados = (tema: Tema): string[] => {
 
   /* — Índice de temas — */
 
+  .indice {
+    margin-bottom: var(--space-6);
+  }
+
+  .indice__cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-6);
+    margin-bottom: var(--space-5);
+  }
+
+  .indice__cabecera .ayuda {
+    max-width: 40rem;
+  }
+
   .indice h2 {
-    font-size: var(--step-1);
-    margin-bottom: var(--space-3);
+    font-size: var(--step-2);
   }
 
   .indice ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    gap: var(--space-3);
     padding: 0;
     list-style: none;
   }
 
   .indice a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.75rem;
-    padding: var(--space-2) var(--space-4);
+    display: grid;
+    gap: var(--space-2);
+    height: 100%;
+    padding: var(--space-4);
+    color: var(--text);
+    text-decoration: none;
     background: var(--surface);
-    border: 1px solid var(--border-strong);
-    border-radius: 999px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+
+  .indice a:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+  }
+
+  .indice__nombre {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .indice__resumen {
+    color: var(--muted);
+    font-size: var(--step--2);
+  }
+
+  /* Barra de cobertura: un tramo por partido con propuestas; no identifica a ninguno. */
+  .cobertura {
+    display: flex;
+    gap: 3px;
+  }
+
+  .cobertura__tramo {
+    flex: 1;
+    height: 4px;
+    background: var(--rule);
+    border-radius: 2px;
+  }
+
+  .cobertura__tramo.lleno {
+    background: var(--text);
   }
 
   /* — Controles — */
 
   .controles {
-    display: grid;
-    gap: var(--space-5);
-    margin-bottom: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--space-4) var(--space-5);
+    margin-bottom: var(--space-3);
     padding: var(--space-4);
     background: var(--surface);
     border: 1px solid var(--rule);
     border-radius: var(--radius);
+    box-shadow: var(--shadow);
   }
 
   .controles[hidden],
@@ -340,31 +590,69 @@ const subtemasUsados = (tema: Tema): string[] => {
 
   legend {
     padding: 0;
+    margin-bottom: var(--space-2);
+    font-size: var(--step--1);
     font-weight: 600;
   }
 
+  .control .ayuda:first-of-type {
+    display: none;
+  }
+
   .opciones {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
-    gap: var(--space-1) var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
     padding: 0;
     list-style: none;
   }
 
-  .opciones label {
-    display: flex;
-    flex-wrap: wrap;
+  .opciones label,
+  .chips label {
+    display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    min-height: 2.75rem;
+    min-height: 2.5rem;
+    padding: 0 var(--space-3);
+    font-size: var(--step--1);
+    font-weight: 500;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
     cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s, color 0.15s;
   }
 
-  input[type='checkbox'] {
-    width: 1.25rem;
-    height: 1.25rem;
+  .opciones label:hover,
+  .chips label:hover {
+    border-color: var(--border-strong);
+  }
+
+  .opciones label:has(input:checked),
+  .chips label:has(input:checked) {
+    color: var(--bg);
+    background: var(--text);
+    border-color: var(--text);
+  }
+
+  .opciones label:has(:focus-visible),
+  .chips label:has(:focus-visible) {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  .opciones input,
+  .chips input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
     margin: 0;
-    accent-color: var(--link);
+  }
+
+  .opciones input:focus-visible,
+  .chips input:focus-visible {
+    outline: none;
   }
 
   .acciones {
@@ -373,31 +661,30 @@ const subtemasUsados = (tema: Tema): string[] => {
     gap: var(--space-2);
   }
 
-  button {
-    min-height: 2.75rem;
-    padding: var(--space-2) var(--space-4);
-    font: inherit;
-    color: var(--link);
-    background: var(--bg);
-    border: 1px solid var(--border-strong);
-    border-radius: var(--radius);
-    cursor: pointer;
-  }
-
   /* — Temas desplegables — */
 
   .tema {
     background: var(--surface);
     border: 1px solid var(--rule);
     border-radius: var(--radius);
-    scroll-margin-top: var(--space-4);
+    box-shadow: var(--shadow);
+    transition: border-color 0.15s;
+  }
+
+  .tema:hover,
+  .tema[open] {
+    border-color: var(--border-strong);
+  }
+
+  .tema[open] {
+    border-color: var(--rule);
   }
 
   summary {
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
-    gap: var(--space-1) var(--space-3);
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: var(--space-1) var(--space-4);
     padding: var(--space-4) var(--space-5);
     cursor: pointer;
     list-style: none;
@@ -407,27 +694,30 @@ const subtemasUsados = (tema: Tema): string[] => {
     display: none;
   }
 
-  /* Indicador propio: flecha a la derecha plegado, hacia abajo desplegado. */
-  summary::before {
+  /* Indicador propio, a la derecha: hacia abajo plegado, hacia arriba desplegado. */
+  .chevron {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+  }
+
+  .chevron::before {
     content: '';
-    grid-row: 1;
-    align-self: center;
-    width: 0.6rem;
-    height: 0.6rem;
-    margin-right: var(--space-1);
-    border-right: 2px solid var(--muted);
-    border-bottom: 2px solid var(--muted);
-    transform: rotate(-45deg);
-    transition: transform 0.15s;
-  }
-
-  .tema[open] > summary::before {
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-top: -0.2rem;
+    border-right: 1.5px solid var(--muted);
+    border-bottom: 1.5px solid var(--muted);
     transform: rotate(45deg);
+    transition: transform 0.2s;
   }
 
-  summary:hover h2 {
-    text-decoration: underline;
-    text-underline-offset: 0.15em;
+  .tema[open] .chevron::before {
+    margin-top: 0.2rem;
+    transform: rotate(-135deg);
   }
 
   .tema[open] > summary {
@@ -435,19 +725,35 @@ const subtemasUsados = (tema: Tema): string[] => {
   }
 
   summary h2 {
-    font-size: var(--step-2);
-    line-height: 1.2;
+    font-size: var(--step-1);
+    font-weight: 600;
+    letter-spacing: -0.015em;
   }
 
   .resumen {
-    grid-column: 2;
     color: var(--muted);
     font-size: var(--step--1);
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (width < 40rem) {
+    summary {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .resumen {
+      grid-row: 2;
+    }
+
+    .chevron {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+    }
   }
 
   .cuerpo {
     display: grid;
-    gap: var(--space-5);
+    gap: var(--space-6);
     padding: var(--space-5);
   }
 
@@ -464,27 +770,6 @@ const subtemasUsados = (tema: Tema): string[] => {
     gap: var(--space-2);
   }
 
-  .chips label {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    min-height: 2.75rem;
-    padding: var(--space-1) var(--space-3);
-    border: 1px solid var(--border-strong);
-    border-radius: 999px;
-    cursor: pointer;
-  }
-
-  .chips label:has(input:checked) {
-    font-weight: 600;
-    background: var(--head);
-  }
-
-  .chips input {
-    margin: 0;
-    accent-color: var(--link);
-  }
-
   .partido :global(li[hidden]),
   .sin-subtema[hidden] {
     display: none;
@@ -495,12 +780,11 @@ const subtemasUsados = (tema: Tema): string[] => {
     font-size: var(--step--1);
   }
 
-  /* — Partidos dentro de cada tema — */
+  /* — Partidos dentro de cada tema: nombre a la izquierda, propuestas a la derecha — */
 
   .partidos {
     display: grid;
     gap: var(--space-6);
-    max-width: var(--measure);
     padding: 0;
     list-style: none;
   }
@@ -527,8 +811,27 @@ const subtemasUsados = (tema: Tema): string[] => {
   }
 
   .partido h3 {
-    font-family: var(--font-serif);
     font-size: var(--step-1);
+    font-weight: 650;
+  }
+
+  @media (width >= 56rem) {
+    .partido section {
+      grid-template-columns: 13rem minmax(0, var(--measure));
+      gap: var(--space-6);
+      align-items: start;
+    }
+
+    .partido header {
+      position: sticky;
+      top: calc(var(--header-h) + var(--space-4));
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .partido .sin-subtema {
+      grid-column: 2;
+    }
   }
 
   /* Comparación lado a lado: 2 o 3 partidos elegidos, en pantallas anchas. */
@@ -537,7 +840,6 @@ const subtemasUsados = (tema: Tema): string[] => {
     .temas[data-comparando='3'] .partidos {
       grid-template-columns: repeat(var(--columnas), minmax(0, 1fr));
       align-items: start;
-      max-width: none;
     }
 
     .temas[data-comparando='2'] {
@@ -550,23 +852,44 @@ const subtemasUsados = (tema: Tema): string[] => {
 
     .temas[data-comparando='2'] .partido,
     .temas[data-comparando='3'] .partido {
-      padding: var(--space-4);
+      padding: var(--space-5);
+      background: var(--bg);
       border: 1px solid var(--rule);
       border-radius: var(--radius);
     }
-  }
 
-  @media (prefers-reduced-motion: reduce) {
-    summary::before {
-      transition: none;
+    .temas[data-comparando='2'] .partido section,
+    .temas[data-comparando='3'] .partido section {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-3);
+    }
+
+    .temas[data-comparando='2'] .partido header,
+    .temas[data-comparando='3'] .partido header {
+      position: static;
+      flex-direction: row;
+      align-items: baseline;
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .temas[data-comparando='2'] .partido .sin-subtema,
+    .temas[data-comparando='3'] .partido .sin-subtema {
+      grid-column: auto;
     }
   }
 
   @media print {
     .controles,
     .indice,
-    .filtro-subtema {
+    .filtro-subtema,
+    .cta,
+    .chevron {
       display: none;
+    }
+
+    .partido header {
+      position: static;
     }
   }
 </style>
