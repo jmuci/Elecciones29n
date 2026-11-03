@@ -1,0 +1,30 @@
+nombre: Caso Marea
+partido: psoe
+territorio: Asturias
+resumen: "Adjudicaciones amañadas en la Consejería de Educación del Principado de Asturias a cambio de dádivas de empresarios, durante el Gobierno de Vicente Álvarez Areces (PSOE). La Audiencia de Asturias condenó en 2017 y el Supremo confirmó en septiembre de 2019 la mayor parte de las condenas, de hasta nueve años de prisión."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2019-09-12
+condenas:
+  - persona: "José Luis Iglesias Riopedre"
+    cargo: "Exconsejero de Educación del Principado de Asturias"
+    pena: "Seis años de prisión en la Audiencia (2017); el Supremo mantuvo una multa de 400.000 euros"
+  - persona: "Marta Renedo"
+    cargo: "Funcionaria de la Consejería"
+    pena: "9 años de prisión y multa de 480.000 euros"
+  - persona: "María Jesús Otero"
+    cargo: "Exdirectora general de Educación"
+    pena: "5 años y 5 meses de prisión tras el Supremo"
+nota: "La nota del Supremo cifra las dádivas en más de dos millones de euros, pero no da un importe de malversación, por lo que no se muestra cuantía."
+fuentes:
+  - medio: "Consejo General del Poder Judicial"
+    titulo: "El Tribunal Supremo impone penas de hasta nueve años de prisión a los principales acusados del «caso Marea» por delitos de prevaricación, malversación, cohecho y falsedad"
+    url: "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunal-Supremo/Noticias-Judiciales/El-Tribunal-Supremo-impone-penas-de-hasta-nueve-anos-de-prision-a-los-principales-acusados-del--caso-Marea--por-delitos-de-prevaricacion--malversacion--cohecho-y-falsedad"
+    tipo: institucion
+    fecha: 2019-09-13
+  - medio: "Economist & Jurist"
+    titulo: "La Audiencia de Asturias condena a los principales acusados del Caso Marea"
+    url: "https://www.economistjurist.es/?p=60851"
+    tipo: prensa
+    fecha: 2017-09-04
+revisado: 2026-11-03

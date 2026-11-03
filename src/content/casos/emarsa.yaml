@@ -1,0 +1,44 @@
+nombre: Caso Emarsa
+partido: pp
+territorio: Comunidad Valenciana (área metropolitana de Valencia)
+resumen: "Desvío de fondos de Emarsa, la empresa pública que gestionaba la depuradora de Pinedo. La Audiencia de Valencia condenó en junio de 2018 a sus principales responsables y el Supremo confirmó en octubre de 2020 las penas de los cabecillas. El exgerente Esteban Cuesta era militante del PP, que suspendió su militancia en 2011."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2020-10-09
+condenas:
+  - persona: "Esteban Cuesta"
+    cargo: "Exgerente de Emarsa"
+    pena: "12 años de prisión"
+  - persona: "Enrique Crespo"
+    cargo: "Exvicepresidente de la Diputación de Valencia y expresidente de Emarsa"
+    pena: "10 años de prisión"
+  - persona: "José Juan Morenilla"
+    cargo: "Exgerente de la Entidad Pública de Saneamiento de Aguas Residuales (Epsar)"
+    pena: "9 años de prisión"
+cuantia:
+  euros: 23500000
+  concepto: "Dinero público desviado de Emarsa, según la Audiencia de Valencia; el Supremo confirmó la sentencia en lo principal"
+  fuentes:
+    - medio: "Consejo General del Poder Judicial"
+      titulo: "La Audiencia de Valencia condena a penas que oscilan entre los nueve meses y los doce años y medio de cárcel a los 24 acusados del caso Emarsa"
+      url: "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/La-Audiencia-de-Valencia-condena-a-penas-que-oscilan-entre-los-nueve-meses-y-los-doce-anos-y-medio-de-carcel-a-los-24-acusados-del-caso-Emarsa"
+      tipo: institucion
+      fecha: 2018-06-22
+    - medio: "Valencia Plaza"
+      titulo: "El Supremo ratifica las penas de prisión para los cabecillas del caso Emarsa"
+      url: "https://valenciaplaza.com/supremo-ratifica-penas-emarsa"
+      tipo: prensa
+      fecha: 2020-10-09
+nota: "La fecha de la sentencia firme es la de su difusión (9 de octubre de 2020); la fuente no da el día exacto del fallo."
+fuentes:
+  - medio: "Valencia Plaza"
+    titulo: "El Supremo ratifica las penas de prisión para los cabecillas del caso Emarsa"
+    url: "https://valenciaplaza.com/supremo-ratifica-penas-emarsa"
+    tipo: prensa
+    fecha: 2020-10-09
+  - medio: "Valencia Plaza"
+    titulo: "El PPCV anuncia la suspensión cautelar de militancia del exgerente de Emarsa"
+    url: "https://valenciaplaza.com/cvalenciana/el-ppcv-anuncia-la-suspension-cautelar-de-militancia-del-exgerente-de-emarsa"
+    tipo: prensa
+    fecha: 2011-11-11
+revisado: 2026-11-03

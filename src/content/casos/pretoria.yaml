@@ -15,6 +15,20 @@ condenas:
   - persona: "Lluís Prenafeta"
     cargo: "Exconsejero de la Generalitat y exsecretario general de la Presidencia (CiU)"
     pena: "Conformidad con la Fiscalía Anticorrupción: multa de 5,8 millones de euros, sin ingreso en prisión"
+cuantia:
+  euros: 5886925.66
+  concepto: "Ganancias ilícitas obtenidas en las tres operaciones urbanísticas juzgadas (Pallaresa, Niesma y Badalona), según la Audiencia Nacional. La sentencia ordena además decomisos individuales: 1.144.724,55 euros a Bartomeu Muñoz, 3.243.103,28 a Macià Alavedra y 5.193.170,01 a Lluís Prenafeta."
+  fuentes:
+    - medio: "Consejo General del Poder Judicial"
+      titulo: "La Audiencia Nacional condena a penas de hasta 7 años a los once acusados en la «operación Pretoria»"
+      url: "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/La-Audiencia-Nacional-condena-a-penas-de-hasta-7-anos-a-los-once-acusados-en-la--operacion-Pretoria-"
+      tipo: institucion
+      fecha: 2018-07-02
+    - medio: "The Objective"
+      titulo: "La operación Pretoria se salda con penas de hasta siete años de cárcel"
+      url: "https://theobjective.com/espana/2018-07-02/operacion-pretoria-carcel/"
+      tipo: prensa
+      fecha: 2018-07-02
 nota: "Entran dos partidos en el mismo caso. Si su pena de prisión exacta importa, consulta la sentencia: la fuente consultada no la detalla."
 fuentes:
   - medio: "Que.es (agencias)"
