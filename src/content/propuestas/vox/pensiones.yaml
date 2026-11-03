@@ -1,0 +1,15 @@
+# Fase 4: se resume "Recuperar España" (2026). El Programa económico y de vivienda (2025, p. 38)
+# detalla medidas de pensiones, pero no se cita: "Recuperar España" ya trata el tema y la regla 4
+# (CONTRIBUTING §1.4) solo admite el documento anterior si no hay nada para el 29N sobre el tema.
+partido: vox
+tema: pensiones
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: sostenibilidad
+    resumen: Propone garantizar la sostenibilidad del sistema de pensiones.
+    fuente: vox-recuperar-espana
+    pagina: 4
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda
