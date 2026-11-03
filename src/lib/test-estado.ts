@@ -3,6 +3,8 @@
 
 /** Clave de `localStorage` con las respuestas en curso. */
 export const CLAVE_ESTADO = 'test-afinidad-v1';
+/** Clave de `localStorage` con la página del test en la que se quedó (índice desde 0). */
+export const CLAVE_PASO = 'test-afinidad-paso-v1';
 /** Clave de `sessionStorage`: el aviso de test a medias se cerró en esta sesión. */
 export const CLAVE_AVISO = 'test-afinidad-aviso-cerrado';
 /** Prefijo del fragmento de un resultado compartido: `/test#r=…`. */

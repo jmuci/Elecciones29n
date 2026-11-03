@@ -12,6 +12,9 @@ export const IMPORTANCIAS = [0, 1, 2, 3, 4, 5] as const;
 /** Datos mínimos que necesita el script del cliente para calcular la afinidad. */
 export interface DatosCliente {
   partidos: string[];
+  /** Nombre corto de cada partido y nombre de cada tema del test, por id. */
+  nombres: Record<string, string>;
+  temas: Record<string, string>;
   preguntas: { id: string; tema: string; opciones: string[][] }[];
 }
 
