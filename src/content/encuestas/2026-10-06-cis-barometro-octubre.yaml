@@ -1,0 +1,11 @@
+instituto: CIS
+tipo: cis
+campo_inicio: 2026-10-01
+campo_fin: 2026-10-06
+muestra: 5025
+votos: { pp: 22.2, psoe: 34.0, vox: 17.1, frente-amplio: 6.1, podemos: 3.1 }
+fuentes:
+  - { titulo: "CIS: Barómetro de octubre de 2026 (estudio 3582)", url: "https://www.cis.es/en/surveys/barometro-de-octubre-2026", tipo: original }
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+nota: El CIS denomina «Sumar» a la fuerza que aquí figura como Frente Amplio. El CIS no publica escaños. Fin del campo (6 de octubre) según la nota de prensa del CIS, que indica «entre los días 1 y 6».
+consultado: 2026-11-02

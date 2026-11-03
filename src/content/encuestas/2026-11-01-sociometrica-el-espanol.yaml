@@ -1,0 +1,14 @@
+instituto: SocioMétrica
+medio: El Español
+tipo: privada
+campo_inicio: 2026-09-01
+campo_fin: 2026-11-01
+muestra: 4893
+acumulada: true
+votos: { pp: 32.7, psoe: 26.6, vox: 19.1, frente-amplio: 5.2, podemos: 1.7 }
+escanos: { pp: 139, psoe: 106, vox: 64, frente-amplio: 7, podemos: 0 }
+otros_escanos: { adelante: 2, bng: 2, cca: 1, compromis: 3, eh-bildu: 7, erc: 9, junts: 6, pnv: 4 }
+fuentes:
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+nota: Seguimiento acumulado desde el 1 de septiembre. El PP incluye a UPN.
+consultado: 2026-11-02
