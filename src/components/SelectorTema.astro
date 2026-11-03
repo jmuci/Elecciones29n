@@ -62,10 +62,11 @@ const opciones = [
 <style>
   .tema {
     display: inline-flex;
+    flex-shrink: 0;
     margin: 0;
     padding: 2px;
     border: 1px solid var(--rule);
-    border-radius: 999px;
+    border-radius: calc(var(--radius-sm) + 2px);
     background: var(--surface);
   }
 
@@ -75,7 +76,7 @@ const opciones = [
     place-items: center;
     width: 2rem;
     height: 2rem;
-    border-radius: 999px;
+    border-radius: var(--radius-sm);
     color: var(--muted);
     cursor: pointer;
   }

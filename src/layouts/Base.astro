@@ -41,7 +41,10 @@ const enlaces = [
     <a class="saltar" href="#contenido">Saltar al contenido</a>
     <header class="cabecera">
       <div class="contenedor cabecera__fila">
-        <a class="marca" href="/">Elecciones 29-N · 2026</a>
+        <a class="marca" href="/">
+          <span class="marca__sello" aria-hidden="true">29N</span>
+          <span class="marca__texto">Elecciones generales <span class="marca__anio">2026</span></span>
+        </a>
         <nav aria-label="Principal">
           <ul>
             {
@@ -63,10 +66,13 @@ const enlaces = [
     </main>
     <SobreElAutor />
     <footer class="pie">
-      <div class="contenedor">
+      <div class="contenedor pie__fila">
+        <p class="pie__marca">
+          <span class="marca__sello" aria-hidden="true">29N</span>
+          Resúmenes propios; la fuente oficial siempre prevalece.
+        </p>
         <p>
-          Resúmenes propios; la fuente oficial siempre prevalece. Última actualización:{' '}
-          <time datetime={ultima.iso}>{ultima.texto}</time>.
+          Última actualización: <time datetime={ultima.iso}>{ultima.texto}</time>
         </p>
         <p>
           <a href="https://github.com/jmuci/Elecciones29n/issues/new?template=error-contenido.yml" rel="noopener">
@@ -96,77 +102,122 @@ const enlaces = [
   }
 
   .cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: saturate(1.6) blur(12px);
+    -webkit-backdrop-filter: saturate(1.6) blur(12px);
     border-bottom: 1px solid var(--rule);
   }
 
-  /* Estrecho: marca y tema arriba, navegación debajo. Ancho: marca · navegación · tema. */
   .cabecera__fila {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      'marca tema'
-      'nav nav';
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: var(--space-2) var(--space-3);
-    padding-block: var(--space-4);
-  }
-
-  nav {
-    grid-area: nav;
-  }
-
-  .cabecera__fila > :global(.tema) {
-    grid-area: tema;
-  }
-
-  @media (min-width: 52rem) {
-    .cabecera__fila {
-      grid-template-columns: auto 1fr auto;
-      grid-template-areas: 'marca nav tema';
-      column-gap: var(--space-5);
-    }
-
-    nav ul {
-      justify-content: flex-end;
-    }
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-5);
+    min-height: var(--header-h);
+    padding-block: var(--space-2);
   }
 
   .marca {
-    grid-area: marca;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
     color: var(--text);
-    font-family: var(--font-serif);
-    font-size: var(--step-1);
+    font-size: 0.9375rem;
     font-weight: 600;
+    letter-spacing: -0.01em;
     text-decoration: none;
+  }
+
+  .marca__sello {
+    display: inline-grid;
+    place-items: center;
+    padding: 0.2rem 0.45rem;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+
+  .marca__anio {
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  /* La navegación se pega al selector de tema, a la derecha. */
+  nav {
+    margin-inline-start: auto;
   }
 
   nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-1) var(--space-4);
+    gap: var(--space-1);
     padding: 0;
     list-style: none;
   }
 
   nav a {
-    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.25rem;
+    padding: 0 var(--space-3);
+    color: var(--muted);
+    font-size: var(--step--1);
+    font-weight: 500;
     text-decoration: none;
-    padding-block: var(--space-1);
-    border-bottom: 2px solid transparent;
+    border-radius: var(--radius-sm);
+    transition: color 0.15s, background-color 0.15s;
   }
 
   nav a:hover {
-    border-bottom-color: var(--border-strong);
+    color: var(--text);
+    background: var(--head);
   }
 
   nav a[aria-current='page'] {
-    border-bottom-color: var(--text);
+    color: var(--text);
+    background: var(--head);
     font-weight: 600;
+  }
+
+  /* Móvil: una sola fila (sello · navegación · tema); la navegación se desplaza en horizontal si no cabe. */
+  @media (width < 40rem) {
+    .cabecera__fila {
+      flex-wrap: nowrap;
+      gap: var(--space-3);
+    }
+
+    .marca__texto {
+      display: none;
+    }
+
+    nav {
+      min-width: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    nav ul {
+      flex-wrap: nowrap;
+    }
+
+    nav a {
+      padding: 0 var(--space-2);
+      white-space: nowrap;
+    }
   }
 
   main {
     display: block;
-    padding-block: var(--space-6) var(--space-7);
+    padding-block: var(--space-7) var(--space-8);
   }
 
   main:focus {
@@ -175,8 +226,22 @@ const enlaces = [
 
   .pie {
     border-top: 1px solid var(--rule);
-    padding-block: var(--space-5);
+    padding-block: var(--space-6);
     color: var(--muted);
     font-size: var(--step--1);
+  }
+
+  .pie__fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3) var(--space-6);
+  }
+
+  .pie__marca {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-right: auto;
   }
 </style>
