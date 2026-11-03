@@ -6,6 +6,9 @@
  * - temas:      src/content/temas/<id>.yaml              → id = <id>
  * - fuentes:    src/content/fuentes/<id>.yaml            → id = <id>
  * - propuestas: src/content/propuestas/<partido>/<tema>.yaml → id = <partido>/<tema>
+ * - gobiernos:  src/content/gobiernos/<id>.yaml          → id = <id>   (sección /historia)
+ * - casos:      src/content/casos/<id>.yaml              → id = <id>   (sección /historia#corrupcion)
+ * - recuentos:  src/content/recuentos/<id>.yaml          → id = <id>   (estudios de terceros)
  * - encuestas:  src/content/encuestas/<id>.yaml           → id = <id>
  *
  * El id sale siempre de la ruta del fichero. Los YAML no llevan campo `id`:
@@ -32,6 +35,7 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { INCLUIR_EJEMPLO } from './lib/ejemplo';
 import {
+  BLOQUES,
   ESTADOS,
   ESTADOS_SIN_PROPUESTAS,
   IDS_OTROS,
@@ -39,6 +43,7 @@ import {
   TIPOS_AMBITO,
   TIPOS_FUENTE,
   TIPOS_FUENTE_ENCUESTA,
+  TIPOS_FUENTE_HISTORIA,
   TOTAL_ESCANOS,
 } from './lib/modelo';
 
@@ -189,6 +194,90 @@ const propuestas = defineCollection({
     }),
 });
 
+/** Fuente de la sección /historia: prensa, sentencias, estudios… (no son fuentes de partido). */
+const fuenteHistoria = z.strictObject({
+  medio: textoNoVacio,
+  titulo: textoNoVacio,
+  url: z.url(),
+  tipo: z.enum(TIPOS_FUENTE_HISTORIA),
+  fecha: fecha.optional(),
+});
+
+/** Logro o crítica: un hecho verificable con al menos una fuente. */
+const hecho = z.strictObject({
+  titulo: textoNoVacio,
+  descripcion: textoNoVacio,
+  fuentes: z.array(fuenteHistoria).min(1, 'Cada hecho necesita al menos una fuente'),
+});
+
+const gobiernos = defineCollection({
+  loader: yamlGlob('./src/content/gobiernos', '*.yaml'),
+  schema: z.strictObject({
+    presidente: textoNoVacio,
+    partido: reference('partidos'),
+    /** Solo para colorear la línea de tiempo (src/lib/historia.ts). */
+    bloque: z.enum(BLOQUES),
+    inicio: fecha,
+    /** Sin fecha = sigue en el cargo. */
+    fin: fecha.optional(),
+    orden: z.number().int().positive(),
+    resumen: textoNoVacio,
+    apoyos: textoNoVacio.optional(),
+    destacados: z.array(z.strictObject({ nombre: textoNoVacio, cargo: textoNoVacio })).min(1),
+    logros: z.array(hecho),
+    criticas: z.array(hecho),
+    /** Aviso visible cuando la revisión de fuentes no está terminada. */
+    nota_revision: textoNoVacio.optional(),
+    revisado: fecha,
+  }),
+});
+
+const casos = defineCollection({
+  loader: yamlGlob('./src/content/casos', '*.yaml'),
+  schema: z
+    .strictObject({
+      nombre: textoNoVacio,
+      /** Partido de la web al que se asocia el caso, o `otro_partido` si no es uno de los seis. */
+      partido: reference('partidos').optional(),
+      otro_partido: textoNoVacio.optional(),
+      territorio: textoNoVacio,
+      resumen: textoNoVacio,
+      firme: z.strictObject({ tribunal: textoNoVacio, fecha }),
+      condenas: z
+        .array(z.strictObject({ persona: textoNoVacio, cargo: textoNoVacio, pena: textoNoVacio }))
+        .min(1),
+      /** Qué se le impuso al partido como tal (p. ej. partícipe a título lucrativo), si algo. */
+      responsabilidad_partido: textoNoVacio.optional(),
+      cuantia: z.strictObject({ euros: z.number().positive(), concepto: textoNoVacio }).optional(),
+      /** Cambios posteriores a la sentencia (p. ej. anulación parcial por el Constitucional). */
+      nota: textoNoVacio.optional(),
+      fuentes: z.array(fuenteHistoria).min(1),
+      revisado: fecha,
+    })
+    .refine((c) => (c.partido === undefined) !== (c.otro_partido === undefined), {
+      message: 'Indica `partido` (uno de la web) o `otro_partido`, pero no ambos',
+    }),
+});
+
+const recuentos = defineCollection({
+  loader: yamlGlob('./src/content/recuentos', '*.yaml'),
+  schema: z.strictObject({
+    titulo: textoNoVacio,
+    autoria: textoNoVacio,
+    url: z.url(),
+    publicado: fecha,
+    /** Periodo y ámbito que cubre el recuento. */
+    alcance: textoNoVacio,
+    metodologia: textoNoVacio,
+    cifras: z
+      .array(z.strictObject({ concepto: textoNoVacio, partido: textoNoVacio.optional(), valor: textoNoVacio }))
+      .min(1),
+    limitaciones: z.array(textoNoVacio).min(1),
+    orden: z.number().int().positive(),
+    revisado: fecha,
+  }),
+});
+
 const porcentaje = z.number().min(0).max(100);
 const rangoEscanos = z
   .strictObject({
@@ -246,4 +335,4 @@ const encuestas = defineCollection({
     }),
 });
 
-export const collections = { partidos, temas, fuentes, propuestas, encuestas };
+export const collections = { partidos, temas, fuentes, propuestas, encuestas, gobiernos, casos, recuentos };

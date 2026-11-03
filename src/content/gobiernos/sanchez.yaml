@@ -1,0 +1,108 @@
+presidente: Pedro Sánchez
+partido: psoe
+bloque: izquierda
+inicio: 2018-06-02
+orden: 4
+resumen: "Llegó a la presidencia mediante la moción de censura de junio de 2018 y revalidó el cargo tras las elecciones de 2019 y de 2023. Gobierna en coalición con Unidas Podemos desde enero de 2020 y con Sumar desde 2023. Sigue en el cargo hasta las elecciones del 29 de noviembre de 2026."
+destacados:
+  - nombre: "Nadia Calviño"
+    cargo: "Vicepresidenta y ministra de Economía (2018-2023)"
+  - nombre: "Pablo Iglesias"
+    cargo: "Vicepresidente segundo (2020-2021)"
+  - nombre: "Yolanda Díaz"
+    cargo: "Vicepresidenta y ministra de Trabajo"
+  - nombre: "María Jesús Montero"
+    cargo: "Ministra de Hacienda y vicepresidenta"
+  - nombre: "Fernando Grande-Marlaska"
+    cargo: "Ministro del Interior"
+  - nombre: "José Luis Ábalos"
+    cargo: "Ministro de Fomento y Transportes (2018-2021)"
+revisado: 2026-11-02
+logros:
+  - titulo: Subidas del salario mínimo (SMI)
+    descripcion: "El SMI pasó de 735 euros mensuales en 14 pagas en 2017-2018 a 1.184 en 2025, una subida del 61 % según Sánchez, y a 1.221 en 2026 (+3,1 %). La patronal CEOE se desmarcó de la subida de 2026."
+    fuentes:
+      - medio: "Menorca.info (agencias)"
+        titulo: "Sánchez niega que exista una crisis con Sumar: «En absoluto»"
+        url: "https://www.menorca.info/actualidad/nacional/2025/02/12/2324573/sanchez-niega-exista-crisis-sumar-absoluto.html"
+        tipo: prensa
+        fecha: 2025-02-12
+      - medio: "Última Hora (agencias)"
+        titulo: "Pedro Sánchez recrimina a CEOE que «se borre» de la subida del SMI y le insta a «pagar más» subiendo sueldos"
+        url: "https://www.ultimahora.es/noticias/nacional/2026/02/16/2571347/pedro-sanchez-recrimina-ceoe-borre-subida-del-smi-insta-pagar-mas-subiendo-sueldos.html"
+        tipo: prensa
+        fecha: 2026-02-16
+  - titulo: Reforma laboral de 2021 y temporalidad
+    descripcion: "Según CaixaBank Research, la tasa de temporalidad pasó de una media cercana al 29,7 % en 2014-2019 al 12,7 % en 2024. El Salto Diario atribuye la bajada de siete puntos en el primer año a la reforma de Yolanda Díaz."
+    fuentes:
+      - medio: "CaixaBank Research"
+        titulo: "La estabilidad del empleo mejora en España"
+        url: "https://www.caixabankresearch.com/es/economia-y-mercados/mercado-laboral-y-demografia/estabilidad-del-empleo-mejora-espana"
+        tipo: estudio
+      - medio: "El Salto"
+        titulo: "La bajada de siete puntos de la temporalidad avala el balance de la reforma laboral de Yolanda Díaz"
+        url: "https://www.elsaltodiario.com/laboral/bajada-7-puntos-temporalidad-avala-balance-primer-ano-reforma-laboral-yolanda-diaz"
+        tipo: prensa
+  - titulo: ERTE e Ingreso Mínimo Vital durante la pandemia (2020-2021)
+    descripcion: "Según la Seguridad Social, el pico de trabajadores en ERTE fue de 3,6 millones y más de 4,2 millones estuvieron protegidos en algún momento; en mayo de 2021 más de 300.000 hogares cobraban el Ingreso Mínimo Vital. Funcas concluyó que las ayudas compensaron de forma significativa la caída de rentas. Aun así, el empleo se redujo en 622.600 puestos en 2020."
+    fuentes:
+      - medio: "Funcas"
+        titulo: "Impacto social de la pandemia en España"
+        url: "https://www.funcas.es/wp-content/uploads/2020/11/Impacto-social-de-la-pandemia-en-Espa%C3%B1a.pdf"
+        tipo: estudio
+        fecha: 2020-11-01
+      - medio: "Seguridad Social"
+        titulo: "Comparecencia del secretario de Estado de la Seguridad Social y Pensiones, Israel Arroyo, ante la Comisión de Trabajo del Senado"
+        url: "https://revista.seg-social.es/documents/39386/1362157/16052021ComparecenciaSESenado.pdf/61c4cc1d-71a8-0441-b7b7-8a6cf8ea046a"
+        tipo: institucion
+        fecha: 2021-05-16
+      - medio: "Noticias de Navarra"
+        titulo: "Los ERTE no evitan la pérdida de 622.600 empleos en 2020"
+        url: "https://www.noticiasdenavarra.com/economia/2021/01/28/erte-evitan-perdida-622-600-2172067.amp.html"
+        tipo: prensa
+        fecha: 2021-01-28
+criticas:
+  - titulo: Condena del exministro Ábalos y de Koldo García (caso mascarillas, 2026)
+    descripcion: "El 22 de junio de 2026 el Tribunal Supremo condenó por unanimidad a José Luis Ábalos, ministro de Transportes entre 2018 y 2021, a 24 años y 3 meses de prisión, y a Koldo García a 19 años y 8 meses, por organización criminal, cohecho, malversación y tráfico de influencias. Ábalos sostiene que fue un juicio «político» y recurrirá al Constitucional. Ver el detalle en la sección de corrupción."
+    fuentes:
+      - medio: "RTVC"
+        titulo: "El Supremo condena a Ábalos a 24 años de cárcel"
+        url: "https://rtvc.es/el-supremo-condena-a-abalos-a-24-anos-de-carcel-22-junio-2026/"
+        tipo: prensa
+        fecha: 2026-06-22
+      - medio: "Ara"
+        titulo: "El Supremo condena a Ábalos a 24 años de prisión por «corrupción orgánica, organizada y continuada»"
+        url: "https://es.ara.cat/politica/supremo-condena-exministro-abalos-24-anos-prision_1_5776792.html"
+        tipo: prensa
+        fecha: 2026-06-22
+  - titulo: Ley de amnistía (2024)
+    descripcion: "La ley de amnistía fue condición del apoyo de Junts al Gobierno. En enero de 2024 Junts votó en contra y la norma decayó en el Congreso; en marzo el Gobierno aceptó cambios para dar más garantías a Junts. El PP y otros críticos la consideran un pago por los apoyos parlamentarios; el Gobierno defiende que favorece la convivencia."
+    fuentes:
+      - medio: "La Marea"
+        titulo: "Decae la ley de amnistía tras el voto en contra de Junts"
+        url: "https://lamarea.com/2024/01/30/decae-la-ley-aministia-tras-el-voto-en-contra-de-junts"
+        tipo: prensa
+        fecha: 2024-01-30
+      - medio: "El Independiente"
+        titulo: "Sánchez acepta ahora cambios en la ley de amnistía para ofrecer más garantías a Junts"
+        url: "https://www.elindependiente.com/espana/2024/03/06/sanchez-acepta-cambios-en-la-ley-de-amnistia-para-ofrecer-mas-garantias/"
+        tipo: prensa
+        fecha: 2024-03-06
+  - titulo: Precio del alquiler y balance de la Ley de Vivienda
+    descripcion: "Según idealista (junio de 2026), el alquiler marca máximos (15,1 euros por m²) con la oferta en mínimos. El Ministerio de Vivienda cifra en 301 los municipios declarados zona tensionada y defiende que la ley funciona; un estudio de Fedea de 2026 concluye que, donde se aplica, la moderación del precio convive con una contracción de la oferta."
+    fuentes:
+      - medio: "Fedea"
+        titulo: "La Ley 12/2023 por el derecho a la vivienda: un primer balance a partir de la aplicación desigual del control de rentas en España (Apuntes 2026/15)"
+        url: "https://documentos.fedea.net/pubs/ap/2026/ap2026-15.pdf"
+        tipo: estudio
+        fecha: 2026-06-01
+      - medio: "Merca2"
+        titulo: "Crisis del alquiler en España: Idealista señala precios récord, demanda máxima y oferta mínima"
+        url: "https://www.merca2.es/2026/06/04/crisis-alquiler-espana-idealista-2389722/"
+        tipo: prensa
+        fecha: 2026-06-04
+      - medio: "The Objective"
+        titulo: "San Sebastián y La Coruña son desde este martes zonas tensionadas para el alquiler"
+        url: "https://theobjective.com/espana/politica/2025-07-29/san-sebastian-coruna-zonas-tensionadas/"
+        tipo: prensa
+        fecha: 2025-07-29

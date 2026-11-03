@@ -1,0 +1,25 @@
+nombre: Caso Pretoria
+otro_partido: PSC y CiU (Cataluña)
+territorio: Cataluña (Santa Coloma de Gramenet)
+resumen: "Trama de comisiones por recalificaciones urbanísticas en Santa Coloma de Gramenet, en la que intervinieron un alcalde del PSC y dos antiguos consejeros de la Generalitat de CiU. La Audiencia Nacional condenó en 2018; el Supremo confirmó en diciembre de 2020 la condena del exalcalde Bartomeu Muñoz."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2020-12-18
+condenas:
+  - persona: "Bartomeu Muñoz"
+    cargo: "Exalcalde de Santa Coloma de Gramenet (PSC)"
+    pena: "Condena confirmada por el Supremo por prevaricación y cohecho, con pena de prisión; el detalle exacto no consta en la fuente consultada"
+  - persona: "Macià Alavedra"
+    cargo: "Exconsejero de la Generalitat (CiU)"
+    pena: "Conformidad con la Fiscalía Anticorrupción: multa de 3,2 millones de euros, sin ingreso en prisión"
+  - persona: "Lluís Prenafeta"
+    cargo: "Exconsejero de la Generalitat y exsecretario general de la Presidencia (CiU)"
+    pena: "Conformidad con la Fiscalía Anticorrupción: multa de 5,8 millones de euros, sin ingreso en prisión"
+nota: "Entran dos partidos en el mismo caso. Si su pena de prisión exacta importa, consulta la sentencia: la fuente consultada no la detalla."
+fuentes:
+  - medio: "Que.es (agencias)"
+    titulo: "El TS confirma la condena del exalcalde de Santa Coloma por «Pretoria»"
+    url: "https://www.que.es/2020/12/18/ts-condena-exalcalde-santa-coloma/"
+    tipo: prensa
+    fecha: 2020-12-18
+revisado: 2026-11-02

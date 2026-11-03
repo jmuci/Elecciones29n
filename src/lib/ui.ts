@@ -1,5 +1,18 @@
 import { getCollection } from 'astro:content';
-import type { Celda, Estado, Fuente, Partido, Propuesta, Tema, TipoFuente } from './modelo';
+import type {
+  Bloque,
+  Caso,
+  Celda,
+  Estado,
+  Fuente,
+  Gobierno,
+  Partido,
+  Propuesta,
+  Recuento,
+  Tema,
+  TipoFuente,
+  TipoFuenteHistoria,
+} from './modelo';
 
 /** Estado de presentación: los 4 del modelo más una celda que aún no existe. */
 export type EstadoVista = Estado | 'sin_revisar';
@@ -106,4 +119,43 @@ export async function cargarDatos(): Promise<Datos> {
     celda: (partido, tema) => porCelda.get(`${partido}/${tema}`),
     celdas,
   };
+}
+
+export const TIPO_FUENTE_HISTORIA: Record<TipoFuenteHistoria, string> = {
+  prensa: 'Prensa',
+  opinion: 'Opinión',
+  institucion: 'Fuente institucional',
+  organizacion: 'Organización',
+  sentencia: 'Sentencia',
+  estudio: 'Estudio o análisis',
+};
+
+export const BLOQUE_VISTA: Record<Bloque, { etiqueta: string }> = {
+  derecha: { etiqueta: 'Derecha' },
+  izquierda: { etiqueta: 'Izquierda' },
+};
+
+/** Año o rango de años de un gobierno: "2004–2011", "2018–" si sigue en el cargo. */
+export function periodo(g: Gobierno): string {
+  const ini = g.data.inicio.getUTCFullYear();
+  const fin = g.data.fin?.getUTCFullYear();
+  return fin === undefined ? `${ini}–actualidad` : `${ini}–${fin}`;
+}
+
+export async function cargarHistoria(): Promise<{
+  gobiernos: Gobierno[];
+  casos: Caso[];
+  recuentos: Recuento[];
+  partidos: Map<string, Partido>;
+}> {
+  const [gobiernos, casos, recuentos, partidos] = await Promise.all([
+    getCollection('gobiernos'),
+    getCollection('casos'),
+    getCollection('recuentos'),
+    getCollection('partidos'),
+  ]);
+  gobiernos.sort(porOrden);
+  recuentos.sort(porOrden);
+  casos.sort((a, b) => b.data.firme.fecha.getTime() - a.data.firme.fecha.getTime());
+  return { gobiernos, casos, recuentos, partidos: new Map(partidos.map((p) => [p.id, p])) };
 }

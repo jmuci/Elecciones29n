@@ -27,6 +27,18 @@ export type Fuente = CollectionEntry<'fuentes'>;
 export type Celda = CollectionEntry<'propuestas'>;
 export type Propuesta = Celda['data']['propuestas'][number];
 
+/** Tipos de fuente de la sección /historia (no confundir con `TIPOS_FUENTE`, que es de documentos de partido). */
+export const TIPOS_FUENTE_HISTORIA = ['prensa', 'opinion', 'institucion', 'organizacion', 'sentencia', 'estudio'] as const;
+export type TipoFuenteHistoria = (typeof TIPOS_FUENTE_HISTORIA)[number];
+
+/** Bloque político del partido que gobierna, solo para la línea de tiempo. */
+export const BLOQUES = ['derecha', 'izquierda'] as const;
+export type Bloque = (typeof BLOQUES)[number];
+
+export type Gobierno = CollectionEntry<'gobiernos'>;
+export type Caso = CollectionEntry<'casos'>;
+export type Recuento = CollectionEntry<'recuentos'>;
+
 /** Partidos que desglosan las encuestas (Democracia 21 no aparece en ninguna), en el orden fijo de la web. */
 export const PARTIDOS_ENCUESTA = ['pp', 'psoe', 'vox', 'frente-amplio', 'podemos'] as const;
 export type PartidoEncuesta = (typeof PARTIDOS_ENCUESTA)[number];

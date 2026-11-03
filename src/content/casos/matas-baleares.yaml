@@ -1,0 +1,29 @@
+nombre: Condenas firmes a Jaume Matas (Palma Arena y Son Espases)
+partido: pp
+territorio: Islas Baleares
+resumen: "El expresidente balear Jaume Matas acumula tres condenas firmes. En el caso Palma Arena el Supremo redujo en 2013 la pena inicial de seis años a nueve meses y en 2015 confirmó una multa por conseguir que un hotelero pagara a su mujer un contrato simulado; en 2021 confirmó diez meses de cárcel por intentar amañar el concurso del hospital de Son Espases."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2021-11-02
+condenas:
+  - persona: "Jaume Matas"
+    cargo: "Expresidente del Govern balear y exministro (PP)"
+    pena: "Diez meses de prisión por tráfico de influencias y como inductor de prevaricación y fraude (Son Espases); multa por el contrato simulado de su mujer (Palma Arena, 2015); nueve meses por Palma Arena (2013)"
+nota: "Las dos condenas de Palma Arena y la de Son Espases son procedimientos distintos; la fecha indicada es la de la última sentencia firme."
+fuentes:
+  - medio: "The Objective"
+    titulo: "El Supremo confirma la condena de diez meses de cárcel contra Jaume Matas por el caso 'Son Espases'"
+    url: "https://theobjective.com/espana/tribunales/2021-11-02/supremo-condena-jaume-matas-son-espases/"
+    tipo: prensa
+    fecha: 2021-11-02
+  - medio: "Periódico de Ibiza (agencias)"
+    titulo: "El Supremo confirma la condena a Matas por el sueldo de su mujer"
+    url: "https://www.periodicodeibiza.es/noticias/baleares/2015/02/13/144468/supremo-confirma-condena-matas-por-sueldo-mujer.html"
+    tipo: prensa
+    fecha: 2015-02-13
+  - medio: "La Marea"
+    titulo: "Jaume Matas no irá a la cárcel tras rebajarle la pena el Supremo"
+    url: "https://lamarea.com/2013/07/23/jaume-matas-no-ira-a-la-carcel-tras-rebajarle-la-pena-el-supremo"
+    tipo: prensa
+    fecha: 2013-07-23
+revisado: 2026-11-02

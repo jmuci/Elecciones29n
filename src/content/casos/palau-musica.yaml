@@ -1,0 +1,26 @@
+nombre: Caso Palau de la Música
+otro_partido: Convergència Democràtica de Catalunya (CDC)
+territorio: Cataluña
+resumen: "Desvío de fondos del Palau de la Música Catalana por parte de su presidente y su director, con comisiones ilegales a Convergència a cambio de adjudicaciones. El Supremo confirmó en abril de 2020 las penas de Fèlix Millet y Jordi Montull y la condena a CDC (hoy PDeCAT) a responder económicamente por las comisiones."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2020-04-30
+condenas:
+  - persona: "Fèlix Millet"
+    cargo: "Expresidente del Palau de la Música"
+    pena: "9 años y 8 meses de prisión y multa de 4,1 millones de euros"
+  - persona: "Jordi Montull"
+    cargo: "Exdirector del Palau de la Música"
+    pena: "7 años y 6 meses de prisión"
+responsabilidad_partido: "CDC, o sus herederos, debe responder económicamente por las comisiones ilegales. Los medios dan cifras distintas (6,2 y 6,6 millones de euros), por lo que no se muestra ninguna."
+fuentes:
+  - medio: "Diari de Tarragona (agencias)"
+    titulo: "Cas Palau: el Supremo ratifica las penas de Millet y Montull"
+    url: "https://www.diaridetarragona.com/internacional/127339/cas-palau-el-supremo-ratifica-las-penas-de-millet-y-montull-20200430-0082-lhdt202004300082_amp.html"
+    tipo: prensa
+    fecha: 2020-04-30
+  - medio: "elDiario.es"
+    titulo: "El Supremo confirma la condena a Convergència por cobrar comisiones ilegales en el caso Palau"
+    url: "https://www.eldiario.es/catalunya/politica/supremo-confirma-convergencia-comisiones-palau_1_1261438.amp.html"
+    tipo: prensa
+revisado: 2026-11-02

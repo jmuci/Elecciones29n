@@ -1,0 +1,179 @@
+---
+import type { Gobierno } from '../lib/modelo';
+import { BLOQUE_VISTA, periodo } from '../lib/ui';
+
+interface Props {
+  gobiernos: Gobierno[];
+  partidos: Map<string, { data: { nombre_corto: string } }>;
+}
+
+const { gobiernos, partidos } = Astro.props;
+
+/** La línea empieza en el año 2000 y termina el día de las elecciones. */
+const INICIO = Date.UTC(2000, 0, 1);
+const FIN = Date.UTC(2026, 10, 29);
+const pct = (t: number): number => ((t - INICIO) / (FIN - INICIO)) * 100;
+
+const tramos = gobiernos.map((g) => {
+  const ini = Math.max(g.data.inicio.getTime(), INICIO);
+  const fin = Math.min((g.data.fin ?? new Date(FIN)).getTime(), FIN);
+  return { g, peso: fin - ini, partido: partidos.get(g.data.partido.id)?.data.nombre_corto ?? '' };
+});
+
+const marcas = Array.from({ length: 5 }, (_, i) => 2000 + i * 5).map((anio) => ({
+  anio,
+  izq: pct(Date.UTC(anio, 0, 1)),
+}));
+---
+
+<figure class="linea">
+  <figcaption class="sr-only">
+    Gobiernos de España de 2000 a 2026, coloreados según el bloque del partido que gobernó.
+  </figcaption>
+  <ol class="barra">
+    {
+      tramos.map(({ g, peso, partido }) => (
+        <li style={`flex-grow: ${peso}`}>
+          <a
+            class={`tramo tramo--${g.data.bloque}`}
+            href={`#${g.id}`}
+            aria-label={`${g.data.presidente}, ${partido}, ${periodo(g)}. Ir a su sección.`}
+          >
+            <span class="tramo__nombre">{g.data.presidente.split(' ').at(-1)}</span>
+            <span class="tramo__partido">{partido}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+  <div class="escala" aria-hidden="true">
+    {
+      marcas.map(({ anio, izq }) => (
+        <span style={`left: ${izq}%`}>{anio}</span>
+      ))
+    }
+    <span class="escala__fin">29-N</span>
+  </div>
+  <ul class="leyenda-bloques">
+    <li><span class="muestra muestra--derecha" aria-hidden="true"></span> {BLOQUE_VISTA.derecha.etiqueta} (gobierno del PP)</li>
+    <li><span class="muestra muestra--izquierda" aria-hidden="true"></span> {BLOQUE_VISTA.izquierda.etiqueta} (gobierno del PSOE)</li>
+  </ul>
+</figure>
+
+<style>
+  .linea {
+    margin: 0;
+  }
+
+  .barra {
+    display: flex;
+    gap: 2px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .barra li {
+    flex-basis: 0;
+    min-width: 0;
+  }
+
+  .tramo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 4.5rem;
+    padding: var(--space-2);
+    color: var(--sobre-bloque);
+    font-size: var(--step--1);
+    line-height: 1.25;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: var(--radius);
+    outline: 1px solid color-mix(in srgb, var(--text) 25%, transparent);
+    outline-offset: -1px;
+  }
+
+  .tramo:hover {
+    text-decoration: underline;
+  }
+
+  .tramo--derecha {
+    background-color: var(--bloque-derecha);
+    /* Rayado: el color no es el único portador de información. */
+    background-image: repeating-linear-gradient(45deg, rgb(255 255 255 / 0.2) 0 5px, transparent 5px 10px);
+  }
+
+  .tramo--izquierda {
+    background-color: var(--bloque-izquierda);
+  }
+
+  .tramo__nombre {
+    font-weight: 700;
+  }
+
+  .escala {
+    position: relative;
+    height: 1.5rem;
+    margin-top: var(--space-1);
+    color: var(--muted);
+    font-size: 0.8125rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .escala span {
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  .escala span:first-child {
+    transform: none;
+  }
+
+  .escala__fin {
+    right: 0;
+    left: auto !important;
+    transform: none !important;
+  }
+
+  .leyenda-bloques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+    padding: 0;
+    margin-top: var(--space-3);
+    list-style: none;
+    font-size: var(--step--1);
+  }
+
+  .muestra {
+    display: inline-block;
+    width: 1.5rem;
+    height: 0.9rem;
+    margin-right: var(--space-1);
+    vertical-align: -0.1em;
+    border-radius: 2px;
+    outline: 1px solid color-mix(in srgb, var(--text) 25%, transparent);
+    outline-offset: -1px;
+  }
+
+  .muestra--derecha {
+    background-color: var(--bloque-derecha);
+    background-image: repeating-linear-gradient(45deg, rgb(255 255 255 / 0.2) 0 3px, transparent 3px 6px);
+  }
+
+  .muestra--izquierda {
+    background-color: var(--bloque-izquierda);
+  }
+
+  @media (max-width: 40rem) {
+    .tramo {
+      padding: var(--space-2) var(--space-1);
+      font-size: 0.75rem;
+      text-align: center;
+    }
+
+    .tramo__partido {
+      display: none;
+    }
+  }
+</style>

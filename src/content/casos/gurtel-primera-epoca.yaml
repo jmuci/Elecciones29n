@@ -1,0 +1,42 @@
+nombre: Gürtel (primera época)
+partido: pp
+territorio: Madrid y Valencia
+resumen: "Trama de contratos públicos y comisiones en torno al empresario Francisco Correa, con vínculos con cargos del PP. La Audiencia Nacional (mayo de 2018) condenó a Correa a 51 años de prisión y a Luis Bárcenas, extesorero del PP, a 33; el Tribunal Supremo (octubre de 2020) confirmó la sentencia, rebajó las penas de Bárcenas a 29 años y 1 mes y de Pablo Crespo a 36 años y 8 meses, y eliminó las alusiones a una «caja B» del partido."
+firme:
+  tribunal: "Tribunal Supremo (STS 507/2020)"
+  fecha: 2020-10-14
+condenas:
+  - persona: "Francisco Correa"
+    cargo: "Empresario"
+    pena: "51 años de prisión (el Supremo los mantuvo con un ajuste de meses)"
+  - persona: "Luis Bárcenas"
+    cargo: "Extesorero del PP"
+    pena: "29 años y 1 mes de prisión tras el Supremo"
+  - persona: "Pablo Crespo"
+    cargo: "Socio de Correa"
+    pena: "36 años y 8 meses de prisión tras el Supremo"
+  - persona: "Ana Mato"
+    cargo: "Exministra de Sanidad del PP"
+    pena: "Pago de 27.857 euros como partícipe a título lucrativo"
+responsabilidad_partido: "El PP fue condenado como partícipe a título lucrativo por beneficiarse de 245.492 euros procedentes de la trama (actos electorales en Majadahonda y Pozuelo). Un voto particular del presidente del tribunal discrepó de esa condena."
+cuantia:
+  euros: 245492
+  concepto: "Importe que el PP debe devolver como partícipe a título lucrativo (no es el total de la trama)"
+nota: "Quedan otras piezas y épocas de la trama con sentencias distintas, que no se incluyen aquí."
+fuentes:
+  - medio: "Diari de Tarragona (agencias)"
+    titulo: "Sentencia del Caso Gürtel: 51 años para Correa y 33 para Bárcenas"
+    url: "https://www.diaridetarragona.com/espana/144829/sentencia-del-caso-gurtel-51-anos-para-correa-y-33-para-barcenas-20180524-0020-ysdt201805240020.html"
+    tipo: prensa
+    fecha: 2018-05-24
+  - medio: "Público"
+    titulo: "El Supremo confirma la condena al PP por beneficiarse de la Gürtel"
+    url: "https://www.publico.es/politica/supremo-confirma-condena-al-pp-guertel.html"
+    tipo: prensa
+    fecha: 2020-10-14
+  - medio: "Deia"
+    titulo: "El Supremo confirma que el PP se lucró con la trama Gürtel"
+    url: "https://www.deia.eus/politica/2020/10/14/supremo-confirma-pp-lucro-trama-4674571.html"
+    tipo: prensa
+    fecha: 2020-10-14
+revisado: 2026-11-02

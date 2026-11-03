@@ -1,0 +1,82 @@
+presidente: José María Aznar
+partido: pp
+bloque: derecha
+inicio: 1996-05-05
+fin: 2004-04-17
+orden: 1
+resumen: "El PP gobernó con apoyos parlamentarios entre 1996 y 2000 y con mayoría absoluta (183 escaños) desde las elecciones de marzo de 2000 hasta las de marzo de 2004. La línea de tiempo muestra solo el periodo posterior a 2000."
+destacados:
+  - nombre: "Mariano Rajoy"
+    cargo: "Vicepresidente primero y ministro de la Presidencia, y después ministro del Interior"
+  - nombre: "Rodrigo Rato"
+    cargo: "Vicepresidente segundo y ministro de Economía"
+  - nombre: "Josep Piqué"
+    cargo: "Ministro de Asuntos Exteriores (2000-2002)"
+  - nombre: "Ana Palacio"
+    cargo: "Ministra de Asuntos Exteriores (2002-2004)"
+  - nombre: "Federico Trillo"
+    cargo: "Ministro de Defensa"
+  - nombre: "Ángel Acebes"
+    cargo: "Ministro del Interior (2002-2004)"
+nota_revision: "Primera pasada: de momento hay menos logros que críticas documentados con fuente. No es una valoración; se buscan más fuentes para los logros."
+revisado: 2026-11-02
+logros:
+  - titulo: Ley de Partidos e ilegalización de Batasuna (2002-2003)
+    descripcion: "La Ley Orgánica 6/2002 de Partidos Políticos, cuyo procedimiento pactaron PP y PSOE, permitió disolver partidos que apoyaran la violencia. En marzo de 2003 el Tribunal Supremo declaró por unanimidad ilegales Herri Batasuna, Euskal Herritarrok y Batasuna, y el Tribunal Europeo de Derechos Humanos avaló la medida en 2009."
+    fuentes:
+      - medio: "Última Hora (agencias)"
+        titulo: "El Tribunal Supremo acuerda por unanimidad ilegalizar Batasuna"
+        url: "https://www.ultimahora.es/noticias/nacional/2003/03/18/734235/el-tribunal-supremo-acuerda-por-unanimidad-ilegalizar-batasuna.html"
+        tipo: prensa
+        fecha: 2003-03-18
+      - medio: "Revista de Derecho Comunitario Europeo (UGR)"
+        titulo: "El TEDH avala la ilegalización de «Batasuna»"
+        url: "https://www.ugr.es/~redce/REDCE13/articulos/14Virgala.htm"
+        tipo: estudio
+  - titulo: Entrada en el euro y déficit cero (1999-2003)
+    descripcion: "Según CIDOB, España participó en el euro desde su primera fase, las cuentas públicas lograron el equilibrio y en 2003 el primer superávit de la democracia, y entre 1996 y 2003 se crearon 4,4 millones de empleos; la OCDE atribuyó el equilibrio en buena parte al aumento de afiliados a la Seguridad Social. Un análisis académico discute el enfoque del Gobierno sobre el déficit cero."
+    fuentes:
+      - medio: "CIDOB"
+        titulo: "José María Aznar López"
+        url: "https://www.cidob.org/lider-politico/jose-maria-aznar-lopez"
+        tipo: estudio
+      - medio: "Revista Fomento Social (Universidad Loyola)"
+        titulo: "La economía española durante el gobierno de Aznar"
+        url: "https://revistas.uloyola.es/rfs/article/download/2327/888/"
+        tipo: estudio
+criticas:
+  - titulo: Apoyo a la invasión de Irak (2003)
+    descripcion: "España apoyó políticamente la invasión de Irak de marzo de 2003 y participó en la cumbre de las Azores con Estados Unidos y Reino Unido. El argumento central era la posesión de armas de destrucción masiva por el régimen iraquí, que no se confirmó. La decisión sigue siendo objeto de debate político."
+    fuentes:
+      - medio: "Real Instituto Elcano"
+        titulo: "ARI 49/2003: Cuestionario tras la cumbre de Azores"
+        url: "https://www.realinstitutoelcano.org/wp-content/uploads/2021/12/ari-49-2003-e.pdf"
+        tipo: estudio
+        fecha: 2003-03-20
+      - medio: "Público"
+        titulo: "Aznar, veinte años sin rendir cuentas por la guerra de Irak"
+        url: "https://www.publico.es/politica/aznar-veinte-anos-rendir-cuentas-guerra-irak.html"
+        tipo: prensa
+  - titulo: Gestión de la catástrofe del Prestige (2002)
+    descripcion: "El petrolero Prestige se hundió frente a Galicia en noviembre de 2002. La plataforma Nunca Máis cuestionó la gestión de la crisis. En 2013 la Audiencia de A Coruña no apreció responsabilidad penal en los tres acusados y en 2016 el Tribunal Supremo condenó al capitán por un delito contra el medio ambiente y fijó indemnizaciones por más de 1.500 millones de euros."
+    fuentes:
+      - medio: "elDiario.es"
+        titulo: "'Nunca Máis' decidirá esta semana si recurre la sentencia del Prestige ante el Supremo"
+        url: "https://www.eldiario.es/politica/mais-decidira-sentencia-prestige-supremo_1_5169457.html"
+        tipo: prensa
+      - medio: "gCaptain"
+        titulo: "Spain's Supreme Court Upholds 1.6 Billion Euro Prestige Oil Spill Ruling"
+        url: "https://gcaptain.com/spains-supreme-court-upholds-1-6-billion-euro-prestige-oil-spill-rulingspains-supreme-court-upholds-1-6-billion-euro-prestige-oil-spill-ruling"
+        tipo: prensa
+  - titulo: Accidente del Yak-42 (2003)
+    descripcion: "En mayo de 2003 murieron 62 militares españoles al estrellarse en Turquía el avión Yak-42 en que regresaban de Afganistán. El ministro de Defensa, Federico Trillo, pidió disculpas a las familias en 2004 por los errores en la identificación de los cadáveres, y un dictamen del Consejo de Estado de 2017 responsabilizó al Ministerio de Defensa del accidente."
+    fuentes:
+      - medio: "Última Hora (agencias)"
+        titulo: "Trillo pide disculpas a las familias de las víctimas del Yak-42 por los errores cometidos"
+        url: "https://www.ultimahora.es/noticias/nacional/2004/06/30/655875/trillo-pide-disculpas-a-las-familias-de-las-victimas-del-yak-42-por-los-errores-cometidos.html"
+        tipo: prensa
+        fecha: 2004-06-30
+      - medio: "Público"
+        titulo: "Cronología del caso del Yak"
+        url: "https://www.publico.es/espana/cronologia-del-caso-del-yak.html"
+        tipo: prensa
