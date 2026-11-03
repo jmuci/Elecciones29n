@@ -1,0 +1,35 @@
+# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y el artículo de
+# pp.es sobre las declaraciones del vicesecretario de Educación e Igualdad (22-oct-2026).
+partido: pp
+tema: educacion
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: >-
+      Propone una educación que premie el esfuerzo, con más exigencia y más autoridad del docente.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - resumen: >-
+      Plantea que los contenidos educativos los elaboren las reales academias, siguiendo el ejemplo
+      de los países con mejores resultados, y eliminar de las aulas lo que califica de
+      "adoctrinamiento".
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - resumen: >-
+      Se compromete a garantizar la enseñanza del castellano en toda España y la de las lenguas
+      cooficiales en sus comunidades autónomas.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - resumen: >-
+      Propone prohibir el acceso a las redes sociales a los menores de 14 años y reducir la carga
+      burocrática del profesorado.
+    fuente: pp-nota-de-los-santos-pacto-educacion
+    pagina: "punto 6"
+  - resumen: >-
+      Plantea un pacto de país por la educación en el que participen docentes, equipos directivos,
+      inspección educativa, pedagogos y familias.
+    fuente: pp-nota-de-los-santos-pacto-educacion
+    pagina: "punto 1"
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-nota-de-los-santos-pacto-educacion

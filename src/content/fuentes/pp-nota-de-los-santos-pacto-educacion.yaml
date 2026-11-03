@@ -1,0 +1,11 @@
+# Artículo de pp.es (Actualidad > Artículos): declaraciones del vicesecretario de Educación e Igualdad
+# del PP en Murcia. HTML (lista de puntos; `pagina` = número de punto), sin sha256.
+# `publicado`: fecha del artículo en la API de WordPress de pp.es (modificado el 2026-10-23; la
+# captura de Wayback es posterior a esa modificación).
+partido: pp
+titulo: "De los Santos aboga por \"un pacto de país\" para recuperar la educación como \"pilar fundamental\" de la democracia"
+url: https://www.pp.es/actualidad/articulos/de-los-santos-aboga-por-un-pacto-de-pais-para-recuperar-la-educacion-como-pilar-fundamental-de-la-democracia/
+tipo: nota_prensa
+publicado: 2026-10-22
+consultado: 2026-11-02
+archivo: https://web.archive.org/web/20261023190924/https://www.pp.es/actualidad/articulos/de-los-santos-aboga-por-un-pacto-de-pais-para-recuperar-la-educacion-como-pilar-fundamental-de-la-democracia/

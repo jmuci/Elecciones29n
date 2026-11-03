@@ -1,0 +1,13 @@
+# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026), que no trata
+# aborto, eutanasia ni LGTBI. El Programa económico y de vivienda (2025) tampoco trata el tema.
+partido: vox
+tema: igualdad-derechos
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: Propone prohibir el burka y el niqab en los espacios públicos.
+    fuente: vox-recuperar-espana
+    pagina: 3
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

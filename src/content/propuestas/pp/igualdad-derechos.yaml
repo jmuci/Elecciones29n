@@ -1,0 +1,16 @@
+# Fase 4: no hay programa electoral publicado; se resume el Contrato con España. Las noticias de
+# pp.es revisadas (oct. 2026) sobre igualdad y mujeres critican al Gobierno sin propuestas concretas.
+partido: pp
+tema: igualdad-derechos
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: igualdad
+    resumen: >-
+      Se compromete a combatir en especial la violencia contra las mujeres, con más recursos
+      económicos y materiales, reconocimiento y autoridad para las Fuerzas y Cuerpos de Seguridad del
+      Estado.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+fuentes_revisadas:
+  - pp-contrato-con-espana

@@ -1,0 +1,24 @@
+# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026). El Programa
+# económico y de vivienda (2025) propone una central de compras nacional para los sistemas sanitarios
+# (p. 39), pero no se cita: es anterior a la convocatoria y Vox ya ha publicado medidas sanitarias
+# para el 29N (CONTRIBUTING §1.4).
+partido: vox
+tema: sanidad
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: listas de espera
+    resumen: Propone un plan nacional de reducción de las listas de espera.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - resumen: Propone una tarjeta sanitaria única.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - resumen: >-
+      Plantea limitar la atención sanitaria de los inmigrantes en situación irregular a los casos de
+      urgencia vital.
+    fuente: vox-recuperar-espana
+    pagina: 3
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

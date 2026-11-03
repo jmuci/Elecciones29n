@@ -1,0 +1,23 @@
+# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026). El Programa
+# económico y de vivienda (2025) propone una central de compras nacional para los sistemas educativos
+# (p. 39), pero no se cita: es anterior a la convocatoria y Vox ya ha publicado medidas educativas
+# para el 29N (CONTRIBUTING §1.4).
+partido: vox
+tema: educacion
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: >-
+      Propone igualar las oportunidades educativas de los alumnos españoles y sacar de las aulas lo
+      que califica de "ideología".
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - subtema: 0–3 años
+    resumen: >-
+      Plantea que los españoles tengan acceso preferente a las plazas de guardería y a los bonos de
+      comedor.
+    fuente: vox-recuperar-espana
+    pagina: 3
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

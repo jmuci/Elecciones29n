@@ -1,0 +1,26 @@
+# Fase 4: Podemos no tiene programa publicado; se resume su documento político de la V Asamblea
+# (2025). podemos.info sigue bloqueado por Cloudflare (2-nov-2026).
+partido: podemos
+tema: educacion
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: >-
+      Propone derogar de inmediato todas las leyes que permiten la privatización de la educación en
+      todos sus niveles y aumentar de forma muy significativa su financiación pública.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - resumen: Propone bajar las ratios de alumnos en colegios e institutos.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - subtema: universidad
+    resumen: Plantea garantizar que la educación universitaria no sea un privilegio de unos pocos.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - subtema: 0–3 años
+    resumen: >-
+      Propone una cobertura pública, universal y gratuita de la educación infantil de 0 a 3 años.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea

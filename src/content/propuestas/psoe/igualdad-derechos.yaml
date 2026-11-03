@@ -1,0 +1,34 @@
+# Fase 4: psoe.es no tiene programa ni documentos para el 29N; se resumen compromisos de las noticias
+# de campaña de su web (Actualidad > Noticias). `pagina` cuenta los párrafos del cuerpo de la noticia.
+partido: psoe
+tema: igualdad-derechos
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: aborto
+    resumen: >-
+      Se compromete a reformar la Constitución en la próxima legislatura para proteger en ella el
+      derecho al aborto.
+    fuente: psoe-nota-aborto-constitucion-granada
+    pagina: "primer párrafo"
+  - subtema: eutanasia
+    resumen: Se compromete a mantener el derecho a la eutanasia, que denomina "muerte digna".
+    fuente: psoe-nota-aborto-constitucion-granada
+    pagina: "primer párrafo"
+  - subtema: igualdad
+    resumen: >-
+      Plantea como tareas pendientes una ley contra la violencia vicaria, una ley contra la trata y
+      una ley de abolición de la prostitución.
+    fuente: psoe-nota-dos-modelos-valladolid
+    pagina: "párrafo 10"
+  - subtema: igualdad
+    resumen: >-
+      Fija como objetivo para 2031 que el 50 % del poder económico, social y político corresponda a
+      las mujeres.
+    fuente: psoe-nota-dos-modelos-valladolid
+    pagina: "párrafo 7"
+fuentes_revisadas:
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-pensiones-constitucion-gijon
