@@ -46,8 +46,13 @@
   --radius: 4px;
 }
 
+/* Tema: sin data-theme sigue al sistema; SelectorTema fija data-theme="light" | "dark" en <html>. */
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --bg: #151412;
     --surface: #1d1c19;
     --head: #26241f;
@@ -60,6 +65,22 @@
     --rule: #34322d;
     --focus: #9cc2ff;
   }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #151412;
+  --surface: #1d1c19;
+  --head: #26241f;
+  --text: #ece8e0;
+  --muted: #b5aea2;
+  --link: #9cc2ff;
+  --parcial: #f0b35a;
+  --pendiente: #aaa59c;
+  --border-strong: #7d776c;
+  --rule: #34322d;
+  --focus: #9cc2ff;
 }
 
 *,

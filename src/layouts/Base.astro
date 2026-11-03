@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SelectorTema from '../components/SelectorTema.astro';
 import SobreElAutor from '../components/SobreElAutor.astro';
 import { cargarDatos, fecha } from '../lib/ui';
 
@@ -28,6 +29,13 @@ const enlaces = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={descripcion} />
     <title>{titulo}</title>
+    <script is:inline>
+      // Aplica el tema guardado antes del primer pintado (ver SelectorTema.astro).
+      try {
+        const t = localStorage.getItem('tema');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
   </head>
   <body>
     <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -47,6 +55,7 @@ const enlaces = [
             }
           </ul>
         </nav>
+        <SelectorTema />
       </div>
     </header>
     <main id="contenido" tabindex="-1">
@@ -90,16 +99,40 @@ const enlaces = [
     border-bottom: 1px solid var(--rule);
   }
 
+  /* Estrecho: marca y tema arriba, navegación debajo. Ancho: marca · navegación · tema. */
   .cabecera__fila {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: var(--space-2) var(--space-5);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'marca tema'
+      'nav nav';
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
     padding-block: var(--space-4);
   }
 
+  nav {
+    grid-area: nav;
+  }
+
+  .cabecera__fila > :global(.tema) {
+    grid-area: tema;
+  }
+
+  @media (min-width: 52rem) {
+    .cabecera__fila {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: 'marca nav tema';
+      column-gap: var(--space-5);
+    }
+
+    nav ul {
+      justify-content: flex-end;
+    }
+  }
+
   .marca {
+    grid-area: marca;
     color: var(--text);
     font-family: var(--font-serif);
     font-size: var(--step-1);
