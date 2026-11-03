@@ -1,8 +1,35 @@
-# Revisado en Fase 4 (2-nov): psoe.es no tiene programa ni documentos para el 29N (/programa-electoral
-# sigue mostrando el de 2019; captura de Wayback del 19-oct y portada del 23-oct). La web pide una
-# verificación de Imperva al acceso automatizado.
+# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
+# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
+# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
+# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
 partido: psoe
 tema: territorial
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: financiación autonómica
+    resumen: >-
+      Propone reformar la financiación autonómica para aumentar los recursos de todas las comunidades
+      autónomas y evitar la competencia a la baja en Patrimonio, Sucesiones y los tramos altos del
+      IRPF, hacia un modelo de financiación federal.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 132
+  - resumen: >-
+      Plantea avanzar hacia la federalización del Estado y reformar el Senado para convertirlo en una
+      cámara de representación territorial.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 134
+  - subtema: lenguas
+    resumen: >-
+      Se compromete a seguir apostando por la protección, el estudio y el uso de las lenguas
+      cooficiales en todos los ámbitos.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 134
+fuentes_revisadas:
+  - psoe-resolucion-politica-41-congreso
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-esperanza-dos-hermanas

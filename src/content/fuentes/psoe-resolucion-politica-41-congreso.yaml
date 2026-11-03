@@ -1,0 +1,20 @@
+# Resolución Política aprobada en el 41.º Congreso Federal del PSOE (Sevilla, del 29 de noviembre
+# al 1 de diciembre de 2024), anterior a la convocatoria del 29N; no es un programa electoral. Se
+# admite con aviso (`anterior_a_convocatoria`, CONTRIBUTING §1.4) solo en los temas sobre los que el
+# PSOE no ha publicado nada para el 29N.
+# Evidencia de la fecha: ruta /media-content/2024/12/; metadatos XMP del PDF (CreateDate
+# 2024-12-04T13:43:14+01:00, ModifyDate 2024-12-09T17:06:53+01:00); cabecera Last-Modified del
+# servidor (9-dic-2024). No tiene fecha impresa, por eso no hay `publicado`.
+# 161 páginas; la paginación impresa coincide con la del PDF. psoe.es bloquea el acceso automatizado
+# (Incapsula): el PDF se descargó con navegador el 2-nov-2026 y su sha256 coincide con las capturas
+# de Wayback Machine de 2024-12-09, 2026-02-28 y 2026-10-14.
+# Hay otra versión en 41congreso.psoe.es (wp-content/uploads/2024/12/RESOLUCION-41Congreso.pdf, hoy
+# da error 502) con otro hash: mismas 161 páginas y mismo texto salvo en la p. 143. Se cita la de psoe.es.
+partido: psoe
+titulo: "Resolución Política del 41.º Congreso Federal (2024)"
+url: https://www.psoe.es/media-content/2024/12/RESOLUCION-41C.pdf
+tipo: documento_politico
+anterior_a_convocatoria: true
+consultado: 2026-11-02
+archivo: https://web.archive.org/web/20261014060220/https://www.psoe.es/media-content/2024/12/RESOLUCION-41C.pdf
+sha256: 9f150024329894866378961ee48d03aceb92bd5931f96fc6b64b767a3943f805

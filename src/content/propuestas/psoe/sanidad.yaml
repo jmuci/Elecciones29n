@@ -1,12 +1,44 @@
-# Revisado en Fase 4: psoe.es no tiene programa ni documentos para el 29N. Las noticias de campaña
-# revisadas (Actualidad > Noticias, sep.–nov. 2026) mencionan la sanidad pública solo para defender
-# la gestión del Gobierno o criticar a otros partidos, sin propuestas concretas.
+# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
+# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
+# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
+# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
 partido: psoe
 tema: sanidad
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - resumen: >-
+      Propone incluir en la Constitución el acceso a la sanidad pública universal y gratuita, con el
+      mismo nivel jurídico que el derecho a la educación.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 11
+  - resumen: >-
+      Plantea blindar por ley el sistema sanitario público, con la gestión directa como modelo de
+      gestión del SNS, e impedir que se establezcan nuevos copagos sanitarios.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 86
+  - subtema: atención primaria
+    resumen: >-
+      Prevé reforzar el Marco Estratégico para la Atención Primaria, especialmente en el medio rural.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 87
+  - subtema: salud mental
+    resumen: >-
+      Propone reforzar la atención a la salud mental en el sistema público hasta acercarse a 18
+      especialistas en psicología clínica y psiquiatría por cada 100.000 habitantes.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 92
+  - subtema: listas de espera
+    resumen: >-
+      Plantea un acuerdo entre todas las comunidades autónomas para reducir los tiempos medios de
+      espera en la asistencia sanitaria, con un tratamiento homogéneo de la información.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 93
 fuentes_revisadas:
-  - psoe-nota-aborto-constitucion-granada
-  - psoe-nota-dos-modelos-valladolid
+  - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-esperanza-dos-hermanas

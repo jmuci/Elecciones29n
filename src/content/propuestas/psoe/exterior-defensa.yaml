@@ -1,9 +1,47 @@
-# Revisado en Fase 4 (2-nov): psoe.es no tiene programa ni documentos para el 29N. Las notas de prensa
-# de campaña (oct-2026) solo mencionan logros de este Gobierno en política exterior (reconocimiento
-# de Palestina, "no a la guerra"), no propuestas. En "Documentos de actualidad" hay manifiestos
-# conmemorativos de agosto y septiembre (Día Internacional de la Paz, Ceuta), anteriores a la convocatoria.
+# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
+# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
+# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
+# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
 partido: psoe
 tema: exterior-defensa
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: [UE, Fuerzas Armadas]
+    resumen: >-
+      Propone avanzar hacia una defensa común de la UE con un ejército y un cuerpo diplomático
+      europeos, bajo mando comunitario y como complemento de la OTAN.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 157
+  - subtema: política exterior
+    resumen: >-
+      Propone una ley que prohíba el envío de armas y la cooperación militar con cualquier Estado que
+      viole el derecho internacional y ataque a civiles.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 158
+  - subtema: política exterior
+    resumen: >-
+      Plantea liderar una reforma de las Naciones Unidas que incluya eliminar el derecho de veto y los
+      asientos permanentes en el Consejo de Seguridad.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 158
+  - subtema: política exterior
+    resumen: >-
+      Se compromete a exigir el cese de las hostilidades en Palestina y Líbano y un proceso de paz
+      para la región, y a apoyar la reconstrucción de Ucrania.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: "157-158"
+  - subtema: cooperación al desarrollo
+    resumen: >-
+      Fija como objetivo elevar la Ayuda Oficial al Desarrollo hasta el 0,7 % de la Renta Nacional
+      Bruta en 2030.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 155
+fuentes_revisadas:
+  - psoe-resolucion-politica-41-congreso
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-esperanza-dos-hermanas
