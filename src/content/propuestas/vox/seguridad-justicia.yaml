@@ -1,0 +1,20 @@
+# Fase 4: no hay programa electoral publicado (voxespana.es/programa/programa-electoral-vox da 404);
+# se resume "Recuperar España" (2026). El Programa económico y de vivienda (2025) no trata el tema.
+partido: vox
+tema: seguridad-justicia
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: okupación penal
+    resumen: Propone acabar con la ocupación ilegal de viviendas.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - subtema: multirreincidencia
+    resumen: >-
+      Propone la deportación por la comisión de delitos graves o de delitos leves de forma
+      habitual.
+    fuente: vox-recuperar-espana
+    pagina: 5
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

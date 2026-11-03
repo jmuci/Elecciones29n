@@ -1,0 +1,17 @@
+# Fase 4: D21 no tiene programa ni plan de seguridad. Su web anuncia "Seguridad y Apoyo Contra el
+# Crimen Organizado" solo como título, sin contenido; se recoge la medida penal de su plan de vivienda.
+# Las medidas penales sobre corrupción de "España limpia" corresponden al tema de regeneración.
+partido: democracia-21
+tema: seguridad-justicia
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: [okupación penal, Código Penal]
+    resumen: >-
+      Propone modificar el Código Penal para tipificar expresamente como estafa la firma de un
+      contrato de alquiler con intención premeditada de impago, y también el subarriendo ilegal.
+    fuente: democracia-21-vivienda-prioridad-1
+    pagina: 4
+fuentes_revisadas:
+  - democracia-21-vivienda-prioridad-1
+  - democracia-21-espana-limpia
