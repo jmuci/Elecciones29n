@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Hemiciclo from '../components/Hemiciclo.astro';
 import { cargarDatos, fecha } from '../lib/ui';
-import { cargarEncuestas, desgloseResto, media, mediaResto, segmentos, textoEscanos, textoPct } from '../lib/encuestas';
+import { cargarEncuestas, media, segmentos, textoEscanos, textoPct } from '../lib/encuestas';
 import { MAYORIA_ABSOLUTA, PARTIDOS_ENCUESTA } from '../lib/modelo';
 import type { Encuesta, PartidoEncuesta } from '../lib/modelo';
 
@@ -16,7 +16,6 @@ const privadas = todas.filter((e) => e.data.tipo === 'privada');
 const cis = todas.filter((e) => e.data.tipo === 'cis');
 const conEscanos = privadas.filter((e) => e.data.escanos !== undefined);
 const mediaEscanos = media(privadas, nombres);
-const mediaOtros = mediaResto(privadas);
 
 const campo = (e: Encuesta): string => {
   const ini = fecha(e.data.campo_inicio).texto;
@@ -47,7 +46,7 @@ const fechaCierre = fecha(new Date('2026-11-23'), true);
       <p>
         Una encuesta es una estimación del momento, no un resultado. Cada hemiciclo reparte los escaños tal como los
         publica el instituto; cuando da una horquilla, se dibuja su punto medio y la horquilla aparece junto a la cifra.
-        Los colores son los de cada partido y solo sirven de apoyo: cada cifra lleva siempre el nombre. «Resto» agrupa al resto de fuerzas, con su desglose debajo de cada hemiciclo. La mayoría absoluta está en {MAYORIA_ABSOLUTA}{' '}
+        Los colores son los de cada partido y solo sirven de apoyo: cada cifra lleva siempre el nombre. Cuando la encuesta las desglosa, también se dibujan ERC, Junts, EH Bildu, PNV, BNG, Coalición Canaria, Compromís-Front Valencià y Adelante Andalucía; «Resto» agrupa lo demás. La mayoría absoluta está en {MAYORIA_ABSOLUTA}{' '}
         escaños.
       </p>
       <p class="aviso">
@@ -78,22 +77,12 @@ const fechaCierre = fecha(new Date('2026-11-23'), true);
         }.
       </p>
       {
-        mediaOtros.filas.length > 0 && (
-          <details class="resto">
-            <summary>¿Quién está en el «Resto»? Media de las fuerzas restantes</summary>
-            <ul class="resto__lista">
-              {mediaOtros.filas.map((f) => (
-                <li>
-                  {f.nombre} <strong>{f.escanos}</strong>
-                </li>
-              ))}
-            </ul>
-            <p class="meta">
-              Media de las {mediaOtros.n} encuestas que desglosan estas fuerzas con fiabilidad. Como cada encuesta reparte de forma
-              distinta, la suma puede no coincidir exactamente con los {mediaEscanos.segmentos.find((s) => s.id === 'resto')?.escanos} escaños
-              del «Resto». UPN y otras fuerzas menores solo aparecen cuando la encuesta las separa del PP.
-            </p>
-          </details>
+        mediaEscanos.nOtros > 0 && (
+          <p class="meta nota-media">
+            Las otras fuerzas se promedian entre las {mediaEscanos.nOtros} encuestas que las desglosan con fiabilidad. Como cada encuesta
+            reparte de forma distinta, sus escaños se reparten en proporción dentro del «Resto» de la media. UPN y otras fuerzas menores solo aparecen cuando la
+            encuesta las separa del PP.
+          </p>
         )
       }
     </section>
@@ -104,7 +93,7 @@ const fechaCierre = fecha(new Date('2026-11-23'), true);
       <ul class="rejilla">
         {
           conEscanos.map((e) => {
-            const segs = segmentos(e.data.escanos ?? {}, nombres);
+            const segs = segmentos(e.data.escanos ?? {}, nombres, e.data.otros_escanos);
             const faltan = PARTIDOS_ENCUESTA.filter((id) => e.data.escanos?.[id] === undefined).map((id) => nombres[id]);
             return (
               <li>
@@ -115,18 +104,7 @@ const fechaCierre = fecha(new Date('2026-11-23'), true);
                     {e.data.acumulada && ' (seguimiento acumulado)'} · {muestra(e)}
                   </p>
                   <Hemiciclo segmentos={segs} titulo={titulo(e)} />
-                  {desgloseResto(e).length > 0 ? (
-                    <details class="resto">
-                      <summary>Desglose del «Resto»</summary>
-                      <ul class="resto__lista">
-                        {desgloseResto(e).map((f) => (
-                          <li>
-                            {f.nombre} <strong>{f.texto}</strong>
-                          </li>
-                        ))}
-                      </ul>
-                    </details>
-                  ) : (
+                  {e.data.otros_escanos === undefined && (
                     <p class="meta">Desglose del «Resto»: no disponible con fiabilidad en las fuentes consultadas.</p>
                   )}
                   {faltan.length > 0 && (
@@ -302,6 +280,11 @@ const fechaCierre = fecha(new Date('2026-11-23'), true);
     text-align: center;
   }
 
+  .nota-media {
+    margin-top: var(--space-2);
+    text-align: center;
+  }
+
   .rejilla {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
@@ -405,29 +388,6 @@ const fechaCierre = fecha(new Date('2026-11-23'), true);
     display: block;
     height: 100%;
     border-radius: var(--radius);
-  }
-
-  .resto {
-    margin-top: var(--space-3);
-    font-size: var(--step--1);
-  }
-
-  .resto summary {
-    cursor: pointer;
-    color: var(--link);
-  }
-
-  .resto__lista {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-1) var(--space-4);
-    margin-top: var(--space-2);
-    padding: 0;
-    list-style: none;
-  }
-
-  .resto > .meta {
-    margin-top: var(--space-2);
   }
 
   .lista {

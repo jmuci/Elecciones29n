@@ -11,7 +11,7 @@ export interface Rango {
 
 /** Segmento del hemiciclo: un partido (con su clase de color) o el resto. */
 export interface Segmento {
-  id: PartidoEncuesta | 'resto';
+  id: PartidoEncuesta | OtroPartido | 'resto';
   etiqueta: string;
   escanos: number;
   /** Texto con la horquilla original, si la encuesta la da. */
@@ -44,14 +44,49 @@ export async function cargarEncuestas(): Promise<Encuesta[]> {
   return (await getCollection('encuestas')).sort(porFechaDesc);
 }
 
+/** Reparte `total` en enteros proporcionales a `pesos` (mayor resto); si todos los pesos son 0, devuelve ceros. */
+function repartir(pesos: number[], total: number): number[] {
+  const suma = pesos.reduce((acc, p) => acc + p, 0);
+  if (suma === 0) return pesos.map(() => 0);
+  const exactos = pesos.map((p) => (p * total) / suma);
+  const base = exactos.map(Math.floor);
+  let faltan = total - base.reduce((acc, n) => acc + n, 0);
+  const porResto = exactos.map((x, i) => ({ i, resto: x - Math.floor(x) })).sort((a, b) => b.resto - a.resto);
+  for (const { i } of porResto) {
+    if (faltan-- <= 0) break;
+    base[i] = (base[i] ?? 0) + 1;
+  }
+  return base;
+}
+
+/**
+ * Añade al hemiciclo las otras fuerzas desglosadas y un «Resto» con lo que
+ * queda. Si lo desglosado supera los escaños disponibles, se reparte
+ * proporcionalmente para que el total siga siendo 350.
+ */
+function conOtros(partes: Segmento[], otros: Segmento[]): Segmento[] {
+  const disponibles = TOTAL_ESCANOS - partes.reduce((acc, s) => acc + s.escanos, 0);
+  const suma = otros.reduce((acc, s) => acc + s.escanos, 0);
+  const ajustados =
+    suma > disponibles ? repartir(otros.map((s) => s.escanos), disponibles).map((escanos, i) => ({ ...otros[i]!, escanos })) : otros;
+  const resto = disponibles - ajustados.reduce((acc, s) => acc + s.escanos, 0);
+  return [
+    ...partes,
+    ...ajustados.filter((s) => s.escanos > 0),
+    ...(resto > 0 || ajustados.length === 0 ? [{ id: 'resto' as const, etiqueta: 'Resto', escanos: resto }] : []),
+  ];
+}
+
 /**
  * Segmentos del hemiciclo de una encuesta: los partidos desglosados (punto
- * medio si hay horquilla) y un «Resto» que completa los 350 escaños. Si falta
- * un partido, sus escaños quedan dentro del resto.
+ * medio si hay horquilla), las otras fuerzas si la encuesta las desglosa y un
+ * «Resto» que completa los 350 escaños. Si falta un partido, sus escaños quedan
+ * dentro del resto.
  */
 export function segmentos(
   escanos: NonNullable<Encuesta['data']['escanos']>,
   nombres: Record<PartidoEncuesta, string>,
+  otros: Encuesta['data']['otros_escanos'] = undefined,
 ): Segmento[] {
   const partes: Segmento[] = PARTIDOS_ENCUESTA.flatMap((id) => {
     const v = escanos[id];
@@ -59,18 +94,30 @@ export function segmentos(
     const r = rangoDe(v);
     return [{ id, etiqueta: nombres[id], escanos: centro(v), rango: r.min === r.max ? undefined : textoEscanos(v) }];
   });
-  const suma = partes.reduce((acc, s) => acc + s.escanos, 0);
-  return [...partes, { id: 'resto', etiqueta: 'Resto', escanos: TOTAL_ESCANOS - suma }];
+  const desglose: Segmento[] = IDS_OTROS.flatMap((id) => {
+    const v = otros?.[id];
+    if (v === undefined) return [];
+    const r = rangoDe(v);
+    return [{ id, etiqueta: OTROS_PARTIDOS[id], escanos: centro(v), rango: r.min === r.max ? undefined : textoEscanos(v) }];
+  });
+  return conOtros(partes, desglose);
 }
 
 /**
  * Media simple (sin ponderar) de los puntos medios de las encuestas con
  * escaños. Cada partido se promedia solo entre las encuestas que lo desglosan.
+ * Las otras fuerzas se promedian entre las encuestas que las desglosan y se
+ * reparten en proporción dentro del «Resto» de la media.
  */
 export function media(
   encuestas: Encuesta[],
   nombres: Record<PartidoEncuesta, string>,
-): { segmentos: Segmento[]; n: number; rangos: Partial<Record<PartidoEncuesta, Rango>> } {
+): {
+  segmentos: Segmento[];
+  n: number;
+  nOtros: number;
+  rangos: Partial<Record<PartidoEncuesta, Rango>>;
+} {
   const conEscanos = encuestas.filter((e) => e.data.escanos !== undefined);
   const rangos: Partial<Record<PartidoEncuesta, Rango>> = {};
   const partes: Segmento[] = PARTIDOS_ENCUESTA.map((id) => {
@@ -82,12 +129,14 @@ export function media(
     const m = valores.length === 0 ? 0 : valores.reduce((a, b) => a + b, 0) / valores.length;
     return { id, etiqueta: nombres[id], escanos: Math.round(m) };
   });
-  const suma = partes.reduce((acc, s) => acc + s.escanos, 0);
-  return {
-    segmentos: [...partes, { id: 'resto', etiqueta: 'Resto', escanos: TOTAL_ESCANOS - suma }],
-    n: conEscanos.length,
-    rangos,
-  };
+  const disponibles = TOTAL_ESCANOS - partes.reduce((acc, s) => acc + s.escanos, 0);
+  const { filas, n: nOtros } = mediaResto(encuestas);
+  const repartidos = repartir(
+    filas.map((f) => f.escanos),
+    disponibles,
+  );
+  const otros: Segmento[] = filas.flatMap((f, i) => (repartidos[i] ? [{ id: f.id, etiqueta: f.nombre, escanos: repartidos[i] }] : []));
+  return { segmentos: conOtros(partes, otros), n: conEscanos.length, nOtros, rangos };
 }
 
 export interface Escaño {
@@ -130,28 +179,8 @@ export function posicionesHemiciclo(total: number = TOTAL_ESCANOS, filas = 11): 
   return puntos.sort((a, b) => b.angulo - a.angulo).map(({ cx, cy, r }) => ({ cx, cy, r }));
 }
 
-export interface FilaResto {
-  id: OtroPartido;
-  nombre: string;
-  /** Cifra o horquilla tal como la publica la fuente. */
-  texto: string;
-}
-
-/** Desglose del «Resto» de una encuesta, en orden alfabético; vacío si la fuente no lo da con fiabilidad. */
-export function desgloseResto(e: Encuesta): FilaResto[] {
-  const otros = e.data.otros_escanos;
-  if (otros === undefined) return [];
-  return IDS_OTROS.flatMap((id) => {
-    const v = otros[id];
-    return v === undefined ? [] : [{ id, nombre: OTROS_PARTIDOS[id], texto: textoEscanos(v) }];
-  });
-}
-
-/**
- * Media de los puntos medios del resto, por partido, entre las encuestas que
- * lo desglosan. No tiene por qué sumar exactamente el resto del hemiciclo.
- */
-export function mediaResto(encuestas: Encuesta[]): { filas: { id: OtroPartido; nombre: string; escanos: number }[]; n: number } {
+/** Media de los puntos medios de cada otra fuerza entre las encuestas que la desglosan. */
+function mediaResto(encuestas: Encuesta[]): { filas: { id: OtroPartido; nombre: string; escanos: number }[]; n: number } {
   const con = encuestas.filter((e) => e.data.otros_escanos !== undefined);
   const filas = IDS_OTROS.flatMap((id) => {
     const valores = con.flatMap((e) => {
