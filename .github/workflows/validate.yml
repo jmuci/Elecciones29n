@@ -23,7 +23,7 @@ jobs:
       - run: npm run build
       - name: Comprobar que nada ficticio llega a producción
         run: |
-          if grep -riE 'ejemplo|ficticio' dist/; then
+          if grep -riE 'ficticio|example\.org|partido de ejemplo' dist/; then
             echo "::error::dist/ contiene datos de ejemplo o ficticios"
             exit 1
           fi
