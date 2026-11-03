@@ -11,6 +11,15 @@ escanos:
   vox: { min: 63, max: 69 }
   frente-amplio: { min: 9, max: 11 }
   podemos: { min: 0, max: 1 }
+otros_escanos:
+  adelante: { min: 3, max: 4 }
+  bng: 2
+  cca: { min: 0, max: 1 }
+  compromis: { min: 2, max: 3 }
+  eh-bildu: { min: 7, max: 8 }
+  erc: { min: 9, max: 11 }
+  junts: 6
+  pnv: { min: 5, max: 6 }
 fuentes:
   - { titulo: "El Imparcial: Las encuestas confirman la victoria del PP...", url: "https://www.elimparcial.es/noticia/303686/nacional/las-encuestas-confirman-la-victoria-del-pp-mayoria-absoluta-con-vox-y-el-descalabro-del-psoe.html", tipo: medio }
   - { titulo: "Moncloa.com: Encuestas PP Vox, más de 200 escaños", url: "https://www.moncloa.com/2026/11/02/encuestas-pp-vox-200-escanos-3460201/", tipo: medio }

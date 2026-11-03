@@ -44,22 +44,22 @@ const descripcion = `${titulo}: ${segmentos.map((s) => `${s.etiqueta} ${s.escano
 
 <style is:global>
   :root {
-    /* Colores por posición, sin relación con los colores de ningún partido. */
-    --s-pp: #b36b00;
-    --s-psoe: #2b7bb9;
-    --s-vox: #00805c;
-    --s-frente-amplio: #b5527f;
-    --s-podemos: #5b3fa0;
+    /* Colores de partido, solo de apoyo: cada segmento lleva también su nombre y su cifra en la leyenda. */
+    --s-pp: #0b5fb0;
+    --s-psoe: #c8102e;
+    --s-vox: #3c8a1e;
+    --s-frente-amplio: #b87a00;
+    --s-podemos: #6b2c91;
     --s-resto: #7d776c;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --s-pp: #f0a830;
-      --s-psoe: #6ab7ec;
-      --s-vox: #2fc59a;
-      --s-frente-amplio: #e48fb8;
-      --s-podemos: #a08be0;
+      --s-pp: #5aa2f0;
+      --s-psoe: #ff6b6b;
+      --s-vox: #7fd44a;
+      --s-frente-amplio: #f2b632;
+      --s-podemos: #b27de0;
       --s-resto: #9a9488;
     }
   }

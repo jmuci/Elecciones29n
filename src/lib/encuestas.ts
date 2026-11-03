@@ -1,6 +1,6 @@
 import { getCollection } from 'astro:content';
-import { PARTIDOS_ENCUESTA, TOTAL_ESCANOS } from './modelo';
-import type { Encuesta, PartidoEncuesta } from './modelo';
+import { IDS_OTROS, OTROS_PARTIDOS, PARTIDOS_ENCUESTA, TOTAL_ESCANOS } from './modelo';
+import type { Encuesta, OtroPartido, PartidoEncuesta } from './modelo';
 
 export type EscanosEncuesta = NonNullable<Encuesta['data']['escanos']>[PartidoEncuesta];
 
@@ -128,4 +128,38 @@ export function posicionesHemiciclo(total: number = TOTAL_ESCANOS, filas = 11): 
     }
   });
   return puntos.sort((a, b) => b.angulo - a.angulo).map(({ cx, cy, r }) => ({ cx, cy, r }));
+}
+
+export interface FilaResto {
+  id: OtroPartido;
+  nombre: string;
+  /** Cifra o horquilla tal como la publica la fuente. */
+  texto: string;
+}
+
+/** Desglose del «Resto» de una encuesta, en orden alfabético; vacío si la fuente no lo da con fiabilidad. */
+export function desgloseResto(e: Encuesta): FilaResto[] {
+  const otros = e.data.otros_escanos;
+  if (otros === undefined) return [];
+  return IDS_OTROS.flatMap((id) => {
+    const v = otros[id];
+    return v === undefined ? [] : [{ id, nombre: OTROS_PARTIDOS[id], texto: textoEscanos(v) }];
+  });
+}
+
+/**
+ * Media de los puntos medios del resto, por partido, entre las encuestas que
+ * lo desglosan. No tiene por qué sumar exactamente el resto del hemiciclo.
+ */
+export function mediaResto(encuestas: Encuesta[]): { filas: { id: OtroPartido; nombre: string; escanos: number }[]; n: number } {
+  const con = encuestas.filter((e) => e.data.otros_escanos !== undefined);
+  const filas = IDS_OTROS.flatMap((id) => {
+    const valores = con.flatMap((e) => {
+      const v = e.data.otros_escanos?.[id];
+      return v === undefined ? [] : [centro(v)];
+    });
+    if (valores.length === 0) return [];
+    return [{ id, nombre: OTROS_PARTIDOS[id], escanos: Math.round(valores.reduce((a, b) => a + b, 0) / valores.length) }];
+  });
+  return { filas, n: con.length };
 }

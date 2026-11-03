@@ -6,6 +6,7 @@ campo_fin: 2026-10-23
 muestra: 1200
 votos: { pp: 29.4, psoe: 27.1, vox: 19.2, frente-amplio: 5.6 }
 escanos: { pp: 122, psoe: 115, vox: 69, frente-amplio: 9, podemos: 2 }
+otros_escanos: { adelante: 3, bng: 1, cca: 1, compromis: 3, eh-bildu: 7, erc: 11, junts: 4, pnv: 3 }
 fuentes:
   - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
 nota: No se incluye el % de Podemos porque Wikipedia no lo recoge.

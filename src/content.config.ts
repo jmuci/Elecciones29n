@@ -34,6 +34,7 @@ import { INCLUIR_EJEMPLO } from './lib/ejemplo';
 import {
   ESTADOS,
   ESTADOS_SIN_PROPUESTAS,
+  IDS_OTROS,
   PARTIDOS_ENCUESTA,
   TIPOS_AMBITO,
   TIPOS_FUENTE,
@@ -198,8 +199,8 @@ const rangoEscanos = z
 /** Escaños de un partido: una cifra o una horquilla {min, max}. */
 const escanos = z.union([z.number().int().min(0).max(TOTAL_ESCANOS), rangoEscanos]);
 
-const porPartidoEncuesta = <T extends z.ZodType>(valor: T) =>
-  z.strictObject(Object.fromEntries(PARTIDOS_ENCUESTA.map((p) => [p, valor.optional()])) as Record<(typeof PARTIDOS_ENCUESTA)[number], z.ZodOptional<T>>);
+const porClaves = <K extends string, T extends z.ZodType>(claves: readonly K[], valor: T) =>
+  z.strictObject(Object.fromEntries(claves.map((k) => [k, valor.optional()])) as Record<K, z.ZodOptional<T>>);
 
 const encuestas = defineCollection({
   loader: yamlGlob('./src/content/encuestas', '*.yaml'),
@@ -216,9 +217,11 @@ const encuestas = defineCollection({
       /** Seguimiento continuo cuyo campo abarca varias semanas. */
       acumulada: z.boolean().default(false),
       /** % de voto por partido; solo los que la encuesta desglosa. */
-      votos: porPartidoEncuesta(porcentaje),
+      votos: porClaves(PARTIDOS_ENCUESTA, porcentaje),
       /** Escaños por partido; omitido el partido que la fuente no desglosa. */
-      escanos: porPartidoEncuesta(escanos).optional(),
+      escanos: porClaves(PARTIDOS_ENCUESTA, escanos).optional(),
+      /** Escaños de otras fuerzas (el «Resto»), solo si la fuente los desglosa con fiabilidad. */
+      otros_escanos: porClaves(IDS_OTROS, escanos).optional(),
       fuentes: z
         .array(
           z.strictObject({
@@ -234,7 +237,7 @@ const encuestas = defineCollection({
     .superRefine((e, ctx) => {
       if (e.campo_fin < e.campo_inicio)
         ctx.addIssue({ code: 'custom', path: ['campo_fin'], message: '`campo_fin` es anterior a `campo_inicio`' });
-      const suma = Object.values(e.escanos ?? {}).reduce<number>(
+      const suma = [...Object.values(e.escanos ?? {}), ...Object.values(e.otros_escanos ?? {})].reduce<number>(
         (acc, v) => acc + (v === undefined ? 0 : typeof v === 'number' ? v : v.min),
         0,
       );

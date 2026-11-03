@@ -31,6 +31,20 @@ export type Propuesta = Celda['data']['propuestas'][number];
 export const PARTIDOS_ENCUESTA = ['pp', 'psoe', 'vox', 'frente-amplio', 'podemos'] as const;
 export type PartidoEncuesta = (typeof PARTIDOS_ENCUESTA)[number];
 
+/** Otras fuerzas que desglosan las encuestas (el «Resto» del hemiciclo), en orden alfabético. */
+export const OTROS_PARTIDOS = {
+  adelante: 'Adelante Andalucía',
+  bng: 'BNG',
+  cca: 'Coalición Canaria',
+  compromis: 'Compromís-Front Valencià',
+  'eh-bildu': 'EH Bildu',
+  erc: 'ERC',
+  junts: 'Junts',
+  pnv: 'PNV',
+} as const;
+export type OtroPartido = keyof typeof OTROS_PARTIDOS;
+export const IDS_OTROS = Object.keys(OTROS_PARTIDOS) as OtroPartido[];
+
 export const TIPOS_FUENTE_ENCUESTA = ['original', 'medio', 'recopilacion'] as const;
 
 export const TOTAL_ESCANOS = 350;
