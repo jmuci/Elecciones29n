@@ -19,6 +19,115 @@ destacados:
   - nombre: "Carme Chacón"
     cargo: "Ministra de Vivienda y de Defensa"
 revisado: 2026-11-02
+contexto:
+  internacional:
+    - titulo: Crisis financiera internacional (2007-2009)
+      descripcion: "Según el Banco de España, la quiebra de Lehman Brothers y el episodio de AIG (septiembre de 2008) agravaron la incertidumbre y la crisis de confianza a escala mundial. El propio informe sitúa el inicio del ajuste inmobiliario español a mediados de 2006: el número de viviendas iniciadas bajó de 760.000 en 2006 a 360.000 en 2008, y las transacciones de 955.000 a 565.000. El Banco de España describe la crisis internacional como un choque superpuesto a un ajuste interno que ya había empezado."
+      fuentes:
+        - medio: "Banco de España"
+          titulo: "Informe Anual 2008, capítulo 2: El impacto de la crisis financiera sobre la economía española"
+          url: "https://www.bde.es/f/webbde/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/08/cap2.pdf"
+          tipo: institucion
+    - titulo: Crisis de deuda soberana en la zona euro (2010-2011)
+      descripcion: "El 10 de mayo de 2010 el BCE aprobó varias medidas ante las «severas tensiones» en algunos segmentos de mercado, entre ellas intervenciones en los mercados de deuda pública y privada de la zona euro (Programa para los Mercados de Valores). Los recortes del Gobierno español de mayo de 2010 (ver Críticas) se produjeron en ese contexto."
+      fuentes:
+        - medio: "Banco Central Europeo"
+          titulo: "ECB decides on measures to address severe tensions in financial markets"
+          url: "https://www.ecb.europa.eu/press/pr/date/2010/html/pr100510.en.html"
+          tipo: institucion
+          fecha: 2010-05-10
+  economia_global:
+    - titulo: Recesión mundial de 2009
+      descripcion: "El FMI estimó en enero de 2010 que la producción mundial se contrajo un 0,8 % en 2009 y la de las economías avanzadas un 3,2 %, con una recuperación desigual y todavía apoyada en estímulos públicos."
+      fuentes:
+        - medio: "FMI"
+          titulo: "World Economic Outlook Update: A Policy-Driven, Multispeed Recovery"
+          url: "https://www.imf.org/external/pubs/ft/weo/2010/update/01/"
+          tipo: institucion
+          fecha: 2010-01-26
+    - titulo: Tipos de interés del BCE (2007-2009)
+      descripcion: "Según el BCE, el tipo de las operaciones principales de financiación fue del 4,00 % en junio de 2007 y bajó hasta el 1,00 % en mayo de 2009. Es el tipo de referencia de toda la zona euro, no solo de España."
+      fuentes:
+        - medio: "Banco Central Europeo"
+          titulo: "Official interest rates"
+          url: "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html"
+          tipo: institucion
+economia:
+  macro:
+    - titulo: Crecimiento e inflación (2004-2011)
+      descripcion: "PIB real por años (Eurostat): 2004, 3,1 %; 2005, 3,6 %; 2006, 4,0 %; 2007, 3,5 %; 2008, 0,8 %; 2009, −3,8 %; 2010, 0,1 %; 2011, −0,6 %. La inflación media (IPCA) fue del 2,8 % en 2007, del 4,1 % en 2008 y del −0,2 % en 2009."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Gross domestic product (GDP) and main components - annual data (nama_10_gdp)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "HICP - annual data (prc_hicp_aind)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table?lang=en"
+          tipo: institucion
+    - titulo: Paro (2004-2011)
+      descripcion: "La tasa de paro (Eurostat, población de 15 a 74 años) fue del 11,1 % en 2004, bajó al 8,2 % en 2007 y subió al 11,3 % en 2008, al 17,9 % en 2009, al 19,9 % en 2010 y al 21,4 % en 2011. La serie tiene cambios metodológicos de la Encuesta de Población Activa, por lo que los saltos entre años concretos deben leerse con cautela."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+          tipo: institucion
+    - titulo: Saldo y deuda de las administraciones públicas
+      descripcion: "Según Eurostat, el saldo fue positivo entre 2005 y 2007 (1,2 %, 2,1 % y 1,9 % del PIB) y negativo desde 2008: −4,6 %, −11,2 % en 2009 y −9,7 % en 2011. La deuda pasó del 45,3 % del PIB en 2004 al 35,7 % en 2007 y al 69,5 % en 2011."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Government deficit/surplus, debt and associated data (gov_10dd_edpt1)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+          tipo: institucion
+    - titulo: "Otras métricas: PIB por habitante, empleo y saldo exterior (2004-2011)"
+      descripcion: "PIB real por habitante (variación anual): 2004, 1,5 %; 2005, 1,6 %; 2006, 2,4 %; 2007, 1,5 %; 2008, −0,9 %; 2009, −4,6 %; 2010, −0,3 %; 2011, −1,0 %. Tasa de empleo: 65,2 % en 2004, 69,7 % en 2007 y 62,0 % en 2011. Paro juvenil: 22,5 %, 18,1 % y 46,2 %. Saldo exterior: −5,4 % del PIB en 2004, −9,4 % en 2007 y −2,6 % en 2011. Son datos anuales de Eurostat: la tasa de empleo es la de 20 a 64 años, el paro juvenil el de menores de 25 años y el saldo exterior la balanza por cuenta corriente en porcentaje del PIB."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "GDP and main components per capita - annual data (nama_10_pc)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_pc/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Employment rates by citizenship (lfsa_ergan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_ergan/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Current account balance - annual data (tipsbp20)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/tipsbp20/default/table?lang=en"
+          tipo: institucion
+  percepcion:
+    - titulo: Valoración de la economía en el CIS (mayo de 2009)
+      descripcion: "Preguntados por la situación económica general de España, el 3,1 % la calificó de buena o muy buena, el 25,6 % de regular y el 70,5 % de mala o muy mala."
+      fuentes:
+        - medio: "CIS"
+          titulo: "Barómetro de mayo 2009 (estudio 2801)"
+          url: "https://www.cis.es/estudios/barometro-de-mayo-2009"
+          tipo: institucion
+    - titulo: Principales problemas del país según el CIS (mayo de 2009)
+      descripcion: "Como primer problema, el paro fue citado por el 55,7 % (77,3 % sumando las tres respuestas) y los problemas de índole económica por el 22,7 % (48,7 % en total). La vivienda fue primer problema para el 1,4 % (13,0 % en total); en febrero de 2004 el 20,3 % la había citado entre los tres principales."
+      fuentes:
+        - medio: "CIS"
+          titulo: "Barómetro de mayo 2009 (estudio 2801)"
+          url: "https://www.cis.es/estudios/barometro-de-mayo-2009"
+          tipo: institucion
+    - titulo: Condiciones de vida y vivienda (2007-2011)
+      descripcion: "Según Eurostat, el riesgo de pobreza o exclusión social (AROPE) pasó del 23,3 % en 2007 al 26,7 % en 2011, y el porcentaje que declaraba llegar a fin de mes «con mucha dificultad» del 11,1 % en 2007 al 16,2 % en 2009 y al 15,5 % en 2010. El precio de la vivienda subió de media un 9,8 % en 2007 y cayó un 1,4 % en 2008, un 6,6 % en 2009 y un 7,6 % en 2011."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "Persons at risk of poverty or social exclusion by age and sex - EU 2020 strategy (ilc_peps01)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Inability to make ends meet (ilc_mdes09)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/ilc_mdes09/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "House price index - annual data (prc_hpi_a)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a/default/table?lang=en"
+          tipo: institucion
 logros:
   - titulo: Matrimonio entre personas del mismo sexo (2005)
     descripcion: "La Ley 13/2005 reconoció el derecho a contraer matrimonio a las parejas del mismo sexo. El Congreso la aprobó definitivamente el 30 de junio de 2005 con 187 votos a favor, 147 en contra y 4 abstenciones, tras el veto del Senado. El PP votó en contra."
