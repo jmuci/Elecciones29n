@@ -1,0 +1,21 @@
+# Fase 4: psoe.es no tiene programa ni documentos para el 29N; se resumen compromisos de las noticias
+# de campaña de su web (Actualidad > Noticias). `pagina` cuenta los párrafos del cuerpo de la noticia.
+partido: psoe
+tema: educacion
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: [becas, FP]
+    resumen: >-
+      Fija como objetivo para 2030 que la tasa de abandono escolar baje 4 puntos, con una apuesta por
+      las becas y por una formación profesional de calidad.
+    fuente: psoe-nota-tijeras-motosierras-zaragoza
+    pagina: "párrafo 8"
+  - resumen: Se compromete a garantizar la universalidad de la educación en los próximos cuatro años.
+    fuente: psoe-nota-pensiones-constitucion-gijon
+    pagina: "párrafo 7"
+fuentes_revisadas:
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-aborto-constitucion-granada
