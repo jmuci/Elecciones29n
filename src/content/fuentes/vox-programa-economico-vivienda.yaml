@@ -1,11 +1,14 @@
-# Documento de 2025, anterior a la convocatoria del 29N (PDF creado en junio de 2025 y
-# subido en octubre de 2025). Se admite porque Vox lo enlaza hoy en su página de
-# propuestas (voxespana.es/programa/otras-propuestas-de-vox) junto a "Recuperar España".
-# El año va en el título para que se vea junto a cada propuesta. Fecha exacta de publicación: no consta.
+# Documento de 2025, anterior a la convocatoria del 29N: PDF creado el 30-09-2025 (diccionario
+# Info; las fechas de junio de 2025 del XMP son de imágenes incrustadas), subido a /uploads/2025/10/
+# con nombre de fichero 021025. Vox lo enlaza hoy en su página de propuestas
+# (voxespana.es/programa/otras-propuestas-de-vox) junto a "Recuperar España".
+# Se admite con aviso (`anterior_a_convocatoria`, CONTRIBUTING §1.4). El año va en el título.
+# Fecha exacta de publicación: no consta, por eso no hay `publicado`.
 partido: vox
 titulo: "Programa económico y de vivienda (2025)"
 url: https://www.voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf
 tipo: plan_sectorial
+anterior_a_convocatoria: true
 consultado: 2026-11-02
 archivo: https://web.archive.org/web/20261012012637/https://www.voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf
 sha256: 0d3e55ebe42c6bf5ad468cc5a14fff4423a454d9fbbea2890f62b5114fbd4cf2

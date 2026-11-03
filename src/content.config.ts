@@ -91,6 +91,14 @@ const fuentes = defineCollection({
       .string()
       .regex(/^[0-9a-f]{64}$/, 'sha256 debe tener 64 caracteres hexadecimales en minúscula')
       .optional(),
+    /**
+     * Documento oficial anterior a la convocatoria del 29N, admitido con aviso
+     * (CONTRIBUTING §1.4). Se marca a mano y solo con evidencia de la fecha del
+     * documento (fecha impresa, metadatos del PDF, ruta de subida); no se
+     * calcula a partir de `publicado`. La UI muestra el aviso junto a cada
+     * propuesta que cita la fuente y en /fuentes.
+     */
+    anterior_a_convocatoria: z.boolean().default(false),
     ficticio: z.boolean().default(false),
   }),
 });

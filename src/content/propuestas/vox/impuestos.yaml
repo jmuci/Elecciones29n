@@ -1,5 +1,6 @@
 # Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen
 # "Recuperar España" (2026) y el Programa económico y de vivienda (2025).
+# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
 partido: vox
 tema: impuestos
 estado: parcial
@@ -22,7 +23,7 @@ propuestas:
     fuente: vox-programa-economico-vivienda
     pagina: 37
   - subtema: vivienda
-    resumen: Propone suprimir los impuestos en la compra de la primera vivienda.
+    resumen: Propone "impuestos cero" a la primera vivienda.
     fuente: vox-recuperar-espana
     pagina: 3
   - subtema: otros

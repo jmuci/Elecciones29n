@@ -1,5 +1,6 @@
 # Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen el
 # Contrato con España y el argumentario de vivienda.
+# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
 partido: pp
 tema: vivienda
 estado: parcial
@@ -7,16 +8,16 @@ revisado: 2026-11-02
 propuestas:
   - subtema: oferta y construcción
     resumen: >-
-      Se compromete a aumentar la oferta de vivienda, facilitar suelo y reducir burocracia, con la
-      colaboración de todas las administraciones.
+      Fija como objetivo aumentar la oferta de vivienda y plantea que todas las administraciones
+      colaboren para poner suelo a disposición y simplificar los trámites.
     cita: "construir al menos un millón de nuevas viviendas"
     fuente: pp-contrato-con-espana
     pagina: 2
   - subtema: [oferta y construcción, okupación]
     resumen: >-
       Propone una nueva ley para poner en uso todo el suelo disponible, menos trámites y silencio
-      administrativo positivo a los 90 días. Prevé aprobar las leyes de Suelo y Antiokupación en los
-      100 primeros días de gobierno.
+      administrativo positivo a los 90 días. Prevé aprobar las leyes de suelo y contra la ocupación
+      ilegal en los 100 primeros días.
     fuente: pp-argumentario-nueva-generacion-propietarios
     pagina: 1
   - subtema: jóvenes

@@ -1,0 +1,25 @@
+---
+/**
+ * Aviso de fuente anterior a la convocatoria (CONTRIBUTING §1.4). Mismo texto
+ * y estilo para cualquier partido; el texto lleva la información, el borde es
+ * solo apoyo visual. Enlaza a la explicación del criterio en /fuentes.
+ */
+import { ANCLA_ANTERIOR_CONVOCATORIA, AVISO_ANTERIOR_CONVOCATORIA } from '../lib/ui';
+import type { Fuente } from '../lib/modelo';
+
+interface Props {
+  fuente: Fuente;
+}
+
+const { fuente } = Astro.props;
+const anio = fuente.data.publicado?.getUTCFullYear();
+const texto = anio ? `${AVISO_ANTERIOR_CONVOCATORIA} (${anio})` : AVISO_ANTERIOR_CONVOCATORIA;
+---
+
+{
+  fuente.data.anterior_a_convocatoria && (
+    <p class="aviso-convocatoria">
+      <a href={`/fuentes#${ANCLA_ANTERIOR_CONVOCATORIA}`}>{texto}</a>
+    </p>
+  )
+}

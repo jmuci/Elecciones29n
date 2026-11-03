@@ -1,4 +1,5 @@
 ---
+import AvisoConvocatoria from './AvisoConvocatoria.astro';
 import IconoEstado from './IconoEstado.astro';
 import { ESTADO_VISTA, TIPO_FUENTE, fecha, localizador, subtemasDe, urlPropuesta, type Datos } from '../lib/ui';
 import type { Celda, Partido } from '../lib/modelo';
@@ -49,6 +50,7 @@ const revisado = celda && fecha(celda.data.revisado);
                 </a>
                 {f.data.tipo !== 'programa' && <> ({TIPO_FUENTE[f.data.tipo].toLowerCase()})</>}
               </p>
+              <AvisoConvocatoria fuente={f} />
             </li>
           );
         })}

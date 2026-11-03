@@ -37,7 +37,12 @@ export const TIPO_FUENTE: Record<TipoFuente, string> = {
   nota_prensa: 'Nota de prensa',
 };
 
-const formatoFecha = new Intl.DateTimeFormat('es-ES', { dateStyle: 'medium', timeZone: 'UTC' });
+/** Aviso de las fuentes con `anterior_a_convocatoria` (mismo texto para todos los partidos). */
+export const AVISO_ANTERIOR_CONVOCATORIA = 'Documento anterior a la convocatoria del 29N';
+/** Ancla de /fuentes donde se explica el criterio. */
+export const ANCLA_ANTERIOR_CONVOCATORIA = 'anterior-a-convocatoria';
+
+const formatoFecha =new Intl.DateTimeFormat('es-ES', { dateStyle: 'medium', timeZone: 'UTC' });
 const formatoFechaLarga = new Intl.DateTimeFormat('es-ES', { dateStyle: 'long', timeZone: 'UTC' });
 
 export function fecha(d: Date, larga = false): { iso: string; texto: string } {

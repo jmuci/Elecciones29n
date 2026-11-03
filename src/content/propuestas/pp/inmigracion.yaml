@@ -1,4 +1,5 @@
 # Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resume el Contrato con España.
+# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
 partido: pp
 tema: inmigracion
 estado: parcial
@@ -6,25 +7,25 @@ revisado: 2026-11-02
 propuestas:
   - subtema: fronteras
     resumen: >-
-      Propone reforzar las fronteras con medios humanos, materiales y tecnológicos, y con los
+      Propone reforzar las fronteras con personal, material y tecnología, y con todos los
       instrumentos europeos disponibles.
     fuente: pp-contrato-con-espana
     pagina: 2
   - subtema: integración
     resumen: >-
-      Se compromete a reducir la inmigración irregular, a ofrecer vías legales a quien venga a
-      prosperar y contribuir, y a promover la integración de quien quiera quedarse.
+      Se compromete a reducir la inmigración irregular y a que quien quiera quedarse se integre y
+      contribuya, con vías legales para quien venga a prosperar y contribuir.
     fuente: pp-contrato-con-espana
     pagina: 2
   - subtema: regularización
     resumen: >-
-      Propone prohibir por ley las regularizaciones colectivas, de modo que la entrada o la
-      permanencia irregular no sirva para obtener la residencia.
+      Propone que entrar o permanecer en España de forma irregular no permita obtener la
+      residencia.
+    cita: "se establecerá por ley la prohibición de regulaciones colectivas"
     fuente: pp-contrato-con-espana
     pagina: 2
   - subtema: expulsiones
-    resumen: Plantea que los extranjeros que cometan delitos tengan que abandonar España.
-    cita: "Quien venga a delinquir, deberá marcharse"
+    resumen: Plantea que quien venga a España a delinquir tenga que abandonar el país.
     fuente: pp-contrato-con-espana
     pagina: 2
   - subtema: nacionalidad

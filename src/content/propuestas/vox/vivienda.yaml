@@ -1,5 +1,6 @@
 # Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen
 # "Recuperar España" (2026) y el Programa económico y de vivienda (2025).
+# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
 partido: vox
 tema: vivienda
 estado: parcial
@@ -27,8 +28,9 @@ propuestas:
     pagina: 3
   - subtema: [jóvenes, compra y propiedad]
     resumen: >-
-      Plantea avales públicos para la compra de vivienda y créditos blandos para parejas jóvenes
-      vinculados al número de hijos, con condonación parcial según objetivos de natalidad.
+      Plantea avales públicos para comprar vivienda y préstamos en condiciones favorables para
+      parejas jóvenes según el número de hijos, con condonación de una parte al cumplir ciertos
+      objetivos de natalidad.
     fuente: vox-programa-economico-vivienda
     pagina: 47
 fuentes_revisadas:

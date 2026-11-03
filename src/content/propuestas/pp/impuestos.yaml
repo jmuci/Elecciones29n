@@ -1,5 +1,6 @@
 # Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen el
 # Contrato con España y los argumentarios de impuestos y vivienda.
+# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
 partido: pp
 tema: impuestos
 estado: parcial
@@ -21,7 +22,8 @@ propuestas:
     pagina: 1
   - subtema: [IRPF, IVA, vivienda]
     resumen: >-
-      Plantea, para los jóvenes que compren vivienda, menos IRPF y un 60 % menos de IVA e ITP.
+      Plantea, entre sus ayudas para que los jóvenes compren vivienda, menos IRPF para los jóvenes y
+      un 60 % menos de IVA e ITP.
     fuente: pp-argumentario-nueva-generacion-propietarios
     pagina: 1
 fuentes_revisadas:

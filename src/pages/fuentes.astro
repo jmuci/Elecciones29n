@@ -1,7 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
+import AvisoConvocatoria from '../components/AvisoConvocatoria.astro';
 import InfoPartido from '../components/InfoPartido.astro';
-import { cargarDatos, fecha, TIPO_FUENTE } from '../lib/ui';
+import { ANCLA_ANTERIOR_CONVOCATORIA, AVISO_ANTERIOR_CONVOCATORIA, cargarDatos, fecha, TIPO_FUENTE } from '../lib/ui';
 import { TIPOS_FUENTE } from '../lib/modelo';
 import type { Fuente, Tema } from '../lib/modelo';
 
@@ -36,11 +37,16 @@ const porPartido = (id: string): Fuente[] =>
       <h1>Fuentes</h1>
       <p class="entradilla">Documentos oficiales de cada partido en los que se basan los resúmenes de las propuestas.</p>
       <p>
-        Solo se usan documentos publicados por los propios partidos para estas elecciones: programas electorales,
+        Se usan documentos publicados por los propios partidos para estas elecciones: programas electorales,
         manifiestos, planes sectoriales, documentos políticos del partido, argumentarios de campaña, páginas web y notas
         de prensa. Mientras un partido no publique su programa, se pueden citar documentos de otro tipo; el tipo se indica
         junto a cada fuente. Cuando existe, se enlaza también una copia archivada en Wayback Machine para que el
         documento siga siendo comprobable aunque cambie.
+      </p>
+      <p id={ANCLA_ANTERIOR_CONVOCATORIA}>
+        Algunas fuentes llevan el aviso «{AVISO_ANTERIOR_CONVOCATORIA}». Son documentos oficiales del partido
+        publicados antes de convocarse estas elecciones. Solo se usan cuando el partido aún no ha publicado nada para el
+        29N sobre ese tema, y se sustituyen en cuanto lo publique.
       </p>
     </div>
 
@@ -68,6 +74,7 @@ const porPartido = (id: string): Fuente[] =>
                           {f.data.titulo}
                           {f.data.ficticio && <span class="marca-prueba">FICTICIO</span>}
                         </h3>
+                        <AvisoConvocatoria fuente={f} />
                         <dl>
                           <div>
                             <dt>Tipo</dt>
