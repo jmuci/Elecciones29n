@@ -1,0 +1,23 @@
+# Fase 4: no hay programa electoral publicado; se resume el Contrato con España. Los argumentarios
+# "Hablemos Claro" (p. ej. 2026-10-14) repiten la revalorización con el IPC sin añadir medidas.
+partido: pp
+tema: pensiones
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: revalorización
+    resumen: >-
+      Se compromete a actualizar conforme al IPC las pensiones actuales y a garantizar lo mismo a los
+      más jóvenes.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - subtema: sostenibilidad
+    resumen: >-
+      Plantea defender el pacto intergeneracional de las pensiones en el marco del Pacto de Toledo,
+      con los partidos políticos y los agentes sociales.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-espana-de-currantes
+  - pp-argumentario-donde-esta-el-dinero

@@ -1,0 +1,26 @@
+# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y el argumentario
+# del 24-oct. Revisados todos los "Hablemos Claro" de pp.es/actualidad/documentos/ desde el 30-sep.
+partido: pp
+tema: empleo
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: >-
+      Fija como objetivo económico que suba el salario medio, para lo que considera imprescindible
+      aumentar la productividad.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - subtema: desempleo
+    resumen: >-
+      Plantea que el subsidio no compita con el empleo y que trabajar compense más que no hacerlo.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - subtema: SMI
+    resumen: Propone aprobar una ley para que el salario mínimo interprofesional quede exento de IRPF.
+    fuente: pp-argumentario-donde-esta-el-dinero
+    pagina: 1
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-donde-esta-el-dinero
+  - pp-argumentario-espana-de-currantes
+  - pp-argumentario-menos-impuestos
