@@ -11,11 +11,17 @@ const { temas, fuente } = datos;
 const partidos = datos.partidos.filter((p) => !p.data.ficticio);
 const preguntas = await cargarPreguntas(temas);
 const nombre = new Map(partidos.map((p) => [p.id, p.data.nombre_corto]));
-const nombreTema = new Map(temas.map((t) => [t.id, t.data.nombre]));
 const temasTest = temas.filter((t) => preguntas.some((p) => p.data.tema.id === t.id));
+// Una página por tema; el número de cada pregunta sigue siendo global.
+const pasos = temasTest.map((t) => ({
+  tema: t,
+  preguntas: preguntas.flatMap((p, i) => (p.data.tema.id === t.id ? [{ p, n: i + 1 }] : [])),
+}));
 
 const cliente: DatosCliente = {
   partidos: partidos.map((p) => p.id),
+  nombres: Object.fromEntries(partidos.map((p) => [p.id, p.data.nombre_corto])),
+  temas: Object.fromEntries(temasTest.map((t) => [t.id, t.data.nombre])),
   preguntas: preguntas.map((p) => ({
     id: p.id,
     tema: p.data.tema.id,
@@ -46,14 +52,15 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     <div class="prosa intro">
       <h1>Test de afinidad</h1>
       <p class="entradilla">
-        {preguntas.length} preguntas sobre los {temasTest.length} temas de la web. Cada respuesta resume lo que propone al
-        menos un partido, sin decir cuál.
+        {preguntas.length} preguntas sobre los {temasTest.length} temas de la web, un tema por página. Cada respuesta
+        resume lo que propone al menos un partido, sin decir cuál.
       </p>
       <p>
         Elige la respuesta que más se acerque a lo que piensas e indica cuánto te importa la pregunta, de 5 (muy
         importante) a 0 (no te importa). Las preguntas con importancia 0 no cuentan y no hace falta responderlas. Al
         final verás qué porcentaje de tus respuestas coincide con las propuestas de cada partido, ponderado por la
-        importancia que les has dado, y qué partido propone cada respuesta, con enlace a su fuente.
+        importancia que les has dado, un mapa de cercanía con los partidos y qué partido propone cada respuesta, con
+        enlace a su fuente.
       </p>
       <p class="aviso">
         Es una medida de coincidencia con las propuestas publicadas, no una recomendación de voto. Varios partidos aún no
@@ -63,81 +70,126 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     </div>
 
     <form id="test" class="test" novalidate>
-      <div class="errores" id="errores" tabindex="-1" hidden>
-        <h2>Faltan respuestas</h2>
-        <p>Responde estas preguntas o ponles importancia 0:</p>
-        <ul></ul>
-      </div>
-
-      <ol class="preguntas">
-        {
-          preguntas.map((p, i) => (
-            <li class="pregunta" id={`p-${p.id}`} data-id={p.id}>
-              <p class="tema">{nombreTema.get(p.data.tema.id)}</p>
-              <h2 id={`t-${p.id}`}>
-                <span class="numero">{i + 1}.</span> {p.data.pregunta}
-              </h2>
-              <fieldset class="opciones" aria-labelledby={`t-${p.id}`} aria-describedby={`nota-${p.id}`}>
-                <ul>
-                  {p.data.opciones.map((o, j) => (
-                    <li>
-                      <label>
-                        <input type="radio" name={`r-${p.id}`} value={j} />
-                        <span>{o.texto}</span>
-                      </label>
-                    </li>
-                  ))}
-                </ul>
-              </fieldset>
-              <p class="nota" id={`nota-${p.id}`} aria-live="polite" />
-              <fieldset class="importancia">
-                <legend>
-                  ¿Cuánto te importa?<span class="sr-only"> Pregunta {i + 1}.</span>
-                </legend>
-                <div class="escala">
-                  {IMPORTANCIAS.map((n) => (
-                    <label>
-                      <input
-                        type="radio"
-                        name={`i-${p.id}`}
-                        value={n}
-                        checked={n === IMPORTANCIA_INICIAL}
-                        aria-label={n === 0 ? '0, no me importa' : n === 5 ? '5, muy importante' : String(n)}
-                      />
-                      <span aria-hidden="true">{n}</span>
-                    </label>
-                  ))}
-                  <span class="extremos" aria-hidden="true">
-                    <span>Nada</span>
-                    <span>Mucho</span>
-                  </span>
-                </div>
-              </fieldset>
-            </li>
-          ))
-        }
-      </ol>
-
-      <div class="barra-test">
-        <p class="estado" aria-live="polite">
+      <div class="progreso">
+        <p class="progreso__texto">
+          <span id="paso-texto">Tema 1 de {pasos.length}</span>
           <span id="progreso"></span>
-          <span class="guardado">Se guarda automáticamente en este navegador.</span>
         </p>
-        <button type="button" id="reiniciar">Reiniciar</button>
+        <div
+          class="progreso__barra"
+          id="progreso-barra"
+          role="progressbar"
+          aria-label="Preguntas respondidas"
+          aria-valuemin="0"
+          aria-valuemax={preguntas.length}
+          aria-valuenow="0"
+        >
+          <span></span>
+        </div>
       </div>
 
-      <div class="acciones">
-        <button type="submit" class="principal">Ver mi resultado</button>
+      {
+        pasos.map(({ tema, preguntas: delTema }, k) => (
+          <section class="paso" data-paso={k} aria-labelledby={`paso-${k}`} hidden={k > 0}>
+            <h2 class="paso__tema" id={`paso-${k}`} tabindex="-1">
+              {tema.data.nombre}
+            </h2>
+            <p class="falta" role="alert" hidden>
+              Responde las preguntas marcadas o ponles importancia 0 para seguir.
+            </p>
+            <ol class="preguntas">
+              {delTema.map(({ p, n }) => (
+                <li class="pregunta" id={`p-${p.id}`} data-id={p.id}>
+                  <h3 id={`t-${p.id}`}>
+                    <span class="numero">{n}.</span> {p.data.pregunta}
+                  </h3>
+                  <fieldset class="opciones" aria-labelledby={`t-${p.id}`} aria-describedby={`nota-${p.id}`}>
+                    <ul>
+                      {p.data.opciones.map((o, j) => (
+                        <li>
+                          <label>
+                            <input type="radio" name={`r-${p.id}`} value={j} />
+                            <span>{o.texto}</span>
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
+                  </fieldset>
+                  <p class="nota" id={`nota-${p.id}`} aria-live="polite" />
+                  <fieldset class="importancia">
+                    <legend>
+                      ¿Cuánto te importa?<span class="sr-only"> Pregunta {n}.</span>
+                    </legend>
+                    <div class="escala">
+                      {IMPORTANCIAS.map((v) => (
+                        <label>
+                          <input
+                            type="radio"
+                            name={`i-${p.id}`}
+                            value={v}
+                            checked={v === IMPORTANCIA_INICIAL}
+                            aria-label={v === 0 ? '0, no me importa' : v === 5 ? '5, muy importante' : String(v)}
+                          />
+                          <span aria-hidden="true">{v}</span>
+                        </label>
+                      ))}
+                      <span class="extremos" aria-hidden="true">
+                        <span>Nada</span>
+                        <span>Mucho</span>
+                      </span>
+                    </div>
+                  </fieldset>
+                </li>
+              ))}
+            </ol>
+          </section>
+        ))
+      }
+
+      <div class="navegacion">
+        <button type="button" id="anterior" disabled>Anterior</button>
+        <button type="submit" class="principal" id="siguiente">Siguiente</button>
+      </div>
+
+      <div class="pie-test">
+        <p class="guardado">Se guarda automáticamente en este navegador.</p>
+        <button type="button" id="reiniciar">Reiniciar</button>
       </div>
     </form>
 
     <section id="resultado" class="resultado" aria-labelledby="resultado-titulo" tabindex="-1" hidden>
       <h2 id="resultado-titulo">Tu resultado</h2>
+
+      <div class="perfil" id="perfil">
+        <p class="perfil__etiqueta" id="perfil-etiqueta"></p>
+        <p class="perfil__mensaje" id="perfil-mensaje"></p>
+        <p class="perfil__prioridades" id="perfil-prioridades" hidden></p>
+      </div>
+
+      <figure class="mapa" id="mapa" hidden>
+        <figcaption>
+          <strong>Mapa de cercanía</strong>
+          <span class="ayuda">
+            Cuanto más cerca dos puntos, más coinciden sus respuestas. Los partidos se colocan según cuánto coinciden sus
+            propuestas entre sí, y tu punto según tu afinidad con cada uno. Los ejes no significan nada (ni izquierda ni
+            derecha): solo cuentan las distancias. Con pocas preguntas en común, la posición es aproximada.
+          </span>
+        </figcaption>
+        <svg id="mapa-svg" viewBox="0 0 600 420" role="img" aria-labelledby="mapa-desc">
+          <desc id="mapa-desc"></desc>
+        </svg>
+      </figure>
+
+      <div class="tarjeta" id="tarjeta">
+        <button type="button" id="tarjeta-boton">Compartir imagen</button>
+        <p class="ayuda" id="tarjeta-aviso" aria-live="polite"></p>
+      </div>
+
       <p class="prosa ayuda" id="resumen"></p>
       <p class="prosa ayuda">
         Porcentaje del peso de las respuestas que coincide con las propuestas de cada partido, contando solo las preguntas
         en las que ese partido tiene alguna propuesta. Los partidos aparecen en el orden fijo de la web, no ordenados por
-        el resultado.
+        el resultado. Para señalar al más cercano solo cuentan los partidos con propuestas en al menos la mitad del peso.
       </p>
 
       <ul class="afinidad">
@@ -257,8 +309,10 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
 
 <script>
   import type { DatosCliente } from '../lib/test';
+  import { mapa, perfil, prioridades, type AfinidadPartido, type Perfil } from '../lib/test-perfil';
   import {
     CLAVE_ESTADO,
+    CLAVE_PASO,
     PREFIJO_COMPARTIR,
     codificar,
     decodificar,
@@ -268,9 +322,11 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
 
   const datos = JSON.parse(document.getElementById('datos-test')?.textContent ?? '{}') as DatosCliente;
   const form = document.querySelector<HTMLFormElement>('#test');
-  const errores = document.querySelector<HTMLElement>('#errores');
   const resultado = document.querySelector<HTMLElement>('#resultado');
-  if (!form || !errores || !resultado) throw new Error('Faltan elementos del test');
+  const intro = document.querySelector<HTMLElement>('.intro');
+  if (!form || !resultado) throw new Error('Faltan elementos del test');
+  const pasos = [...form.querySelectorAll<HTMLElement>('.paso')];
+  const nombrePartido = (id: string): string => datos.nombres[id] ?? id;
 
   const bloque = (id: string): HTMLElement | null => form.querySelector(`.pregunta[data-id="${CSS.escape(id)}"]`);
 
@@ -297,6 +353,54 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     nota.textContent = cero ? 'Importancia 0: esta pregunta no cuenta en el resultado.' : '';
     if (cero) el.classList.remove('pregunta--falta');
   };
+
+  // — Páginas: una por tema —
+
+  let actual = 0;
+  const anterior = document.querySelector<HTMLButtonElement>('#anterior');
+  const siguiente = document.querySelector<HTMLButtonElement>('#siguiente');
+  const textoPaso = document.querySelector<HTMLElement>('#paso-texto');
+
+  const idsDe = (paso: HTMLElement): string[] =>
+    [...paso.querySelectorAll<HTMLElement>('.pregunta')].map((el) => el.dataset.id ?? '');
+
+  /** Preguntas de la página que cuentan y siguen sin respuesta. */
+  const faltanEn = (paso: HTMLElement, estado: Estado): string[] =>
+    idsDe(paso).filter((id) => (estado[id]?.importancia ?? 0) > 0 && estado[id]?.respuesta === null);
+
+  const irA = (k: number, enfocar = true): void => {
+    actual = Math.min(Math.max(k, 0), pasos.length - 1);
+    pasos.forEach((paso, i) => {
+      paso.hidden = i !== actual;
+    });
+    if (anterior) anterior.disabled = actual === 0;
+    if (siguiente) siguiente.textContent = actual === pasos.length - 1 ? 'Ver mi resultado' : 'Siguiente';
+    if (textoPaso) textoPaso.textContent = `Tema ${actual + 1} de ${pasos.length}`;
+    try {
+      localStorage.setItem(CLAVE_PASO, String(actual));
+    } catch {
+      /* almacenamiento no disponible */
+    }
+    if (!enfocar) return;
+    form.scrollIntoView({ block: 'start' });
+    pasos[actual]?.querySelector<HTMLElement>('.paso__tema')?.focus({ preventScroll: true });
+  };
+
+  /** Marca lo que falta en la página; devuelve si se puede seguir. */
+  const validar = (paso: HTMLElement): boolean => {
+    const faltan = faltanEn(paso, leer());
+    for (const id of idsDe(paso)) bloque(id)?.classList.toggle('pregunta--falta', faltan.includes(id));
+    const aviso = paso.querySelector<HTMLElement>('.falta');
+    if (aviso) aviso.hidden = faltan.length === 0;
+    if (faltan.length > 0) {
+      const primera = bloque(faltan[0] ?? '');
+      primera?.scrollIntoView({ block: 'center' });
+      primera?.querySelector<HTMLInputElement>('.opciones input')?.focus({ preventScroll: true });
+    }
+    return faltan.length === 0;
+  };
+
+  anterior?.addEventListener('click', () => irA(actual - 1));
 
   // — Guardar en este navegador (opcional; si falla, el test funciona igual) —
 
@@ -328,20 +432,34 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   };
 
   const textoProgreso = document.querySelector<HTMLElement>('#progreso');
+  const barraProgreso = document.querySelector<HTMLElement>('#progreso-barra');
   const pintarProgreso = (): void => {
     const { respondidas, total } = progreso(leer());
-    if (textoProgreso) textoProgreso.textContent = `${respondidas} de ${total} respondidas.`;
+    if (textoProgreso) textoProgreso.textContent = `${respondidas} de ${total} preguntas`;
+    if (barraProgreso) {
+      barraProgreso.setAttribute('aria-valuenow', String(respondidas));
+      const relleno = barraProgreso.querySelector<HTMLElement>('span');
+      if (relleno) relleno.style.width = `${total > 0 ? (100 * respondidas) / total : 0}%`;
+    }
   };
 
   restaurar();
   datos.preguntas.forEach(({ id }) => actualizar(id));
   pintarProgreso();
+  try {
+    irA(Number(localStorage.getItem(CLAVE_PASO) ?? 0) || 0, false);
+  } catch {
+    irA(0, false);
+  }
 
   form.addEventListener('change', (e) => {
     const id = e.target instanceof HTMLInputElement ? e.target.closest<HTMLElement>('.pregunta')?.dataset.id : undefined;
     if (id) {
       actualizar(id);
       if (leer()[id]?.respuesta !== null) bloque(id)?.classList.remove('pregunta--falta');
+      const paso = pasos[actual];
+      const aviso = paso?.querySelector<HTMLElement>('.falta');
+      if (paso && aviso && faltanEn(paso, leer()).length === 0) aviso.hidden = true;
     }
     guardar();
     pintarProgreso();
@@ -360,13 +478,17 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
       actualizar(id);
       bloque(id)?.classList.remove('pregunta--falta');
     });
-    errores.hidden = true;
-    resultado.hidden = true;
+    form.querySelectorAll<HTMLElement>('.falta').forEach((el) => {
+      el.hidden = true;
+    });
+    irA(0);
   });
 
   document.querySelector('#volver')?.addEventListener('click', () => {
-    form.scrollIntoView();
-    form.querySelector<HTMLInputElement>('input')?.focus({ preventScroll: true });
+    resultado.hidden = true;
+    form.hidden = false;
+    if (intro) intro.hidden = false;
+    irA(0);
   });
 
   // — Cálculo —
@@ -405,14 +527,208 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     return { global, porTema, pesoTotal, cuentan };
   };
 
+  // — Perfil y mapa de cercanía —
+
+  let ultimo: { perfil: Perfil; prioridades: string[]; puntos: ReturnType<typeof mapa> } | null = null;
+
+  const SVG = 'http://www.w3.org/2000/svg';
+  const ANCHO = 600;
+  const ALTO = 420;
+  const MARGEN = 56;
+
+  /** Lleva los puntos del mapa al rectángulo dado, con la misma escala en los dos ejes. */
+  const encajar = (
+    puntos: NonNullable<ReturnType<typeof mapa>>,
+    ancho: number,
+    alto: number,
+    margen: number,
+  ): { id: string; x: number; y: number }[] => {
+    const todos = [...puntos.partidos, puntos.persona];
+    const xs = todos.map((p) => p.x);
+    const ys = todos.map((p) => p.y);
+    const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+    const escala = Math.min((ancho - 2 * margen) / (x1 - x0 || 1), (alto - 2 * margen) / (y1 - y0 || 1));
+    const dx = (ancho - escala * (x1 - x0)) / 2;
+    const dy = (alto - escala * (y1 - y0)) / 2;
+    return todos.map((p) => ({ id: p.id, x: dx + escala * (p.x - x0), y: dy + escala * (p.y - y0) }));
+  };
+
+  const pintarMapa = (puntos: ReturnType<typeof mapa>, nombre?: string): void => {
+    const figura = document.querySelector<HTMLElement>('#mapa');
+    const svg = document.querySelector<SVGSVGElement>('#mapa-svg');
+    const desc = svg?.querySelector('desc');
+    if (!figura || !svg || !desc) return;
+    figura.hidden = puntos === null;
+    svg.querySelectorAll('g').forEach((g) => g.remove());
+    if (!puntos) return;
+    const persona = nombre ?? 'Tú';
+    for (const p of encajar(puntos, ANCHO, ALTO, MARGEN)) {
+      const tuyo = p.id === 'persona';
+      const g = document.createElementNS(SVG, 'g');
+      g.setAttribute('class', tuyo ? 'mapa__persona' : 'mapa__partido');
+      const c = document.createElementNS(SVG, 'circle');
+      c.setAttribute('cx', String(p.x));
+      c.setAttribute('cy', String(p.y));
+      c.setAttribute('r', tuyo ? '10' : '7');
+      const t = document.createElementNS(SVG, 'text');
+      const derecha = p.x < ANCHO - 120;
+      t.setAttribute('x', String(p.x + (derecha ? 14 : -14)));
+      t.setAttribute('y', String(p.y + 5));
+      t.setAttribute('text-anchor', derecha ? 'start' : 'end');
+      t.textContent = tuyo ? persona : nombrePartido(p.id);
+      g.append(c, t);
+      svg.append(g);
+    }
+    const cercanos = [...puntos.partidos]
+      .sort(
+        (a, b) =>
+          Math.hypot(a.x - puntos.persona.x, a.y - puntos.persona.y) -
+          Math.hypot(b.x - puntos.persona.x, b.y - puntos.persona.y),
+      )
+      .map((p) => nombrePartido(p.id));
+    desc.textContent = `Partidos en el mapa, del más cercano al más lejano al punto de ${persona === 'Tú' ? 'tus respuestas' : persona}: ${cercanos.join(', ')}.`;
+  };
+
+  const pintarPerfil = (estado: Estado, afinidades: AfinidadPartido[], nombre?: string): void => {
+    const p = perfil(afinidades, estado, nombrePartido);
+    const temas = prioridades(estado, datos.preguntas, Object.keys(datos.temas)).map((t) => datos.temas[t] ?? t);
+    const puntos = mapa(datos.preguntas, afinidades);
+    ultimo = { perfil: p, prioridades: temas, puntos };
+    const etiqueta = document.querySelector<HTMLElement>('#perfil-etiqueta');
+    const mensaje = document.querySelector<HTMLElement>('#perfil-mensaje');
+    const lista = document.querySelector<HTMLElement>('#perfil-prioridades');
+    if (etiqueta) etiqueta.textContent = p.etiqueta;
+    if (mensaje) mensaje.textContent = nombre ? `${nombre}: ${p.mensaje}` : p.mensaje;
+    if (lista) {
+      lista.hidden = temas.length === 0;
+      lista.textContent = `${nombre ? `Lo que más le importa a ${nombre}` : 'Lo que más te importa'}: ${temas.join(', ')}.`;
+    }
+    pintarMapa(puntos, nombre);
+  };
+
+  // — Imagen para compartir (se dibuja en el navegador; no sale de él hasta que la compartes) —
+
+  const lineas = (ctx: CanvasRenderingContext2D, texto: string, ancho: number): string[] => {
+    const salida: string[] = [];
+    let linea = '';
+    for (const palabra of texto.split(' ')) {
+      const prueba = linea ? `${linea} ${palabra}` : palabra;
+      if (ctx.measureText(prueba).width > ancho && linea) {
+        salida.push(linea);
+        linea = palabra;
+      } else linea = prueba;
+    }
+    if (linea) salida.push(linea);
+    return salida;
+  };
+
+  const dibujarTarjeta = (): HTMLCanvasElement | null => {
+    if (!ultimo) return null;
+    const W = 1080;
+    const H = 1350;
+    const lienzo = document.createElement('canvas');
+    lienzo.width = W;
+    lienzo.height = H;
+    const ctx = lienzo.getContext('2d');
+    if (!ctx) return null;
+    const fuente = getComputedStyle(document.body).fontFamily;
+    const [texto, apagado, acento, regla] = ['#0a0a0b', '#52525b', '#2f3fc4', '#e4e4e7'];
+    ctx.fillStyle = '#fafafa';
+    ctx.fillRect(0, 0, W, H);
+    const m = 80;
+    let y = m + 40;
+    ctx.fillStyle = apagado;
+    ctx.font = `600 34px ${fuente}`;
+    ctx.fillText('Test de afinidad · Elecciones 29-N-2026', m, y);
+    y += 90;
+    ctx.fillStyle = acento;
+    ctx.font = `700 76px ${fuente}`;
+    ctx.fillText(ultimo.perfil.etiqueta, m, y);
+    y += 70;
+    ctx.fillStyle = texto;
+    ctx.font = `400 40px ${fuente}`;
+    for (const l of lineas(ctx, ultimo.perfil.mensaje, W - 2 * m)) {
+      ctx.fillText(l, m, y);
+      y += 54;
+    }
+    if (ultimo.prioridades.length > 0) {
+      y += 16;
+      ctx.fillStyle = apagado;
+      ctx.font = `400 32px ${fuente}`;
+      for (const l of lineas(ctx, `Lo que más me importa: ${ultimo.prioridades.join(', ')}.`, W - 2 * m)) {
+        ctx.fillText(l, m, y);
+        y += 44;
+      }
+    }
+    const pie = H - m;
+    if (ultimo.puntos) {
+      const top = y + 20;
+      const alto = pie - 110 - top;
+      ctx.strokeStyle = regla;
+      ctx.lineWidth = 2;
+      ctx.strokeRect(m, top, W - 2 * m, alto);
+      for (const p of encajar(ultimo.puntos, W - 2 * m, alto, 90)) {
+        const tuyo = p.id === 'persona';
+        const x = m + p.x;
+        const py = top + p.y;
+        ctx.beginPath();
+        ctx.arc(x, py, tuyo ? 18 : 12, 0, 2 * Math.PI);
+        ctx.fillStyle = tuyo ? acento : '#8b8b94';
+        ctx.fill();
+        ctx.fillStyle = tuyo ? acento : texto;
+        ctx.font = `${tuyo ? 700 : 500} 32px ${fuente}`;
+        const derecha = p.x < W - 2 * m - 220;
+        ctx.textAlign = derecha ? 'left' : 'right';
+        ctx.fillText(tuyo ? 'Yo' : nombrePartido(p.id), x + (derecha ? 26 : -26), py + 11);
+        ctx.textAlign = 'left';
+      }
+    }
+    ctx.fillStyle = apagado;
+    ctx.font = `400 28px ${fuente}`;
+    ctx.fillText('Coincidencia con propuestas publicadas, no recomendación de voto.', m, pie - 40);
+    ctx.fillStyle = acento;
+    ctx.font = `600 30px ${fuente}`;
+    ctx.fillText(`Haz el test: ${location.host}/test`, m, pie);
+    return lienzo;
+  };
+
+  document.querySelector('#tarjeta-boton')?.addEventListener('click', async () => {
+    const aviso = document.querySelector<HTMLElement>('#tarjeta-aviso');
+    const lienzo = dibujarTarjeta();
+    if (!lienzo) return;
+    const blob = await new Promise<Blob | null>((ok) => lienzo.toBlob(ok, 'image/png'));
+    if (!blob) return;
+    const archivo = new File([blob], 'mi-afinidad-29n.png', { type: 'image/png' });
+    if (navigator.canShare?.({ files: [archivo] })) {
+      try {
+        await navigator.share({ files: [archivo], title: 'Mi test de afinidad 29-N' });
+        return;
+      } catch (e) {
+        if (e instanceof DOMException && e.name === 'AbortError') return;
+      }
+    }
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = archivo.name;
+    a.click();
+    URL.revokeObjectURL(url);
+    if (aviso) aviso.textContent = 'Imagen descargada.';
+  });
+
   /** `nombre` solo en un resultado compartido. */
   const mostrar = (estado: Estado, nombre?: string): void => {
     const ajeno = nombre !== undefined;
     const titulo = resultado.querySelector<HTMLElement>('#resultado-titulo');
     if (titulo) titulo.textContent = ajeno ? `Resultado de ${nombre}` : 'Tu resultado';
-    for (const id of ['#acciones-propias', '#compartir'])
+    for (const id of ['#acciones-propias', '#compartir', '#tarjeta'])
       resultado.querySelector<HTMLElement>(id)?.toggleAttribute('hidden', ajeno);
     const { global, porTema, pesoTotal, cuentan } = calcular(estado);
+    const afinidades: AfinidadPartido[] = datos.partidos.map((partido) => {
+      const s = global.get(partido) ?? vacia();
+      return { partido, pct: pct(s), parte: pesoTotal > 0 ? s.peso / pesoTotal : 0 };
+    });
+    pintarPerfil(estado, afinidades, nombre);
     const resumen = resultado.querySelector<HTMLElement>('#resumen');
     if (resumen)
       resumen.textContent =
@@ -470,6 +786,8 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
 
     resultado.hidden = false;
     if (ajeno) return;
+    form.hidden = true;
+    if (intro) intro.hidden = true;
     resultado.scrollIntoView();
     resultado.focus({ preventScroll: true });
   };
@@ -539,37 +857,24 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     if (location.hash.startsWith(PREFIJO_COMPARTIR)) location.reload();
   });
 
+  // Enter o «Siguiente»: avanza si la página está completa; en la última, muestra el resultado.
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const estado = leer();
-    const faltan = datos.preguntas
-      .map((q, i) => ({ ...q, n: i + 1 }))
-      .filter((q) => (estado[q.id]?.importancia ?? 0) > 0 && estado[q.id]?.respuesta === null);
-    for (const q of datos.preguntas)
-      bloque(q.id)?.classList.toggle(
-        'pregunta--falta',
-        faltan.some((f) => f.id === q.id),
-      );
-    if (faltan.length > 0) {
-      const lista = errores.querySelector('ul');
-      if (lista)
-        lista.replaceChildren(
-          ...faltan.map((q) => {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.href = `#p-${q.id}`;
-            a.textContent = `Pregunta ${q.n}: ${bloque(q.id)?.querySelector('h2')?.textContent?.replace(/^\s*\d+\.\s*/, '') ?? ''}`;
-            li.append(a);
-            return li;
-          }),
-        );
-      resultado.hidden = true;
-      errores.hidden = false;
-      errores.scrollIntoView();
-      errores.focus({ preventScroll: true });
+    const paso = pasos[actual];
+    if (!paso || !validar(paso)) return;
+    if (actual < pasos.length - 1) {
+      irA(actual + 1);
       return;
     }
-    errores.hidden = true;
+    // Por si se restauró un estado con huecos en páginas anteriores.
+    const estado = leer();
+    const pendiente = pasos.findIndex((p) => faltanEn(p, estado).length > 0);
+    if (pendiente >= 0) {
+      irA(pendiente);
+      const p = pasos[pendiente];
+      if (p) validar(p);
+      return;
+    }
     mostrar(estado);
   });
 </script>
@@ -656,42 +961,120 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     margin-top: var(--space-2);
   }
 
-  /* — Barra fija mientras se responde — */
+  /* — Progreso y navegación entre páginas — */
 
-  .barra-test {
+  .test {
+    max-width: 52rem;
+    scroll-margin-top: var(--header-h);
+  }
+
+  .progreso {
     position: sticky;
-    bottom: 0;
+    /* Debajo de la cabecera fija del sitio. */
+    top: var(--header-h);
     z-index: 10;
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+    padding: var(--space-3) 0;
+    background: var(--bg);
+  }
+
+  .progreso__texto {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    font-size: var(--step--1);
+    font-variant-numeric: tabular-nums;
+  }
+
+  #paso-texto {
+    font-weight: 600;
+  }
+
+  #progreso {
+    color: var(--muted);
+  }
+
+  .progreso__barra {
+    height: 0.5rem;
+    background: var(--head);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .progreso__barra > span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--link);
+    transition: width 0.3s ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .progreso__barra > span {
+      transition: none;
+    }
+  }
+
+  .paso {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .paso[hidden] {
+    display: none;
+  }
+
+  .paso__tema {
+    font-size: var(--step-2);
+  }
+
+  .paso__tema:focus {
+    outline: none;
+  }
+
+  .falta {
+    padding: var(--space-3) var(--space-4);
+    background: var(--surface);
+    border: 2px solid var(--parcial);
+    border-radius: var(--radius);
+  }
+
+  .falta[hidden] {
+    display: none;
+  }
+
+  .navegacion {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-top: var(--space-5);
+  }
+
+  .navegacion button:disabled {
+    visibility: hidden;
+  }
+
+  .pie-test {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: var(--space-2) var(--space-4);
-    max-width: 52rem;
-    margin-top: var(--space-4);
-    padding: var(--space-2) var(--space-4);
-    background: color-mix(in srgb, var(--surface) 94%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-hover);
-  }
-
-  .estado {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 var(--space-2);
+    margin-top: var(--space-5);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--rule);
     font-size: var(--step--1);
-  }
-
-  #progreso {
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
   }
 
   .guardado {
     color: var(--muted);
+  }
+
+  .test[hidden] {
+    display: none;
   }
 
   /* — Compartir — */
@@ -743,37 +1126,11 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     font-size: var(--step--1);
   }
 
-  /* — Errores — */
-
-  .errores {
-    display: grid;
-    gap: var(--space-2);
-    max-width: var(--measure);
-    margin-bottom: var(--space-5);
-    padding: var(--space-4);
-    background: var(--surface);
-    border: 2px solid var(--parcial);
-    border-radius: var(--radius);
-  }
-
-  .errores[hidden] {
-    display: none;
-  }
-
-  .errores h2 {
-    font-size: var(--step-1);
-  }
-
-  .errores ul {
-    padding-left: 1.1em;
-  }
-
   /* — Preguntas — */
 
   .preguntas {
     display: grid;
     gap: var(--space-4);
-    max-width: 52rem;
     padding: 0;
     list-style: none;
   }
@@ -792,14 +1149,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     border: 2px solid var(--parcial);
   }
 
-  .tema {
-    color: var(--muted);
-    font-size: var(--step--1);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-  }
-
-  .pregunta h2 {
+  .pregunta h3 {
     font-size: var(--step-1);
   }
 
@@ -943,6 +1293,87 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
 
   .resultado > h2 {
     font-size: var(--step-2);
+  }
+
+  /* — Perfil y mapa — */
+
+  .perfil {
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .perfil__etiqueta {
+    color: var(--link);
+    font-size: var(--step-2);
+    font-weight: 700;
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .perfil__mensaje {
+    font-size: var(--step-1);
+    line-height: 1.4;
+  }
+
+  .perfil__prioridades {
+    color: var(--muted);
+  }
+
+  .perfil__prioridades[hidden],
+  .mapa[hidden],
+  .tarjeta[hidden] {
+    display: none;
+  }
+
+  .mapa {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+    padding: var(--space-4) var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .mapa figcaption {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .mapa svg {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+  }
+
+  .mapa :global(.mapa__partido circle) {
+    fill: var(--border-strong);
+  }
+
+  .mapa :global(.mapa__partido text) {
+    fill: var(--text);
+    font-size: 15px;
+  }
+
+  .mapa :global(.mapa__persona circle) {
+    fill: var(--link);
+  }
+
+  .mapa :global(.mapa__persona text) {
+    fill: var(--link);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .tarjeta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
   }
 
   .afinidad {
