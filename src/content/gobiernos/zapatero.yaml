@@ -55,7 +55,7 @@ contexto:
 economia:
   macro:
     - titulo: Crecimiento e inflación (2004-2011)
-      descripcion: "Según Eurostat, el PIB real creció un 3,1 % en 2004, un 3,6 % en 2005, un 4,0 % en 2006 y un 3,5 % en 2007; después, un 0,8 % en 2008, un −3,8 % en 2009, un 0,1 % en 2010 y un −0,6 % en 2011. La inflación media (IPCA) fue del 2,8 % en 2007, del 4,1 % en 2008 y del −0,2 % en 2009."
+      descripcion: "PIB real por años (Eurostat): 2004, 3,1 %; 2005, 3,6 %; 2006, 4,0 %; 2007, 3,5 %; 2008, 0,8 %; 2009, −3,8 %; 2010, 0,1 %; 2011, −0,6 %. La inflación media (IPCA) fue del 2,8 % en 2007, del 4,1 % en 2008 y del −0,2 % en 2009."
       fuentes:
         - medio: "Eurostat"
           titulo: "Gross domestic product (GDP) and main components - annual data (nama_10_gdp)"
@@ -78,6 +78,25 @@ economia:
         - medio: "Eurostat"
           titulo: "Government deficit/surplus, debt and associated data (gov_10dd_edpt1)"
           url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+          tipo: institucion
+    - titulo: "Otras métricas: PIB por habitante, empleo y saldo exterior (2004-2011)"
+      descripcion: "PIB real por habitante (variación anual): 2004, 1,5 %; 2005, 1,6 %; 2006, 2,4 %; 2007, 1,5 %; 2008, −0,9 %; 2009, −4,6 %; 2010, −0,3 %; 2011, −1,0 %. Tasa de empleo: 65,2 % en 2004, 69,7 % en 2007 y 62,0 % en 2011. Paro juvenil: 22,5 %, 18,1 % y 46,2 %. Saldo exterior: −5,4 % del PIB en 2004, −9,4 % en 2007 y −2,6 % en 2011. Son datos anuales de Eurostat: la tasa de empleo es la de 20 a 64 años, el paro juvenil el de menores de 25 años y el saldo exterior la balanza por cuenta corriente en porcentaje del PIB."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "GDP and main components per capita - annual data (nama_10_pc)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_pc/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Employment rates by citizenship (lfsa_ergan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_ergan/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Current account balance - annual data (tipsbp20)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/tipsbp20/default/table?lang=en"
           tipo: institucion
   percepcion:
     - titulo: Valoración de la economía en el CIS (mayo de 2009)

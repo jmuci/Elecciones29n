@@ -70,8 +70,8 @@ contexto:
           tipo: institucion
 economia:
   macro:
-    - titulo: Crecimiento e inflación (2012-2017)
-      descripcion: "Según Eurostat, el PIB real varió un −2,9 % en 2012 y un −1,4 % en 2013, y creció un 1,5 % en 2014, un 4,1 % en 2015 y un 2,9 % en 2016 y 2017. La inflación media (IPCA) fue del 2,4 % en 2012 y del 1,5 % en 2013, negativa en 2014, 2015 y 2016 (−0,2 %, −0,6 % y −0,3 %) y del 2,0 % en 2017."
+    - titulo: Crecimiento e inflación (2011-2018)
+      descripcion: "PIB real por años (Eurostat): 2011, −0,6 % (el Gobierno empezó en diciembre); 2012, −2,9 %; 2013, −1,4 %; 2014, 1,5 %; 2015, 4,1 %; 2016, 2,9 %; 2017, 2,9 %; 2018, 2,4 % (el Gobierno terminó en junio). La inflación media (IPCA) fue del 2,4 % en 2012 y del 1,5 % en 2013, negativa en 2014, 2015 y 2016 (−0,2 %, −0,6 % y −0,3 %) y del 2,0 % en 2017."
       fuentes:
         - medio: "Eurostat"
           titulo: "Gross domestic product (GDP) and main components - annual data (nama_10_gdp)"
@@ -94,6 +94,25 @@ economia:
         - medio: "Eurostat"
           titulo: "Government deficit/surplus, debt and associated data (gov_10dd_edpt1)"
           url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+          tipo: institucion
+    - titulo: "Otras métricas: PIB por habitante, empleo y saldo exterior (2011-2018)"
+      descripcion: "PIB real por habitante (variación anual): 2012, −2,9 %; 2013, −1,1 %; 2014, 1,8 %; 2015, 4,2 %; 2016, 2,8 %; 2017, 2,7 %; 2018, 1,9 %. Tasa de empleo: 62,0 % en 2011, 58,6 % en 2013 y 67,0 % en 2018. Paro juvenil: 46,2 %, 55,5 % y 34,3 %. Saldo exterior: −2,6 % del PIB en 2011, 2,1 % en 2013 y 1,9 % en 2018. Son datos anuales de Eurostat: la tasa de empleo es la de 20 a 64 años, el paro juvenil el de menores de 25 años y el saldo exterior la balanza por cuenta corriente en porcentaje del PIB."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "GDP and main components per capita - annual data (nama_10_pc)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_pc/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Employment rates by citizenship (lfsa_ergan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_ergan/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Current account balance - annual data (tipsbp20)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/tipsbp20/default/table?lang=en"
           tipo: institucion
   percepcion:
     - titulo: Valoración de la economía en el CIS (2014 y 2018)

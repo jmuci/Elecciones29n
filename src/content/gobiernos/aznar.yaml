@@ -69,8 +69,8 @@ contexto:
           tipo: institucion
 economia:
   macro:
-    - titulo: Crecimiento e inflación (2000-2003)
-      descripcion: "Según Eurostat, el PIB real creció un 5,2 % en 2000, un 3,9 % en 2001, un 2,8 % en 2002 y un 2,9 % en 2003. La inflación media (IPCA) fue del 3,5 %, 2,8 %, 3,6 % y 3,1 % en esos años."
+    - titulo: Crecimiento e inflación (1996-2003)
+      descripcion: "PIB real por años (Eurostat): 1996, 2,6 %; 1997, 3,6 %; 1998, 4,3 %; 1999, 4,4 %; 2000, 5,2 %; 2001, 3,9 %; 2002, 2,8 %; 2003, 2,9 %. La inflación media (IPCA) fue del 3,5 %, 2,8 %, 3,6 % y 3,1 % en esos años."
       fuentes:
         - medio: "Eurostat"
           titulo: "Gross domestic product (GDP) and main components - annual data (nama_10_gdp)"
@@ -93,6 +93,25 @@ economia:
         - medio: "Eurostat"
           titulo: "Government deficit/surplus, debt and associated data (gov_10dd_edpt1)"
           url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+          tipo: institucion
+    - titulo: "Otras métricas: PIB por habitante, empleo y saldo exterior (1996-2003)"
+      descripcion: "PIB real por habitante (variación anual): 1996, 2,2 %; 1997, 3,2 %; 1998, 3,9 %; 1999, 4,0 %; 2000, 4,7 %; 2001, 3,4 %; 2002, 1,1 %; 2003, 1,1 %. Tasa de empleo: 52,5 % en 1996, 60,6 % en 2000 y 64,3 % en 2003. Paro juvenil: 41,8 %, 25,3 % y 22,3 %. Saldo exterior: −0,8 % del PIB en 1996, −4,2 % en 2000 y −3,8 % en 2003. Son datos anuales de Eurostat: la tasa de empleo es la de 20 a 64 años, el paro juvenil el de menores de 25 años y el saldo exterior la balanza por cuenta corriente en porcentaje del PIB."
+      fuentes:
+        - medio: "Eurostat"
+          titulo: "GDP and main components per capita - annual data (nama_10_pc)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/nama_10_pc/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Employment rates by citizenship (lfsa_ergan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_ergan/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+          tipo: institucion
+        - medio: "Eurostat"
+          titulo: "Current account balance - annual data (tipsbp20)"
+          url: "https://ec.europa.eu/eurostat/databrowser/view/tipsbp20/default/table?lang=en"
           tipo: institucion
   percepcion:
     - titulo: Valoración de la economía en el CIS (febrero de 2004)
