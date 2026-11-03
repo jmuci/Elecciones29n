@@ -1,0 +1,22 @@
+# Fase 4: se resume "Recuperar España" (2026). El Programa económico y de vivienda (2025) no se cita
+# aquí: "Recuperar España" ya trata el tema (regla 4, CONTRIBUTING §1.4).
+partido: vox
+tema: familia
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: ayudas por hijo
+    resumen: >-
+      Propone incrementar de forma sustancial las ayudas, deducciones y bonificaciones a las familias,
+      con reducciones de impuestos según el número de hijos.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - subtema: conciliación
+    resumen: >-
+      Plantea que los españoles tengan acceso preferente a las plazas de guardería, a los bonos de
+      comedor y a las ayudas y prestaciones sociales.
+    fuente: vox-recuperar-espana
+    pagina: 3
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

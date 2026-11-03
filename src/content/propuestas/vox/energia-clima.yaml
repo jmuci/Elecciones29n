@@ -1,0 +1,28 @@
+# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026).
+# El Programa económico y de vivienda (2025) trata también la energía (pp. 40-42), pero no se cita:
+# Vox ya ha publicado medidas de energía para el 29N y la regla 4 de CONTRIBUTING solo admite el
+# documento anterior si no hay nada del 29N sobre el tema.
+partido: vox
+tema: energia-clima
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: precio de la luz
+    resumen: Propone energía a precio de coste para familias y empresas.
+    fuente: vox-recuperar-espana
+    pagina: 4
+  - subtema: nuclear
+    resumen: >-
+      Propone recuperar el Plan Nuclear Nacional y suprimir los topes regulatorios a la inversión en
+      redes eléctricas.
+    fuente: vox-recuperar-espana
+    pagina: 4
+  - subtema: agua
+    resumen: >-
+      Plantea un plan nacional del agua con interconexión de cuencas, modernización de regadíos y
+      producción de energía.
+    fuente: vox-recuperar-espana
+    pagina: 4
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

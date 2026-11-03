@@ -1,0 +1,26 @@
+# Fase 4: no hay programa electoral publicado (voxespana.es/programa/programa-electoral-vox da 404);
+# se resume "Recuperar España" (2026). El Programa económico y de vivienda (2025) no trata el tema.
+partido: vox
+tema: exterior-defensa
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: [política exterior, soberanía e integridad territorial]
+    resumen: Propone suspender los acuerdos con Marruecos y militarizar la frontera de Ceuta.
+    fuente: vox-recuperar-espana
+    pagina: 3
+  - subtema: comercio exterior
+    resumen: >-
+      Propone suspender el acuerdo con Mercosur y los tratados internacionales que, según el partido,
+      obligan a los productores españoles a competir en situación desigual.
+    fuente: vox-recuperar-espana
+    pagina: 4
+  - subtema: cooperación al desarrollo
+    resumen: >-
+      Propone poner fin a la cooperación al desarrollo con los países que no colaboren en la gestión
+      de los flujos migratorios.
+    fuente: vox-recuperar-espana
+    pagina: 5
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

@@ -1,0 +1,43 @@
+# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y los argumentarios
+# "Por fin, España", "España volverá a contar en el mundo" y "España, primero". Las notas de prensa
+# de pp.es no se citan mientras haya documentos del partido que traten el tema.
+partido: pp
+tema: exterior-defensa
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: soberanía e integridad territorial
+    resumen: >-
+      Se compromete a defender la soberanía nacional y la integridad territorial, con una respuesta
+      firme si se ponen a prueba.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+  - subtema: [UE, política exterior]
+    resumen: >-
+      Propone recuperar las alianzas rotas en la Unión Europea, en Hispanoamérica y con los aliados
+      históricos de España, y considera innegociable el apoyo a la paz y a la democracia en el mundo.
+    fuente: pp-contrato-con-espana
+    pagina: 4
+  - subtema: política exterior
+    resumen: >-
+      Plantea guiar la política exterior por el interés nacional, con el aval del Parlamento, y que el
+      Gobierno esté siempre con las democracias occidentales y los aliados históricos de España.
+    fuente: pp-argumentario-espana-volvera-a-contar
+    pagina: 1
+  - subtema: [Fuerzas Armadas, gasto en defensa]
+    resumen: >-
+      Propone reforzar las Fuerzas Armadas y las Fuerzas y Cuerpos de Seguridad, y que la inversión en
+      seguridad y defensa tenga un impacto real en las condiciones de vida de sus profesionales.
+    fuente: pp-argumentario-por-fin-espana
+    pagina: 1
+  - subtema: [política exterior, soberanía e integridad territorial]
+    resumen: >-
+      Plantea mantener con Marruecos una relación de firmeza y cooperación, recuperar la voz de España
+      en Europa y exigir responsabilidades por lo ocurrido en Ceuta.
+    fuente: pp-argumentario-espana-primero
+    pagina: 1
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-por-fin-espana
+  - pp-argumentario-espana-volvera-a-contar
+  - pp-argumentario-espana-primero

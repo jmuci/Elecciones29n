@@ -1,0 +1,16 @@
+# Fase 4: no hay programa electoral publicado. El Contrato con España no trata la energía; la única
+# medida es la rebaja del IVA de la luz del argumentario de impuestos. Los argumentarios del 27-oct al
+# 2-nov (pp.es/actualidad/documentos/) mencionan la factura de la luz y el apagón, sin propuestas.
+partido: pp
+tema: energia-clima
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: precio de la luz
+    resumen: Propone bajar el IVA de la luz.
+    fuente: pp-argumentario-menos-impuestos
+    pagina: 1
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-nueva-generacion-propietarios
+  - pp-argumentario-menos-impuestos

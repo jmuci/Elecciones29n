@@ -1,0 +1,23 @@
+# Fase 4: "Recuperar España" (2026) no trata el modelo territorial, así que se admite, con aviso, el
+# Programa económico y de vivienda (2025), anterior a la convocatoria (CONTRIBUTING §1.4).
+partido: vox
+tema: territorial
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: financiación autonómica
+    resumen: >-
+      Propone reducir el gasto de la administración territorial del Estado y limitar las
+      transferencias a las comunidades autónomas y a los ayuntamientos al mínimo que permita la
+      Constitución.
+    fuente: vox-programa-economico-vivienda
+    pagina: 39
+  - resumen: >-
+      Plantea una central de compras nacional para los sistemas autonómicos de sanidad, farmacia y
+      educación, y fija como objetivo último que el Estado recupere esas competencias y la
+      eliminación del Estado autonómico.
+    fuente: vox-programa-economico-vivienda
+    pagina: 39
+fuentes_revisadas:
+  - vox-recuperar-espana
+  - vox-programa-economico-vivienda

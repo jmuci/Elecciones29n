@@ -1,0 +1,25 @@
+# Fase 4: no hay programa electoral publicado; se resume la nota de prensa de pensiones (24-oct).
+partido: frente-amplio
+tema: pensiones
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: >-
+      Propone una Pensión Mínima Garantizada para que ninguna pensión quede por debajo del salario
+      mínimo interprofesional.
+    fuente: frente-amplio-nota-pensiones-minimas-jubilacion-65
+    pagina: "Salario mínimo = pensión mínima"
+  - subtema: edad de jubilación
+    resumen: Propone fijar de forma efectiva la edad de jubilación en los 65 años.
+    fuente: frente-amplio-nota-pensiones-minimas-jubilacion-65
+    pagina: "Jubilación a los 65: vivir es más que trabajar"
+  - subtema: sostenibilidad
+    resumen: >-
+      Plantea financiar la jubilación a los 65 eliminando de forma progresiva el tope máximo de
+      cotización y con una aportación de las empresas más automatizadas al Mecanismo de Equidad
+      Intergeneracional.
+    fuente: frente-amplio-nota-pensiones-minimas-jubilacion-65
+    pagina: "Cómo se paga: hay dinero"
+fuentes_revisadas:
+  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-nota-pensiones-minimas-jubilacion-65

@@ -1,8 +1,8 @@
 # Noticia de psoe.es (Actualidad > Noticias) sobre el mitin de Pedro Sánchez en Granada. HTML, sin sha256.
-# Mismo id que la fuente creada en la sesión de empleo/pensiones/familia (reconciliar al fusionar).
+# Se cita en empleo (SMI), igualdad-derechos (aborto y eutanasia) y se revisó para sanidad y educación.
 # `publicado`: fecha que muestra la página bajo el subtítulo (24/10/2026).
 # psoe.es bloquea el acceso automatizado (Incapsula); se leyó con navegador.
-# Sin `archivo`: no hay captura en Wayback Machine y no se pudo lanzar desde la sesión de Fase 4.
+# Sin `archivo`: la captura en Wayback Machine queda pendiente.
 partido: psoe
 titulo: "Pedro Sánchez: \"Frente a los recortes de Feijóo y Abascal, blindaremos el derecho al aborto de las mujeres en la Constitución\""
 url: https://www.psoe.es/actualidad/noticias-actualidad/pedro-sanchez-frente-a-los-recortes-de-feijoo-y-abascal-blindaremos-el-derecho-al-aborto-de-las-mujeres-en-la-constitucion/

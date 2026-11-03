@@ -1,0 +1,30 @@
+# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y el argumentario
+# "La revolución de la decencia". Las notas de prensa de pp.es no se citan mientras haya documentos
+# del partido que traten el tema (mismo criterio que el piloto).
+partido: pp
+tema: seguridad-justicia
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: policía
+    resumen: >-
+      Se compromete a combatir la inseguridad en los barrios y, en especial, la violencia contra las
+      mujeres, con más recursos económicos y materiales, reconocimiento y autoridad para las Fuerzas y
+      Cuerpos de Seguridad del Estado.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - subtema: Código Penal
+    resumen: >-
+      Propone recuperar la agravante para quien actúe con la cara tapada y endurecer las penas cuando
+      la violencia se convoque por redes sociales.
+    fuente: pp-argumentario-revolucion-decencia
+    pagina: 1
+  - subtema: okupación penal
+    resumen: Se compromete a desalojar en 48 horas las viviendas ocupadas ilegalmente.
+    fuente: pp-contrato-con-espana
+    pagina: 2
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-revolucion-decencia
+  - pp-argumentario-nueva-generacion-propietarios
+  - pp-argumentario-menos-impuestos

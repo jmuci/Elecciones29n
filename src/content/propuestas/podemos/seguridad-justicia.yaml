@@ -1,0 +1,15 @@
+# Fase 4: Podemos no tiene programa publicado (podemos.info sigue tras la verificación de Cloudflare
+# a 2-nov); se resume su documento político de la V Asamblea (2025).
+partido: podemos
+tema: seguridad-justicia
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: policía
+    resumen: >-
+      Plantea reformas para situar bajo control democrático a los cuerpos funcionariales del Estado,
+      en especial a los que tienen el monopolio del uso de la fuerza.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 40
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
