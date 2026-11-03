@@ -1,8 +1,25 @@
-# Revisado en Fase 4 (2-nov): psoe.es no tiene programa ni documentos para el 29N (/programa-electoral
-# sigue mostrando el de 2019; captura de Wayback del 19-oct y portada del 23-oct). La web pide una
-# verificación de Imperva al acceso automatizado.
+# Fase 4 (2-nov): psoe.es no tiene programa para el 29N; se resumen compromisos de las noticias de
+# campaña de su web (Actualidad > Noticias). `pagina` cuenta los párrafos del cuerpo de la noticia.
+# Como hay notas para el 29N sobre energía y clima, no se cita la Resolución del 41.º Congreso
+# (CONTRIBUTING §1.4).
 partido: psoe
 tema: energia-clima
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: renovables
+    resumen: Fija como objetivo que en 2030 el 80 % de la electricidad proceda de energías renovables.
+    fuente: psoe-nota-tijeras-motosierras-zaragoza
+    pagina: "párrafo 8"
+  - resumen: >-
+      Plantea un Pacto de Estado frente a la emergencia climática y que todas las administraciones y
+      partidos trabajen de forma conjunta contra las consecuencias del cambio climático.
+    fuente: psoe-nota-dos-modelos-valladolid
+    pagina: "párrafo 3"
+fuentes_revisadas:
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-esperanza-dos-hermanas

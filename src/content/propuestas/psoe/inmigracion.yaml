@@ -1,6 +1,48 @@
-# Revisado en Fase 1: psoe.es no tiene programa ni documentos para el 29N (lo que hay en /propuestas es de 2019).
+# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
+# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
+# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
+# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
 partido: psoe
 tema: inmigracion
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: integración
+    resumen: >-
+      Propone promover la contratación en origen mediante un sistema de migración legal, segura y
+      ordenada, y agilizar los permisos de trabajo y de búsqueda de empleo para los perfiles más
+      demandados.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 25
+  - subtema: integración
+    resumen: >-
+      Plantea mejorar los programas de homologación de títulos para que la incorporación de personas
+      migrantes con alta cualificación sea más ágil.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 25
+  - subtema: integración
+    resumen: >-
+      Propone un Plan de Inclusión y Convivencia Intercultural que facilite a la población de
+      diversos orígenes étnicos el acceso a la educación, la sanidad y la vivienda.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 110
+  - subtema: asilo
+    resumen: >-
+      Propone fortalecer y ampliar la red de acogida, con los derechos humanos de las personas
+      migrantes en el centro, y un sistema de recepción inclusivo para refugiados y solicitantes de
+      asilo y de protección internacional.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 159
+  - resumen: >-
+      Se compromete a proteger de manera especial el bienestar y los derechos de los menores
+      extranjeros no acompañados.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 159
+fuentes_revisadas:
+  - psoe-resolucion-politica-41-congreso
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-esperanza-dos-hermanas

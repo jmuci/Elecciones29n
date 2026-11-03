@@ -1,8 +1,30 @@
-# Revisado en Fase 4 (2-nov): psoe.es no tiene programa ni documentos para el 29N. Las notas de prensa
-# de campaña (oct-2026) no recogen propuestas sobre seguridad o justicia, y en "Documentos de
-# actualidad" solo hay manifiestos conmemorativos.
+# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
+# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
+# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
+# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
 partido: psoe
 tema: seguridad-justicia
-estado: no_publicado
+estado: parcial
 revisado: 2026-11-02
-propuestas: []
+propuestas:
+  - subtema: policía
+    resumen: Plantea mejorar y aumentar los efectivos de la Policía Nacional y la Guardia Civil.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 148
+  - subtema: policía
+    resumen: >-
+      Propone prohibir la práctica de perfiles raciales por parte de las Fuerzas y Cuerpos de
+      Seguridad.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 110
+  - resumen: Prevé reforzar el marco legal contra los discursos de odio.
+    fuente: psoe-resolucion-politica-41-congreso
+    pagina: 147
+fuentes_revisadas:
+  - psoe-resolucion-politica-41-congreso
+  - psoe-nota-tijeras-motosierras-zaragoza
+  - psoe-nota-dos-modelos-valladolid
+  - psoe-nota-pensiones-constitucion-gijon
+  - psoe-nota-aborto-constitucion-granada
+  - psoe-nota-supremo-ponferrada
+  - psoe-nota-esperanza-dos-hermanas

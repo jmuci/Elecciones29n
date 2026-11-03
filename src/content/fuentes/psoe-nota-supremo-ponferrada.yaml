@@ -1,0 +1,13 @@
+# Noticia de psoe.es (Actualidad > Noticias) sobre el mitin de Pedro Sánchez en Ponferrada. HTML, sin sha256.
+# Se cita en vivienda (vivienda protegida).
+# `publicado`: fecha que muestra la página bajo el subtítulo (11/10/2026); el texto empieza
+# "Madrid, 11 de octubre de 2026" y pide el voto "el 29N".
+# psoe.es bloquea el acceso automatizado (Incapsula); se leyó con navegador.
+# Sin `archivo`: la única captura de Wayback (2026-10-11) es la página de bloqueo de Incapsula, y no
+# se pudo lanzar una nueva desde la sesión.
+partido: psoe
+titulo: "Pedro Sánchez: \"Pido al Supremo que frene este intento de atropello de Feijóo y de Abascal porque, en una democracia, el derecho al voto no se prohíbe, se garantiza\""
+url: https://www.psoe.es/actualidad/noticias-actualidad/pedro-sanchez-pido-al-supremo-que-frene-este-intento-de-atropello-de-feijoo-y-de-abascal-porque-en-una-democracia-el-derecho-al-voto-no-se-prohibe-se-garantiza/
+tipo: nota_prensa
+publicado: 2026-10-11
+consultado: 2026-11-02

@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
+import SelectorTema from '../components/SelectorTema.astro';
 import SobreElAutor from '../components/SobreElAutor.astro';
+import AvisoTestPendiente from '../components/AvisoTestPendiente.astro';
 import { cargarDatos, fecha } from '../lib/ui';
 
 interface Props {
@@ -28,6 +30,13 @@ const enlaces = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={descripcion} />
     <title>{titulo}</title>
+    <script is:inline>
+      // Aplica el tema guardado antes del primer pintado (ver SelectorTema.astro).
+      try {
+        const t = localStorage.getItem('tema');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
   </head>
   <body>
     <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -50,8 +59,11 @@ const enlaces = [
             }
           </ul>
         </nav>
+        <SelectorTema />
       </div>
     </header>
+    {/* En /test ya se ve el progreso en la barra del propio test. */}
+    {ruta !== '/test' && <AvisoTestPendiente />}
     <main id="contenido" tabindex="-1">
       <slot />
     </main>
@@ -142,6 +154,11 @@ const enlaces = [
     font-weight: 500;
   }
 
+  /* La navegación se pega al selector de tema, a la derecha. */
+  nav {
+    margin-inline-start: auto;
+  }
+
   nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -174,12 +191,11 @@ const enlaces = [
     font-weight: 600;
   }
 
-  /* Móvil: una sola fila; la navegación se desplaza en horizontal si no cabe. */
+  /* Móvil: una sola fila (sello · navegación · tema); la navegación se desplaza en horizontal si no cabe. */
   @media (width < 40rem) {
     .cabecera__fila {
       flex-wrap: nowrap;
       gap: var(--space-3);
-      padding-inline-end: 0;
     }
 
     .marca__texto {
@@ -194,7 +210,6 @@ const enlaces = [
 
     nav ul {
       flex-wrap: nowrap;
-      padding-inline-end: var(--gutter);
     }
 
     nav a {
