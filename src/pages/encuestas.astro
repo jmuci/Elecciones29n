@@ -1,0 +1,383 @@
+---
+import Base from '../layouts/Base.astro';
+import Hemiciclo from '../components/Hemiciclo.astro';
+import { cargarDatos, fecha } from '../lib/ui';
+import { cargarEncuestas, media, segmentos, textoEscanos, textoPct } from '../lib/encuestas';
+import { MAYORIA_ABSOLUTA, PARTIDOS_ENCUESTA } from '../lib/modelo';
+import type { Encuesta, PartidoEncuesta } from '../lib/modelo';
+
+const { partidos } = await cargarDatos();
+const nombres = Object.fromEntries(
+  PARTIDOS_ENCUESTA.map((id) => [id, partidos.find((p) => p.id === id)?.data.nombre_corto ?? id]),
+) as Record<PartidoEncuesta, string>;
+
+const todas = await cargarEncuestas();
+const privadas = todas.filter((e) => e.data.tipo === 'privada');
+const cis = todas.filter((e) => e.data.tipo === 'cis');
+const conEscanos = privadas.filter((e) => e.data.escanos !== undefined);
+const mediaEscanos = media(privadas, nombres);
+
+const campo = (e: Encuesta): string => {
+  const ini = fecha(e.data.campo_inicio).texto;
+  const fin = fecha(e.data.campo_fin).texto;
+  return ini === fin ? ini : `${ini} – ${fin}`;
+};
+const titulo = (e: Encuesta): string =>
+  e.data.medio && e.data.medio !== e.data.instituto ? `${e.data.instituto} · ${e.data.medio}` : e.data.instituto;
+const muestra = (e: Encuesta): string => (e.data.muestra ? `${e.data.muestra.toLocaleString('es-ES')} entrevistas` : 'muestra n/d');
+const etiquetaFuente = (f: Encuesta['data']['fuentes'][number]): string =>
+  f.tipo === 'recopilacion'
+    ? 'Wikipedia (recopilación)'
+    : `${new URL(f.url).hostname.replace(/^www\./, '')}${f.tipo === 'original' ? ' (original)' : ''}`;
+const maxCis = Math.max(...cis.flatMap((e) => Object.values(e.data.votos)));
+const fechaCierre = fecha(new Date('2026-11-23'), true);
+---
+
+<Base
+  titulo="Encuestas · Elecciones 29-N-2026"
+  descripcion="Estimaciones de escaños y de voto de los principales institutos para las elecciones generales del 29 de noviembre de 2026, con el Congreso dibujado para cada encuesta."
+>
+  <div class="contenedor">
+    <div class="prosa intro">
+      <h1>Encuestas</h1>
+      <p class="entradilla">
+        Cómo quedaría el Congreso (350 escaños) según las encuestas publicadas para el 29-N, instituto por instituto.
+      </p>
+      <p>
+        Una encuesta es una estimación del momento, no un resultado. Cada hemiciclo reparte los escaños tal como los
+        publica el instituto; cuando da una horquilla, se dibuja su punto medio y la horquilla aparece junto a la cifra.
+        Los colores se asignan por posición y no tienen relación con los de ningún partido. La mayoría absoluta está en {MAYORIA_ABSOLUTA}{' '}
+        escaños.
+      </p>
+      <p class="aviso">
+        La ley permite publicar encuestas hasta el <strong>{fechaCierre.texto}</strong>; entre el 24 y el 28 de noviembre
+        no se publicarán nuevas.
+      </p>
+    </div>
+
+    <section aria-labelledby="media" class="seccion">
+      <h2 id="media">Media de las encuestas</h2>
+      <p class="prosa">
+        Media simple, sin ponderar, de las {mediaEscanos.n} encuestas de institutos privados con escaños (sin el CIS). No es una
+        proyección propia: promedia las cifras de cada encuesta, que se detallan más abajo. Cada partido se promedia solo entre las encuestas que lo desglosan.
+      </p>
+      <Hemiciclo segmentos={mediaEscanos.segmentos} titulo="Media de las encuestas" grande />
+      <p class="rangos">
+        Entre encuestas:{' '}
+        {
+          PARTIDOS_ENCUESTA.map((id, i) => {
+            const r = mediaEscanos.rangos[id];
+            return r ? (
+              <>
+                {i > 0 && ' · '}
+                {nombres[id]} {r.min === r.max ? r.min : `${r.min}–${r.max}`}
+              </>
+            ) : null;
+          })
+        }.
+      </p>
+    </section>
+
+    <section aria-labelledby="por-encuesta" class="seccion">
+      <h2 id="por-encuesta">El Congreso según cada encuesta</h2>
+      <p class="prosa">De la más reciente a la más antigua por fin de campo. Solo la última oleada de cada instituto.</p>
+      <ul class="rejilla">
+        {
+          conEscanos.map((e) => {
+            const segs = segmentos(e.data.escanos ?? {}, nombres);
+            const faltan = PARTIDOS_ENCUESTA.filter((id) => e.data.escanos?.[id] === undefined).map((id) => nombres[id]);
+            return (
+              <li>
+                <article class="tarjeta" aria-labelledby={`h-${e.id}`}>
+                  <h3 id={`h-${e.id}`}>{titulo(e)}</h3>
+                  <p class="meta">
+                    Campo: <time datetime={fecha(e.data.campo_fin).iso}>{campo(e)}</time>
+                    {e.data.acumulada && ' (seguimiento acumulado)'} · {muestra(e)}
+                  </p>
+                  <Hemiciclo segmentos={segs} titulo={titulo(e)} />
+                  {faltan.length > 0 && (
+                    <p class="meta">
+                      Sin desglose de escaños para {faltan.join(' y ')}: quedan incluidos en «Resto».
+                    </p>
+                  )}
+                  {e.data.nota && <p class="meta">{e.data.nota}</p>}
+                  <p class="meta fuentes-encuesta">
+                    Fuente:{' '}
+                    {e.data.fuentes.map((f, i) => (
+                      <>
+                        {i > 0 && ' · '}
+                        <a href={f.url} rel="noopener">
+                          {etiquetaFuente(f)}
+                        </a>
+                      </>
+                    ))}
+                  </p>
+                </article>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
+
+    <section aria-labelledby="tabla" class="seccion">
+      <h2 id="tabla">Voto y escaños, en una tabla</h2>
+      <div class="tabla-envoltorio" tabindex="0" role="region" aria-labelledby="tabla">
+        <table>
+          <caption class="sr-only">Estimación de voto y de escaños por encuesta y partido</caption>
+          <thead>
+            <tr>
+              <th scope="col">Encuesta</th>
+              <th scope="col">Campo</th>
+              {PARTIDOS_ENCUESTA.map((id) => <th scope="col">{nombres[id]}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {
+              privadas.map((e) => (
+                <tr>
+                  <th scope="row">
+                    {titulo(e)}
+                    <span class="meta">{muestra(e)}</span>
+                  </th>
+                  <td>{campo(e)}</td>
+                  {PARTIDOS_ENCUESTA.map((id) => {
+                    const esc = e.data.escanos?.[id];
+                    return (
+                      <td class="num">
+                        <span>{textoPct(e.data.votos[id])}</span>
+                        <span class="meta">{esc === undefined ? 'escaños n/d' : `${textoEscanos(esc)} esc.`}</span>
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="meta">n/d: la encuesta o las fuentes consultadas no lo desglosan.</p>
+    </section>
+
+    <section aria-labelledby="cis" class="seccion">
+      <h2 id="cis">CIS</h2>
+      <p class="prosa">
+        El CIS se muestra aparte porque su estimación de voto difiere mucho de la de los institutos privados y no publica escaños, así que
+        no hay hemiciclo.
+      </p>
+      {
+        cis.map((e) => (
+          <article class="tarjeta tarjeta--cis" aria-labelledby={`h-${e.id}`}>
+            <h3 id={`h-${e.id}`}>Barómetro de octubre</h3>
+            <p class="meta">
+              Campo: {campo(e)} · {muestra(e)}
+            </p>
+            <ul class="barras">
+              {PARTIDOS_ENCUESTA.map((id) => {
+                const v = e.data.votos[id];
+                return v === undefined ? null : (
+                  <li>
+                    <span class="barras__nombre">{nombres[id]}</span>
+                    <span class="barras__pista" aria-hidden="true">
+                      <span class="barras__valor" style={`width:${(v / maxCis) * 100}%`} />
+                    </span>
+                    <strong>{textoPct(v)}</strong>
+                  </li>
+                );
+              })}
+            </ul>
+            {e.data.nota && <p class="meta">{e.data.nota}</p>}
+            <p class="meta fuentes-encuesta">
+              Fuente:{' '}
+              {e.data.fuentes.map((f, i) => (
+                <>
+                  {i > 0 && ' · '}
+                  <a href={f.url} rel="noopener">
+                    {etiquetaFuente(f)}
+                  </a>
+                </>
+              ))}
+            </p>
+          </article>
+        ))
+      }
+    </section>
+
+    <section aria-labelledby="criterios" class="seccion prosa">
+      <h2 id="criterios">Qué se incluye y qué no</h2>
+      <ul class="lista">
+        <li>
+          Una encuesta por instituto: la última oleada con campo posterior a la creación del Frente Amplio y publicada por un medio.
+          Se citan instituto, medio, fechas de campo y tamaño de muestra.
+        </li>
+        <li>
+          Se excluyen las encuestas encargadas por partidos y las anteriores a la creación del Frente Amplio (no son comparables:
+          cuentan a «Sumar» por separado). Se incorporarán sus nuevas oleadas cuando se publiquen.
+        </li>
+        <li>
+          Democracia 21 no aparece desglosada en ninguna de las encuestas consultadas; sus posibles escaños quedan dentro de «Resto».
+          El resto reúne también a ERC, Junts, EH Bildu, PNV, BNG, Coalición Canaria, UPN, Compromís y otros.
+        </li>
+        <li>
+          Los datos se han recogido de la prensa y de la recopilación de Wikipedia, no de las fichas técnicas originales.
+          Si ves una cifra distinta en la fuente original, <a
+            href="https://github.com/jmuci/Elecciones29n/issues/new?template=error-contenido.yml"
+            rel="noopener">avísanos</a
+          >. Donde Wikipedia y la prensa difieren, se indica en la nota de la encuesta.
+        </li>
+      </ul>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-6);
+  }
+
+  .entradilla {
+    color: var(--muted);
+    font-size: var(--step-1);
+  }
+
+  .aviso {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .seccion {
+    margin-top: var(--space-7);
+  }
+
+  .seccion > h2 {
+    margin-bottom: var(--space-3);
+    font-size: var(--step-2);
+  }
+
+  .seccion > .prosa {
+    margin-bottom: var(--space-5);
+  }
+
+  .rangos {
+    margin-top: var(--space-3);
+    color: var(--muted);
+    font-size: var(--step--1);
+    text-align: center;
+  }
+
+  .rejilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+    gap: var(--space-5);
+    padding: 0;
+    list-style: none;
+  }
+
+  .tarjeta {
+    height: 100%;
+    padding: var(--space-4);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .tarjeta > * + * {
+    margin-top: var(--space-3);
+  }
+
+  .tarjeta h3 {
+    font-size: var(--step-1);
+  }
+
+  .tarjeta--cis {
+    max-width: 36rem;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: var(--step--1);
+    line-height: 1.4;
+  }
+
+  .tabla-envoltorio {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  table {
+    width: 100%;
+    min-width: 46rem;
+    border-collapse: collapse;
+    font-size: var(--step--1);
+  }
+
+  th,
+  td {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  thead th {
+    background: var(--head);
+  }
+
+  tbody th {
+    font-weight: 600;
+  }
+
+  tbody th .meta,
+  td .meta {
+    display: block;
+    font-weight: 400;
+  }
+
+  td.num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .barras {
+    display: grid;
+    gap: var(--space-2);
+    padding: 0;
+    list-style: none;
+  }
+
+  .barras li {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr 4.5rem;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .barras strong {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .barras__pista {
+    height: 0.75rem;
+    border-radius: var(--radius);
+    background: var(--head);
+  }
+
+  .barras__valor {
+    display: block;
+    height: 100%;
+    border-radius: var(--radius);
+    background: var(--muted);
+  }
+
+  .lista {
+    padding-left: 1.2em;
+  }
+
+  .lista li + li {
+    margin-top: var(--space-3);
+  }
+</style>

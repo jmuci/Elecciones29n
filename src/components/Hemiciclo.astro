@@ -1,0 +1,134 @@
+---
+import { posicionesHemiciclo } from '../lib/encuestas';
+import type { Segmento } from '../lib/encuestas';
+
+interface Props {
+  segmentos: Segmento[];
+  /** Descripción corta para lectores de pantalla, p. ej. «Media de las encuestas». */
+  titulo: string;
+  grande?: boolean;
+}
+
+const { segmentos, titulo, grande = false } = Astro.props;
+const posiciones = posicionesHemiciclo();
+
+// Cada segmento ocupa un tramo consecutivo de escaños, en el orden fijo de la web.
+const colores: string[] = [];
+for (const s of segmentos) for (let i = 0; i < s.escanos; i++) colores.push(s.id);
+
+const descripcion = `${titulo}: ${segmentos.map((s) => `${s.etiqueta} ${s.escanos}`).join(', ')}.`;
+---
+
+<figure class:list={['hemiciclo', { 'hemiciclo--grande': grande }]}>
+  <svg viewBox="0 0 200 106" role="img" aria-label={descripcion}>
+    <title>{descripcion}</title>
+    {posiciones.map((p, i) => <circle cx={p.cx} cy={p.cy} r={p.r} class={`s-${colores[i] ?? 'resto'}`} />)}
+    <text x="100" y="93" text-anchor="middle" class="hemiciclo__total">350</text>
+    <text x="100" y="102" text-anchor="middle" class="hemiciclo__pie">escaños</text>
+  </svg>
+  <figcaption>
+    <ul class="leyenda-hemiciclo">
+      {
+        segmentos.map((s) => (
+          <li>
+            <span class={`muestra s-${s.id}`} aria-hidden="true" />
+            <span class="nombre">{s.etiqueta}</span>
+            <strong>{s.escanos}</strong>
+            {s.rango && <span class="rango">({s.rango})</span>}
+          </li>
+        ))
+      }
+    </ul>
+  </figcaption>
+</figure>
+
+<style is:global>
+  :root {
+    /* Colores por posición, sin relación con los colores de ningún partido. */
+    --s-pp: #b36b00;
+    --s-psoe: #2b7bb9;
+    --s-vox: #00805c;
+    --s-frente-amplio: #b5527f;
+    --s-podemos: #5b3fa0;
+    --s-resto: #7d776c;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --s-pp: #f0a830;
+      --s-psoe: #6ab7ec;
+      --s-vox: #2fc59a;
+      --s-frente-amplio: #e48fb8;
+      --s-podemos: #a08be0;
+      --s-resto: #9a9488;
+    }
+  }
+
+  .s-pp { fill: var(--s-pp); background: var(--s-pp); }
+  .s-psoe { fill: var(--s-psoe); background: var(--s-psoe); }
+  .s-vox { fill: var(--s-vox); background: var(--s-vox); }
+  .s-frente-amplio { fill: var(--s-frente-amplio); background: var(--s-frente-amplio); }
+  .s-podemos { fill: var(--s-podemos); background: var(--s-podemos); }
+  .s-resto { fill: var(--s-resto); background: var(--s-resto); }
+</style>
+
+<style>
+  .hemiciclo {
+    margin: 0;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hemiciclo__total {
+    fill: var(--text);
+    font-family: var(--font-serif);
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .hemiciclo__pie {
+    fill: var(--muted);
+    font-size: 5px;
+  }
+
+  .hemiciclo--grande svg {
+    max-width: 38rem;
+    margin-inline: auto;
+  }
+
+  .leyenda-hemiciclo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-4);
+    margin-top: var(--space-3);
+    padding: 0;
+    list-style: none;
+    font-size: var(--step--1);
+  }
+
+  .hemiciclo--grande .leyenda-hemiciclo {
+    justify-content: center;
+    font-size: var(--step-0);
+  }
+
+  .leyenda-hemiciclo li {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-1);
+  }
+
+  .muestra {
+    flex: none;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+  }
+
+  .rango {
+    color: var(--muted);
+  }
+</style>

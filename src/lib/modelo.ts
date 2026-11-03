@@ -26,3 +26,14 @@ export type Tema = CollectionEntry<'temas'>;
 export type Fuente = CollectionEntry<'fuentes'>;
 export type Celda = CollectionEntry<'propuestas'>;
 export type Propuesta = Celda['data']['propuestas'][number];
+
+/** Partidos que desglosan las encuestas (Democracia 21 no aparece en ninguna), en el orden fijo de la web. */
+export const PARTIDOS_ENCUESTA = ['pp', 'psoe', 'vox', 'frente-amplio', 'podemos'] as const;
+export type PartidoEncuesta = (typeof PARTIDOS_ENCUESTA)[number];
+
+export const TIPOS_FUENTE_ENCUESTA = ['original', 'medio', 'recopilacion'] as const;
+
+export const TOTAL_ESCANOS = 350;
+export const MAYORIA_ABSOLUTA = 176;
+
+export type Encuesta = CollectionEntry<'encuestas'>;

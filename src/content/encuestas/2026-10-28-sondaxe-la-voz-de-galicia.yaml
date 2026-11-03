@@ -1,0 +1,11 @@
+instituto: Sondaxe
+medio: La Voz de Galicia
+tipo: privada
+campo_inicio: 2026-10-26
+campo_fin: 2026-10-28
+muestra: 1200
+votos: { pp: 29.2, psoe: 26.9, vox: 19.2, frente-amplio: 7.2 }
+fuentes:
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+nota: No publica escaños.
+consultado: 2026-11-02

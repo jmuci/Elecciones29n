@@ -1,0 +1,19 @@
+instituto: Sigma Dos
+medio: El Mundo
+tipo: privada
+campo_inicio: 2026-10-29
+campo_fin: 2026-10-30
+muestra: 2505
+votos: { pp: 31.1, psoe: 24.6, vox: 19.3, frente-amplio: 7.1, podemos: 1.9 }
+escanos:
+  pp: { min: 133, max: 139 }
+  psoe: { min: 97, max: 103 }
+  vox: { min: 63, max: 69 }
+  frente-amplio: { min: 9, max: 11 }
+  podemos: { min: 0, max: 1 }
+fuentes:
+  - { titulo: "El Imparcial: Las encuestas confirman la victoria del PP...", url: "https://www.elimparcial.es/noticia/303686/nacional/las-encuestas-confirman-la-victoria-del-pp-mayoria-absoluta-con-vox-y-el-descalabro-del-psoe.html", tipo: medio }
+  - { titulo: "Moncloa.com: Encuestas PP Vox, más de 200 escaños", url: "https://www.moncloa.com/2026/11/02/encuestas-pp-vox-200-escanos-3460201/", tipo: medio }
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+nota: Wikipedia recoge 7,5 % y 9–12 escaños para Frente Amplio; se usan las cifras de la prensa (7,1 % y 9–11).
+consultado: 2026-11-02

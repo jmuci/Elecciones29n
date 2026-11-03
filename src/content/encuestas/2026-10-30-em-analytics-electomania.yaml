@@ -1,0 +1,11 @@
+instituto: EM-Analytics
+medio: Electomanía
+tipo: privada
+campo_inicio: 2026-10-28
+campo_fin: 2026-10-30
+muestra: 1527
+votos: { pp: 31.5, psoe: 25.8, vox: 19.2, frente-amplio: 6.2, podemos: 1.7 }
+escanos: { pp: 133, psoe: 108, vox: 64, frente-amplio: 12, podemos: 1 }
+fuentes:
+  - { titulo: "Wikipedia: Opinion polling for the 2026 Spanish general election", url: "https://en.wikipedia.org/wiki/Opinion_polling_for_the_2026_Spanish_general_election", tipo: recopilacion }
+consultado: 2026-11-02
