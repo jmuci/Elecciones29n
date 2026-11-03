@@ -1,0 +1,35 @@
+nombre: Caso Cooperación (primera pieza)
+partido: pp
+territorio: Comunidad Valenciana
+resumen: "Desvío de subvenciones de la Generalitat Valenciana para proyectos de cooperación en Nicaragua. El Tribunal Supremo condenó en 2015 al exconseller Rafael Blasco (PP) y a otros cargos de la Conselleria de Inmigración y Ciudadanía por malversación, prevaricación y falsedad."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2015-06-10
+condenas:
+  - persona: "Rafael Blasco"
+    cargo: "Exconseller de la Generalitat Valenciana (PP)"
+    pena: "6 años y 6 meses de prisión"
+  - persona: "Agustina Sanjuan"
+    cargo: "Exsecretaria general de la Conselleria"
+    pena: "6 años de prisión"
+  - persona: "Augusto César Tauroni"
+    cargo: "Intermediario"
+    pena: "6 años de prisión"
+nota: "Las fuentes no coinciden en el importe: la nota del CGPJ habla de 1,6 millones invertidos en los dos proyectos, de los que llegaron a su destino 47.953 euros; La Marea, de 1,8 millones desviados. Por eso no se muestra cuantía. La fecha es la de la nota del CGPJ. Hubo condenas posteriores en otras piezas del caso."
+fuentes:
+  - medio: "Consejo General del Poder Judicial"
+    titulo: "El Tribunal Supremo condena a seis años y medio al exconseller de la Comunidad Valenciana Rafael Blasco"
+    url: "https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Tribunales-Superiores-de-Justicia/TSJ-Comunidad-Valenciana/Oficina-de-Comunicacion/Archivo-de-notas-de-prensa/El-Tribunal-Supremo-condena-a-seis-anos-y-medio-al-exconseller--de-la-Comunidad-Valenciana-Rafael-Blasco"
+    tipo: institucion
+    fecha: 2015-06-10
+  - medio: "La Marea"
+    titulo: "Rafael Blasco ingresará en prisión en pocos días"
+    url: "https://lamarea.com/2015/06/10/rafael-blasco-ingresara-en-prision-en-pocos-dias"
+    tipo: prensa
+    fecha: 2015-06-10
+  - medio: "Valencia Plaza"
+    titulo: "El Tribunal Supremo confirma la condena al exconseller Blasco por el caso Cooperación"
+    url: "https://valenciaplaza.com/tribunal-supremo-confirma-condena-exconseller-blasco-caso-cooperacion"
+    tipo: prensa
+    fecha: 2022-12-20
+revisado: 2026-11-03

@@ -1,0 +1,19 @@
+nombre: Caso Saqueo I (Marbella)
+otro_partido: GIL (Grupo Independiente Liberal)
+territorio: Marbella (Málaga)
+resumen: "Desvío de fondos del Ayuntamiento de Marbella a cuentas de colaboradores del alcalde Jesús Gil entre 1991 y 1995. El Supremo desestimó en 2010 los recursos de los condenados, que deben devolver el dinero con intereses al Ayuntamiento."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2010-01-25
+condenas:
+  - persona: "Juan Antonio Roca"
+    cargo: "Exasesor urbanístico del Ayuntamiento de Marbella"
+    pena: "6 años y 10 meses de prisión"
+nota: "La fuente consultada cifra el desvío en 22,9 millones de euros; otras lo dan en 24 millones. Al no coincidir, no se muestra cuantía. Los tres colaboradores de Gil condenados suman 23 años y 10 meses de prisión."
+fuentes:
+  - medio: "Legal Today"
+    titulo: "El TS confirma la sentencia del caso Saqueo de Marbella"
+    url: "https://www.legaltoday.com/practica-juridica/derecho-penal/penal/el-ts-confirma-la-sentencia-del-caso-saqueo-de-marbella-2010-03-16/"
+    tipo: prensa
+    fecha: 2010-03-16
+revisado: 2026-11-03

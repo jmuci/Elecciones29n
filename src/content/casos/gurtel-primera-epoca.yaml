@@ -19,9 +19,6 @@ condenas:
     cargo: "Exministra de Sanidad del PP"
     pena: "Pago de 27.857 euros como partícipe a título lucrativo"
 responsabilidad_partido: "El PP fue condenado como partícipe a título lucrativo por beneficiarse de 245.492 euros procedentes de la trama (actos electorales en Majadahonda y Pozuelo). Un voto particular del presidente del tribunal discrepó de esa condena."
-cuantia:
-  euros: 245492
-  concepto: "Importe que el PP debe devolver como partícipe a título lucrativo (no es el total de la trama)"
 nota: "Quedan otras piezas y épocas de la trama con sentencias distintas, que no se incluyen aquí."
 fuentes:
   - medio: "Diari de Tarragona (agencias)"

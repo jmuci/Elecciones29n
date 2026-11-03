@@ -1,0 +1,25 @@
+nombre: Caso De Miguel
+otro_partido: PNV
+territorio: Álava
+resumen: "Trama de cobro de comisiones a cambio de adjudicaciones públicas en Álava. El Supremo confirmó en enero de 2023 las principales condenas a tres miembros de la ejecutiva alavesa del PNV, con una ligera rebaja de penas."
+firme:
+  tribunal: "Tribunal Supremo"
+  fecha: 2023-01-10
+condenas:
+  - persona: "Alfredo de Miguel"
+    cargo: "Miembro de la ejecutiva alavesa del PNV"
+    pena: "12 años y 4 meses de prisión"
+  - persona: "Koldo Ochandiano"
+    cargo: "Miembro de la ejecutiva alavesa del PNV"
+    pena: "7 años y 6 meses de prisión"
+  - persona: "Aitor Tellería"
+    cargo: "Miembro de la ejecutiva alavesa del PNV"
+    pena: "5 años y un mes y medio de prisión"
+nota: "La fuente consultada no da un importe total de lo cobrado o desviado, por lo que no se muestra cuantía. La fecha es la de difusión del fallo."
+fuentes:
+  - medio: "El Salto"
+    titulo: "El Supremo ratifica las principales penas por corrupción de los tres miembros del PNV en el caso De Miguel"
+    url: "https://www.elsaltodiario.com/pnv/supremo-ratifica-principales-penas-corrupcion-tres-miembros-caso-miguel"
+    tipo: prensa
+    fecha: 2023-01-10
+revisado: 2026-11-03

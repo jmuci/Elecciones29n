@@ -35,6 +35,22 @@ export type TipoFuenteHistoria = (typeof TIPOS_FUENTE_HISTORIA)[number];
 export const BLOQUES = ['derecha', 'izquierda'] as const;
 export type Bloque = (typeof BLOQUES)[number];
 
+/**
+ * Legislaturas de las Cortes Generales, con la fecha de constitución de cada una.
+ * Sirven para agrupar los casos de corrupción por la fecha de su sentencia firme.
+ */
+export const LEGISLATURAS = [
+  { id: 'VIII', inicio: '2004-04-02', fin: '2008-03-31' },
+  { id: 'IX', inicio: '2008-04-01', fin: '2011-12-12' },
+  { id: 'X', inicio: '2011-12-13', fin: '2016-01-12' },
+  { id: 'XI', inicio: '2016-01-13', fin: '2016-07-18' },
+  { id: 'XII', inicio: '2016-07-19', fin: '2019-05-20' },
+  { id: 'XIII', inicio: '2019-05-21', fin: '2019-12-02' },
+  { id: 'XIV', inicio: '2019-12-03', fin: '2023-08-16' },
+  { id: 'XV', inicio: '2023-08-17' },
+] as const satisfies readonly { id: string; inicio: string; fin?: string }[];
+export type Legislatura = (typeof LEGISLATURAS)[number];
+
 export type Gobierno = CollectionEntry<'gobiernos'>;
 export type Caso = CollectionEntry<'casos'>;
 export type Recuento = CollectionEntry<'recuentos'>;

@@ -312,7 +312,17 @@ const casos = defineCollection({
         .min(1),
       /** Qué se le impuso al partido como tal (p. ej. partícipe a título lucrativo), si algo. */
       responsabilidad_partido: textoNoVacio.optional(),
-      cuantia: z.strictObject({ euros: z.number().positive(), concepto: textoNoVacio }).optional(),
+      /**
+       * Importe que fija la sentencia (desviado, decomisado…), solo si dos fuentes lo dan igual.
+       * Si las fuentes discrepan o no hay cifra total, se omite y la web lo indica.
+       */
+      cuantia: z
+        .strictObject({
+          euros: z.number().positive(),
+          concepto: textoNoVacio,
+          fuentes: z.array(fuenteHistoria).min(2, 'La cuantía necesita al menos dos fuentes que la recojan'),
+        })
+        .optional(),
       /** Cambios posteriores a la sentencia (p. ej. anulación parcial por el Constitucional). */
       nota: textoNoVacio.optional(),
       fuentes: z.array(fuenteHistoria).min(1),

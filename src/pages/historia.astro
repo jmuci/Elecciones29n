@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import LineaTiempo from '../components/LineaTiempo.astro';
+import GraficoCorrupcion from '../components/GraficoCorrupcion.astro';
+import { resumirCorrupcion } from '../lib/corrupcion';
 import { BLOQUE_VISTA, cargarHistoria, fecha, periodo, TIPO_FUENTE_HISTORIA } from '../lib/ui';
 
 const { gobiernos, casos, recuentos, partidos } = await cargarHistoria();
@@ -8,6 +10,7 @@ const { gobiernos, casos, recuentos, partidos } = await cargarHistoria();
 const nombreCorto = (id: string): string => partidos.get(id)?.data.nombre_corto ?? id;
 const etiquetaPartido = (c: (typeof casos)[number]): string =>
   c.data.partido ? nombreCorto(c.data.partido.id) : (c.data.otro_partido ?? '');
+const resumenCorrupcion = resumirCorrupcion(casos, partidos);
 
 /** Mismas tres secciones, en el mismo orden y con la misma introducción, para todos los gobiernos. */
 const gruposDe = (g: (typeof gobiernos)[number]) => [
@@ -49,7 +52,7 @@ const ultima = fecha(
 ---
 
 <Base
-  titulo="Historia · Elecciones 29-N-2026"
+  titulo="Repaso histórico · Elecciones 29-N-2026"
   descripcion="Los gobiernos de España desde 2000: contexto internacional y económico, macroeconomía frente a percepción ciudadana, logros y críticas con fuentes, y corrupción según sentencias firmes."
 >
   <div class="contenedor">
@@ -186,6 +189,18 @@ const ultima = fecha(
         </p>
       </div>
 
+      <h3 id="graficas">Casos con sentencia firme en los últimos 20 años</h3>
+      <div class="prosa">
+        <p>
+          Las gráficas cuentan los casos de la lista de abajo, agrupados por la legislatura en la que la sentencia
+          quedó firme (no por la fecha de los hechos, que suelen abarcar varios años). Cada caso se asigna al partido
+          con el que lo vinculan las fuentes; los que no son de ninguno de los seis partidos de esta web se agrupan en
+          «Otros partidos». Como la lista no es exhaustiva, las cifras describen lo verificado hasta ahora, no el
+          total de la corrupción de cada partido.
+        </p>
+      </div>
+      <GraficoCorrupcion resumen={resumenCorrupcion} etiquetaPartido={etiquetaPartido} />
+
       <h3 id="recuentos">Recuentos de terceros</h3>
       <ul class="recuentos">
         {
@@ -284,7 +299,8 @@ const ultima = fecha(
         <ul>
           <li>Más casos con sentencia firme desde 2000, para todos los partidos, con un criterio de inclusión fijo.</li>
           <li>Un recuento fiable del número de personas condenadas por partido: hoy no hay cifra verificada.</li>
-          <li>El importe fijado por los tribunales en cada caso, solo cuando la sentencia lo recoge.</li>
+          <li>El importe fijado por los tribunales en los casos que hoy no tienen cifra verificada (Gürtel, ERE, Koldo, Marea…).</li>
+          <li>Casos firmes que aún no están en la lista, como Malaya (Marbella) o Nóos, pendientes de verificar.</li>
         </ul>
       </div>
     </section>
@@ -362,7 +378,7 @@ const ultima = fecha(
     background-color: var(--bloque-izquierda);
   }
 
-  /* Los casos no se colorean por bloque: el color de partido no entra en la sección de corrupción. */
+  /* La etiqueta del caso no se colorea: el color de partido solo aparece en las gráficas, junto al nombre y la cifra. */
   .etiqueta--neutra {
     border: 1px solid var(--border-strong);
     color: var(--text);

@@ -1,0 +1,379 @@
+---
+import '../styles/partidos.css';
+import { DESDE_GRAFICAS, grupoDe, legislaturaDe, periodoLegislatura } from '../lib/corrupcion';
+import type { ResumenCorrupcion } from '../lib/corrupcion';
+import { fecha } from '../lib/ui';
+
+interface Props {
+  resumen: ResumenCorrupcion;
+  etiquetaPartido: (c: ResumenCorrupcion['casos'][number]) => string;
+}
+
+const { resumen, etiquetaPartido } = Astro.props;
+const { grupos, legislaturas, totales, total } = resumen;
+const etiquetaGrupo = new Map(grupos.map((g) => [g.id, g.etiqueta]));
+const euros = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 2 });
+const pct = new Intl.NumberFormat('es-ES', { style: 'percent', maximumFractionDigits: 0 });
+const desde = fecha(DESDE_GRAFICAS, true);
+
+// Barras apiladas: una por legislatura, un tramo por grupo con casos.
+const W = 640;
+const H = 260;
+const M = { top: 24, right: 8, bottom: 44, left: 32 };
+const altoPlot = H - M.top - M.bottom;
+const maxCasos = Math.max(1, ...legislaturas.map((l) => [...l.porGrupo.values()].reduce((s, c) => s + c.length, 0)));
+const tope = Math.max(2, Math.ceil(maxCasos / 2) * 2);
+const marcas = Array.from({ length: tope / 2 + 1 }, (_, i) => i * 2);
+const y = (v: number): number => M.top + altoPlot - (v / tope) * altoPlot;
+const paso = (W - M.left - M.right) / legislaturas.length;
+const anchoBarra = Math.min(44, paso * 0.6);
+const barras = legislaturas.map(({ legislatura: l, porGrupo }, i) => {
+  const x = M.left + paso * i + (paso - anchoBarra) / 2;
+  let acumulado = 0;
+  const tramos = grupos
+    .filter((g) => porGrupo.has(g.id))
+    .map((g) => {
+      const casos = porGrupo.get(g.id) ?? [];
+      const y0 = y(acumulado);
+      acumulado += casos.length;
+      return { grupo: g, casos, y: y(acumulado), alto: y0 - y(acumulado) };
+    });
+  return { l, x, tramos, total: acumulado };
+});
+
+// Anillo: casos por grupo en los 20 años.
+const R = 80;
+const r = 50;
+const punto = (ang: number, radio: number): string =>
+  `${(100 + radio * Math.sin(ang)).toFixed(2)} ${(100 - radio * Math.cos(ang)).toFixed(2)}`;
+let angulo = 0;
+const arcos = grupos.map((g) => {
+  const n = totales.get(g.id) ?? 0;
+  const a0 = angulo;
+  angulo += (n / total) * 2 * Math.PI;
+  const grande = angulo - a0 > Math.PI ? 1 : 0;
+  const d =
+    n === total
+      ? `M ${punto(0, R)} A ${R} ${R} 0 1 1 ${punto(Math.PI, R)} A ${R} ${R} 0 1 1 ${punto(0, R)} M ${punto(0, r)} A ${r} ${r} 0 1 0 ${punto(Math.PI, r)} A ${r} ${r} 0 1 0 ${punto(0, r)} Z`
+      : `M ${punto(a0, R)} A ${R} ${R} 0 ${grande} 1 ${punto(angulo, R)} L ${punto(angulo, r)} A ${r} ${r} 0 ${grande} 0 ${punto(a0, r)} Z`;
+  return { grupo: g, n, d };
+});
+
+const plural = (n: number): string => `${n} ${n === 1 ? 'caso' : 'casos'}`;
+const descripcionBarras = `Casos con sentencia firme por legislatura: ${barras
+  .map((b) => `${b.l.id}, ${b.tramos.length ? b.tramos.map((t) => `${t.grupo.etiqueta} ${t.casos.length}`).join(', ') : 'ninguno'}`)
+  .join('; ')}.`;
+const descripcionAnillo = `Casos con sentencia firme desde ${desde.texto}, ${total} en total: ${arcos
+  .map((a) => `${a.grupo.etiqueta} ${a.n}`)
+  .join(', ')}.`;
+---
+
+<div class="graficos">
+  <figure class="grafico">
+    <figcaption class="grafico__titulo">Casos con sentencia firme, por legislatura de la sentencia</figcaption>
+    <ul class="leyenda" aria-hidden="true">
+      {
+        grupos.map((g) => (
+          <li>
+            <span class={`muestra s-${g.id}`} />
+            {g.etiqueta}
+          </li>
+        ))
+      }
+    </ul>
+    <div class="desplazable">
+      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={descripcionBarras}>
+        {
+          marcas.map((m) => (
+            <g class="eje">
+              <line x1={M.left} x2={W - M.right} y1={y(m)} y2={y(m)} class:list={[{ base: m === 0 }]} />
+              <text x={M.left - 8} y={y(m) + 4} text-anchor="end">
+                {m}
+              </text>
+            </g>
+          ))
+        }
+        {
+          barras.map((b) => (
+            <g>
+              {b.tramos.map((t) => (
+                <g class="tramo">
+                  <rect x={b.x} y={t.y} width={anchoBarra} height={t.alto} rx="3" class={`s-${t.grupo.id}`}>
+                    <title>
+                      {`Legislatura ${b.l.id} (${periodoLegislatura(b.l)}) · ${t.grupo.etiqueta}: ${plural(t.casos.length)} (${t.casos.map((c) => c.data.nombre).join('; ')})`}
+                    </title>
+                  </rect>
+                </g>
+              ))}
+              {b.total > 0 && (
+                <text x={b.x + anchoBarra / 2} y={y(b.total) - 6} text-anchor="middle" class="valor">
+                  {b.total}
+                </text>
+              )}
+              <text x={b.x + anchoBarra / 2} y={H - M.bottom + 18} text-anchor="middle" class="legislatura">
+                {b.l.id}
+              </text>
+              <text x={b.x + anchoBarra / 2} y={H - M.bottom + 32} text-anchor="middle" class="anios">
+                {periodoLegislatura(b.l)}
+              </text>
+            </g>
+          ))
+        }
+      </svg>
+    </div>
+  </figure>
+
+  <figure class="grafico grafico--anillo">
+    <figcaption class="grafico__titulo">Reparto de los {total} casos desde {desde.texto}</figcaption>
+    <svg viewBox="0 0 200 200" role="img" aria-label={descripcionAnillo}>
+      {
+        arcos.map((a) => (
+          <path d={a.d} class={`arco s-${a.grupo.id}`} fill-rule="evenodd">
+            <title>{`${a.grupo.etiqueta}: ${plural(a.n)} (${pct.format(a.n / total)})`}</title>
+          </path>
+        ))
+      }
+      <text x="100" y="100" text-anchor="middle" class="anillo__total">{total}</text>
+      <text x="100" y="116" text-anchor="middle" class="anillo__pie">casos</text>
+    </svg>
+    <ul class="leyenda leyenda--cifras">
+      {
+        arcos.map((a) => (
+          <li>
+            <span class={`muestra s-${a.grupo.id}`} aria-hidden="true" />
+            <span>{a.grupo.etiqueta}</span>
+            <strong>{a.n}</strong>
+            <span class="pct">({pct.format(a.n / total)})</span>
+          </li>
+        ))
+      }
+    </ul>
+  </figure>
+</div>
+
+<h4 class="importes-titulo" id="importes">Importe fijado en cada sentencia</h4>
+<p class="importes-intro">
+  Solo se muestra una cifra cuando la recogen igual al menos dos fuentes. Los importes no se suman: cada sentencia
+  mide algo distinto (dinero desviado, ganancias decomisadas…) y en muchos casos no hay una cifra total.
+</p>
+<div class="tabla">
+  <table>
+    <caption class="sr-only">Casos con sentencia firme desde {desde.texto}, con su legislatura e importe</caption>
+    <thead>
+      <tr>
+        <th scope="col">Caso</th>
+        <th scope="col">Partido</th>
+        <th scope="col">Sentencia firme</th>
+        <th scope="col">Importe fijado</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        resumen.casos.map((c) => {
+          const l = legislaturaDe(c.data.firme.fecha);
+          const f = fecha(c.data.firme.fecha);
+          return (
+            <tr>
+              <th scope="row">
+                <a href={`#caso-${c.id}`}>{c.data.nombre}</a>
+              </th>
+              <td>
+                <span class={`muestra s-${grupoDe(c)}`} aria-hidden="true" /> {etiquetaPartido(c)}
+                {!c.data.partido && <span class="ambito"> ({etiquetaGrupo.get('otros')})</span>}
+              </td>
+              <td>
+                <time datetime={f.iso}>{f.texto}</time>
+                {l && <span class="ambito"> · legislatura {l.id}</span>}
+              </td>
+              <td>
+                {c.data.cuantia ? (
+                  <>
+                    <strong>{euros.format(c.data.cuantia.euros)} €</strong>
+                    <span class="concepto">{c.data.cuantia.concepto}</span>
+                  </>
+                ) : (
+                  <span class="vacio">Sin cifra total verificada</span>
+                )}
+              </td>
+            </tr>
+          );
+        })
+      }
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .graficos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-5);
+    margin-top: var(--space-4);
+  }
+
+  @media (min-width: 56rem) {
+    .graficos {
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      align-items: start;
+    }
+  }
+
+  .grafico {
+    margin: 0;
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .grafico__titulo {
+    font-weight: 600;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: var(--space-3);
+  }
+
+  /* En móvil la gráfica de barras mantiene un ancho legible y se desplaza en horizontal. */
+  .desplazable {
+    overflow-x: auto;
+  }
+
+  .desplazable svg {
+    min-width: 34rem;
+  }
+
+  .grafico--anillo svg {
+    max-width: 14rem;
+    margin-inline: auto;
+  }
+
+  .eje line {
+    stroke: var(--rule);
+    stroke-width: 1;
+  }
+
+  .eje line.base {
+    stroke: var(--border-strong);
+  }
+
+  .eje text,
+  .anios {
+    fill: var(--muted);
+    font-size: 11px;
+  }
+
+  .legislatura {
+    fill: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .valor {
+    fill: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* Separación de 2 px entre tramos y entre sectores, del color de la superficie. */
+  .tramo rect,
+  .arco {
+    stroke: var(--surface);
+    stroke-width: 2;
+  }
+
+  .anillo__total {
+    fill: var(--text);
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .anillo__pie {
+    fill: var(--muted);
+    font-size: 12px;
+  }
+
+  .leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-4);
+    margin-top: var(--space-2);
+    padding: 0;
+    list-style: none;
+    font-size: var(--step--1);
+  }
+
+  .leyenda li {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-1);
+  }
+
+  .leyenda--cifras {
+    justify-content: center;
+    margin-top: var(--space-3);
+  }
+
+  .muestra {
+    display: inline-block;
+    flex: none;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 2px;
+  }
+
+  .pct {
+    color: var(--muted);
+  }
+
+  .importes-titulo {
+    margin-top: var(--space-5);
+  }
+
+  .importes-intro {
+    max-width: var(--measure);
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .tabla {
+    margin-top: var(--space-3);
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  th,
+  td {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  thead th {
+    background: var(--head);
+    font-weight: 600;
+  }
+
+  tbody th {
+    font-weight: 500;
+  }
+
+  .concepto {
+    display: block;
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .vacio {
+    color: var(--pendiente);
+  }
+</style>
