@@ -1,0 +1,89 @@
+---
+// Aviso de test de afinidad a medias. Se rellena en el cliente a partir de `localStorage`;
+// cerrarlo lo oculta hasta la próxima visita (sessionStorage).
+---
+
+<div class="aviso-test" id="aviso-test" role="region" aria-label="Test de afinidad sin terminar" hidden>
+  <div class="contenedor aviso-test__fila">
+    <p>
+      Tienes el test de afinidad a medias (<span id="aviso-test-progreso"></span>).
+      <a href="/test">Continuar el test</a>
+    </p>
+    <button type="button" id="aviso-test-cerrar" aria-label="Cerrar aviso">×</button>
+  </div>
+</div>
+
+<script>
+  import { CLAVE_AVISO, CLAVE_ESTADO, progreso, type Estado } from '../lib/test-estado';
+
+  const aviso = document.querySelector<HTMLElement>('#aviso-test');
+  const texto = document.querySelector<HTMLElement>('#aviso-test-progreso');
+
+  // Todo es opcional: sin almacenamiento disponible, el aviso no aparece.
+  try {
+    const estado = JSON.parse(localStorage.getItem(CLAVE_ESTADO) ?? '{}') as Estado;
+    const { respondidas, total, aMedias } = progreso(estado);
+    if (aviso && texto && aMedias && !sessionStorage.getItem(CLAVE_AVISO)) {
+      texto.textContent = `${respondidas} de ${total} preguntas`;
+      aviso.hidden = false;
+    }
+  } catch {
+    /* almacenamiento no disponible o estado ilegible */
+  }
+
+  document.querySelector('#aviso-test-cerrar')?.addEventListener('click', () => {
+    if (aviso) aviso.hidden = true;
+    try {
+      sessionStorage.setItem(CLAVE_AVISO, '1');
+    } catch {
+      /* almacenamiento no disponible */
+    }
+  });
+</script>
+
+<style>
+  .aviso-test {
+    background: var(--head);
+    border-bottom: 1px solid var(--rule);
+    font-size: var(--step--1);
+  }
+
+  .aviso-test[hidden] {
+    display: none;
+  }
+
+  .aviso-test__fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-block: var(--space-1);
+  }
+
+  .aviso-test a {
+    margin-left: var(--space-1);
+    font-weight: 600;
+  }
+
+  .aviso-test button {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--muted);
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+  }
+
+  .aviso-test button:hover {
+    color: var(--text);
+    background: var(--rule);
+  }
+</style>
