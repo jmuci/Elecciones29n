@@ -1,0 +1,21 @@
+# Fase 4: no hay programa electoral publicado; se resumen dos argumentarios "Hablemos Claro".
+# El Contrato con España no incluye medidas de familia (sí de protección de menores en redes, p. 3).
+partido: pp
+tema: familia
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: ayudas por hijo
+    resumen: >-
+      Plantea, dentro de su bajada de impuestos a las familias, una ayuda adicional para las familias
+      con hijos.
+    fuente: pp-argumentario-espana-de-currantes
+    pagina: 1
+  - subtema: ayudas por hijo
+    resumen: Propone bajar el IRPF, especialmente a las familias con hijos.
+    fuente: pp-argumentario-menos-impuestos
+    pagina: 1
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-argumentario-espana-de-currantes
+  - pp-argumentario-menos-impuestos

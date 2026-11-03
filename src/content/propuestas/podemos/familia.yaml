@@ -1,0 +1,18 @@
+# Fase 4: Podemos no tiene programa publicado; se resume su documento político de la V Asamblea (2025).
+partido: podemos
+tema: familia
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: conciliación
+    resumen: Propone que la educación infantil de 0 a 3 años tenga cobertura pública, universal y gratuita.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - subtema: conciliación
+    resumen: >-
+      Plantea un sistema público de cuidados que llegue a todas las personas y garantice atención
+      suficiente a todas las personas dependientes.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
