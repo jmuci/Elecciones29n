@@ -1,0 +1,32 @@
+# Fase 4: Podemos no tiene programa publicado (podemos.info sigue bloqueado por Cloudflare el 2-nov; en
+# Wayback no hay documentos nuevos para el 29N). Se resume su documento político de la V Asamblea (2025).
+partido: podemos
+tema: regeneracion
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: justicia
+    resumen: Propone democratizar el poder judicial.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 40
+  - resumen: >-
+      Plantea limitar de forma drástica lo que califica de "control oligárquico" de los medios de
+      comunicación.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 40
+  - resumen: >-
+      Propone hacer habituales mecanismos de participación ciudadana como los referéndums y los
+      presupuestos participativos.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 40
+  - resumen: >-
+      Plantea reformas para poner bajo control democrático a todos los cuerpos funcionariales del
+      Estado, en especial a los que tienen el monopolio del uso de la fuerza.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 40
+  - subtema: corrupción
+    resumen: Plantea que quienes cometan delitos de corrupción devuelvan todo lo sustraído.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 22
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
