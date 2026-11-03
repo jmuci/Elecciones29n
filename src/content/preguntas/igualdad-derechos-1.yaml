@@ -1,0 +1,21 @@
+tema: igualdad-derechos
+orden: 1
+pregunta: ¿Qué medida de igualdad y derechos te parece prioritaria?
+opciones:
+  - texto: Proteger en la Constitución el derecho al aborto y mantener el derecho a la eutanasia.
+    partidos:
+      - { partido: psoe, fuente: psoe-nota-aborto-constitucion-granada, pagina: primer párrafo }
+  - texto: >-
+      Combatir la violencia contra las mujeres con más recursos y autoridad para las Fuerzas y Cuerpos de
+      Seguridad del Estado.
+    partidos:
+      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 3 }
+  - texto: >-
+      Desplegar todos los recursos del Pacto de Estado contra la Violencia de Género y aplicar todas las medidas
+      de la ley «solo sí es sí».
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 35 }
+  - texto: Prohibir el burka y el niqab en los espacios públicos.
+    partidos:
+      - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
+revisado: 2026-11-02

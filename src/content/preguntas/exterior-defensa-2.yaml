@@ -1,0 +1,11 @@
+tema: exterior-defensa
+orden: 2
+pregunta: ¿Qué relación debería tener España con Marruecos?
+opciones:
+  - texto: Una relación de firmeza y cooperación, exigiendo responsabilidades por lo ocurrido en Ceuta.
+    partidos:
+      - { partido: pp, fuente: pp-argumentario-espana-primero, pagina: 1 }
+  - texto: Suspender los acuerdos con Marruecos y militarizar la frontera de Ceuta.
+    partidos:
+      - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
+revisado: 2026-11-02

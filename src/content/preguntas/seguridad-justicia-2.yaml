@@ -1,0 +1,16 @@
+tema: seguridad-justicia
+orden: 2
+pregunta: ¿Qué hacer ante la ocupación ilegal y los conflictos por impago de vivienda?
+opciones:
+  - texto: Desalojar en 48 horas las viviendas ocupadas ilegalmente.
+    partidos:
+      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 2 }
+  - texto: >-
+      Mediación gratuita y juzgados especializados con plazos cortos para los conflictos de alquiler, y
+      tipificar como estafa firmar un contrato con intención premeditada de no pagar.
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 4 }
+  - texto: Proteger a las familias vulnerables frente a los desalojos sin alternativa habitacional.
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 31 }
+revisado: 2026-11-02

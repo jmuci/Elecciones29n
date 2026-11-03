@@ -1,0 +1,13 @@
+tema: exterior-defensa
+orden: 1
+pregunta: ¿Qué política de defensa y alianzas prefieres?
+opciones:
+  - texto: >-
+      Reforzar las Fuerzas Armadas y que España esté siempre con las democracias occidentales y sus aliados
+      históricos.
+    partidos:
+      - { partido: pp, fuente: pp-argumentario-por-fin-espana, pagina: 1 }
+  - texto: Salir de la OTAN y no aumentar el gasto en armamento.
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 33 }
+revisado: 2026-11-02

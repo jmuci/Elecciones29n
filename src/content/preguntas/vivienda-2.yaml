@@ -1,0 +1,24 @@
+tema: vivienda
+orden: 2
+pregunta: ¿Cuál debería ser la prioridad principal para que haya más vivienda asequible?
+opciones:
+  - texto: Liberar suelo y reducir trámites para que se construya más.
+    partidos:
+      - { partido: pp, fuente: pp-argumentario-nueva-generacion-propietarios, pagina: 1 }
+      - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
+  - texto: >-
+      Aumentar la inversión pública hasta el 1 % del PIB para construir, comprar y rehabilitar vivienda
+      asequible de protección permanente.
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-nota-impuesto-acumulacion-vivienda, pagina: último párrafo }
+  - texto: >-
+      Ampliar el alquiler social expropiando el uso del 50 % de las viviendas de los grandes tenedores y
+      comprando vivienda a gran escala en el mercado privado.
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 31 }
+  - texto: >-
+      Destinar los fondos europeos no ejecutados a un fondo público para construir vivienda asequible y
+      protegida, y ceder suelo público a proyectos de colaboración público-privada.
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 3 }
+revisado: 2026-11-02

@@ -1,0 +1,19 @@
+tema: educacion
+orden: 1
+pregunta: ¿Qué debería primar en la política educativa?
+opciones:
+  - texto: Más exigencia y autoridad del docente, con una educación que premie el esfuerzo.
+    partidos:
+      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 3 }
+  - texto: Más becas y una formación profesional de calidad para reducir el abandono escolar.
+    partidos:
+      - { partido: psoe, fuente: psoe-nota-tijeras-motosierras-zaragoza, pagina: párrafo 8 }
+  - texto: >-
+      Derogar las leyes que permiten privatizar la educación, aumentar mucho su financiación pública y bajar las
+      ratios de alumnos.
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 36 }
+  - texto: Igualar las oportunidades educativas de los alumnos y sacar la «ideología» de las aulas.
+    partidos:
+      - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
+revisado: 2026-11-02

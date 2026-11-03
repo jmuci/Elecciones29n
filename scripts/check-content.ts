@@ -1,6 +1,7 @@
 /**
  * Validaciones de contenido que el schema de Zod no cubre (referencias,
- * fuentes huérfanas y subtemas fuera de la lista del tema). Se ejecuta con Node de forma nativa:
+ * fuentes huérfanas, subtemas fuera de la lista del tema y preguntas del test
+ * que no se apoyan en una propuesta real). Se ejecuta con Node de forma nativa:
  *   node scripts/check-content.ts [directorio-content]
  *
  * Reglas de inclusión de ejemplos: las mismas que content.config.ts, vía
@@ -19,13 +20,23 @@ export interface Celda {
   fuentes_revisadas?: unknown[];
 }
 
+export interface Pregunta {
+  ruta: string;
+  tema?: unknown;
+  opciones: { partidos?: { partido?: unknown; fuente?: unknown; pagina?: unknown }[] }[];
+}
+
 export interface Contenido {
   partidos: Set<string>;
   /** id del tema → sus `subtemas` permitidos. */
   temas: Map<string, string[]>;
   fuentes: Set<string>;
   celdas: Celda[];
+  preguntas: Pregunta[];
 }
+
+/** Preguntas del test de afinidad por tema (PLAN.md §1, sección 5). */
+const PREGUNTAS_POR_TEMA = { min: 1, max: 2 };
 
 /**
  * Ficheros ficticios (ruta relativa a src/content). Replica las exclusiones de
@@ -39,7 +50,7 @@ export function esEjemplo(ruta: string): boolean {
   );
 }
 
-export function validar({ partidos, temas, fuentes, celdas }: Contenido): string[] {
+export function validar({ partidos, temas, fuentes, celdas, preguntas }: Contenido): string[] {
   const errores: string[] = [];
   const usadas = new Set<string>();
 
@@ -79,12 +90,51 @@ export function validar({ partidos, temas, fuentes, celdas }: Contenido): string
     });
   }
 
+  errores.push(...validarPreguntas(preguntas, celdas, temas));
+
   for (const id of fuentes)
     if (!usadas.has(id))
       errores.push(
         `fuentes/${id}.yaml: la fuente no está referenciada por ninguna propuesta ni en \`fuentes_revisadas\``,
       );
 
+  return errores;
+}
+
+/**
+ * Cada partido de una respuesta debe apoyarse en una propuesta suya (de
+ * cualquier tema) con la misma `fuente` y `pagina`, y cada tema debe tener
+ * entre PREGUNTAS_POR_TEMA.min y .max preguntas. Si no hay ninguna pregunta
+ * (p. ej. en los fixtures), no se exige nada.
+ */
+function validarPreguntas(preguntas: Pregunta[], celdas: Celda[], temas: Map<string, string[]>): string[] {
+  if (preguntas.length === 0) return [];
+  const errores: string[] = [];
+  const propuestas = new Set(
+    celdas.flatMap((c) => c.propuestas.map((p) => `${String(c.partido)}|${String(p.fuente)}|${String(p.pagina)}`)),
+  );
+  const porTema = new Map([...temas.keys()].map((t) => [t, 0]));
+
+  for (const pregunta of preguntas) {
+    const tema = String(pregunta.tema);
+    if (!temas.has(tema)) errores.push(`${pregunta.ruta}: el tema \`${tema}\` no existe en src/content/temas/`);
+    else porTema.set(tema, (porTema.get(tema) ?? 0) + 1);
+    pregunta.opciones.forEach((o, i) =>
+      o.partidos?.forEach(({ partido, fuente, pagina }, j) => {
+        if (!propuestas.has(`${String(partido)}|${String(fuente)}|${String(pagina)}`))
+          errores.push(
+            `${pregunta.ruta}: opciones[${i}].partidos[${j}]: ninguna propuesta de \`${String(partido)}\` cita ` +
+              `\`${String(fuente)}\` en la página o sección \`${String(pagina)}\``,
+          );
+      }),
+    );
+  }
+
+  for (const [tema, n] of porTema)
+    if (n < PREGUNTAS_POR_TEMA.min || n > PREGUNTAS_POR_TEMA.max)
+      errores.push(
+        `preguntas: el tema \`${tema}\` tiene ${n} pregunta(s); deben ser entre ${PREGUNTAS_POR_TEMA.min} y ${PREGUNTAS_POR_TEMA.max}`,
+      );
   return errores;
 }
 
@@ -122,7 +172,13 @@ export function cargar(base: string, incluirEjemplo: boolean): Contenido {
       return [id, Array.isArray(subtemas) ? subtemas.map(String) : []];
     }),
   );
-  return { partidos: ids('partidos'), temas, fuentes: ids('fuentes'), celdas };
+  const preguntas = ficheros
+    .filter((f) => /^preguntas\/[^/]+\.ya?ml$/.test(f))
+    .map((ruta) => {
+      const d = leer(ruta);
+      return { ruta, tema: d.tema, opciones: Array.isArray(d.opciones) ? d.opciones : [] };
+    });
+  return { partidos: ids('partidos'), temas, fuentes: ids('fuentes'), celdas, preguntas };
 }
 
 function main(): void {

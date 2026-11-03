@@ -1,0 +1,13 @@
+tema: energia-clima
+orden: 2
+pregunta: ¿Qué apuesta energética prefieres?
+opciones:
+  - texto: Recuperar un plan nacional de energía nuclear.
+    partidos:
+      - { partido: vox, fuente: vox-recuperar-espana, pagina: 4 }
+  - texto: >-
+      Crear una empresa pública de energía que compita con las grandes compañías privadas y gestione la
+      transición energética.
+    partidos:
+      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 38 }
+revisado: 2026-11-02
