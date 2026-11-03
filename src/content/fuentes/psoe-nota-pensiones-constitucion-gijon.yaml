@@ -1,7 +1,7 @@
 # Noticia de psoe.es (Actualidad > Noticias) sobre el mitin de Pedro Sánchez en Gijón. HTML, sin sha256.
 # La página no muestra fecha: no hay `publicado`. Está en el listado de noticias posterior a la
 # convocatoria del 29N. psoe.es bloquea el acceso automatizado (Incapsula); se leyó con navegador.
-# Sin `archivo`: la captura en Wayback Machine queda pendiente (no se pudo lanzar desde la sesión de Fase 4).
+# Sin `archivo`: la captura en Wayback Machine queda pendiente.
 partido: psoe
 titulo: "Pedro Sánchez: \"La próxima legislatura reformaremos la Constitución para blindar las pensiones y revalorizarlas conforme al IPC\""
 url: https://www.psoe.es/actualidad/noticias-actualidad/pedro-sanchez-la-proxima-legislatura-reformaremos-la-constitucion-para-blindar-las-pensiones-y-revalorizarlas-conforme-al-ipc/
