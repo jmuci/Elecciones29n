@@ -1,0 +1,37 @@
+# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y el artículo de
+# pp.es sobre el proyecto sanitario presentado por la vicesecretaria de Sanidad (7-oct-2026).
+partido: pp
+tema: sanidad
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: >-
+      Se compromete a reforzar las plantillas de la sanidad pública, en especial con más médicos y
+      mejores condiciones laborales y retributivas.
+    fuente: pp-contrato-con-espana
+    pagina: 3
+  - subtema: salud mental
+    resumen: >-
+      Plantea un plan de salud mental que incorpore 10.000 profesionales, con una inversión de 700
+      millones de euros anuales hasta alcanzar ese objetivo.
+    fuente: pp-nota-funez-proyecto-sanitario
+    pagina: "punto 14"
+  - subtema: atención primaria
+    resumen: >-
+      Sitúa la atención primaria entre las primeras decisiones de su Gobierno y propone hacerla más
+      resolutiva, con más capacidad diagnóstica, menos burocracia y equipos multidisciplinares.
+    fuente: pp-nota-funez-proyecto-sanitario
+    pagina: "punto 9"
+  - resumen: >-
+      Propone planificar los recursos humanos a medio y largo plazo, ajustando las plazas MIR a las
+      necesidades futuras, y reformar el Estatuto Marco del personal sanitario con los profesionales.
+    fuente: pp-nota-funez-proyecto-sanitario
+    pagina: "puntos 6 y 7"
+  - resumen: >-
+      Plantea que el nuevo modelo de financiación autonómica incluya una pieza específica para
+      sostener el Sistema Nacional de Salud.
+    fuente: pp-nota-funez-proyecto-sanitario
+    pagina: "punto 11"
+fuentes_revisadas:
+  - pp-contrato-con-espana
+  - pp-nota-funez-proyecto-sanitario

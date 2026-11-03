@@ -1,0 +1,11 @@
+# Noticia de psoe.es (Actualidad > Noticias) sobre el mitin de Pedro Sánchez en Zaragoza. HTML, sin sha256.
+# La página no muestra fecha: no hay `publicado`. Es posterior a la convocatoria (pide el voto
+# "el 29 de noviembre").
+# psoe.es bloquea el acceso automatizado (Incapsula); se leyó con navegador.
+# Sin `archivo`: la única captura de Wayback (2026-10-15) es la página de bloqueo de Incapsula, sin
+# contenido; no se pudo lanzar una nueva desde la sesión de Fase 4.
+partido: psoe
+titulo: "Pedro Sánchez: \"Entre las tijeras de Feijóo y las motosierras de Abascal, si llegan al Gobierno firmarían el acta de defunción del Estado del bienestar\""
+url: https://www.psoe.es/actualidad/noticias-actualidad/pedro-sanchez-entre-las-tijeras-de-feijoo-y-las-motosierras-de-abascal-si-llegan-al-gobierno-firmarian-el-acta-de-defuncion-del-estado-del-bienestar/
+tipo: nota_prensa
+consultado: 2026-11-02

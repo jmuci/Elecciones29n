@@ -1,0 +1,27 @@
+# Fase 4: Podemos no tiene programa publicado; se resume su documento político de la V Asamblea
+# (2025). podemos.info sigue bloqueado por Cloudflare (2-nov-2026); se revisó la lista de documentos
+# en Wayback Machine (captura del 2-oct-2026).
+partido: podemos
+tema: sanidad
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - resumen: >-
+      Propone derogar de inmediato todas las leyes que permiten la privatización de la sanidad.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - resumen: >-
+      Plantea aumentar de forma muy significativa la financiación pública de la sanidad, en lugar de
+      aumentar el gasto en armamento.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - subtema: atención primaria
+    resumen: Propone reforzar la atención primaria y garantizar la atención sanitaria en el medio rural.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+  - subtema: listas de espera
+    resumen: Propone reducir al mínimo las listas de espera sanitarias.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 36
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
