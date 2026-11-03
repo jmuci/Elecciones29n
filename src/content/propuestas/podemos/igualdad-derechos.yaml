@@ -1,0 +1,40 @@
+# Fase 4: Podemos no tiene programa publicado; se resume su documento político de la V Asamblea
+# (2025). Hay un "Documento feminista y LGTBIQA+" de 2022 en podemos.info/documentos (según Wayback),
+# anterior a la V Asamblea; no se cita porque el documento político de 2025 ya cubre el tema.
+partido: podemos
+tema: igualdad-derechos
+estado: parcial
+revisado: 2026-11-02
+propuestas:
+  - subtema: igualdad
+    resumen: >-
+      Propone erradicar las violencias machistas, desplegar todos los recursos del Pacto de Estado
+      contra la Violencia de Género, incluida la financiación de la atención a las víctimas, y aplicar
+      todas las medidas de la ley "solo sí es sí".
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 35
+  - subtema: igualdad
+    resumen: >-
+      Plantea avanzar hacia la abolición de la prostitución con garantías materiales para las mujeres,
+      prohibir el lucro de terceros y regularizar a todas las personas, para evitar que haya mujeres
+      obligadas a ejercerla o que no puedan dejarla.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 35
+  - subtema: igualdad
+    resumen: >-
+      Propone recoger en la legislación que un maltratador no puede ser un buen padre, dar la máxima
+      protección institucional a las madres y formar a los operadores jurídicos en igualdad para que
+      dejen de usar el llamado síndrome de alienación parental.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 35
+  - subtema: aborto
+    resumen: Plantea garantizar que el aborto se pueda realizar en la sanidad pública.
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 35
+  - resumen: >-
+      Propone medidas de educación sexual, contra la pobreza menstrual y la violencia obstétrica, y
+      perseguir la gestación subrogada, que califica de "explotación reproductiva".
+    fuente: podemos-documento-politico-v-asamblea
+    pagina: 35
+fuentes_revisadas:
+  - podemos-documento-politico-v-asamblea
