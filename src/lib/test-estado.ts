@@ -10,6 +10,8 @@ export const CLAVE_AVISO = 'test-afinidad-aviso-cerrado';
 /** Prefijo del fragmento de un resultado compartido: `/test#r=…`. */
 export const PREFIJO_COMPARTIR = '#r=';
 export const NOMBRE_MAX = 40;
+/** Importancia por defecto de cada pregunta (escala 1–5). */
+export const IMPORTANCIA_INICIAL = 3;
 
 export type Estado = Record<string, { importancia: number; respuesta: number | null }>;
 
@@ -26,10 +28,10 @@ export function fnv1a(texto: string): number {
 /** Identificador corto (16 bits) de una pregunta en el enlace. El build comprueba que no colisionan. */
 export const huella = (id: string): number => fnv1a(id) & 0xffff;
 
-/** Preguntas a medias: alguna respondida y alguna que cuenta sin responder. */
+/** Preguntas a medias: alguna respondida y alguna sin responder. */
 export function progreso(estado: Estado): { respondidas: number; total: number; aMedias: boolean } {
   const valores = Object.values(estado);
-  const respondidas = valores.filter((v) => v.respuesta !== null || v.importancia === 0).length;
+  const respondidas = valores.filter((v) => v.respuesta !== null).length;
   const empezado = valores.some((v) => v.respuesta !== null);
   return { respondidas, total: valores.length, aMedias: empezado && respondidas < valores.length };
 }
@@ -89,7 +91,7 @@ export function decodificar(
   const nombre = new TextDecoder().decode(bytes.subarray(2, inicio));
   const porHuella = new Map(preguntas.map((p) => [huella(p.id), p]));
   const estado: Estado = Object.fromEntries(
-    preguntas.map((p) => [p.id, { importancia: 0, respuesta: null as number | null }]),
+    preguntas.map((p) => [p.id, { importancia: IMPORTANCIA_INICIAL, respuesta: null as number | null }]),
   );
   let descartadas = 0;
   for (let o = inicio; o < bytes.length; o += 3) {
@@ -97,6 +99,8 @@ export function decodificar(
     const valor = bytes[o + 2] ?? 0;
     const importancia = valor >> 4;
     const r = valor & 0x0f;
+    // Los enlaces anteriores usaban importancia 0 para «no cuenta»: se quedan sin responder.
+    if (importancia === 0) continue;
     if (!p || importancia > 5 || (r !== SIN_RESPUESTA && r >= p.opciones.length)) {
       descartadas += 1;
       continue;

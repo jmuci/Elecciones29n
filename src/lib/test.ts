@@ -1,13 +1,14 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import type { Tema } from './modelo';
-import { fnv1a, huella } from './test-estado';
+import { IMPORTANCIA_INICIAL, fnv1a, huella } from './test-estado';
+
+export { IMPORTANCIA_INICIAL };
 
 export type Pregunta = CollectionEntry<'preguntas'>;
 export type Opcion = Pregunta['data']['opciones'][number];
 
-/** Importancia por defecto de cada pregunta (escala 0–5; 0 = no cuenta). */
-export const IMPORTANCIA_INICIAL = 3;
-export const IMPORTANCIAS = [0, 1, 2, 3, 4, 5] as const;
+/** Importancias que se pueden dar a una pregunta (escala 1–5). */
+export const IMPORTANCIAS = [1, 2, 3, 4, 5] as const;
 
 /** Datos mínimos que necesita el script del cliente para calcular la afinidad. */
 export interface DatosCliente {
