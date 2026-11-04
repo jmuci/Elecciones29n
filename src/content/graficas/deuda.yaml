@@ -1,0 +1,29 @@
+# Cifras tomadas de las secciones de Macroeconomía de src/content/gobiernos (mismas fuentes).
+titulo: Deuda pública
+pestana: Deuda
+bloque: macro
+orden: 4
+tipo: lineas
+unidad: "% del PIB"
+descripcion: "Deuda de las administraciones públicas en porcentaje del PIB."
+series:
+  - id: deuda
+    nombre: Deuda pública
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "Government deficit/surplus, debt and associated data (gov_10dd_edpt1)"
+        url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+        tipo: institucion
+    valores:
+      "1996": 65.4
+      "2003": 47.7
+      "2004": 45.3
+      "2007": 35.7
+      "2011": 69.5
+      "2012": 89.6
+      "2013": 100.0
+      "2017": 101.2
+      "2019": 97.7
+      "2020": 119.3
+      "2025": 100.5
+revisado: 2026-11-04

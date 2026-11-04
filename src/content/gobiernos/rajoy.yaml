@@ -19,7 +19,10 @@ destacados:
   - nombre: "María Dolores de Cospedal"
     cargo: "Ministra de Defensa (2016-2018)"
 nota_revision: "Primera pasada: de momento hay menos logros que críticas documentados con fuente. No es una valoración; se buscan más fuentes para los logros."
-revisado: 2026-11-02
+cifras:
+  desde: 2011
+  hasta: 2018
+revisado: 2026-11-04
 contexto:
   internacional:
     - titulo: Crisis del euro y «whatever it takes» (2012)

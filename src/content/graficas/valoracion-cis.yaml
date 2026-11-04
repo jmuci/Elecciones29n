@@ -1,0 +1,119 @@
+# Cifras tomadas de las secciones de Percepción de src/content/gobiernos (mismas fuentes).
+titulo: Cómo se valora la economía de España
+pestana: Valoración (CIS)
+bloque: percepcion
+orden: 1
+tipo: apiladas
+unidad: "%"
+descripcion: "Respuesta a cómo es la situación económica general de España, en los barómetros del CIS citados en cada gobierno. El resto hasta 100 son otras respuestas o no sabe / no contesta."
+notas:
+  - "Desde 2022 el CIS no ofrece «regular» como respuesta, así que los porcentajes de 2022 y 2026 no son directamente comparables con los anteriores."
+series:
+  - id: buena
+    nombre: Buena o muy buena
+    fuentes:
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2004 (estudio 2556)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2004"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de mayo 2009 (estudio 2801)"
+        url: "https://www.cis.es/estudios/barometro-de-mayo-2009"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2014 (estudio 3013)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2014"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de junio 2018 (estudio 3217)"
+        url: "https://www.cis.es/estudios/barometro-de-junio-2018"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de enero 2020 (estudio 3271)"
+        url: "https://www.cis.es/estudios/barometro-de-enero-2020"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de octubre 2022 (estudio 3380)"
+        url: "https://www.cis.es/estudios/barometro-de-octubre-2022"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de octubre 2026 (estudio 3582)"
+        url: "https://www.cis.es/estudios/barometro-de-octubre-2026"
+        tipo: institucion
+    valores:
+      "2004-02": 29.2
+      "2009-05": 3.1
+      "2014-02": 0.7
+      "2018-06": 6.7
+      "2020-01": 6.4
+      "2022-10": 17.4
+      "2026-10": 36.2
+  - id: regular
+    nombre: Regular
+    fuentes:
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2004 (estudio 2556)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2004"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de mayo 2009 (estudio 2801)"
+        url: "https://www.cis.es/estudios/barometro-de-mayo-2009"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2014 (estudio 3013)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2014"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de junio 2018 (estudio 3217)"
+        url: "https://www.cis.es/estudios/barometro-de-junio-2018"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de enero 2020 (estudio 3271)"
+        url: "https://www.cis.es/estudios/barometro-de-enero-2020"
+        tipo: institucion
+    valores:
+      "2004-02": 47.0
+      "2009-05": 25.6
+      "2014-02": 12.1
+      "2018-06": 42.5
+      "2020-01": 46.4
+  - id: mala
+    nombre: Mala o muy mala
+    fuentes:
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2004 (estudio 2556)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2004"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de mayo 2009 (estudio 2801)"
+        url: "https://www.cis.es/estudios/barometro-de-mayo-2009"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2014 (estudio 3013)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2014"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de junio 2018 (estudio 3217)"
+        url: "https://www.cis.es/estudios/barometro-de-junio-2018"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de enero 2020 (estudio 3271)"
+        url: "https://www.cis.es/estudios/barometro-de-enero-2020"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de octubre 2022 (estudio 3380)"
+        url: "https://www.cis.es/estudios/barometro-de-octubre-2022"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de octubre 2026 (estudio 3582)"
+        url: "https://www.cis.es/estudios/barometro-de-octubre-2026"
+        tipo: institucion
+    valores:
+      "2004-02": 22.0
+      "2009-05": 70.5
+      "2014-02": 86.9
+      "2018-06": 49.7
+      "2020-01": 46.5
+      "2022-10": 73.2
+      "2026-10": 57.8
+revisado: 2026-11-04
