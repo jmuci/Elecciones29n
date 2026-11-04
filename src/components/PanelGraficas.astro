@@ -1,0 +1,140 @@
+---
+/**
+ * Varias gráficas en pestañas. Sin JavaScript se ven todas, una debajo de otra, y la
+ * barra de pestañas no aparece; el script la muestra y deja visible solo la elegida.
+ */
+import Grafica from './Grafica.astro';
+import type { Gobierno, Grafica as GraficaEntry } from '../lib/modelo';
+
+interface Props {
+  id: string;
+  /** Nombre accesible de la barra de pestañas. */
+  etiqueta: string;
+  graficas: GraficaEntry[];
+  gobiernos: Gobierno[];
+}
+
+const { id, etiqueta, graficas, gobiernos } = Astro.props;
+---
+
+<div class="panel" data-pestanas>
+  <div class="pestanas" role="tablist" aria-label={etiqueta} hidden>
+    {
+      graficas.map((g, i) => (
+        <button
+          type="button"
+          role="tab"
+          id={`${id}-tab-${g.id}`}
+          aria-controls={`${id}-panel-${g.id}`}
+          aria-selected={i === 0 ? 'true' : 'false'}
+          tabindex={i === 0 ? 0 : -1}
+        >
+          {g.data.pestana}
+        </button>
+      ))
+    }
+  </div>
+  {
+    graficas.map((g) => (
+      <section class="panel__hoja" role="tabpanel" id={`${id}-panel-${g.id}`} aria-labelledby={`${id}-tab-${g.id}`}>
+        <Grafica grafica={g} gobiernos={gobiernos} />
+      </section>
+    ))
+  }
+</div>
+
+<script>
+  for (const panel of document.querySelectorAll<HTMLElement>('[data-pestanas]')) {
+    const lista = panel.querySelector<HTMLElement>('[role="tablist"]');
+    const tabs = [...panel.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+    if (!lista || tabs.length === 0) continue;
+
+    const elegir = (tab: HTMLButtonElement, foco = false): void => {
+      for (const t of tabs) {
+        const activa = t === tab;
+        t.setAttribute('aria-selected', String(activa));
+        t.tabIndex = activa ? 0 : -1;
+        const hoja = document.getElementById(t.getAttribute('aria-controls') ?? '');
+        if (hoja) hoja.hidden = !activa;
+      }
+      if (foco) tab.focus();
+    };
+
+    lista.hidden = false;
+    panel.classList.add('panel--activo');
+    elegir(tabs.find((t) => t.getAttribute('aria-selected') === 'true') ?? tabs[0]);
+
+    for (const [i, tab] of tabs.entries()) {
+      tab.addEventListener('click', () => elegir(tab));
+      tab.addEventListener('keydown', (e) => {
+        const destino =
+          e.key === 'ArrowRight' ? tabs[(i + 1) % tabs.length]
+          : e.key === 'ArrowLeft' ? tabs[(i - 1 + tabs.length) % tabs.length]
+          : e.key === 'Home' ? tabs[0]
+          : e.key === 'End' ? tabs.at(-1)
+          : undefined;
+        if (!destino) return;
+        e.preventDefault();
+        elegir(destino, true);
+      });
+    }
+  }
+</script>
+
+<style>
+  .panel {
+    padding: var(--space-4) var(--space-5) var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .pestanas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .pestanas[hidden] {
+    display: none;
+  }
+
+  [role='tab'] {
+    padding: var(--space-2) var(--space-3);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    color: var(--muted);
+    font: inherit;
+    font-size: var(--step--1);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  [role='tab']:hover {
+    background: var(--head);
+    color: var(--text);
+  }
+
+  [role='tab'][aria-selected='true'] {
+    background: var(--head);
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+
+  /* Sin JavaScript: todas las hojas, separadas. */
+  .panel:not(.panel--activo) .panel__hoja + .panel__hoja {
+    margin-top: var(--space-6);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (max-width: 40rem) {
+    .panel {
+      padding: var(--space-3);
+    }
+  }
+</style>

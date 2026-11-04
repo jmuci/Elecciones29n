@@ -19,7 +19,10 @@ destacados:
   - nombre: "Ángel Acebes"
     cargo: "Ministro del Interior (2002-2004)"
 nota_revision: "Primera pasada: de momento hay menos logros que críticas documentados con fuente. No es una valoración; se buscan más fuentes para los logros."
-revisado: 2026-11-02
+cifras:
+  desde: 1996
+  hasta: 2003
+revisado: 2026-11-04
 contexto:
   internacional:
     - titulo: Guerra de Irak y cumbre de las Azores (2003)
@@ -70,7 +73,7 @@ contexto:
 economia:
   macro:
     - titulo: Crecimiento e inflación (1996-2003)
-      descripcion: "PIB real por años (Eurostat): 1996, 2,6 %; 1997, 3,6 %; 1998, 4,3 %; 1999, 4,4 %; 2000, 5,2 %; 2001, 3,9 %; 2002, 2,8 %; 2003, 2,9 %. La inflación media (IPCA) fue del 3,5 %, 2,8 %, 3,6 % y 3,1 % en esos años."
+      descripcion: "PIB real por años (Eurostat): 1996, 2,6 %; 1997, 3,6 %; 1998, 4,3 %; 1999, 4,4 %; 2000, 5,2 %; 2001, 3,9 %; 2002, 2,8 %; 2003, 2,9 %. La inflación media (IPCA) fue del 3,5 %, 2,8 %, 3,6 % y 3,1 % entre 2000 y 2003."
       fuentes:
         - medio: "Eurostat"
           titulo: "Gross domestic product (GDP) and main components - annual data (nama_10_gdp)"

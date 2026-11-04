@@ -18,7 +18,10 @@ destacados:
     cargo: "Vicepresidenta segunda y ministra de Economía"
   - nombre: "Carme Chacón"
     cargo: "Ministra de Vivienda y de Defensa"
-revisado: 2026-11-02
+cifras:
+  desde: 2004
+  hasta: 2011
+revisado: 2026-11-04
 contexto:
   internacional:
     - titulo: Crisis financiera internacional (2007-2009)

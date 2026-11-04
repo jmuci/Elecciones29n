@@ -1,0 +1,36 @@
+# Cifras tomadas de las secciones de Macroeconomía de src/content/gobiernos (mismas fuentes).
+titulo: Inflación
+pestana: Precios
+bloque: macro
+orden: 3
+tipo: barras
+unidad: "%"
+descripcion: "Inflación media anual medida con el índice de precios armonizado (IPCA)."
+series:
+  - id: ipca
+    nombre: Inflación media (IPCA)
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "HICP - annual data (prc_hicp_aind)"
+        url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table?lang=en"
+        tipo: institucion
+    valores:
+      "2000": 3.5
+      "2001": 2.8
+      "2002": 3.6
+      "2003": 3.1
+      "2007": 2.8
+      "2008": 4.1
+      "2009": -0.2
+      "2012": 2.4
+      "2013": 1.5
+      "2014": -0.2
+      "2015": -0.6
+      "2016": -0.3
+      "2017": 2.0
+      "2021": 3.0
+      "2022": 8.3
+      "2023": 3.4
+      "2024": 2.9
+      "2025": 2.7
+revisado: 2026-11-04

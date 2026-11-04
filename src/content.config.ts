@@ -37,6 +37,7 @@ import { z } from 'astro/zod';
 import { INCLUIR_EJEMPLO } from './lib/ejemplo';
 import {
   BLOQUES,
+  BLOQUES_GRAFICA,
   ESTADOS,
   ESTADOS_SIN_PROPUESTAS,
   IDS_OTROS,
@@ -45,6 +46,7 @@ import {
   TIPOS_FUENTE,
   TIPOS_FUENTE_ENCUESTA,
   TIPOS_FUENTE_HISTORIA,
+  TIPOS_GRAFICA,
   TOTAL_ESCANOS,
 } from './lib/modelo';
 
@@ -290,8 +292,56 @@ const gobiernos = defineCollection({
     }),
     logros: z.array(hecho),
     criticas: z.array(hecho),
+    /**
+     * Años cuyas cifras se resumen en las minigráficas de este gobierno (los mismos que citan sus
+     * textos de Macroeconomía). Es una elección editorial explícita: los años de cambio de gobierno
+     * se reparten igual que en los textos, sin calcularlos a partir de las fechas.
+     */
+    cifras: z
+      .strictObject({ desde: z.number().int(), hasta: z.number().int() })
+      .refine((c) => c.desde <= c.hasta, { message: '`desde` no puede ser posterior a `hasta`' }),
     /** Aviso visible cuando la revisión de fuentes no está terminada. */
     nota_revision: textoNoVacio.optional(),
+    revisado: fecha,
+  }),
+});
+
+/**
+ * Series de datos para las gráficas de /historia. Las cifras salen de los textos de
+ * Macroeconomía y Percepción de `gobiernos` y llevan las mismas fuentes; nunca se rellenan
+ * años sin dato. Claves: año (`"2009"`) o año y mes (`"2009-05"`, para barómetros).
+ */
+const periodoSerie = z.string().regex(/^\d{4}(-(0[1-9]|1[0-2]))?$/, 'Periodo en formato AAAA o AAAA-MM');
+const graficas = defineCollection({
+  loader: yamlGlob('./src/content/graficas', '*.yaml'),
+  schema: z.strictObject({
+    titulo: textoNoVacio,
+    /** Texto corto de la pestaña. */
+    pestana: textoNoVacio,
+    /** `macro` = cifras agregadas; `percepcion` = cómo se vivió. Se muestran en bloques separados. */
+    bloque: z.enum(BLOQUES_GRAFICA),
+    orden: z.number().int().positive(),
+    tipo: z.enum(TIPOS_GRAFICA),
+    unidad: textoNoVacio,
+    descripcion: textoNoVacio,
+    notas: z.array(textoNoVacio).default([]),
+    series: z
+      .array(
+        z.strictObject({
+          id: z.string().regex(/^[a-z0-9-]+$/),
+          nombre: textoNoVacio,
+          detalle: textoNoVacio.optional(),
+          /** Periodos con datos provisionales (se marcan en la gráfica y en la tabla). */
+          provisional: z.array(periodoSerie).default([]),
+          fuentes: z.array(fuenteHistoria).min(1),
+          valores: z
+            .record(periodoSerie, z.number())
+            .refine((v) => Object.keys(v).length > 0, { message: 'La serie necesita al menos un valor' }),
+        }),
+      )
+      .min(1)
+      /** Hasta tres series por gráfica: es el máximo que la paleta distingue con daltonismo. */
+      .max(3),
     revisado: fecha,
   }),
 });
@@ -409,4 +459,15 @@ const encuestas = defineCollection({
     }),
 });
 
-export const collections = { partidos, temas, fuentes, propuestas, preguntas, encuestas, gobiernos, casos, recuentos };
+export const collections = {
+  partidos,
+  temas,
+  fuentes,
+  propuestas,
+  preguntas,
+  encuestas,
+  gobiernos,
+  casos,
+  recuentos,
+  graficas,
+};

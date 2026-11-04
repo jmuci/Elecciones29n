@@ -1,0 +1,669 @@
+---
+/**
+ * Gráfica de una serie temporal de /historia (líneas, barras o barras apiladas), con las
+ * franjas de cada gobierno de fondo. El SVG se dibuja en el build; el script solo añade
+ * el tooltip y el filtro de series de la leyenda. Sin JavaScript queda la tabla de datos.
+ *
+ * - `completa`: título, leyenda pulsable, notas, fuentes y tabla. Tres SVG (ancho, medio y estrecho)
+ *   para que el texto se lea igual en móvil sin desplazamiento horizontal.
+ * - `mini`: una serie, sin leyenda, con la franja de `resaltar` destacada y un resumen.
+ */
+import type { Gobierno, Grafica } from '../lib/modelo';
+import {
+  construirGrafica,
+  DIM_ANCHA,
+  DIM_ESTRECHA,
+  DIM_MEDIA,
+  DIM_MINI,
+  etiquetaPeriodo,
+  formatoValor,
+  marcador,
+  puntosDe,
+  resumenSerie,
+  type ModeloGrafica,
+} from '../lib/graficas';
+import { TIPO_FUENTE_HISTORIA } from '../lib/ui';
+
+interface Props {
+  grafica: Grafica;
+  gobiernos: Gobierno[];
+  variante?: 'completa' | 'mini';
+  /** Solo en `mini`: la serie que se dibuja. */
+  serie?: string;
+  /** Solo en `mini`: gobierno cuya franja se destaca y cuyos años se resumen. */
+  gobierno?: Gobierno;
+  /** Solo en `mini`: `tramo` (primer y último dato) o `extremos` (mínimo y máximo). */
+  resumen?: 'tramo' | 'extremos';
+  /** Nivel del título (h3, h4…). */
+  nivel?: 3 | 4 | 5;
+}
+
+const { grafica, gobiernos, variante = 'completa', serie, gobierno, resumen = 'tramo', nivel = 4 } = Astro.props;
+const { titulo, descripcion, unidad, notas, tipo } = grafica.data;
+const mini = variante === 'mini';
+const Titulo = `h${nivel}` as 'h3' | 'h4' | 'h5';
+
+const opciones = mini ? { series: serie ? [serie] : undefined, resaltar: gobierno?.id } : {};
+const modelos: { clase: string; m: ModeloGrafica }[] = mini
+  ? [{ clase: 'mini', m: construirGrafica(grafica, gobiernos, DIM_MINI, opciones) }]
+  : [
+      { clase: 'ancha', m: construirGrafica(grafica, gobiernos, DIM_ANCHA) },
+      { clase: 'media', m: construirGrafica(grafica, gobiernos, DIM_MEDIA) },
+      { clase: 'estrecha', m: construirGrafica(grafica, gobiernos, DIM_ESTRECHA) },
+    ];
+const series = grafica.data.series.filter((s) => !opciones.series || opciones.series.includes(s.id));
+const tono = (indice: number): string => (tipo === 'apiladas' ? `pila-${indice}` : `serie-${indice}`);
+const radio = mini ? 2.5 : 3.5;
+
+// Resumen de la minigráfica: cifras del periodo del gobierno, con su año.
+const res = mini && gobierno && series[0] ? resumenSerie(series[0], gobierno.data.cifras.desde, gobierno.data.cifras.hasta, resumen) : null;
+const fmt = (p: { valor: number; clave: string }): string => `${formatoValor(p.valor, unidad)} en ${etiquetaPeriodo(p.clave)}`;
+
+// Tabla: una fila por periodo con algún dato.
+const claves = [...new Set(series.flatMap((s) => puntosDe(s).map((p) => p.clave)))].sort();
+const fuentes = [...new Map(series.flatMap((s) => s.fuentes).map((f) => [f.url, f])).values()];
+---
+
+<figure class:list={['grafica', `grafica--${variante}`]} data-grafica>
+  <figcaption class="grafica__cabecera">
+    <Titulo class="grafica__titulo">{mini ? series[0]?.nombre : titulo}</Titulo>
+    {!mini && <p class="grafica__descripcion">{descripcion}</p>}
+  </figcaption>
+
+  {
+    !mini && series.length > 1 && (
+      <div class="leyenda" role="group" aria-label={`Series de «${titulo}»: pulsa para mostrar u ocultar`}>
+        {series.map((s, i) => (
+          <button type="button" class="leyenda__boton" aria-pressed="true" data-alternar={s.id}>
+            <svg class="leyenda__muestra" viewBox="0 0 24 12" aria-hidden="true">
+              {tipo === 'lineas' ? (
+                <>
+                  <line x1="1" x2="23" y1="6" y2="6" class={`trazo ${tono(i)}`} />
+                  <path d={marcador(i, 12, 6, 3.5)} class={`relleno ${tono(i)}`} />
+                </>
+              ) : (
+                <rect x="6" y="1" width="12" height="10" rx="2" class={`relleno ${tono(i)}`} />
+              )}
+            </svg>
+            <span>
+              {s.nombre}
+              {s.detalle && <span class="leyenda__detalle"> ({s.detalle})</span>}
+            </span>
+          </button>
+        ))}
+      </div>
+    )
+  }
+
+  <div class="lienzo">
+    {
+      modelos.map(({ clase, m }) => (
+        <svg class={`svg svg--${clase}`} viewBox={`0 0 ${m.dim.W} ${m.dim.H}`} role="img" aria-label={m.descripcion}>
+          <g class="franjas">
+            {m.franjas.map((f) => (
+              <g>
+                <rect
+                  x={f.x}
+                  y={m.dim.M.top}
+                  width={f.ancho}
+                  height={m.dim.H - m.dim.M.top - m.dim.M.bottom}
+                  class:list={['franja', { 'franja--par': f.par, 'franja--resaltada': f.resaltada }]}
+                />
+                {m.dim.rotulos && (
+                  <text x={f.x + f.ancho / 2} y={m.dim.M.top - 8} text-anchor="middle" class="rotulo">
+                    {f.rotulo}
+                  </text>
+                )}
+              </g>
+            ))}
+          </g>
+          <g class="eje">
+            {m.ejeY.map((t) => (
+              <>
+                <line x1={m.dim.M.left} x2={m.dim.W - m.dim.M.right} y1={t.y} y2={t.y} class:list={{ cero: t.cero }} />
+                <text x={m.dim.M.left - 6} y={t.y + 4} text-anchor="end">
+                  {t.texto}
+                </text>
+              </>
+            ))}
+            {m.ejeX.map((t) => (
+              <text x={t.x} y={m.dim.H - m.dim.M.bottom + 16} text-anchor="middle">
+                {t.texto}
+              </text>
+            ))}
+          </g>
+          {m.series.map((s) => (
+            <g class={`serie ${tono(s.indice)}`} data-serie={s.id}>
+              {s.segmentos.map((seg) => (
+                <path d={seg.d} class:list={['trazo', { discontinuo: seg.discontinuo }]} />
+              ))}
+              {s.barras.map((b) => (
+                <path d={b.d} class:list={['relleno barra', { provisional: b.provisional }]} />
+              ))}
+              {s.puntos.map((p) => (
+                <path d={marcador(s.indice, p.cx, p.cy, radio)} class:list={['relleno marca', { provisional: p.provisional }]} />
+              ))}
+            </g>
+          ))}
+          <line class="guia" y1={m.dim.M.top} y2={m.dim.H - m.dim.M.bottom} x1="0" x2="0" visibility="hidden" />
+          <g class="dianas">
+            {m.dianas.map((d) => (
+              <rect
+                x={d.x}
+                y={m.dim.M.top}
+                width={d.ancho}
+                height={m.dim.H - m.dim.M.top - m.dim.M.bottom}
+                data-guia={d.guia}
+                data-etiqueta={d.etiqueta}
+                data-filas={JSON.stringify(d.filas)}
+              />
+            ))}
+          </g>
+        </svg>
+      ))
+    }
+    <div class="tooltip" aria-hidden="true" hidden></div>
+  </div>
+
+  {
+    mini && (
+      <p class="resumen">
+        {res === null && 'Sin dato en este periodo.'}
+        {res && 'solo' in res && fmt(res.solo)}
+        {res && 'a' in res && (resumen === 'tramo' ? `De ${fmt(res.a)} a ${fmt(res.b)}` : `Entre ${fmt(res.a)} y ${fmt(res.b)}`)}
+      </p>
+    )
+  }
+
+  {
+    !mini && (
+      <div class="grafica__pie">
+        <p class="clave">
+          Franjas: cada gobierno.
+          {tipo === 'lineas' && ' Línea discontinua: años sin dato entre dos puntos (no se rellenan).'}
+          {tipo !== 'apiladas' && ' Solo se muestran los años con dato documentado.'}
+          {series.some((s) => s.provisional.length > 0) && ' Trama clara: dato provisional.'}
+        </p>
+        {notas.map((n) => <p class="nota">{n}</p>)}
+        <p class="fuentes">
+          Fuente:{' '}
+          {fuentes.map((f, i) => (
+            <>
+              {i > 0 && ' · '}
+              <a href={f.url} rel="noopener">
+                {f.medio}, {f.titulo}
+              </a>
+            </>
+          ))}{' '}
+          <span class="ambito">({[...new Set(fuentes.map((f) => TIPO_FUENTE_HISTORIA[f.tipo]))].join(', ')})</span>
+        </p>
+        <details class="datos">
+          <summary>Ver los datos en una tabla</summary>
+          <div class="tabla">
+            <table>
+              <caption class="sr-only">{titulo} ({unidad})</caption>
+              <thead>
+                <tr>
+                  <th scope="col">{tipo === 'apiladas' || claves.some((c) => c.includes('-')) ? 'Barómetro' : 'Año'}</th>
+                  {series.map((s) => (
+                    <th scope="col">{s.nombre}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {claves.map((c) => (
+                  <tr>
+                    <th scope="row">{etiquetaPeriodo(c)}</th>
+                    {series.map((s) => (
+                      <td>
+                        {s.valores[c] === undefined ? (
+                          <span class="sin-dato">—</span>
+                        ) : (
+                          `${formatoValor(s.valores[c], unidad)}${s.provisional.includes(c) ? ' (provisional)' : ''}`
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+    )
+  }
+</figure>
+
+<script>
+  interface Fila {
+    serie: string;
+    nombre: string;
+    valor: string | null;
+  }
+
+  for (const figura of document.querySelectorAll<HTMLElement>('[data-grafica]')) {
+    const ocultas = new Set<string>();
+    const tooltip = figura.querySelector<HTMLElement>('.tooltip');
+    const lienzo = figura.querySelector<HTMLElement>('.lienzo');
+
+    // Leyenda: cada botón muestra u oculta su serie (el eje no cambia, para no engañar con la escala).
+    for (const boton of figura.querySelectorAll<HTMLButtonElement>('[data-alternar]')) {
+      boton.addEventListener('click', () => {
+        const id = boton.dataset.alternar ?? '';
+        const visible = ocultas.has(id);
+        if (visible) ocultas.delete(id);
+        else ocultas.add(id);
+        boton.setAttribute('aria-pressed', String(visible));
+        for (const g of figura.querySelectorAll(`[data-serie="${CSS.escape(id)}"]`)) g.classList.toggle('oculta', !visible);
+      });
+    }
+
+    if (!tooltip || !lienzo) continue;
+
+    const ocultar = (): void => {
+      tooltip.hidden = true;
+      for (const guia of figura.querySelectorAll('.guia')) guia.setAttribute('visibility', 'hidden');
+    };
+
+    for (const diana of figura.querySelectorAll<SVGRectElement>('.dianas rect')) {
+      const svg = diana.ownerSVGElement;
+      if (!svg) continue;
+      diana.addEventListener('pointerenter', () => {
+        const guiaX = Number(diana.dataset.guia);
+        const guia = svg.querySelector('.guia');
+        guia?.setAttribute('x1', String(guiaX));
+        guia?.setAttribute('x2', String(guiaX));
+        guia?.setAttribute('visibility', 'visible');
+
+        // Contenido con textContent: los nombres vienen de los YAML, nunca se inyecta HTML.
+        tooltip.replaceChildren();
+        const cabecera = document.createElement('p');
+        cabecera.className = 'tooltip__periodo';
+        cabecera.textContent = diana.dataset.etiqueta ?? '';
+        tooltip.append(cabecera);
+        const filas = JSON.parse(diana.dataset.filas ?? '[]') as Fila[];
+        for (const f of filas) {
+          if (ocultas.has(f.serie)) continue;
+          const fila = document.createElement('p');
+          fila.className = 'tooltip__fila';
+          const muestra = document.createElement('span');
+          const tono = figura.querySelector(`.svg [data-serie="${CSS.escape(f.serie)}"]`);
+          muestra.className = `tooltip__muestra ${[...(tono?.classList ?? [])].find((c) => /^(serie|pila)-\d$/.test(c)) ?? ''}`;
+          const valor = document.createElement('strong');
+          valor.textContent = f.valor ?? 'sin dato';
+          const nombre = document.createElement('span');
+          nombre.textContent = filas.length > 1 ? ` ${f.nombre}` : '';
+          fila.append(muestra, valor, nombre);
+          tooltip.append(fila);
+        }
+        tooltip.hidden = false;
+
+        // Posición: a la derecha de la guía, o a la izquierda si no cabe.
+        const caja = svg.getBoundingClientRect();
+        const base = lienzo.getBoundingClientRect();
+        const escala = caja.width / svg.viewBox.baseVal.width;
+        const px = caja.left - base.left + guiaX * escala;
+        const ancho = tooltip.offsetWidth;
+        const izquierda = px + 12 + ancho > base.width ? Math.max(0, px - 12 - ancho) : px + 12;
+        tooltip.style.left = `${izquierda}px`;
+        tooltip.style.top = `${caja.top - base.top + 8}px`;
+      });
+    }
+    lienzo.addEventListener('pointerleave', ocultar);
+  }
+</script>
+
+<style>
+  .grafica {
+    --serie-0: #6250d6;
+    --serie-1: #eb6834;
+    --serie-2: #1baf7a;
+    /* Apiladas (valoración): polos que no evocan a ningún partido y gris neutro en medio. */
+    --pila-0: #1baf7a;
+    --pila-1: #c3c2b7;
+    --pila-2: #eb6834;
+    --franja: color-mix(in srgb, var(--text) 4%, transparent);
+    --franja-resaltada: color-mix(in srgb, var(--link) 14%, transparent);
+
+    margin: 0;
+    min-width: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .grafica {
+      --serie-0: #9085e9;
+      --serie-1: #d95926;
+      --serie-2: #199e70;
+      --pila-0: #199e70;
+      --pila-1: #5a5a55;
+      --pila-2: #d95926;
+      --franja: color-mix(in srgb, var(--text) 6%, transparent);
+      --franja-resaltada: color-mix(in srgb, var(--link) 22%, transparent);
+    }
+  }
+
+  :global(:root[data-theme='dark']) .grafica {
+    --serie-0: #9085e9;
+    --serie-1: #d95926;
+    --serie-2: #199e70;
+    --pila-0: #199e70;
+    --pila-1: #5a5a55;
+    --pila-2: #d95926;
+    --franja: color-mix(in srgb, var(--text) 6%, transparent);
+    --franja-resaltada: color-mix(in srgb, var(--link) 22%, transparent);
+  }
+
+  .serie-0 { --tono: var(--serie-0); }
+  .serie-1 { --tono: var(--serie-1); }
+  .serie-2 { --tono: var(--serie-2); }
+  .pila-0 { --tono: var(--pila-0); }
+  .pila-1 { --tono: var(--pila-1); }
+  .pila-2 { --tono: var(--pila-2); }
+
+  .grafica__titulo {
+    font-size: var(--step-0);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .grafica--mini .grafica__titulo {
+    font-size: var(--step--1);
+  }
+
+  .grafica__descripcion {
+    max-width: var(--measure);
+    margin-top: var(--space-1);
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+  }
+
+  .leyenda__boton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 2.25rem;
+    padding: var(--space-1) var(--space-3);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    color: var(--text);
+    font: inherit;
+    font-size: var(--step--1);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .leyenda__boton:hover {
+    background: var(--head);
+  }
+
+  .leyenda__boton[aria-pressed='false'] {
+    border-style: dashed;
+    color: var(--muted);
+  }
+
+  .leyenda__boton[aria-pressed='false'] .leyenda__muestra {
+    opacity: 0.25;
+  }
+
+  .leyenda__muestra {
+    flex: none;
+    width: 1.5rem;
+    height: 0.75rem;
+    overflow: visible;
+  }
+
+  .leyenda__detalle {
+    color: var(--muted);
+  }
+
+  .lienzo {
+    position: relative;
+    margin-top: var(--space-3);
+  }
+
+  .svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    touch-action: pan-y;
+  }
+
+  /* Tres dibujos para que el texto mantenga un tamaño legible: ancho, medio y estrecho. */
+  .svg--media,
+  .svg--estrecha {
+    display: none;
+  }
+
+  @media (max-width: 56rem) {
+    .svg--ancha {
+      display: none;
+    }
+
+    .svg--media {
+      display: block;
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .svg--media {
+      display: none;
+    }
+
+    .svg--estrecha {
+      display: block;
+    }
+  }
+
+  .franja {
+    fill: transparent;
+  }
+
+  .franja--par {
+    fill: var(--franja);
+  }
+
+  .franja--resaltada {
+    fill: var(--franja-resaltada);
+  }
+
+  .rotulo {
+    fill: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .eje line {
+    stroke: var(--rule);
+    stroke-width: 1;
+  }
+
+  .eje line.cero {
+    stroke: var(--border-strong);
+  }
+
+  .eje text {
+    fill: var(--muted);
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .grafica--mini .eje text {
+    font-size: 11px;
+  }
+
+  @media (max-width: 40rem) {
+    .grafica--mini .eje text {
+      font-size: 13px;
+    }
+  }
+
+  .trazo {
+    fill: none;
+    stroke: var(--tono);
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  .trazo.discontinuo {
+    stroke-dasharray: 4 4;
+    stroke-width: 1.5;
+  }
+
+  .relleno {
+    fill: var(--tono);
+  }
+
+  /* Anillo del color de la superficie: separa marcas y tramos que se tocan. */
+  .marca,
+  .barra {
+    stroke: var(--surface);
+    stroke-width: 1.5;
+  }
+
+  .provisional {
+    fill-opacity: 0.45;
+  }
+
+  .serie {
+    transition: opacity 0.15s;
+  }
+
+  .serie.oculta {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .guia {
+    stroke: var(--text);
+    stroke-width: 1;
+    stroke-dasharray: 2 2;
+    pointer-events: none;
+  }
+
+  .dianas rect {
+    fill: transparent;
+  }
+
+  .tooltip {
+    position: absolute;
+    z-index: 2;
+    min-width: 9rem;
+    max-width: 16rem;
+    padding: var(--space-2) var(--space-3);
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-hover);
+    font-size: var(--step--1);
+    line-height: 1.35;
+    pointer-events: none;
+  }
+
+  .tooltip :global(.tooltip__periodo) {
+    margin-bottom: var(--space-1);
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .tooltip :global(.tooltip__fila) {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-1);
+  }
+
+  .tooltip :global(.tooltip__fila strong) {
+    white-space: nowrap;
+  }
+
+  .tooltip :global(.tooltip__fila span:last-child) {
+    color: var(--muted);
+  }
+
+  .tooltip :global(.tooltip__muestra) {
+    flex: none;
+    width: 0.9rem;
+    height: 3px;
+    margin-right: var(--space-1);
+    align-self: center;
+    border-radius: 2px;
+    background: var(--tono);
+  }
+
+  .tooltip :global(.serie-0) { --tono: var(--serie-0); }
+  .tooltip :global(.serie-1) { --tono: var(--serie-1); }
+  .tooltip :global(.serie-2) { --tono: var(--serie-2); }
+  .tooltip :global(.pila-0) { --tono: var(--pila-0); }
+  .tooltip :global(.pila-1) { --tono: var(--pila-1); }
+  .tooltip :global(.pila-2) { --tono: var(--pila-2); }
+
+  .resumen {
+    margin-top: var(--space-1);
+    font-size: var(--step--1);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .grafica__pie {
+    display: grid;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+    font-size: var(--step--1);
+  }
+
+  .clave,
+  .nota {
+    max-width: var(--measure);
+    color: var(--muted);
+  }
+
+  .fuentes {
+    max-width: var(--measure);
+  }
+
+  .datos summary {
+    cursor: pointer;
+    color: var(--link);
+  }
+
+  .tabla {
+    max-height: 22rem;
+    margin-top: var(--space-2);
+    overflow: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+  }
+
+  th,
+  td {
+    padding: var(--space-1) var(--space-3);
+    border-bottom: 1px solid var(--rule);
+    text-align: left;
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--head);
+    font-weight: 600;
+  }
+
+  tbody th {
+    font-weight: 500;
+  }
+
+  .sin-dato {
+    color: var(--muted);
+  }
+</style>

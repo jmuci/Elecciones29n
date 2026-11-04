@@ -1,0 +1,35 @@
+---
+/** Envuelve una lista de hechos en un desplegable cuando ya hay gráficas que la resumen. */
+interface Props {
+  plegado: boolean;
+  total: number;
+}
+const { plegado, total } = Astro.props;
+---
+
+{
+  plegado ? (
+    <details class="detalle">
+      <summary>
+        Las cifras en texto, con sus fuentes ({total} {total === 1 ? 'punto' : 'puntos'})
+      </summary>
+      <div class="detalle__cuerpo">
+        <slot />
+      </div>
+    </details>
+  ) : (
+    <slot />
+  )
+}
+
+<style>
+  .detalle summary {
+    cursor: pointer;
+    color: var(--link);
+    font-size: var(--step--1);
+  }
+
+  .detalle__cuerpo {
+    margin-top: var(--space-3);
+  }
+</style>

@@ -1,0 +1,51 @@
+# Cifras tomadas de las secciones de Macroeconomía de src/content/gobiernos (mismas fuentes).
+titulo: Déficit público y saldo exterior
+pestana: Déficit y saldo exterior
+bloque: macro
+orden: 5
+tipo: barras
+unidad: "% del PIB"
+descripcion: "Saldo de las administraciones públicas (negativo = déficit) y saldo de la balanza por cuenta corriente (negativo = el país gasta en el exterior más de lo que ingresa)."
+notas:
+  - "La serie actual de Eurostat da un saldo público ligeramente negativo en 2003, mientras que fuentes de la época hablaban de equilibrio y superávit: las estadísticas se revisan con el tiempo."
+series:
+  - id: saldo-publico
+    nombre: Saldo de las administraciones públicas
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "Government deficit/surplus, debt and associated data (gov_10dd_edpt1)"
+        url: "https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table?lang=en"
+        tipo: institucion
+    valores:
+      "1996": -5.9
+      "2003": -0.4
+      "2005": 1.2
+      "2006": 2.1
+      "2007": 1.9
+      "2008": -4.6
+      "2009": -11.2
+      "2011": -9.7
+      "2012": -11.5
+      "2017": -3.1
+      "2019": -3.1
+      "2020": -9.9
+      "2025": -2.4
+  - id: saldo-exterior
+    nombre: Saldo exterior (cuenta corriente)
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "Current account balance - annual data (tipsbp20)"
+        url: "https://ec.europa.eu/eurostat/databrowser/view/tipsbp20/default/table?lang=en"
+        tipo: institucion
+    valores:
+      "1996": -0.8
+      "2000": -4.2
+      "2003": -3.8
+      "2004": -5.4
+      "2007": -9.4
+      "2011": -2.6
+      "2013": 2.1
+      "2018": 1.9
+      "2020": 0.8
+      "2025": 3.2
+revisado: 2026-11-04
