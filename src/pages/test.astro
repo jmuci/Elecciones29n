@@ -56,11 +56,10 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
         resume lo que propone al menos un partido, sin decir cuál.
       </p>
       <p>
-        Elige la respuesta que más se acerque a lo que piensas e indica cuánto te importa la pregunta, de 5 (muy
-        importante) a 0 (no te importa). Las preguntas con importancia 0 no cuentan y no hace falta responderlas. Al
-        final verás qué porcentaje de tus respuestas coincide con las propuestas de cada partido, ponderado por la
-        importancia que les has dado, un mapa de cercanía con los partidos y qué partido propone cada respuesta, con
-        enlace a su fuente.
+        Elige la respuesta que más se acerque a lo que piensas e indica cuánto te importa la pregunta, de 1 (poco
+        importante) a 5 (muy importante). Al final verás qué porcentaje de tus respuestas coincide con las propuestas
+        de cada partido, ponderado por la importancia que les has dado, un mapa de cercanía con los partidos y qué
+        partido propone cada respuesta, con enlace a su fuente.
       </p>
       <p class="aviso">
         Es una medida de coincidencia con las propuestas publicadas, no una recomendación de voto. Varios partidos aún no
@@ -95,7 +94,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
               {tema.data.nombre}
             </h2>
             <p class="falta" role="alert" hidden>
-              Responde las preguntas marcadas o ponles importancia 0 para seguir.
+              Responde las preguntas marcadas para seguir.
             </p>
             <ol class="preguntas">
               {delTema.map(({ p, n }) => (
@@ -103,7 +102,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
                   <h3 id={`t-${p.id}`}>
                     <span class="numero">{n}.</span> {p.data.pregunta}
                   </h3>
-                  <fieldset class="opciones" aria-labelledby={`t-${p.id}`} aria-describedby={`nota-${p.id}`}>
+                  <fieldset class="opciones" aria-labelledby={`t-${p.id}`}>
                     <ul>
                       {p.data.opciones.map((o, j) => (
                         <li>
@@ -115,7 +114,6 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
                       ))}
                     </ul>
                   </fieldset>
-                  <p class="nota" id={`nota-${p.id}`} aria-live="polite" />
                   <fieldset class="importancia">
                     <legend>
                       ¿Cuánto te importa?<span class="sr-only"> Pregunta {n}.</span>
@@ -128,7 +126,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
                             name={`i-${p.id}`}
                             value={v}
                             checked={v === IMPORTANCIA_INICIAL}
-                            aria-label={v === 0 ? '0, no me importa' : v === 5 ? '5, muy importante' : String(v)}
+                            aria-label={v === 1 ? '1, poco importante' : v === 5 ? '5, muy importante' : String(v)}
                           />
                           <span aria-hidden="true">{v}</span>
                         </label>
@@ -313,6 +311,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   import {
     CLAVE_ESTADO,
     CLAVE_PASO,
+    IMPORTANCIA_INICIAL,
     PREFIJO_COMPARTIR,
     codificar,
     decodificar,
@@ -336,23 +335,12 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
         const valor = (nombre: string) =>
           form.querySelector<HTMLInputElement>(`input[name="${CSS.escape(nombre)}"]:checked`)?.value;
         const r = valor(`r-${id}`);
-        return [id, { importancia: Number(valor(`i-${id}`) ?? 0), respuesta: r === undefined ? null : Number(r) }];
+        return [
+          id,
+          { importancia: Number(valor(`i-${id}`) ?? IMPORTANCIA_INICIAL), respuesta: r === undefined ? null : Number(r) },
+        ];
       }),
     );
-
-  // — Importancia 0: las respuestas se desactivan y no cuentan (se conserva la elección) —
-
-  const actualizar = (id: string): void => {
-    const el = bloque(id);
-    const opciones = el?.querySelector<HTMLFieldSetElement>('.opciones');
-    const nota = el?.querySelector<HTMLElement>('.nota');
-    if (!el || !opciones || !nota) return;
-    const cero = leer()[id]?.importancia === 0;
-    opciones.disabled = cero;
-    el.classList.toggle('pregunta--cero', cero);
-    nota.textContent = cero ? 'Importancia 0: esta pregunta no cuenta en el resultado.' : '';
-    if (cero) el.classList.remove('pregunta--falta');
-  };
 
   // — Páginas: una por tema —
 
@@ -364,9 +352,9 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   const idsDe = (paso: HTMLElement): string[] =>
     [...paso.querySelectorAll<HTMLElement>('.pregunta')].map((el) => el.dataset.id ?? '');
 
-  /** Preguntas de la página que cuentan y siguen sin respuesta. */
+  /** Preguntas de la página que siguen sin respuesta. */
   const faltanEn = (paso: HTMLElement, estado: Estado): string[] =>
-    idsDe(paso).filter((id) => (estado[id]?.importancia ?? 0) > 0 && estado[id]?.respuesta === null);
+    idsDe(paso).filter((id) => (estado[id]?.respuesta ?? null) === null);
 
   const irA = (k: number, enfocar = true): void => {
     actual = Math.min(Math.max(k, 0), pasos.length - 1);
@@ -421,7 +409,8 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     }
     for (const { id } of datos.preguntas) {
       const g = guardado[id];
-      if (!g) continue;
+      // Las versiones anteriores guardaban importancia 0 para «no cuenta»: esa pregunta se queda sin responder.
+      if (!g || g.importancia < 1) continue;
       const marcar = (nombre: string, valor: number) => {
         const input = form.querySelector<HTMLInputElement>(`input[name="${CSS.escape(nombre)}"][value="${valor}"]`);
         if (input) input.checked = true;
@@ -444,7 +433,6 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   };
 
   restaurar();
-  datos.preguntas.forEach(({ id }) => actualizar(id));
   pintarProgreso();
   try {
     irA(Number(localStorage.getItem(CLAVE_PASO) ?? 0) || 0, false);
@@ -455,7 +443,6 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   form.addEventListener('change', (e) => {
     const id = e.target instanceof HTMLInputElement ? e.target.closest<HTMLElement>('.pregunta')?.dataset.id : undefined;
     if (id) {
-      actualizar(id);
       if (leer()[id]?.respuesta !== null) bloque(id)?.classList.remove('pregunta--falta');
       const paso = pasos[actual];
       const aviso = paso?.querySelector<HTMLElement>('.falta');
@@ -474,10 +461,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     } catch {
       /* almacenamiento no disponible */
     }
-    datos.preguntas.forEach(({ id }) => {
-      actualizar(id);
-      bloque(id)?.classList.remove('pregunta--falta');
-    });
+    datos.preguntas.forEach(({ id }) => bloque(id)?.classList.remove('pregunta--falta'));
     form.querySelectorAll<HTMLElement>('.falta').forEach((el) => {
       el.hidden = true;
     });
@@ -508,8 +492,8 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     let pesoTotal = 0;
     let cuentan = 0;
     for (const q of datos.preguntas) {
-      const { importancia, respuesta } = estado[q.id] ?? { importancia: 0, respuesta: null };
-      if (importancia === 0 || respuesta === null) continue;
+      const { importancia, respuesta } = estado[q.id] ?? { importancia: IMPORTANCIA_INICIAL, respuesta: null };
+      if (respuesta === null) continue;
       pesoTotal += importancia;
       cuentan += 1;
       const elegida = new Set(q.opciones[respuesta] ?? []);
@@ -733,7 +717,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     if (resumen)
       resumen.textContent =
         cuentan === 0
-          ? 'Todas las preguntas tienen importancia 0: no hay nada que calcular.'
+          ? 'No hay ninguna pregunta respondida: no hay nada que calcular.'
           : `Cuentan ${cuentan} de ${datos.preguntas.length} preguntas.`;
 
     for (const partido of datos.partidos) {
@@ -769,10 +753,10 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     for (const q of datos.preguntas) {
       const li = resultado.querySelector<HTMLElement>(`.claves > li[data-id="${CSS.escape(q.id)}"]`);
       if (!li) continue;
-      const { importancia, respuesta } = estado[q.id] ?? { importancia: 0, respuesta: null };
-      const cuenta = importancia > 0 && respuesta !== null;
+      const { importancia, respuesta } = estado[q.id] ?? { importancia: IMPORTANCIA_INICIAL, respuesta: null };
+      const cuenta = respuesta !== null;
       const etiqueta = li.querySelector<HTMLElement>('.clave__importancia');
-      if (etiqueta) etiqueta.textContent = cuenta ? `(importancia ${importancia})` : '(no cuenta)';
+      if (etiqueta) etiqueta.textContent = cuenta ? `(importancia ${importancia})` : '(sin responder)';
       for (const op of li.querySelectorAll<HTMLElement>('[data-opcion]')) {
         const tuya = cuenta && Number(op.dataset.opcion) === respuesta;
         op.classList.toggle('elegida', tuya);
@@ -1182,33 +1166,11 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     box-shadow: inset 0 0 0 1px var(--link);
   }
 
-  .opciones:disabled {
-    opacity: 0.45;
-  }
-
-  .opciones:disabled label {
-    cursor: not-allowed;
-  }
-
-  .opciones:disabled label:has(input:checked) {
-    border-color: var(--rule);
-    box-shadow: none;
-  }
-
   input[type='radio'] {
     width: 1.25rem;
     height: 1.25rem;
     margin: 0.1rem 0 0;
     accent-color: var(--link);
-  }
-
-  .nota {
-    color: var(--muted);
-    font-size: var(--step--1);
-  }
-
-  .nota:empty {
-    display: none;
   }
 
   .importancia {
