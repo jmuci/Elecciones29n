@@ -54,6 +54,7 @@ export type Legislatura = (typeof LEGISLATURAS)[number];
 export type Gobierno = CollectionEntry<'gobiernos'>;
 export type Caso = CollectionEntry<'casos'>;
 export type Recuento = CollectionEntry<'recuentos'>;
+export type Problema = CollectionEntry<'problemas'>;
 
 /** Partidos que desglosan las encuestas (Democracia 21 no aparece en ninguna), en el orden fijo de la web. */
 export const PARTIDOS_ENCUESTA = ['pp', 'psoe', 'vox', 'frente-amplio', 'podemos'] as const;

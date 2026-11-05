@@ -1,0 +1,152 @@
+nombre: Infraestructuras
+orden: 5
+resumen: "El apagón de abril de 2025 y los accidentes ferroviarios de Adamuz y Gelida en enero de 2026 han puesto en el centro del debate el estado de las redes eléctrica y ferroviaria. La inversión pública ha repuntado con los fondos europeos, pero sigue por debajo de la media de la UE, y esos fondos terminan en 2026."
+revisado: 2026-11-03
+recorrido:
+  - titulo: "Caída de la inversión pública tras la crisis de 2008"
+    descripcion: "Según la patronal de constructoras SEOPAN, la inversión pública pasó del 5,2 % del PIB en 2009 al 2,7 % en 2024, y la parte dedicada a infraestructuras bajó del 61 % de la inversión pública total en 2009 a menos del 38 % en 2025."
+    fuentes:
+      - medio: "SEOPAN"
+        titulo: "Rueda de prensa, abril de 2026"
+        url: "https://seopan.es/wp-content/uploads/2026/05/Rueda-de-Prensa-V2-6-ABRIL-2026.pdf"
+        tipo: organizacion
+        fecha: 2026-04-06
+  - titulo: "Fondos europeos NextGenerationEU (2021-2026)"
+    descripcion: "Los fondos de recuperación elevaron la inversión pública del 2,2 % del PIB en 2019 al 2,9 % en 2025, lejos del entorno del 4 % que preveía el plan de 2021. El programa termina en 2026."
+    fuentes:
+      - medio: "BBVA Research"
+        titulo: "España: inversión pública, eslabón débil del crecimiento"
+        url: "https://www.bbvaresearch.com/publicaciones/espana-inversion-publica-eslabon-debil-del-crecimiento/"
+        tipo: estudio
+      - medio: "BBVA Research"
+        titulo: "España: los fondos NGEU llegan a su fin"
+        url: "https://www.bbvaresearch.com/publicaciones/espana-los-fondos-ngeu-llegan-a-su-fin/"
+        tipo: estudio
+  - titulo: "Apagón del 28 de abril de 2025"
+    descripcion: "La península ibérica sufrió el apagón más grave en Europa en dos décadas. El panel de expertos de ENTSO-E lo atribuyó a una cadena de sobretensiones que empezó en el sur de España; descartó que el origen fuera el exceso de renovables y señaló la falta de generación con control de tensión. No asignó responsabilidades."
+    fuentes:
+      - medio: "El Independiente"
+        titulo: "El informe europeo sobre el apagón niega que influyera la generación renovable y lo achaca a una cascada de sobrevoltaje"
+        url: "https://www.elindependiente.com/economia/2025/10/03/el-informe-europeo-sobre-el-apagon-niega-que-influyera-la-generacion-renovable-y-lo-achaca-a-una-cascada-de-sobrevoltaje/amp/"
+        tipo: prensa
+        fecha: 2025-10-03
+  - titulo: "Accidentes ferroviarios de Adamuz y Gelida (enero de 2026)"
+    descripcion: "El 18 de enero de 2026 descarrilaron y colisionaron dos trenes de alta velocidad en Adamuz (Córdoba); murieron al menos 45 personas. La Comisión de Investigación de Accidentes Ferroviarios apunta a una rotura de carril como causa. Dos días después, un tren de Rodalies descarriló en Gelida (Barcelona) al caer un muro sobre la vía; murió el maquinista en prácticas."
+    fuentes:
+      - medio: "Noticias de Navarra"
+        titulo: "Una rotura de carril produjo el accidente de Adamuz"
+        url: "https://www.noticiasdenavarra.com/sucesos/2026/04/28/rotura-carril-produjo-accidente-adamuz-10997155.html"
+        tipo: prensa
+        fecha: 2026-04-28
+      - medio: "El Salto"
+        titulo: "Muere una persona en uno de los dos descarrilamientos de Rodalies en el entorno de Barcelona"
+        url: "https://www.elsaltodiario.com/barcelona/al-menos-quince-heridos-uno-dos-descarrilamientos-rodalies-entorno-barcelona"
+        tipo: prensa
+        fecha: 2026-01-21
+cifras:
+  - indicador: "Inversión pública"
+    valor: "2,9 % del PIB (UE: 3,6 %)"
+    detalle: "2025. En 2019 era el 2,2 %."
+    fuentes:
+      - medio: "BBVA Research"
+        titulo: "España: inversión pública, eslabón débil del crecimiento"
+        url: "https://www.bbvaresearch.com/publicaciones/espana-inversion-publica-eslabon-debil-del-crecimiento/"
+        tipo: estudio
+  - indicador: "Víctimas del accidente de Adamuz"
+    valor: "45-46 fallecidos"
+    detalle: "Las fuentes dan 45 o 46 tras localizar a las últimas personas desaparecidas. La investigación judicial y la técnica siguen abiertas."
+    fuentes:
+      - medio: "The Objective"
+        titulo: "Accidente de tren en Adamuz (Córdoba), en directo"
+        url: "https://theobjective.com/directo/espana/2026-01-19/accidente-tren-adamuz-cordoba-directo/"
+        tipo: prensa
+        fecha: 2026-01-19
+      - medio: "Vozpópuli"
+        titulo: "El Supremo fija las reglas de la investigación del accidente en Adamuz tras el precedente de Angrois"
+        url: "https://www.vozpopuli.com/legal/el-supremo-fija-las-reglas-de-la-investigacion-del-accidente-en-adamuz-tras-el-precedente-de-angrois.html"
+        tipo: prensa
+  - indicador: "Peso de las infraestructuras en la inversión pública"
+    valor: "< 38 % (2025)"
+    detalle: "Frente al 61 % en 2009, según SEOPAN, patronal del sector."
+    fuentes:
+      - medio: "SEOPAN"
+        titulo: "Rueda de prensa, abril de 2026"
+        url: "https://seopan.es/wp-content/uploads/2026/05/Rueda-de-Prensa-V2-6-ABRIL-2026.pdf"
+        tipo: organizacion
+        fecha: 2026-04-06
+a_favor:
+  - titulo: "Repunte de la inversión desde 2019"
+    descripcion: "Con los fondos europeos, la inversión pública ha subido siete décimas del PIB desde 2019, aunque sin alcanzar el objetivo del plan de recuperación."
+    fuentes:
+      - medio: "BBVA Research"
+        titulo: "España: inversión pública, eslabón débil del crecimiento"
+        url: "https://www.bbvaresearch.com/publicaciones/espana-inversion-publica-eslabon-debil-del-crecimiento/"
+        tipo: estudio
+  - titulo: "Cambios en el control de tensión de la red eléctrica"
+    descripcion: "Tras el apagón, la CNMC aprobó en 2025 y amplió en junio de 2026 el procedimiento que permite a las centrales renovables participar en el control de tensión de la red, que Portugal aplicaba desde 2020."
+    fuentes:
+      - medio: "CNMC"
+        titulo: "Nota de prensa: modificación del P.O. 7.4 de control de tensión"
+        url: "https://cnmc.es/sites/default/files/editor_contenidos/Notas%20de%20prensa/2026/20260710_NP_P.O.7.4_Control_tensi%C3%B3n.pdf"
+        tipo: institucion
+        fecha: 2026-07-10
+      - medio: "elDiario.es"
+        titulo: "Portugal implantó en 2020 el control de tensión eléctrica con renovables que España todavía no ha podido aplicar"
+        url: "https://www.eldiario.es/economia/portugal-implanto-control-tension-electrica-renovables-espana-todavia-no-podido-aplicar_1_12724021.amp.html"
+        tipo: prensa
+en_contra:
+  - titulo: "Fin de los fondos europeos"
+    descripcion: "BBVA Research advierte de que, al terminar los fondos NextGenerationEU, la inversión pública puede volver a caer si no se sustituye con recursos propios."
+    fuentes:
+      - medio: "BBVA Research"
+        titulo: "España: los fondos NGEU llegan a su fin"
+        url: "https://www.bbvaresearch.com/publicaciones/espana-los-fondos-ngeu-llegan-a-su-fin/"
+        tipo: estudio
+  - titulo: "Mantenimiento y detección de fallos en la vía"
+    descripcion: "En Adamuz, un informe preliminar apunta a una caída de tensión compatible con la rotura de la vía horas antes del accidente, lo que plantea si pudo detectarse a tiempo. En Rodalies, un mes después de Gelida seguía habiendo líneas cortadas y limitaciones de velocidad, y una caída de usuarios."
+    fuentes:
+      - medio: "Última Hora"
+        titulo: "Un informe apunta a una caída de tensión compatible con la rotura de la vía horas antes del siniestro de Adamuz"
+        url: "https://www.ultimahora.es/sucesos/ultimas/2026/03/16/2590637/informe-apunta-caida-tension-compatible-rotura-via-horas-antes-del-siniestro-adamuz.html"
+        tipo: prensa
+        fecha: 2026-03-16
+      - medio: "Vozpópuli"
+        titulo: "La crisis de Rodalies un mes después de la tragedia: líneas cortadas, velocidad reducida y caída masiva de usuarios"
+        url: "https://www.vozpopuli.com/espana/cataluna/la-crisis-de-rodalies-un-mes-despues-de-la-tragedia-lineas-cortadas-velocidad-reducida-y-caida-masiva-de-usuarios.html"
+        tipo: prensa
+internacional:
+  - titulo: "Alemania: fondo especial de 500.000 millones"
+    descripcion: "En marzo de 2025 el Bundestag reformó el freno de la deuda y aprobó un fondo especial de 500.000 millones de euros a doce años para infraestructuras y transición climática."
+    fuentes:
+      - medio: "Diario Estrategia"
+        titulo: "El Bundestag alemán aprueba el plan para aumentar el gasto en Defensa e infraestructuras"
+        url: "https://www.diarioestrategia.cl/texto-diario/mostrar/5221838/bundestag-aleman-aprueba-plan-aumentar-gasto-defensa-e-infraestructuras"
+        tipo: prensa
+        fecha: 2025-03-18
+medidas:
+  - titulo: "Presupuesto plurianual y protegido para mantenimiento"
+    descripcion: "Fijar una partida plurianual para conservar las redes existentes, separada de la obra nueva, para que no se recorte en los años de ajuste."
+    donde: "Alemania lo ha intentado con un fondo especial fuera del presupuesto ordinario."
+    evidencia: "Da estabilidad a la planificación. El fondo alemán es reciente y aún no hay una evaluación de sus resultados; disponer del dinero no garantiza ejecutarlo a tiempo."
+    fuentes:
+      - medio: "Diario Estrategia"
+        titulo: "El Bundestag alemán aprueba el plan para aumentar el gasto en Defensa e infraestructuras"
+        url: "https://www.diarioestrategia.cl/texto-diario/mostrar/5221838/bundestag-aleman-aprueba-plan-aumentar-gasto-defensa-e-infraestructuras"
+        tipo: prensa
+        fecha: 2025-03-18
+  - titulo: "Más capacidad de control de tensión en la red eléctrica"
+    descripcion: "Que todas las centrales, incluidas las renovables, presten control dinámico de tensión, y reforzar los equipos de la red para estabilizarla."
+    donde: "Portugal desde 2020; España desde 2025-2026."
+    evidencia: "Es lo que señaló como carencia el informe de ENTSO-E sobre el apagón. Red Eléctrica ha empezado a habilitar instalaciones renovables para este servicio; es pronto para evaluar su efecto."
+    fuentes:
+      - medio: "CNMC"
+        titulo: "Nota de prensa: modificación del P.O. 7.4 de control de tensión"
+        url: "https://cnmc.es/sites/default/files/editor_contenidos/Notas%20de%20prensa/2026/20260710_NP_P.O.7.4_Control_tensi%C3%B3n.pdf"
+        tipo: institucion
+        fecha: 2026-07-10
+      - medio: "El Independiente"
+        titulo: "El informe europeo sobre el apagón niega que influyera la generación renovable y lo achaca a una cascada de sobrevoltaje"
+        url: "https://www.elindependiente.com/economia/2025/10/03/el-informe-europeo-sobre-el-apagon-niega-que-influyera-la-generacion-renovable-y-lo-achaca-a-una-cascada-de-sobrevoltaje/amp/"
+        tipo: prensa
+        fecha: 2025-10-03
+nota_revision: "Primera pasada. Las cifras de SEOPAN proceden de la patronal del sector, que tiene interés en el debate; las de Eurostat e IGAE son la referencia oficial y están pendientes de incorporar. La investigación de Adamuz no ha concluido."

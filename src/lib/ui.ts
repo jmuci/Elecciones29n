@@ -7,6 +7,7 @@ import type {
   Fuente,
   Gobierno,
   Partido,
+  Problema,
   Propuesta,
   Recuento,
   Tema,
@@ -158,4 +159,10 @@ export async function cargarHistoria(): Promise<{
   recuentos.sort(porOrden);
   casos.sort((a, b) => b.data.firme.fecha.getTime() - a.data.firme.fecha.getTime());
   return { gobiernos, casos, recuentos, partidos: new Map(partidos.map((p) => [p.id, p])) };
+}
+
+export async function cargarProblemas(): Promise<{ problemas: Problema[]; temas: Map<string, Tema> }> {
+  const [problemas, temas] = await Promise.all([getCollection('problemas'), getCollection('temas')]);
+  problemas.sort(porOrden);
+  return { problemas, temas: new Map(temas.map((t) => [t.id, t])) };
 }

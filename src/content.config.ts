@@ -9,6 +9,7 @@
  * - gobiernos:  src/content/gobiernos/<id>.yaml          → id = <id>   (sección /historia)
  * - casos:      src/content/casos/<id>.yaml              → id = <id>   (sección /historia#corrupcion)
  * - recuentos:  src/content/recuentos/<id>.yaml          → id = <id>   (estudios de terceros)
+ * - problemas:  src/content/problemas/<id>.yaml          → id = <id>   (sección /problemas)
  * - encuestas:  src/content/encuestas/<id>.yaml           → id = <id>
  * - preguntas:  src/content/preguntas/<id>.yaml          → id = <id>   (test de afinidad, /test)
  *
@@ -352,6 +353,52 @@ const recuentos = defineCollection({
   }),
 });
 
+/**
+ * Problema de actualidad (/problemas). Misma estructura para todos: cómo se ha llegado
+ * hasta aquí, cifras de la situación actual, lo que juega a favor y en contra, contexto
+ * internacional y medidas debatidas. Las medidas no se atribuyen a ningún partido: se
+ * describen con lo que dice la evidencia, a favor y en contra.
+ */
+const problemas = defineCollection({
+  loader: yamlGlob('./src/content/problemas', '*.yaml'),
+  schema: z.strictObject({
+    nombre: textoNoVacio,
+    orden: z.number().int().positive(),
+    /** Tema del comparador con las propuestas de los partidos sobre este problema. */
+    tema: reference('temas').optional(),
+    resumen: textoNoVacio,
+    recorrido: z.array(hecho).min(1),
+    cifras: z
+      .array(
+        z.strictObject({
+          indicador: textoNoVacio,
+          valor: textoNoVacio,
+          detalle: textoNoVacio.optional(),
+          fuentes: z.array(fuenteHistoria).min(1, 'Cada cifra necesita al menos una fuente'),
+        }),
+      )
+      .min(1),
+    a_favor: z.array(hecho),
+    en_contra: z.array(hecho).min(1),
+    internacional: z.array(hecho),
+    medidas: z
+      .array(
+        z.strictObject({
+          titulo: textoNoVacio,
+          descripcion: textoNoVacio,
+          /** Dónde se ha aplicado, si se ha aplicado. */
+          donde: textoNoVacio.optional(),
+          /** Qué se sabe de sus resultados, incluidos los límites y efectos no deseados. */
+          evidencia: textoNoVacio,
+          fuentes: z.array(fuenteHistoria).min(1, 'Cada medida necesita al menos una fuente'),
+        }),
+      )
+      .min(1),
+    nota_revision: textoNoVacio.optional(),
+    revisado: fecha,
+  }),
+});
+
 const porcentaje = z.number().min(0).max(100);
 const rangoEscanos = z
   .strictObject({
@@ -409,4 +456,4 @@ const encuestas = defineCollection({
     }),
 });
 
-export const collections = { partidos, temas, fuentes, propuestas, preguntas, encuestas, gobiernos, casos, recuentos };
+export const collections = { partidos, temas, fuentes, propuestas, preguntas, encuestas, gobiernos, casos, recuentos, problemas };

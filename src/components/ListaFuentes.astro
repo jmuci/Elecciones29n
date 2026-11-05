@@ -1,0 +1,52 @@
+---
+import { fecha, TIPO_FUENTE_HISTORIA } from '../lib/ui';
+import type { TipoFuenteHistoria } from '../lib/modelo';
+
+interface Props {
+  fuentes: { medio: string; titulo: string; url: string; tipo: TipoFuenteHistoria; fecha?: Date }[];
+}
+
+const { fuentes } = Astro.props;
+---
+
+<p class="fuentes-titulo">Fuentes</p>
+<ul class="fuentes-hecho">
+  {
+    fuentes.map((f) => (
+      <li>
+        <a href={f.url} rel="noopener">
+          {f.titulo}
+        </a>{' '}
+        <span class="ambito">
+          · {f.medio} · {TIPO_FUENTE_HISTORIA[f.tipo]}
+          {f.fecha && (
+            <>
+              {' '}
+              · <time datetime={fecha(f.fecha).iso}>{fecha(f.fecha).texto}</time>
+            </>
+          )}
+        </span>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .fuentes-titulo {
+    margin-top: var(--space-2);
+    color: var(--muted);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .fuentes-hecho {
+    padding-left: 1.1em;
+    font-size: 0.9375rem;
+  }
+
+  .fuentes-hecho li + li {
+    margin-top: var(--space-1);
+  }
+</style>

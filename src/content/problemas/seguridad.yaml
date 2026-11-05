@@ -1,0 +1,156 @@
+nombre: Seguridad
+orden: 3
+tema: seguridad-justicia
+resumen: "España tiene tasas de homicidio entre las más bajas de Europa, pero la criminalidad registrada sube levemente, empujada por la cibercriminalidad y los delitos sexuales. La multirreincidencia en hurtos y la ocupación ilegal de viviendas han motivado dos reformas legales en 2025 y 2026."
+revisado: 2026-11-03
+recorrido:
+  - titulo: "Cambio en el tipo de delito: del delito en la calle al delito en internet"
+    descripcion: "La cibercriminalidad (estafas en línea y otros delitos cometidos por medios informáticos) ya supone uno de cada cinco delitos registrados en España, mientras los delitos contra el patrimonio tradicionales bajan."
+    fuentes:
+      - medio: "Diario de León (Europa Press)"
+        titulo: "La criminalidad aumenta un 0,5% por las agresiones sexuales"
+        url: "https://www.diariodeleon.es/nacional/260918/2097733/criminalidad-aumenta-0-5-agresiones-sexuales.html"
+        tipo: prensa
+        fecha: 2026-09-18
+  - titulo: "Juicios rápidos para la ocupación ilegal (2025)"
+    descripcion: "La Ley Orgánica 1/2025, en vigor desde el 3 de abril de 2025, permite tramitar por juicio rápido los delitos de usurpación de inmuebles y el allanamiento de morada en su tipo básico. La ley está recurrida ante el Tribunal Constitucional."
+    fuentes:
+      - medio: "BOE"
+        titulo: "Ley Orgánica 1/2025, de 2 de enero, de medidas en materia de eficiencia del Servicio Público de Justicia"
+        url: "https://www.boe.es/buscar/act.php?id=BOE-A-2025-76"
+        tipo: institucion
+        fecha: 2025-01-03
+      - medio: "BOE"
+        titulo: "Circular 1/2025, de 26 de junio, de la Fiscalía General del Estado"
+        url: "https://www.boe.es/boe/dias/2025/08/25/pdfs/BOE-A-2025-17153.pdf"
+        tipo: institucion
+        fecha: 2025-08-25
+  - titulo: "Ley de multirreincidencia (2026)"
+    descripcion: "La Ley Orgánica 1/2026, de 8 de abril, procedente de una proposición de ley de Junts, eleva las penas para quienes acumulan condenas por delitos leves contra el patrimonio, como los hurtos. Está en vigor desde el 10 de abril de 2026."
+    fuentes:
+      - medio: "BOE"
+        titulo: "Ley Orgánica 1/2026, de 8 de abril, en materia de multirreincidencia"
+        url: "https://www.boe.es/eli/es/lo/2026/04/08/1"
+        tipo: institucion
+        fecha: 2026-04-09
+cifras:
+  - indicador: "Infracciones penales registradas"
+    valor: "1.217.476 (+0,5 %)"
+    detalle: "Enero a junio de 2026 respecto al mismo periodo de 2025. Tasa de criminalidad convencional: 40,5 delitos por cada mil habitantes."
+    fuentes:
+      - medio: "Diario de León (Europa Press)"
+        titulo: "La criminalidad aumenta un 0,5% por las agresiones sexuales"
+        url: "https://www.diariodeleon.es/nacional/260918/2097733/criminalidad-aumenta-0-5-agresiones-sexuales.html"
+        tipo: prensa
+        fecha: 2026-09-18
+  - indicador: "Cibercriminalidad"
+    valor: "245.936 (20,2 % del total)"
+    detalle: "Primer semestre de 2026, +0,6 % sobre 2025."
+    fuentes:
+      - medio: "Diario de León (Europa Press)"
+        titulo: "La criminalidad aumenta un 0,5% por las agresiones sexuales"
+        url: "https://www.diariodeleon.es/nacional/260918/2097733/criminalidad-aumenta-0-5-agresiones-sexuales.html"
+        tipo: prensa
+        fecha: 2026-09-18
+  - indicador: "Delitos contra la libertad sexual"
+    valor: "+4 %"
+    detalle: "Primer semestre de 2026 respecto al de 2025."
+    fuentes:
+      - medio: "Diario de León (Europa Press)"
+        titulo: "La criminalidad aumenta un 0,5% por las agresiones sexuales"
+        url: "https://www.diariodeleon.es/nacional/260918/2097733/criminalidad-aumenta-0-5-agresiones-sexuales.html"
+        tipo: prensa
+        fecha: 2026-09-18
+  - indicador: "Robos con fuerza en domicilios y establecimientos"
+    valor: "-5,9 %"
+    detalle: "Primer semestre de 2026 respecto al de 2025."
+    fuentes:
+      - medio: "Diario de León (Europa Press)"
+        titulo: "La criminalidad aumenta un 0,5% por las agresiones sexuales"
+        url: "https://www.diariodeleon.es/nacional/260918/2097733/criminalidad-aumenta-0-5-agresiones-sexuales.html"
+        tipo: prensa
+        fecha: 2026-09-18
+a_favor:
+  - titulo: "Uno de los países con menos homicidios de la UE"
+    descripcion: "En 2023 se registraron 3.930 homicidios intencionados en toda la UE. España está entre los países de la Unión con menor tasa de homicidios por habitante."
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "3 930 intentional homicides recorded in the EU in 2023"
+        url: "https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20250423-1"
+        tipo: institucion
+        fecha: 2025-04-23
+      - medio: "El Orden Mundial"
+        titulo: "La tasa de homicidios en la UE: España, uno de los países más seguros"
+        url: "https://elordenmundial.com/mapas-y-graficos/tasa-homicidios-ue/"
+        tipo: prensa
+  - titulo: "Bajan los delitos contra el patrimonio"
+    descripcion: "Los delitos contra el patrimonio, que suponen el 40,3 % de la criminalidad convencional, bajaron un 3,6 % en el primer semestre de 2026."
+    fuentes:
+      - medio: "Diario de León (Europa Press)"
+        titulo: "La criminalidad aumenta un 0,5% por las agresiones sexuales"
+        url: "https://www.diariodeleon.es/nacional/260918/2097733/criminalidad-aumenta-0-5-agresiones-sexuales.html"
+        tipo: prensa
+        fecha: 2026-09-18
+en_contra:
+  - titulo: "Suben los delitos sexuales y la cibercriminalidad"
+    descripcion: "Los delitos contra la libertad sexual (+4 %) son los que más crecen. La cibercriminalidad se mantiene en máximos y es más difícil de investigar y de esclarecer."
+    fuentes:
+      - medio: "Diario de León (Europa Press)"
+        titulo: "La criminalidad aumenta un 0,5% por las agresiones sexuales"
+        url: "https://www.diariodeleon.es/nacional/260918/2097733/criminalidad-aumenta-0-5-agresiones-sexuales.html"
+        tipo: prensa
+        fecha: 2026-09-18
+  - titulo: "Grandes diferencias entre territorios"
+    descripcion: "La evolución no es igual en todas partes: en el primer semestre de 2026 la criminalidad bajó en Cataluña y Aragón fue la comunidad donde más aumentó."
+    fuentes:
+      - medio: "Diario de León (Europa Press)"
+        titulo: "La criminalidad aumenta un 0,5% por las agresiones sexuales"
+        url: "https://www.diariodeleon.es/nacional/260918/2097733/criminalidad-aumenta-0-5-agresiones-sexuales.html"
+        tipo: prensa
+        fecha: 2026-09-18
+internacional:
+  - titulo: "Tendencia europea a la baja en homicidios"
+    descripcion: "Eurostat registró 3.930 homicidios intencionados en la UE en 2023, un 1,5 % más que en 2022, dentro de una tendencia de largo plazo a la baja."
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "3 930 intentional homicides recorded in the EU in 2023"
+        url: "https://ec.europa.eu/eurostat/en/web/products-eurostat-news/w/ddn-20250423-1"
+        tipo: institucion
+        fecha: 2025-04-23
+medidas:
+  - titulo: "Policía focalizada en puntos calientes"
+    descripcion: "Concentrar la presencia policial y la resolución de problemas en las calles o zonas pequeñas donde se concentra la mayoría de los delitos."
+    donde: "Evaluada sobre todo en Estados Unidos y Reino Unido."
+    evidencia: "Una revisión sistemática de la Campbell Collaboration (65 estudios) concluye que reduce la delincuencia y el desorden, y que el delito no se desplaza a las zonas cercanas; el efecto es mayor cuando se combina con resolución de problemas que cuando solo aumenta la patrulla."
+    fuentes:
+      - medio: "Campbell Systematic Reviews"
+        titulo: "Braga, A. et al. Hot spots policing of small geographic areas effects on crime (2019)"
+        url: "https://journals.sagepub.com/doi/reader/10.1002/cl2.1046"
+        tipo: estudio
+        fecha: 2019-09-01
+  - titulo: "Juicio rápido para la ocupación ilegal"
+    descripcion: "Tramitar como juicio rápido la usurpación de inmuebles y el allanamiento de morada para acortar los plazos de desalojo."
+    donde: "España, desde abril de 2025."
+    evidencia: "Todavía no hay una evaluación pública de sus efectos. La Fiscalía ha fijado criterios para su aplicación y la ley está recurrida ante el Tribunal Constitucional."
+    fuentes:
+      - medio: "BOE"
+        titulo: "Circular 1/2025, de 26 de junio, de la Fiscalía General del Estado"
+        url: "https://www.boe.es/boe/dias/2025/08/25/pdfs/BOE-A-2025-17153.pdf"
+        tipo: institucion
+        fecha: 2025-08-25
+      - medio: "BOE"
+        titulo: "Recurso de inconstitucionalidad contra la Ley Orgánica 1/2025"
+        url: "https://boe.es/boe/dias/2025/10/13/pdfs/BOE-A-2025-20354.pdf"
+        tipo: institucion
+        fecha: 2025-10-13
+  - titulo: "Penas más altas para la multirreincidencia"
+    descripcion: "Endurecer la respuesta penal a quienes acumulan condenas por delitos leves, como los hurtos."
+    donde: "España, desde abril de 2026."
+    evidencia: "Lleva pocos meses en vigor y no hay datos sobre su efecto."
+    fuentes:
+      - medio: "BOE"
+        titulo: "Ley Orgánica 1/2026, de 8 de abril, en materia de multirreincidencia"
+        url: "https://www.boe.es/eli/es/lo/2026/04/08/1"
+        tipo: institucion
+        fecha: 2026-04-09
+nota_revision: "Primera pasada. El portal del Ministerio del Interior no permite la consulta automática: las cifras del primer semestre de 2026 se toman de la información de Europa Press sobre el Balance de Criminalidad y deben contrastarse con el original."

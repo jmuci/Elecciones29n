@@ -1,0 +1,134 @@
+nombre: Corrupción
+orden: 4
+tema: regeneracion
+resumen: "La percepción de corrupción en España empeora en los índices internacionales y casi todos los encuestados la consideran generalizada. Los organismos europeos reconocen avances, como la autoridad de protección de quienes denuncian, pero señalan reformas pendientes sobre grupos de interés, conflictos de intereses y la Fiscalía. Los casos con sentencia firme desde 2000 están en el repaso histórico."
+revisado: 2026-11-03
+recorrido:
+  - titulo: "Protección de quienes denuncian (2023-2025)"
+    descripcion: "La Ley 2/2023 obliga a empresas y administraciones a tener canales de denuncia y crea la Autoridad Independiente de Protección del Informante, que empezó a funcionar el 1 de septiembre de 2025."
+    fuentes:
+      - medio: "BOE"
+        titulo: "Ley 2/2023, de 20 de febrero, reguladora de la protección de las personas que informen sobre infracciones normativas y de lucha contra la corrupción"
+        url: "https://www.boe.es/buscar/act.php?id=BOE-A-2023-4513"
+        tipo: institucion
+        fecha: 2023-02-21
+      - medio: "BOE"
+        titulo: "Orden PJC/908/2025, por la que se fija la fecha de inicio de actividades de la Autoridad Independiente de Protección del Informante"
+        url: "https://www.boe.es/boe/dias/2025/08/12/pdfs/BOE-A-2025-16764.pdf"
+        tipo: institucion
+        fecha: 2025-08-12
+  - titulo: "Evaluaciones del Consejo de Europa (GRECO)"
+    descripcion: "En agosto de 2025 el GRECO concluyó que España había aplicado parcialmente 16 de las 19 recomendaciones de su quinta ronda (sobre altos cargos del Gobierno y fuerzas de seguridad) y no había aplicado 3. El Gobierno destacó que, sumando la cuarta ronda, 24 de 30 recomendaciones se consideran cumplidas o parcialmente cumplidas."
+    fuentes:
+      - medio: "Consejo de Europa"
+        titulo: "El GRECO publica un informe evaluando los avances en medidas contra la corrupción en España"
+        url: "https://www.coe.int/es/web/portal/-/greco-publishes-report-evaluating-progress-in-anti-corruption-measures-in-spain"
+        tipo: institucion
+        fecha: 2025-08-01
+      - medio: "La Moncloa"
+        titulo: "España avanza en el cumplimiento de las recomendaciones del GRECO para prevenir la corrupción"
+        url: "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/presidencia-justicia-relaciones-cortes/paginas/2025/010825-informe-greco-avance.aspx"
+        tipo: institucion
+        fecha: 2025-08-01
+cifras:
+  - indicador: "Índice de Percepción de la Corrupción"
+    valor: "55/100, puesto 49 de 182"
+    detalle: "Transparency International, edición 2025 (publicada en febrero de 2026). Un punto y tres puestos menos que el año anterior. Mide la percepción de expertos y empresarios, no casos reales."
+    fuentes:
+      - medio: "Idealista"
+        titulo: "Índice de Percepción de la Corrupción: España vuelve a empeorar"
+        url: "https://www.idealista.com/news/node/900419"
+        tipo: prensa
+        fecha: 2026-02-10
+  - indicador: "Ciudadanos que creen que la corrupción está generalizada"
+    valor: "92 % (UE: 71 %)"
+    detalle: "Eurobarómetro de 2026, citado en el Informe sobre el Estado de Derecho de la Comisión Europea."
+    fuentes:
+      - medio: "Moncloa.com"
+        titulo: "El Informe Estado de Derecho 2026 de la Comisión Europea alerta sobre la falta de ejecución de reformas judiciales en España"
+        url: "https://www.moncloa.com/2026/07/19/informe-estado-derecho-2026-bruselas-espana-3402351/"
+        tipo: prensa
+        fecha: 2026-07-19
+  - indicador: "Recomendaciones del GRECO (quinta ronda)"
+    valor: "0 cumplidas, 16 parciales, 3 sin aplicar"
+    detalle: "Informe de cumplimiento de agosto de 2025. España debía informar de sus avances antes del 30 de junio de 2026."
+    fuentes:
+      - medio: "Consejo de Europa"
+        titulo: "El GRECO publica un informe evaluando los avances en medidas contra la corrupción en España"
+        url: "https://www.coe.int/es/web/portal/-/greco-publishes-report-evaluating-progress-in-anti-corruption-measures-in-spain"
+        tipo: institucion
+        fecha: 2025-08-01
+a_favor:
+  - titulo: "Nuevas instituciones y plan estatal"
+    descripcion: "La Autoridad Independiente de Protección del Informante funciona desde septiembre de 2025 y ya ha presentado su primera memoria anual al Congreso. En 2025 el Gobierno aprobó además un Plan Estatal de Lucha contra la Corrupción."
+    fuentes:
+      - medio: "KPMG"
+        titulo: "Puesta en marcha de la Autoridad Independiente y aprobación del Plan Estatal de Lucha contra la Corrupción"
+        url: "https://assets.kpmg.com/content/dam/kpmgsites/es/pdf/2025/09/legal-alert-puesta-marcha-autoridad-independiente-aprobacion-plan-estatal-lucha-contra-corrupcion.pdf.coredownload.inline.pdf"
+        tipo: organizacion
+        fecha: 2025-09-01
+en_contra:
+  - titulo: "Reformas pendientes según la Comisión Europea"
+    descripcion: "El Informe sobre el Estado de Derecho 2026 considera limitados los avances en el control de los grupos de interés, propone un registro público obligatorio de lobistas, pide más medios para investigar y juzgar la corrupción de alto nivel y reglas más estrictas de conflicto de intereses, e insta a desvincular el mandato del Fiscal General del Estado del del Gobierno."
+    fuentes:
+      - medio: "Qué!"
+        titulo: "Bruselas reclama a España más medidas contra la corrupción de alto nivel"
+        url: "https://www.que.es/2026/07/18/informe-bruselas-corrupcion-espana-2026/"
+        tipo: prensa
+        fecha: 2026-07-18
+      - medio: "Público"
+        titulo: "La Comisión Europea afea a España los pocos avances en los planes anticorrupción"
+        url: "https://www.publico.es/politica/comision-europea-afea-espana-pocos-avances-planes-anticorrupcion.html"
+        tipo: prensa
+        fecha: 2026-07-17
+  - titulo: "Sin ley de grupos de interés"
+    descripcion: "España sigue sin una ley integral que regule los grupos de interés (lobbies), algo que también señaló la misión del Parlamento Europeo sobre el Estado de Derecho de 2026."
+    fuentes:
+      - medio: "Newtral"
+        titulo: "La misión del Parlamento Europeo sobre el Estado de Derecho en España"
+        url: "https://www.newtral.es/mision-estado-derecho-espana-parlamento-europeo/20260508/"
+        tipo: prensa
+        fecha: 2026-05-08
+internacional:
+  - titulo: "Registros obligatorios de grupos de interés"
+    descripcion: "Irlanda aprobó en 2015 una ley que obliga a registrar públicamente quién se reúne con cargos públicos y sobre qué. La Unión Europea cuenta con su propio registro de transparencia para las instituciones europeas."
+    fuentes:
+      - medio: "Irish Statute Book"
+        titulo: "Regulation of Lobbying Act 2015"
+        url: "https://www.irishstatutebook.ie/eli/2015/act/5/enacted/en/html"
+        tipo: institucion
+medidas:
+  - titulo: "Registro obligatorio de grupos de interés"
+    descripcion: "Obligar a inscribirse a quienes hacen lobby y publicar sus contactos con cargos públicos y los temas tratados."
+    donde: "Irlanda desde 2015; propuesto por la Comisión Europea para España."
+    evidencia: "En Irlanda el registro superaba en 2019 los 1.800 inscritos y las 30.000 declaraciones. Su efecto sobre la corrupción es difícil de medir: sirve sobre todo para que se sepa quién influye en cada decisión."
+    fuentes:
+      - medio: "Standards in Public Office Commission (Irlanda)"
+        titulo: "Annual Report 2018 (Regulation of Lobbying)"
+        url: "https://www.lobbying.ie/media/6218/annual-report-2018.pdf"
+        tipo: institucion
+      - medio: "Qué!"
+        titulo: "Bruselas reclama a España más medidas contra la corrupción de alto nivel"
+        url: "https://www.que.es/2026/07/18/informe-bruselas-corrupcion-espana-2026/"
+        tipo: prensa
+        fecha: 2026-07-18
+  - titulo: "Separar el mandato del Fiscal General del ciclo del Gobierno"
+    descripcion: "Que el mandato del Fiscal General no coincida con el del Gobierno que lo nombra y reforzar su autonomía."
+    evidencia: "Es una recomendación reiterada de la Comisión Europea a España. Sus defensores lo ven como garantía de independencia; quienes lo cuestionan recuerdan que la Constitución atribuye al Gobierno el nombramiento."
+    fuentes:
+      - medio: "Público"
+        titulo: "La Comisión Europea afea a España los pocos avances en los planes anticorrupción"
+        url: "https://www.publico.es/politica/comision-europea-afea-espana-pocos-avances-planes-anticorrupcion.html"
+        tipo: prensa
+        fecha: 2026-07-17
+  - titulo: "Proteger y facilitar las denuncias"
+    descripcion: "Canales de denuncia confidenciales en empresas y administraciones y protección frente a represalias para quien informa."
+    donde: "España desde 2023 (Ley 2/2023), en aplicación de una directiva europea."
+    evidencia: "La autoridad estatal lleva poco más de un año funcionando y aún no hay una evaluación de resultados."
+    fuentes:
+      - medio: "BOE"
+        titulo: "Ley 2/2023, de 20 de febrero, reguladora de la protección de las personas que informen sobre infracciones normativas y de lucha contra la corrupción"
+        url: "https://www.boe.es/buscar/act.php?id=BOE-A-2023-4513"
+        tipo: institucion
+        fecha: 2023-02-21
+nota_revision: "Primera pasada. Las cifras del Informe sobre el Estado de Derecho 2026 se toman de prensa y deben contrastarse con el capítulo de España de la Comisión Europea."
