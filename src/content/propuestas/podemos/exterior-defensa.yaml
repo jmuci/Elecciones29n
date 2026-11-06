@@ -3,7 +3,7 @@
 partido: podemos
 tema: exterior-defensa
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-05
 propuestas:
   - subtema: OTAN
     resumen: >-
@@ -17,6 +17,11 @@ propuestas:
       sanidad, educación y cuidados.
     fuente: podemos-documento-politico-v-asamblea
     pagina: 36
+  - subtema: gasto en defensa
+    resumen: >-
+      Rechaza destinar más dinero público a armamento y propone dedicarlo a servicios públicos.
+    fuente: podemos-web-paz-casa-trabajo
+    pagina: "Medida 03"
   - subtema: política exterior
     resumen: >-
       Propone romper todas las relaciones diplomáticas y comerciales con Israel y un embargo a la
@@ -31,3 +36,4 @@ propuestas:
     pagina: 33
 fuentes_revisadas:
   - podemos-documento-politico-v-asamblea
+  - podemos-web-paz-casa-trabajo

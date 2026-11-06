@@ -2,7 +2,7 @@
 partido: frente-amplio
 tema: impuestos
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-05
 propuestas:
   - subtema: vivienda
     resumen: >-
@@ -11,5 +11,18 @@ propuestas:
       asequible y estable.
     fuente: frente-amplio-nota-impuesto-acumulacion-vivienda
     pagina: entradilla
+  - subtema: patrimonio y sucesiones
+    resumen: >-
+      Propone un impuesto anual sobre el patrimonio neto del 2 % a partir de un millón de euros y del
+      3 % a partir de 50 millones, descontando lo ya pagado por Patrimonio y Grandes Fortunas.
+    fuente: frente-amplio-nota-impuestos-grandes-fortunas-empresas
+    pagina: "apartado «Tasar las grandes fortunas»"
+  - subtema: sociedades
+    resumen: >-
+      Plantea elevar el tipo efectivo que pagan la gran empresa y la banca sobre sus beneficios,
+      revisando las deducciones de los grandes grupos, como las de pérdidas de años anteriores.
+    fuente: frente-amplio-nota-impuestos-grandes-fortunas-empresas
+    pagina: "apartado «Impuesto a la banca»"
 fuentes_revisadas:
   - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-nota-impuestos-grandes-fortunas-empresas
