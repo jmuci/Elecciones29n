@@ -1,0 +1,79 @@
+# Cifras tomadas de las secciones de Percepción de src/content/gobiernos (mismas fuentes).
+titulo: Qué problemas preocupan
+pestana: Problemas (CIS)
+bloque: percepcion
+orden: 2
+tipo: lineas
+unidad: "%"
+descripcion: "Porcentaje de encuestados que citan cada asunto entre los tres principales problemas de España (respuesta múltiple: no suman 100). Solo se muestran los barómetros citados en cada gobierno."
+notas:
+  - "El CIS recodificó categorías desde 2025, así que la comparación con años anteriores es aproximada."
+series:
+  - id: paro
+    nombre: El paro
+    fuentes:
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2004 (estudio 2556)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2004"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de mayo 2009 (estudio 2801)"
+        url: "https://www.cis.es/estudios/barometro-de-mayo-2009"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2014 (estudio 3013)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2014"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de junio 2018 (estudio 3217)"
+        url: "https://www.cis.es/estudios/barometro-de-junio-2018"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de enero 2020 (estudio 3271)"
+        url: "https://www.cis.es/estudios/barometro-de-enero-2020"
+        tipo: institucion
+    valores:
+      "2004-02": 61.0
+      "2009-05": 77.3
+      "2014-02": 81.1
+      "2018-06": 62.4
+      "2020-01": 58.9
+  - id: vivienda
+    nombre: La vivienda
+    fuentes:
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2004 (estudio 2556)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2004"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de mayo 2009 (estudio 2801)"
+        url: "https://www.cis.es/estudios/barometro-de-mayo-2009"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de octubre 2025 (estudio 3528)"
+        url: "https://www.cis.es/estudios/barometro-de-octubre-2025"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de octubre 2026 (estudio 3582)"
+        url: "https://www.cis.es/estudios/barometro-de-octubre-2026"
+        tipo: institucion
+    valores:
+      "2004-02": 20.3
+      "2009-05": 13.0
+      "2025-10": 37.1
+      "2026-10": 55.7
+  - id: corrupcion
+    nombre: La corrupción y el fraude
+    fuentes:
+      - medio: "CIS"
+        titulo: "Barómetro de febrero 2014 (estudio 3013)"
+        url: "https://www.cis.es/estudios/barometro-de-febrero-2014"
+        tipo: institucion
+      - medio: "CIS"
+        titulo: "Barómetro de junio 2018 (estudio 3217)"
+        url: "https://www.cis.es/estudios/barometro-de-junio-2018"
+        tipo: institucion
+    valores:
+      "2014-02": 44.2
+      "2018-06": 39.2
+revisado: 2026-11-04

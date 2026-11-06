@@ -2,10 +2,36 @@
 import Base from '../layouts/Base.astro';
 import LineaTiempo from '../components/LineaTiempo.astro';
 import GraficoCorrupcion from '../components/GraficoCorrupcion.astro';
+import Grafica from '../components/Grafica.astro';
+import PanelGraficas from '../components/PanelGraficas.astro';
+import Detalle from '../components/Detalle.astro';
 import { resumirCorrupcion } from '../lib/corrupcion';
 import { BLOQUE_VISTA, cargarHistoria, fecha, periodo, TIPO_FUENTE_HISTORIA } from '../lib/ui';
 
-const { gobiernos, casos, recuentos, partidos } = await cargarHistoria();
+const { gobiernos, casos, recuentos, partidos, graficas } = await cargarHistoria();
+const graficasMacro = graficas.filter((g) => g.data.bloque === 'macro');
+const graficasPercepcion = graficas.filter((g) => g.data.bloque === 'percepcion');
+const graficaPorId = new Map(graficas.map((g) => [g.id, g]));
+
+/** Minigráficas de cada gobierno: las mismas series para todos, con su periodo destacado. */
+type Mini = { grafica: string; serie: string; resumen: 'tramo' | 'extremos' };
+const MINIS: Record<'macro' | 'percepcion', Mini[]> = {
+  macro: [
+    { grafica: 'crecimiento', serie: 'pib', resumen: 'extremos' },
+    { grafica: 'empleo', serie: 'paro', resumen: 'tramo' },
+    { grafica: 'empleo', serie: 'paro-juvenil', resumen: 'tramo' },
+    { grafica: 'deuda', serie: 'deuda', resumen: 'tramo' },
+  ],
+  percepcion: [
+    { grafica: 'condiciones-vida', serie: 'fin-de-mes', resumen: 'tramo' },
+    { grafica: 'vivienda', serie: 'vivienda', resumen: 'extremos' },
+  ],
+};
+const minisDe = (bloque: keyof typeof MINIS) =>
+  MINIS[bloque].flatMap((m) => {
+    const grafica = graficaPorId.get(m.grafica);
+    return grafica ? [{ ...m, grafica }] : [];
+  });
 
 const nombreCorto = (id: string): string => partidos.get(id)?.data.nombre_corto ?? id;
 const etiquetaPartido = (c: (typeof casos)[number]): string =>
@@ -30,8 +56,8 @@ const gruposDe = (g: (typeof gobiernos)[number]) => [
     intro:
       'Los agregados macroeconómicos y la experiencia de los hogares no tienen por qué coincidir: puede crecer el PIB y a la vez haber muchas familias con dificultades, o al revés. Se muestran por separado y sin atribuir causas: en estas cifras se mezclan el ciclo, el entorno exterior y las decisiones de cada época.',
     columnas: [
-      { clave: 'macro', titulo: 'Macroeconomía', hechos: g.data.economia.macro },
-      { clave: 'percepcion', titulo: 'Percepción y vida cotidiana', hechos: g.data.economia.percepcion },
+      { clave: 'macro', titulo: 'Macroeconomía', hechos: g.data.economia.macro, minis: minisDe('macro') },
+      { clave: 'percepcion', titulo: 'Percepción y vida cotidiana', hechos: g.data.economia.percepcion, minis: minisDe('percepcion') },
     ],
   },
   {
@@ -62,23 +88,29 @@ const ultima = fecha(
         Quién gobernó desde 2000, qué se le reconoce y qué se le critica, y qué dicen los tribunales sobre corrupción.
       </p>
       <p>
-        Cada gobierno sigue la misma estructura: el <strong>contexto</strong> en el que gobernó (qué pasaba en el mundo y
-        en la economía global), <strong>la economía</strong> (las cifras agregadas y, aparte, cómo la vivió la
-        ciudadanía) y, por último, sus <strong>logros</strong> y <strong>críticas</strong>. Cada punto es un hecho
-        comprobable y lleva sus fuentes (datos oficiales, encuestas del CIS, normas, estudios, prensa), con el tipo de
-        fuente a la vista. Lo que se publica de cada medio no es una valoración de esta web.
+        Cada gobierno sigue la misma estructura: el <strong>contexto</strong> en el que gobernó, <strong>la
+        economía</strong> (las cifras y, aparte, cómo la vivió la ciudadanía) y sus <strong>logros</strong> y
+        <strong>críticas</strong>, cada punto con sus fuentes. Las cifras económicas están también
+        <a href="#economia-graficas">en gráficas</a>. Última revisión: <time datetime={ultima.iso}>{ultima.texto}</time>.
       </p>
-      <p>
-        Las cifras macro y la percepción se separan a propósito: una economía puede crecer y crear empleo mientras
-        muchos hogares notan que no llegan a fin de mes, y a la inversa. Esta web no decide cuál de las dos lecturas
-        pesa más ni atribuye al Gobierno de turno lo que ocurre en el mundo. Las encuestas del CIS cambiaron de
-        formulación con el tiempo (desde 2022 no se ofrece «regular» como respuesta), así que sus porcentajes de épocas
-        distintas no son directamente comparables.
-      </p>
-      <p>
-        Es una primera pasada: hay periodos con menos puntos documentados que otros, y eso no significa nada sobre su
-        balance. Se amplía a medida que se verifican más fuentes. Última revisión: <time datetime={ultima.iso}>{ultima.texto}</time>.
-      </p>
+      <details class="metodo">
+        <summary>Cómo leer esta página</summary>
+        <p>
+          Cada punto es un hecho comprobable y lleva sus fuentes (datos oficiales, encuestas del CIS, normas, estudios,
+          prensa), con el tipo de fuente a la vista. Lo que se publica de cada medio no es una valoración de esta web.
+        </p>
+        <p>
+          Las cifras macro y la percepción se separan a propósito: una economía puede crecer y crear empleo mientras
+          muchos hogares notan que no llegan a fin de mes, y a la inversa. Esta web no decide cuál de las dos lecturas
+          pesa más ni atribuye al Gobierno de turno lo que ocurre en el mundo. Las encuestas del CIS cambiaron de
+          formulación con el tiempo (desde 2022 no se ofrece «regular» como respuesta), así que sus porcentajes de
+          épocas distintas no son directamente comparables.
+        </p>
+        <p>
+          Es una primera pasada: hay periodos con menos puntos documentados que otros, y eso no significa nada sobre su
+          balance. Se amplía a medida que se verifican más fuentes.
+        </p>
+      </details>
     </div>
 
     <section aria-labelledby="titulo-linea" class="seccion">
@@ -98,8 +130,27 @@ const ultima = fecha(
             </li>
           ))
         }
+        <li><a href="#economia-graficas">La economía en gráficas</a></li>
         <li><a href="#corrupcion">Corrupción desde 2000</a></li>
       </ul>
+    </section>
+
+    <section class="seccion" id="economia-graficas" aria-labelledby="economia-graficas-titulo">
+      <h2 id="economia-graficas-titulo">La economía en gráficas, 1996-2025</h2>
+      <p class="grupo-intro">
+        Las cifras que se citan en cada gobierno, puestas en el tiempo. Las franjas de fondo marcan quién gobernaba;
+        no atribuyen causas: en estas cifras se mezclan el ciclo, el entorno exterior y las decisiones de cada época.
+        Pasa el dedo o el ratón por la gráfica para ver cada dato y pulsa la leyenda para mostrar u ocultar series.
+      </p>
+      <h3 class="panel-titulo">Las cifras: macroeconomía</h3>
+      <PanelGraficas id="macro" etiqueta="Gráficas de macroeconomía" graficas={graficasMacro} gobiernos={gobiernos} />
+      <h3 class="panel-titulo">Cómo se vivió: percepción y condiciones de vida</h3>
+      <PanelGraficas
+        id="percepcion"
+        etiqueta="Gráficas de percepción y condiciones de vida"
+        graficas={graficasPercepcion}
+        gobiernos={gobiernos}
+      />
     </section>
 
     {
@@ -135,9 +186,25 @@ const ultima = fecha(
                 {grupo.columnas.map((col) => (
                   <section aria-labelledby={`${g.id}-${col.clave}`}>
                     <h4 class="col-titulo" id={`${g.id}-${col.clave}`}>{col.titulo}</h4>
+                    {'minis' in col && (
+                      <div class="minis">
+                        {col.minis.map((m) => (
+                          <Grafica
+                            grafica={m.grafica}
+                            gobiernos={gobiernos}
+                            variante="mini"
+                            serie={m.serie}
+                            gobierno={g}
+                            resumen={m.resumen}
+                            nivel={5}
+                          />
+                        ))}
+                      </div>
+                    )}
                     {col.hechos.length === 0 ? (
                       <p class="vacio">Pendiente de documentar con fuentes.</p>
                     ) : (
+                      <Detalle plegado={'minis' in col} total={col.hechos.length}>
                       <ul class="hechos">
                         {col.hechos.map((h) => (
                           <li>
@@ -162,6 +229,7 @@ const ultima = fecha(
                           </li>
                         ))}
                       </ul>
+                      </Detalle>
                     )}
                   </section>
                 ))}
@@ -414,6 +482,35 @@ const ultima = fecha(
 
   .grupo {
     margin-top: var(--space-6);
+  }
+
+  .metodo {
+    margin-top: var(--space-3);
+  }
+
+  .metodo summary {
+    cursor: pointer;
+    color: var(--link);
+  }
+
+  .metodo p {
+    margin-top: var(--space-2);
+  }
+
+  .panel-titulo {
+    margin-top: var(--space-5);
+    font-size: var(--step-0);
+  }
+
+  .minis {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4) var(--space-3);
+    margin-bottom: var(--space-4);
+    padding: var(--space-3);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
   }
 
   .grupo-titulo {

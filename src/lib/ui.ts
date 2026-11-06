@@ -6,6 +6,7 @@ import type {
   Estado,
   Fuente,
   Gobierno,
+  Grafica,
   Partido,
   Problema,
   Propuesta,
@@ -148,17 +149,20 @@ export async function cargarHistoria(): Promise<{
   casos: Caso[];
   recuentos: Recuento[];
   partidos: Map<string, Partido>;
+  graficas: Grafica[];
 }> {
-  const [gobiernos, casos, recuentos, partidos] = await Promise.all([
+  const [gobiernos, casos, recuentos, partidos, graficas] = await Promise.all([
     getCollection('gobiernos'),
     getCollection('casos'),
     getCollection('recuentos'),
     getCollection('partidos'),
+    getCollection('graficas'),
   ]);
   gobiernos.sort(porOrden);
   recuentos.sort(porOrden);
+  graficas.sort(porOrden);
   casos.sort((a, b) => b.data.firme.fecha.getTime() - a.data.firme.fecha.getTime());
-  return { gobiernos, casos, recuentos, partidos: new Map(partidos.map((p) => [p.id, p])) };
+  return { gobiernos, casos, recuentos, partidos: new Map(partidos.map((p) => [p.id, p])), graficas };
 }
 
 export async function cargarProblemas(): Promise<{ problemas: Problema[]; temas: Map<string, Tema> }> {

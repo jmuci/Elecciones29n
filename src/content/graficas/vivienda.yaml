@@ -1,0 +1,27 @@
+# Cifras tomadas de las secciones de Percepción de src/content/gobiernos (mismas fuentes).
+titulo: Precio de la vivienda
+pestana: Vivienda
+bloque: percepcion
+orden: 4
+tipo: barras
+unidad: "%"
+descripcion: "Variación media anual del precio de la vivienda (índice de precios de Eurostat)."
+series:
+  - id: vivienda
+    nombre: Precio de la vivienda
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "House price index - annual data (prc_hpi_a)"
+        url: "https://ec.europa.eu/eurostat/databrowser/view/prc_hpi_a/default/table?lang=en"
+        tipo: institucion
+    valores:
+      "2007": 9.8
+      "2008": -1.4
+      "2009": -6.6
+      "2011": -7.6
+      "2012": -14.8
+      "2013": -9.1
+      "2018": 6.7
+      "2024": 8.5
+      "2025": 12.7
+revisado: 2026-11-04

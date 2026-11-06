@@ -2,7 +2,7 @@
 // el script del cliente. Todo sale de los datos (coincidencias entre respuestas): ningún
 // partido se coloca a mano en un eje ni se clasifica.
 
-import { fnv1a, type Estado } from './test-estado';
+import { IMPORTANCIA_INICIAL, fnv1a, type Estado } from './test-estado';
 
 /** Un partido solo puede ser «el más afín» si sus propuestas cubren al menos esta parte del peso. */
 export const COBERTURA_MINIMA = 0.5;
@@ -110,8 +110,8 @@ export function perfil(
 export function prioridades(estado: Estado, preguntas: { id: string; tema: string }[], temas: string[]): string[] {
   const suma = new Map<string, { total: number; n: number }>();
   for (const q of preguntas) {
-    const { importancia, respuesta } = estado[q.id] ?? { importancia: 0, respuesta: null };
-    if (importancia === 0 || respuesta === null) continue;
+    const { importancia, respuesta } = estado[q.id] ?? { importancia: IMPORTANCIA_INICIAL, respuesta: null };
+    if (respuesta === null) continue;
     const s = suma.get(q.tema) ?? { total: 0, n: 0 };
     s.total += importancia;
     s.n += 1;

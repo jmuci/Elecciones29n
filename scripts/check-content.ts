@@ -181,11 +181,43 @@ export function cargar(base: string, incluirEjemplo: boolean): Contenido {
   return { partidos: ids('partidos'), temas, fuentes: ids('fuentes'), celdas, preguntas };
 }
 
+const cifra = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+/**
+ * Las series de `graficas` copian cifras de los textos de `gobiernos`: cada valor debe
+ * aparecer, con el mismo formato («−3,8 %»), en alguno de esos textos. Evita erratas al
+ * pasar las cifras a la gráfica y que la gráfica muestre un dato que la web no documenta.
+ * Es una comprobación de mínimos: busca la cifra, no la relaciona con su año.
+ */
+export function validarGraficas(base: string): string[] {
+  const dir = (n: string): string[] =>
+    existsSync(join(base, n)) ? readdirSync(join(base, n)).filter((f) => /\.ya?ml$/.test(f)).sort() : [];
+  const textos = dir('gobiernos')
+    .map((f) => readFileSync(join(base, 'gobiernos', f), 'utf8'))
+    .join('\n');
+  const errores: string[] = [];
+  for (const f of dir('graficas')) {
+    const d = parse(readFileSync(join(base, 'graficas', f), 'utf8')) ?? {};
+    for (const serie of Array.isArray(d.series) ? d.series : []) {
+      for (const [periodo, valor] of Object.entries(serie?.valores ?? {})) {
+        const texto = `${cifra.format(Number(valor)).replace('-', '−')} %`;
+        // Las caídas pueden ir sin signo en el texto («cayó un 6,6 %»).
+        const absoluto = `${cifra.format(Math.abs(Number(valor)))} %`;
+        if (!textos.includes(texto) && !(Number(valor) < 0 && textos.includes(absoluto)))
+          errores.push(`graficas/${f}: ${serie.id} ${periodo} = ${texto} no aparece en ningún texto de gobiernos/`);
+      }
+    }
+  }
+  return errores;
+}
+
 function main(): void {
   const base = process.argv[2] ?? 'src/content';
   const rel = relative('.', base);
   const prefijo = rel.startsWith('..') ? base : rel;
-  const errores = validar(cargar(base, INCLUIR_EJEMPLO)).map((e) => e.replace(/^(?=\w)/, `${prefijo}/`));
+  const errores = [...validar(cargar(base, INCLUIR_EJEMPLO)), ...validarGraficas(base)].map((e) =>
+    e.replace(/^(?=\w)/, `${prefijo}/`),
+  );
   if (errores.length > 0) {
     console.error(`✖ ${errores.length} error(es) de contenido:\n${errores.map((e) => `  - ${e}`).join('\n')}`);
     process.exit(1);

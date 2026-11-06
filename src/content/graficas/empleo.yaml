@@ -1,0 +1,78 @@
+# Cifras tomadas de las secciones de Macroeconomía de src/content/gobiernos (mismas fuentes).
+titulo: Paro y empleo
+pestana: Empleo
+bloque: macro
+orden: 2
+tipo: lineas
+unidad: "%"
+descripcion: "Tasa de paro general y de menores de 25 años, y porcentaje de personas de 20 a 64 años con empleo."
+notas:
+  - "La serie de paro tiene cambios metodológicos de la Encuesta de Población Activa: los saltos entre años concretos deben leerse con cautela."
+series:
+  - id: paro
+    nombre: Tasa de paro
+    detalle: "15 a 74 años"
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+        url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+        tipo: institucion
+    valores:
+      "1996": 22.2
+      "2000": 13.8
+      "2003": 11.3
+      "2004": 11.1
+      "2007": 8.2
+      "2008": 11.3
+      "2009": 17.9
+      "2010": 19.9
+      "2011": 21.4
+      "2012": 24.8
+      "2013": 26.1
+      "2014": 24.5
+      "2015": 22.1
+      "2016": 19.6
+      "2017": 17.2
+      "2018": 15.3
+      "2019": 14.1
+      "2020": 15.5
+      "2025": 10.5
+  - id: paro-juvenil
+    nombre: Paro juvenil
+    detalle: "menores de 25 años"
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "Unemployment rates by citizenship (lfsa_urgan)"
+        url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgan/default/table?lang=en"
+        tipo: institucion
+    valores:
+      "1996": 41.8
+      "2000": 25.3
+      "2003": 22.3
+      "2004": 22.5
+      "2007": 18.1
+      "2011": 46.2
+      "2013": 55.5
+      "2018": 34.3
+      "2020": 38.3
+      "2025": 24.9
+  - id: tasa-empleo
+    nombre: Tasa de empleo
+    detalle: "20 a 64 años"
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "Employment rates by citizenship (lfsa_ergan)"
+        url: "https://ec.europa.eu/eurostat/databrowser/view/lfsa_ergan/default/table?lang=en"
+        tipo: institucion
+    valores:
+      "1996": 52.5
+      "2000": 60.6
+      "2003": 64.3
+      "2004": 65.2
+      "2007": 69.7
+      "2011": 62.0
+      "2013": 58.6
+      "2018": 67.0
+      "2020": 65.7
+      "2025": 72.4
+revisado: 2026-11-04

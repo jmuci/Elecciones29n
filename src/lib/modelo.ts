@@ -51,7 +51,12 @@ export const LEGISLATURAS = [
 ] as const satisfies readonly { id: string; inicio: string; fin?: string }[];
 export type Legislatura = (typeof LEGISLATURAS)[number];
 
+/** Gráficas de /historia: bloque (cifras agregadas o percepción) y forma. */
+export const BLOQUES_GRAFICA = ['macro', 'percepcion'] as const;
+export const TIPOS_GRAFICA = ['lineas', 'barras', 'apiladas'] as const;
+
 export type Gobierno = CollectionEntry<'gobiernos'>;
+export type Grafica = CollectionEntry<'graficas'>;
 export type Caso = CollectionEntry<'casos'>;
 export type Recuento = CollectionEntry<'recuentos'>;
 export type Problema = CollectionEntry<'problemas'>;
