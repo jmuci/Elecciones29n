@@ -26,6 +26,7 @@ Astro (salida estática) + TypeScript, content collections con Zod, Vercel, GitH
 - `npm run check` — `astro check` (tipos TS/Astro)
 - `npm run check:links` — comprueba que `url` y `archivo` de cada fuente responden (solo falla si `archivo` está roto o `url` rota sin snapshot; antibots y redirecciones salen como warning)
 - `npm run check:content` — valida referencias fuente/partido/tema y fuentes huérfanas (`ELECCIONES_EJEMPLO=1` incluye los datos ficticios)
+- `npm run backup:sources` — copia privada de las fuentes con `sha256`, verificada, fuera del repo (`ELECCIONES_RESPALDO` o `~/Elecciones29n-respaldo`)
 
 Para previsualizar en el navegador de Claude Code, `.claude/launch.json` define el servidor `dev` (`npm run dev` en el puerto 4321).
 

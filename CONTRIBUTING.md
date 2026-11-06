@@ -9,7 +9,7 @@ Este proyecto resume las propuestas de los partidos. El objetivo es que cualquie
 ### Fuentes
 1. **Solo fuentes oficiales del partido**: programa electoral, manifiestos, planes sectoriales, documentos políticos del partido, argumentarios de campaña, web oficial y notas de prensa oficiales. Mientras no haya programa, se puede citar cualquiera de los otros, y el `tipo` de la fuente lo deja claro. Un artículo de prensa puede servir para *encontrar* una propuesta, pero nunca es la fuente que se enlaza.
 2. **Toda propuesta lleva fuente, página (o sección) y fecha de consulta.** Sin fuente verificable, la propuesta no entra.
-3. **Archivar cada documento** en Wayback Machine al registrarlo. Los partidos cambian sus PDFs y el enlace tiene que seguir siendo comprobable.
+3. **Archivar cada documento** en Wayback Machine al registrarlo. Los partidos cambian sus PDFs y el enlace tiene que seguir siendo comprobable. El enlace principal es siempre el documento en la web del partido; el snapshot es la copia de respaldo pública. Además, `npm run backup:sources` guarda una copia privada de cada documento con `sha256` fuera del repositorio (por defecto en `~/Elecciones29n-respaldo`), verificada contra ese hash, por si Wayback retira la captura.
 4. **No mezclar convocatorias.** La referencia son los documentos publicados para el 29N. Un documento oficial anterior a la convocatoria solo se admite si el partido no ha publicado nada para el 29N sobre ese tema, y con aviso:
    - La fuente lleva `anterior_a_convocatoria: true` y la web lo indica junto a cada propuesta que la cita y en `/fuentes`. El campo se marca a mano y solo con evidencia de la fecha del documento (fecha impresa, metadatos del PDF, ruta del fichero), no por suposición ni por la fecha de consulta.
    - En cuanto el partido publique un documento para el 29N sobre ese tema, las propuestas se rehacen con él y la fuente anterior deja de citarse.
@@ -73,7 +73,7 @@ Este proyecto resume las propuestas de los partidos. El objetivo es que cualquie
 
 El workflow `sources-watch` abre un issue si el hash de un documento oficial cambia. Para resolverlo:
 
-1. Descargar la nueva versión y archivarla en Wayback Machine.
+1. Descargar la nueva versión y archivarla en Wayback Machine. Ejecutar `npm run backup:sources` antes de actualizar el `sha256`, para conservar también la versión anterior.
 2. Actualizar `sha256`, `consultado` y `archivo` en la fuente.
 3. Revisar todas las celdas que citan esa fuente: las páginas pueden haberse movido y las propuestas pueden haber cambiado.
 4. Cerrar el issue enlazando el PR.

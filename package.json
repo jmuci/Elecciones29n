@@ -14,7 +14,8 @@
     "check": "astro check",
     "check:content": "node scripts/check-content.ts",
     "check:sources": "node scripts/check-sources.ts",
-    "check:links": "node scripts/check-links.ts"
+    "check:links": "node scripts/check-links.ts",
+    "backup:sources": "node scripts/backup-sources.ts"
   },
   "dependencies": {
     "astro": "^7.4.5"

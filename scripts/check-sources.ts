@@ -30,10 +30,11 @@ export interface Resultado {
   detalle?: string;
 }
 
-interface Fuente {
+export interface Fuente {
   id: string;
   url: string;
   sha256?: string;
+  archivo?: string;
 }
 
 export function cargarFuentes(base: string): Fuente[] {
@@ -46,13 +47,20 @@ export function cargarFuentes(base: string): Fuente[] {
       if (esEjemplo(`fuentes/${f}`)) return [];
       const d = parse(readFileSync(join(dir, f), 'utf8'));
       if (!d || typeof d !== 'object' || d.ficticio === true) return [];
-      return [{ id: f.replace(/\.ya?ml$/, ''), url: String(d.url), sha256: d.sha256 ? String(d.sha256).toLowerCase() : undefined }];
+      return [
+        {
+          id: f.replace(/\.ya?ml$/, ''),
+          url: String(d.url),
+          sha256: d.sha256 ? String(d.sha256).toLowerCase() : undefined,
+          archivo: d.archivo ? String(d.archivo) : undefined,
+        },
+      ];
     });
 }
 
 const normalizar = (url: string): string => new URL(url).href;
 
-async function descargar(url: string): Promise<{ hash: string; urlFinal: string }> {
+export async function descargar(url: string): Promise<{ cuerpo: Buffer; hash: string; urlFinal: string }> {
   const res = await fetch(url, {
     redirect: 'follow',
     signal: AbortSignal.timeout(TIMEOUT_MS),
@@ -60,7 +68,7 @@ async function descargar(url: string): Promise<{ hash: string; urlFinal: string 
   });
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`.trim());
   const cuerpo = Buffer.from(await res.arrayBuffer());
-  return { hash: createHash('sha256').update(cuerpo).digest('hex'), urlFinal: res.url || url };
+  return { cuerpo, hash: createHash('sha256').update(cuerpo).digest('hex'), urlFinal: res.url || url };
 }
 
 export async function comprobar(f: Fuente): Promise<Resultado> {
