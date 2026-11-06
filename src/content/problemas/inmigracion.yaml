@@ -1,0 +1,157 @@
+nombre: Inmigración
+orden: 2
+tema: inmigracion
+resumen: "Es la segunda preocupación en los barómetros del CIS de 2026. La población extranjera alcanza máximos y sostiene buena parte del crecimiento del empleo, mientras las llegadas irregulares por mar han caído en 2026, aunque no en Ceuta y Melilla. En 2026 se ha aprobado una regularización extraordinaria y ha empezado a aplicarse el nuevo Pacto europeo de Migración y Asilo."
+revisado: 2026-11-03
+recorrido:
+  - titulo: "El marco legal: la Ley de Extranjería de 2000"
+    descripcion: "La Ley Orgánica 4/2000 regula los derechos de los extranjeros en España y las vías de residencia y trabajo. Se ha reformado varias veces y se desarrolla mediante un reglamento; el vigente es el Real Decreto 1155/2024, que se modificó en 2026 para la regularización extraordinaria."
+    fuentes:
+      - medio: "BOE"
+        titulo: "Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social"
+        url: "https://www.boe.es/buscar/act.php?id=BOE-A-2000-544"
+        tipo: institucion
+        fecha: 2000-01-12
+  - titulo: "Crecimiento de la población por la inmigración"
+    descripcion: "España ronda los 50 millones de habitantes. El crecimiento de los últimos años se debe casi por completo a la llegada de población extranjera, ya que la natalidad es baja: en el segundo trimestre de 2026 la población extranjera creció en 87.197 personas y la de nacionalidad española en 16.981."
+    fuentes:
+      - medio: "INE"
+        titulo: "Estadística Continua de Población (ECP). 1 de julio de 2026. Datos provisionales"
+        url: "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"
+        tipo: institucion
+        fecha: 2026-08-06
+  - titulo: "Regularización extraordinaria de 2026"
+    descripcion: "Tras una iniciativa legislativa popular que no llegó a aprobarse en el Congreso, el Gobierno aprobó el Real Decreto 316/2026, de 14 de abril, que modifica el Reglamento de Extranjería para permitir una regularización por arraigo extraordinario. Podían solicitarla quienes estuvieran en España antes del 1 de enero de 2026 y acreditaran al menos cinco meses de estancia; el plazo de solicitud fue del 16 de abril al 30 de junio de 2026. El Gobierno calculaba que afectaría a al menos 500.000 personas."
+    fuentes:
+      - medio: "Diari de Tarragona"
+        titulo: "El BOE publica el real decreto que aprueba la regularización de inmigrantes: requisitos y plazos"
+        url: "https://www.diaridetarragona.com/espana/257246/boe-publica-real-decreto-aprueba-regularizacion-inmigrantes-requisitos-plazos.html"
+        tipo: prensa
+        fecha: 2026-04-15
+      - medio: "EY"
+        titulo: "Alerta informativa: regularización extraordinaria (abril de 2026)"
+        url: "https://www.ey.com/content/dam/ey-unified-site/ey-com/es-es/technical/alertas-fiscal-legal/ey-26-01-29-alerta-informativa-regularizacion-extraordinaria-abril-2026.pdf"
+        tipo: organizacion
+cifras:
+  - indicador: "Población extranjera"
+    valor: "7.437.543 personas"
+    detalle: "A 1 de julio de 2026, sobre 49.801.559 residentes (datos provisionales). Un año antes eran 7.091.318. La cifra cuenta la nacionalidad, no el lugar de nacimiento: las personas nacidas en el extranjero son más."
+    fuentes:
+      - medio: "INE"
+        titulo: "Estadística Continua de Población (ECP). 1 de julio de 2026. Datos provisionales"
+        url: "https://www.ine.es/dyngs/Prensa/ECP2T26.htm"
+        tipo: institucion
+        fecha: 2026-08-06
+  - indicador: "Afiliados extranjeros a la Seguridad Social"
+    valor: "14,1 % del total"
+    detalle: "Enero de 2026, con cerca de 200.000 afiliados extranjeros más que un año antes."
+    fuentes:
+      - medio: "Ministerio de Inclusión, Seguridad Social y Migraciones"
+        titulo: "La Seguridad Social comienza 2026 con cerca de 200.000 afiliados extranjeros más que hace un año"
+        url: "https://www.inclusion.gob.es/en/w/la-seguridad-social-comienza-2026-con-cerca-de-200.000-afiliados-extranjeros-mas-que-hace-un-ano"
+        tipo: institucion
+        fecha: 2026-02-13
+  - indicador: "Llegadas irregulares"
+    valor: "7.030 (-47,5 %)"
+    detalle: "Del 1 de enero al 15 de abril de 2026, frente a 13.390 en el mismo periodo de 2025, según el Ministerio del Interior. A Canarias llegaron 2.097 personas, un 80,1 % menos."
+    fuentes:
+      - medio: "RTVC (con datos del Ministerio del Interior)"
+        titulo: "Las llegadas irregulares a Canarias caen un 80,1%: 2.097 migrantes en lo que va de año"
+        url: "https://rtvc.es/las-llegadas-de-migrantes-irregulares-a-canarias-caen-un-801-17-abril-2026/"
+        tipo: prensa
+        fecha: 2026-04-17
+  - indicador: "Llegadas a Ceuta por tierra"
+    valor: "+164,1 %"
+    detalle: "Hasta el 31 de julio de 2026 respecto al mismo periodo de 2025, sin contar la entrada de los días 30 y 31 de julio, que Interior analiza aparte."
+    fuentes:
+      - medio: "Diario Estrategia (con datos del Ministerio del Interior)"
+        titulo: "Las llegadas irregulares de migrantes a Ceuta suben un 164% respecto a 2025 sin contar la entrada masiva del 30 de julio"
+        url: "https://www.diarioestrategia.cl/texto-diario/mostrar/5976920/llegadas-irregulares-migrantes-ceuta-suben-164-respecto-2025-contar-entrada-masiva-30-julio"
+        tipo: prensa
+a_favor:
+  - titulo: "Sostiene el empleo y frena el efecto del envejecimiento"
+    descripcion: "Según el Banco de España, el envejecimiento redujo la tasa de actividad en 3,4 puntos entre 2012 y 2022, y la llegada de población extranjera compensó unos 0,8 puntos. Los extranjeros ya son más de uno de cada siete afiliados a la Seguridad Social."
+    fuentes:
+      - medio: "Banco de España (Boletín Económico)"
+        titulo: "Artículo sobre el efecto del envejecimiento en la tasa de actividad (2023)"
+        url: "https://ideas.repec.org/a/bde/joures/y2023i03n12.html"
+        tipo: estudio
+      - medio: "Ministerio de Inclusión, Seguridad Social y Migraciones"
+        titulo: "La Seguridad Social comienza 2026 con cerca de 200.000 afiliados extranjeros más que hace un año"
+        url: "https://www.inclusion.gob.es/en/w/la-seguridad-social-comienza-2026-con-cerca-de-200.000-afiliados-extranjeros-mas-que-hace-un-ano"
+        tipo: institucion
+        fecha: 2026-02-13
+en_contra:
+  - titulo: "No basta para resolver el envejecimiento"
+    descripcion: "El Banco de España estimó en su Informe Anual 2023 que mantener la proporción actual entre población en edad de trabajar y jubilados exigiría casi 25 millones de inmigrantes adicionales en edad de trabajar hasta 2053, y advierte que la capacidad de la inmigración para mitigar el envejecimiento es limitada."
+    fuentes:
+      - medio: "Forbes"
+        titulo: "España necesitará en 2053 casi 25 millones de inmigrantes más para trabajar y afrontar el envejecimiento"
+        url: "https://forbes.es/economia/454609/espana-necesitara-en-2053-casi-25-millones-de-inmigrantes-mas-para-trabajar-y-afrontar-el-envejecimiento/"
+        tipo: prensa
+  - titulo: "Presión sobre la vivienda y dificultades de acceso"
+    descripcion: "El Banco de España señala que el crecimiento de hogares, impulsado por la inmigración, ha superado a la construcción, y que los residentes nacidos en el extranjero están entre los grupos con más dificultades para acceder a una vivienda."
+    fuentes:
+      - medio: "Banco de España"
+        titulo: "Informe Anual 2025. Informe en breve"
+        url: "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/25/InfAnual_2025_Breve.pdf"
+        tipo: institucion
+        fecha: 2026-06-18
+  - titulo: "Rutas que cambian"
+    descripcion: "La caída de las llegadas a Canarias convive con aumentos en Ceuta y, según los periodos, en Baleares: cuando una ruta se reduce, parte de las llegadas se desplaza a otras."
+    fuentes:
+      - medio: "Periódico de Ibiza"
+        titulo: "Suben un 10% las llegadas irregulares de migrantes a Baleares por mar en lo que va de año"
+        url: "https://www.periodicodeibiza.es/cronica-negra/nacional/2026/08/05/2683841/suben-llegadas-irregulares-migrantes-baleares-por-mar-ano.html"
+        tipo: prensa
+        fecha: 2026-08-05
+internacional:
+  - titulo: "Pacto Europeo de Migración y Asilo (desde el 12 de junio de 2026)"
+    descripcion: "Las nuevas normas de la UE son plenamente aplicables desde el 12 de junio de 2026: cribado común de quienes llegan de forma irregular, procedimiento fronterizo acelerado para algunas solicitudes de asilo y un mecanismo de solidaridad entre Estados (para 2026, 21.000 reubicaciones u otras contribuciones, o 420 millones de euros). El Real Instituto Elcano lo describe como un acuerdo de mínimos."
+    fuentes:
+      - medio: "Consejo de la UE"
+        titulo: "Pacto sobre Migración y Asilo"
+        url: "https://www.consilium.europa.eu/es/policies/eu-migration-asylum-reform-pact/"
+        tipo: institucion
+      - medio: "Maldita.es"
+        titulo: "Claves del nuevo Pacto de Migración y Asilo de la UE"
+        url: "https://maldita.es/malditateexplica/20260612/claves-nuevo-pacto-migracion-asilo-ue/"
+        tipo: prensa
+        fecha: 2026-06-12
+      - medio: "Real Instituto Elcano"
+        titulo: "La puesta en marcha del Pacto Europeo de Migración y Asilo: un acuerdo de mínimos entre dudas y certezas, apoyos y detractores"
+        url: "https://www.realinstitutoelcano.org/comentarios/la-puesta-en-marcha-del-pacto-europeo-de-migracion-y-asilo-un-acuerdo-de-minimos-entre-dudas-y-certezas-apoyos-y-detractores/"
+        tipo: estudio
+medidas:
+  - titulo: "Regularizar a quien ya vive y trabaja en el país"
+    descripcion: "Conceder permisos de residencia a personas en situación irregular que acrediten un tiempo de estancia, para que puedan trabajar con contrato y cotizar."
+    donde: "España, 2026 (Real Decreto 316/2026), y regularizaciones anteriores en varios países europeos."
+    evidencia: "Aflora empleo y cotizaciones que antes eran sumergidos. Sus críticos sostienen que puede atraer nuevas llegadas irregulares. El efecto de la regularización de 2026 aún no se ha evaluado."
+    fuentes:
+      - medio: "Diari de Tarragona"
+        titulo: "El BOE publica el real decreto que aprueba la regularización de inmigrantes: requisitos y plazos"
+        url: "https://www.diaridetarragona.com/espana/257246/boe-publica-real-decreto-aprueba-regularizacion-inmigrantes-requisitos-plazos.html"
+        tipo: prensa
+        fecha: 2026-04-15
+  - titulo: "Control común de las fronteras exteriores y retornos más rápidos"
+    descripcion: "Cribado y registro de todas las llegadas irregulares, procedimiento fronterizo acelerado para solicitantes de países con baja tasa de reconocimiento de asilo y una lista europea de países de origen seguros."
+    donde: "Unión Europea, Pacto de Migración y Asilo."
+    evidencia: "Se aplica desde junio de 2026; todavía no hay datos de resultados. Organizaciones de derechos humanos cuestionan las garantías del procedimiento fronterizo, y algunos Estados lo consideran insuficiente."
+    fuentes:
+      - medio: "Consejo de la UE"
+        titulo: "Pacto sobre Migración y Asilo"
+        url: "https://www.consilium.europa.eu/es/policies/eu-migration-asylum-reform-pact/"
+        tipo: institucion
+      - medio: "Real Instituto Elcano"
+        titulo: "La puesta en marcha del Pacto Europeo de Migración y Asilo: un acuerdo de mínimos entre dudas y certezas, apoyos y detractores"
+        url: "https://www.realinstitutoelcano.org/comentarios/la-puesta-en-marcha-del-pacto-europeo-de-migracion-y-asilo-un-acuerdo-de-minimos-entre-dudas-y-certezas-apoyos-y-detractores/"
+        tipo: estudio
+  - titulo: "Combinar inmigración con otras palancas demográficas"
+    descripcion: "Acompañar la llegada de trabajadores con medidas para alargar la vida laboral y aumentar la participación en el empleo, en lugar de confiar solo en la inmigración para sostener el sistema de pensiones."
+    evidencia: "Es la recomendación del Banco de España, que considera que los flujos migratorios por sí solos no resolverán los desajustes del mercado laboral ni de las pensiones."
+    fuentes:
+      - medio: "elDiario.es"
+        titulo: "El Banco de España quiere que trabajes más años y que se sumen inmigrantes al mercado laboral"
+        url: "https://www.eldiario.es/economia/banco-espana-quiere-trabajes-anos-sumen-inmigrantes-mercado-laboral_1_11309464.html"
+        tipo: prensa
+nota_revision: "Primera pasada. El Ministerio del Interior no permite la consulta automática de sus informes quincenales: las cifras de llegadas se toman de prensa que cita esos informes y deben contrastarse con el original."

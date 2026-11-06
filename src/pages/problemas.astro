@@ -1,0 +1,319 @@
+---
+import Base from '../layouts/Base.astro';
+import ListaFuentes from '../components/ListaFuentes.astro';
+import { cargarProblemas, fecha } from '../lib/ui';
+import type { Problema } from '../lib/modelo';
+
+const { problemas, temas } = await cargarProblemas();
+
+/** Mismos bloques, en el mismo orden y con la misma introducción, para todos los problemas. */
+const columnasDe = (p: Problema) => [
+  {
+    clave: 'balance',
+    titulo: 'Lo que juega a favor y en contra',
+    intro: 'Aspectos de la situación actual que la alivian y que la agravan, con sus fuentes. No es una valoración de esta web.',
+    columnas: [
+      { clave: 'a-favor', titulo: 'A favor', hechos: p.data.a_favor, vacio: 'No se han documentado aspectos favorables con fuentes.' },
+      { clave: 'en-contra', titulo: 'En contra', hechos: p.data.en_contra, vacio: 'Pendiente de documentar con fuentes.' },
+    ],
+  },
+];
+
+const ultima = fecha(new Date(Math.max(...problemas.map((p) => p.data.revisado.getTime()))), true);
+---
+
+<Base
+  titulo="Problemas de actualidad · Elecciones 29-N-2026"
+  descripcion="Vivienda, inmigración, seguridad, corrupción e infraestructuras: cómo se ha llegado hasta aquí, cifras actuales, lo que juega a favor y en contra, contexto internacional y medidas debatidas, con fuentes."
+>
+  <div class="contenedor">
+    <div class="prosa intro">
+      <h1>Problemas de actualidad</h1>
+      <p class="entradilla">Cinco asuntos que marcan estas elecciones, con datos y fuentes.</p>
+      <p>
+        Vivienda e inmigración son las dos primeras preocupaciones en los barómetros del CIS de 2026. Seguridad,
+        corrupción e infraestructuras se incluyen por su peso en el debate de campaña y por lo ocurrido en 2025 y 2026.
+        El orden no indica importancia.
+      </p>
+      <p>
+        Cada problema sigue la misma estructura: <strong>cómo se ha llegado hasta aquí</strong>, <strong>cifras</strong>
+        de la situación actual, lo que juega <strong>a favor y en contra</strong>, el <strong>contexto internacional</strong>
+        y algunas <strong>medidas</strong> que se debaten.
+      </p>
+      <p>
+        Las medidas no se atribuyen a ningún partido ni son una recomendación de esta web: se describen con lo que se sabe
+        de sus resultados, incluidos sus límites y efectos no deseados. Para ver qué propone cada partido, sigue el enlace
+        al comparador de cada tema.
+      </p>
+      <p>
+        Es una primera pasada. Cada dato lleva su fuente, con el tipo a la vista; cuando una cifra procede de prensa que
+        cita un documento oficial, se indica en la nota de revisión. Última revisión:
+        <time datetime={ultima.iso}>{ultima.texto}</time>.
+      </p>
+    </div>
+
+    <nav aria-label="Problemas" class="saltos-nav">
+      <ul class="saltos">
+        {problemas.map((p) => <li><a href={`#${p.id}`}>{p.data.nombre}</a></li>)}
+      </ul>
+    </nav>
+
+    {
+      problemas.map((p) => (
+        <section class="problema" id={p.id} aria-labelledby={`${p.id}-titulo`}>
+          <header>
+            <h2 id={`${p.id}-titulo`}>{p.data.nombre}</h2>
+          </header>
+          <p class="resumen">{p.data.resumen}</p>
+          <p class="enlaces">
+            {p.data.tema && (
+              <a href={`/#${p.data.tema.id}`}>
+                Qué proponen los partidos sobre {temas.get(p.data.tema.id)?.data.nombre.toLowerCase() ?? p.data.tema.id}
+              </a>
+            )}
+            {p.id === 'corrupcion' && <a href="/historia#corrupcion">Casos con sentencia firme desde 2000</a>}
+          </p>
+          {p.data.nota_revision && <p class="aviso">{p.data.nota_revision}</p>}
+
+          <section class="grupo" aria-labelledby={`${p.id}-recorrido`}>
+            <h3 class="grupo-titulo" id={`${p.id}-recorrido`}>Cómo hemos llegado hasta aquí</h3>
+            <ol class="hechos recorrido">
+              {p.data.recorrido.map((h) => (
+                <li>
+                  <article>
+                    <h4>{h.titulo}</h4>
+                    <p>{h.descripcion}</p>
+                    <ListaFuentes fuentes={h.fuentes} />
+                  </article>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section class="grupo" aria-labelledby={`${p.id}-cifras`}>
+            <h3 class="grupo-titulo" id={`${p.id}-cifras`}>La situación en cifras</h3>
+            <ul class="cifras">
+              {p.data.cifras.map((c) => (
+                <li>
+                  <article>
+                    <p class="cifra-indicador">{c.indicador}</p>
+                    <p class="cifra-valor">{c.valor}</p>
+                    {c.detalle && <p class="cifra-detalle">{c.detalle}</p>}
+                    <ListaFuentes fuentes={c.fuentes} />
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {columnasDe(p).map((grupo) => (
+            <section class="grupo" aria-labelledby={`${p.id}-${grupo.clave}`}>
+              <h3 class="grupo-titulo" id={`${p.id}-${grupo.clave}`}>{grupo.titulo}</h3>
+              <p class="grupo-intro">{grupo.intro}</p>
+              <div class="columnas">
+                {grupo.columnas.map((col) => (
+                  <section aria-labelledby={`${p.id}-${col.clave}`}>
+                    <h4 class="col-titulo" id={`${p.id}-${col.clave}`}>{col.titulo}</h4>
+                    {col.hechos.length === 0 ? (
+                      <p class="vacio">{col.vacio}</p>
+                    ) : (
+                      <ul class="hechos">
+                        {col.hechos.map((h) => (
+                          <li>
+                            <article>
+                              <h5>{h.titulo}</h5>
+                              <p>{h.descripcion}</p>
+                              <ListaFuentes fuentes={h.fuentes} />
+                            </article>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </section>
+                ))}
+              </div>
+            </section>
+          ))}
+
+          {p.data.internacional.length > 0 && (
+            <section class="grupo" aria-labelledby={`${p.id}-internacional`}>
+              <h3 class="grupo-titulo" id={`${p.id}-internacional`}>Contexto internacional</h3>
+              <ul class="hechos">
+                {p.data.internacional.map((h) => (
+                  <li>
+                    <article>
+                      <h4>{h.titulo}</h4>
+                      <p>{h.descripcion}</p>
+                      <ListaFuentes fuentes={h.fuentes} />
+                    </article>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          <section class="grupo" aria-labelledby={`${p.id}-medidas`}>
+            <h3 class="grupo-titulo" id={`${p.id}-medidas`}>Medidas que se debaten</h3>
+            <p class="grupo-intro">
+              Opciones planteadas por organismos, expertos o aplicadas en otros lugares, no necesariamente por un partido.
+              Se incluye lo que se sabe de sus resultados, a favor y en contra.
+            </p>
+            <ul class="hechos">
+              {p.data.medidas.map((m) => (
+                <li>
+                  <article>
+                    <h4>{m.titulo}</h4>
+                    <p>{m.descripcion}</p>
+                    {m.donde && <p><strong>Dónde se ha aplicado:</strong> {m.donde}</p>}
+                    <p><strong>Qué se sabe:</strong> {m.evidencia}</p>
+                    <ListaFuentes fuentes={m.fuentes} />
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </section>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  .intro {
+    margin-bottom: var(--space-6);
+  }
+
+  .saltos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+    padding: 0;
+    margin-bottom: var(--space-6);
+    list-style: none;
+  }
+
+  .problema {
+    padding-block: var(--space-6);
+    border-top: 1px solid var(--border-strong);
+    scroll-margin-top: var(--space-4);
+  }
+
+  .problema > header {
+    margin-bottom: var(--space-3);
+  }
+
+  h2 {
+    font-size: var(--step-2);
+  }
+
+  h4,
+  .hechos h5 {
+    font-size: 1.0625rem;
+    font-family: var(--font-display);
+    line-height: 1.3;
+  }
+
+  .resumen {
+    max-width: var(--measure);
+  }
+
+  .enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-5);
+    margin-top: var(--space-3);
+  }
+
+  .aviso {
+    max-width: var(--measure);
+    margin-top: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    border-left: 3px solid var(--parcial);
+    color: var(--parcial);
+    font-size: var(--step--1);
+  }
+
+  .grupo {
+    margin-top: var(--space-6);
+  }
+
+  .grupo-titulo {
+    font-size: var(--step-1);
+    margin-bottom: var(--space-3);
+  }
+
+  .grupo-intro {
+    max-width: var(--measure);
+    margin-bottom: var(--space-4);
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+
+  .col-titulo {
+    margin-bottom: var(--space-3);
+    font-size: var(--step-0);
+  }
+
+  .columnas {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 64rem) {
+    .columnas {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .hechos,
+  .cifras {
+    display: grid;
+    gap: var(--space-4);
+    padding: 0;
+    list-style: none;
+  }
+
+  .cifras {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  }
+
+  .hechos article,
+  .cifras article {
+    display: grid;
+    align-content: start;
+    gap: var(--space-2);
+    height: 100%;
+    padding: var(--space-4) var(--space-5);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .cifra-indicador {
+    color: var(--muted);
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .cifra-valor {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .cifra-detalle {
+    font-size: 0.9375rem;
+  }
+
+  .vacio {
+    color: var(--pendiente);
+  }
+
+  @media (max-width: 40rem) {
+    .hechos article,
+    .cifras article {
+      padding: var(--space-3);
+    }
+  }
+</style>

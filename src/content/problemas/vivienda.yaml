@@ -1,0 +1,158 @@
+nombre: Vivienda
+orden: 1
+tema: vivienda
+resumen: "Es el primer problema para los españoles en los barómetros del CIS de 2026. Los precios de compra y alquiler suben más deprisa que los salarios, se construyen menos viviendas de las que se forman hogares y el parque de alquiler social es de los más pequeños de Europa."
+revisado: 2026-11-03
+recorrido:
+  - titulo: "La burbuja y su estallido (1997-2013)"
+    descripcion: "Entre finales de los noventa y 2007 se construyó a un ritmo muy superior al de la formación de hogares, con crédito abundante. Tras la crisis financiera de 2008 la construcción residencial se desplomó y tardó más de una década en recuperarse, de modo que durante años apenas se añadió oferta nueva."
+    fuentes:
+      - medio: "Banco de España"
+        titulo: "El mercado de la vivienda residencial en España: evolución reciente, riesgos y problemas de accesibilidad (Documento Ocasional 2433)"
+        url: "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesSeriadas/DocumentosOcasionales/24/Fich/do2433.pdf"
+        tipo: institucion
+  - titulo: "Recuperación de la demanda sin recuperación de la oferta (2014-2025)"
+    descripcion: "La población y el número de hogares han crecido con fuerza, sobre todo por la inmigración, mientras la construcción ha seguido muy por debajo de los niveles previos a 2008. Según el Banco de España, la diferencia acumulada entre viviendas terminadas y hogares creados desde 2021 ronda las 750.000 viviendas."
+    fuentes:
+      - medio: "Banco de España"
+        titulo: "Presentación del Informe Anual 2025"
+        url: "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/25/Fich/IIPP-2026-06-18-lopez-salido-es-or.pdf"
+        tipo: institucion
+        fecha: 2026-06-18
+  - titulo: "Ley de vivienda de 2023 y zonas tensionadas"
+    descripcion: "La Ley 12/2023 permite declarar zonas de mercado residencial tensionado, donde se limita la renta de los nuevos contratos con un índice de referencia y se imponen obligaciones adicionales a los grandes tenedores. Cataluña fue la primera comunidad en aplicarla, desde marzo de 2024."
+    fuentes:
+      - medio: "BOE"
+        titulo: "Ley 12/2023, de 24 de mayo, por el derecho a la vivienda"
+        url: "https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203"
+        tipo: institucion
+        fecha: 2023-05-25
+      - medio: "BOE"
+        titulo: "Resolución por la que se publica la declaración de zonas de mercado residencial tensionado en Cataluña (marzo de 2024)"
+        url: "https://boe.es/boe/dias/2024/03/15/pdfs/BOE-A-2024-5214.pdf"
+        tipo: institucion
+        fecha: 2024-03-15
+cifras:
+  - indicador: "Precio de la vivienda"
+    valor: "+12,2 % interanual"
+    detalle: "Índice de Precios de Vivienda del INE, segundo trimestre de 2026. Vivienda nueva +7,4 %; segunda mano +12,9 %. Suben en todas las comunidades."
+    fuentes:
+      - medio: "INE"
+        titulo: "Índice de Precios de Vivienda (IPV). Segundo trimestre de 2026"
+        url: "https://www.ine.es/dyngs/Prensa/IPV2T26.htm"
+        tipo: institucion
+        fecha: 2026-09-07
+  - indicador: "Déficit acumulado de vivienda"
+    valor: "≈ 750.000 viviendas (2021-2025)"
+    detalle: "Diferencia entre viviendas terminadas y creación neta de hogares. En 2025 se terminaron unas 92.000 viviendas y se formaron unos 240.000 hogares."
+    fuentes:
+      - medio: "Banco de España"
+        titulo: "Presentación del Informe Anual 2025"
+        url: "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/25/Fich/IIPP-2026-06-18-lopez-salido-es-or.pdf"
+        tipo: institucion
+        fecha: 2026-06-18
+      - medio: "elDiario.es"
+        titulo: "El Banco de España eleva a 750.000 las viviendas que faltan y avisa de que irá a peor"
+        url: "https://www.eldiario.es/economia/banco-espana-eleva-750-000-viviendas-faltan-anticipa-deficit-agravara-proximos-anos_1_13313634.html"
+        tipo: prensa
+        fecha: 2026-06-18
+  - indicador: "Alquiler social"
+    valor: "1,1 % de las viviendas"
+    detalle: "Según la OCDE (datos de 2022 o último año disponible), el 1,1 % frente al 34,1 % de Países Bajos. Las cifras varían según la definición."
+    fuentes:
+      - medio: "Maldita.es"
+        titulo: "La UE recomienda a España reforzar sus políticas de vivienda: a junio de 2025 el Gobierno ha gastado la mitad de los fondos europeos asignados para ello del periodo 2014-2020"
+        url: "https://maldita.es/malditateexplica/20250613/fondos-europeos-espana-vivienda/"
+        tipo: prensa
+        fecha: 2025-06-13
+      - medio: "elDiario.es"
+        titulo: "España, cuarto país de la OCDE con menos viviendas de alquiler social"
+        url: "https://www.eldiario.es/economia/espana-cuarto-pais-ocde-viviendas-alquiler-social_1_8378235.html"
+        tipo: prensa
+  - indicador: "Edad media de emancipación"
+    valor: "30,0 años"
+    detalle: "Eurostat, 2024. Entre las cinco más altas de la UE; la media europea está en torno a 26 años."
+    fuentes:
+      - medio: "Eurostat"
+        titulo: "When do young people in the EU leave home?"
+        url: "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20250923-1"
+        tipo: institucion
+        fecha: 2025-09-23
+a_favor:
+  - titulo: "No es una burbuja de crédito como la de 2007"
+    descripcion: "El Banco de España descarta por ahora una burbuja similar a la de 2008: el crédito hipotecario crece un 3,7 % al año, los préstamos equivalen a algo más del 80 % del precio de la vivienda (cerca del 110 % antes de 2008), el endeudamiento de los hogares está contenido y considera acotado el riesgo inmobiliario para la estabilidad financiera. Para los propietarios, la subida de precios aumenta el valor de su patrimonio."
+    fuentes:
+      - medio: "El Español"
+        titulo: "El Banco de España no teme una burbuja en vivienda: los precios están aún un 15% por debajo de la crisis de 2008"
+        url: "https://www.elespanol.com/invertia/empresas/banca/20260514/banco-espana-no-teme-burbuja-vivienda-precios-debajo-crisis/1003744245907_0.html"
+        tipo: prensa
+        fecha: 2026-05-14
+en_contra:
+  - titulo: "El problema de acceso se concentra en jóvenes, rentas bajas y nacidos fuera"
+    descripcion: "Según el Banco de España, las dificultades de acceso se concentran en las grandes áreas urbanas y en los grupos de menor renta, en especial jóvenes y residentes nacidos en el extranjero. Señala como freno a la construcción la escasez de suelo finalista, la lentitud en la ejecución y las limitaciones del planeamiento."
+    fuentes:
+      - medio: "Banco de España"
+        titulo: "Informe Anual 2025. Informe en breve"
+        url: "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/25/InfAnual_2025_Breve.pdf"
+        tipo: institucion
+        fecha: 2026-06-18
+  - titulo: "Compras de no residentes"
+    descripcion: "Entre 2021 y 2025 los compradores no residentes adquirieron de media unas 50.000 viviendas al año, el 7,4 % del total, según el Banco de España."
+    fuentes:
+      - medio: "Euronews"
+        titulo: "El Banco de España señala un déficit de 750.000 viviendas"
+        url: "https://es.euronews.com/business/2026/06/18/el-banco-de-espana-senala-un-deficit-de-750000"
+        tipo: prensa
+        fecha: 2026-06-18
+internacional:
+  - titulo: "Un problema compartido en Europa"
+    descripcion: "El Banco de España compara el déficit español (en torno al 3,9 % de los hogares) con el de otros países: Portugal y Países Bajos tienen un desfase relativo mayor; Italia, Francia y Alemania, menor."
+    fuentes:
+      - medio: "Banco de España"
+        titulo: "Presentación del Informe Anual 2025"
+        url: "https://www.bde.es/f/webbe/SES/Secciones/Publicaciones/PublicacionesAnuales/InformesAnuales/25/Fich/IIPP-2026-06-18-lopez-salido-es-or.pdf"
+        tipo: institucion
+        fecha: 2026-06-18
+medidas:
+  - titulo: "Ampliar un parque público de alquiler a largo plazo"
+    descripcion: "Construir o adquirir vivienda que se mantenga en alquiler asequible de forma permanente, en lugar de venderse protegida y salir del régimen al cabo de unos años."
+    donde: "Viena: unas 220.000 viviendas municipales y unas 200.000 cooperativas subvencionadas; alrededor de la mitad de los vieneses vive en vivienda subvencionada."
+    evidencia: "Viena mantiene alquileres más bajos que otras capitales europeas, pero es un parque creado durante un siglo. Se le critica que favorece sobre todo a la clase media y que deja fuera a parte de los más pobres."
+    fuentes:
+      - medio: "Ayuntamiento de Viena"
+        titulo: "The Vienna model"
+        url: "https://socialhousing.wien/policy/the-vienna-model"
+        tipo: institucion
+      - medio: "Ara"
+        titulo: "La modélica política de vivienda de Viena deja fuera a los pobres"
+        url: "https://es.ara.cat/economia/inmobiliario/modelica-politica-vivienda-viena-deja-fuera-pobres_1_5110324.html"
+        tipo: prensa
+  - titulo: "Más suelo y más densidad"
+    descripcion: "Recalificar suelo y permitir edificar más alturas o más viviendas por parcela en zonas con demanda, y acortar los plazos de planeamiento y licencias."
+    donde: "Auckland (Nueva Zelanda) amplió la edificabilidad residencial en 2016."
+    evidencia: "Un estudio de la Universidad de Auckland estima que, sin la reforma, el alquiler de las viviendas de tres dormitorios sería entre un 22 % y un 35 % más alto. Hay críticas a su metodología, y el efecto tarda años en notarse."
+    fuentes:
+      - medio: "Universidad de Auckland"
+        titulo: "Greenaway-McGrevy, R. Can Zoning Reform Reduce Housing Costs? Evidence from Rents in Auckland (WP016)"
+        url: "https://cdn.auckland.ac.nz/assets/business/about/our-research/research-institutes-and-centres/Economic-Policy-Centre--EPC-/WP016.pdf"
+        tipo: estudio
+        fecha: 2023-05-01
+      - medio: "Royal Society Te Apārangi"
+        titulo: "Will upzoning deliver housing affordability for everyone? Evidence from Auckland"
+        url: "https://www.royalsociety.org.nz/research/will-upzoning-deliver-housing-affordability-for-everyone-evidence-from-auckland"
+        tipo: estudio
+  - titulo: "Limitar el precio del alquiler"
+    descripcion: "Topar la renta de los nuevos contratos en zonas tensionadas con un índice de referencia."
+    donde: "Cataluña desde 2024; Berlín entre 2020 y 2021."
+    evidencia: "En Cataluña el precio medio de los nuevos contratos bajó en 2024 y a principios de 2025 y volvió a subir en el tercer trimestre de 2025; se firmaron 34.496 contratos en el primer trimestre de 2024 y 26.962 en el tercero de 2025. En Berlín el Tribunal Constitucional anuló la ley en 2021 por falta de competencia; un estudio del instituto IW halló que la oferta de pisos en alquiler cayó con fuerza mientras estuvo en vigor."
+    fuentes:
+      - medio: "Ara"
+        titulo: "El precio del alquiler repuntó en el tercer trimestre de 2025"
+        url: "https://es.ara.cat/economia/inmobiliario/escalada-precio-alquiler-frena-cae-numero-contratos_1_5656106.html"
+        tipo: prensa
+        fecha: 2026-02-22
+      - medio: "IW Köln"
+        titulo: "Sagner, P. y Voigtländer, M. Supply side effects of the Berlin rent freeze"
+        url: "https://iwkoeln.de/en/studies/pekka-sagner-michael-voigtlaender-supply-side-effects-of-the-berlin-rent-freeze-eng.html"
+        tipo: estudio
+nota_revision: "Primera pasada. Las cifras de vivienda social varían mucho según la definición; conviene contrastarlas con la base de datos de la OCDE."
