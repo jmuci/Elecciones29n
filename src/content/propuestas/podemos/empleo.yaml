@@ -3,11 +3,20 @@
 partido: podemos
 tema: empleo
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-05
 propuestas:
   - subtema: SMI
     resumen: Propone mejorar los salarios y, en particular, aumentar el salario mínimo.
     fuente: podemos-documento-politico-v-asamblea
     pagina: 37
+  - subtema: SMI
+    resumen: Propone fijar por ley un salario mínimo de 1.800 euros.
+    fuente: podemos-web-paz-casa-trabajo
+    pagina: "Medida 04"
+  - subtema: jornada
+    resumen: Propone una jornada laboral de 30 horas semanales.
+    fuente: podemos-web-paz-casa-trabajo
+    pagina: "Medida 04"
 fuentes_revisadas:
   - podemos-documento-politico-v-asamblea
+  - podemos-web-paz-casa-trabajo
