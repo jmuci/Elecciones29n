@@ -2,7 +2,7 @@
 partido: frente-amplio
 tema: vivienda
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-08
 propuestas:
   - subtema: vivienda pública
     resumen: >-
@@ -10,5 +10,19 @@ propuestas:
       asequible para ampliar el parque público, con protección permanente.
     fuente: frente-amplio-nota-impuesto-acumulacion-vivienda
     pagina: último párrafo
+  - subtema: compra y propiedad
+    resumen: >-
+      Propone una ley que expropie, por fases, las viviendas de grandes propietarios corporativos:
+      primero los de más de 1.000, después los de más de 700 y por último las empresas con más de 50
+      inmuebles. Deja fuera a familias y particulares.
+    fuente: frente-amplio-nota-expropiacion-vivienda-corporativa
+    pagina: apartado «Expropiación por fases»
+  - subtema: vivienda pública
+    resumen: >-
+      Propone integrar en el parque público de vivienda todas las fincas urbanas y suelos
+      residenciales de la Sareb.
+    fuente: frente-amplio-nota-expropiacion-vivienda-corporativa
+    pagina: apartado «La SAREB, al parque público»
 fuentes_revisadas:
   - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-nota-expropiacion-vivienda-corporativa
