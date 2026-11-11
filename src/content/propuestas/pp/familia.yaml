@@ -1,21 +1,45 @@
-# Fase 4: no hay programa electoral publicado; se resumen dos argumentarios "Hablemos Claro".
-# El Contrato con España no incluye medidas de familia (sí de protección de menores en redes, p. 3).
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: familia
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
   - subtema: ayudas por hijo
     resumen: >-
-      Plantea, dentro de su bajada de impuestos a las familias, una ayuda adicional para las familias
-      con hijos.
-    fuente: pp-argumentario-espana-de-currantes
-    pagina: 1
-  - subtema: ayudas por hijo
-    resumen: Propone bajar el IRPF, especialmente a las familias con hijos.
-    fuente: pp-argumentario-menos-impuestos
-    pagina: 1
+      Prevé actualizar con la inflación todos los mínimos familiares y refundir las deducciones
+      familiares del IRPF en una sola, reembolsable y con abono mensual, que llegue también a las
+      familias sin cuota suficiente en el IRPF.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 56
+  - subtema: permisos
+    resumen: >-
+      Se compromete a seguir ampliando, con el diálogo social, los permisos por nacimiento de cada
+      progenitor y a dar más libertad para decidir cómo y cuándo disfrutar del resto del permiso.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 56
+  - subtema: conciliación
+    resumen: >-
+      Plantea extender los bancos de horas para que los trabajadores con hijos o personas dependientes
+      adapten parte de su jornada, y facilitar horarios flexibles y teletrabajo cuando el puesto lo
+      permita.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 57
+  - subtema: conciliación
+    resumen: >-
+      Propone incentivos para las empresas por los trabajadores con hijos pequeños, y bonificar al 100
+      % durante dos años la cuota de los autónomos que vuelvan a su actividad tras el permiso.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 56
+  - resumen: >-
+      Plantea orientación e información, prevención de problemas de fertilidad, congelación de óvulos
+      para mujeres jóvenes y mejor acceso a la reproducción asistida en el Sistema Nacional de Salud.
+      Prevé que el concebido no nacido compute para determinar las ayudas y beneficios de la familia.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 56
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-espana-de-currantes
   - pp-argumentario-menos-impuestos

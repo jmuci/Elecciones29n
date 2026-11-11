@@ -2,10 +2,10 @@ tema: empleo
 orden: 2
 pregunta: ¿Qué debería primar en la política de empleo?
 opciones:
-  - texto: Que el subsidio de desempleo no compita con el empleo y que trabajar compense más que no hacerlo.
+  - texto: Que las empresas con plantillas más estables coticen menos por desempleo.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 3 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 59 }
   - texto: Incentivos y bonificaciones fiscales a la contratación de trabajadores españoles.
     partidos:
       - { partido: vox, fuente: vox-programa-economico-vivienda, pagina: 44 }
-revisado: 2026-11-02
+revisado: 2026-11-11

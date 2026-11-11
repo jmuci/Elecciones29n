@@ -6,10 +6,10 @@ opciones:
     partidos:
       - { partido: psoe, fuente: psoe-nota-aborto-constitucion-granada, pagina: primer párrafo }
   - texto: >-
-      Combatir la violencia contra las mujeres con más recursos y autoridad para las Fuerzas y Cuerpos de
-      Seguridad del Estado.
+      Combatir la violencia de género con dispositivos de alejamiento fiables, bajo el Ministerio del Interior,
+      e integrando los servicios asistenciales en VioGen.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 3 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 19 }
   - texto: >-
       Desplegar todos los recursos del Pacto de Estado contra la Violencia de Género y aplicar todas las medidas
       de la ley «solo sí es sí».
@@ -18,4 +18,4 @@ opciones:
   - texto: Prohibir el burka y el niqab en los espacios públicos.
     partidos:
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
-revisado: 2026-11-02
+revisado: 2026-11-11

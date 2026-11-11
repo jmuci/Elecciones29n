@@ -7,13 +7,13 @@ opciones:
       de por vida.
     partidos:
       - { partido: democracia-21, fuente: democracia-21-espana-limpia, pagina: 7 }
-  - texto: Que todo cargo político responda por la corrupción de sus subordinados.
+  - texto: Restablecer las penas por malversación y crear un sistema de trazabilidad digital de los fondos públicos.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 2 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 34 }
   - texto: Que quienes cometan delitos de corrupción devuelvan todo lo sustraído.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 22 }
   - texto: Eliminar las subvenciones a partidos, sindicatos y patronales, entre otros.
     partidos:
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 4 }
-revisado: 2026-11-02
+revisado: 2026-11-11

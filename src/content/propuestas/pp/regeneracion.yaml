@@ -1,38 +1,48 @@
-# Fase 4: no hay programa electoral publicado; se resume el Contrato con España. El argumentario
-# "La revolución de la decencia" (27-oct, pp.es/actualidad/documentos/) repite estos compromisos
-# (auditoría de cuentas, presupuestos, independencia judicial) sin añadir medidas.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: regeneracion
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
-  - subtema: [justicia, independencia de órganos]
+  - subtema: justicia
     resumen: >-
-      Se compromete a que los jueces elijan a los jueces y a que el Gobierno no los cuestione.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+      Propone que los jueces y magistrados elijan a los doce vocales judiciales del Consejo General
+      del Poder Judicial, mantener la evaluación pública de méritos de los ocho juristas designados
+      por las Cortes y extender a todos los vocales la incompatibilidad por haber ocupado cargos
+      políticos en los cinco años anteriores.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 32
   - subtema: independencia de órganos
     resumen: >-
-      Propone que los órganos reguladores, el Tribunal Constitucional y la Fiscalía General del
-      Estado estén dirigidos por personas independientes.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+      Plantea un nuevo Estatuto del Ministerio Fiscal, con un fiscal general de mandato único de cinco
+      años que no cese con el Gobierno que lo propuso y con un informe vinculante del CGPJ sobre su
+      idoneidad.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 31
+  - subtema: justicia
+    resumen: >-
+      Se compromete a derogar la Ley de Amnistía, a prohibir que el derecho de gracia sirva como
+      contraprestación política y a aprobar una nueva Ley del Indulto con criterios objetivos que
+      excluya, entre otros, a los condenados por corrupción y terrorismo.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 29
   - resumen: >-
-      Se compromete a presentar presupuestos cada año y a convocar elecciones de forma obligatoria si
-      el Gobierno acumula más de una prórroga.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+      Se compromete a presentar presupuestos cada año y a promover una reforma para que una segunda
+      prórroga presupuestaria consecutiva disuelva las Cortes y convoque elecciones.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 30
   - subtema: corrupción
     resumen: >-
-      Propone auditar el gasto y reducir ministerios, altos cargos y asesores, con atención especial
-      a las áreas afectadas por causas judiciales y a los nombramientos indebidos.
-    fuente: pp-contrato-con-espana
-    pagina: 2
-  - subtema: corrupción
-    resumen: Plantea que todo cargo político responda por la corrupción de sus subordinados.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+      Prevé restablecer las penas por malversación, reforzar la Oficina de Recuperación y Gestión de
+      Activos y crear un sistema único de trazabilidad digital de contratos, subvenciones y grandes
+      transferencias de fondos públicos que identifique a los beneficiarios reales de las empresas
+      adjudicatarias.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 34
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-nueva-generacion-propietarios
   - pp-argumentario-menos-impuestos

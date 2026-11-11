@@ -5,13 +5,11 @@ opciones:
   - texto: Proteger en la Constitución las pensiones y su revalorización conforme al IPC.
     partidos:
       - { partido: psoe, fuente: psoe-nota-pensiones-constitucion-gijon, pagina: 1.er párrafo }
-  - texto: >-
-      Actualizarlas conforme al IPC y acordar su futuro en el Pacto de Toledo, con los partidos y los agentes
-      sociales.
+  - texto: Actualizarlas cada año con el IPC y reconstruir el Pacto de Toledo como compromiso de Estado.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 3 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "42-43" }
   - texto: Que ninguna pensión quede por debajo del salario mínimo.
     partidos:
       - { partido: frente-amplio, fuente: frente-amplio-nota-pensiones-minimas-jubilacion-65, pagina: Salario mínimo = pensión mínima }
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 37 }
-revisado: 2026-11-02
+revisado: 2026-11-11

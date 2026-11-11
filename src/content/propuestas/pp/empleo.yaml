@@ -1,25 +1,42 @@
-# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y el argumentario
-# del 24-oct. Revisados todos los "Hablemos Claro" de pp.es/actualidad/documentos/ desde el 30-sep.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: empleo
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
-  - resumen: >-
-      Fija como objetivo económico que suba el salario medio, para lo que considera imprescindible
-      aumentar la productividad.
-    fuente: pp-contrato-con-espana
-    pagina: 3
-  - subtema: desempleo
-    resumen: >-
-      Plantea que el subsidio no compita con el empleo y que trabajar compense más que no hacerlo.
-    fuente: pp-contrato-con-espana
-    pagina: 3
   - subtema: SMI
-    resumen: Propone aprobar una ley para que el salario mínimo interprofesional quede exento de IRPF.
-    fuente: pp-argumentario-donde-esta-el-dinero
-    pagina: 1
+    resumen: >-
+      Prevé que quien cobre el salario mínimo no pague IRPF, con un umbral que suba por ley cada vez
+      que suba el SMI.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 60
+  - subtema: contratación
+    resumen: >-
+      Plantea que las empresas con plantillas más estables que la media de su sector coticen menos por
+      desempleo, y publicar cada mes cuántos fijos discontinuos no están trabajando.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 59
+  - resumen: >-
+      Prevé que los nuevos autónomos no paguen cuota a la Seguridad Social durante el primer año, ni
+      durante el segundo si sus ingresos no llegan al salario mínimo.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 59
+  - resumen: >-
+      Propone un cheque de formación para cada trabajador, que conservaría aunque cambie de empresa,
+      financiado con las cuotas de formación que ya pagan empresas y trabajadores.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 58
+  - subtema: jornada
+    resumen: >-
+      Plantea extender los bancos de horas para que los trabajadores con hijos o personas dependientes
+      a cargo adapten parte de su jornada, y facilitar horarios flexibles de entrada y salida y el
+      teletrabajo cuando el puesto lo permita.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 57
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-donde-esta-el-dinero
   - pp-argumentario-espana-de-currantes

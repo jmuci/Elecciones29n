@@ -2,13 +2,15 @@ tema: seguridad-justicia
 orden: 1
 pregunta: ¿Qué enfoque de seguridad prefieres?
 opciones:
-  - texto: Más recursos, reconocimiento y autoridad para las Fuerzas y Cuerpos de Seguridad del Estado.
+  - texto: >-
+      Reconocer a la Policía Nacional y la Guardia Civil como profesiones de riesgo, con equiparación salarial y
+      protección jurídica.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 3 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 20 }
   - texto: Deportar a quienes cometan delitos graves o delitos leves de forma habitual.
     partidos:
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 5 }
   - texto: Poner bajo control democrático a los cuerpos del Estado que tienen el monopolio del uso de la fuerza.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 40 }
-revisado: 2026-11-02
+revisado: 2026-11-11

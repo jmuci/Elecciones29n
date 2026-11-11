@@ -1,35 +1,45 @@
-# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y el artículo de
-# pp.es sobre las declaraciones del vicesecretario de Educación e Igualdad (22-oct-2026).
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: educacion
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
   - resumen: >-
-      Propone una educación que premie el esfuerzo, con más exigencia y más autoridad del docente.
-    fuente: pp-contrato-con-espana
-    pagina: 3
+      Plantea acordar con docentes, inspectores, expertos y familias un nuevo marco educativo que
+      sustituya a la LOMLOE, con refuerzo específico en el mismo curso para el alumnado con
+      dificultades de lectura y cálculo.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 67
+  - subtema: 0–3 años
+    resumen: >-
+      Propone que el Estado y las comunidades autónomas financien a partes iguales cada plaza pública
+      o concertada de cero a tres años, de modo que la etapa sea gratuita para las familias que la
+      soliciten al terminar la legislatura.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 57
   - resumen: >-
-      Plantea que los contenidos educativos los elaboren las reales academias, siguiendo el ejemplo
-      de los países con mejores resultados, y eliminar de las aulas lo que califica de
-      "adoctrinamiento".
-    fuente: pp-contrato-con-espana
-    pagina: 3
-  - resumen: >-
-      Se compromete a garantizar la enseñanza del castellano en toda España y la de las lenguas
-      cooficiales en sus comunidades autónomas.
-    fuente: pp-contrato-con-espana
-    pagina: 3
-  - resumen: >-
-      Propone prohibir el acceso a las redes sociales a los menores de 14 años y reducir la carga
-      burocrática del profesorado.
-    fuente: pp-nota-de-los-santos-pacto-educacion
-    pagina: "punto 6"
-  - resumen: >-
-      Plantea un pacto de país por la educación en el que participen docentes, equipos directivos,
-      inspección educativa, pedagogos y familias.
-    fuente: pp-nota-de-los-santos-pacto-educacion
-    pagina: "punto 1"
+      Prevé que las familias puedan elegir centro en todo el municipio y que no se elimine ningún
+      concierto donde haya demanda suficiente, con conciertos de al menos seis años y módulos que
+      cubran el coste real.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 67
+  - subtema: FP
+    resumen: >-
+      Propone ampliar con las comunidades autónomas las plazas de FP en los ciclos que más empleo
+      generan, guiadas por un Mapa Nacional de la FP, y que la FP dual tenga las mismas reglas en toda
+      España.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 68
+  - subtema: [becas, FP]
+    resumen: >-
+      Plantea que la beca sea un derecho por ley para quien la necesite y apruebe, con los mismos
+      umbrales en la universidad y en la FP, y matrícula gratuita en los ciclos de FP de alta demanda
+      de empleo.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 68
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-nota-de-los-santos-pacto-educacion

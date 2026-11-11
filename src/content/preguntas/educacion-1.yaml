@@ -2,9 +2,11 @@ tema: educacion
 orden: 1
 pregunta: ¿Qué debería primar en la política educativa?
 opciones:
-  - texto: Más exigencia y autoridad del docente, con una educación que premie el esfuerzo.
+  - texto: >-
+      Un nuevo marco educativo que sustituya a la LOMLOE, con refuerzo en el mismo curso para el alumnado con
+      dificultades de lectura y cálculo.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 3 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 67 }
   - texto: Más becas y una formación profesional de calidad para reducir el abandono escolar.
     partidos:
       - { partido: psoe, fuente: psoe-nota-tijeras-motosierras-zaragoza, pagina: párrafo 8 }
@@ -16,4 +18,4 @@ opciones:
   - texto: Igualar las oportunidades educativas de los alumnos y sacar la «ideología» de las aulas.
     partidos:
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
-revisado: 2026-11-02
+revisado: 2026-11-11

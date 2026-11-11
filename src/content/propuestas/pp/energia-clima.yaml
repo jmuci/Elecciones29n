@@ -1,16 +1,47 @@
-# Fase 4: no hay programa electoral publicado. El Contrato con España no trata la energía; la única
-# medida es la rebaja del IVA de la luz del argumentario de impuestos. Los argumentarios del 27-oct al
-# 2-nov (pp.es/actualidad/documentos/) mencionan la factura de la luz y el apagón, sin propuestas.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: energia-clima
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
+  - subtema: nuclear
+    resumen: >-
+      Prevé eliminar el calendario de cierre de las centrales de Almaraz, Ascó, Vandellós, Cofrentes y
+      Trillo y tramitar en los primeros cien días la extensión de su vida útil, con el visto bueno del
+      Consejo de Seguridad Nuclear. Plantea además una estrategia nacional de energía nuclear.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 71
+  - subtema: [nuclear, renovables]
+    resumen: >-
+      Propone que nuclear, renovables, almacenamiento y respaldo se complementen y que todas las
+      tecnologías compitan en igualdad en subastas, ayudas y regulación, y facilitar contratos de
+      electricidad a largo plazo.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 71
   - subtema: precio de la luz
-    resumen: Propone bajar el IVA de la luz.
-    fuente: pp-argumentario-menos-impuestos
-    pagina: 1
+    resumen: >-
+      Prevé eliminar de inmediato el impuesto del 7 % a la producción eléctrica, reducir la carga
+      fiscal del recibo de la luz y crear una Tarifa Social Única que sustituya a los actuales bonos
+      eléctrico y térmico.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "71-72"
+  - subtema: agua
+    resumen: >-
+      Propone un Pacto Nacional del Agua, dentro del Plan Nacional de Infraestructuras, con hasta
+      40.000 millones de euros de inversión hasta 2030 en regadíos, desalación, reutilización y
+      centrales hidroeléctricas reversibles.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 46
+  - resumen: >-
+      Plantea mantener la lucha contra el cambio climático y la descarbonización, pero revisar los
+      ritmos de cada sector según la evolución internacional, la tecnología disponible y la demanda, y
+      retirar las obligaciones que perjudiquen la competitividad, la industria o el empleo.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 72
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-nueva-generacion-propietarios
   - pp-argumentario-menos-impuestos

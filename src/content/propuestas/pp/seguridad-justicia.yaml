@@ -1,29 +1,47 @@
-# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y el argumentario
-# "La revolución de la decencia". Las notas de prensa de pp.es no se citan mientras haya documentos
-# del partido que traten el tema (mismo criterio que el piloto).
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: seguridad-justicia
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
+  - subtema: multirreincidencia
+    resumen: >-
+      Propone impulsar los juicios rápidos, facilitar la tramitación conjunta de delitos leves
+      relacionados y mejorar el acceso policial a los antecedentes, para dar una respuesta penal más
+      rápida a la multirreincidencia, en particular en hurtos y ocupación.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 17
   - subtema: policía
     resumen: >-
-      Se compromete a combatir la inseguridad en los barrios y, en especial, la violencia contra las
-      mujeres, con más recursos económicos y materiales, reconocimiento y autoridad para las Fuerzas y
-      Cuerpos de Seguridad del Estado.
-    fuente: pp-contrato-con-espana
-    pagina: 3
+      Plantea reconocer a la Policía Nacional y la Guardia Civil como profesiones de riesgo, culminar
+      la equiparación salarial y valorar la actuación de los agentes según la información y el nivel
+      de amenaza que conocían al intervenir.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 20
   - subtema: Código Penal
     resumen: >-
-      Propone recuperar la agravante para quien actúe con la cara tapada y endurecer las penas cuando
-      la violencia se convoque por redes sociales.
-    fuente: pp-argumentario-revolucion-decencia
-    pagina: 1
+      Prevé reformar el delito de desórdenes públicos para ampliar las conductas castigadas y
+      endurecer las penas por disturbios violentos, recuperar la agravante por actuar con el rostro
+      cubierto y aumentar la pena cuando se usen redes sociales para convocar o coordinar estos actos.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "17-18"
   - subtema: okupación penal
-    resumen: Se compromete a desalojar en 48 horas las viviendas ocupadas ilegalmente.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+    resumen: >-
+      Plantea reformas legales para luchar contra la ocupación, desalojar de inmediato y eliminar los
+      narcopisos, con presencia policial visible en los barrios y ayuda a los ayuntamientos para
+      financiar videovigilancia.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 19
+  - subtema: Código Penal
+    resumen: >-
+      Propone ampliar la prisión permanente revisable al asesino que oculte el cadáver o se niegue a
+      revelar dónde está, y a agresores sexuales, pederastas y violadores reincidentes.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 20
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-revolucion-decencia
   - pp-argumentario-nueva-generacion-propietarios

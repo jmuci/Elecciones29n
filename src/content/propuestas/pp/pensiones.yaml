@@ -1,23 +1,37 @@
-# Fase 4: no hay programa electoral publicado; se resume el Contrato con España. Los argumentarios
-# "Hablemos Claro" (p. ej. 2026-10-14) repiten la revalorización con el IPC sin añadir medidas.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: pensiones
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
   - subtema: revalorización
     resumen: >-
-      Se compromete a actualizar conforme al IPC las pensiones actuales y a garantizar lo mismo a los
-      más jóvenes.
-    fuente: pp-contrato-con-espana
-    pagina: 3
+      Se compromete a que las pensiones mantengan su poder adquisitivo y suban cada año con el IPC, y
+      a asegurar lo mismo a las pensiones futuras de los más jóvenes.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "42-43"
   - subtema: sostenibilidad
     resumen: >-
-      Plantea defender el pacto intergeneracional de las pensiones en el marco del Pacto de Toledo,
-      con los partidos políticos y los agentes sociales.
-    fuente: pp-contrato-con-espana
-    pagina: 3
+      Plantea reconstruir el Pacto de Toledo sobre el principio de que las pensiones son un compromiso
+      de Estado, por encima de la confrontación partidista.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 42
+  - subtema: sostenibilidad
+    resumen: >-
+      Prevé blindar por ley la caja única de la Seguridad Social, de modo que las cotizaciones sigan
+      financiando las pensiones y prestaciones en toda España sin dividir los recursos por
+      territorios.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 17
+  - subtema: edad de jubilación
+    resumen: >-
+      Propone incentivar la jubilación activa mediante deducciones en el IRPF.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 43
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-espana-de-currantes
   - pp-argumentario-donde-esta-el-dinero

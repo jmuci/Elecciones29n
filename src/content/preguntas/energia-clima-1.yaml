@@ -2,9 +2,9 @@ tema: energia-clima
 orden: 1
 pregunta: ¿Cómo debería abordarse el precio de la luz?
 opciones:
-  - texto: Bajar el IVA de la luz.
+  - texto: Eliminar el impuesto del 7 % a la producción eléctrica y reducir la carga fiscal del recibo.
     partidos:
-      - { partido: pp, fuente: pp-argumentario-menos-impuestos, pagina: 1 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "71-72" }
   - texto: Que familias y empresas paguen la energía a precio de coste.
     partidos:
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 4 }
@@ -13,4 +13,4 @@ opciones:
       según lo que cuesta producirlo.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 37 }
-revisado: 2026-11-02
+revisado: 2026-11-11
