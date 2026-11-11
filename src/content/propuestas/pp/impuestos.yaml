@@ -1,32 +1,47 @@
-# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen el
-# Contrato con España y los argumentarios de impuestos y vivienda.
-# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: impuestos
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
-  - subtema: fiscalidad general
-    resumen: >-
-      Se compromete a revisar una a una las más de cien subidas fiscales de los últimos años y a
-      bajar los impuestos.
-    fuente: pp-contrato-con-espana
-    pagina: 3
   - subtema: IRPF
-    resumen: Propone bajar el IRPF, especialmente a las familias con hijos.
-    fuente: pp-argumentario-menos-impuestos
-    pagina: 1
-  - subtema: IVA
-    resumen: Propone bajar el IVA de los productos básicos y de la luz.
-    fuente: pp-argumentario-menos-impuestos
-    pagina: 1
-  - subtema: [IRPF, IVA, vivienda]
     resumen: >-
-      Plantea, entre sus ayudas para que los jóvenes compren vivienda, menos IRPF para los jóvenes y
-      un 60 % menos de IVA e ITP.
-    fuente: pp-argumentario-nueva-generacion-propietarios
-    pagina: 1
+      Propone elevar los mínimos personales y familiares del IRPF, bajar el impuesto a las rentas
+      medias y bajas y a las familias, y deflactar la tarifa. Prevé que quien cobre el salario mínimo
+      no pague IRPF, con un umbral que suba por ley cada vez que suba el SMI.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 60
+  - subtema: IRPF
+    resumen: >-
+      Prevé reducir el IRPF de trabajadores y autónomos de 18 a 35 años durante sus cuatro primeros
+      años de tributación: un 100 % el primero, un 75 % el segundo, un 50 % el tercero y un 25 % el
+      cuarto.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 60
+  - subtema: IVA
+    resumen: >-
+      Propone aplicar un IVA del 0 % a los alimentos básicos, incluidos carne, pescado y conservas,
+      mientras persista el contexto actual de inflación.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 61
+  - subtema: [IVA, vivienda]
+    resumen: >-
+      Plantea reducir del 10 % al 4 % el IVA de la compra de primera vivienda para menores de 40 años,
+      con pago fraccionado al ritmo de la hipoteca, y acordar con las comunidades autónomas un ITP
+      reducido para su primera vivienda usada.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "54-55"
+  - subtema: sociedades
+    resumen: >-
+      Propone que lo que las empresas inviertan en maquinaria, equipos, digitalización, inteligencia
+      artificial, ciberseguridad, software o patentes pueda descontarse entero en el Impuesto sobre
+      Sociedades el mismo año.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 61
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-nueva-generacion-propietarios
   - pp-argumentario-menos-impuestos

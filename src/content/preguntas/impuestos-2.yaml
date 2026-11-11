@@ -4,7 +4,7 @@ pregunta: ¿Qué medida fiscal sobre la vivienda te parece más adecuada?
 opciones:
   - texto: Rebajar o eliminar los impuestos al comprar vivienda, en especial la primera vivienda o la de los jóvenes.
     partidos:
-      - { partido: pp, fuente: pp-argumentario-nueva-generacion-propietarios, pagina: 1 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "54-55" }
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
       - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 5 }
   - texto: >-
@@ -15,4 +15,4 @@ opciones:
   - texto: Crear un impuesto a las viviendas vacías.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 31 }
-revisado: 2026-11-02
+revisado: 2026-11-11

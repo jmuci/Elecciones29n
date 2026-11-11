@@ -1,38 +1,48 @@
-# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resume el Contrato con España.
-# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: inmigracion
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
   - subtema: fronteras
     resumen: >-
-      Propone reforzar las fronteras con personal, material y tecnología, y con todos los
-      instrumentos europeos disponibles.
-    fuente: pp-contrato-con-espana
-    pagina: 2
-  - subtema: integración
-    resumen: >-
-      Se compromete a reducir la inmigración irregular y a que quien quiera quedarse se integre y
-      contribuya, con vías legales para quien venga a prosperar y contribuir.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+      Propone reforzar con agentes, vigilancia e infraestructuras las fronteras terrestres, marítimas
+      y aeroportuarias, con apoyo de las Fuerzas Armadas cuando lo exija la seguridad nacional. Prevé
+      reformar la Ley de Extranjería para que el rechazo en frontera cubra también las entradas a nado
+      en Ceuta y Melilla.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 21
+  - resumen: >-
+      Plantea visados por puntos y cupos anuales de trabajadores por sectores, revisados cada año
+      según el paro, los puestos sin cubrir y la capacidad en vivienda, servicios públicos y empleo.
+      Solo participarían los países que colaboren en los retornos.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 22
   - subtema: regularización
     resumen: >-
-      Propone que entrar o permanecer en España de forma irregular no permita obtener la
-      residencia.
-    cita: "se establecerá por ley la prohibición de regulaciones colectivas"
-    fuente: pp-contrato-con-espana
-    pagina: 2
+      Prevé prohibir por ley las regularizaciones masivas e indiscriminadas y que el arraigo sea un
+      reconocimiento individual excepcional.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "22-23"
   - subtema: expulsiones
-    resumen: Plantea que quien venga a España a delinquir tenga que abandonar el país.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+    resumen: >-
+      Plantea que la expulsión sea la regla para los extranjeros condenados por delitos sexuales,
+      delitos de sangre y multirreincidencia, y que tener causas pendientes en varios juzgados no la
+      frene.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 23
   - subtema: nacionalidad
-    resumen: Propone reforzar los criterios de acceso a la nacionalidad española.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+    resumen: >-
+      Propone una nueva Ley de Nacionalidad que exija residencia legal y continuada, conocimiento
+      suficiente del español, de la historia y de las instituciones, ausencia de antecedentes penales
+      y cumplimiento de las obligaciones tributarias y con la Seguridad Social, y mantener un trato
+      preferente para países con vínculos históricos, culturales y lingüísticos con España.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 50
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-nueva-generacion-propietarios
   - pp-argumentario-menos-impuestos

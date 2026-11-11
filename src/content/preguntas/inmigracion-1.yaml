@@ -6,11 +6,11 @@ opciones:
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 34 }
   - texto: >-
-      Que entrar o permanecer de forma irregular no permita obtener la residencia, y prohibir por ley las
-      regularizaciones colectivas.
+      Prohibir por ley las regularizaciones masivas e indiscriminadas y que el arraigo sea un reconocimiento
+      individual excepcional.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 2 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "22-23" }
   - texto: Repatriarlas y que quien haya entrado de forma irregular no pueda regularizar nunca su situación.
     partidos:
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 5 }
-revisado: 2026-11-02
+revisado: 2026-11-11

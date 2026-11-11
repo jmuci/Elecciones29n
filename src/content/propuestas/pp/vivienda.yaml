@@ -1,44 +1,46 @@
-# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen el
-# Contrato con España y el argumentario de vivienda.
-# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: vivienda
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
   - subtema: oferta y construcción
     resumen: >-
-      Fija como objetivo aumentar la oferta de vivienda y plantea que todas las administraciones
-      colaboren para poner suelo a disposición y simplificar los trámites.
-    cita: "construir al menos un millón de nuevas viviendas"
-    fuente: pp-contrato-con-espana
-    pagina: 2
-  - subtema: [oferta y construcción, okupación]
+      Se compromete a construir un millón de viviendas movilizando suelo público y privado junto con
+      comunidades autónomas y entidades locales. Prevé una nueva Ley del Suelo y licencias de obra
+      nueva y rehabilitación resueltas en tres meses, con silencio positivo.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 53
+  - subtema: alquiler
     resumen: >-
-      Propone una nueva ley para poner en uso todo el suelo disponible, menos trámites y silencio
-      administrativo positivo a los 90 días. Prevé aprobar las leyes de suelo y contra la ocupación
-      ilegal en los 100 primeros días.
-    fuente: pp-argumentario-nueva-generacion-propietarios
-    pagina: 1
-  - subtema: jóvenes
-    resumen: >-
-      Plantea dar prioridad a los jóvenes en el acceso al alquiler y a la compra, con ayudas
-      económicas para adelantar su emancipación.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+      Propone derogar la Ley de Vivienda y eliminar las zonas tensionadas y el índice de precios del
+      alquiler.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 53
   - subtema: [jóvenes, compra y propiedad]
     resumen: >-
-      Propone una "Hucha Hogar Joven" y avales de hasta el 100 % para que los jóvenes compren
-      vivienda.
-    fuente: pp-argumentario-nueva-generacion-propietarios
-    pagina: 1
+      Plantea ampliar a los menores de 40 años el aval público, que cubre hasta el 20 % del valor de
+      la vivienda, y crear la «Hucha Hogar Joven»: cuenta de ahorro con aportaciones de hasta 2.000 €
+      al año, deducción fiscal del 20 % y rendimientos exentos si se destina a la primera vivienda.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 55
+  - subtema: alquiler
+    resumen: >-
+      Propone una deducción en el IRPF para los inquilinos de vivienda habitual, graduada según sus
+      ingresos, y una deducción o crédito fiscal para el propietario particular que renueve el
+      contrato tres años subiendo la renta por debajo del IPC.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 55
   - subtema: okupación
     resumen: >-
-      Se compromete a desalojar las viviendas ocupadas ilegalmente en 48 horas y a proteger el
-      derecho de propiedad.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+      Plantea una ley para que el propietario recupere en 48 horas, por orden judicial, la vivienda
+      ocupada ilegalmente, y endurecer las penas a las mafias que promuevan la ocupación.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 55
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-nueva-generacion-propietarios
   - pp-argumentario-menos-impuestos

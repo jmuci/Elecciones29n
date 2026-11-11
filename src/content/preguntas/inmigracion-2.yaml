@@ -4,9 +4,9 @@ pregunta: ¿Cómo debería ser el acceso a la nacionalidad española?
 opciones:
   - texto: Reforzar y endurecer los requisitos para obtenerla.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 2 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 50 }
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 5 }
   - texto: Que quien vive y trabaja en España tenga DNI español y derecho al voto.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 34 }
-revisado: 2026-11-02
+revisado: 2026-11-11

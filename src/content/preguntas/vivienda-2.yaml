@@ -4,7 +4,7 @@ pregunta: ¿Cuál debería ser la prioridad principal para que haya más viviend
 opciones:
   - texto: Liberar suelo y reducir trámites para que se construya más.
     partidos:
-      - { partido: pp, fuente: pp-argumentario-nueva-generacion-propietarios, pagina: 1 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 53 }
       - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
   - texto: >-
       Aumentar la inversión pública hasta el 1 % del PIB para construir, comprar y rehabilitar vivienda
@@ -21,4 +21,4 @@ opciones:
       protegida, y ceder suelo público a proyectos de colaboración público-privada.
     partidos:
       - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 3 }
-revisado: 2026-11-02
+revisado: 2026-11-11
