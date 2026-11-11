@@ -1,19 +1,47 @@
-# Fase 4: no hay programa electoral publicado; se resume el Contrato con España.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: territorial
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
-  - resumen: Se compromete a defender la soberanía nacional y la integridad territorial.
-    fuente: pp-contrato-con-espana
-    pagina: 2
+  - subtema: financiación autonómica
+    resumen: >-
+      Propone convocar la Conferencia de Presidentes al inicio de la legislatura para sentar las bases
+      de un nuevo modelo de financiación autonómica, acordado en el Consejo de Política Fiscal y
+      Financiera, con un fondo de nivelación transitorio financiado por el Estado hasta que el nuevo
+      sistema entre en vigor.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "40-41"
+  - subtema: financiación autonómica
+    resumen: >-
+      Plantea que ninguna comunidad salga del régimen común ni haya nuevos regímenes singulares
+      negociados bilateralmente, y una reestructuración multilateral de la deuda autonómica con las
+      mismas reglas para todas.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 41
   - subtema: lenguas
     resumen: >-
-      Plantea garantizar la enseñanza del castellano en toda España y la de las lenguas cooficiales
-      en sus respectivas comunidades autónomas.
-    fuente: pp-contrato-con-espana
-    pagina: 3
+      Se compromete a garantizar el derecho a recibir enseñanza en castellano en toda España, con
+      respeto a las lenguas cooficiales, y a que las administraciones de territorios con cooficialidad
+      se dirijan al ciudadano en la lengua oficial o cooficial que este elija.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 39
+  - subtema: Cataluña
+    resumen: >-
+      Prevé revisar en los primeros seis meses la presencia de la Administración General del Estado en
+      cada comunidad y aprobar un Plan Nacional de Presencia del Estado con recursos y calendario, con
+      especial atención al País Vasco, Navarra y Cataluña.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 16
+  - resumen: >-
+      Plantea recuperar en el Código Penal el delito de sedición y el de convocatoria de referéndum
+      ilegal.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 16
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-argumentario-nueva-generacion-propietarios
   - pp-argumentario-menos-impuestos

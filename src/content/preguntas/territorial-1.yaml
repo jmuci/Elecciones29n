@@ -2,9 +2,11 @@ tema: territorial
 orden: 1
 pregunta: ¿Qué modelo territorial prefieres?
 opciones:
-  - texto: Defender la soberanía nacional y la integridad territorial.
+  - texto: >-
+      Defender la unidad de España y el orden constitucional, recuperando los delitos de sedición y de
+      convocatoria de referéndum ilegal.
     partidos:
-      - { partido: pp, fuente: pp-contrato-con-espana, pagina: 2 }
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 16 }
   - texto: >-
       Que el Estado recupere competencias como la sanidad y la educación, con el objetivo último de eliminar el
       Estado autonómico.
@@ -15,4 +17,4 @@ opciones:
       soberanías compartidas.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 41 }
-revisado: 2026-11-02
+revisado: 2026-11-11

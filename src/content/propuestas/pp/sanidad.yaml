@@ -1,37 +1,43 @@
-# Fase 4: no hay programa electoral publicado; se resumen el Contrato con España y el artículo de
-# pp.es sobre el proyecto sanitario presentado por la vicesecretaria de Sanidad (7-oct-2026).
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: sanidad
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
-  - resumen: >-
-      Se compromete a reforzar las plantillas de la sanidad pública, en especial con más médicos y
-      mejores condiciones laborales y retributivas.
-    fuente: pp-contrato-con-espana
-    pagina: 3
-  - subtema: salud mental
+  - subtema: listas de espera
     resumen: >-
-      Plantea un plan de salud mental que incorpore 10.000 profesionales, con una inversión de 700
-      millones de euros anuales hasta alcanzar ese objetivo.
-    fuente: pp-nota-funez-proyecto-sanitario
-    pagina: "punto 14"
+      Propone un Pacto de Estado por la Sanidad Pública con las comunidades autónomas y un plan
+      urgente de reducción de las listas de espera. Prevé que el nuevo sistema de financiación
+      autonómica tenga la sanidad como uno de sus pilares.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "68-69"
   - subtema: atención primaria
     resumen: >-
-      Sitúa la atención primaria entre las primeras decisiones de su Gobierno y propone hacerla más
-      resolutiva, con más capacidad diagnóstica, menos burocracia y equipos multidisciplinares.
-    fuente: pp-nota-funez-proyecto-sanitario
-    pagina: "punto 9"
+      Se compromete a incorporar más profesionales al Sistema Nacional de Salud, con al menos 4.500
+      médicos más en Atención Primaria, y a mejorar sus condiciones de trabajo, conciliación y
+      retribución.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 69
+  - subtema: salud mental
+    resumen: >-
+      Prevé aprobar un Plan Nacional de Salud Mental 2027-2037 con financiación garantizada, más
+      profesionales y acceso a la atención psicológica y psiquiátrica desde Atención Primaria.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 70
   - resumen: >-
-      Propone planificar los recursos humanos a medio y largo plazo, ajustando las plazas MIR a las
-      necesidades futuras, y reformar el Estatuto Marco del personal sanitario con los profesionales.
-    fuente: pp-nota-funez-proyecto-sanitario
-    pagina: "puntos 6 y 7"
+      Plantea acordar con las comunidades autónomas una estrategia de servicios preventivos comunes,
+      con más vacunación, cribados y diagnóstico precoz, y reforzar la Agencia Estatal de Salud
+      Pública.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "69-70"
   - resumen: >-
-      Plantea que el nuevo modelo de financiación autonómica incluya una pieza específica para
-      sostener el Sistema Nacional de Salud.
-    fuente: pp-nota-funez-proyecto-sanitario
-    pagina: "punto 11"
+      Propone aprobar una ley nacional de cuidados paliativos que garantice el acceso a estos
+      cuidados, el tratamiento del dolor y la atención domiciliaria.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: "70-71"
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
   - pp-nota-funez-proyecto-sanitario

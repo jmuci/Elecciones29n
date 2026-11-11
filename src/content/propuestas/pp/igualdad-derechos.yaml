@@ -1,16 +1,44 @@
-# Fase 4: no hay programa electoral publicado; se resume el Contrato con España. Las noticias de
-# pp.es revisadas (oct. 2026) sobre igualdad y mujeres critican al Gobierno sin propuestas concretas.
+# Programa electoral del PP para el 29N (La Reconstrucción Nacional), revisado el 2026-11-11 en las
+# secciones del tema y con búsqueda por palabras clave en el resto del documento. Selección de 5
+# propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
 partido: pp
 tema: igualdad-derechos
 estado: parcial
-revisado: 2026-11-02
+revisado: 2026-11-11
 propuestas:
+  - subtema: [igualdad, LGTBI]
+    resumen: >-
+      Se compromete a combatir la discriminación por razón de origen, sexo, edad, discapacidad,
+      orientación sexual, religión u otra circunstancia personal, y a seguir luchando contra la
+      LGTBIfobia.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 43
+  - subtema: [igualdad, LGTBI]
+    resumen: >-
+      Prevé revisar la Ley Trans, eliminar la libre autodeterminación registral del sexo y garantizar
+      que el sexo biológico sea el criterio de las categorías deportivas femeninas.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 44
   - subtema: igualdad
     resumen: >-
-      Se compromete a combatir en especial la violencia contra las mujeres, con más recursos
-      económicos y materiales, reconocimiento y autoridad para las Fuerzas y Cuerpos de Seguridad del
-      Estado.
-    fuente: pp-contrato-con-espana
-    pagina: 3
+      Propone que el sistema de dispositivos de control de las órdenes de alejamiento dependa del
+      Ministerio del Interior, integrar los servicios asistenciales autonómicos y municipales en
+      VioGen y rendir cuentas cada año del cumplimiento del Pacto de Estado contra la Violencia de
+      Género.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 19
+  - subtema: igualdad
+    resumen: >-
+      Plantea aprobar una ley integral contra la trata de seres humanos y fijar criterios comunes en
+      toda España para detectar y prevenir la mutilación genital femenina y los matrimonios forzados.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 19
+  - resumen: >-
+      Propone asegurar atención temprana y apoyos a lo largo de toda la vida a las personas con
+      discapacidad, hacer compatibles las pensiones de discapacidad con el empleo y ampliar el acceso
+      a la jubilación anticipada de las personas con síndrome de Down.
+    fuente: pp-programa-reconstruccion-nacional
+    pagina: 44
 fuentes_revisadas:
+  - pp-programa-reconstruccion-nacional
   - pp-contrato-con-espana
