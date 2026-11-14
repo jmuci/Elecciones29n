@@ -1,35 +1,44 @@
-# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen
-# "Recuperar España" (2026) y el Programa económico y de vivienda (2025).
-# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: cuota de autónomos (en empleo), impuestos de la electricidad (en
+# energia-clima), rebaja del IGIC y supresión del AIEM en Canarias (en territorial), fiscalidad mínima
+# en zonas en riesgo de despoblación (6) y Ley de Mecenazgo (76).
 partido: vox
 tema: impuestos
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: fiscalidad general
-    resumen: Propone una rebaja fiscal para familias, trabajadores, autónomos y empresas.
-    fuente: vox-recuperar-espana
-    pagina: 4
+    resumen: >-
+      Propone una rebaja general de impuestos y una revisión y reducción sistemática de todos los
+      impuestos y tasas.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 9
   - subtema: IRPF
     resumen: >-
-      Propone un IRPF con un mínimo exento de 22.000 €, un tipo del 15 % hasta 70.000 € y del 25 % a
-      partir de esa cifra, con 4 puntos menos por cada descendiente.
-    fuente: vox-programa-economico-vivienda
-    pagina: 36
+      Propone simplificar y bajar el IRPF, y reducir el tipo de cada contribuyente o familia según el
+      número de hijos.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 9
   - subtema: [IVA, sociedades]
     resumen: >-
-      Plantea bajar el IVA reducido al 8 % y el general al 18 %, y el impuesto de sociedades del 25 %
-      al 15 %.
-    fuente: vox-programa-economico-vivienda
-    pagina: 37
+      Plantea rebajar los tipos reducido y general del IVA, con prioridad para los productos
+      esenciales y de primera necesidad, y reducir el tipo del Impuesto de Sociedades.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 9
   - subtema: vivienda
-    resumen: Propone "impuestos cero" a la primera vivienda.
-    fuente: vox-recuperar-espana
-    pagina: 3
+    resumen: >-
+      Propone un IVA del 0 % en la compra de la primera vivienda habitual nueva y una bonificación del
+      100 % del ITP en la usada, y una fiscalidad más alta para compradores no comunitarios y para las
+      operaciones de fondos o sociedades que califica de especulativas.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "24-25"
   - subtema: otros
     resumen: Propone un gravamen sobre las remesas de dinero enviadas al extranjero.
-    fuente: vox-recuperar-espana
-    pagina: 3
+    fuente: vox-programa-es-sentido-comun
+    pagina: 19
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

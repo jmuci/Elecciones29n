@@ -1,12 +1,19 @@
 # Programa electoral del PP para el 29N (82 páginas, PDF). Presentado por Feijóo el 10-nov-2026
 # (intervención en pp.es/actualidad/documentos/); metadatos del PDF: creado el 9-nov-2026.
-# La URL «LA-RECONSTRUCCION-NACIONAL.pdf» sirve exactamente el mismo fichero (mismo sha256).
+# Se cita la URL que enlaza la portada de pp.es. La primera URL registrada
+# (…/2026/11/PROGRAMA-ELECTORAL-PP-LA-RECONSTRUCCION-NACIONAL.pdf) da 404 desde hacia el 11-nov-2026;
+# la actual sirve exactamente el mismo fichero (mismo sha256, comprobado el 14-nov-2026), así que las
+# páginas citadas siguen valiendo.
+# pp.es aloja además, al menos desde el 13-nov-2026 (primera captura en Wayback), una versión de
+# 64 páginas (…/2026/11/PROGRAMA-ELECTORAL-PP-2026-RECONSTRUCCION-NACIONAL.pdf, sha256
+# ae0c35d7ef3faf540acaa79d47abbe3ae2bf56a3a755c4e78a8f5bf3ea49789c): mismas 250 medidas y mismo
+# texto, con otra maquetación y otra paginación. No se cita porque la portada enlaza la de 82 páginas.
 # `pagina` = número impreso, que coincide con el de la página del PDF.
-# Snapshot de Wayback Machine pendiente.
 partido: pp
 titulo: "La Reconstrucción Nacional. El programa del cambio necesario para España"
-url: https://www.pp.es/wp-content/uploads/2026/11/PROGRAMA-ELECTORAL-PP-LA-RECONSTRUCCION-NACIONAL.pdf
+url: https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf
 tipo: programa
 publicado: 2026-11-10
-consultado: 2026-11-11
+consultado: 2026-11-14
+archivo: https://web.archive.org/web/20261113013957/https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf
 sha256: cea8f2a052278e51ad682d19444eb0e9089997adbde8df76babf7f236bb5ffbe

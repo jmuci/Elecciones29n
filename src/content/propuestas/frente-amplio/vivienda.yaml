@@ -2,7 +2,7 @@
 partido: frente-amplio
 tema: vivienda
 estado: parcial
-revisado: 2026-11-08
+revisado: 2026-11-14
 propuestas:
   - subtema: vivienda pública
     resumen: >-
@@ -23,6 +23,22 @@ propuestas:
       residenciales de la Sareb.
     fuente: frente-amplio-nota-expropiacion-vivienda-corporativa
     pagina: apartado «La SAREB, al parque público»
+  - subtema: alquiler
+    resumen: >-
+      Propone reconocer legalmente a los sindicatos de inquilinas, que podrían constituirse con un
+      mínimo de tres personas y negociar convenios colectivos de arrendamiento para un edificio o un
+      ámbito territorial más amplio.
+    fuente: frente-amplio-nota-sindicatos-inquilinas-huelgas-alquiler
+    pagina: párrafo 2
+  - subtema: [alquiler, desahucios]
+    resumen: >-
+      Plantea regular las huelgas de alquileres: ante incumplimientos justificados del propietario, los
+      inquilinos podrían depositar el 100 % de la renta en un fondo público, con la misma validez que el
+      pago y sin que se les pueda desahuciar por impago. Prevé también protección frente a represalias
+      como la no renovación del contrato.
+    fuente: frente-amplio-nota-sindicatos-inquilinas-huelgas-alquiler
+    pagina: apartado «Huelgas de alquileres con protección frente al desahucio»
 fuentes_revisadas:
   - frente-amplio-nota-impuesto-acumulacion-vivienda
   - frente-amplio-nota-expropiacion-vivienda-corporativa
+  - frente-amplio-nota-sindicatos-inquilinas-huelgas-alquiler

@@ -1,23 +1,41 @@
-# Fase 4: "Recuperar España" (2026) no trata el modelo territorial, así que se admite, con aviso, el
-# Programa económico y de vivienda (2025), anterior a la convocatoria (CONTRIBUTING §1.4).
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# El programa no trata la financiación autonómica. La exigencia de lenguas cooficiales en las
+# oposiciones sanitarias (60) va en sanidad.
 partido: vox
 tema: territorial
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
-  - subtema: financiación autonómica
-    resumen: >-
-      Propone reducir el gasto de la administración territorial del Estado y limitar las
-      transferencias a las comunidades autónomas y a los ayuntamientos al mínimo que permita la
-      Constitución.
-    fuente: vox-programa-economico-vivienda
-    pagina: 39
   - resumen: >-
-      Plantea una central de compras nacional para los sistemas autonómicos de sanidad, farmacia y
-      educación, y fija como objetivo último que el Estado recupere esas competencias y la
-      eliminación del Estado autonómico.
-    fuente: vox-programa-economico-vivienda
-    pagina: 39
+      Propone recuperar el delito de sedición, prohibir los indultos por delitos contra la forma
+      política del Estado o la integridad territorial e ilegalizar los partidos y organizaciones que
+      atenten contra la unidad e integridad territorial de España.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "55-56"
+  - resumen: >-
+      Plantea una Ley de Unidad de Mercado para que lo que sea legal en una comunidad autónoma lo sea
+      en toda España, sin trámites, licencias ni registros adicionales.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 28
+  - subtema: lenguas
+    resumen: Se compromete a garantizar la educación en español en todo el territorio nacional.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 41
+  - resumen: >-
+      Se compromete a garantizar la calidad de los servicios públicos y los mismos derechos a todos los
+      españoles con independencia de dónde residan, en especial en educación, sanidad, seguridad y
+      justicia.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 20
+  - resumen: >-
+      Propone actualizar el complemento de insularidad del personal del sector público estatal en
+      Baleares y Canarias, rebajar el IGIC, suprimir el AIEM en Canarias y mejorar las ayudas al
+      transporte a la Península.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 10
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

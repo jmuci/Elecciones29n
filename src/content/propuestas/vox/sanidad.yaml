@@ -1,24 +1,43 @@
-# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026). El Programa
-# económico y de vivienda (2025) propone una central de compras nacional para los sistemas sanitarios
-# (p. 39), pero no se cita: es anterior a la convocatoria y Vox ya ha publicado medidas sanitarias
-# para el 29N (CONTRIBUTING §1.4).
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: salud de las mujeres (64) y mapa de infraestructuras sanitarias, Red de
+# Centros Nacionales de Oncología y refuerzo de la Estrategia Nacional de Salud Mental (65).
 partido: vox
 tema: sanidad
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: listas de espera
-    resumen: Propone un plan nacional de reducción de las listas de espera.
-    fuente: vox-recuperar-espana
-    pagina: 3
-  - resumen: Propone una tarjeta sanitaria única.
-    fuente: vox-recuperar-espana
-    pagina: 3
+    resumen: >-
+      Propone un plan nacional de reducción de las listas de espera que reorganice los circuitos
+      asistenciales y facilite derivaciones entre centros y territorios, con colaboración
+      público-privada cuando ayude a reducir demoras y publicación periódica de indicadores.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 37
+  - subtema: atención primaria
+    resumen: >-
+      Plantea reforzar la atención primaria y pediátrica en todo el territorio, con especial atención a
+      las zonas rurales y de difícil cobertura.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 37
   - resumen: >-
-      Plantea limitar la atención sanitaria de los inmigrantes en situación irregular a los casos de
-      urgencia vital.
-    fuente: vox-recuperar-espana
-    pagina: 3
+      Propone una tarjeta sanitaria única con historia clínica compartida en todo el territorio, y que
+      no conocer una lengua cooficial no impida acceder por oposición a plazas sanitarias.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 37
+  - resumen: >-
+      Plantea mejorar las retribuciones y condiciones de los profesionales sanitarios, con incentivos
+      para plazas rurales o de difícil cobertura, contratos estables y un programa de retorno de los
+      sanitarios que trabajan en el extranjero.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "37-38"
+  - resumen: >-
+      Prevé excluir de la sanidad pública a los extranjeros en situación irregular salvo en casos de
+      urgencia grave, y auditar el coste de la inmigración en la sanidad pública.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 19
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

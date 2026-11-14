@@ -1,15 +1,25 @@
-# Fase 4: se resume "Recuperar España" (2026). El Programa económico y de vivienda (2025, p. 38)
-# detalla medidas de pensiones, pero no se cita: "Recuperar España" ya trata el tema y la regla 4
-# (CONTRIBUTING §1.4) solo admite el documento anterior si no hay nada para el 29N sobre el tema.
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# El programa no trata la revalorización ni la edad de jubilación.
 partido: vox
 tema: pensiones
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: sostenibilidad
-    resumen: Propone garantizar la sostenibilidad del sistema de pensiones.
-    fuente: vox-recuperar-espana
-    pagina: 4
+    resumen: >-
+      Propone garantizar la sostenibilidad del sistema de pensiones con más actividad económica,
+      empleo y salarios, y con medidas de apoyo a las familias y a la natalidad frente al
+      envejecimiento demográfico.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "10-11"
+  - resumen: >-
+      Plantea que el Estado financie la cotización a la Seguridad Social de los españoles dedicados al
+      cuidado de sus hijos, para que la crianza no penalice su jubilación.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 51
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

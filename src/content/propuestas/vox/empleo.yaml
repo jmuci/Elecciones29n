@@ -1,25 +1,40 @@
-# Fase 4: "Recuperar España" (2026) no trata el empleo, así que se resume el Programa económico y
-# de vivienda (2025), anterior a la convocatoria (CONTRIBUTING §1.4, con aviso).
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# El programa no trata el SMI ni la jornada. Fuera de la selección: formación de trabajadores y jóvenes
+# en inteligencia artificial (37) y reincorporación de las madres al trabajo (99, en familia).
 partido: vox
 tema: empleo
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: contratación
     resumen: >-
-      Propone incentivos y bonificaciones fiscales a la contratación de españoles, y criterios de
-      reciprocidad con los países que limiten la contratación de españoles.
-    fuente: vox-programa-economico-vivienda
-    pagina: 44
+      Propone derogar la legislación laboral aprobada por el Gobierno de Sánchez.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 13
+  - subtema: desempleo
+    resumen: >-
+      Se compromete a poner fin al desempleo, la precariedad y los bajos salarios para que los jóvenes
+      puedan acceder a un empleo estable, emanciparse y formar una familia.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "12-13"
   - resumen: >-
-      Propone eliminar la cuota de autónomos para quienes ingresen menos que el salario mínimo.
-    fuente: vox-programa-economico-vivienda
-    pagina: 37
+      Propone una cuota de autónomos de cero euros para quienes ingresen menos que el salario mínimo y,
+      por encima, una cuota progresiva desde 50 euros según los ingresos.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 9
   - resumen: >-
-      Plantea que la nómina de los trabajadores incluya las cotizaciones a la Seguridad Social a
-      cargo de la empresa, para mostrar el coste real del trabajo.
-    fuente: vox-programa-economico-vivienda
-    pagina: 37
+      Plantea un Plan Nacional de Reindustrialización frente a las deslocalizaciones y la pérdida de
+      empleo industrial, con atracción de inversiones estratégicas.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 12
+  - resumen: >-
+      Plantea medidas fiscales y de promoción del turismo para crear empleo, con impulso al turismo
+      rural, de montaña o interior.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 13
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

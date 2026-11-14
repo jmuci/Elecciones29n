@@ -5,7 +5,7 @@ opciones:
   - texto: Que las empresas con plantillas más estables coticen menos por desempleo.
     partidos:
       - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 59 }
-  - texto: Incentivos y bonificaciones fiscales a la contratación de trabajadores españoles.
+  - texto: Derogar la legislación laboral aprobada por el Gobierno actual.
     partidos:
-      - { partido: vox, fuente: vox-programa-economico-vivienda, pagina: 44 }
-revisado: 2026-11-11
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 13 }
+revisado: 2026-11-14
