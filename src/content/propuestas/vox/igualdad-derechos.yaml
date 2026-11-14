@@ -1,13 +1,44 @@
-# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026), que no trata
-# aborto, eutanasia ni LGTBI. El Programa económico y de vivienda (2025) tampoco trata el tema.
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# El programa no trata de forma expresa la LGTBI. Fuera de la selección: salud de las mujeres (64, en
+# sanidad), menús halal y Lengua Árabe (72-73, en educacion) y leyes que califica de ideológicas, como
+# la de Memoria Democrática (46).
 partido: vox
 tema: igualdad-derechos
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
-  - resumen: Propone prohibir el burka y el niqab en los espacios públicos.
-    fuente: vox-recuperar-espana
-    pagina: 3
+  - subtema: igualdad
+    resumen: >-
+      Propone derogar las leyes de género y aprobar en su lugar normas que protejan a las mujeres
+      víctimas de violencia, en especial de maltrato.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 30
+  - subtema: igualdad
+    resumen: >-
+      Plantea reforzar la prevención, la protección policial y judicial y la asistencia integral a las
+      mujeres víctimas de violencia y agresiones sexuales.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 46
+  - subtema: [aborto, eutanasia]
+    resumen: >-
+      Se compromete a defender el derecho a la vida "desde su concepción hasta la muerte natural", a
+      garantizar la objeción de conciencia de sanitarios y farmacéuticos y a potenciar los cuidados
+      paliativos.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 52
+  - resumen: >-
+      Propone prohibir el burka y el niqab en todos los espacios públicos y donde se presten servicios
+      públicos, en particular en los centros educativos.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 42
+  - subtema: igualdad
+    resumen: >-
+      Plantea que el deporte femenino se rija por criterios biológicos y deportivos objetivos.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 43
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

@@ -1,28 +1,44 @@
-# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026).
-# El Programa económico y de vivienda (2025) trata también la energía (pp. 40-42), pero no se cita:
-# Vox ya ha publicado medidas de energía para el 29N y la regla 4 de CONTRIBUTING solo admite el
-# documento anterior si no hay nada del 29N sobre el tema.
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: exploración y explotación de recursos minerales (8) y fin de las zonas de
+# bajas emisiones (44).
 partido: vox
 tema: energia-clima
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: precio de la luz
-    resumen: Propone energía a precio de coste para familias y empresas.
-    fuente: vox-recuperar-espana
-    pagina: 4
+    resumen: >-
+      Propone bajar los impuestos de la electricidad a familias, empresas e industrias, acabar con la
+      doble imposición y suprimir el tope regulatorio a la inversión en redes eléctricas, con
+      autorizaciones en plazos cerrados y silencio administrativo positivo.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 11
   - subtema: nuclear
     resumen: >-
-      Propone recuperar el Plan Nuclear Nacional y suprimir los topes regulatorios a la inversión en
-      redes eléctricas.
-    fuente: vox-recuperar-espana
-    pagina: 4
+      Plantea recuperar el plan nuclear nacional, derogar el calendario de cierre de las centrales
+      actuales y estudiar nuevas centrales en emplazamientos junto a las existentes.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 12
+  - resumen: >-
+      Propone revertir las normas inspiradas en el Pacto Verde Europeo y la Agenda 2030, como la
+      prohibición de los motores de combustión y los impuestos a las emisiones de CO2.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "11-12"
+  - subtema: renovables
+    resumen: >-
+      Plantea impedir que se destruya riqueza agrícola y patrimonio natural para instalar sin control
+      grandes plantas solares y eólicas.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 34
   - subtema: agua
     resumen: >-
-      Plantea un plan nacional del agua con interconexión de cuencas, modernización de regadíos y
-      producción de energía.
-    fuente: vox-recuperar-espana
-    pagina: 4
+      Propone un Plan Nacional del Agua con interconexión de todas las cuencas, para reactivar el
+      sector primario, modernizar los regadíos e impulsar la producción de energía.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "61-62"
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

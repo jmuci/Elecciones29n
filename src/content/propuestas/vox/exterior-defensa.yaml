@@ -1,26 +1,48 @@
-# Fase 4: no hay programa electoral publicado (voxespana.es/programa/programa-electoral-vox da 404);
-# se resume "Recuperar España" (2026). El Programa económico y de vivienda (2025) no trata el tema.
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# El programa no trata la OTAN. Fuera de la selección: medios para las Fuerzas Armadas, el CNI y los
+# cuerpos de seguridad (83), defensa de la soberanía frente a injerencias extranjeras (92) y PAC y
+# política pesquera común (52-53).
 partido: vox
 tema: exterior-defensa
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: [política exterior, soberanía e integridad territorial]
-    resumen: Propone suspender los acuerdos con Marruecos y militarizar la frontera de Ceuta.
-    fuente: vox-recuperar-espana
-    pagina: 3
-  - subtema: comercio exterior
     resumen: >-
-      Propone suspender el acuerdo con Mercosur y los tratados internacionales que, según el partido,
-      obligan a los productores españoles a competir en situación desigual.
-    fuente: vox-recuperar-espana
-    pagina: 4
+      Propone sanciones, suspender acuerdos internacionales y revisar las relaciones diplomáticas con
+      Marruecos hasta que respete las fronteras y la soberanía de España, y militarizar la frontera de
+      Ceuta y Melilla.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 7
+  - subtema: [gasto en defensa, Fuerzas Armadas]
+    resumen: >-
+      Propone aumentar la inversión en Defensa y los sueldos militares, con ayudas a la movilidad y a la
+      vivienda, y reconocer el servicio en las Fuerzas Armadas como profesión de riesgo.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 47
+  - subtema: soberanía e integridad territorial
+    resumen: >-
+      Plantea aplicar toda la presión internacional necesaria para recuperar la soberanía sobre
+      Gibraltar y desmantelar las redes de narcotráfico, contrabando y blanqueo que se originan allí.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 48
+  - subtema: [comercio exterior, UE]
+    resumen: >-
+      Propone rechazar el acuerdo UE-Mercosur y todo acuerdo comercial que obligue a los productores
+      españoles a competir en desigualdad de condiciones, con cláusulas espejo y la recuperación de la
+      preferencia comunitaria.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 33
   - subtema: cooperación al desarrollo
     resumen: >-
-      Propone poner fin a la cooperación al desarrollo con los países que no colaboren en la gestión
-      de los flujos migratorios.
-    fuente: vox-recuperar-espana
-    pagina: 5
+      Propone poner fin a la cooperación al desarrollo con los países que no colaboren en la gestión de
+      los flujos migratorios, y sanciones a los que fomenten la inmigración irregular o la usen como
+      presión política.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 16
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

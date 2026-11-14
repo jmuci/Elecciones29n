@@ -1,16 +1,46 @@
-# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026). El Programa
-# económico y de vivienda (2025) también propone reducir altos cargos (p. 39), pero no se cita porque
-# hay medidas del 29N sobre el tema (CONTRIBUTING §1.4).
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: reforma de la Administración de Justicia (102), más medios contra la
+# corrupción (106), auditoría del patrimonio inmobiliario del Estado (108), RTVE (110) y libertad de
+# expresión (111). Sedición e ilegalización de partidos (103), en territorial.
 partido: vox
 tema: regeneracion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
+  - subtema: justicia
+    resumen: >-
+      Propone que los jueces y magistrados elijan por voto personal, directo y secreto a los doce
+      vocales judiciales del Consejo General del Poder Judicial, y garantizar la imparcialidad e
+      independencia del Fiscal General del Estado.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 55
+  - subtema: independencia de órganos
+    resumen: >-
+      Plantea que el control de constitucionalidad de las leyes no dependa de un órgano político y
+      evitar que el Tribunal Constitucional actúe por encima del Tribunal Supremo.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 55
+  - subtema: [corrupción, justicia]
+    resumen: >-
+      Propone agravar el delito de malversación y prohibir los indultos por delitos de corrupción
+      política.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "55-56"
+  - subtema: corrupción
+    resumen: >-
+      Plantea una auditoría integral de todas las administraciones para llevar ante la justicia
+      cualquier indicio de corrupción, y que los cargos públicos condenados respondan con todos sus
+      bienes presentes y futuros hasta recuperar los fondos públicos desviados.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 57
   - resumen: >-
-      Propone eliminar las subvenciones a partidos, sindicatos, patronales, organismos ideológicos y
-      agencias de cooperación, entre otros.
-    fuente: vox-recuperar-espana
-    pagina: 4
+      Propone reducir de forma progresiva, hasta eliminarlas, las subvenciones a partidos, sindicatos,
+      patronales, ONG, observatorios y otros organismos que califica de ideológicos.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 29
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

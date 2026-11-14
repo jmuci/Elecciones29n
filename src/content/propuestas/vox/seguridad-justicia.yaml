@@ -1,20 +1,44 @@
-# Fase 4: no hay programa electoral publicado (voxespana.es/programa/programa-electoral-vox da 404);
-# se resume "Recuperar España" (2026). El Programa económico y de vivienda (2025) no trata el tema.
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: directores de la Guardia Civil y la Policía con experiencia en seguridad (82),
+# funcionarios de prisiones (85), protección de las mujeres (87, en igualdad-derechos), ciberseguridad
+# (91) y víctimas del terrorismo (109).
 partido: vox
 tema: seguridad-justicia
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
+  - subtema: Código Penal
+    resumen: >-
+      Propone rebajar la edad de responsabilidad penal de los menores y plantea eliminar su
+      inimputabilidad en ciertos delitos violentos, como homicidios o agresiones sexuales. Prevé
+      ampliar la prisión permanente revisable.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 45
+  - subtema: policía
+    resumen: >-
+      Plantea más inversión en las Fuerzas y Cuerpos de Seguridad del Estado, equiparación salarial y
+      reconocer el servicio en la Guardia Civil y la Policía Nacional como profesión de riesgo.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 46
+  - resumen: >-
+      Propone reforzar con urgencia los medios contra el narcotráfico y la criminalidad organizada, y
+      restablecer de inmediato el Organismo de Coordinación del Narcotráfico (OCON) Sur.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 46
   - subtema: okupación penal
-    resumen: Propone acabar con la ocupación ilegal de viviendas.
-    fuente: vox-recuperar-espana
-    pagina: 3
+    resumen: >-
+      Plantea desalojar en menos de 24 horas la vivienda ocupada ilegalmente, endurecer el Código Penal
+      y tipificar como estafa lo que denomina "inquiocupación".
+    fuente: vox-programa-es-sentido-comun
+    pagina: 24
   - subtema: multirreincidencia
     resumen: >-
-      Propone la deportación por la comisión de delitos graves o de delitos leves de forma
-      habitual.
-    fuente: vox-recuperar-espana
-    pagina: 5
+      Propone deportar a quienes cometan delitos graves o delitos leves de forma habitual.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 15
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

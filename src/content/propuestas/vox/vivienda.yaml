@@ -1,38 +1,48 @@
-# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resumen
-# "Recuperar España" (2026) y el Programa económico y de vivienda (2025).
-# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: control de fronteras como punto de partida (26), menos impuestos al proceso
+# edificatorio (33) y fiscalidad más alta para compradores no comunitarios y fondos (35, en impuestos).
 partido: vox
 tema: vivienda
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
-  - subtema: [oferta y construcción, vivienda pública, okupación]
+  - subtema: [vivienda pública, alquiler]
     resumen: >-
-      Propone liberar suelo, invertir en vivienda protegida y acabar con la ocupación ilegal de
-      viviendas.
-    fuente: vox-recuperar-espana
-    pagina: 3
-  - subtema: vivienda pública
-    resumen: Propone que los españoles tengan acceso preferente a la vivienda pública.
-    fuente: vox-recuperar-espana
-    pagina: 3
-  - subtema: [alquiler, jóvenes]
+      Propone dar prioridad a los españoles en el acceso a la vivienda protegida o social y a las
+      ayudas al alquiler, y exigir la residencia legal para firmar un contrato de alquiler.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "23-24"
+  - subtema: [oferta y construcción, vivienda pública]
     resumen: >-
-      Plantea derogar las medidas de intervención en el mercado del alquiler, con incentivos fiscales
-      al alquiler de larga duración y asequible y deducciones en el IRPF para jóvenes inquilinos.
-    fuente: vox-programa-economico-vivienda
-    pagina: 45
+      Plantea reformar la Ley del Suelo para ampliar el suelo disponible y agilizar trámites, y
+      aumentar la construcción de vivienda protegida con colaboración público-privada: cesiones de
+      suelo, subvenciones, avales y créditos blandos.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 23
   - subtema: alquiler
-    resumen: Propone prohibir el alquiler de vivienda a inmigrantes en situación irregular.
-    fuente: vox-recuperar-espana
-    pagina: 3
-  - subtema: [jóvenes, compra y propiedad]
     resumen: >-
-      Plantea avales públicos para comprar vivienda y préstamos en condiciones favorables para
-      parejas jóvenes según el número de hijos, con condonación de una parte al cumplir ciertos
-      objetivos de natalidad.
-    fuente: vox-programa-economico-vivienda
-    pagina: 47
+      Propone derogar la Ley de Vivienda, dar incentivos fiscales al alquiler de larga duración y
+      deducciones a los inquilinos españoles, y regular las viviendas de uso turístico con más
+      inspección de los pisos turísticos ilegales.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "23-24"
+  - subtema: okupación
+    resumen: >-
+      Plantea desalojar en menos de 24 horas la vivienda ocupada ilegalmente, con asistencia jurídica
+      gratuita y exención de impuestos para los afectados mientras dure la ocupación, endurecer el
+      Código Penal y tipificar como estafa lo que denomina "inquiocupación".
+    fuente: vox-programa-es-sentido-comun
+    pagina: 24
+  - subtema: compra y propiedad
+    resumen: >-
+      Propone que la primera vivienda habitual de una familia española no pague impuestos: IVA del 0 %
+      si es nueva y bonificación del 100 % del ITP si es usada. Prevé recuperar la deducción por
+      inversión en vivienda habitual.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 24
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

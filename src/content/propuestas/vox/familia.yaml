@@ -1,22 +1,45 @@
-# Fase 4: se resume "Recuperar España" (2026). El Programa económico y de vivienda (2025) no se cita
-# aquí: "Recuperar España" ya trata el tema (regla 4, CONTRIBUTING §1.4).
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# El programa no trata los permisos. Fuera de la selección: dependencia, mayores y discapacidad (95-96)
+# y protección de los menores en los entornos digitales (97).
 partido: vox
 tema: familia
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: ayudas por hijo
     resumen: >-
-      Propone incrementar de forma sustancial las ayudas, deducciones y bonificaciones a las familias,
-      con reducciones de impuestos según el número de hijos.
-    fuente: vox-recuperar-espana
-    pagina: 3
+      Propone un plan nacional de natalidad que extienda de forma progresiva a todas las familias,
+      desde el primer hijo, los beneficios de las familias numerosas, con más ayudas y bonificaciones
+      según el número de hijos.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 51
+  - subtema: [ayudas por hijo, conciliación]
+    resumen: >-
+      Plantea la gratuidad de la educación infantil de 0 a 3 años, bajar los impuestos de los
+      productos infantiles de primera necesidad, deducciones por material escolar y extraescolares y
+      una bonificación del 100 % de la ayuda en el hogar.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 51
+  - resumen: >-
+      Plantea que el Estado financie la cotización a la Seguridad Social de los españoles dedicados al
+      cuidado de sus hijos, para que la crianza no penalice su jubilación.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 51
   - subtema: conciliación
     resumen: >-
-      Plantea que los españoles tengan acceso preferente a las plazas de guardería, a los bonos de
-      comedor y a las ayudas y prestaciones sociales.
-    fuente: vox-recuperar-espana
-    pagina: 3
+      Propone facilitar la formación, la promoción y la vuelta al trabajo de las madres que
+      interrumpieron su carrera por la maternidad o el cuidado de familiares, e incentivos a las
+      empresas que favorezcan la conciliación.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "52-53"
+  - resumen: >-
+      Plantea que los españoles tengan acceso preferente a la vivienda pública, las plazas de
+      guardería, los bonos de comedor o transporte y las ayudas, prestaciones y servicios sociales.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 19
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda
