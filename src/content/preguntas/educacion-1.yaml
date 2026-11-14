@@ -15,7 +15,9 @@ opciones:
       ratios de alumnos.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 36 }
-  - texto: Igualar las oportunidades educativas de los alumnos y sacar la «ideología» de las aulas.
+  - texto: >-
+      Derogar la LOMLOE, sacar de las aulas los contenidos «ideológicos» y reforzar la exigencia y la autoridad
+      del profesor.
     partidos:
-      - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
-revisado: 2026-11-11
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 41 }
+revisado: 2026-11-14

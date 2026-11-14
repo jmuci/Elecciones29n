@@ -1,41 +1,51 @@
-# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; se resume "Recuperar España" (2026).
-# Auditoría 2026-11-02: cotejada con los PDF registrados (sha256 coincide); sin errores inequívocos, dudas en la PR de auditoría pp/vox.
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: plan para facilitar el retorno de los extranjeros que no contribuyan o vivan
+# de subsidios (13), retirada de fondos a ONG que faciliten la inmigración irregular (16), fin de la
+# cooperación con países que no colaboren (17, en exterior-defensa) y nuevo modelo de protección de
+# fronteras con las Fuerzas Armadas (88).
 partido: vox
 tema: inmigracion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: regularización
     resumen: >-
-      Propone prohibir las regularizaciones a gran escala y que quien entre en España de forma
-      irregular no pueda regularizar nunca su situación.
-    fuente: vox-recuperar-espana
-    pagina: 5
+      Plantea que España no acoja a más inmigrantes, prohibir las regularizaciones a gran escala y
+      suprimir el arraigo, de modo que quien entre de forma irregular no pueda regularizar nunca su
+      situación.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 15
   - subtema: expulsiones
     resumen: >-
-      Propone repatriar a quienes estén en España en situación irregular, deportar por delitos graves
-      o por delitos leves habituales y devolver a sus familias a los menores extranjeros no
-      acompañados.
-    fuente: vox-recuperar-espana
-    pagina: 5
-  - subtema: servicios y prestaciones
-    resumen: >-
-      Plantea retirar todas las ayudas y prestaciones sociales a los inmigrantes en situación
-      irregular y que solo reciban atención sanitaria en caso de urgencia vital.
-    fuente: vox-recuperar-espana
-    pagina: 3
+      Propone repatriar a quienes permanezcan en situación irregular, deportar a quienes cometan
+      delitos graves o delitos leves de forma habitual, o traten de imponer costumbres que considera
+      ajenas al modo de vida español o incompatibles con la dignidad de las mujeres, y devolver a los
+      menores extranjeros no acompañados a sus familias o a la tutela de sus países de origen.
+    fuente: vox-programa-es-sentido-comun
+    pagina: "15-16"
   - subtema: nacionalidad
     resumen: >-
-      Propone revisar las concesiones de nacionalidad obtenidas de forma fraudulenta y endurecer los
-      requisitos para obtenerla.
-    fuente: vox-recuperar-espana
-    pagina: 5
+      Propone endurecer los requisitos para obtener la nacionalidad, revisar las concesiones
+      fraudulentas, revocar las vías rápidas de acceso y ampliar los casos de pérdida de la
+      nacionalidad de los españoles no de origen por delitos graves o reiterados.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 15
+  - subtema: servicios y prestaciones
+    resumen: >-
+      Plantea suprimir toda ayuda y beneficio social a los inmigrantes en situación irregular, que el
+      Ingreso Mínimo Vital atienda solo a los españoles con menos recursos y promover el retorno de
+      los inmigrantes que lo cobren.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 19
   - subtema: [fronteras, expulsiones]
     resumen: >-
-      Plantea en Ceuta la expulsión inmediata de todos aquellos a quienes califica de "invasores",
-      la suspensión de los acuerdos con Marruecos y la militarización de la frontera.
-    fuente: vox-recuperar-espana
-    pagina: 3
+      Plantea la expulsión inmediata de todos aquellos a quienes califica de "invasores" en Ceuta y
+      militarizar la frontera de Ceuta y Melilla.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 7
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

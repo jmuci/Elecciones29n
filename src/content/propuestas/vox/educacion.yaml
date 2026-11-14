@@ -1,23 +1,44 @@
-# Fase 4: no hay programa electoral publicado; se resume "Recuperar España" (2026). El Programa
-# económico y de vivienda (2025) propone una central de compras nacional para los sistemas educativos
-# (p. 39), pero no se cita: es anterior a la convocatoria y Vox ya ha publicado medidas educativas
-# para el 29N (CONTRIBUTING §1.4).
+# Programa electoral de Vox para el 29N («Es sentido común», 115 medidas en 13 bloques), revisado
+# entero el 2026-11-14. Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: libertad de cátedra en la universidad (75), cultura y patrimonio (76),
+# tauromaquia (77) y deporte (78); la prohibición del burka y el niqab (71) va en igualdad-derechos.
 partido: vox
 tema: educacion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - resumen: >-
-      Propone igualar las oportunidades educativas de los alumnos españoles y sacar de las aulas lo
-      que califica de "ideología".
-    fuente: vox-recuperar-espana
-    pagina: 3
-  - subtema: 0–3 años
+      Propone derogar la LOMLOE, eliminar los contenidos que califica de ideológicos, reforzar la
+      exigencia y la autoridad del profesor, poner fin a los móviles en clase y aprobar un plan
+      nacional contra el acoso escolar.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 41
+  - resumen: >-
+      Plantea unificar el currículo, las evaluaciones y la inspección, con reválidas y una EVAU única,
+      y garantizar la educación en español en todo el territorio.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 41
+  - resumen: >-
+      Propone un número máximo por aula de alumnos de otras culturas o con dominio insuficiente del
+      español, con aulas de nivelación, y eliminar los menús halal en los comedores escolares y el
+      programa de Lengua Árabe y Cultura Marroquí.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 42
+  - subtema: [0–3 años, becas, FP]
     resumen: >-
-      Plantea que los españoles tengan acceso preferente a las plazas de guardería y a los bonos de
-      comedor.
-    fuente: vox-recuperar-espana
-    pagina: 3
+      Plantea dar prioridad a los españoles al elegir centro y en las ayudas educativas, plazas de
+      guardería y becas de comedor y transporte, con distrito único y libre elección de centro, y una
+      apuesta por la Formación Profesional.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 42
+  - subtema: [becas, universidad]
+    resumen: >-
+      Propone mejorar el sistema de becas universitarias y preuniversitarias para que la falta de
+      recursos no impida estudiar.
+    fuente: vox-programa-es-sentido-comun
+    pagina: 41
 fuentes_revisadas:
+  - vox-programa-es-sentido-comun
   - vox-recuperar-espana
   - vox-programa-economico-vivienda

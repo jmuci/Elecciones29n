@@ -10,9 +10,7 @@ opciones:
       al propietario si el inquilino es vulnerable y no tiene alternativa habitacional.
     partidos:
       - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 4 }
-  - texto: >-
-      Retirar las medidas de intervención en el mercado del alquiler y dar incentivos fiscales al alquiler de
-      larga duración y asequible.
+  - texto: Derogar la Ley de Vivienda y dar incentivos fiscales al alquiler de larga duración.
     partidos:
-      - { partido: vox, fuente: vox-programa-economico-vivienda, pagina: 45 }
-revisado: 2026-11-02
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "23-24" }
+revisado: 2026-11-14

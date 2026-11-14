@@ -4,8 +4,8 @@ pregunta: ¿Deberían los españoles tener preferencia en el acceso a servicios 
 opciones:
   - texto: Sí, con acceso preferente a la vivienda pública, las plazas de guardería y las ayudas sociales.
     partidos:
-      - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 19 }
   - texto: No; los servicios públicos y los derechos deben ser los mismos para todas las personas que viven en España.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 34 }
-revisado: 2026-11-02
+revisado: 2026-11-14

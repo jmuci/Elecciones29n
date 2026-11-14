@@ -2,9 +2,11 @@ tema: familia
 orden: 1
 pregunta: ¿Cómo debería apoyarse a las familias?
 opciones:
-  - texto: Bajar los impuestos a las familias con hijos y aumentar las ayudas según el número de hijos.
+  - texto: >-
+      Extender a todas las familias, desde el primer hijo, los beneficios de las familias numerosas, con más
+      ayudas según el número de hijos.
     partidos:
-      - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 51 }
   - texto: >-
       Actualizar con la inflación los mínimos familiares y unificar las deducciones familiares del IRPF en una
       sola, reembolsable y de abono mensual.
@@ -15,4 +17,4 @@ opciones:
       todas las personas dependientes.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 36 }
-revisado: 2026-11-11
+revisado: 2026-11-14

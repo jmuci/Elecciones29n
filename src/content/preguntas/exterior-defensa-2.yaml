@@ -7,7 +7,9 @@ opciones:
       y Canarias.
     partidos:
       - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 74 }
-  - texto: Suspender los acuerdos con Marruecos y militarizar la frontera de Ceuta.
+  - texto: >-
+      Sancionar a Marruecos y suspender acuerdos con él hasta que respete las fronteras de España, y militarizar
+      la frontera de Ceuta y Melilla.
     partidos:
-      - { partido: vox, fuente: vox-recuperar-espana, pagina: 3 }
-revisado: 2026-11-11
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 7 }
+revisado: 2026-11-14
