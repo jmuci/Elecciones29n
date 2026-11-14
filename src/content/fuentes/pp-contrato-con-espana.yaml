@@ -1,6 +1,10 @@
 # Documento de 12 compromisos firmado por el candidato; el propio texto dice que
 # "va más allá de un programa de Gobierno". Listado en pp.es/actualidad/documentos/.
 # `publicado`: fecha de su presentación (intervención de Feijóo del 19-oct-2026, mismo listado).
+# La `url` da 404 desde hacia el 9-nov-2026 y pp.es no tiene otra copia (comprobado el 14-nov-2026
+# en la web y en su biblioteca de medios). Se mantiene la URL original porque es la que publicó el
+# partido; el documento sigue siendo comprobable en el snapshot de `archivo`. `consultado` y
+# `sha256` son de la descarga del 2-nov-2026 y no se tocan: hoy no hay documento que consultar.
 partido: pp
 titulo: "Mi contrato con España. Respeto a la gente. Respeto a la Nación"
 url: https://www.pp.es/wp-content/uploads/2026/10/CONTRATO-CON-ESPANA-.pdf
