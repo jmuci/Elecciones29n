@@ -1,10 +1,49 @@
-# Revisado en Fase 1: democracia21.es solo anuncia "Una política migratoria responsable" como
-# título, sin contenido. Sus dos documentos publicados no tratan la inmigración.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema tiene su propio documento, «Una política migratoria
+# con cabeza», revisado entero. Selección de 5 propuestas (CONTRIBUTING §1.13-14): medidas de los
+# bloques que el documento destaca en su presentación (p. 2: vías legales, una ley que se cumpla,
+# convivencia y cero xenofobia), priorizando las más concretas. Quedan fuera, entre otras, la
+# formación en origen (p. 2), la extranjería digital (p. 3), la plataforma de datos migratorios
+# (p. 3), el itinerario de acogida (p. 4) y las medidas para el retorno de españoles emigrados (p. 5).
+# Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: inmigracion
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - resumen: >-
+      Propone un visado de búsqueda de empleo de 6 meses (prorrogable a 9), sin oferta previa, con
+      baremo de puntos, cupo anual según las vacantes y resolución en línea en dos meses como máximo.
+      Quien encuentre un empleo formal obtendría el permiso sin salir de España; quien no, volvería a
+      su país.
+    fuente: democracia-21-politica-migratoria-con-cabeza
+    pagina: 2
+  - subtema: expulsiones
+    resumen: >-
+      Plantea un registro digital único que siga cada orden de expulsión hasta su ejecución, con
+      prioridad para quienes cometen delitos, en especial los reincidentes, y vincular la política de
+      visados y de cooperación a acuerdos de readmisión con los países de origen.
+    fuente: democracia-21-politica-migratoria-con-cabeza
+    pagina: 3
+  - subtema: [fronteras, asilo]
+    resumen: >-
+      Prevé aplicar completo y sin retrasos el Pacto Europeo de Migración y Asilo, con identificación
+      y control sanitario y de seguridad de cada llegada irregular y solicitudes de asilo resueltas en
+      semanas.
+    fuente: democracia-21-politica-migratoria-con-cabeza
+    pagina: "3-4"
+  - subtema: regularización
+    resumen: >-
+      Propone una autorización de residencia y trabajo de 9 meses para los jóvenes extutelados que
+      hayan completado al menos un año de formación secundaria o profesional, que pasaría a permiso
+      ordinario si firman un contrato y cotizan.
+    fuente: democracia-21-politica-migratoria-con-cabeza
+    pagina: 4
+  - resumen: >-
+      Plantea reforzar la persecución de los delitos de odio, extender las pruebas de discriminación
+      en el alquiler y en la selección de personal, y que las víctimas de delitos de odio o de
+      explotación laboral puedan denunciar sin que se abra un expediente de expulsión.
+    fuente: democracia-21-politica-migratoria-con-cabeza
+    pagina: 4
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-politica-migratoria-con-cabeza

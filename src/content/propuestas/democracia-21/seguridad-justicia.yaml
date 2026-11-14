@@ -1,11 +1,45 @@
-# Fase 4: D21 no tiene programa ni plan de seguridad. Su web anuncia "Seguridad y Apoyo Contra el
-# Crimen Organizado" solo como título, sin contenido; se recoge la medida penal de su plan de vivienda.
-# Las medidas penales sobre corrupción de "España limpia" corresponden al tema de regeneración.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema está en «Seguridad y defensa para el mundo de hoy»,
+# revisado entero; las medidas sobre Fuerzas Armadas están en el tema de exterior y defensa, y las
+# penales sobre corrupción, en el de regeneración. Selección de 5 propuestas (CONTRIBUTING §1.13-14):
+# una por cada bloque del documento sobre seguridad y justicia y la medida penal del plan de vivienda,
+# priorizando las más concretas. Quedan fuera, entre otras, la comisaría digital (p. 2), las Zonas de
+# Especial Singularidad (p. 3), la revisión de medios (p. 3), el espacio para la víctima en Carpeta
+# Justicia (pp. 4-5) y la ley de protección del personal sanitario frente a agresiones (Sanidad,
+# p. 4). Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: seguridad-justicia
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
+  - subtema: policía
+    resumen: >-
+      Propone dimensionar cada plantilla policial según la carga real de trabajo y el territorio, con
+      un núcleo estable de patrulla y proximidad, y pasar las tareas administrativas y técnicas a
+      personal civil.
+    fuente: democracia-21-seguridad-defensa-mundo-hoy
+    pagina: 2
+  - subtema: policía
+    resumen: >-
+      Plantea garantizar por ley que la profesión de riesgo suponga jubilación anticipada sin recorte
+      de pensión para la Policía Nacional, la Guardia Civil y el Servicio de Vigilancia Aduanera, y
+      culminar la equiparación salarial comprometida en 2018.
+    fuente: democracia-21-seguridad-defensa-mundo-hoy
+    pagina: 3
+  - subtema: multirreincidencia
+    resumen: >-
+      Propone una nueva ley procesal, con el máximo consenso parlamentario, que acabe con las
+      instrucciones sin límite, permita aplicar con rapidez las herramientas contra la
+      multirreincidencia y use un expediente judicial electrónico interoperable en todas las
+      comunidades.
+    fuente: democracia-21-seguridad-defensa-mundo-hoy
+    pagina: 4
+  - resumen: >-
+      Plantea un centro nacional permanente contra el fraude digital, con la Administración, los
+      bancos y las operadoras, que comparta alertas en tiempo real para congelar transferencias
+      fraudulentas y bloquear cuentas, números y webs falsas en horas.
+    fuente: democracia-21-seguridad-defensa-mundo-hoy
+    pagina: 5
   - subtema: [okupación penal, Código Penal]
     resumen: >-
       Propone modificar el Código Penal para tipificar expresamente como estafa la firma de un
@@ -13,5 +47,7 @@ propuestas:
     fuente: democracia-21-vivienda-prioridad-1
     pagina: 4
 fuentes_revisadas:
+  - democracia-21-seguridad-defensa-mundo-hoy
   - democracia-21-vivienda-prioridad-1
+  - democracia-21-sanidad-publica
   - democracia-21-espana-limpia

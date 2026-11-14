@@ -1,11 +1,49 @@
-# Revisado en Fase 4: democracia21.es solo ha publicado sus planes de vivienda y regeneración
-# ("España limpia"), que no tratan la igualdad ni los derechos civiles (España limpia solo menciona
-# los juzgados de violencia de género como modelo organizativo para los de corrupción, p. 5).
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema tiene su propio documento, «Ni un paso atrás en
+# derechos sociales», revisado entero, y medidas en «Contigo y con tu familia». El programa no trata la
+# eutanasia. Selección de 5 propuestas (CONTRIBUTING §1.13-14): una por cada bloque del documento
+# (violencia de género, aborto, LGTBI, discapacidad) y la más concreta de familia. Quedan fuera, entre
+# otras, el compromiso con la erradicación de la brecha salarial (p. 2) y, en Contigo y con tu
+# familia, el reconocimiento de la filiación de los niños nacidos por gestación por sustitución
+# (p. 6). Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: igualdad-derechos
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - subtema: igualdad
+    resumen: >-
+      Se compromete a bloquear cualquier iniciativa para desmantelar, desfinanciar o invisibilizar la
+      red pública de protección a las víctimas de violencia de género.
+    fuente: democracia-21-derechos-sociales
+    pagina: 2
+  - subtema: aborto
+    resumen: >-
+      Plantea oponerse a cualquier intento de derogar, limitar o entorpecer la actual ley de plazos
+      del aborto, y garantizar el acceso a la interrupción voluntaria del embarazo en la red sanitaria
+      pública de todas las comunidades autónomas.
+    fuente: democracia-21-derechos-sociales
+    pagina: "2-3"
+  - subtema: LGTBI
+    resumen: >-
+      Prevé oponerse a cualquier recorte de los derechos de las personas LGTBI y que el Estado
+      garantice centros educativos libres de acoso, y apoya aplicar la ley contra quienes promuevan
+      agresiones, discursos de odio o terapias de conversión.
+    fuente: democracia-21-derechos-sociales
+    pagina: 3
+  - subtema: igualdad
+    resumen: >-
+      Plantea defender la accesibilidad universal y la vida autónoma de las personas con discapacidad,
+      y que el Estado garantice su inclusión en el mercado laboral, la educación y el entorno digital.
+    fuente: democracia-21-derechos-sociales
+    pagina: 3
+  - subtema: LGTBI
+    resumen: >-
+      Propone elevar a rango de ley que las parejas de mujeres, casadas o no, puedan inscribir a sus
+      hijos como hijos de ambas desde el hospital, e incorporar el método ROPA a la cartera común de la
+      sanidad pública.
+    fuente: democracia-21-contigo-y-con-tu-familia
+    pagina: 5
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-derechos-sociales
+  - democracia-21-contigo-y-con-tu-familia

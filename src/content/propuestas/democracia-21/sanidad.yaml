@@ -1,10 +1,49 @@
-# Revisado en Fase 4: democracia21.es solo ha publicado sus planes de vivienda y regeneración
-# ("España limpia"), que no tratan la sanidad.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema tiene su propio documento, «Sanidad pública: cuidar a
+# quienes nos cuidan», revisado entero; la salud mental está en «Contigo y con tu familia» (pp. 6-7).
+# Selección de 5 propuestas (CONTRIBUTING §1.13-14), priorizando las más concretas y medibles. Quedan
+# fuera, entre otras, la dirección hospitalaria por concurso (p. 2), el grupo A1 para enfermería
+# (pp. 3-4), el estatuto de la profesión médica (p. 4), el triaje con IA en el móvil y los hospitales
+# monotemáticos (p. 5), el Centro Nacional de Trasplantes (p. 6) y las unidades de salud mental en
+# los colegios (Familia, p. 6). Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: sanidad
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - subtema: listas de espera
+    resumen: >-
+      Propone abrir los quirófanos públicos por la tarde con prioridad para los pacientes de la
+      sanidad pública, permitir que mutuas y aseguradoras alquilen los tramos vacantes a tarifas
+      públicas y destinar por ley el 100 % de esos ingresos a la sanidad pública, entre otras cosas a
+      reducir las listas de espera.
+    fuente: democracia-21-sanidad-publica
+    pagina: 3
+  - resumen: >-
+      Plantea una transición gradual desde las guardias presenciales de 24 horas hacia turnos de 12
+      horas como máximo, empezando por los servicios con más sobrecarga.
+    fuente: democracia-21-sanidad-publica
+    pagina: 3
+  - resumen: >-
+      Prevé auditar las cargas de trabajo por comunidad autónoma para adecuar las ratios de médicos,
+      enfermeros y TCAE por paciente a la media de la UE, con un calendario vinculante de aumento de
+      plazas estructurales.
+    fuente: democracia-21-sanidad-publica
+    pagina: 4
+  - resumen: >-
+      Propone un estándar técnico común y obligatorio para que cualquier profesional autorizado de un
+      centro público consulte en tiempo real el historial clínico completo del paciente, que decidiría
+      quién accede y vería cada acceso desde el móvil.
+    fuente: democracia-21-sanidad-publica
+    pagina: 5
+  - subtema: salud mental
+    resumen: >-
+      Plantea que toda persona atendida por una conducta suicida reciba una llamada de su equipo de
+      salud en 72 horas y seguimiento durante un año, con apoyo psicológico garantizado para quienes
+      pierdan a un ser querido.
+    fuente: democracia-21-contigo-y-con-tu-familia
+    pagina: 7
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-sanidad-publica
+  - democracia-21-contigo-y-con-tu-familia
+  - democracia-21-redefiniendo-el-envejecimiento

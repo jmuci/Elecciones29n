@@ -1,11 +1,44 @@
-# Revisado en Fase 4: democracia21.es anuncia "Subir salarios hasta que lo note tu bolsillo" y
-# "Autónomos, estamos con vosotros" solo como títulos de tarjeta, sin contenido ni documento.
-# Sus dos documentos publicados no tratan el empleo.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema se reparte entre «Más salario, más productividad» y
+# «Autónomo, estamos contigo», revisados enteros. Selección de 5 propuestas (CONTRIBUTING §1.13-14),
+# priorizando las más concretas y medibles. Quedan fuera, entre otras, el plan de integración de la IA
+# (Más salario, p. 2), la compra pública ligada a convenios y el reparto de beneficios (p. 3), la
+# contratación de familiares en negocios de autónomos, el IVA franquiciado (Autónomo, p. 3) y el bono
+# fiscal de los tres primeros años (p. 4). Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: empleo
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - subtema: SMI
+    resumen: >-
+      Propone que un órgano técnico independiente actualice cada año el salario mínimo, con una senda
+      plurianual cuyo objetivo es que no baje de los 2/3 de la mediana salarial.
+    fuente: democracia-21-mas-salario-mas-productividad
+    pagina: 3
+  - resumen: >-
+      Plantea que los incentivos salariales ligados a aumentos verificables de productividad tributen
+      en el IRPF a un tipo único del 5 % hasta 5.000 € al año, con una bonificación del 50 % de la
+      cotización empresarial por ese extra (75 % en pymes de menos de 50 trabajadores).
+    fuente: democracia-21-mas-salario-mas-productividad
+    pagina: 2
+  - resumen: >-
+      Propone una deducción en el impuesto de sociedades para las empresas que suban los salarios por
+      encima del IPC, reforzada para los trabajadores jóvenes.
+    fuente: democracia-21-mas-salario-mas-productividad
+    pagina: 3
+  - resumen: >-
+      Plantea un sistema optativo para los autónomos en el que la cuota se calcule y se cobre cada mes
+      según lo facturado el mes anterior.
+    fuente: democracia-21-autonomo-estamos-contigo
+    pagina: 2
+  - subtema: desempleo
+    resumen: >-
+      Propone un cese de actividad parcial para los autónomos, temporal y activado ante caídas de
+      ingresos excepcionales y sostenidas, verificadas con la facturación electrónica.
+    fuente: democracia-21-autonomo-estamos-contigo
+    pagina: 3
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-mas-salario-mas-productividad
+  - democracia-21-autonomo-estamos-contigo
+  - democracia-21-revolucion-pyme

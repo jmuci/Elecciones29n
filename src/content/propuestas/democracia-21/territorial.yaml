@@ -1,10 +1,38 @@
-# Revisado en Fase 4 (2-nov): democracia21.es solo ha publicado dos planes (vivienda y regeneración);
-# ninguno trata el modelo territorial.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El programa no tiene un tema sobre el modelo territorial y no
+# trata la financiación autonómica, Cataluña ni las lenguas cooficiales (solo menciona la lengua
+# cooficial en el itinerario de acogida para inmigrantes, Política migratoria, p. 4). Se recogen sus
+# medidas sobre la relación entre administraciones y la cohesión territorial. Quedan fuera, por ser de
+# otros temas, la subrogación autonómica de la competencia urbanística (Vivienda, p. 8) y el programa
+# estatal de refuerzo para las comunidades por debajo de la media educativa (Educación, p. 4).
+# Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: territorial
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - resumen: >-
+      Propone un programa de armonización normativa basado en el reconocimiento mutuo: cualquier
+      licencia, homologación, título o requisito aprobado en una comunidad autónoma sería válido en
+      toda España, y se prohibiría por ley repetir trámites o pagar tasas duplicadas para operar en
+      distintas regiones.
+    fuente: democracia-21-menos-normas-mas-claras-y-estables
+    pagina: 3
+  - resumen: >-
+      Plantea una Ley de Interoperabilidad con estándares técnicos comunes obligatorios y un órgano de
+      gobernanza digital con el Estado, las comunidades autónomas y las entidades locales, que
+      conservarían la custodia de sus datos; la financiación estatal de proyectos digitales se
+      vincularía a su cumplimiento.
+    fuente: democracia-21-administracion-moderna-digital
+    pagina: 2
+  - resumen: >-
+      Plantea exigir que el Marco Financiero Plurianual europeo 2028-2034 incluya una estrategia para
+      las regiones escasamente pobladas, impulsar una política europea para las islas no
+      ultraperiféricas y un estatus europeo de protección específico para Ceuta y Melilla.
+    fuente: democracia-21-union-europea-siglo-21
+    pagina: 4
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-menos-normas-mas-claras-y-estables
+  - democracia-21-administracion-moderna-digital
+  - democracia-21-union-europea-siglo-21
+  - democracia-21-politica-migratoria-con-cabeza

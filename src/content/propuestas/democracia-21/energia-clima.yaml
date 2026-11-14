@@ -1,10 +1,49 @@
-# Revisado en Fase 4 (2-nov): democracia21.es solo ha publicado dos planes (vivienda y regeneración);
-# ninguno trata la energía ni el clima.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema se reparte entre «Ser una potencia energética» y
+# «Medio ambiente y adaptación climática», revisados enteros. El programa no menciona la energía
+# nuclear; plantea neutralidad tecnológica entre renovables, almacenamiento y respaldo firme
+# (Potencia energética, p. 2). Selección de 5 propuestas (CONTRIBUTING §1.13-14), priorizando las más
+# concretas. Quedan fuera, entre otras, la separación del operador del sistema y la red, el
+# almacenamiento (p. 3), las zonas industriales y los contratos a largo plazo para pymes (p. 4); y en
+# medio ambiente, la alerta de incendios (p. 2), la renovación de redes de agua y las tarifas por
+# tramos (pp. 3-4), la desalación (p. 4), las olas de calor (p. 4) y los residuos (p. 5).
+# Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: energia-clima
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - resumen: >-
+      Propone prohibir por ley los cambios normativos con carácter retroactivo sobre proyectos de
+      generación ya comprometidos y sustituir las penalizaciones bruscas por escalas graduales y
+      predecibles.
+    fuente: democracia-21-potencia-energetica
+    pagina: 2
+  - subtema: precio de la luz
+    resumen: >-
+      Plantea sustituir la intervención de precios y tarifas por mecanismos de competencia que
+      trasladen al usuario el abaratamiento de la generación limpia, y concentrar las ayudas en un
+      bono social eléctrico automático para los hogares vulnerables.
+    fuente: democracia-21-potencia-energetica
+    pagina: "2-3"
+  - subtema: precio de la luz
+    resumen: >-
+      Prevé reestructurar los tributos energéticos para dejar de penalizar la electricidad frente a
+      los combustibles fósiles y reducir la carga fiscal del consumo eléctrico de familias y empresas.
+    fuente: democracia-21-potencia-energetica
+    pagina: 3
+  - resumen: >-
+      Propone gestionar un millón de hectáreas de monte al año para prevenir incendios, con ganadería
+      extensiva, cultivos y quemas controladas, y rebajar el IVA de los trabajos de prevención.
+    fuente: democracia-21-medio-ambiente-anticipacion-climatica
+    pagina: 2
+  - subtema: agua
+    resumen: >-
+      Plantea una Comisión Técnica del Agua independiente, con dirección avalada por las Cortes, que
+      apruebe un plan director de inversiones a largo plazo con calendario vinculante, y que las
+      confederaciones hidrográficas las dirijan profesionales elegidos por procedimientos de mérito.
+    fuente: democracia-21-medio-ambiente-anticipacion-climatica
+    pagina: 3
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-potencia-energetica
+  - democracia-21-medio-ambiente-anticipacion-climatica

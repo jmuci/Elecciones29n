@@ -1,10 +1,42 @@
-# Revisado en Fase 4: democracia21.es no tiene documento ni tarjeta sobre pensiones. Sus dos
-# documentos publicados no tratan el tema.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema está en «Redefiniendo el envejecimiento», revisado
+# entero. El programa no incluye propuestas sobre la revalorización ni sobre la edad ordinaria de
+# jubilación. Quedan fuera la cotización de los deportistas de alto nivel desde 1980 (Deporte, p. 2) y
+# la cotización al 100 % de la reducción de jornada por cuidado de hijos (Contigo y con tu familia,
+# p. 3; en el tema de familia). Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: pensiones
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - subtema: sostenibilidad
+    resumen: >-
+      Propone convocar en los primeros cien días de legislatura una asamblea de 150 personas elegidas
+      por sorteo, con un consejo de expertos, que delibere durante un año sobre el futuro de las
+      pensiones; el Gobierno respondería a cada recomendación y las llevaría al Pacto de Toledo y a
+      las Cortes.
+    fuente: democracia-21-redefiniendo-el-envejecimiento
+    pagina: 2
+  - subtema: sostenibilidad
+    resumen: >-
+      Plantea reforzar por ley la independencia y los medios de la AIReF, publicar sus proyecciones
+      sobre pensiones como datos abiertos con un simulador público y que sus evaluaciones tengan
+      debate obligatorio en las Cortes.
+    fuente: democracia-21-redefiniendo-el-envejecimiento
+    pagina: 2
+  - resumen: >-
+      Prevé simplificar y dar a conocer las vías para compatibilizar pensión y trabajo, y combatir la
+      discriminación por edad en el empleo.
+    fuente: democracia-21-redefiniendo-el-envejecimiento
+    pagina: 3
+  - subtema: edad de jubilación
+    resumen: >-
+      Propone que la profesión de riesgo suponga por ley jubilación anticipada sin recorte de pensión
+      para la Policía Nacional, la Guardia Civil, el Servicio de Vigilancia Aduanera y todo el
+      personal militar.
+    fuente: democracia-21-seguridad-defensa-mundo-hoy
+    pagina: "3-4"
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-redefiniendo-el-envejecimiento
+  - democracia-21-seguridad-defensa-mundo-hoy
+  - democracia-21-contigo-y-con-tu-familia

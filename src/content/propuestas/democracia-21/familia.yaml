@@ -1,10 +1,51 @@
-# Revisado en Fase 4: democracia21.es anuncia "Todo a favor para ti y tu familia" solo como título de
-# tarjeta, sin contenido ni documento. Sus dos documentos publicados no tratan el tema.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema tiene su propio documento, «Contigo y con tu
+# familia», revisado entero. Selección de 5 propuestas (CONTRIBUTING §1.13-14), priorizando las que
+# el documento destaca en su primer bloque (pobreza infantil) y las más concretas y medibles. Quedan
+# fuera, entre otras, el Escudo Social Único (p. 2), la baja de recuperación posparto (p. 3), la
+# deducción por ayuda en el hogar, los colegios abiertos en días no lectivos y la financiación de la
+# dependencia (p. 4), el apoyo a las familias monoparentales, el acogimiento (p. 5) y la adopción
+# (p. 6); la filiación de los hijos de parejas de mujeres está en el tema de igualdad y derechos, y la
+# salud mental, en el de sanidad. Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: familia
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - resumen: >-
+      Propone fijar por ley el objetivo de reducir la pobreza infantil al menos a la mitad durante la
+      legislatura, del 28 % a menos del 14 %, con las ayudas concedidas de oficio.
+    fuente: democracia-21-contigo-y-con-tu-familia
+    pagina: 2
+  - subtema: ayudas por hijo
+    resumen: >-
+      Plantea una cantidad mensual por hijo que se activaría al inscribir al recién nacido, mayor en
+      los primeros años y en los hogares con menos renta, y decreciente hasta desaparecer en las
+      rentas más altas. Se financiaría en parte reordenando la deducción por maternidad, el
+      Complemento de Ayuda para la Infancia y parte del mínimo por descendientes.
+    fuente: democracia-21-contigo-y-con-tu-familia
+    pagina: "2-3"
+  - subtema: [permisos, conciliación]
+    resumen: >-
+      Propone retribuir al 50 % del salario las ocho semanas de permiso parental que hoy no se pagan,
+      para usarlas por días u horas hasta que el hijo cumpla 12 años, con el doble para las familias
+      monoparentales.
+    fuente: democracia-21-contigo-y-con-tu-familia
+    pagina: 3
+  - subtema: conciliación
+    resumen: >-
+      Plantea que la reducción de jornada por cuidado de hijos cotice al 100 % hasta que el menor
+      cumpla 12 años, y que madres y padres puedan adaptar el horario o reducir la jornada hasta los
+      16 años del hijo.
+    fuente: democracia-21-contigo-y-con-tu-familia
+    pagina: 3
+  - subtema: conciliación
+    resumen: >-
+      Se compromete a que ninguna familia de renta baja o media pague más de la mitad del coste medio
+      de una plaza de 0 a 3 años en su comunidad autónoma, con el descuento aplicado directamente en
+      la factura.
+    fuente: democracia-21-contigo-y-con-tu-familia
+    pagina: 4
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-contigo-y-con-tu-familia
+  - democracia-21-impuestos-justificados-que-se-entiendan
