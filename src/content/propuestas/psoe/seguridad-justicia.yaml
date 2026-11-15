@@ -1,26 +1,54 @@
-# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
-# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
-# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
-# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 426; el 349, delito de deepfakes sexuales, está en igualdad-derechos) y después los más
+# concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): VioGén y Oficina Nacional de Lucha contra los Delitos de
+# Odio (428), derechos profesionales de policías y guardias civiles y fin de la aplicación del Código
+# Penal Militar a la Guardia Civil en funciones policiales (429), Estatuto Básico de los bomberos
+# (430), modelo Barnahus (432), nueva ley de justicia gratuita (433), plantillas judiciales (434),
+# nueva Ley de Enjuiciamiento Criminal (436, en regeneración) y responsabilidad penal de los
+# directivos de plataformas que no retiren contenidos ilegales (408).
+# La Resolución del 41.º Congreso (2024) deja de citarse (§1.4) y queda en fuentes_revisadas.
 partido: psoe
 tema: seguridad-justicia
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - subtema: policía
-    resumen: Plantea mejorar y aumentar los efectivos de la Policía Nacional y la Guardia Civil.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 148
+    resumen: >-
+      Propone aumentar y redistribuir los efectivos de Policía Nacional y Guardia Civil según la
+      población, la dispersión territorial y las jubilaciones, con más seguridad rural y patrullas de
+      proximidad.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 100
+  - resumen: >-
+      Plantea crear un servicio estatal de atención a las víctimas de ciberestafas y ampliar la
+      responsabilidad de bancos y operadoras en su prevención y en el reembolso.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 100
+  - resumen: >-
+      Prevé el primer Plan Nacional Integral contra el Narcotráfico, el refuerzo del Plan Especial del
+      Campo de Gibraltar y más prevención de la radicalización violenta, en especial en el entorno
+      digital.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 100
   - subtema: policía
     resumen: >-
-      Propone prohibir la práctica de perfiles raciales por parte de las Fuerzas y Cuerpos de
-      Seguridad.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 110
-  - resumen: Prevé reforzar el marco legal contra los discursos de odio.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 147
+      Propone una nueva Ley de Seguridad Ciudadana que sustituya a la Ley Orgánica 4/2015, con
+      garantías para los derechos de reunión y manifestación, identificaciones sin discriminación y
+      cámaras corporales en toda la Policía Nacional y la Guardia Civil.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 100
+  - subtema: okupación penal
+    resumen: >-
+      Plantea el desalojo de viviendas ocupadas en 48 horas y seguir combatiendo la ocupación ilegal,
+      con recursos para que los juzgados de guardia tramiten con agilidad el allanamiento de morada y
+      la usurpación.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "101-102"
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid

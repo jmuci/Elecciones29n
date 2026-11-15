@@ -1,29 +1,54 @@
-# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
-# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
-# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
-# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 192, 319 y 370) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): crédito fiscal reembolsable por descendiente (134, en
+# impuestos), complemento de pensiones por hijos (101, en pensiones), universalización de la
+# educación de 0 a 3 años (157, en educación), productos de primera necesidad en los 1.000 primeros
+# días de crianza (196), Ley de Familias y familias monoparentales (199), acogimiento familiar (195) y
+# remuneración de las cuidadoras principales igualada al SMI (322).
+# La Resolución del 41.º Congreso (2024) deja de citarse (§1.4) y queda en fuentes_revisadas.
 partido: psoe
 tema: familia
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
-  - subtema: permisos
-    resumen: Se compromete a extender el permiso de nacimiento y cuidado del menor hasta las 20 semanas.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 85
+  - subtema: ayudas por hijo
+    resumen: >-
+      Propone una prestación estatal por crianza para todos los hogares con menores, progresiva y con
+      protección adicional para los de renta baja integrada en el CAPI, financiada con la nueva
+      tributación de los grandes patrimonios y las rentas del capital.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 57
+  - subtema: ayudas por hijo
+    resumen: >-
+      Plantea una Cuenta de Futuro: 1.000 euros invertidos en fondos públicos para cada niño o niña al
+      nacer, con aportaciones anuales para los hogares de menor renta, disponibles a partir de los 18
+      años para estudios o proyectos propios.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 57
   - subtema: permisos
     resumen: >-
-      Propone dar a las familias monoparentales una protección especial equivalente a la de las
-      familias numerosas y estudiar que puedan extender los permisos de nacimiento.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 85
+      Propone que la Seguridad Social cubra al 100 % de la base reguladora cuatro semanas del permiso
+      parental para el cuidado de hijos menores de ocho años, y una semana más de permiso para el
+      segundo progenitor cuando ambos disfruten sus permisos sin solaparlos.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "41-42"
   - subtema: conciliación
     resumen: >-
-      Propone una Ley de Usos del Tiempo que haga obligatorias la flexibilidad horaria, la
-      concentración de la jornada o el teletrabajo con derecho a la desconexión.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 122
+      Plantea una Ley de Usos del Tiempo de Trabajo, con reducción del tiempo de trabajo sin pérdida
+      salarial y desconexión digital, y ampliar hasta los 16 años la adaptación y reducción de jornada
+      para cuidar a menores.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 81
+  - resumen: >-
+      Propone crear en el Código Civil la unión de amistad, una figura legal para personas unidas por
+      amistad o compañerismo que asumen un compromiso mutuo de cuidados, con beneficios para quienes
+      la formen.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "90-91"
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid

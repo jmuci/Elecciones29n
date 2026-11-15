@@ -1,44 +1,52 @@
-# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
-# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
-# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
-# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): en este tema el programa no destaca ningún compromiso con el número en un recuadro rojo;
+# se eligen los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): participación social, cívica y política de las personas
+# inmigrantes (390), Unidad de Apoyo a la Infancia Migrante (200) y lucha contra el racismo y la
+# discriminación, con la Ley Zerolo (392-398). El programa no trata la regularización, las
+# expulsiones ni la nacionalidad.
+# La Resolución del 41.º Congreso (2024) deja de citarse (§1.4) y queda en fuentes_revisadas.
 partido: psoe
 tema: inmigracion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - subtema: integración
     resumen: >-
-      Propone promover la contratación en origen mediante un sistema de migración legal, segura y
-      ordenada, y agilizar los permisos de trabajo y de búsqueda de empleo para los perfiles más
-      demandados.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 25
+      Propone desplegar el Plan de Integración y Ciudadanía 2026-2030, con una dotación inicial de 500
+      millones de euros, para favorecer la integración, la igualdad de derechos y el cumplimiento de
+      las obligaciones de las personas migrantes.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 93
   - subtema: integración
     resumen: >-
-      Plantea mejorar los programas de homologación de títulos para que la incorporación de personas
-      migrantes con alta cualificación sea más ágil.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 25
-  - subtema: integración
-    resumen: >-
-      Propone un Plan de Inclusión y Convivencia Intercultural que facilite a la población de
-      diversos orígenes étnicos el acceso a la educación, la sanidad y la vivienda.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 110
+      Plantea simplificar los trámites, impulsar la contratación en origen, agilizar la homologación de
+      títulos y facilitar el acceso al empleo de quienes vienen a vivir y trabajar en España.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 93
   - subtema: asilo
     resumen: >-
-      Propone fortalecer y ampliar la red de acogida, con los derechos humanos de las personas
-      migrantes en el centro, y un sistema de recepción inclusivo para refugiados y solicitantes de
-      asilo y de protección internacional.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 159
-  - resumen: >-
-      Se compromete a proteger de manera especial el bienestar y los derechos de los menores
-      extranjeros no acompañados.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 159
+      Propone ampliar las vías legales y seguras de protección internacional, con reasentamiento y
+      visados humanitarios, y reforzar el sistema público de acogida y asilo con financiación estable y
+      atención en salud mental, educación, traducción e integración.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 93
+  - subtema: asilo
+    resumen: >-
+      Se compromete a un sistema de acogida que refuerce la protección de los niños, niñas y
+      adolescentes que llegan solos, con el interés superior del menor en el centro.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 94
+  - subtema: [fronteras, asilo]
+    resumen: >-
+      Plantea defender en la UE una política migratoria basada en la solidaridad, las necesidades del
+      mercado de trabajo y los derechos humanos, que combine la lucha contra las mafias con la gestión
+      del asilo, las fronteras y las vías legales y seguras.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 111
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid

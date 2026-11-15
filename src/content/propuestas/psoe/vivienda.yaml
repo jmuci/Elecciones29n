@@ -1,22 +1,52 @@
-# Fase 4 (2-nov): psoe.es no tiene programa para el 29N; se resumen compromisos de las noticias de
-# campaña de su web (Actualidad > Noticias). `pagina` cuenta los párrafos del cuerpo de la noticia.
-# Como hay notas para el 29N sobre vivienda, no se cita la Resolución del 41.º Congreso
-# (CONTRIBUTING §1.4). Las noticias sobre los decretos del Consejo de Ministros (línea TU CASA,
-# reales decretos-ley de vivienda) son acción de gobierno y no se recogen.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 38, 61, 70, 73 y 85) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): programa TU CASA (67), deducciones a inquilinos y
+# bonificaciones a propietarios que bajen el alquiler (65-66), intermediación pública del alquiler (68),
+# impuesto sobre solares residenciales ociosos (53), Ley de Sostenibilidad y Movilización del Suelo
+# (50), más de 25.000 millones del ICO para vivienda asequible (55), rehabilitación de otras 550.000
+# viviendas (59), Ley de proveedores sociales de vivienda (45) y registro de precios del alquiler (79).
+# Las notas de prensa de campaña dejan de citarse (§1.4; el decreto de vivienda y el 6 % de vivienda
+# protegida en 2030 no aparecen en el programa) y quedan en fuentes_revisadas.
 partido: psoe
 tema: vivienda
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
-  - subtema: alquiler
-    resumen: Se compromete a que el próximo Parlamento mantenga y refuerce el decreto de vivienda.
-    fuente: psoe-nota-esperanza-dos-hermanas
-    pagina: "párrafo 2"
-  - subtema: vivienda pública
-    resumen: Fija como objetivo para 2030 que España tenga un 6 % de vivienda protegida.
-    fuente: psoe-nota-supremo-ponferrada
-    pagina: "párrafo 6"
+  - resumen: >-
+      Propone reformar la Constitución para que la vivienda sea un derecho fundamental exigible a los
+      poderes públicos, y movilizar cada año el 1 % del PIB para garantizar el acceso a la vivienda.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 28
+  - subtema: [vivienda pública, oferta y construcción]
+    resumen: >-
+      Plantea un parque público estatal de 100.000 viviendas asequibles, construidas o adquiridas por
+      CASA 47, y que las viviendas públicas o protegidas de forma permanente sean al menos la cuarta
+      parte de las nuevas.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "28-29"
+  - subtema: [alquiler, jóvenes]
+    resumen: >-
+      Propone ampliar la duración de los contratos de alquiler, congelar temporalmente las rentas que
+      superen los índices de referencia en los mercados tensionados y crear una garantía pública de
+      acceso al alquiler para jóvenes en forma de seguro de impago.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "31-32"
+  - resumen: >-
+      Propone un impuesto progresivo sobre las viviendas de grandes tenedores que no se destinen a
+      alquiler asequible (turísticas, vacías o alquiladas a lo que califica de "precio abusivo") y
+      permitir a los ayuntamientos gravar las pernoctaciones en viviendas de uso turístico.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "32-33"
+  - subtema: desahucios
+    resumen: >-
+      Plantea un marco estable de protección frente a los desahucios de personas vulnerables sin
+      alternativa habitacional, cuyo coste asuman las administraciones y no el pequeño propietario.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 34
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-nota-esperanza-dos-hermanas
   - psoe-nota-supremo-ponferrada
   - psoe-nota-tijeras-motosierras-zaragoza

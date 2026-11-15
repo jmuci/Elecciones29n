@@ -1,44 +1,56 @@
-# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
-# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
-# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
-# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 130, 134, 457 y 458) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): deducción en el IRPF que se activa con las subidas de
+# precios (88), exención en el IRPF de las ventas de vivienda a proveedores sociales (46), impuesto
+# sobre solares residenciales ociosos (53), fiscalidad para la transición ecológica (241) y la
+# tributación complementaria de los grandes patrimonios, que el programa cita sin detallar (127). El
+# impuesto a las viviendas de grandes tenedores y el recargo municipal a las pernoctaciones turísticas
+# (70, 72-73) están en vivienda.
+# La Resolución del 41.º Congreso (2024) deja de citarse (§1.4) y queda en fuentes_revisadas.
 partido: psoe
 tema: impuestos
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - subtema: IRPF
     resumen: >-
-      Propone una tributación mínima del 50 % en la tarifa general del IRPF para las rentas
-      superiores a 300.000 euros anuales.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 107
+      Propone subir la tributación de las rentas del capital más altas: mantener los dos primeros
+      tramos (19 % hasta 6.000 € y 21 % hasta 50.000 €) y elevar los tipos a partir de ahí hasta un
+      máximo del 35 % para las superiores a 300.000 €.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 49
   - subtema: IRPF
     resumen: >-
-      Plantea un gravamen efectivo mínimo sobre las rentas del capital, para acercarlo al del
-      trabajo, con un tipo marginal máximo del 30 %.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 107
-  - subtema: patrimonio y sucesiones
-    resumen: >-
-      Propone subir hasta un 5 % el tipo del impuesto sobre el patrimonio de los mayores
-      patrimonios, con un tratamiento especial de los bienes improductivos.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 107
-  - subtema: patrimonio y sucesiones
-    resumen: >-
-      Propone un impuesto estatal sobre las grandes herencias y donaciones que actúe como impuesto
-      mínimo e impida que las comunidades autónomas dejen sin efecto el de Sucesiones y Donaciones.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 107
+      Plantea convertir el mínimo por descendiente del IRPF en un crédito fiscal reembolsable, del que
+      se beneficiarían 2 millones de hogares de ingresos medios y bajos, y seguir exonerando a las
+      rentas más bajas para que las subidas del SMI no supongan más impuestos.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 50
   - subtema: sociedades
     resumen: >-
-      Plantea un acuerdo global de impuestos que haga efectivo el impuesto del 15 % a todas las
-      multinacionales e instaure impuestos globales a las transacciones financieras y a los grandes
-      patrimonios.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 107
+      Propone una Ley de Salarios Justos que aumente la tributación de las empresas cotizadas cuyo
+      primer ejecutivo cobre más de 100 veces la mediana de su plantilla, con un tramo superior a
+      partir de 200 veces.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 49
+  - subtema: otros
+    resumen: >-
+      Plantea gravar más a las grandes tecnológicas y al sector de la IA, crear una tasa a los viajes
+      de lujo (megayates, vuelos privados y billetes en business con salida de España) y subir la tasa
+      Tobin del 0,2 % al 0,4 %.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "49-50"
+  - subtema: [patrimonio y sucesiones, sociedades]
+    resumen: >-
+      Propone impulsar un impuesto mínimo global sobre las grandes fortunas, apoyar en la OCDE y la ONU
+      la tributación mínima efectiva de las grandes multinacionales y promover el debate sobre un
+      gravamen a los tokens que usan los modelos de inteligencia artificial.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 108
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid

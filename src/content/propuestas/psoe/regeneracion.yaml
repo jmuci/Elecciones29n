@@ -1,40 +1,53 @@
-# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
-# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
-# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
-# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 371) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): acceso a las carreras judicial y fiscal con pruebas
+# anonimizadas y prohibición de la financiación privada de las asociaciones judiciales y fiscales
+# (435), ampliación de las plantillas judiciales y fiscales (434), programa Cumpliendo (447), control
+# de la contratación, las subvenciones y la financiación política (448), Defensor de las Generaciones
+# Futuras (375, 444), simplificación del voto exterior y estudio de una circunscripción exterior
+# (489, 492).
+# La Resolución del 41.º Congreso (2024) deja de citarse (§1.4) y queda en fuentes_revisadas.
 partido: psoe
 tema: regeneracion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - resumen: >-
-      Propone crear un "escaño ciudadano" en el Congreso, el Senado y los parlamentos autonómicos,
-      sin titular fijo ni voto, desde el que representantes de la sociedad civil puedan preguntar al
-      Gobierno y presentar iniciativas.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 144
-  - resumen: Propone reformar la LOREG para reconocer el derecho al voto a partir de los 16 años.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 144
+      Propone crear un escaño ciudadano sin voto en el Congreso y el Senado para que la sociedad civil
+      pueda preguntar al Gobierno y presentar iniciativas y enmiendas, y reducir las firmas necesarias
+      para la iniciativa legislativa popular.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 91
+  - resumen: >-
+      Plantea suprimir los aforamientos de los cargos públicos para los delitos ajenos al ejercicio de
+      su cargo y rebajar la edad de voto a los 16 años.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 91
   - subtema: corrupción
     resumen: >-
-      Propone regular la actividad de los grupos de interés con registro, código de conducta, huella
-      legislativa y publicidad de las agendas de parlamentarios y miembros del Gobierno.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 145
+      Propone una Ley Orgánica de Integridad Pública, una Estrategia Nacional Anticorrupción con mapas
+      de riesgos en todas las administraciones y una Agencia Independiente de Integridad Pública que
+      coordine los organismos de supervisión y proteja a quienes denuncian.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 103
   - subtema: corrupción
     resumen: >-
-      Fija como objetivo situar a España entre las 20 primeras democracias en los rankings de
-      percepción de la corrupción.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 142
+      Plantea una ley de grupos de interés con registro obligatorio, publicidad de sus reuniones y
+      huella normativa, y más transparencia sobre el patrimonio, las actividades y las
+      incompatibilidades de los cargos públicos.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 103
   - subtema: [justicia, independencia de órganos]
     resumen: >-
-      Plantea reformas legales para corregir disfunciones del sistema judicial y evitar dilaciones, y
-      que cualquier reforma del CGPJ evite que se repita un bloqueo como el vivido.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 138
+      Propone un mandato de cinco años para la Fiscalía General del Estado, desvinculado de la
+      legislatura, prohibir las instrucciones del Gobierno sobre casos concretos y una nueva Ley de
+      Enjuiciamiento Criminal que atribuya la investigación a la Fiscalía bajo supervisión judicial.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 101
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid

@@ -1,21 +1,55 @@
-# Fase 4: psoe.es no tiene programa ni documentos para el 29N; se resumen notas de prensa del
-# partido sobre actos de campaña (Actualidad > Noticias). Las noticias sobre acuerdos del
-# Consejo de Ministros son acción de gobierno y no se recogen.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 87) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): reparto de beneficios con las plantillas (90), Pacto de
+# Estado por los salarios (91), Observatorio de Salarios y Productividad (92), justicia laboral (112),
+# prestación por desempleo de los becarios (113), salud mental en el trabajo (114), nueva Ley de
+# Prevención de Riesgos Laborales (115), autónomos y mutualidades (116-117), empleo juvenil y Estatuto
+# del Becario (118), participación de los trabajadores en la empresa (120), Ley de Negociación
+# Colectiva (121), políticas activas de empleo con el objetivo del pleno empleo (122) y cuota de
+# empleo de personas con discapacidad (124).
+# Las notas de prensa de campaña dejan de citarse (§1.4; el objetivo de un paro del 8 % no aparece en
+# el programa) y quedan en fuentes_revisadas.
 partido: psoe
 tema: empleo
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - subtema: SMI
     resumen: >-
-      Se compromete a subir el salario mínimo interprofesional mientras gobierne, con o sin acuerdo
-      con la patronal.
-    fuente: psoe-nota-aborto-constitucion-granada
-    pagina: 6.º párrafo
-  - subtema: desempleo
-    resumen: Fija como objetivo una tasa de paro del 8 % en los próximos cuatro años.
-    fuente: psoe-nota-pensiones-constitucion-gijon
-    pagina: 7.º párrafo
+      Propone fijar por ley que el salario mínimo esté por encima del 60 % del salario medio y se
+      actualice periódicamente según los precios, los salarios y la productividad, sin que las subidas
+      queden absorbidas por complementos salariales.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 38
+  - subtema: jornada
+    resumen: >-
+      Se compromete a completar la reducción de la jornada a 37,5 horas sin pérdida de salario, a
+      incentivar que la negociación colectiva avance hacia las 35 horas y a implantar un registro
+      horario digital.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 42
+  - subtema: contratación
+    resumen: >-
+      Plantea reformar el despido improcedente para que la reparación sea efectiva, proporcionada y
+      disuasoria, conforme a la Carta Social Europea, y recuperar los salarios de tramitación.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 42
+  - subtema: contratación
+    resumen: >-
+      Propone que el contrato a tiempo parcial justifique por qué no es a jornada completa y que se
+      considere a jornada completa cuando las horas pactadas, incluidas las complementarias, superen el
+      80 % de la jornada ordinaria.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 44
+  - subtema: [contratación, desempleo]
+    resumen: >-
+      Prevé el Plan Nuevo Rumbo, con incentivos para contratar a mayores de 45 años, formación para
+      parados de larga duración y un itinerario específico para mujeres de más de 45 años.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 44
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-nota-pensiones-constitucion-gijon
   - psoe-nota-aborto-constitucion-granada

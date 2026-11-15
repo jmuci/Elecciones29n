@@ -1,40 +1,51 @@
-# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
-# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
-# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
-# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 136, 137, 153, 154 y 155; los tres últimos se agrupan en una propuesta) y después los más
+# concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): atención pediátrica y de proximidad en zonas rurales
+# (139), cuidados paliativos (140), contrato social con los profesionales sanitarios (142), Plan VEO
+# (144), medicamentos innovadores (145), eutanasia (147, en igualdad-derechos), Ley de Salud Digital
+# (148), estrategia contra el cáncer (150) y salud sexual y reproductiva (156).
+# La Resolución del 41.º Congreso (2024) deja de citarse (§1.4) y queda en fuentes_revisadas.
 partido: psoe
 tema: sanidad
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
-  - resumen: >-
-      Propone incluir en la Constitución el acceso a la sanidad pública universal y gratuita, con el
-      mismo nivel jurídico que el derecho a la educación.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 11
-  - resumen: >-
-      Plantea blindar por ley el sistema sanitario público, con la gestión directa como modelo de
-      gestión del SNS, e impedir que se establezcan nuevos copagos sanitarios.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 86
-  - subtema: atención primaria
-    resumen: >-
-      Prevé reforzar el Marco Estratégico para la Atención Primaria, especialmente en el medio rural.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 87
-  - subtema: salud mental
-    resumen: >-
-      Propone reforzar la atención a la salud mental en el sistema público hasta acercarse a 18
-      especialistas en psicología clínica y psiquiatría por cada 100.000 habitantes.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 92
   - subtema: listas de espera
     resumen: >-
-      Plantea un acuerdo entre todas las comunidades autónomas para reducir los tiempos medios de
-      espera en la asistencia sanitaria, con un tratamiento homogéneo de la información.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 93
+      Se compromete a acabar con las listas de espera, con una financiación pública de la sanidad en
+      torno al 7 % del PIB, el refuerzo del carácter público del SNS y más inversión en prevención
+      hasta converger con la media europea.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 50
+  - resumen: >-
+      Propone incorporar progresivamente a la sanidad pública los tratamientos dentales básicos de los
+      adultos (empastes, endodoncias, reconstrucciones y tratamientos periodontales) y, mientras tanto,
+      una ayuda directa de hasta 200 euros anuales por persona, empezando por las rentas medias y bajas.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 50
+  - resumen: >-
+      Plantea limitar la privatización de la sanidad, con la gestión directa como modalidad preferente,
+      y aprobar una Ley de Buen Gobierno y Buena Gestión del SNS.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "50-51"
+  - subtema: [salud mental, atención primaria]
+    resumen: >-
+      Propone garantizar la atención psicológica gratuita en la sanidad pública, con una primera
+      consulta en un plazo máximo de 30 días, y reforzar la atención primaria con equipos
+      multidisciplinares y más capacidad diagnóstica.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 51
+  - resumen: >-
+      Prevé ayudas para compensar el sobrecoste de los productos sin gluten, regular los vapeadores y
+      las bolsas de nicotina (información de componentes, dosis máximas y prohibición de sabores
+      agradables) y mejorar el diagnóstico temprano de las enfermedades raras.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 52
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid

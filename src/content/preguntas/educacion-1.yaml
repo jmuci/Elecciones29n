@@ -9,7 +9,7 @@ opciones:
       - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 67 }
   - texto: Más becas y una formación profesional de calidad para reducir el abandono escolar.
     partidos:
-      - { partido: psoe, fuente: psoe-nota-tijeras-motosierras-zaragoza, pagina: párrafo 8 }
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 53 }
   - texto: >-
       Derogar las leyes que permiten privatizar la educación, aumentar mucho su financiación pública y bajar las
       ratios de alumnos.
@@ -20,4 +20,4 @@ opciones:
       del profesor.
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 41 }
-revisado: 2026-11-14
+revisado: 2026-11-15

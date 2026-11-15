@@ -1,0 +1,20 @@
+# Programa electoral del PSOE para el 29N (114 páginas, PDF A4): portada «La fuerza de seguir
+# avanzando. Programa elecciones generales 29 noviembre 2026»; 500 compromisos numerados en 8
+# bloques más una introducción. Presentado el 15-nov-2026 en Alcorcón. Metadatos del PDF: título
+# «PROGRAMA GENERALES 29N26», creado el 14-nov-2026 y modificado el 15-nov-2026 (PDFMaker para Word);
+# subido a /media-content/2026/11/.
+# psoe.es está tras Incapsula: la descarga automatizada recibe una página HTML antibots en lugar del
+# PDF. El mantenedor descargó el fichero a mano desde la URL oficial el 15-nov-2026; el sha256 es el
+# de esa copia. `check-sources` lo listará como `antibot`.
+# Snapshot pendiente: Wayback solo capturó la página antibots de Incapsula (captura 20261115153009,
+# sin el PDF), así que no hay `archivo`.
+# `pagina` = número impreso, que coincide con el del índice. No coincide con la página del PDF:
+# página del PDF = número impreso − 1 (la portada no lleva número y el índice, 2.ª página del PDF,
+# lleva el 3). Las portadillas de cada bloque no llevan número.
+partido: psoe
+titulo: "La fuerza de seguir avanzando. Programa elecciones generales 29 noviembre 2026"
+url: https://www.psoe.es/media-content/2026/11/PROGRAMAPSOE29N26.pdf
+tipo: programa
+publicado: 2026-11-15
+consultado: 2026-11-15
+sha256: e9c8341339538b550641b6ddb1c3fdfeef7fda6a8a1a4be9e8d6a44cbc229bf5

@@ -1,31 +1,51 @@
-# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
-# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
-# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
-# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 229) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): Fondo de Compensación Interterritorial e incentivos
+# regionales (230), financiación local (232), España rural y despoblación (233), actualización de la
+# Ley de Bases del Régimen Local (386), Canarias, Ceuta y Melilla (387) y reconocimiento del catalán,
+# el euskera y el gallego como lenguas oficiales de la UE (485). El programa no incluye propuestas
+# específicas sobre Cataluña.
+# La Resolución del 41.º Congreso (2024) deja de citarse (§1.4) y queda en fuentes_revisadas.
 partido: psoe
 tema: territorial
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - subtema: financiación autonómica
     resumen: >-
-      Propone reformar la financiación autonómica para aumentar los recursos de todas las comunidades
-      autónomas y evitar la competencia a la baja en Patrimonio, Sucesiones y los tramos altos del
-      IRPF, hacia un modelo de financiación federal.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 132
+      Prevé impulsar el nuevo sistema de financiación autonómica propuesto por el Gobierno y aprobado en
+      el Consejo de Política Fiscal y Financiera, que aporta 21.000 millones de euros adicionales a las
+      comunidades autónomas.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 61
+  - subtema: financiación autonómica
+    resumen: >-
+      Plantea avanzar en la asunción parcial por el Estado de 83.000 millones de euros de deuda
+      autonómica, para reducir la carga financiera de las comunidades y liberar recursos para los
+      servicios públicos.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 62
   - resumen: >-
-      Plantea avanzar hacia la federalización del Estado y reformar el Senado para convertirlo en una
-      cámara de representación territorial.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 134
+      Propone reformar el Senado para convertirlo en una cámara de representación territorial, con
+      circunscripciones que coincidan con el ámbito autonómico.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 92
+  - resumen: >-
+      Plantea convocar la Conferencia de Presidentes con una periodicidad fija y un reglamento que
+      garantice el seguimiento de sus acuerdos, y una ley de cooperación entre el Estado, las
+      comunidades autónomas y los gobiernos locales que reduzca la conflictividad competencial.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 92
   - subtema: lenguas
     resumen: >-
-      Se compromete a seguir apostando por la protección, el estudio y el uso de las lenguas
-      cooficiales en todos los ámbitos.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 134
+      Propone consolidar el uso de las lenguas cooficiales en las Cortes Generales y extenderlo a la
+      atención de la Administración General del Estado en los territorios donde son oficiales.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 92
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid
