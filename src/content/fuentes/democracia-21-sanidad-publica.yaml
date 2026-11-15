@@ -3,10 +3,10 @@
 # un PDF por tema y no ofrece el programa completo en un solo fichero. 6 páginas (portada + texto),
 # sin numeración impresa: `pagina` = página del PDF. Metadatos del PDF: creado el 11-nov-2026. Fecha
 # de publicación: no consta.
-# Snapshot de Wayback Machine pendiente.
 partido: democracia-21
 titulo: "La España que merecemos: Sanidad pública: cuidar a quienes nos cuidan"
 url: https://mi.democracia21.es/docs/programa/sanidad-publica-democracia21.pdf
 tipo: programa
 consultado: 2026-11-14
+archivo: https://web.archive.org/web/20261114221024/https://mi.democracia21.es/docs/programa/sanidad-publica-democracia21.pdf
 sha256: 165a4f1a50f9f1a3315d672ba9f3f9793c9b240b2227a643fb39636bb47de957
