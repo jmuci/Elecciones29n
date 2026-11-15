@@ -1,10 +1,44 @@
-# Revisado en Fase 4: democracia21.es solo ha publicado sus planes de vivienda y regeneración
-# ("España limpia"), que no tratan la educación.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema tiene su propio documento, «La educación en el
+# centro», revisado entero. Selección de 5 propuestas (CONTRIBUTING §1.13-14): una por cada bloque del
+# documento salvo el primero, priorizando las más concretas. Quedan fuera, entre otras, la tecnología
+# como materia troncal y la IA educativa (p. 2), la materia de cultura económica en la ESO (p. 3), la
+# etapa de 0 a 3 años (p. 4), las pruebas de acceso a los grados de Educación (p. 5) y los grados
+# flexibles (p. 6); el cheque guardería está en el tema de familia. Pendiente de revisión humana.
 partido: democracia-21
 tema: educacion
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - resumen: >-
+      Propone un Plan Estatal Educativo para situar a España en el top 10 europeo en las tres áreas de
+      PISA en un plazo máximo de 8 años, con más horas para las materias instrumentales.
+    fuente: democracia-21-educacion-en-el-centro
+    pagina: 3
+  - resumen: >-
+      Plantea un MIR Educativo: dos años de formación práctica remunerada en colegios e institutos,
+      supervisada por profesores en ejercicio.
+    fuente: democracia-21-educacion-en-el-centro
+    pagina: 5
+  - subtema: [becas, universidad]
+    resumen: >-
+      Se compromete a pagar las becas al inicio del curso, unificando los calendarios académicos antes
+      del verano, evaluando la renta fiscal de dos años antes y asignando la revisión económica al
+      Ministerio de Hacienda.
+    fuente: democracia-21-educacion-en-el-centro
+    pagina: "6-7"
+  - subtema: FP
+    resumen: >-
+      Propone trasladar por defecto las prácticas de FP al segundo curso y crear un tutor compartido
+      sectorial, financiado por la Administración, para las pymes que no puedan tutorizar por sí solas.
+    fuente: democracia-21-educacion-en-el-centro
+    pagina: 7
+  - resumen: >-
+      Plantea integrar el Bono Cultural Joven y el Verano Joven (300 millones de euros anuales) en una
+      cuenta de formación de unos 500 euros por joven al cumplir 18 años, para matrículas, idiomas,
+      oposiciones o materiales de estudio, entre otros usos.
+    fuente: democracia-21-educacion-en-el-centro
+    pagina: 8
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-educacion-en-el-centro
+  - democracia-21-contigo-y-con-tu-familia

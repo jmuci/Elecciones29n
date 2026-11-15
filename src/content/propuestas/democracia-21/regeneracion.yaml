@@ -1,12 +1,19 @@
-# Fase 4: D21 no tiene programa; se resume su plan "España limpia". Selección (CONTRIBUTING §1.14): una
-# medida por cada bloque que el plan destaca en su presentación (p. 2: clientelismo, corrupción,
-# instituciones independientes), priorizando las más concretas. Quedan fuera, entre otras, la Oficina
-# Anticorrupción (p. 6), la suspensión de la financiación pública a partidos investigados (p. 7), las
-# asambleas ciudadanas (p. 10), el límite de ocho años en el cargo (p. 12) y las listas abiertas (p. 13).
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema es el bloque «España Limpia» (versión del 11-nov,
+# mismo texto y paginación que la del 2-nov), revisado entero. Selección de 5 propuestas (CONTRIBUTING
+# §1.13-14): una medida por cada uno de los cinco primeros temas del bloque (clientelismo, corrupción,
+# reparto de cargos, aforamientos y poder al ciudadano), que coinciden con los ejes que destaca su
+# presentación (p. 2), priorizando las más concretas. Respecto a la versión del 2-nov, la asamblea
+# ciudadana (p. 10) sustituye a los juzgados especializados en corrupción (p. 5), para cubrir el eje
+# «devolviendo el control a la ciudadanía». Quedan fuera, entre otras, la IGAE (pp. 5-6), la Oficina
+# Anticorrupción (p. 6), la suspensión de la financiación pública a partidos investigados (p. 7), el
+# código ético (p. 12), el límite de ocho años en el cargo (p. 12) y las listas abiertas (p. 13); y,
+# en otros temas, los directores generales funcionarios de carrera (Función pública independiente,
+# p. 2). Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: regeneracion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: corrupción
     resumen: >-
@@ -15,12 +22,6 @@ propuestas:
       de "enchufismo".
     fuente: democracia-21-espana-limpia
     pagina: 3
-  - subtema: [corrupción, justicia]
-    resumen: >-
-      Plantea juzgados especializados en corrupción y que los casos de corrupción de políticos de una
-      comunidad autónoma los juzgue el tribunal de una comunidad adyacente.
-    fuente: democracia-21-espana-limpia
-    pagina: 5
   - subtema: corrupción
     resumen: >-
       Propone que los delitos de corrupción no prescriban y que los condenados por sentencia firme por
@@ -41,6 +42,11 @@ propuestas:
       de diputados y senadores y limitar los de los miembros del Gobierno.
     fuente: democracia-21-espana-limpia
     pagina: 9
+  - resumen: >-
+      Plantea que la ciudadanía pueda activar, con firmas del 1 % del censo en 12 meses, una asamblea
+      ciudadana elegida por sorteo cuando el Parlamento bloquee de forma reiterada decisiones
+      relevantes; sus propuestas se someterían a referéndum consultivo.
+    fuente: democracia-21-espana-limpia
+    pagina: 10
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
   - democracia-21-espana-limpia

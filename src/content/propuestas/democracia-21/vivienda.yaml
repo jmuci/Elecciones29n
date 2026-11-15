@@ -1,8 +1,16 @@
-# Fase 1 (adelanto de Fase 2): D21 no tiene programa; se resume su plan "Vivienda, prioridad nº1".
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema tiene su propio documento, «Vivienda, prioridad nº1»
+# (mismo fichero que el plan del 2-nov), revisado entero. Selección de 5 propuestas (CONTRIBUTING
+# §1.13-14): las medidas que el plan destaca en su presentación (pp. 2-3: limitación del alquiler con
+# garantía al propietario, fondos europeos, Plan Nacional de Barrios) y luego las más concretas. Las
+# medidas fiscales del plan están en el tema de impuestos. Quedan fuera, entre otras, el alquiler por
+# habitaciones (p. 5), la rehabilitación a cambio de usufructo (p. 6) y el desbloqueo de suelo público
+# (p. 9); en otros temas del programa, el cohousing sénior (Redefiniendo el envejecimiento, p. 3).
+# Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: vivienda
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
   - subtema: alquiler
     resumen: >-
@@ -40,4 +48,5 @@ propuestas:
     pagina: 8
 fuentes_revisadas:
   - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-redefiniendo-el-envejecimiento
+  - democracia-21-union-europea-siglo-21

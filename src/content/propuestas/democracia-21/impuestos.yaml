@@ -1,38 +1,56 @@
-# Fase 1 (adelanto de Fase 2): D21 no tiene programa ni plan fiscal; solo medidas fiscales
-# de su plan de vivienda.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema tiene su propio documento, «Impuestos justificados y
+# que se entiendan», revisado entero; su presentación (p. 2) plantea que no hace falta subir ni bajar
+# impuestos, sino un sistema progresivo, transparente, neutral y sencillo. Hay medidas fiscales en
+# otros temas del programa. Selección de 5 propuestas (CONTRIBUTING §1.13-14), priorizando las más
+# concretas y medibles. Quedan fuera, entre otras: el recibo del contribuyente, la renta preparada por
+# Hacienda y el derecho al error (p. 2), la lucha contra el fraude (p. 3) y las reglas estables (p. 4);
+# y, en otros temas, el IRPF del 5 % para incentivos por productividad (Más salario, p. 2; en el tema
+# de empleo), el IVA franquiciado (Autónomo, p. 3), la fiscalidad eléctrica (Potencia energética,
+# p. 3; en el tema de energía), el recargo a compradores extracomunitarios y el IVA de los alquileres
+# turísticos (Vivienda, p. 6) y las rebajas de IVA a servicios deportivos, música grabada y
+# medicamentos veterinarios (Deporte, Cultura y Protección animal). Pendiente de revisión humana.
 partido: democracia-21
 tema: impuestos
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-14
 propuestas:
+  - subtema: IRPF
+    resumen: >-
+      Propone actualizar cada año por ley con el IPC los tramos del IRPF, los mínimos personales y
+      familiares y las reducciones, desde el 1 de enero siguiente y sin efectos retroactivos.
+    fuente: democracia-21-impuestos-justificados-que-se-entiendan
+    pagina: 3
+  - subtema: IRPF
+    resumen: >-
+      Plantea que las ganancias por la venta de activos mantenidos menos de un año tributen como
+      rentas del trabajo, y que la inversión a largo plazo conserve su tratamiento actual.
+    fuente: democracia-21-impuestos-justificados-que-se-entiendan
+    pagina: 3
+  - subtema: [fiscalidad general, otros]
+    resumen: >-
+      Prevé que todos los beneficios fiscales tengan un objetivo medible y una evaluación
+      independiente, y que desaparezcan si no lo cumplen. Plantea también equiparar los impuestos
+      especiales a los de la Unión Europea con un calendario anunciado.
+    fuente: democracia-21-impuestos-justificados-que-se-entiendan
+    pagina: 3
+  - subtema: sociedades
+    resumen: >-
+      Propone un impuesto de sociedades del 5 % para las pymes sobre los beneficios que se mantengan
+      en la empresa; tributarían de forma ordinaria al repartir dividendos.
+    fuente: democracia-21-revolucion-pyme
+    pagina: 2
   - subtema: [IVA, vivienda]
     resumen: >-
       Propone eliminar el IVA, el ITP y el AJD en la compra de vivienda habitual para menores de 35
-      años, hasta un máximo de 400.000 €.
+      años y, para el resto de compradores, un ITP del 2 %, el AJD al 0 % y el IVA superreducido del
+      4 %, en ambos casos hasta 400.000 €.
     fuente: democracia-21-vivienda-prioridad-1
     pagina: 5
-  - subtema: [IVA, vivienda]
-    resumen: >-
-      Plantea para el resto de compradores de vivienda habitual (hasta 400.000 €) un ITP único del
-      2 %, el AJD al 0 % y el IVA superreducido del 4 %.
-    fuente: democracia-21-vivienda-prioridad-1
-    pagina: 5
-  - subtema: [IVA, vivienda]
-    resumen: >-
-      Propone el IVA superreducido del 4 % para la construcción o rehabilitación integral de vivienda
-      asequible, y reducir tasas municipales, ICIO y plusvalías.
-    fuente: democracia-21-vivienda-prioridad-1
-    pagina: 8
-  - subtema: vivienda
-    resumen: >-
-      Propone un recargo mínimo del 10 % (ampliable por las comunidades autónomas hasta el 25 %) en
-      la compra de vivienda no habitual por inversores extracomunitarios.
-    fuente: democracia-21-vivienda-prioridad-1
-    pagina: 6
-  - subtema: [IVA, vivienda]
-    resumen: Propone aplicar el IVA del 10 % a los alquileres turísticos de corta estancia.
-    fuente: democracia-21-vivienda-prioridad-1
-    pagina: 6
 fuentes_revisadas:
+  - democracia-21-impuestos-justificados-que-se-entiendan
+  - democracia-21-revolucion-pyme
   - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-mas-salario-mas-productividad
+  - democracia-21-autonomo-estamos-contigo
+  - democracia-21-potencia-energetica

@@ -5,6 +5,7 @@ opciones:
   - texto: Reforzar las plantillas, con más médicos y mejores condiciones laborales y retributivas.
     partidos:
       - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 69 }
+      - { partido: democracia-21, fuente: democracia-21-sanidad-publica, pagina: 4 }
   - texto: Derogar las leyes que permiten privatizar la sanidad y aumentar mucho su financiación pública.
     partidos:
       - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 36 }

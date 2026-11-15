@@ -1,10 +1,51 @@
-# Revisado en Fase 4 (2-nov): democracia21.es anuncia "Construir la Unión Europea del Siglo 21" solo
-# como título, sin contenido. Sus dos documentos publicados no tratan la política exterior ni la defensa.
+# Programa «La España que merecemos» (mi.democracia21.es/programa), revisado entero el 2026-11-14 (los
+# 25 PDF por tema que enlaza la página). El tema se reparte entre «Construir la Unión Europea del
+# siglo 21» y el bloque de Fuerzas Armadas de «Seguridad y defensa para el mundo de hoy», revisados
+# enteros. El programa no fija un objetivo de gasto en defensa. Selección de 5 propuestas
+# (CONTRIBUTING §1.13-14), priorizando las más concretas. Quedan fuera, entre otras, el Escudo Europeo
+# de la Democracia (UE, p. 2), la PAC y la política pesquera (p. 3), los fondos europeos para vivienda
+# (p. 4; en el tema de vivienda), la estrategia contra la despoblación y el estatus de Ceuta y Melilla
+# (p. 4; en el tema territorial) y la profesión de riesgo para los militares (Seguridad, p. 4; en el
+# tema de pensiones). Pendiente de revisión humana contra la fuente.
 partido: democracia-21
 tema: exterior-defensa
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-14
+propuestas:
+  - subtema: UE
+    resumen: >-
+      Plantea exigir la aplicación rigurosa del Reglamento de Condicionalidad del Estado de Derecho
+      para congelar fondos europeos a los gobiernos que vulneren la separación de poderes o la
+      independencia judicial, e impulsar un mecanismo europeo de supervisión anual vinculante del
+      Estado de derecho.
+    fuente: democracia-21-union-europea-siglo-21
+    pagina: 2
+  - subtema: UE
+    resumen: >-
+      Plantea impulsar las conclusiones de los informes Draghi y Letta para eliminar barreras en el
+      mercado único y culminar la Unión de Ahorros e Inversiones.
+    fuente: democracia-21-union-europea-siglo-21
+    pagina: 3
+  - subtema: [UE, OTAN]
+    resumen: >-
+      Propone reforzar el pilar europeo dentro de la OTAN y desplegar la Hoja de Ruta de Preparación
+      en Materia de Defensa 2030, con compras conjuntas de armamento, movilidad militar e
+      interoperabilidad de los ejércitos.
+    fuente: democracia-21-union-europea-siglo-21
+    pagina: 3
+  - subtema: Fuerzas Armadas
+    resumen: >-
+      Prevé una Ley Integral de la Carrera Militar que elimine de forma progresiva la salida forzosa
+      de soldados y marineros a los 45 años y les ofrezca una carrera estable hasta la reserva.
+    fuente: democracia-21-seguridad-defensa-mundo-hoy
+    pagina: 4
+  - subtema: Fuerzas Armadas
+    resumen: >-
+      Plantea clasificar los empleos militares en los grupos de la función pública según titulación y
+      responsabilidad, con soldados y cabos en el grupo C1 y cabos primeros y mayores en el B, y un
+      nuevo reglamento de retribuciones.
+    fuente: democracia-21-seguridad-defensa-mundo-hoy
+    pagina: 4
 fuentes_revisadas:
-  - democracia-21-vivienda-prioridad-1
-  - democracia-21-espana-limpia
+  - democracia-21-union-europea-siglo-21
+  - democracia-21-seguridad-defensa-mundo-hoy

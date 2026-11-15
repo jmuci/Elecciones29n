@@ -1,9 +1,15 @@
-# Enlazado desde democracia21.es/limpieza-politica-radical (regeneración institucional).
-# No trata los temas piloto; se cita en `fuentes_revisadas`. Fecha de publicación: no consta.
+# Bloque «España Limpia» (8 temas de regeneración institucional) del programa «La España que
+# merecemos», publicado en mi.democracia21.es/programa (5 bloques, 32 temas). La página enlaza un PDF
+# por tema y no ofrece el programa completo en un solo fichero. 13 páginas, sin numeración impresa:
+# `pagina` = página del PDF, que coincide con la del programa.
+# Versión del 11-nov-2026 (metadatos del PDF). Sustituye a la que se registró el 2-nov en
+# democracia21.es/docs/espana-limpia-democracia21.pdf (sha256 bfa89b72…, creada el 15-oct-2026, que esa
+# URL sigue sirviendo): el texto extraído de las dos versiones es idéntico, página a página.
+# Fecha de publicación: no consta.
 partido: democracia-21
-titulo: "España limpia"
-url: https://democracia21.es/docs/espana-limpia-democracia21.pdf
-tipo: plan_sectorial
-consultado: 2026-11-02
-archivo: https://web.archive.org/web/20261102212240/https://democracia21.es/docs/espana-limpia-democracia21.pdf
-sha256: bfa89b7218cd6a76d0eff86a1f6aad0a2e8c7c14a5d88f18ea002658bab4e1de
+titulo: "La España que merecemos: España limpia"
+url: https://mi.democracia21.es/docs/programa/espana-limpia-democracia21.pdf
+tipo: programa
+consultado: 2026-11-14
+archivo: https://web.archive.org/web/20261114220859/https://mi.democracia21.es/docs/programa/espana-limpia-democracia21.pdf
+sha256: f18d1809edd200af0466d716f0fb532202db14f8c919f149aef8b0fb6d934041
