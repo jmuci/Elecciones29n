@@ -3,10 +3,10 @@
 # PDF por tema y no ofrece el programa completo en un solo fichero. 3 páginas (portada + texto), sin
 # numeración impresa: `pagina` = página del PDF. Metadatos del PDF: creado el 13-nov-2026. Fecha de
 # publicación: no consta.
-# Snapshot de Wayback Machine pendiente.
 partido: democracia-21
 titulo: "La España que merecemos: Más salario, más productividad"
 url: https://mi.democracia21.es/docs/programa/mas-salario-mas-productividad-democracia21.pdf
 tipo: programa
 consultado: 2026-11-14
+archivo: https://web.archive.org/web/20261114221419/https://mi.democracia21.es/docs/programa/mas-salario-mas-productividad-democracia21.pdf
 sha256: 562972bc1b58cef5b8db684b956fbe7d0c528ac2a66663f99848054f6903b804

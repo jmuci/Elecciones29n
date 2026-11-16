@@ -3,10 +3,10 @@
 # temas). La página enlaza un PDF por tema y no ofrece el programa completo en un solo fichero. 5
 # páginas (portada + texto), sin numeración impresa: `pagina` = página del PDF. Metadatos del PDF:
 # creado el 11-nov-2026. Fecha de publicación: no consta.
-# Snapshot de Wayback Machine pendiente.
 partido: democracia-21
 titulo: "La España que merecemos: Medio ambiente y adaptación climática: anticipar para proteger"
 url: https://mi.democracia21.es/docs/programa/medio-ambiente-anticipacion-climatica-democracia21.pdf
 tipo: programa
 consultado: 2026-11-14
+archivo: https://web.archive.org/web/20261114221814/https://mi.democracia21.es/docs/programa/medio-ambiente-anticipacion-climatica-democracia21.pdf
 sha256: ac225ec73d4ada5a711df256508533335b162b76c950ae8eae3247febf81bc9e

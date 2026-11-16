@@ -3,10 +3,10 @@
 # temas). La página enlaza un PDF por tema y no ofrece el programa completo en un solo fichero. 5
 # páginas (portada + texto), sin numeración impresa: `pagina` = página del PDF. Metadatos del PDF:
 # creado el 11-nov-2026. Fecha de publicación: no consta.
-# Snapshot de Wayback Machine pendiente.
 partido: democracia-21
 titulo: "La España que merecemos: Una Administración moderna y digital que te facilite la vida"
 url: https://mi.democracia21.es/docs/programa/administracion-moderna-digital-democracia21.pdf
 tipo: programa
 consultado: 2026-11-14
+archivo: https://web.archive.org/web/20261114221104/https://mi.democracia21.es/docs/programa/administracion-moderna-digital-democracia21.pdf
 sha256: 8a2336294f000dfba6bfdadcbde32a8a6af04bf4e9bfe3dc336ecceb097673f1

@@ -3,10 +3,10 @@
 # el programa completo en un solo fichero. 4 páginas (portada + texto), sin numeración impresa:
 # `pagina` = página del PDF. Metadatos del PDF: creado el 11-nov-2026. Fecha de publicación: no
 # consta.
-# Snapshot de Wayback Machine pendiente.
 partido: democracia-21
 titulo: "La España que merecemos: Revolución pyme"
 url: https://mi.democracia21.es/docs/programa/revolucion-pyme-democracia21.pdf
 tipo: programa
 consultado: 2026-11-14
+archivo: https://web.archive.org/web/20261115190515/https://mi.democracia21.es/docs/programa/revolucion-pyme-democracia21.pdf
 sha256: 18eeaa7c6f7c2ae8b9d8ec3858ad09515a3ea030677a636eeaf6c0d5121e2368
