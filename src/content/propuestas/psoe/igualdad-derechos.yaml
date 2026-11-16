@@ -1,33 +1,54 @@
-# Fase 4: psoe.es no tiene programa ni documentos para el 29N; se resumen compromisos de las noticias
-# de campaña de su web (Actualidad > Noticias). `pagina` cuenta los párrafos del cuerpo de la noticia.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 327, 335, 349 y 368) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): transparencia retributiva (306), prohibición de la
+# gestación por sustitución (329), Estrategia de Salud de las Mujeres (331), ayudas a los huérfanos de
+# la violencia de género hasta los 26 años (338), coeducación y educación afectivo-sexual
+# obligatorias (344), registro de deudores de pensiones de alimentos (347), Ley de Paridad (364),
+# Autoridad Independiente para la Igualdad de Trato (392, 395), tratamientos hormonales de las
+# personas trans (415) y eutanasia en la sanidad pública (147).
+# Las notas de prensa de campaña dejan de citarse (§1.4; el objetivo de que en 2031 el 50 % del poder
+# corresponda a las mujeres no aparece en el programa) y quedan en fuentes_revisadas.
 partido: psoe
 tema: igualdad-derechos
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - subtema: aborto
     resumen: >-
-      Se compromete a reformar la Constitución en la próxima legislatura para proteger en ella el
-      derecho al aborto.
-    fuente: psoe-nota-aborto-constitucion-granada
-    pagina: "primer párrafo"
-  - subtema: eutanasia
-    resumen: Se compromete a mantener el derecho a la eutanasia, que denomina "muerte digna".
-    fuente: psoe-nota-aborto-constitucion-granada
-    pagina: "primer párrafo"
+      Propone blindar en la Constitución el derecho al aborto con la reforma del artículo 43, iniciada
+      en 2026, para garantizarlo en condiciones de igualdad en todo el territorio.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 82
+  - subtema: [LGTBI, aborto, eutanasia]
+    resumen: >-
+      Plantea dar la máxima protección jurídica al matrimonio igualitario, a la interrupción voluntaria
+      del embarazo y a la eutanasia.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 90
   - subtema: igualdad
     resumen: >-
-      Plantea como tareas pendientes una ley contra la violencia vicaria, una ley contra la trata y
-      una ley de abolición de la prostitución.
-    fuente: psoe-nota-dos-modelos-valladolid
-    pagina: "párrafo 10"
+      Propone leyes orgánicas contra la violencia vicaria y contra la trata de seres humanos, y otra
+      abolicionista de la prostitución que prohíba el proxenetismo en todas sus formas y reconozca como
+      víctimas a las que llama "personas prostituidas".
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "83-84"
   - subtema: igualdad
     resumen: >-
-      Fija como objetivo para 2031 que el 50 % del poder económico, social y político corresponda a
-      las mujeres.
-    fuente: psoe-nota-dos-modelos-valladolid
-    pagina: "párrafo 7"
+      Propone tipificar como delito específico la creación y difusión de deepfakes sexuales, adaptando
+      el Código Penal a la inteligencia artificial generativa.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 85
+  - subtema: LGTBI
+    resumen: >-
+      Plantea que la Ley 4/2023 sea el suelo común de derechos de las personas LGTBI en toda España,
+      para que nadie quede sin protección por su lugar de residencia, y penalizar en el Código Penal
+      las llamadas "terapias de conversión".
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 98
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-nota-aborto-constitucion-granada
   - psoe-nota-dos-modelos-valladolid
   - psoe-nota-tijeras-motosierras-zaragoza

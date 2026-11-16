@@ -10,6 +10,7 @@ opciones:
       Aumentar la inversión pública hasta el 1 % del PIB para construir, comprar y rehabilitar vivienda
       asequible de protección permanente.
     partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 28 }
       - { partido: frente-amplio, fuente: frente-amplio-nota-impuesto-acumulacion-vivienda, pagina: último párrafo }
   - texto: >-
       Ampliar el alquiler social expropiando el uso del 50 % de las viviendas de los grandes tenedores y
@@ -21,4 +22,4 @@ opciones:
       protegida, y ceder suelo público a proyectos de colaboración público-privada.
     partidos:
       - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 3 }
-revisado: 2026-11-14
+revisado: 2026-11-15

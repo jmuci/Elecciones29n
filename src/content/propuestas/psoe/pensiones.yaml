@@ -1,22 +1,50 @@
-# Fase 4: psoe.es no tiene programa ni documentos para el 29N; se resume una nota de prensa del
-# partido sobre un acto de campaña (Actualidad > Noticias).
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): en este tema el programa no destaca ningún compromiso con el número en un recuadro rojo;
+# se eligen los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): convergencia de las pensiones mínimas con estándares de
+# ingresos (98), incapacidad temporal por procesos oncológicos al 75 % de la base reguladora (102),
+# permiso parental retribuido por la Seguridad Social (105, en familia), integración de las mutuas en
+# la gestión pública (107) y pasarela de los mutualistas al RETA (116). El blindaje constitucional se
+# repite en el compromiso 365 (p. 90).
+# Las notas de prensa de campaña dejan de citarse (§1.4; la aportación a la "hucha de las pensiones"
+# no aparece en el programa) y quedan en fuentes_revisadas.
 partido: psoe
 tema: pensiones
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - subtema: revalorización
     resumen: >-
-      Propone reformar la Constitución en la próxima legislatura para proteger las pensiones y su
-      revalorización conforme al IPC.
-    fuente: psoe-nota-pensiones-constitucion-gijon
-    pagina: 1.er párrafo
+      Propone blindar en la Constitución el sistema público de pensiones y su revalorización conforme
+      al IPC.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 41
   - subtema: sostenibilidad
     resumen: >-
-      Se compromete a seguir aportando recursos a la llamada "hucha de las pensiones" en los próximos
-      cuatro años.
-    fuente: psoe-nota-pensiones-constitucion-gijon
-    pagina: 7.º párrafo
+      Plantea acelerar la cuota de solidaridad, acordar en el Pacto de Toledo nuevas fuentes de
+      financiación ligadas a la productividad de la automatización y que el Estado asuma las
+      prestaciones no contributivas.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "40-41"
+  - subtema: edad de jubilación
+    resumen: >-
+      Prevé evaluar mejores coeficientes reductores de la edad de jubilación por penosidad, aplicados
+      con una cuenta individual, y menores penalizaciones por jubilación anticipada involuntaria en
+      carreras largas, cuyo coste podrían compensar empresas con beneficios que hagan ERE.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 41
+  - resumen: >-
+      Propone reforzar el complemento de pensiones por hijos y reconocer un año adicional de
+      cotización por cada hijo o hija.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 41
+  - resumen: >-
+      Plantea elevar la pensión de orfandad del 20 % al 30 %, sin el límite del 100 % en casos de
+      vulnerabilidad, e integrar la pensión en favor de familiares en el Ingreso Mínimo Vital.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 42
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-nota-pensiones-constitucion-gijon
   - psoe-nota-aborto-constitucion-granada

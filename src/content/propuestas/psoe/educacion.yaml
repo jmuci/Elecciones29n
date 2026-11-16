@@ -1,20 +1,50 @@
-# Fase 4: psoe.es no tiene programa ni documentos para el 29N; se resumen compromisos de las noticias
-# de campaña de su web (Actualidad > Noticias). `pagina` cuenta los párrafos del cuerpo de la noticia.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 157) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): Estatuto del Docente (159), educación inclusiva (162),
+# escuela rural (163), comedor escolar gratuito para el alumnado en situación de pobreza (168), FP
+# Básica (171), alojamiento universitario (180), regulación de la calidad de las universidades
+# públicas y privadas (184) y coeducación y educación afectivo-sexual obligatorias (344).
+# Las notas de prensa de campaña dejan de citarse (§1.4) y quedan en fuentes_revisadas.
 partido: psoe
 tema: educacion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
-  - subtema: [becas, FP]
+  - subtema: 0–3 años
     resumen: >-
-      Fija como objetivo para 2030 que la tasa de abandono escolar baje 4 puntos, con una apuesta por
-      las becas y por una formación profesional de calidad.
-    fuente: psoe-nota-tijeras-motosierras-zaragoza
-    pagina: "párrafo 8"
-  - resumen: Se compromete a garantizar la universalidad de la educación en los próximos cuatro años.
-    fuente: psoe-nota-pensiones-constitucion-gijon
-    pagina: "párrafo 7"
+      Propone universalizar la educación de 0 a 3 años, con más escuelas infantiles públicas y menos
+      alumnos por aula.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "52-53"
+  - subtema: becas
+    resumen: >-
+      Plantea ampliar las becas y ayudas al estudio, con umbrales de renta actualizados y más apoyo para
+      transporte, residencia y discapacidad, y limitar el número máximo de alumnos por aula.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 53
+  - resumen: >-
+      Fija como objetivo bajar la tasa de abandono escolar temprano por debajo del 10 % antes de 2030
+      y alcanzar un profesional de orientación por cada 250 estudiantes.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 53
+  - subtema: FP
+    resumen: >-
+      Propone ampliar las plazas públicas de FP de grado medio y superior para que nadie se quede sin
+      estudiar por falta de oferta, y nuevas titulaciones en inteligencia artificial, ciberseguridad,
+      transición energética, biotecnología, microelectrónica e industria avanzada.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 54
+  - subtema: [universidad, becas]
+    resumen: >-
+      Plantea impulsar la matrícula gratuita del primer curso de grado en las universidades públicas,
+      becas Erasmus de hasta 1.000 y 1.500 euros mensuales según los ingresos y una Ley de Equidad en
+      el Acceso a la Universidad Pública con financiación plurianual vinculante.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 55
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-pensiones-constitucion-gijon
   - psoe-nota-dos-modelos-valladolid

@@ -1,22 +1,55 @@
-# Fase 4 (2-nov): psoe.es no tiene programa para el 29N; se resumen compromisos de las noticias de
-# campaña de su web (Actualidad > Noticias). `pagina` cuenta los párrafos del cuerpo de la noticia.
-# Como hay notas para el 29N sobre energía y clima, no se cita la Resolución del 41.º Congreso
-# (CONTRIBUTING §1.4).
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 234, 247, 250 y 252) y después los más concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): autoconsumo y eficiencia energética (236), almacenamiento,
+# hidrógeno renovable e interconexiones (237-238), reforma del mercado eléctrico europeo (239), Plan
+# Social para el Clima (242), vertido de residuos por debajo del 30 % en 2030 (246), Centro Estatal de
+# Predicción y Seguimiento de Fenómenos Extremos (251), bancos públicos de agua (263), modernización de
+# regadíos (264), movilidad sostenible (280-286) y biodiversidad (287-291).
+# Las notas de prensa de campaña dejan de citarse (§1.4; el programa fija el 81 % de electricidad
+# renovable en 2030 y menciona el Pacto de Estado frente a la Emergencia Climática solo en el texto
+# introductorio, p. 68) y quedan en fuentes_revisadas.
 partido: psoe
 tema: energia-clima
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
   - subtema: renovables
-    resumen: Fija como objetivo que en 2030 el 80 % de la electricidad proceda de energías renovables.
-    fuente: psoe-nota-tijeras-motosierras-zaragoza
-    pagina: "párrafo 8"
+    resumen: >-
+      Fija como objetivo que las renovables generen el 81 % de la electricidad en 2030, con prioridad
+      para las Zonas de Aceleración Renovable, y prevé un plan nacional de bombeo hidroeléctrico y una
+      hoja de ruta para abandonar progresivamente los combustibles fósiles.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 66
+  - subtema: nuclear
+    resumen: >-
+      Prevé mantener el calendario de cierre de las centrales nucleares hasta 2035, con proyectos de
+      transición justa en las comarcas afectadas que preserven las capacidades tecnológicas del sector.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 67
+  - subtema: precio de la luz
+    resumen: >-
+      Propone un bono social único y automático que integre el eléctrico, el térmico, las
+      bonificaciones de transporte y las tarifas sociales de telecomunicaciones y agua, reconocido de
+      oficio con los datos fiscales y de la Seguridad Social.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 39
+  - subtema: agua
+    resumen: >-
+      Plantea crear una Agencia Estatal de Protección Civil y Emergencias, aprobar una Ley de Adaptación
+      al Cambio Climático y blindar en la Constitución el acceso universal al agua potable, con un mínimo
+      vital para los hogares vulnerables.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "68-69"
   - resumen: >-
-      Plantea un Pacto de Estado frente a la emergencia climática y que todas las administraciones y
-      partidos trabajen de forma conjunta contra las consecuencias del cambio climático.
-    fuente: psoe-nota-dos-modelos-valladolid
-    pagina: "párrafo 3"
+      Propone reconocer el derecho a la reparación, con un Fondo de Reparación financiado por los
+      productores, y fomentar el ecodiseño y la reutilización, en especial para recuperar materias
+      primas críticas de palas eólicas, paneles solares y baterías.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: "67-68"
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid
   - psoe-nota-supremo-ponferrada

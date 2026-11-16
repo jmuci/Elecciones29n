@@ -1,43 +1,53 @@
-# Fase 4 (2-nov): el PSOE no ha publicado programa para el 29N, y sus notas de prensa de campaña
-# (psoe.es > Actualidad > Noticias, oct.–nov. 2026) no recogen propuestas sobre este tema. Por eso se
-# resume, con aviso, la Resolución Política de su 41.º Congreso Federal (dic-2024), anterior a la
-# convocatoria (CONTRIBUTING §1.4). Se rehará en cuanto el partido publique algo para el 29N.
+# Programa electoral del PSOE para el 29N («La fuerza de seguir avanzando», 500 compromisos
+# numerados), revisado entero el 2026-11-15. Selección de 5 propuestas como máximo (CONTRIBUTING
+# §1.13-14): primero los compromisos que el programa destaca con el número en un recuadro rojo (en este
+# tema, 459; el 457 y el 458, fiscalidad internacional, están en impuestos) y después los más
+# concretos. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección (n.º de compromiso): participación como Estado observador en el Tratado sobre
+# la Prohibición de las Armas Nucleares (465), apoyo a la soberanía de Ucrania (480), ampliación de la
+# UE a los Balcanes Occidentales (481), Unión Europea de la defensa (482), integración de Ceuta y
+# Melilla en la Unión Aduanera (474), Acuerdo sobre Gibraltar (475), Mecanismo Soberano Europeo de
+# deuda (483), vigilancia marítima y modernización de las Fuerzas Armadas (495-496) y derechos de los
+# españoles en el exterior (488-492). El programa no menciona la OTAN.
+# La Resolución del 41.º Congreso (2024) deja de citarse (§1.4) y queda en fuentes_revisadas.
 partido: psoe
 tema: exterior-defensa
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-15
 propuestas:
-  - subtema: [UE, Fuerzas Armadas]
-    resumen: >-
-      Propone avanzar hacia una defensa común de la UE con un ejército y un cuerpo diplomático
-      europeos, bajo mando comunitario y como complemento de la OTAN.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 157
-  - subtema: política exterior
-    resumen: >-
-      Propone una ley que prohíba el envío de armas y la cooperación militar con cualquier Estado que
-      viole el derecho internacional y ataque a civiles.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 158
-  - subtema: política exterior
-    resumen: >-
-      Plantea liderar una reforma de las Naciones Unidas que incluya eliminar el derecho de veto y los
-      asientos permanentes en el Consejo de Seguridad.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 158
-  - subtema: política exterior
-    resumen: >-
-      Se compromete a exigir el cese de las hostilidades en Palestina y Líbano y un proceso de paz
-      para la región, y a apoyar la reconstrucción de Ucrania.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: "157-158"
   - subtema: cooperación al desarrollo
     resumen: >-
-      Fija como objetivo elevar la Ayuda Oficial al Desarrollo hasta el 0,7 % de la Renta Nacional
-      Bruta en 2030.
-    fuente: psoe-resolucion-politica-41-congreso
-    pagina: 155
+      Se compromete a consolidar la cooperación como política de Estado y a cerrar la brecha con el
+      0,7 % de la renta nacional bruta en Ayuda Oficial al Desarrollo.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 108
+  - subtema: política exterior
+    resumen: >-
+      Propone reformar las Naciones Unidas y su Consejo de Seguridad, limitando el veto y reforzando la
+      representación del Sur Global, y fortalecer la Corte Penal Internacional.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 108
+  - subtema: política exterior
+    resumen: >-
+      Plantea promover la solución de los dos Estados en Israel y Palestina, que la UE sancione a
+      quienes la obstaculizan y más apoyo a la Autoridad Palestina y a la reconstrucción de Gaza.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 110
+  - subtema: UE
+    resumen: >-
+      Propone que la UE sea una unión política y fiscal, más democrática y capaz de actuar, superando
+      los bloqueos de la unanimidad y reforzando el Parlamento Europeo.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 110
+  - subtema: [UE, gasto en defensa]
+    resumen: >-
+      Plantea reforzar las capacidades comunes de seguridad y defensa de la UE y hacer más eficiente la
+      inversión en defensa con más participación española en proyectos europeos, cooperación
+      industrial y adquisición conjunta de capacidades.
+    fuente: psoe-programa-la-fuerza-de-seguir-avanzando
+    pagina: 113
 fuentes_revisadas:
+  - psoe-programa-la-fuerza-de-seguir-avanzando
   - psoe-resolucion-politica-41-congreso
   - psoe-nota-tijeras-motosierras-zaragoza
   - psoe-nota-dos-modelos-valladolid
