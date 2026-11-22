@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import type { Tema } from './modelo';
-import { IMPORTANCIA_INICIAL, fnv1a, huella } from './test-estado';
+import { IMPORTANCIA_INICIAL, MAX_OPCIONES, fnv1a, huella } from './test-estado';
 
 export { IMPORTANCIA_INICIAL };
 
@@ -51,13 +51,14 @@ export async function cargarPreguntas(temas: Tema[]): Promise<Pregunta[]> {
     (a, b) =>
       (posicion.get(a.data.tema.id) ?? 0) - (posicion.get(b.data.tema.id) ?? 0) || a.data.orden - b.data.orden,
   );
-  // El enlace para compartir identifica cada pregunta por una huella de 16 bits y la respuesta con 4 bits.
+  // El enlace para compartir identifica cada pregunta por una huella de 16 bits y las respuestas con una máscara de bits.
   const vistas = new Map<number, string>();
   for (const p of preguntas) {
     const otra = vistas.get(huella(p.id));
     if (otra) throw new Error(`Las preguntas «${otra}» y «${p.id}» tienen la misma huella: cambia uno de los ids`);
     vistas.set(huella(p.id), p.id);
-    if (p.data.opciones.length > 15) throw new Error(`La pregunta «${p.id}» tiene más de 15 respuestas`);
+    if (p.data.opciones.length > MAX_OPCIONES)
+      throw new Error(`La pregunta «${p.id}» tiene más de ${MAX_OPCIONES} respuestas`);
   }
   return preguntas.map((p) => ({ ...p, data: { ...p.data, opciones: barajar(p.id, p.data.opciones) } }));
 }

@@ -1,0 +1,20 @@
+tema: regeneracion
+orden: 1
+pregunta: "¿Cómo deberían elegirse los vocales judiciales del Consejo General del Poder Judicial?"
+opciones:
+  - titulo: "Que los propios jueces y magistrados elijan a los vocales judiciales"
+    detalle:
+      - "Los doce vocales judiciales los elegirían los jueces y magistrados (por voto personal, directo y secreto, en una propuesta; sin intervención de las asociaciones judiciales, en otra)."
+      - "Una propuesta mantiene la evaluación pública de méritos de los ocho juristas designados por las Cortes y extiende a todos los vocales la incompatibilidad por haber ocupado cargos políticos en los cinco años anteriores."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 32 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 55 }
+      - { partido: democracia-21, fuente: democracia-21-espana-limpia, pagina: 8 }
+  - titulo: "Mantener la elección parlamentaria con mayorías reforzadas y mecanismos contra el bloqueo"
+    detalle:
+      - "Una propuesta exige tres quintos y, si en dos meses no hay acuerdo, mayoría absoluta en segunda votación; el Consejo podría constituirse con los vocales ya elegidos."
+      - "La otra exige mayoría absoluta y el respaldo de al menos la mitad de los grupos parlamentarios, y establece mecanismos de cese y sustitución una vez agotados los mandatos."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 175 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 129 }
+revisado: 2026-11-22

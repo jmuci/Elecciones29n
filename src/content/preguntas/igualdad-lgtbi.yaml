@@ -1,0 +1,26 @@
+tema: igualdad-derechos
+orden: 3
+pregunta: "¿Qué debería hacerse con la Ley Trans y los derechos de las personas LGTBI?"
+opciones:
+  - titulo: "Revisar la Ley Trans y fijar el sexo biológico como criterio en el deporte femenino"
+    detalle:
+      - "Eliminar la libre autodeterminación registral del sexo."
+      - "El sexo biológico, o criterios biológicos y deportivos objetivos, regiría las categorías deportivas femeninas."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 44 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 43 }
+  - titulo: "Desplegar y ampliar la Ley Trans y reconocer a las personas no binarias"
+    detalle:
+      - "Reconocer a las personas no binarias, con la opción de género no binario en los formularios y documentos oficiales en una propuesta."
+      - "Una propuesta crea un Observatorio Estatal contra la LGTBQAifobia; otra, un cupo laboral trans en el empleo público y elimina obstáculos para la libre determinación de género en la infancia trans menor de 14 años."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 145 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "51-52" }
+  - titulo: "Garantizar un suelo común de derechos LGTBI y penalizar las terapias de conversión"
+    detalle:
+      - "Oponerse a recortes de derechos: la Ley 4/2023 sería el suelo común en toda España (una propuesta) o se rechaza cualquier recorte (otra)."
+      - "Penalizar o aplicar la ley contra las llamadas «terapias de conversión»."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 98 }
+      - { partido: democracia-21, fuente: democracia-21-derechos-sociales, pagina: 3 }
+revisado: 2026-11-22

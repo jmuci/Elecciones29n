@@ -2,7 +2,7 @@
 // el script del cliente. Todo sale de los datos (coincidencias entre respuestas): ningún
 // partido se coloca a mano en un eje ni se clasifica.
 
-import { IMPORTANCIA_INICIAL, fnv1a, type Estado } from './test-estado';
+import { IMPORTANCIA_INICIAL, fnv1a, normalizarRespuesta, type Estado } from './test-estado';
 
 /** Un partido solo puede ser «el más afín» si sus propuestas cubren al menos esta parte del peso. */
 export const COBERTURA_MINIMA = 0.5;
@@ -71,7 +71,7 @@ const semilla = (estado: Estado): number =>
   fnv1a(
     Object.keys(estado)
       .sort()
-      .map((id) => `${id}:${estado[id]?.importancia}:${estado[id]?.respuesta}`)
+      .map((id) => `${id}:${estado[id]?.importancia}:${normalizarRespuesta(estado[id]?.respuesta)}`)
       .join('|'),
   );
 
@@ -106,12 +106,15 @@ export function perfil(
   return { caso, etiqueta: ETIQUETAS[caso], mensaje, primero: uno?.partido };
 }
 
-/** Temas a los que se ha dado más importancia media (como mucho 3); vacío si todo pesa igual. */
+/**
+ * Temas a los que se ha dado más importancia media (como mucho 3); vacío si todo pesa igual.
+ * Cuentan todas las preguntas respondidas, también las de «ninguna»: la importancia es una señal propia.
+ */
 export function prioridades(estado: Estado, preguntas: { id: string; tema: string }[], temas: string[]): string[] {
   const suma = new Map<string, { total: number; n: number }>();
   for (const q of preguntas) {
     const { importancia, respuesta } = estado[q.id] ?? { importancia: IMPORTANCIA_INICIAL, respuesta: null };
-    if (respuesta === null) continue;
+    if (normalizarRespuesta(respuesta) === null) continue;
     const s = suma.get(q.tema) ?? { total: 0, n: 0 };
     s.total += importancia;
     s.n += 1;

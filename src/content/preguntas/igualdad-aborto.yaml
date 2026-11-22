@@ -1,0 +1,25 @@
+tema: igualdad-derechos
+orden: 1
+pregunta: "¿Qué debería hacerse con el derecho al aborto?"
+opciones:
+  - titulo: "Incluir el derecho al aborto en la Constitución"
+    detalle:
+      - "Reforma constitucional: del artículo 43 en dos propuestas y del artículo 15, como derecho fundamental, en otra."
+      - "Una propuesta prevé una estrategia para garantizar la interrupción voluntaria del embarazo en centros públicos de todas las comunidades autónomas, incluidos los gastos de desplazamiento; otra elimina del Código Penal las referencias al aborto consentido."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 82 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 32 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 51 }
+  - titulo: "Mantener la ley de plazos actual y garantizar el acceso en la sanidad pública"
+    detalle:
+      - "Oponerse a cualquier intento de derogar, limitar o entorpecer la actual ley de plazos."
+      - "Garantizar la interrupción voluntaria del embarazo en la red sanitaria pública de todas las comunidades autónomas."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-derechos-sociales, pagina: "2-3" }
+  - titulo: "Defender el derecho a la vida desde la concepción hasta la muerte natural"
+    detalle:
+      - "Garantizar la objeción de conciencia de sanitarios y farmacéuticos."
+      - "Potenciar los cuidados paliativos."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 52 }
+revisado: 2026-11-22

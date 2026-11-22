@@ -1,0 +1,26 @@
+tema: energia-clima
+orden: 2
+pregunta: "¿Cómo debería abordarse el precio de la luz?"
+opciones:
+  - titulo: "Bajar los impuestos de la electricidad"
+    detalle:
+      - "Eliminar de inmediato el impuesto del 7 % a la producción eléctrica y reducir la carga fiscal del recibo (una propuesta), o bajar los impuestos de la electricidad a familias, empresas e industrias y acabar con la doble imposición (otra)."
+      - "Una propuesta crea una Tarifa Social Única; otra suprime el tope regulatorio a la inversión en redes eléctricas."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "71-72" }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 11 }
+  - titulo: "Intervenir los precios o crear un operador público"
+    detalle:
+      - "Una propuesta crea una comercializadora pública de referencia y la titularidad pública de las redes de distribución eléctrica y de gas."
+      - "Otra limita las tarifas domésticas (no más de un 5 % sobre la media anterior), pone un tope al gas de 40 €/MWh y cambia el mercado para pagar el MWh según su coste de producción."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 70 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "18-19" }
+  - titulo: "Concentrar las ayudas en un bono social automático para los hogares vulnerables"
+    detalle:
+      - "Bono social reconocido de forma automática."
+      - "Una propuesta lo amplía a otros servicios (térmico, transporte, telecomunicaciones y agua); otra sustituye la intervención de precios por mecanismos de competencia que trasladen al usuario el abaratamiento de la generación limpia."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 39 }
+      - { partido: democracia-21, fuente: democracia-21-potencia-energetica, pagina: "2-3" }
+revisado: 2026-11-22

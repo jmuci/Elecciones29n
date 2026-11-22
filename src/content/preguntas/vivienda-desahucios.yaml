@@ -1,0 +1,19 @@
+tema: vivienda
+orden: 3
+pregunta: "¿Qué debería hacer la ley ante los desahucios de personas vulnerables que no tienen alternativa de vivienda?"
+opciones:
+  - titulo: "Prohibir por ley los desahucios de personas vulnerables sin alternativa de vivienda"
+    detalle:
+      - "Los desahucios y lanzamientos de personas en situación de vulnerabilidad sin alternativa habitacional quedarían prohibidos."
+      - "La administración tendría que ofrecer antes una alternativa habitacional."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 18 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 9 }
+  - titulo: "Proteger a las personas vulnerables y que el coste lo asuman las administraciones"
+    detalle:
+      - "Marco de protección para las personas vulnerables que no tengan alternativa habitacional."
+      - "El coste lo asumirían las administraciones y no el propietario: el Estado garantizaría el cobro del alquiler."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 34 }
+      - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 4 }
+revisado: 2026-11-22

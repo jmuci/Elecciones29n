@@ -1,0 +1,30 @@
+tema: inmigracion
+orden: 1
+pregunta: "¿Qué debería hacerse con las personas que viven en España en situación irregular?"
+opciones:
+  - titulo: "Crear un procedimiento permanente de regularización"
+    detalle:
+      - "Procedimiento estable, permanente y reglado, que reconozca el arraigo."
+      - "Una propuesta añade resolver todas las solicitudes de la regularización extraordinaria de 2026; otra, no hacer depender el derecho a residir solo de un contrato de trabajo y admitir más medios de prueba, como el empadronamiento o los abonos de transporte."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 149 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 67 }
+  - titulo: "Prohibir las regularizaciones masivas e indiscriminadas"
+    detalle:
+      - "Prohibición por ley de las regularizaciones masivas e indiscriminadas."
+      - "El arraigo sería un reconocimiento individual excepcional."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "22-23" }
+  - titulo: "No acoger a más inmigrantes y suprimir el arraigo"
+    detalle:
+      - "Prohibición de las regularizaciones a gran escala."
+      - "Quien entre de forma irregular no podría regularizar nunca su situación."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 15 }
+  - titulo: "Un permiso de residencia y trabajo para los jóvenes extutelados con formación"
+    detalle:
+      - "Autorización de 9 meses para quienes hayan completado al menos un año de formación secundaria o profesional."
+      - "Pasaría a permiso ordinario si firman un contrato y cotizan."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-politica-migratoria-con-cabeza, pagina: 4 }
+revisado: 2026-11-22

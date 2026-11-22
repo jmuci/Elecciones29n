@@ -1,0 +1,37 @@
+tema: pensiones
+orden: 2
+pregunta: "¿Cómo debería garantizarse la financiación de las pensiones?"
+opciones:
+  - titulo: "Más actividad económica, empleo y salarios, y apoyo a las familias y a la natalidad"
+    detalle:
+      - "La sostenibilidad del sistema dependería de más actividad económica, empleo y salarios."
+      - "Medidas de apoyo a las familias y a la natalidad frente al envejecimiento demográfico."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "10-11" }
+  - titulo: "Elevar o suprimir el tope de cotización y que las empresas aporten más"
+    detalle:
+      - "Subir de forma progresiva el tope máximo de cotización, o suprimir la base máxima."
+      - "Mayor aportación de las empresas: las más automatizadas, en una propuesta; según su nivel de renta y su volumen de beneficios, en la otra."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 64 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 44 }
+  - titulo: "Nuevas fuentes de financiación acordadas en el Pacto de Toledo"
+    detalle:
+      - "Acelerar la cuota de solidaridad."
+      - "Fuentes ligadas a la productividad de la automatización."
+      - "El Estado asumiría las prestaciones no contributivas."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: "40-41" }
+  - titulo: "Blindar por ley la caja única de la Seguridad Social"
+    detalle:
+      - "Las cotizaciones seguirían financiando las pensiones y prestaciones en toda España."
+      - "Los recursos no se dividirían por territorios."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 17 }
+  - titulo: "Una asamblea ciudadana de 150 personas elegidas por sorteo que delibere sobre el futuro de las pensiones"
+    detalle:
+      - "Se convocaría en los primeros cien días de legislatura, con un consejo de expertos, y deliberaría durante un año."
+      - "El Gobierno respondería a cada recomendación y las llevaría al Pacto de Toledo y a las Cortes."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-redefiniendo-el-envejecimiento, pagina: 2 }
+revisado: 2026-11-22

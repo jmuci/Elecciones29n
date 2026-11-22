@@ -56,10 +56,16 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
         resume lo que propone al menos un partido, sin decir cuál.
       </p>
       <p>
-        Elige la respuesta que más se acerque a lo que piensas e indica cuánto te importa la pregunta, de 1 (poco
-        importante) a 5 (muy importante). Al final verás qué porcentaje de tus respuestas coincide con las propuestas
-        de cada partido, ponderado por la importancia que les has dado, un mapa de cercanía con los partidos y qué
-        partido propone cada respuesta, con enlace a su fuente.
+        Cada respuesta tiene una línea principal y, debajo, lo que implica. Marca la que más se acerque a lo que piensas
+        (si dudas entre varias, puedes marcar más de una) o «Ninguna de estas opciones me convence», e indica cuánto te
+        importa la pregunta, de 1 (poco importante) a 5 (muy importante). Al final verás qué porcentaje de tus
+        respuestas coincide con las propuestas de cada partido, ponderado por la importancia que les has dado, un mapa
+        de cercanía con los partidos y qué partido propone cada respuesta, con enlace a su fuente.
+      </p>
+      <p class="ayuda">
+        Si marcas varias respuestas, la importancia de la pregunta se reparte a partes iguales entre ellas: así marcar
+        más opciones no sube el porcentaje de ningún partido. «Ninguna de estas opciones» no cuenta a favor ni en
+        contra de nadie.
       </p>
       <p class="aviso">
         Es una medida de coincidencia con las propuestas publicadas, no una recomendación de voto. Varios partidos aún no
@@ -102,16 +108,34 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
                   <h3 id={`t-${p.id}`}>
                     <span class="numero">{n}.</span> {p.data.pregunta}
                   </h3>
-                  <fieldset class="opciones" aria-labelledby={`t-${p.id}`}>
+                  <fieldset class="opciones" aria-labelledby={`t-${p.id}`} aria-describedby={`h-${p.id}`}>
+                    <p class="ayuda" id={`h-${p.id}`}>
+                      Marca una o varias.
+                    </p>
                     <ul>
                       {p.data.opciones.map((o, j) => (
                         <li>
                           <label>
-                            <input type="radio" name={`r-${p.id}`} value={j} />
-                            <span>{o.texto}</span>
+                            <input type="checkbox" name={`r-${p.id}`} value={j} />
+                            <span class="opcion">
+                              <span class="opcion__titulo">{o.titulo}</span>
+                              <ul class="opcion__detalle">
+                                {o.detalle.map((d) => (
+                                  <li>{d}</li>
+                                ))}
+                              </ul>
+                            </span>
                           </label>
                         </li>
                       ))}
+                      <li>
+                        <label class="opcion--ninguna">
+                          <input type="checkbox" name={`n-${p.id}`} value="ninguna" />
+                          <span class="opcion">
+                            <span class="opcion__titulo">Ninguna de estas opciones me convence</span>
+                          </span>
+                        </label>
+                      </li>
                     </ul>
                   </fieldset>
                   <fieldset class="importancia">
@@ -252,8 +276,13 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
                     <li data-opcion={j}>
                       <p>
                         <span class="sr-only">Respuesta {letra(j)}: </span>
-                        {o.texto} <strong class="tuya" hidden />
+                        {o.titulo} <strong class="tuya" hidden />
                       </p>
+                      <ul class="clave__detalle">
+                        {o.detalle.map((d) => (
+                          <li>{d}</li>
+                        ))}
+                      </ul>
                       <ul class="fuentes">
                         {o.partidos.map(({ partido, fuente: idFuente, pagina }) => {
                           const f = fuente(idFuente.id);
@@ -270,6 +299,11 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
                       </ul>
                     </li>
                   ))}
+                  <li class="clave__ninguna" hidden>
+                    <p>
+                      Ninguna de estas opciones me convence <strong class="tuya">(tu respuesta)</strong>
+                    </p>
+                  </li>
                 </ul>
               </li>
             ))
@@ -308,6 +342,7 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
 <script>
   import type { DatosCliente } from '../lib/test';
   import { mapa, perfil, prioridades, type AfinidadPartido, type Perfil } from '../lib/test-perfil';
+  import { calcular as calcularAfinidad, porcentaje as pct, type Suma } from '../lib/test-calculo';
   import {
     CLAVE_ESTADO,
     CLAVE_PASO,
@@ -315,8 +350,10 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     PREFIJO_COMPARTIR,
     codificar,
     decodificar,
+    normalizarRespuesta,
     progreso,
     type Estado,
+    type Respuesta,
   } from '../lib/test-estado';
 
   const datos = JSON.parse(document.getElementById('datos-test')?.textContent ?? '{}') as DatosCliente;
@@ -329,16 +366,15 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
 
   const bloque = (id: string): HTMLElement | null => form.querySelector(`.pregunta[data-id="${CSS.escape(id)}"]`);
 
+  const marcadas = (nombre: string): string[] =>
+    [...form.querySelectorAll<HTMLInputElement>(`input[name="${CSS.escape(nombre)}"]:checked`)].map((i) => i.value);
+
   const leer = (): Estado =>
     Object.fromEntries(
       datos.preguntas.map(({ id }) => {
-        const valor = (nombre: string) =>
-          form.querySelector<HTMLInputElement>(`input[name="${CSS.escape(nombre)}"]:checked`)?.value;
-        const r = valor(`r-${id}`);
-        return [
-          id,
-          { importancia: Number(valor(`i-${id}`) ?? IMPORTANCIA_INICIAL), respuesta: r === undefined ? null : Number(r) },
-        ];
+        const respuesta: Respuesta =
+          marcadas(`n-${id}`).length > 0 ? 'ninguna' : normalizarRespuesta(marcadas(`r-${id}`).map(Number));
+        return [id, { importancia: Number(marcadas(`i-${id}`)[0] ?? IMPORTANCIA_INICIAL), respuesta }];
       }),
     );
 
@@ -411,12 +447,15 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
       const g = guardado[id];
       // Las versiones anteriores guardaban importancia 0 para «no cuenta»: esa pregunta se queda sin responder.
       if (!g || g.importancia < 1) continue;
-      const marcar = (nombre: string, valor: number) => {
+      const marcar = (nombre: string, valor: number | string) => {
         const input = form.querySelector<HTMLInputElement>(`input[name="${CSS.escape(nombre)}"][value="${valor}"]`);
         if (input) input.checked = true;
       };
       marcar(`i-${id}`, g.importancia);
-      if (g.respuesta !== null) marcar(`r-${id}`, g.respuesta);
+      // Las versiones anteriores guardaban un solo número por pregunta; `normalizarRespuesta` lo admite.
+      const r = normalizarRespuesta(g.respuesta);
+      if (r === 'ninguna') marcar(`n-${id}`, 'ninguna');
+      else if (r !== null) for (const j of r) marcar(`r-${id}`, j);
     }
   };
 
@@ -441,7 +480,15 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   }
 
   form.addEventListener('change', (e) => {
-    const id = e.target instanceof HTMLInputElement ? e.target.closest<HTMLElement>('.pregunta')?.dataset.id : undefined;
+    const campo = e.target instanceof HTMLInputElement ? e.target : null;
+    const id = campo?.closest<HTMLElement>('.pregunta')?.dataset.id;
+    // «Ninguna» y las demás opciones se excluyen entre sí.
+    if (id && campo?.checked) {
+      if (campo.name === `n-${id}`)
+        form.querySelectorAll<HTMLInputElement>(`input[name="${CSS.escape(`r-${id}`)}"]`).forEach((i) => (i.checked = false));
+      else if (campo.name === `r-${id}`)
+        form.querySelectorAll<HTMLInputElement>(`input[name="${CSS.escape(`n-${id}`)}"]`).forEach((i) => (i.checked = false));
+    }
     if (id) {
       if (leer()[id]?.respuesta !== null) bloque(id)?.classList.remove('pregunta--falta');
       const paso = pasos[actual];
@@ -476,40 +523,6 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
   });
 
   // — Cálculo —
-
-  interface Suma {
-    acierto: number;
-    peso: number;
-    preguntas: number;
-  }
-
-  const vacia = (): Suma => ({ acierto: 0, peso: 0, preguntas: 0 });
-  const pct = (s: Suma): number | null => (s.peso > 0 ? Math.round((100 * s.acierto) / s.peso) : null);
-
-  const calcular = (estado: Estado) => {
-    const global = new Map(datos.partidos.map((p) => [p, vacia()]));
-    const porTema = new Map<string, Map<string, Suma>>();
-    let pesoTotal = 0;
-    let cuentan = 0;
-    for (const q of datos.preguntas) {
-      const { importancia, respuesta } = estado[q.id] ?? { importancia: IMPORTANCIA_INICIAL, respuesta: null };
-      if (respuesta === null) continue;
-      pesoTotal += importancia;
-      cuentan += 1;
-      const elegida = new Set(q.opciones[respuesta] ?? []);
-      const tema = porTema.get(q.tema) ?? new Map(datos.partidos.map((p) => [p, vacia()]));
-      porTema.set(q.tema, tema);
-      for (const partido of q.opciones.flat()) {
-        for (const s of [global.get(partido), tema.get(partido)]) {
-          if (!s) continue;
-          s.peso += importancia;
-          s.preguntas += 1;
-          if (elegida.has(partido)) s.acierto += importancia;
-        }
-      }
-    }
-    return { global, porTema, pesoTotal, cuentan };
-  };
 
   // — Perfil y mapa de cercanía —
 
@@ -707,9 +720,10 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     if (titulo) titulo.textContent = ajeno ? `Resultado de ${nombre}` : 'Tu resultado';
     for (const id of ['#acciones-propias', '#compartir', '#tarjeta'])
       resultado.querySelector<HTMLElement>(id)?.toggleAttribute('hidden', ajeno);
-    const { global, porTema, pesoTotal, cuentan } = calcular(estado);
+    const { global, porTema, pesoTotal, cuentan, ningunas } = calcularAfinidad(datos.preguntas, datos.partidos, estado);
+    const sinDatos: Suma = { acierto: 0, peso: 0, preguntas: 0 };
     const afinidades: AfinidadPartido[] = datos.partidos.map((partido) => {
-      const s = global.get(partido) ?? vacia();
+      const s = global.get(partido) ?? sinDatos;
       return { partido, pct: pct(s), parte: pesoTotal > 0 ? s.peso / pesoTotal : 0 };
     });
     pintarPerfil(estado, afinidades, nombre);
@@ -717,8 +731,13 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     if (resumen)
       resumen.textContent =
         cuentan === 0
-          ? 'No hay ninguna pregunta respondida: no hay nada que calcular.'
-          : `Cuentan ${cuentan} de ${datos.preguntas.length} preguntas.`;
+          ? 'No hay ninguna pregunta que cuente: no hay nada que calcular.'
+          : `Cuentan ${cuentan} de ${datos.preguntas.length} preguntas.` +
+            (ningunas > 0
+              ? ningunas === 1
+                ? ' En una has marcado «ninguna de estas opciones» y no cuenta en el cálculo.'
+                : ` En ${ningunas} has marcado «ninguna de estas opciones» y no cuentan en el cálculo.`
+              : '');
 
     for (const partido of datos.partidos) {
       const li = resultado.querySelector<HTMLElement>(`.afinidad [data-partido="${CSS.escape(partido)}"]`);
@@ -753,18 +772,33 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     for (const q of datos.preguntas) {
       const li = resultado.querySelector<HTMLElement>(`.claves > li[data-id="${CSS.escape(q.id)}"]`);
       if (!li) continue;
-      const { importancia, respuesta } = estado[q.id] ?? { importancia: IMPORTANCIA_INICIAL, respuesta: null };
-      const cuenta = respuesta !== null;
+      const { importancia, respuesta: bruta } = estado[q.id] ?? { importancia: IMPORTANCIA_INICIAL, respuesta: null };
+      const respuesta = normalizarRespuesta(bruta);
       const etiqueta = li.querySelector<HTMLElement>('.clave__importancia');
-      if (etiqueta) etiqueta.textContent = cuenta ? `(importancia ${importancia})` : '(sin responder)';
+      if (etiqueta)
+        etiqueta.textContent =
+          respuesta === null
+            ? '(sin responder)'
+            : respuesta === 'ninguna'
+              ? `(importancia ${importancia}; no cuenta en el cálculo)`
+              : `(importancia ${importancia})`;
+      const marcadas = Array.isArray(respuesta) ? respuesta : [];
+      const texto = ajeno ? '(respuesta elegida)' : '(tu respuesta)';
       for (const op of li.querySelectorAll<HTMLElement>('[data-opcion]')) {
-        const tuya = cuenta && Number(op.dataset.opcion) === respuesta;
+        const tuya = marcadas.includes(Number(op.dataset.opcion));
         op.classList.toggle('elegida', tuya);
         const marca = op.querySelector<HTMLElement>('.tuya');
         if (marca) {
           marca.hidden = !tuya;
-          marca.textContent = ajeno ? '(respuesta elegida)' : '(tu respuesta)';
+          marca.textContent = texto;
         }
+      }
+      const ninguna = li.querySelector<HTMLElement>('.clave__ninguna');
+      if (ninguna) {
+        ninguna.hidden = respuesta !== 'ninguna';
+        ninguna.classList.toggle('elegida', respuesta === 'ninguna');
+        const marca = ninguna.querySelector<HTMLElement>('.tuya');
+        if (marca) marca.textContent = texto;
       }
     }
 
@@ -1166,7 +1200,41 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     box-shadow: inset 0 0 0 1px var(--link);
   }
 
-  input[type='radio'] {
+  .opciones label:has(input:focus-visible) {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  .opciones > .ayuda {
+    margin-bottom: var(--space-2);
+  }
+
+  /* Titular de la opción y, debajo, lo que implica. */
+  .opcion {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .opcion__titulo {
+    font-weight: 600;
+  }
+
+  .opcion__detalle {
+    display: grid;
+    gap: var(--space-1);
+    margin: 0;
+    padding-left: 1.1em;
+    color: var(--muted);
+    font-size: var(--step--1);
+    list-style: disc;
+  }
+
+  .opcion--ninguna .opcion__titulo {
+    font-weight: 500;
+  }
+
+  input[type='radio'],
+  input[type='checkbox'] {
     width: 1.25rem;
     height: 1.25rem;
     margin: 0.1rem 0 0;
@@ -1469,8 +1537,19 @@ const letra = (i: number): string => String.fromCharCode(97 + i);
     padding-left: 1.1em;
   }
 
-  .claves [data-opcion].elegida > p {
+  .claves [data-opcion].elegida > p,
+  .clave__ninguna.elegida > p {
     font-weight: 600;
+  }
+
+  .clave__detalle {
+    display: grid;
+    gap: var(--space-1);
+    margin: var(--space-1) 0 0;
+    padding-left: 1.1em;
+    color: var(--muted);
+    font-size: var(--step--1);
+    list-style: disc;
   }
 
   .fuentes {

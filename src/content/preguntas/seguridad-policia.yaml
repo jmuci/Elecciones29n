@@ -1,0 +1,32 @@
+tema: seguridad-justicia
+orden: 1
+pregunta: "¿Qué debería priorizarse en la política de seguridad y policía?"
+opciones:
+  - titulo: "Reconocer a la Policía Nacional y la Guardia Civil como profesiones de riesgo y culminar la equiparación salarial"
+    detalle:
+      - "Reconocimiento del servicio como profesión de riesgo y equiparación salarial."
+      - "Una propuesta prevé por ley la jubilación anticipada sin recorte de pensión; otra, valorar la actuación de los agentes según la información y el nivel de amenaza que conocían al intervenir."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 20 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 46 }
+      - { partido: democracia-21, fuente: democracia-21-seguridad-defensa-mundo-hoy, pagina: 3 }
+  - titulo: "Aumentar y redistribuir los efectivos policiales"
+    detalle:
+      - "Más efectivos de Policía Nacional y Guardia Civil, repartidos según la población, la dispersión territorial y las jubilaciones."
+      - "Más seguridad rural y patrullas de proximidad."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 100 }
+  - titulo: "Reforzar el control y la transparencia de la actuación policial"
+    detalle:
+      - "Número de identificación visible desde cualquier ángulo en todos los agentes."
+      - "Cámaras corporales y sistemas de grabación en los vehículos policiales, de forma progresiva."
+      - "Prohibición de la infiltración de agentes en movimientos sociales pacíficos."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 132 }
+  - titulo: "Un modelo basado en la prevención, con límites legales al uso de la fuerza y a las paradas de identificación"
+    detalle:
+      - "Marco legal sobre el uso de la fuerza, las armas policiales y las herramientas de vigilancia."
+      - "Las paradas de identificación se restringirían y no podrían usarse para aplicar la Ley de Extranjería."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: "170-171" }
+revisado: 2026-11-22

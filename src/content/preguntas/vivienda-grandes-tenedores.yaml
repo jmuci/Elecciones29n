@@ -1,0 +1,19 @@
+tema: vivienda
+orden: 4
+pregunta: "¿Qué debería hacer el Estado con las viviendas en manos de grandes tenedores?"
+opciones:
+  - titulo: "Expropiar viviendas a los grandes propietarios"
+    detalle:
+      - "Una ley expropiaría viviendas, o su uso, a grandes tenedores y propietarios corporativos."
+      - "El umbral depende de la propuesta: por encima de diez viviendas, o por fases, desde los propietarios de más de 1.000 viviendas hasta las empresas con más de 50 inmuebles."
+      - "Una de las propuestas destina al alquiler social las viviendas vacías o de uso turístico."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 13 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 8 }
+  - titulo: "Aplicar un impuesto progresivo a los grandes tenedores que no destinen sus viviendas a alquiler asequible"
+    detalle:
+      - "Alcanzaría a las viviendas turísticas, vacías o alquiladas a lo que el programa califica de «precio abusivo»."
+      - "Los ayuntamientos podrían gravar las pernoctaciones en viviendas de uso turístico."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: "32-33" }
+revisado: 2026-11-22

@@ -16,6 +16,7 @@ export interface Celda {
   ruta: string;
   partido?: unknown;
   tema?: unknown;
+  estado?: unknown;
   propuestas: { fuente?: unknown; pagina?: unknown; subtema?: unknown }[];
   fuentes_revisadas?: unknown[];
 }
@@ -36,7 +37,7 @@ export interface Contenido {
 }
 
 /** Preguntas del test de afinidad por tema (PLAN.md §1, sección 5). */
-const PREGUNTAS_POR_TEMA = { min: 1, max: 2 };
+const PREGUNTAS_POR_TEMA = { min: 1, max: 5 };
 
 /**
  * Ficheros ficticios (ruta relativa a src/content). Replica las exclusiones de
@@ -162,6 +163,7 @@ export function cargar(base: string, incluirEjemplo: boolean): Contenido {
         ruta,
         partido: d.partido,
         tema: d.tema,
+        estado: d.estado,
         propuestas: Array.isArray(d.propuestas) ? d.propuestas : [],
         fuentes_revisadas: Array.isArray(d.fuentes_revisadas) ? d.fuentes_revisadas : undefined,
       };
@@ -179,6 +181,25 @@ export function cargar(base: string, incluirEjemplo: boolean): Contenido {
       return { ruta, tema: d.tema, opciones: Array.isArray(d.opciones) ? d.opciones : [] };
     });
   return { partidos: ids('partidos'), temas, fuentes: ids('fuentes'), celdas, preguntas };
+}
+
+/**
+ * Aviso (no error): partidos con propuestas en el tema que no aparecen en ninguna respuesta de
+ * una pregunta. Puede ser legítimo (el partido no propone nada sobre esa pregunta concreta),
+ * pero con frecuencia es una respuesta sin enlazar: la pregunta solo muestra a quien ya estaba.
+ */
+export function avisosCobertura({ celdas, preguntas }: Contenido): string[] {
+  const conPropuestas = new Map<string, string[]>();
+  for (const c of celdas) {
+    if (c.propuestas.length === 0) continue;
+    const tema = String(c.tema);
+    conPropuestas.set(tema, [...(conPropuestas.get(tema) ?? []), String(c.partido)]);
+  }
+  return preguntas.flatMap((p) => {
+    const presentes = new Set(p.opciones.flatMap((o) => (o.partidos ?? []).map((x) => String(x.partido))));
+    const faltan = (conPropuestas.get(String(p.tema)) ?? []).filter((partido) => !presentes.has(partido));
+    return faltan.length > 0 ? [`${p.ruta}: sin respuesta para ${faltan.join(', ')} (tienen propuestas en el tema)`] : [];
+  });
 }
 
 const cifra = new Intl.NumberFormat('es-ES', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
@@ -218,6 +239,9 @@ function main(): void {
   const errores = [...validar(cargar(base, INCLUIR_EJEMPLO)), ...validarGraficas(base)].map((e) =>
     e.replace(/^(?=\w)/, `${prefijo}/`),
   );
+  const avisos = avisosCobertura(cargar(base, INCLUIR_EJEMPLO));
+  if (avisos.length > 0)
+    console.warn(`⚠ ${avisos.length} pregunta(s) sin algún partido con propuestas en el tema:\n${avisos.map((a) => `  - ${a}`).join('\n')}`);
   if (errores.length > 0) {
     console.error(`✖ ${errores.length} error(es) de contenido:\n${errores.map((e) => `  - ${e}`).join('\n')}`);
     process.exit(1);

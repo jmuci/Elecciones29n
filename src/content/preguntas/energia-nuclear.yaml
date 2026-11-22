@@ -1,0 +1,21 @@
+tema: energia-clima
+orden: 1
+pregunta: "¿Qué debería hacerse con las centrales nucleares?"
+opciones:
+  - titulo: "Eliminar el calendario de cierre y prolongar la vida útil de las centrales"
+    detalle:
+      - "Derogar o eliminar el calendario de cierre de las centrales actuales."
+      - "Una propuesta tramita en los primeros cien días la extensión de la vida útil, con el visto bueno del Consejo de Seguridad Nuclear; otra recupera el plan nuclear nacional y estudia nuevas centrales junto a las existentes."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 71 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 12 }
+  - titulo: "Cumplir el calendario de cierre de las centrales nucleares"
+    detalle:
+      - "Cierre según el calendario previsto: hasta 2035 en una propuesta; empezando por Almaraz (I y II cerrarían en 2027-2028) en otra."
+      - "Proyectos o planes de transición justa para las comarcas afectadas."
+      - "Una propuesta impulsa en la UE una hoja de ruta para abandonar la fisión nuclear."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 67 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 71 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 103 }
+revisado: 2026-11-22

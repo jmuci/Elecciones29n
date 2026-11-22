@@ -1,0 +1,20 @@
+tema: educacion
+orden: 1
+pregunta: "¿Cómo debería organizarse la oferta de centros educativos?"
+opciones:
+  - titulo: "Garantizar la libre elección de centro por las familias"
+    detalle:
+      - "Libre elección de centro: en todo el municipio o con distrito único."
+      - "Una propuesta prevé que no se elimine ningún concierto donde haya demanda suficiente, con conciertos de al menos seis años y módulos que cubran el coste real."
+      - "Otra da prioridad a los españoles al elegir centro y en las ayudas educativas."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 67 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 42 }
+  - titulo: "Que los fondos públicos vayan a la educación pública"
+    detalle:
+      - "Una propuesta prevé avanzar hacia una única red educativa de gestión pública directa, con moratoria a nuevos conciertos y reabsorción voluntaria de los centros concertados; la otra, una hoja de ruta para que todo el alumnado pueda cursar educación pública, con el objetivo de que el 100 % de los fondos públicos vayan a ella."
+      - "Prohibición de las cuotas obligatorias en los centros concertados o sostenidos con fondos públicos."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 79 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 35 }
+revisado: 2026-11-22

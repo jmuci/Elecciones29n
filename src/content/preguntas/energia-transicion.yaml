@@ -1,0 +1,35 @@
+tema: energia-clima
+orden: 3
+pregunta: "¿Qué ritmo y qué instrumentos debería tener la transición ecológica?"
+opciones:
+  - titulo: "Mantener la descarbonización, pero revisar sus ritmos según la competitividad"
+    detalle:
+      - "Revisar los ritmos de cada sector según la evolución internacional, la tecnología disponible y la demanda."
+      - "Retirar las obligaciones que perjudiquen la competitividad, la industria o el empleo."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 72 }
+  - titulo: "Revertir las normas del Pacto Verde Europeo y la Agenda 2030"
+    detalle:
+      - "Revertir normas como la prohibición de los motores de combustión y los impuestos a las emisiones de CO2."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "11-12" }
+  - titulo: "Fijar por ley objetivos de renovables y de reducción de emisiones"
+    detalle:
+      - "Renovables: el 81 % de la electricidad en 2030 (una propuesta) o al menos el 95 % en 2035 (otra)."
+      - "Una propuesta prevé un plan nacional de bombeo hidroeléctrico y una hoja de ruta para abandonar los combustibles fósiles; otra, reducir las emisiones al menos un 55 % en 2030 respecto a 1990 y la neutralidad climática en 2040."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 66 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "94-95, 98" }
+  - titulo: "Un compromiso presupuestario del 3,5 % del PIB y renovables de autoconsumo"
+    detalle:
+      - "Compromiso legal del 3,5 % del PIB anual para la transición ecológica."
+      - "Prioridad al autoconsumo, las comunidades energéticas y las cubiertas, con un Plan de Tejados Solares antes de 2030."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: "67-69" }
+  - titulo: "Dar estabilidad regulatoria a los proyectos de generación"
+    detalle:
+      - "Prohibir por ley los cambios normativos con carácter retroactivo sobre proyectos de generación ya comprometidos."
+      - "Sustituir las penalizaciones bruscas por escalas graduales y predecibles."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-potencia-energetica, pagina: 2 }
+revisado: 2026-11-22

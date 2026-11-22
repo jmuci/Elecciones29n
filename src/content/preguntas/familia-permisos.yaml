@@ -1,0 +1,31 @@
+tema: familia
+orden: 2
+pregunta: "¿Cómo deberían ser los permisos para cuidar de los hijos y conciliar?"
+opciones:
+  - titulo: "Ampliar el permiso por nacimiento y adopción a 20-26 semanas por progenitor, intransferibles"
+    detalle:
+      - "Hasta 20 semanas por progenitor en una propuesta y 26 en otra, intransferibles y remuneradas, y el doble en las familias monoparentales."
+      - "Permiso parental de 10 semanas por progenitor, remunerado al 100 % y utilizable hasta los 12 años del menor."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 28 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 60 }
+  - titulo: "Retribuir el permiso parental que hoy no se paga"
+    detalle:
+      - "La Seguridad Social cubriría al 100 % cuatro semanas del permiso parental para menores de ocho años, y una semana más para el segundo progenitor si ambos disfrutan sus permisos sin solaparlos (una propuesta)."
+      - "Otra retribuye al 50 % del salario las ocho semanas de permiso parental no pagadas, para usarlas por días u horas hasta los 12 años del hijo, con el doble para las familias monoparentales."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: "41-42" }
+      - { partido: democracia-21, fuente: democracia-21-contigo-y-con-tu-familia, pagina: 3 }
+  - titulo: "Seguir ampliando los permisos por nacimiento con el diálogo social y dar libertad para disfrutarlos"
+    detalle:
+      - "Ampliar los permisos de cada progenitor con el diálogo social."
+      - "Más libertad para decidir cómo y cuándo disfrutar del resto del permiso."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 56 }
+  - titulo: "Facilitar la vuelta al trabajo de las madres que interrumpieron su carrera, con incentivos a las empresas"
+    detalle:
+      - "Formación, promoción y vuelta al trabajo de las madres que interrumpieron su carrera por la maternidad o el cuidado de familiares."
+      - "Incentivos a las empresas que favorezcan la conciliación."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "52-53" }
+revisado: 2026-11-22

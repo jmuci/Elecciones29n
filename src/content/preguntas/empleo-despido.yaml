@@ -1,0 +1,30 @@
+tema: empleo
+orden: 3
+pregunta: "¿Qué debería cambiar en la regulación del despido y la contratación?"
+opciones:
+  - titulo: "Reformar la indemnización por despido improcedente para que repare el daño"
+    detalle:
+      - "La reparación del despido improcedente sería efectiva, proporcionada y disuasoria."
+      - "Una propuesta recupera los salarios de tramitación; la otra, la autorización administrativa previa para los despidos colectivos, y elimina las dobles escalas salariales."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 42 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 59 }
+  - titulo: "Un nuevo Estatuto de los Trabajadores que derogue los efectos de las reformas laborales de 2010 y 2012"
+    detalle:
+      - "Restablecer la indemnización de 45 días por año en los despidos ilegales, con derecho a elegir entre indemnización o readmisión."
+      - "Recuperar la autorización administrativa previa para los despidos colectivos (ERE)."
+      - "Eliminar la contratación temporal sin causa durante 90 días al año."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 42 }
+  - titulo: "Derogar la legislación laboral aprobada por el Gobierno de Sánchez"
+    detalle:
+      - "Derogación de la legislación laboral aprobada durante ese Gobierno."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 13 }
+  - titulo: "Reducir las cotizaciones por desempleo de las empresas con plantillas más estables"
+    detalle:
+      - "Cotizarían menos las empresas con plantillas más estables que la media de su sector."
+      - "Publicar cada mes cuántos fijos discontinuos no están trabajando."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 59 }
+revisado: 2026-11-22

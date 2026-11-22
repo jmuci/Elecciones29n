@@ -1,0 +1,31 @@
+tema: inmigracion
+orden: 2
+pregunta: "¿Cómo debería regularse la llegada de personas que quieren vivir o trabajar en España?"
+opciones:
+  - titulo: "Visados por puntos y cupos anuales según las vacantes"
+    detalle:
+      - "Baremo de puntos y cupo anual por sectores, según los puestos sin cubrir."
+      - "Una propuesta revisa el cupo cada año según el paro y la capacidad en vivienda, servicios públicos y empleo, y solo admite a los países que colaboren en los retornos; otra crea un visado de búsqueda de empleo de 6 meses, prorrogable a 9, sin oferta previa."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 22 }
+      - { partido: democracia-21, fuente: democracia-21-politica-migratoria-con-cabeza, pagina: 2 }
+  - titulo: "Ampliar las vías legales: contratación en origen, protección internacional e integración"
+    detalle:
+      - "Simplificar los trámites, impulsar la contratación en origen y agilizar la homologación de títulos."
+      - "Ampliar las vías legales y seguras de protección internacional, con reasentamiento y visados humanitarios."
+      - "Plan de Integración y Ciudadanía 2026-2030, con una dotación inicial de 500 millones de euros."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 93 }
+  - titulo: "Facilitar el asilo con una agencia unificada y la posibilidad de pedirlo en embajadas"
+    detalle:
+      - "Permitir solicitar protección internacional en embajadas y consulados."
+      - "Agencia de Asilo unificada, con registro de la solicitud en 5 días y formalización en 21."
+      - "Eliminar la lista nacional de países seguros."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 150 }
+  - titulo: "Que España no acoja a más inmigrantes"
+    detalle:
+      - "No acoger a más inmigrantes."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 15 }
+revisado: 2026-11-22

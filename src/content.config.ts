@@ -202,7 +202,8 @@ const propuestas = defineCollection({
 
 /**
  * Pregunta del test de afinidad (/test). Cada respuesta recoge lo que propone
- * uno o varios partidos, sin nombrarlos, y enlaza la propuesta en que se basa
+ * uno o varios partidos, sin nombrarlos (un `titulo` y unos `detalle` de lo que
+ * implica), y enlaza la propuesta en que se basa
  * con `fuente` + `pagina`. `check:content` comprueba que ese par aparece en
  * alguna propuesta del partido. Un partido puede aparecer como mucho en una
  * respuesta por pregunta; si no tiene propuesta sobre la pregunta, no aparece.
@@ -218,7 +219,10 @@ const preguntas = defineCollection({
       opciones: z
         .array(
           z.strictObject({
-            texto: textoNoVacio,
+            /** Línea principal: lo esencial de la respuesta, en una frase corta. */
+            titulo: textoNoVacio,
+            /** Qué implica, en 1–4 frases cortas sacadas de las propuestas en que se basa (lo que todas comparten). */
+            detalle: z.array(textoNoVacio).min(1, 'Cada respuesta necesita al menos un detalle').max(4),
             partidos: z
               .array(z.strictObject({ partido: reference('partidos'), fuente: reference('fuentes'), pagina }))
               .min(1, 'Cada respuesta debe basarse en la propuesta de al menos un partido'),

@@ -1,0 +1,23 @@
+tema: seguridad-justicia
+orden: 2
+pregunta: "¿Cómo debería responder el sistema penal a la delincuencia reiterada y grave?"
+opciones:
+  - titulo: "Una respuesta penal más rápida frente a la multirreincidencia"
+    detalle:
+      - "Juicios rápidos, tramitación conjunta de delitos leves relacionados y mejor acceso policial a los antecedentes (una propuesta)."
+      - "Una nueva ley procesal que acabe con las instrucciones sin límite y un expediente judicial electrónico interoperable (otra)."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 17 }
+      - { partido: democracia-21, fuente: democracia-21-seguridad-defensa-mundo-hoy, pagina: 4 }
+  - titulo: "Endurecer las penas: ampliar la prisión permanente revisable y rebajar la edad de responsabilidad penal de los menores"
+    detalle:
+      - "Ampliar la prisión permanente revisable."
+      - "Rebajar la edad de responsabilidad penal de los menores y eliminar su inimputabilidad en ciertos delitos violentos, como homicidios o agresiones sexuales."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 45 }
+  - titulo: "Ampliar las penas no privativas de libertad para los delitos de mediana gravedad"
+    detalle:
+      - "Más uso de las penas no privativas de libertad y del medio abierto."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 176 }
+revisado: 2026-11-22

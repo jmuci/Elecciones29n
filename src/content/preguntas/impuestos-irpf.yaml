@@ -1,0 +1,31 @@
+tema: impuestos
+orden: 1
+pregunta: "¿Cómo debería cambiar el IRPF?"
+opciones:
+  - titulo: "Bajar el IRPF a las rentas medias y bajas y a las familias"
+    detalle:
+      - "Rebaja general del impuesto, con el tipo de cada contribuyente o familia reducido según el número de hijos en una propuesta, y con mínimos personales y familiares más altos y tarifa deflactada en otra."
+      - "Una propuesta prevé que quien cobre el salario mínimo no pague IRPF."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 60 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 9 }
+  - titulo: "Bajar el IRPF a las rentas más bajas y subir los tipos a las rentas más altas"
+    detalle:
+      - "Quienes cobran el salario mínimo, o menos, no pagarían IRPF."
+      - "Más tramos y tipos más altos para las rentas altas: hasta el 52 % a partir de 300.000 euros en una propuesta; hasta el 28,5 % a partir de 500.000 euros en otra."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 51 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 21 }
+  - titulo: "Subir la tributación de las rentas del capital más altas"
+    detalle:
+      - "Se mantendrían los dos primeros tramos (19 % hasta 6.000 € y 21 % hasta 50.000 €)."
+      - "A partir de ahí los tipos subirían hasta un máximo del 35 % para las rentas superiores a 300.000 €."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 49 }
+  - titulo: "Actualizar cada año por ley con el IPC los tramos del IRPF"
+    detalle:
+      - "También los mínimos personales y familiares y las reducciones."
+      - "Desde el 1 de enero siguiente y sin efectos retroactivos."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-impuestos-justificados-que-se-entiendan, pagina: 3 }
+revisado: 2026-11-22

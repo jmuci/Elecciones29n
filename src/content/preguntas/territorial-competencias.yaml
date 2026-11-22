@@ -1,0 +1,30 @@
+tema: territorial
+orden: 2
+pregunta: "¿Qué debería priorizarse en la relación entre el Estado y las comunidades autónomas?"
+opciones:
+  - titulo: "Un nuevo modelo de financiación autonómica acordado, sin regímenes singulares bilaterales"
+    detalle:
+      - "Conferencia de Presidentes al inicio de la legislatura y modelo acordado en el Consejo de Política Fiscal y Financiera, con un fondo de nivelación transitorio financiado por el Estado."
+      - "Ninguna comunidad saldría del régimen común ni habría nuevos regímenes singulares negociados bilateralmente."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "40-41" }
+  - titulo: "Reformar la financiación autonómica partiendo de la propuesta del Gobierno"
+    detalle:
+      - "Impulsar el sistema de financiación propuesto por el Gobierno: 21.000 millones de euros adicionales para las comunidades (una propuesta) o al menos un 2,3 % del PIB adicional cada año, unos 38.000 millones (otra)."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 61 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 117 }
+  - titulo: "Una Ley de Unidad de Mercado o reconocimiento mutuo entre comunidades"
+    detalle:
+      - "Lo que sea legal, o cualquier licencia, homologación o título aprobado en una comunidad, valdría en toda España."
+      - "Sin trámites adicionales, tasas duplicadas ni licencias o registros añadidos."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 28 }
+      - { partido: democracia-21, fuente: democracia-21-menos-normas-mas-claras-y-estables, pagina: 3 }
+  - titulo: "Reformar el Senado como cámara de representación territorial"
+    detalle:
+      - "Igual representación para todas las comunidades autónomas."
+      - "Elección proporcional en cada circunscripción."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 129 }
+revisado: 2026-11-22

@@ -1,0 +1,39 @@
+tema: sanidad
+orden: 1
+pregunta: "¿Cómo deberían reducirse las listas de espera sanitarias?"
+opciones:
+  - titulo: "Un Pacto de Estado con las comunidades autónomas y un plan urgente"
+    detalle:
+      - "Pacto de Estado por la Sanidad Pública con las comunidades autónomas."
+      - "Plan urgente de reducción de las listas de espera."
+      - "La sanidad sería uno de los pilares del nuevo sistema de financiación autonómica."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "68-69" }
+  - titulo: "Aumentar la financiación pública de la sanidad y reforzar su carácter público"
+    detalle:
+      - "Financiación pública de la sanidad en torno al 7 % del PIB."
+      - "Más inversión en prevención hasta converger con la media europea."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 50 }
+  - titulo: "Contar la espera desde la indicación del médico y asegurar más recursos públicos"
+    detalle:
+      - "El tiempo de espera se contaría desde la primera indicación facultativa o clínica."
+      - "Una propuesta prohíbe las listas paralelas e incluye los tiempos de Atención Primaria y Salud Mental; la otra elimina las listas de espera no estructurales y fija el cumplimiento de los tiempos máximos acordados en el Consejo Interterritorial."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 33 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 90 }
+  - titulo: "Un plan nacional que reorganice los circuitos asistenciales, con colaboración público-privada"
+    detalle:
+      - "Derivaciones entre centros y territorios más fáciles."
+      - "Colaboración público-privada cuando ayude a reducir demoras."
+      - "Publicación periódica de indicadores."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 37 }
+  - titulo: "Abrir los quirófanos públicos por la tarde y alquilar los tramos vacantes a mutuas y aseguradoras"
+    detalle:
+      - "Prioridad por la tarde para los pacientes de la sanidad pública."
+      - "Los tramos vacantes se alquilarían a tarifas públicas."
+      - "El 100 % de esos ingresos iría por ley a la sanidad pública, entre otras cosas a reducir las listas de espera."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-sanidad-publica, pagina: 3 }
+revisado: 2026-11-22

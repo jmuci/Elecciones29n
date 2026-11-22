@@ -1,0 +1,33 @@
+tema: impuestos
+orden: 2
+pregunta: "¿Qué debería hacerse con el Impuesto sobre Sociedades?"
+opciones:
+  - titulo: "Reducir el tipo del Impuesto sobre Sociedades"
+    detalle:
+      - "Rebaja del tipo del impuesto, junto con una rebaja de los tipos del IVA con prioridad para los productos esenciales."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 9 }
+  - titulo: "Permitir descontar en el mismo año lo que las empresas inviertan"
+    detalle:
+      - "Maquinaria, equipos, digitalización, inteligencia artificial, ciberseguridad, software o patentes se descontarían enteros en el impuesto el mismo año."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 61 }
+  - titulo: "Fijar un tipo mínimo efectivo más alto a las grandes empresas y gravar los beneficios extraordinarios"
+    detalle:
+      - "Tipo mínimo efectivo del 20 % para las grandes empresas y grupos, sin elevar la carga de las pymes (una propuesta); elevarlo del 15 % al 19 %, y al 29 % para el «oligopolio» (otra)."
+      - "Gravámenes especiales sobre grandes operadores energéticos (1,2 % de la cifra de negocios) o sobre los beneficios extraordinarios de la gran banca, según la propuesta."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 49 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "17, 21" }
+  - titulo: "Gravar más a las empresas cotizadas con grandes diferencias salariales"
+    detalle:
+      - "Más tributación para las cotizadas cuyo primer ejecutivo cobre más de 100 veces la mediana de su plantilla."
+      - "Un tramo superior a partir de 200 veces."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 49 }
+  - titulo: "Un impuesto de sociedades del 5 % para las pymes sobre los beneficios que se mantengan en la empresa"
+    detalle:
+      - "Tributarían de forma ordinaria al repartir dividendos."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-revolucion-pyme, pagina: 2 }
+revisado: 2026-11-22

@@ -1,0 +1,37 @@
+tema: igualdad-derechos
+orden: 2
+pregunta: "¿Cómo debería abordarse la violencia contra las mujeres?"
+opciones:
+  - titulo: "Derogar las leyes de género y aprobar normas de protección de las mujeres víctimas de violencia"
+    detalle:
+      - "Derogar las leyes de género."
+      - "Aprobar en su lugar normas que protejan a las mujeres víctimas de violencia, en especial de maltrato."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 30 }
+  - titulo: "Mejorar los dispositivos de control de las órdenes de alejamiento y la coordinación asistencial"
+    detalle:
+      - "El sistema de dispositivos de control de las órdenes de alejamiento dependería del Ministerio del Interior."
+      - "Integrar los servicios asistenciales autonómicos y municipales en VioGen."
+      - "Rendir cuentas cada año del cumplimiento del Pacto de Estado contra la Violencia de Género."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 19 }
+  - titulo: "Garantizar una financiación estable de la red pública de protección a las víctimas"
+    detalle:
+      - "Una propuesta crea un fondo de contingencia de mil millones de euros, con financiación estable y a largo plazo mediante la reforma de la Ley General Presupuestaria."
+      - "Otra se compromete a bloquear cualquier iniciativa para desmantelar, desfinanciar o invisibilizar la red pública de protección."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 51 }
+      - { partido: democracia-21, fuente: democracia-21-derechos-sociales, pagina: 2 }
+  - titulo: "Nuevas leyes contra la violencia vicaria, la trata y la explotación sexual"
+    detalle:
+      - "Leyes orgánicas contra la violencia vicaria y contra la trata de seres humanos."
+      - "Ley abolicionista de la prostitución que prohíba el proxenetismo en todas sus formas."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: "83-84" }
+  - titulo: "Prevención en las aulas y redes de acogida"
+    detalle:
+      - "Impulsar la coeducación y la educación sexoafectiva en las aulas."
+      - "Redes de prevención y acogida frente a la violencia machista y LGTBIfóbica."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 41 }
+revisado: 2026-11-22
