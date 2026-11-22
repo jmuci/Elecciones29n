@@ -10,11 +10,13 @@
 # página del PDF y el desfase no es constante: cada capítulo empieza con una portadilla sin número,
 # así que es de 3 en el cap. 1 (PDF 10 = p. 13), de 5 en el cap. 3 y de 11 en el cap. 17 (PDF 130 =
 # p. 155). La primera página de cada capítulo no lleva cabecera, y su número es el del índice.
-# Snapshot pendiente: Wayback Machine no es accesible desde el entorno de trabajo; archivarlo a mano.
+# Snapshot de Wayback capturado a mano por el autor el 22-nov-2026 (16:58 UTC). No se ha podido
+# comprobar desde el entorno de trabajo que su contenido coincida con el sha256 de arriba.
 partido: frente-amplio
 titulo: "Programa electoral Frente Amplio. Elecciones generales 29 de noviembre de 2026"
 url: https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf
 tipo: programa
 publicado: 2026-11-17
 consultado: 2026-11-22
+archivo: https://web.archive.org/web/20261122165834/https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf
 sha256: 516c5c6caaa04d0bd6f28770a49ae312f79ff3ebcf48967db66adc4ce2335424
