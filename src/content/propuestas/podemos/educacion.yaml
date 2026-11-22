@@ -1,26 +1,52 @@
-# Fase 4: Podemos no tiene programa publicado; se resume su documento político de la V Asamblea
-# (2025). podemos.info sigue bloqueado por Cloudflare (2-nov-2026).
+# Programa electoral de Podemos para el 29N, apartado «Servicios públicos para garantizar vidas
+# dignas»: medidas de educación 278-298 (pp. 78-86) revisadas el 2026-11-22. Sustituye al documento
+# político de la V Asamblea (anterior a la convocatoria, CONTRIBUTING §1.4). Selección de 5
+# propuestas (CONTRIBUTING §1.13-14): las primeras medidas del apartado, que el programa ordena por
+# prioridad, y las más concretas. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: Ley de Calidad de la Educación (278, pp. 78-79), condiciones laborales del
+# personal educativo (282-283, pp. 80-81), calendario escolar, inspección y gratuidad de libros y
+# material (284-286), educación inclusiva, supresión de la asignatura de religión y educación
+# feminista (287-289), convivencia, emergencia climática y alimentación escolar (290-293), democracia
+# universitaria y carrera científica (295-298, pp. 86-87).
 partido: podemos
 tema: educacion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
   - resumen: >-
-      Propone derogar de inmediato todas las leyes que permiten la privatización de la educación en
-      todos sus niveles y aumentar de forma muy significativa su financiación pública.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
-  - resumen: Propone bajar las ratios de alumnos en colegios e institutos.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
-  - subtema: universidad
-    resumen: Plantea garantizar que la educación universitaria no sea un privilegio de unos pocos.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+      Propone avanzar hacia una única red educativa de gestión pública directa, con una moratoria
+      indefinida a nuevos conciertos y a la apertura de nuevos centros privados, la reabsorción
+      progresiva y voluntaria de los centros concertados en la red pública y la prohibición de cobrar
+      cuotas obligatorias o complementarias en los concertados.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 79
+  - resumen: >-
+      Plantea un fondo estatal para reforzar exclusivamente la educación pública de gestión directa,
+      con la aportación de las comunidades de un euro propio por cada dos recibidos, y una inversión
+      pública en educación equivalente al 7 % del PIB durante la próxima legislatura.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 80
   - subtema: 0–3 años
     resumen: >-
-      Propone una cobertura pública, universal y gratuita de la educación infantil de 0 a 3 años.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+      Propone construir en un máximo de cuatro años todas las plazas públicas necesarias para una
+      cobertura universal, gratuita y de gestión pública directa de 0 a 3 años, con ratios máximas de 3
+      bebés menores de un año, 5 niños de 1 a 2 años y 6 de 2 a 3 años por profesional.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "79-80"
+  - resumen: >-
+      Plantea reducir las ratios máximas por aula a 13 niños y niñas por profesional en el segundo
+      ciclo de infantil, 15 en Primaria, 20 en Secundaria, 23 en Bachillerato y 15 en Formación
+      Profesional; el alumnado con necesidades específicas de apoyo educativo computaría como dos.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "79-80"
+  - subtema: [universidad, becas]
+    resumen: >-
+      Propone alcanzar progresivamente en la legislatura la gratuidad total de las tasas de grado,
+      máster y doctorado en las universidades públicas y un sistema de becas-salario de hasta 800 euros
+      mensuales según la renta familiar. Plantea también una moratoria indefinida a la creación de
+      nuevas universidades privadas.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "85-86"
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea

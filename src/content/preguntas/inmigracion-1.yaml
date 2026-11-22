@@ -2,9 +2,9 @@ tema: inmigracion
 orden: 1
 pregunta: ¿Qué hacer con las personas que viven en España en situación irregular?
 opciones:
-  - texto: Regularizar de inmediato a quienes viven y trabajan en España.
+  - texto: Establecer un procedimiento permanente de regularización basado en el arraigo.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 34 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 67 }
   - texto: >-
       Prohibir por ley las regularizaciones masivas e indiscriminadas y que el arraigo sea un reconocimiento
       individual excepcional.
@@ -13,4 +13,4 @@ opciones:
   - texto: Repatriarlas y que quien haya entrado de forma irregular no pueda regularizar nunca su situación.
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 15 }
-revisado: 2026-11-14
+revisado: 2026-11-22

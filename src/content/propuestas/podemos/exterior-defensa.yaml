@@ -1,39 +1,58 @@
-# Fase 4: Podemos no tiene programa publicado (podemos.info sigue tras la verificación de Cloudflare
-# a 2-nov); se resume su documento político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N, capítulo «Paz. Parar las guerras» (medidas 70-110, pp.
+# 26-38) revisado el 2026-11-22. Sustituye al documento político de la V Asamblea (anterior a la
+# convocatoria, CONTRIBUTING §1.4). Selección de 5 propuestas (CONTRIBUTING §1.13-14): las primeras
+# medidas del capítulo, que el programa ordena por prioridad, y la política comercial. Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: control del gasto militar y de los programas especiales de armamento (74, pp.
+# 28-29), exclusión de la contratación pública de empresas vinculadas a vulneraciones del derecho
+# internacional (75), financiación europea de la industria armamentística (76) y política exterior
+# feminista (77) (p. 29), desarme nuclear y armas autónomas (78, pp. 29-30), reforma de la ONU y
+# vecindades Este y Sur (79-81, p. 30), Oriente Medio, América Latina, África y China (82-85,
+# pp. 31-32), asilo y fronteras (86-91, pp. 32-33), Corte Penal Internacional y sanciones
+# unilaterales (92-93), Palestina (94-99, pp. 34-35), Sáhara Occidental y Ceuta (101-104, p. 36),
+# justicia fiscal global y deuda (105, 107), cooperación internacional (108, p. 37), Ucrania y nuevas
+# formas de guerra (109-110, pp. 37-38).
 partido: podemos
 tema: exterior-defensa
-estado: parcial
-revisado: 2026-11-05
+estado: completo
+revisado: 2026-11-22
 propuestas:
   - subtema: OTAN
     resumen: >-
-      Propone abandonar la OTAN a la mayor brevedad y que España y la Unión Europea dejen de seguir las
-      decisiones de Estados Unidos.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 33
+      Propone impulsar la salida de España de la OTAN mediante la denuncia del Tratado del Atlántico
+      Norte y poner fin a la presencia militar estadounidense en territorio español, incluidas la Base
+      Naval de Rota y la Base Aérea de Morón.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 28
   - subtema: gasto en defensa
     resumen: >-
-      Se opone a aumentar el gasto en armamento y plantea aumentar en su lugar las partidas de
-      sanidad, educación y cuidados.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
-  - subtema: gasto en defensa
-    resumen: >-
-      Rechaza destinar más dinero público a armamento y propone dedicarlo a servicios públicos.
-    fuente: podemos-web-paz-casa-trabajo
-    pagina: "Medida 03"
+      Plantea revertir en los Presupuestos Generales del Estado el aumento del gasto militar y
+      congelarlo durante toda la legislatura, salvo para mejorar salarios, condiciones laborales y
+      alojamiento de la tropa, y rechazar el compromiso de elevarlo al 5 % del PIB en 2035.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 28
   - subtema: política exterior
     resumen: >-
-      Propone romper todas las relaciones diplomáticas y comerciales con Israel y un embargo a la
-      compra y venta de armamento a ese país.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 33
+      Propone una reforma constitucional que incorpore el rechazo expreso a la guerra como principio de
+      la política exterior y de seguridad, y un Estatuto de Neutralidad que establezca la política de
+      no alineamiento con los bloques militares.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 28
   - subtema: política exterior
     resumen: >-
-      Plantea dar prioridad a las alianzas con América Latina, en especial con los países con
-      gobiernos progresistas, y establecer relaciones de igual a igual con los países de África.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 33
+      Plantea impulsar la ruptura de las relaciones diplomáticas, culturales y comerciales con Israel
+      y un embargo de armas efectivo, sin excepciones y verificable. Propone también promover un
+      referéndum de autodeterminación del pueblo saharaui y el reconocimiento diplomático de la
+      República Árabe Saharaui Democrática.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "34-36"
+  - subtema: comercio exterior
+    resumen: >-
+      Propone oponerse a los acuerdos comerciales internacionales que antepongan los intereses de las
+      grandes multinacionales a los derechos sociales, laborales y medioambientales, mantener el
+      rechazo al acuerdo entre la UE y Mercosur y promover la revisión del CETA.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 37
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea
-  - podemos-web-paz-casa-trabajo

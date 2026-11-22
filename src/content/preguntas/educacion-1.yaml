@@ -11,13 +11,13 @@ opciones:
     partidos:
       - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 53 }
   - texto: >-
-      Derogar las leyes que permiten privatizar la educación, aumentar mucho su financiación pública y bajar las
+      Avanzar hacia una única red educativa de gestión pública, aumentar su financiación pública y bajar las
       ratios de alumnos.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 36 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "79-80" }
   - texto: >-
       Derogar la LOMLOE, sacar de las aulas los contenidos «ideológicos» y reforzar la exigencia y la autoridad
       del profesor.
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 41 }
-revisado: 2026-11-15
+revisado: 2026-11-22

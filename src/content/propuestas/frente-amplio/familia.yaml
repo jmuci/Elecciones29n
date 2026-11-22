@@ -1,9 +1,50 @@
-# Revisado en Fase 4: frenteamplio.info no tiene programa ni documento sobre familia y natalidad.
+# Programa electoral de Frente Amplio para el 29N: Prestación Universal por Crianza (apartado 2.1,
+# p. 25) y apartado 2.2 «Derecho a cuidar y a recibir cuidados» (pp. 27-29), revisados enteros el
+# 2026-11-22. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: elevar la inversión en infancia y familias del 1,5 % al 2,4 % del PIB y
+# medidas de protección de la infancia (pp. 44-46), anticipo de la prestación por crianza durante la
+# búsqueda de embarazo (p. 46), principio de libre designación de personas de referencia (p. 28),
+# universalización de la educación de 0 a 3 años (p. 29; se recoge en educación).
 partido: frente-amplio
 tema: familia
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - subtema: ayudas por hijo
+    resumen: >-
+      Propone una Prestación Universal por Crianza de 200 euros al mes por cada menor de 18 años a
+      cargo, desvinculada de los ingresos y la situación laboral de los progenitores y abonada por la
+      Agencia Tributaria como deducción reembolsable del IRPF. Prevé implantarla en tres fases durante
+      la legislatura: 0-6 años el primer año, 7-12 el segundo y 13-18 al cierre del mandato.
+    fuente: frente-amplio-programa-29n
+    pagina: 25
+  - subtema: permisos
+    resumen: >-
+      Plantea ampliar el permiso por nacimiento y adopción hasta 20 semanas intransferibles para cada
+      progenitor, el doble en familias monoparentales, y retribuir al 100 % de la base reguladora un
+      permiso parental que llegue a 10 semanas y hasta los 12 años del menor.
+    fuente: frente-amplio-programa-29n
+    pagina: 28
+  - subtema: permisos
+    resumen: >-
+      Propone ampliar de forma generalizada los permisos retribuidos por cuidado de familiares, subir
+      de dos a diez días hábiles el permiso por fallecimiento del cónyuge, la pareja de hecho o
+      familiares hasta segundo grado, y crear permisos retribuidos de hasta quince días para acompañar
+      a un familiar en cuidados paliativos y de un día para acompañar a quien reciba la prestación de
+      ayuda para morir.
+    fuente: frente-amplio-programa-29n
+    pagina: "28-29"
+  - subtema: conciliación
+    resumen: >-
+      Propone garantizar el acceso gratuito y universal a servicios de conciliación para las familias
+      con hijos menores de edad, con un aumento del 20 % de la financiación del Plan Corresponsables,
+      las extraescolares y los campamentos.
+    fuente: frente-amplio-programa-29n
+    pagina: 29
+  - resumen: >-
+      Plantea aprobar la Ley de Familias, que reconozca la diversidad familiar, la Ley de Cuidados y de
+      Sostenibilidad de la Vida y el Pacto de Estado por los Cuidados.
+    fuente: frente-amplio-programa-29n
+    pagina: 28
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
-  - frente-amplio-nota-pensiones-minimas-jubilacion-65
+  - frente-amplio-programa-29n

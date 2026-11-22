@@ -1,9 +1,55 @@
-# Revisado en Fase 4 (2-nov): frenteamplio.info no tiene programa ni nota de prensa sobre energía o clima
-# (sus notas tratan vivienda, pensiones, tren, la IA en campaña y la coalición).
+# Programa electoral de Frente Amplio para el 29N, cap. 5 «Continuar el impulso hacia una transición
+# ecológica justa»: compromiso presupuestario (p. 67), apartado 5.1 de energía (pp. 68-71) y 5.6 de
+# agua (pp. 80-82), revisados enteros el 2026-11-22. Selección de 5 propuestas (CONTRIBUTING
+# §1.13-14), con las que destaca la introducción (p. 10) y las más concretas. Pendiente de revisión
+# humana contra la fuente.
+# Fuera de la selección: Vicepresidencia Ejecutiva de Transición Ecológica y Asamblea Ciudadana por el
+# Clima (p. 68), Fondo Generacional de la Energía y participación local en renovables (p. 69),
+# tarifa social de la energía y plan de climatización (pp. 69-70), fin de subvenciones a combustibles
+# fósiles y calendario de retirada del gas (p. 71), hidrógeno y biogás (p. 71), objetivos de
+# electrificación (p. 67), transporte (5.2), adaptación (5.3), turismo (5.4), residuos (5.5).
 partido: frente-amplio
 tema: energia-clima
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - subtema: renovables
+    resumen: >-
+      Propone un compromiso presupuestario legal del 3,5 % del PIB anual para la transición ecológica y
+      acelerar las renovables priorizando el autoconsumo, las comunidades energéticas y las cubiertas.
+      Plantea un Plan de Tejados Solares: antes de 2030, todas las comunidades de vecinos con un tejado
+      útil tendrían una instalación de autoconsumo compartido, obligatoria y con el coste adelantado por
+      el Estado.
+    fuente: frente-amplio-programa-29n
+    pagina: "67-69"
+  - subtema: precio de la luz
+    resumen: >-
+      Plantea crear una comercializadora pública de referencia para los hogares y establecer por ley la
+      titularidad pública de las redes de distribución eléctrica y de gas, con la posibilidad de que las
+      comunidades autónomas, las entidades locales y las comunidades energéticas las gestionen.
+    fuente: frente-amplio-programa-29n
+    pagina: 70
+  - subtema: precio de la luz
+    resumen: >-
+      Propone tres horas diarias de luz gratuita en la franja solar para todos los hogares, que la
+      comercializadora pública ofrecería y que las grandes comercializadoras tendrían que incluir en su
+      oferta, con vigilancia de la CNMC para evitar que se compensen con subidas en el resto del día.
+    fuente: frente-amplio-programa-29n
+    pagina: 71
+  - subtema: nuclear
+    resumen: >-
+      Se compromete a cumplir el calendario de cierre de las centrales nucleares: Almaraz I y II
+      cerrarían en los plazos previstos (2027-2028), sin beneficios fiscales y con la gestión de los
+      residuos y el desmantelamiento a cargo de los operadores.
+    fuente: frente-amplio-programa-29n
+    pagina: 71
+  - subtema: agua
+    resumen: >-
+      Propone reconocer el derecho humano al agua, con un mínimo vital gratuito para hogares
+      vulnerables, y gestionar el ciclo del agua con gestión pública directa. Plantea un canon hídrico
+      progresivo para el regadío industrial en zonas con acuíferos sobreexplotados y una moratoria a
+      nuevos embalses, trasvases y megabalsas.
+    fuente: frente-amplio-programa-29n
+    pagina: "80-81"
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n

@@ -1,35 +1,58 @@
-# Fase 1 (adelanto de Fase 2): Podemos no tiene programa publicado; se resume su documento
-# político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N, capítulo «Vida solo hay una»: medidas de migración y
+# antirracismo 205-229 (pp. 65-72) revisadas enteras el 2026-11-22. Sustituye al documento político
+# de la V Asamblea (anterior a la convocatoria, CONTRIBUTING §1.4). Selección de 5 propuestas
+# (CONTRIBUTING §1.13-14): las primeras medidas del capítulo, que el programa ordena por prioridad.
+# Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: refuerzo de recursos y gratuidad de los trámites de regularización y
+# nacionalidad (207, pp. 65-66), identificaciones por perfil racial (207, p. 66), Ley Integral
+# Antirracista (209, pp. 66-67), renovación y prórroga automática de autorizaciones y modernización de
+# la plataforma Mercurio (212-213, pp. 67-68), protección frente a la discriminación en el empleo
+# (217, p. 69), distribución obligatoria de menores migrantes no acompañados y garantías en la
+# determinación de la edad (219-220, pp. 69-70), Fondo Estatal de Acogida e Inclusión (221, p. 70),
+# ley contra la islamofobia y lucha contra el antigitanismo (224-225).
 partido: podemos
 tema: inmigracion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
-  - subtema: [regularización, nacionalidad]
+  - subtema: fronteras
     resumen: >-
-      Propone regularizar de inmediato a las personas que viven y trabajan en España y concederles la
-      nacionalidad por carta de naturaleza mediante un procedimiento exprés del Consejo de Ministros.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 34
-  - subtema: [nacionalidad, integración]
-    resumen: Plantea que quien vive y trabaja en España tenga DNI español y derecho al voto.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 34
-  - subtema: servicios y prestaciones
-    resumen: >-
-      Propone que todos los servicios públicos y derechos de ciudadanía sean universales para todas
-      las personas que viven en España, sin distinción.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 34
+      Propone derogar la Ley Orgánica 4/2000 de Extranjería y aprobar una nueva ley integral que sitúe
+      los derechos humanos, la igualdad de trato y la inclusión en el centro, con el fin de las
+      disposiciones adicionales que permiten las devoluciones en caliente en las fronteras.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 65
   - subtema: expulsiones
     resumen: >-
-      Propone derogar la ley de extranjería y cerrar los Centros de Internamiento de Extranjeros
-      (CIE), y que denunciar un delito de odio o racismo no conlleve riesgo de deportación.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 34
-  - subtema: asilo
-    resumen: Plantea trabajar en la UE para derogar el Pacto Europeo de Migración y Asilo.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 34
+      Plantea cerrar todos los Centros de Internamiento de Extranjeros y sustituir la privación de
+      libertad por alternativas comunitarias y procedimientos individualizados, con garantías de
+      alojamiento, atención social y asistencia jurídica.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 65
+  - subtema: regularización
+    resumen: >-
+      Propone un procedimiento permanente de regularización que reconozca el arraigo social, familiar y
+      comunitario sin hacer depender el derecho a residir exclusivamente de un contrato de trabajo, y
+      acreditar la permanencia con medios de prueba más amplios, como el empadronamiento, los abonos de
+      transporte o los registros de atención sanitaria.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 67
+  - subtema: nacionalidad
+    resumen: >-
+      Recoge que quien vive y trabaja en España debe tener DNI español y derecho al voto. Plantea reducir
+      a un año el plazo de residencia para obtener la nacionalidad de quienes acrediten arraigo efectivo
+      y continuado, y reformar el Código Civil para que sean españoles de origen los nacidos en España de
+      padres extranjeros cuando alguno haya permanecido legalmente en España durante un año antes del
+      nacimiento.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "65-66"
+  - subtema: servicios y prestaciones
+    resumen: >-
+      Propone un sistema sanitario público universal que incluya a las personas migrantes en situación
+      administrativa irregular y a las solicitantes de asilo, y garantizar el acceso a la educación
+      pública de todos los menores con independencia de su nacionalidad o situación administrativa.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "68-69"
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea

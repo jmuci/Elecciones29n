@@ -1,9 +1,46 @@
-# Revisado en Fase 4 (2-nov): frenteamplio.info no tiene programa ni documento sobre seguridad o
-# justicia (solo notas de prensa de otros temas).
+# Programa electoral de Frente Amplio para el 29N, apartados 18.3 «Acabar con la criminalización de la
+# protesta social» y 18.4 «Deberes y derechos de las Fuerzas y Cuerpos de Seguridad del Estado»
+# (pp. 169-171), y medidas penales de 18.7 (p. 176), revisados enteros el 2026-11-22. Una búsqueda por
+# palabras clave en todo el programa no encuentra propuestas sobre multirreincidencia ni sobre
+# ocupación ilegal de vivienda, así que esos subtemas no tienen propuestas. Pendiente de revisión
+# humana contra la fuente.
+# Fuera de la selección: criterios de proporcionalidad de las multas (p. 169), evaluación de la
+# equidad algorítmica y encuesta nacional de seguridad (p. 171), formación y selección de las Fuerzas
+# y Cuerpos de Seguridad (p. 171), agentes de penas y medidas en medio abierto (p. 171), justicia
+# restaurativa (p. 176).
 partido: frente-amplio
 tema: seguridad-justicia
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - subtema: policía
+    resumen: >-
+      Propone un modelo de seguridad basado en la prevención y la justicia social, con un marco legal
+      sobre el uso de la fuerza, las armas policiales y las herramientas de vigilancia, y restringir las
+      paradas de identificación policial, que no podrían usarse para aplicar la Ley de Extranjería.
+    fuente: frente-amplio-programa-29n
+    pagina: "170-171"
+  - subtema: policía
+    resumen: Plantea desmilitarizar la Guardia Civil.
+    fuente: frente-amplio-programa-29n
+    pagina: 171
+  - resumen: >-
+      Propone derogar por completo la Ley Orgánica de protección de la seguridad ciudadana.
+    fuente: frente-amplio-programa-29n
+    pagina: 169
+  - subtema: Código Penal
+    resumen: >-
+      Plantea derogar los artículos del Código Penal sobre delitos contra los sentimientos religiosos,
+      contra la Corona, ofensas a España, sus comunidades autónomas y sus símbolos, injurias a
+      instituciones del Estado, los Ejércitos y las Fuerzas y Cuerpos de Seguridad, y enaltecimiento del
+      terrorismo.
+    fuente: frente-amplio-programa-29n
+    pagina: "169-170"
+  - subtema: Código Penal
+    resumen: >-
+      Propone ampliar el uso de las penas no privativas de libertad y del medio abierto para los
+      delitos de mediana gravedad.
+    fuente: frente-amplio-programa-29n
+    pagina: 176
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n

@@ -1,0 +1,20 @@
+# Programa electoral de Frente Amplio para el 29N (151 páginas, PDF A4): «Programa electoral Frente
+# Amplio», 14 capítulos numerados con apartados (índice en las pp. 2-5 del PDF). Metadatos del PDF:
+# creado el 17-nov-2026 (InDesign). Enlazado desde https://frenteamplio.info/programa/ (que también
+# publica las medidas una a una). El servidor lo marcaba como modificado el 22-nov-2026 (cabecera
+# Last-Modified), así que el hash corresponde a la versión servida ese día; si cambia, sources-watch
+# abrirá un issue.
+# Fecha de publicación: 17-nov-2026, por los metadatos del PDF y por la fecha que lleva la URL de la
+# cobertura de prensa localizada; no se ha podido leer el artículo desde este entorno.
+# `pagina` = número impreso (el del índice y el de la cabecera de cada página). No coincide con la
+# página del PDF y el desfase no es constante: cada capítulo empieza con una portadilla sin número,
+# así que es de 3 en el cap. 1 (PDF 10 = p. 13), de 5 en el cap. 3 y de 11 en el cap. 17 (PDF 130 =
+# p. 155). La primera página de cada capítulo no lleva cabecera, y su número es el del índice.
+# Snapshot pendiente: Wayback Machine no es accesible desde el entorno de trabajo; archivarlo a mano.
+partido: frente-amplio
+titulo: "Programa electoral Frente Amplio. Elecciones generales 29 de noviembre de 2026"
+url: https://frenteamplio.info/pdf/ProgramaFrenteAmplio.pdf
+tipo: programa
+publicado: 2026-11-17
+consultado: 2026-11-22
+sha256: 516c5c6caaa04d0bd6f28770a49ae312f79ff3ebcf48967db66adc4ce2335424

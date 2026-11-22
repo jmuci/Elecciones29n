@@ -1,10 +1,51 @@
-# Revisado en Fase 4: frenteamplio.info no tiene programa ni documento sobre igualdad y derechos. La
-# nota de pensiones presenta su propuesta como "una medida de igualdad entre hombres y mujeres", pero
-# es una medida de pensiones; las demás notas (vivienda, tren, IA en campaña, candidaturas) no tratan el tema.
+# Programa electoral de Frente Amplio para el 29N: apartado 2.7 «Feminismo que pone la vida en el
+# centro» (pp. 41-44), salud sexual y reproductiva (apartado 2.4, pp. 32-33), cap. 15 «Igualdad y más
+# derechos para todas, todos y todes» (p. 145) y apartado 18.8 «Laicidad del Estado» (p. 177),
+# revisados el 2026-11-22. Selección de 5 propuestas (CONTRIBUTING §1.13-14). Pendiente de revisión
+# humana contra la fuente.
+# Fuera de la selección: violencia machista y violencia digital (pp. 41-44), plan de choque contra la
+# precariedad en sectores feminizados (p. 145), atención sanitaria a personas trans e intersex (p.
+# 145), estrategia de educación en igualdad (p. 44), medidas de laicidad (p. 177) y derecho al voto a
+# los 16 años (p. 46).
 partido: frente-amplio
 tema: igualdad-derechos
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - subtema: aborto
+    resumen: >-
+      Propone reformar el artículo 43 de la Constitución para incluir el derecho al aborto y una
+      estrategia que garantice la interrupción voluntaria del embarazo en centros públicos de todas las
+      comunidades autónomas, financiada con el Fondo Social Europeo Plus e incluyendo los gastos de
+      desplazamiento.
+    fuente: frente-amplio-programa-29n
+    pagina: 32
+  - subtema: igualdad
+    resumen: >-
+      Plantea completar la transposición de la directiva europea de transparencia retributiva:
+      transparencia salarial desde la oferta de empleo, derecho a conocer los salarios medios por sexo
+      en trabajos de igual valor y evaluaciones salariales conjuntas cuando la brecha supere el 5 % sin
+      justificación.
+    fuente: frente-amplio-programa-29n
+    pagina: 145
+  - subtema: LGTBI
+    resumen: >-
+      Propone desplegar de forma efectiva la Ley Trans, reconocer a las personas no binarias y crear un
+      Observatorio Estatal contra la LGTBQAifobia, con una estrategia para combatirla en el deporte, la
+      cultura, el empleo y la educación.
+    fuente: frente-amplio-programa-29n
+    pagina: 145
+  - subtema: igualdad
+    resumen: >-
+      Plantea impulsar la coeducación y la educación sexoafectiva en las aulas y redes de prevención y
+      acogida frente a la violencia machista y LGTBIfóbica.
+    fuente: frente-amplio-programa-29n
+    pagina: 41
+  - subtema: eutanasia
+    resumen: >-
+      Incluye, entre las medidas del apartado de laicidad, una Ley de Libertad de Conciencia y el
+      derecho a la interrupción voluntaria del embarazo, a la eutanasia y al suicidio asistido.
+    fuente: frente-amplio-programa-29n
+    pagina: 177
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n

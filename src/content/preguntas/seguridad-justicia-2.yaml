@@ -12,5 +12,5 @@ opciones:
       - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 4 }
   - texto: Proteger a las familias vulnerables frente a los desalojos sin alternativa habitacional.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 31 }
-revisado: 2026-11-11
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 9 }
+revisado: 2026-11-22

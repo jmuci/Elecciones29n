@@ -7,7 +7,7 @@ opciones:
       los contingentes españoles de la OTAN.
     partidos:
       - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 26 }
-  - texto: Salir de la OTAN y no aumentar el gasto en armamento.
+  - texto: Salir de la OTAN y reducir el gasto en armamento.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 33 }
-revisado: 2026-11-11
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 28 }
+revisado: 2026-11-22

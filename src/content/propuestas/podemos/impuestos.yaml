@@ -1,35 +1,61 @@
-# Fase 1 (adelanto de Fase 2): Podemos no tiene programa publicado; se resume su documento
-# político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N, capítulo «Los precios tienen que bajar»: medidas
+# fiscales 30-31 (p. 17), 41-59 (pp. 19-22) y 60-67 (pp. 22-23), revisadas enteras el 2026-11-22.
+# Sustituye al documento político de la V Asamblea (anterior a la convocatoria, CONTRIBUTING §1.4).
+# Selección de 5 propuestas (CONTRIBUTING §1.13-14): las primeras medidas fiscales del capítulo, que
+# el programa ordena por prioridad, y la fiscalidad de la vivienda, que también abre el programa.
+# Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: devolución del rescate bancario (medida 31, p. 17), impuesto a las empresas
+# más contaminantes y fiscalidad verde (41, pp. 19-20), IVA de las entradas culturales (44) y de
+# los productos menstruales (45) (p. 20), eliminación de las desgravaciones a planes de pensiones
+# privados (50) y derogación de la «Ley Beckham» (51) (p. 21), exención del IBI de la Iglesia
+# Católica (52, p. 22), lucha contra el fraude y contratación con evasores (60-61, pp. 22-23),
+# fiscalidad de Canarias (63) y medidas para autónomos y pymes (64-67) (p. 23).
 partido: podemos
 tema: impuestos
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
   - subtema: patrimonio y sucesiones
-    resumen: Propone un impuesto a los grandes patrimonios.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+    resumen: >-
+      Propone configurar el Impuesto de Solidaridad de las Grandes Fortunas como un impuesto estatal
+      permanente con las mismas características que el Impuesto sobre el Patrimonio, y que las
+      acciones de empresas en manos de quienes las gestionan dejen de estar exentas cuando el
+      patrimonio supere los 100 millones de euros.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 17
   - subtema: sociedades
     resumen: >-
-      Propone que el impuesto de sociedades tenga en la práctica un tipo mínimo, para que las grandes
-      empresas no paguen proporcionalmente menos que una pyme.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
-  - subtema: sociedades
-    resumen: >-
-      Plantea impuestos extraordinarios a los sectores cuyos beneficios califica de
-      "desproporcionados", como la banca o las grandes energéticas, y un impuesto a los beneficios
-      extraordinarios de las empresas del IBEX.
-    cita: "que alcance el 50% de los mismos"
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 37
+      Plantea elevar el tipo efectivo mínimo del Impuesto sobre Sociedades del 15 % al 19 %, calculado
+      sobre los beneficios reales, y fijar para las empresas que califica de «oligopolio» un tipo
+      efectivo mínimo del 29 % y un tipo nominal del 35 %. Propone también un impuesto permanente sobre los
+      beneficios extraordinarios de la gran banca, de modo que al menos el 50 % de sus beneficios
+      revierta en las arcas públicas.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "17, 21"
   - subtema: IRPF
-    resumen: Propone igualar en el IRPF la tributación de los rendimientos del capital a la del trabajo.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 37
+    resumen: >-
+      Propone bajar el tipo mínimo del IRPF del 9,5 % al 9 %, subir los tipos de las bases de más de
+      60.000 euros anuales, del 23 % entre 60.000 y 99.000 euros hasta el 28,5 % a partir de 500.000, y
+      que quienes cobran menos que el SMI no tributen ni tengan retención. Plantea equiparar en una
+      legislatura los tipos de las rentas del capital a los de las del trabajo.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 21
+  - subtema: IVA
+    resumen: >-
+      Propone reducir al 10 % el IVA de las peluquerías, bajar al 10 % el de los servicios veterinarios
+      con la intención de llegar al 4 %, reducir al 5 % el de las entradas a espectáculos culturales en
+      vivo y eximir de IVA los productos menstruales.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 20
   - subtema: vivienda
-    resumen: Propone un impuesto a las viviendas vacías.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 31
+    resumen: >-
+      Plantea cuadruplicar el tipo del IRPF sobre las rentas imputadas de las viviendas que no sean la
+      del contribuyente, crear un impuesto estatal a las viviendas vacías y otro al patrimonio
+      inmobiliario de las personas jurídicas, eliminar el régimen fiscal de las SOCIMI, gravar la
+      venta de inmuebles adquiridos en los dos años anteriores y elevar al 21 % el IVA de los pisos
+      turísticos.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 22
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea

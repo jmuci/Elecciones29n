@@ -1,18 +1,54 @@
-# Fase 4: Podemos no tiene programa publicado; se resume su documento político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N, capítulo «Vida solo hay una»: medidas de crianza,
+# permisos y cuidados 178-198 (pp. 60-64) revisadas el 2026-11-22. Sustituye al documento político de
+# la V Asamblea (anterior a la convocatoria, CONTRIBUTING §1.4). Selección de 5 propuestas
+# (CONTRIBUTING §1.13-14): las primeras medidas del apartado, que el programa ordena por prioridad.
+# Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: primeros 1.000 días (182), permiso para acompañar a menores de 14 años a
+# consultas (184) y equiparación a familia numerosa de otros supuestos (187) (p. 61), derecho al
+# cuidado más allá de los modelos tradicionales (189, pp. 61-62), reconocimiento profesional de las
+# personas cuidadoras y Ley de Calidad del SECC (191, 193, pp. 62-63), Plan Corresponsables (192,
+# p. 63) y el resto de medidas de cuidados y vejez (194-204, pp. 63-65).
 partido: podemos
 tema: familia
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
-  - subtema: conciliación
-    resumen: Propone que la educación infantil de 0 a 3 años tenga cobertura pública, universal y gratuita.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+  - subtema: ayudas por hijo
+    resumen: >-
+      Propone una prestación universal por crianza, mensual por cada hija o hijo desde el nacimiento
+      hasta los 21 años, equivalente al 15 % del SMI.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 60
+  - subtema: permisos
+    resumen: >-
+      Plantea ampliar los permisos por nacimiento, adopción y acogimiento a 26 semanas por progenitor,
+      intransferibles y remunerados, el doble en las familias monomarentales, y el permiso parental a
+      10 semanas por progenitor remuneradas al 100 % y utilizables hasta que la criatura cumpla 12
+      años.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 60
+  - subtema: permisos
+    resumen: >-
+      Propone un permiso de cuidados remunerado al 100 % de hasta 7 días, 12 si se cuida a menores de 6
+      años, por enfermedad grave u hospitalización de familiares o convivientes, ampliar a 7 días
+      retribuidos al año el permiso por fuerza mayor y a 10 días hábiles el de fallecimiento de un
+      familiar.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "60-61"
   - subtema: conciliación
     resumen: >-
-      Plantea un sistema público de cuidados que llegue a todas las personas y garantice atención
-      suficiente a todas las personas dependientes.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+      Plantea crear un Sistema Estatal de Cuidados y Conciliación como cuarto pilar del Estado del
+      Bienestar, que cubra con recursos públicos las necesidades de cuidados mediante asistencia
+      personal profesional en el domicilio, asistencia familiar con un máximo de una jornada completa
+      por asistente y asistencia residencial.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 62
+  - resumen: >-
+      Propone aprobar de inmediato la Ley de Familias, que reconozca la diversidad familiar, y
+      reconocer legalmente a las familias monomarentales, igualando la duración de sus permisos a la de
+      las biparentales y equiparando a familia numerosa a las que tienen un solo hijo o hija.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 61
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea

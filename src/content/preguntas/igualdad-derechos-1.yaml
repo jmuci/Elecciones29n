@@ -11,11 +11,10 @@ opciones:
     partidos:
       - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 19 }
   - texto: >-
-      Desplegar todos los recursos del Pacto de Estado contra la Violencia de Género y aplicar todas las medidas
-      de la ley «solo sí es sí».
+      Crear un fondo de contingencia que financie de forma estable las políticas contra la violencia de género.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 35 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 51 }
   - texto: Prohibir el burka y el niqab en los espacios públicos.
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 42 }
-revisado: 2026-11-15
+revisado: 2026-11-22

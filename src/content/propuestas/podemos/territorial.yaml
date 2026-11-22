@@ -1,19 +1,42 @@
-# Fase 4: Podemos no tiene programa publicado (podemos.info sigue bloqueado por Cloudflare el 2-nov; en
-# Wayback no hay documentos nuevos para el 29N). Se resume su documento político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N: capítulo «España, república plurinacional» (pp.
+# 125-141), medidas 406 y 412 (pp. 128-129), enseñanza de lenguas (292, p. 85) y cuotas de pantalla
+# (256, p. 76), revisados el 2026-11-22. Sustituye al documento político de la V Asamblea (anterior
+# a la convocatoria, CONTRIBUTING §1.4). Pendiente de revisión humana contra la fuente.
+# Una búsqueda por palabras clave en todo el programa no encuentra propuestas sobre financiación
+# autonómica ni sobre Cataluña: el capítulo «España, república plurinacional» trata de la forma de
+# Estado, el sistema electoral, la justicia, la memoria y la información, no de la organización
+# territorial. La única medida sobre un territorio concreto es la fiscalidad de Canarias (63, p. 23),
+# que se recoge sin subtema.
 partido: podemos
 tema: territorial
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
   - resumen: >-
-      Plantea reconocer el derecho a decidir de todos los pueblos que, según el documento, forman
-      España como "país de países".
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 41
+      Propone un proceso constituyente que culmine en una constitución republicana que reconozca la
+      plurinacionalidad, con una reforma constitucional que permita a la ciudadanía decidir de forma
+      separada y directa en referéndum entre monarquía y república.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 128
   - resumen: >-
-      Plantea avanzar hacia lo que llama la "República plurinacional", con un modelo "confederal de
-      soberanías compartidas".
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 41
+      Plantea reformar el Senado para convertirlo en una cámara de representación territorial, con la
+      misma representación para todas las comunidades autónomas y un sistema de elección proporcional
+      en cada circunscripción.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 129
+  - subtema: lenguas
+    resumen: >-
+      Propone garantizar la promoción y la enseñanza de las lenguas cooficiales y propias de los
+      pueblos del Estado, con una oferta educativa suficiente para estudiar todas las lenguas
+      reconocidas legalmente en los distintos territorios, y preservar las cuotas de pantalla para las
+      lenguas oficiales del Estado en la producción audiovisual.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "76, 85"
+  - resumen: >-
+      Plantea reformar el sistema fiscal de Canarias para que sea progresivo, de modo que los autónomos
+      y las pymes paguen menos y las grandes empresas paguen más.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 23
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea

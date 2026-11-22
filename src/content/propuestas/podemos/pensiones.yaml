@@ -1,17 +1,42 @@
-# Fase 4: Podemos no tiene programa publicado; se resume su documento político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N, capítulo «Trabajar menos para vivir mejor»: medidas de
+# pensiones 115-116 (p. 41) y 126-133 (pp. 44-45), revisadas enteras el 2026-11-22. Sustituye al
+# documento político de la V Asamblea (anterior a la convocatoria, CONTRIBUTING §1.4). Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: compatibilidad de la pensión de viudedad de las parejas de hecho (132, p.
+# 45), integración de las mutualidades alternativas al RETA y de las mutuas colaboradoras en el
+# sistema público (133, p. 45), auditoría de las cuentas de la Seguridad Social (128, p. 44),
+# jubilación anticipada sin penalización en sectores duros (130, p. 45).
 partido: podemos
 tema: pensiones
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
-  - resumen: >-
-      Propone subir las pensiones contributivas más bajas y las no contributivas para que ninguna
-      pensión sea inferior al salario mínimo interprofesional.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 37
+  - subtema: edad de jubilación
+    resumen: >-
+      Propone adelantar la edad ordinaria de jubilación a los 63 años, financiando el sistema con
+      cargo a los Presupuestos Generales del Estado, y eliminar de forma retroactiva las penalizaciones
+      por jubilación anticipada de quienes tienen 40 o más años cotizados.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 41
   - subtema: sostenibilidad
-    resumen: Plantea proteger el sistema público de pensiones.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 37
+    resumen: >-
+      Plantea suprimir la base máxima de cotización y establecer un sistema de cotización progresiva
+      que tenga en cuenta el nivel de renta y el volumen de beneficios empresariales.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 44
+  - subtema: revalorización
+    resumen: >-
+      Propone equiparar la pensión mínima contributiva al SMI y la no contributiva al 80 % del SMI.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 44
+  - subtema: revalorización
+    resumen: >-
+      Plantea mejorar las pensiones mínimas y no contributivas para eliminar la brecha de género y
+      permitir completar las lagunas de cotización al servicio doméstico, a los trabajadores agrarios
+      y a los autónomos, y que quien se jubile elija los años de su vida laboral que cuentan para
+      calcular su pensión.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "44-45"
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea

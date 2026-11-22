@@ -4,7 +4,7 @@ pregunta: ¿Qué debería hacer el Estado con el precio del alquiler?
 opciones:
   - texto: Regular los precios del alquiler y bajarlos en todo el país.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 31 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 8 }
   - texto: >-
       Limitarlos solo de forma temporal y excepcional en zonas tensionadas, y que el Estado garantice el cobro
       al propietario si el inquilino es vulnerable y no tiene alternativa habitacional.
@@ -13,4 +13,4 @@ opciones:
   - texto: Derogar la Ley de Vivienda y dar incentivos fiscales al alquiler de larga duración.
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "23-24" }
-revisado: 2026-11-14
+revisado: 2026-11-22
