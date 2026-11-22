@@ -1,22 +1,55 @@
-# Fase 4: Podemos no tiene programa publicado (podemos.info sigue bloqueado por Cloudflare; Wayback
-# no tiene documentos nuevos desde la convocatoria); se resume su documento político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N, capítulo «Trabajar menos para vivir mejor»: medidas
+# 111-113 y 117-123 (pp. 41-43), revisadas enteras el 2026-11-22. Sustituye al documento político de
+# la V Asamblea (anterior a la convocatoria, CONTRIBUTING §1.4). Selección de 5 propuestas
+# (CONTRIBUTING §1.13-14): las primeras medidas del capítulo, que el programa ordena por prioridad.
+# Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: estabilización del empleo público (114, p. 41), tolerancia cero con el
+# fraude laboral, presunción de laboralidad y Ley Kellys (120-121, pp. 42-43), democracia sindical y
+# derecho de huelga (123-124, pp. 43-44), igualdad de género en el trabajo (125, p. 44), prácticas
+# externas (134, p. 45), renta universal (135, p. 45), trabajos al aire libre con alertas
+# meteorológicas (136, pp. 45-46), cuidados, jornaleros, transportistas y Estatuto del Artista
+# (137-144, pp. 46-48).
 partido: podemos
 tema: empleo
-estado: parcial
-revisado: 2026-11-05
+estado: completo
+revisado: 2026-11-22
 propuestas:
   - subtema: SMI
-    resumen: Propone mejorar los salarios y, en particular, aumentar el salario mínimo.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 37
-  - subtema: SMI
-    resumen: Propone fijar por ley un salario mínimo de 1.800 euros.
-    fuente: podemos-web-paz-casa-trabajo
-    pagina: "Medida 04"
+    resumen: >-
+      Propone elevar el SMI hasta los 1.800 euros mensuales en una legislatura y fijar por ley que
+      nunca sea inferior al 75 % del salario mediano. Plantea además la subida automática de los
+      conceptos salariales conforme al coste de la vida cuando la negociación colectiva no pacte
+      mejoras.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 41
   - subtema: jornada
-    resumen: Propone una jornada laboral de 30 horas semanales.
-    fuente: podemos-web-paz-casa-trabajo
-    pagina: "Medida 04"
+    resumen: >-
+      Plantea reducir la jornada laboral a 30 horas semanales durante la legislatura sin reducir los
+      salarios, empezando por 35 horas, con la posibilidad de una semana de cuatro días y teletrabajo
+      dos días a la semana en los puestos en que sea posible.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 41
+  - subtema: jornada
+    resumen: >-
+      Propone prohibir las horas extraordinarias sin compensación en descanso y establecer sanciones
+      penales para los empresarios que obliguen a realizarlas sin abonarlas ni compensarlas.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 42
+  - subtema: contratación
+    resumen: >-
+      Propone un nuevo Estatuto de los Trabajadores y Trabajadoras que derogue los efectos de las
+      reformas laborales de 2010 y 2012. Prevé restablecer la indemnización de 45 días por año en los
+      despidos ilegales, con derecho a elegir entre indemnización o readmisión, recuperar la
+      autorización administrativa previa para los ERE y eliminar la contratación temporal sin causa
+      durante 90 días al año.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 42
+  - subtema: desempleo
+    resumen: >-
+      Plantea modificar el acceso a la prestación por desempleo para que por cada 2 meses cotizados se
+      compute un mes de derecho a paro.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 43
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea
-  - podemos-web-paz-casa-trabajo

@@ -1,34 +1,51 @@
-# Revisado el 14-nov: frenteamplio.info sigue sin programa electoral. La nota del 14-nov recoge tres
-# medidas centrales (salud bucodental, visual y auditiva) y una cuarta sobre climaterio y menopausia;
-# se recogen las cuatro. Ninguna encaja en los subtemas del tema, así que van sin subtema.
-# La nota del 6-nov sobre la aplicación 'Tax the Rich' reparte una recaudación hipotética entre
-# sanidad y otras partidas, pero no contiene propuestas sanitarias concretas.
+# Programa electoral de Frente Amplio para el 29N, apartado 2.4 «Una sanidad pública más fuerte»
+# (pp. 30-34) revisado entero el 2026-11-22. Selección de 5 propuestas (CONTRIBUTING §1.13-14): la
+# financiación que destaca la introducción (p. 10) y las más concretas de cada bloque. Pendiente de
+# revisión humana contra la fuente.
+# Fuera de la selección: universalidad de la atención para residentes con independencia de su
+# situación administrativa y gestión pública directa de la Alta Inspección (p. 30-31), integración de
+# las mutualidades de funcionarios (p. 31), banco público de prótesis y salud sexual (p. 31), aborto
+# y salud obstétrica (p. 32-33), industria farmacéutica pública (p. 33), profesionales sanitarios y
+# bajas médicas (p. 34) y salud pública (p. 34). El aborto se recoge en igualdad y derechos.
 partido: frente-amplio
 tema: sanidad
-estado: parcial
-revisado: 2026-11-14
+estado: completo
+revisado: 2026-11-22
 propuestas:
+  - subtema: atención primaria
+    resumen: >-
+      Propone un gasto sanitario público del 8 % del PIB desde los Presupuestos Generales del Estado y
+      seguir aumentando los fondos de Atención Primaria hasta destinarle el 25 % del presupuesto
+      sanitario, como recomienda la OMS.
+    fuente: frente-amplio-programa-29n
+    pagina: 30
   - resumen: >-
-      Propone extender la atención bucodental pública hasta cubrir, como mínimo, a la mitad de la
-      población al final de la legislatura, empezando por los menores de 14 años, las personas
-      vulnerables y las personas con discapacidad.
-    fuente: frente-amplio-nota-gafas-audifonos-dentista
-    pagina: apartado «Las tres medidas para ampliar la sanidad pública», medida 1
+      Plantea una Ley de Gestión Pública e Integridad del Sistema Nacional de Salud que establezca la
+      gestión pública directa como vía general, derogue la Ley 15/1997 y deje la gestión indirecta como
+      excepcional, con planes de internalización paulatina de los servicios hoy privatizados.
+    fuente: frente-amplio-programa-29n
+    pagina: 30
+  - subtema: listas de espera
+    resumen: >-
+      Propone aprobar el real decreto de listas de espera: el cómputo empezaría con la indicación
+      facultativa, se prohibirían las listas paralelas, se incluirían los tiempos de Atención Primaria y
+      de Salud Mental, y se ampliarían a 25 los procedimientos quirúrgicos analizados y a 15 las pruebas
+      diagnósticas y terapéuticas evaluadas.
+    fuente: frente-amplio-programa-29n
+    pagina: 33
+  - subtema: salud mental
+    resumen: >-
+      Propone crear un fondo específico para la Red de Salud Mental Comunitaria y aumentar los
+      profesionales hasta un mínimo de 10 por cada 100.000 habitantes, con un modelo asistencial
+      comunitario y la estrategia «Cero Contenciones».
+    fuente: frente-amplio-programa-29n
+    pagina: 32
   - resumen: >-
-      Propone ampliar a todas las edades el Plan VEO de ayudas para gafas y lentillas, hoy limitado a
-      menores de 16 años, y avanzar hacia su acceso gratuito.
-    fuente: frente-amplio-nota-gafas-audifonos-dentista
-    pagina: apartado «Las tres medidas para ampliar la sanidad pública», medida 2
-  - resumen: >-
-      Plantea incluir los audífonos en la cartera común de servicios del Sistema Nacional de Salud,
-      con financiación pública para todas las personas que los necesiten.
-    fuente: frente-amplio-nota-gafas-audifonos-dentista
-    pagina: apartado «Las tres medidas para ampliar la sanidad pública», medida 3
-  - resumen: >-
-      Propone reconocer la atención integral al climaterio y la menopausia como derecho en la sanidad
-      pública, con más consultas, valoración individualizada y control del precio de los medicamentos.
-    fuente: frente-amplio-nota-gafas-audifonos-dentista
-    pagina: apartado «Las tres medidas para ampliar la sanidad pública», párrafo tras la medida 3
+      Plantea ampliar la cartera común de servicios: cobertura bucodental para al menos el 50 % de la
+      población residente al final de la legislatura, el Plan Veo de gafas y lentillas para todas las
+      edades y la financiación pública de los audífonos.
+    fuente: frente-amplio-programa-29n
+    pagina: 31
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n
   - frente-amplio-nota-gafas-audifonos-dentista

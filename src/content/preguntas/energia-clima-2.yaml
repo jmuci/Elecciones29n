@@ -6,8 +6,8 @@ opciones:
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 12 }
   - texto: >-
-      Crear una empresa pública de energía que compita con las grandes compañías privadas y gestione la
-      transición energética.
+      Crear una empresa pública de energía que recupere el control público de la producción, empezando por los
+      saltos hidroeléctricos y con la mayoría de Repsol.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 38 }
-revisado: 2026-11-14
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "18, 98" }
+revisado: 2026-11-22

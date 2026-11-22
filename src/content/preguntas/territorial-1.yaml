@@ -13,8 +13,8 @@ opciones:
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "55-56" }
   - texto: >-
-      Reconocer el derecho a decidir de los pueblos de España y avanzar hacia un modelo confederal de
-      soberanías compartidas.
+      Avanzar hacia una república plurinacional, con un proceso constituyente y un referéndum sobre la forma de
+      Estado.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 41 }
-revisado: 2026-11-14
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 128 }
+revisado: 2026-11-22

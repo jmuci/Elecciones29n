@@ -1,9 +1,51 @@
-# Revisado en Fase 4 (2-nov): frenteamplio.info no tiene programa ni nota de prensa sobre el modelo
-# territorial (sus notas tratan vivienda, pensiones, tren, la IA en campaña y la coalición).
+# Programa electoral de Frente Amplio para el 29N, cap. 11 «Financiación autonómica y vertebración
+# territorial» (pp. 117-120), apartado 18.1 (pp. 167-168) y medidas lingüísticas de 2.5 (p. 36),
+# revisados el 2026-11-22. Selección de 5 propuestas (CONTRIBUTING §1.13-14). Pendiente de revisión
+# humana contra la fuente.
+# El programa trata la cuestión territorial en general (república federal y plurinacional, derecho a
+# decidir mediante referéndum) y no tiene un apartado específico sobre Cataluña; las únicas medidas
+# nombradas para Cataluña son los traspasos de Rodalies y de la Inspección de Trabajo.
+# Fuera de la selección: financiación local (cap. 12, pp. 125-129), fondo de convergencia y fondo
+# climático (p. 118), alta velocidad pública y resto de infraestructuras ferroviarias (pp. 119-120),
+# despoblación e insularidad (cap. 9), reforma del sistema electoral y del Senado (pp. 167-168).
 partido: frente-amplio
 tema: territorial
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - subtema: financiación autonómica
+    resumen: >-
+      Propone reformar de inmediato el sistema de financiación autonómica, partiendo de la propuesta
+      presentada por el Gobierno de Coalición Progresista, y destinarle al menos un 2,3 % del PIB
+      adicional cada año, unos 38.000 millones de euros.
+    fuente: frente-amplio-programa-29n
+    pagina: 117
+  - subtema: financiación autonómica
+    resumen: >-
+      Plantea condonar deuda autonómica condicionada a no practicar competencia fiscal a la baja ni
+      bajar impuestos a las rentas altas, con la posibilidad de destinar el 20 % de la deuda condonada
+      a vivienda pública de alquiler asequible, y fijar por ley un mínimo común de tributación en
+      Patrimonio y Sucesiones.
+    fuente: frente-amplio-programa-29n
+    pagina: "118-119"
+  - resumen: >-
+      Propone avanzar hacia un modelo de Estado republicano, federal y plurinacional que regule el
+      referéndum y el derecho a decidir para resolver la cuestión territorial, mediante un pacto
+      territorial que desarrolle los Estatutos de Autonomía con una lectura federal de la Constitución.
+    fuente: frente-amplio-programa-29n
+    pagina: 167
+  - subtema: lenguas
+    resumen: >-
+      Plantea una ley del plurilingüismo que garantice la relación con las instituciones del Estado en
+      las lenguas cooficiales y un plan estatal para su aprendizaje y divulgación, con la inmersión
+      lingüística en catalán como lengua vehicular en Cataluña.
+    fuente: frente-amplio-programa-29n
+    pagina: "36, 168"
+  - subtema: Cataluña
+    resumen: >-
+      Propone completar el traspaso de servicios y medios de Rodalies a la Generalitat y traspasar por
+      completo las funciones de la Inspección de Trabajo, incluida la de Seguridad Social.
+    fuente: frente-amplio-programa-29n
+    pagina: "60, 120"
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n

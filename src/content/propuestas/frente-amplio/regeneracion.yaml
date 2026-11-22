@@ -1,33 +1,52 @@
-# Revisado el 14-nov: frenteamplio.info sigue sin programa electoral. La nota del 13-nov presenta su
-# "hoja de ruta contra la corrupción" con tres medidas prioritarias, que se recogen todas. La nota del
-# 27-oct sobre el uso vejatorio de la IA en campaña es una carta a otros candidatos, no una propuesta
-# de regeneración, y no se recoge.
+# Programa electoral de Frente Amplio para el 29N, apartado 18.2 «Transparencia, lucha contra la
+# corrupción y dimensión ética de la gestión pública» (pp. 168-169) y 18.7 «Modernización, renovación
+# y democratización del acceso al sistema judicial» (pp. 175-176), revisados enteros el 2026-11-22.
+# Selección de 5 propuestas (CONTRIBUTING §1.13-14). Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: ley de grupos de interés y agenda de reuniones con lobbies (pp. 168-169),
+# estatuto para los expresidentes del Gobierno y auditoría de la deuda (p. 169), responsabilidad de
+# los administradores de grandes empresas (p. 168), responsabilidad de jueces por dolo o culpa grave,
+# juzgados de violencia sobre la mujer, justicia digital y justicia gratuita (pp. 175-176).
 partido: frente-amplio
 tema: regeneracion
-estado: parcial
-revisado: 2026-11-14
+estado: completo
+revisado: 2026-11-22
 propuestas:
   - subtema: corrupción
     resumen: >-
-      Propone excluir durante 20 años de la contratación pública a las empresas condenadas por
-      corrupción, sus representantes y administradores, las sociedades vinculadas y las UTE en que
-      participen, reformando la Ley de Contratos del Sector Público y el Código Penal.
-    fuente: frente-amplio-nota-contratacion-publica-empresas-corruptoras
-    pagina: apartado «Las tres medidas prioritarias del Frente Amplio contra la corrupción», medida 1
+      Propone una Ley de Integridad Pública que obligue a inscribir y actualizar en el Registro
+      Mercantil los cambios de propiedad de las sociedades limitadas y las anónimas no cotizadas,
+      identificando a los socios, la cadena de propiedad y las personas que ejercen el control efectivo.
+    fuente: frente-amplio-programa-29n
+    pagina: 168
   - subtema: corrupción
     resumen: >-
-      Propone dotar de personal y recursos a la Autoridad Independiente de Protección del Informante
-      para que proteja frente a represalias a las personas, entidades y periodistas que denuncien
-      irregularidades.
-    fuente: frente-amplio-nota-contratacion-publica-empresas-corruptoras
-    pagina: apartado «Las tres medidas prioritarias del Frente Amplio contra la corrupción», medida 2
+      Plantea crear una Oficina Independiente contra la Corrupción con capacidad para investigar y
+      sancionar, y poner en marcha de inmediato la Autoridad de Protección del Informante con el
+      personal y los medios necesarios.
+    fuente: frente-amplio-programa-29n
+    pagina: 169
   - subtema: corrupción
     resumen: >-
-      Propone crear una Agencia Independiente contra la Corrupción que pueda investigar e imponer
-      sanciones administrativas, con un buzón anónimo de denuncias y capacidad para trasladar a la
-      Fiscalía los casos con indicios de delito.
-    fuente: frente-amplio-nota-contratacion-publica-empresas-corruptoras
-    pagina: apartado «Las tres medidas prioritarias del Frente Amplio contra la corrupción», medida 3
+      Propone que las empresas y personas condenadas por corrupción no puedan contratar con el sector
+      público durante veinte años, eliminar la atenuante de dilaciones indebidas en los casos de
+      corrupción y crear el decomiso administrativo o preventivo de bienes vinculados a actividades
+      delictivas, sin necesidad de condena previa.
+    fuente: frente-amplio-programa-29n
+    pagina: 169
+  - subtema: independencia de órganos
+    resumen: >-
+      Plantea reformar la Ley Orgánica del Poder Judicial para que los vocales del CGPJ del turno
+      judicial se elijan por tres quintos y, si en dos meses no hay acuerdo, por mayoría absoluta en
+      segunda votación, y para que el Consejo pueda constituirse con los vocales ya elegidos.
+    fuente: frente-amplio-programa-29n
+    pagina: 175
+  - subtema: justicia
+    resumen: >-
+      Propone un plan plurianual de plazas para alcanzar en dos legislaturas la media europea de jueces
+      y fiscales por habitante, y establecer la incompatibilidad total de jueces y magistrados con
+      cualquier actividad remunerada ajena a la carrera judicial.
+    fuente: frente-amplio-programa-29n
+    pagina: "175-176"
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n
   - frente-amplio-nota-contratacion-publica-empresas-corruptoras

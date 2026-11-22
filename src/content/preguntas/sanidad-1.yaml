@@ -8,8 +8,8 @@ opciones:
       - { partido: democracia-21, fuente: democracia-21-sanidad-publica, pagina: 4 }
   - texto: Derogar las leyes que permiten privatizar la sanidad y aumentar mucho su financiación pública.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 36 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 88 }
   - texto: Un plan nacional para reducir las listas de espera y una tarjeta sanitaria única.
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 37 }
-revisado: 2026-11-14
+revisado: 2026-11-22

@@ -1,10 +1,48 @@
-# Revisado en Fase 4: frenteamplio.info no tiene programa ni documento sobre empleo; su única nota
-# relacionada (pensiones, 24-oct) no incluye medidas de empleo ni salarios.
+# Programa electoral de Frente Amplio para el 29N, apartado 4.1 «Salarios que deben crecer, más
+# tiempo para la vida» (pp. 57-62) revisado entero el 2026-11-22. Selección de 5 propuestas
+# (CONTRIBUTING §1.13-14): las que la introducción (p. 10) destaca (SMI y jornada) y las más concretas
+# de cada bloque. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: igualdad salarial en contratas, participación en beneficios y gravamen sobre
+# beneficios no compartidos (pp. 57-58), registro de jornada digital, jornada continua, Ley Rider y
+# gestión algorítmica (p. 58), derechos sindicales, riesgos psicosociales, mutuas y teletrabajo
+# (pp. 60-61).
 partido: frente-amplio
 tema: empleo
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - subtema: SMI
+    resumen: >-
+      Propone fijar por ley un suelo permanente del SMI equivalente al 60 % del salario medio neto y
+      prohibir que se absorba o compense con complementos o pluses salariales.
+    fuente: frente-amplio-programa-29n
+    pagina: 57
+  - subtema: jornada
+    resumen: >-
+      Plantea implantar de inmediato la jornada de 37,5 horas en 2026 y de 35 horas en el sector
+      público, y reducirla de forma progresiva hasta 32 horas semanales sin reducción salarial.
+    fuente: frente-amplio-programa-29n
+    pagina: "61-62"
+  - subtema: contratación
+    resumen: >-
+      Propone reformar la indemnización por despido improcedente para que repare el daño causado,
+      recuperar la autorización administrativa previa para los despidos colectivos y eliminar las
+      dobles escalas salariales.
+    fuente: frente-amplio-programa-29n
+    pagina: 59
+  - subtema: desempleo
+    resumen: >-
+      Plantea elevar la prestación contributiva por desempleo del 70 % al 80 % de la base reguladora
+      durante los primeros seis meses y subir un 25 % los topes máximos, y desplegar un Plan de Empleo
+      Garantizado que priorice a parados de larga duración y jóvenes.
+    fuente: frente-amplio-programa-29n
+    pagina: "59-60"
+  - resumen: >-
+      Propone que los convenios incluyan cláusulas de revisión salarial que preserven el poder
+      adquisitivo, con revisión subsidiaria conforme al IPC si no las prevén, y mantener la ultraactividad
+      indefinida de los convenios con prioridad del convenio sectorial sobre el de empresa en jornada y
+      horario.
+    fuente: frente-amplio-programa-29n
+    pagina: 57
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
-  - frente-amplio-nota-pensiones-minimas-jubilacion-65
+  - frente-amplio-programa-29n

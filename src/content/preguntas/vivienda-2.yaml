@@ -11,15 +11,14 @@ opciones:
       asequible de protección permanente.
     partidos:
       - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 28 }
-      - { partido: frente-amplio, fuente: frente-amplio-nota-impuesto-acumulacion-vivienda, pagina: último párrafo }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 13 }
   - texto: >-
-      Ampliar el alquiler social expropiando el uso del 50 % de las viviendas de los grandes tenedores y
-      comprando vivienda a gran escala en el mercado privado.
+      Ampliar el alquiler social expropiando el uso de las viviendas de los grandes tenedores.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 31 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 8 }
   - texto: >-
       Destinar los fondos europeos no ejecutados a un fondo público para construir vivienda asequible y
       protegida, y ceder suelo público a proyectos de colaboración público-privada.
     partidos:
       - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 3 }
-revisado: 2026-11-15
+revisado: 2026-11-22

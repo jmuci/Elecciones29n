@@ -1,40 +1,59 @@
-# Fase 1 (adelanto de Fase 2): Podemos no tiene programa publicado; se resume su documento
-# político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N, capítulo «Las casas son para vivir» (29 medidas
+# numeradas, pp. 7-14) revisado entero el 2026-11-22. Sustituye al documento político de la V
+# Asamblea (anterior a la convocatoria), que deja de citarse en esta celda (CONTRIBUTING §1.4).
+# Selección de 5 propuestas (CONTRIBUTING §1.13-14): las primeras medidas del capítulo, que el
+# programa ordena por prioridad, y las más concretas. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: prohibición de los pisos turísticos (medida 7, pp. 9-10), inmobiliaria
+# pública (8) y SAREB (9) (p. 10), regulación del alquiler de temporada y por habitaciones (15),
+# reserva del 50 % de las nuevas viviendas de los planes urbanísticos al alquiler social (16, p. 11),
+# prohibición de vender vivienda pública (17) y carácter permanente de la vivienda protegida (18)
+# (p. 11), rehabilitación energética (19), derechos sindicales de los inquilinos (20, pp. 11-12),
+# registro público de viviendas y alquileres (22, p. 12), medidas hipotecarias (23-25, pp. 12-13),
+# sinhogarismo y suministros básicos (26-29, pp. 13-14). Las medidas fiscales (10-14, p. 10)
+# remiten al capítulo de precios y se recogen en impuestos.
 partido: podemos
 tema: vivienda
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
   - subtema: alquiler
-    resumen: Propone regular los precios del alquiler y bajarlos en todo el Estado como medida de choque.
-    cita: "bajándolos un 40% en el conjunto del Estado"
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 31
-  - subtema: alquiler
     resumen: >-
-      Plantea prohibir el uso de viviendas como piso turístico y sancionar el uso fraudulento del
-      alquiler de temporada.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 31
+      Propone una reducción extraordinaria del 40 % de los precios del alquiler por ley, aplicable a
+      los contratos vigentes, sus renovaciones y los nuevos, sin que el precio resultante quede por
+      debajo del 60 % del precio medio actual de la zona. Plantea también convertir en indefinidos por
+      defecto los contratos de alquiler de vivienda habitual.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 8
   - subtema: compra y propiedad
     resumen: >-
-      Propone una moratoria inmediata a comprar vivienda salvo para residir en ella, para un familiar
-      cercano o como segunda residencia, y un límite de viviendas en propiedad por persona física y
-      jurídica.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 31
+      Plantea prohibir la compra y acumulación de viviendas que no sean residencia habitual de la
+      persona compradora o de un familiar hasta segundo grado, o segunda residencia de uso propio, que
+      no podrían quedar vacías ni alquilarse durante los cuatro años siguientes. En los territorios
+      insulares prevé limitaciones específicas para quien no resida en ellos.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 8
   - subtema: vivienda pública
     resumen: >-
-      Propone ampliar el parque público de alquiler social expropiando el uso del 50 % de las
-      viviendas de grandes tenedores y con un programa de compra de vivienda a gran escala en el
-      mercado privado.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 31
+      Propone la expropiación de uso por interés social de las viviendas que superen las diez en manos
+      de grandes tenedores, fondos de inversión, entidades financieras y bancos, para incorporar al
+      parque público las que estén vacías o tengan uso turístico y destinarlas al alquiler social.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 8
   - subtema: desahucios
     resumen: >-
-      Plantea proteger frente a los desalojos sin alternativa habitacional a las familias
-      vulnerables.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 31
+      Propone prohibir los desahucios y lanzamientos de personas en situación de vulnerabilidad sin
+      alternativa habitacional digna y adecuada, con suspensión indefinida, asistencia letrada y una
+      alternativa en las proximidades de su vivienda.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 9
+  - subtema: okupación
+    resumen: >-
+      Plantea prohibir los desalojos extrajudiciales, tipificar el acoso inmobiliario y reforzar sus
+      sanciones, e impulsar la ilegalización de las empresas que realizan desalojos al margen de los
+      procedimientos judiciales.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 9
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea
+  - podemos-web-paz-casa-trabajo

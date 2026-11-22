@@ -1,9 +1,59 @@
-# Revisado en Fase 4 (2-nov): frenteamplio.info no tiene programa ni documento sobre política exterior
-# o defensa (solo notas de prensa de otros temas).
+# Programa electoral de Frente Amplio para el 29N, cap. 17 «La seguridad humana: paz, solidaridad y
+# Europa» (pp. 155-163) revisado entero el 2026-11-22. Selección de 5 propuestas (CONTRIBUTING
+# §1.13-14), con las que destaca la introducción (p. 10: seguridad humana, 0,7 % de cooperación,
+# Europa, Palestina y Sáhara Occidental) y las más concretas. Pendiente de revisión humana contra la
+# fuente.
+# Fuera de la selección: soberanía y reconversión de los recintos de uso militar extranjero y
+# autodeterminación de los pueblos (p. 155), jurisdicción universal y reforma de la ley de comercio de
+# armas (p. 156), ley de no reconocimiento (p. 156), reforma de la ONU y agencia fiscal internacional
+# (p. 157), unidad de mediación, Ucrania, América Latina y Acuerdo UE-Mercosur (p. 158), política
+# exterior feminista y apoyo a las ONGD (pp. 159-160), autonomía estratégica europea y mayorías
+# cualificadas (pp. 160-161), financiación del BCE a los Estados, política comercial y denuncia del
+# Acuerdo UE-Israel (pp. 162-163), Fondo Soberano Europeo de la IA (p. 163).
 partido: frente-amplio
 tema: exterior-defensa
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - subtema: [OTAN, gasto en defensa]
+    resumen: >-
+      Propone rechazar de forma explícita el compromiso de destinar el 5 % del PIB a gasto militar en
+      el marco de la OTAN, reducir las partidas militares y reorientar esos recursos hacia la seguridad
+      humana, la protección civil, las emergencias climáticas, la sanidad y la educación.
+    fuente: frente-amplio-programa-29n
+    pagina: 155
+  - subtema: política exterior
+    resumen: >-
+      Plantea firmar y ratificar el Tratado sobre la Prohibición de las Armas Nucleares, participar
+      desde el primer año como observadora en las reuniones de sus Estados parte y blindar por ley el
+      compromiso del referéndum de 1986 de no instalar, almacenar ni introducir armas nucleares en
+      territorio español.
+    fuente: frente-amplio-programa-29n
+    pagina: 155
+  - subtema: política exterior
+    resumen: >-
+      Propone una ley de embargo integral y permanente de armas a Israel, que prohibiría la
+      cooperación militar y tecnológica con su industria de defensa, e impulsar en la UE la suspensión
+      del Acuerdo de Asociación UE-Israel y el reconocimiento del Estado de Palestina por todos los
+      Estados miembros. Plantea retirar el apoyo al plan de autonomía marroquí y defender un
+      referéndum de autodeterminación del pueblo saharaui supervisado por la ONU, con la opción de la
+      independencia.
+    fuente: frente-amplio-programa-29n
+    pagina: "156-157"
+  - subtema: UE
+    resumen: >-
+      Plantea superar el Pacto de Estabilidad y Crecimiento, fijar un suelo mínimo del 1,27 % de la
+      Renta Nacional Bruta de la UE para el Marco Financiero Plurianual 2028-2034 y ampliar el mandato
+      del BCE para que persiga de forma equilibrada la estabilidad de precios, el pleno empleo, la
+      cohesión social y la transición ecológica.
+    fuente: frente-amplio-programa-29n
+    pagina: 161
+  - subtema: cooperación al desarrollo
+    resumen: >-
+      Propone elevar los recursos de cooperación internacional para el desarrollo del 0,27 % al 0,7 %
+      de la Renta Nacional Bruta, con al menos el 10 % de la ayuda oficial al desarrollo destinado a
+      acción humanitaria.
+    fuente: frente-amplio-programa-29n
+    pagina: "158-159"
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n

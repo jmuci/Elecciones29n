@@ -1,28 +1,57 @@
-# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; solo notas de prensa.
+# Programa electoral de Frente Amplio para el 29N, cap. 3 «Una reforma fiscal en profundidad» (pp. 49-54)
+# y medidas fiscales de vivienda (cap. 1, pp. 20-22), revisados enteros el 2026-11-22. Selección de 5
+# propuestas (CONTRIBUTING §1.13-14): las cuatro que la introducción (p. 10) señala como eje de la
+# reforma fiscal (tipo mínimo en Sociedades, impuesto a grandes fortunas, IRPF de salarios bajos, IVA
+# de bienes básicos y energía) y la fiscalidad de la vivienda, que el programa abre en su cap. 1.
+# Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: supresión de la consolidación fiscal, tope de 4 años a la compensación de
+# pérdidas y «tasa Google» del 15 % (pp. 49-50), SICAV (p. 50), rentas del capital (p. 51), impuesto a
+# las transacciones financieras, fiscalidad verde y sobre el lujo (pp. 52-53), lucha contra el fraude
+# (p. 53), transparencia fiscal (p. 54) y gravamen a la banca y a los depósitos bancarios (p. 49).
 partido: frente-amplio
 tema: impuestos
-estado: parcial
-revisado: 2026-11-05
+estado: completo
+revisado: 2026-11-22
 propuestas:
-  - subtema: vivienda
-    resumen: >-
-      Propone gravar con un 10 % de su valor las viviendas de empresas (desde la primera) y de
-      personas físicas (desde la cuarta, si suman más de 800.000 €), salvo las alquiladas de forma
-      asequible y estable.
-    fuente: frente-amplio-nota-impuesto-acumulacion-vivienda
-    pagina: entradilla
-  - subtema: patrimonio y sucesiones
-    resumen: >-
-      Propone un impuesto anual sobre el patrimonio neto del 2 % a partir de un millón de euros y del
-      3 % a partir de 50 millones, descontando lo ya pagado por Patrimonio y Grandes Fortunas.
-    fuente: frente-amplio-nota-impuestos-grandes-fortunas-empresas
-    pagina: "apartado «Tasar las grandes fortunas»"
   - subtema: sociedades
     resumen: >-
-      Plantea elevar el tipo efectivo que pagan la gran empresa y la banca sobre sus beneficios,
-      revisando las deducciones de los grandes grupos, como las de pérdidas de años anteriores.
-    fuente: frente-amplio-nota-impuestos-grandes-fortunas-empresas
-    pagina: "apartado «Impuesto a la banca»"
+      Propone un tipo mínimo efectivo del 20 % en el Impuesto sobre Sociedades para las grandes
+      empresas y grupos, sin elevar la carga de las pymes, y recuperar con carácter estructural el
+      gravamen especial del 1,2 % sobre la cifra de negocios de los grandes operadores energéticos.
+    fuente: frente-amplio-programa-29n
+    pagina: 49
+  - subtema: patrimonio y sucesiones
+    resumen: >-
+      Propone que los patrimonios de más de un millón de euros tributen como mínimo un 2 % y crear un
+      impuesto estatal anual del 3 % sobre el patrimonio neto individual superior a 50 millones.
+      Plantea además un impuesto estatal sobre herencias de más de un millón, con tipo marginal máximo
+      del 34 %, y un tope de 10 millones de euros por heredero.
+    fuente: frente-amplio-programa-29n
+    pagina: "50-51"
+  - subtema: IRPF
+    resumen: >-
+      Plantea bajar el IRPF a las rentas del trabajo de hasta 27.000 euros, de modo que quien cobre el
+      salario mínimo no pague, y ampliar los tramos desde 120.000 euros con un tipo marginal que llegue
+      al 52 % a partir de 300.000 euros.
+    fuente: frente-amplio-programa-29n
+    pagina: 51
+  - subtema: IVA
+    resumen: >-
+      Propone pasar las peluquerías y los servicios veterinarios al tipo reducido, los pañales al
+      superreducido y los productos sin gluten al 0 %. Plantea un IVA de la electricidad progresivo
+      según el consumo por persona, del 0 % para los consumos más bajos hasta el 21 % en los tramos
+      altos.
+    fuente: frente-amplio-programa-29n
+    pagina: 52
+  - subtema: vivienda
+    resumen: >-
+      Propone un impuesto del 10 % sobre el valor de las viviendas, aplicable a las empresas desde el
+      primer inmueble y a los particulares desde el cuarto cuando sumen más de 800.000 euros, con
+      exención para las alquiladas de forma asequible y estable. Plantea derogar el régimen fiscal
+      especial de las SOCIMI y de las entidades dedicadas al arrendamiento de viviendas.
+    fuente: frente-amplio-programa-29n
+    pagina: "20-21"
 fuentes_revisadas:
+  - frente-amplio-programa-29n
   - frente-amplio-nota-impuesto-acumulacion-vivienda
   - frente-amplio-nota-impuestos-grandes-fortunas-empresas

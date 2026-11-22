@@ -14,5 +14,5 @@ opciones:
       Cambiar el sistema de fijación de precios del mercado eléctrico, para que cada megavatio hora se pague
       según lo que cuesta producirlo.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 37 }
-revisado: 2026-11-14
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "18-19" }
+revisado: 2026-11-22

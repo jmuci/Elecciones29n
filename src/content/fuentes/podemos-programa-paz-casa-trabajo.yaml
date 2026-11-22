@@ -1,0 +1,18 @@
+# Programa electoral de Podemos para el 29N (141 páginas, PDF): portada «Programa electoral. Así de
+# básico: Paz, casa y trabajo». Índice en la p. 3: vivienda (p. 7), precios (16), paz (26), trabajar
+# menos (40), vida y servicios públicos y planeta (50-126) y «España, república plurinacional» (127).
+# Metadatos del PDF: creado el 17-nov-2026 (InDesign). Alojado en la web de la candidatura de Irene
+# Montero (https://pazcasaytrabajo.es/programa, cuyo aviso legal da como titular a Podemos Partido
+# Político); el servidor lo marcaba como modificado el 18-nov-2026.
+# Fecha de publicación: no consta con certeza (el PDF se creó el 17-nov y el servidor lo sirve
+# desde el 18-nov), por eso no hay `publicado`.
+# `pagina` = número impreso, que coincide con el de la página del PDF (portada = 1).
+# podemos.info sigue bloqueando el acceso automatizado (Cloudflare); este fichero se descarga sin
+# problema de pazcasaytrabajo.es.
+# Snapshot pendiente: Wayback Machine no es accesible desde el entorno de trabajo; archivarlo a mano.
+partido: podemos
+titulo: "Programa electoral. Así de básico: Paz, casa y trabajo"
+url: https://pazcasaytrabajo.es/programa-electoral/programa-electoral-paz-casa-y-trabajo.pdf
+tipo: programa
+consultado: 2026-11-22
+sha256: 086211fb272f0eeceddfa630796e58e5f4910e81efb0385a43b563a2e3f097fb

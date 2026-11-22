@@ -1,44 +1,56 @@
-# Fase 1 (adelanto de Fase 2): no hay programa electoral publicado; solo notas de prensa.
+# Programa electoral de Frente Amplio para el 29N (151 páginas, 14 capítulos), cap. 1 «Acabar con la
+# especulación y garantizar el derecho a la vivienda» (pp. 13-22) revisado entero el 2026-11-22.
+# Selección de 5 propuestas como máximo (CONTRIBUTING §1.13-14), según lo que el capítulo abre y lo más
+# concreto. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: pisos turísticos (extinción de licencias en zonas tensionadas, p. 15),
+# alquiler indefinido por defecto (p. 17), Agencia Estatal de la Vivienda y Registro de Arrendamientos
+# (p. 15), sindicatos de inquilinas y huelga de alquileres (p. 16), escudo hipotecario (p. 18),
+# rehabilitación energética (p. 19), reforma constitucional del art. 47 (p. 22) y las medidas
+# fiscales (pp. 20-22), que se recogen en impuestos.
 partido: frente-amplio
 tema: vivienda
-estado: parcial
-revisado: 2026-11-14
+estado: completo
+revisado: 2026-11-22
 propuestas:
-  - subtema: vivienda pública
+  - subtema: [vivienda pública, oferta y construcción]
     resumen: >-
-      Propone invertir hasta alcanzar el 1 % del PIB en construir, comprar y rehabilitar vivienda
-      asequible para ampliar el parque público, con protección permanente.
-    fuente: frente-amplio-nota-impuesto-acumulacion-vivienda
-    pagina: último párrafo
+      Propone destinar de forma permanente el 1 % del PIB anual (unos 17.000 millones de euros) a un
+      parque público de vivienda en alquiler, con 1,5 millones de viviendas públicas en 12 años y el
+      20 % del parque total en 2035. Fija un máximo de 600 euros mensuales para un inmueble tipo de
+      80 m².
+    fuente: frente-amplio-programa-29n
+    pagina: 13
+  - subtema: [compra y propiedad, vivienda pública]
+    resumen: >-
+      Propone una ley que expropie por fases el parque de vivienda de propietarios corporativos
+      privados: primero los de más de 1.000 viviendas, después los de más de 700 y por último las
+      empresas con más de 50 inmuebles.
+    fuente: frente-amplio-programa-29n
+    pagina: 13
   - subtema: compra y propiedad
     resumen: >-
-      Propone una ley que expropie, por fases, las viviendas de grandes propietarios corporativos:
-      primero los de más de 1.000, después los de más de 700 y por último las empresas con más de 50
-      inmuebles. Deja fuera a familias y particulares.
-    fuente: frente-amplio-nota-expropiacion-vivienda-corporativa
-    pagina: apartado «Expropiación por fases»
-  - subtema: vivienda pública
-    resumen: >-
-      Propone integrar en el parque público de vivienda todas las fincas urbanas y suelos
-      residenciales de la Sareb.
-    fuente: frente-amplio-nota-expropiacion-vivienda-corporativa
-    pagina: apartado «La SAREB, al parque público»
+      Plantea prohibir por ley comprar vivienda residencial para un fin distinto de la residencia
+      habitual y permanente o del alquiler asequible regulado. La prohibición sería absoluta para las
+      personas jurídicas con ánimo de lucro, como fondos de inversión, SOCIMI, inmobiliarias y bancos.
+    fuente: frente-amplio-programa-29n
+    pagina: 14
   - subtema: alquiler
     resumen: >-
-      Propone reconocer legalmente a los sindicatos de inquilinas, que podrían constituirse con un
-      mínimo de tres personas y negociar convenios colectivos de arrendamiento para un edificio o un
-      ámbito territorial más amplio.
-    fuente: frente-amplio-nota-sindicatos-inquilinas-huelgas-alquiler
-    pagina: párrafo 2
-  - subtema: [alquiler, desahucios]
+      Propone limitar por ley el alquiler en las zonas tensionadas: la mensualidad máxima sería la
+      menor entre el 25 % de la renta neta media por hogar de la sección censal y el tope del índice
+      SERPAVI. En municipios de más de 200.000 habitantes o con masificación turística severa prevé
+      una rebaja adicional obligatoria del 30 %.
+    fuente: frente-amplio-programa-29n
+    pagina: 16
+  - subtema: desahucios
     resumen: >-
-      Plantea regular las huelgas de alquileres: ante incumplimientos justificados del propietario, los
-      inquilinos podrían depositar el 100 % de la renta en un fondo público, con la misma validez que el
-      pago y sin que se les pueda desahuciar por impago. Prevé también protección frente a represalias
-      como la no renovación del contrato.
-    fuente: frente-amplio-nota-sindicatos-inquilinas-huelgas-alquiler
-    pagina: apartado «Huelgas de alquileres con protección frente al desahucio»
+      Propone prohibir por ley los desahucios de personas en situación de vulnerabilidad económica o
+      social sin una alternativa habitacional previa de la administración, y obligar a los grandes
+      tenedores a ofrecer un alquiler social de al menos 7 años antes de reclamar judicialmente.
+    fuente: frente-amplio-programa-29n
+    pagina: 18
 fuentes_revisadas:
+  - frente-amplio-programa-29n
   - frente-amplio-nota-impuesto-acumulacion-vivienda
   - frente-amplio-nota-expropiacion-vivienda-corporativa
   - frente-amplio-nota-sindicatos-inquilinas-huelgas-alquiler

@@ -10,7 +10,7 @@ opciones:
   - texto: Deportar a quienes cometan delitos graves o delitos leves de forma habitual.
     partidos:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 15 }
-  - texto: Poner bajo control democrático a los cuerpos del Estado que tienen el monopolio del uso de la fuerza.
+  - texto: Reforzar el control y la transparencia de la actuación policial, con identificación visible de los agentes y cámaras corporales.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 40 }
-revisado: 2026-11-14
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 132 }
+revisado: 2026-11-22

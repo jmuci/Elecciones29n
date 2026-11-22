@@ -8,5 +8,5 @@ opciones:
       - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 15 }
   - texto: Que quien vive y trabaja en España tenga DNI español y derecho al voto.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 34 }
-revisado: 2026-11-14
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "65-66" }
+revisado: 2026-11-22

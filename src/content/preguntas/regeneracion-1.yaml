@@ -8,5 +8,5 @@ opciones:
       - { partido: democracia-21, fuente: democracia-21-espana-limpia, pagina: 8 }
   - texto: Democratizar el poder judicial.
     partidos:
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 40 }
-revisado: 2026-11-11
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 129 }
+revisado: 2026-11-22

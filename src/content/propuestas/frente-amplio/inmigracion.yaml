@@ -1,8 +1,53 @@
-# Revisado en Fase 1: frenteamplio.info no tiene programa ni documento sobre inmigración (solo notas de prensa de otros temas).
+# Programa electoral de Frente Amplio para el 29N, cap. 16 «Migraciones y antirracismo» (pp. 149-151)
+# revisado entero el 2026-11-22. Selección de 5 propuestas (CONTRIBUTING §1.13-14), con los apartados
+# del capítulo en el orden en que aparecen. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: ley integral contra el racismo y estatuto del pueblo gitano (p. 149),
+# registro público de visados en el exterior y autorización de trabajo a solicitantes de apatridia
+# (p. 150), ampliación del sufragio municipal de las personas migrantes, circunscripción de la
+# diáspora y nacionalidad para saharauis (p. 151), y las medidas sobre infancia migrante no acompañada
+# de otros capítulos.
 partido: frente-amplio
 tema: inmigracion
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - subtema: regularización
+    resumen: >-
+      Plantea resolver todas las solicitudes de la regularización extraordinaria de 2026 y reformar la
+      Ley de Extranjería para crear un procedimiento estable, permanente y reglado de regularización
+      administrativa.
+    fuente: frente-amplio-programa-29n
+    pagina: 149
+  - subtema: [integración, servicios y prestaciones]
+    resumen: >-
+      Propone un empadronamiento flexible, el acceso a una cuenta bancaria de pago básica, una
+      homologación de títulos más ágil y el reconocimiento obligatorio de la documentación de las
+      personas migrantes. Fija un máximo de siete días naturales para obtener cita en las oficinas de
+      extranjería.
+    fuente: frente-amplio-programa-29n
+    pagina: 149
+  - subtema: [fronteras, expulsiones]
+    resumen: >-
+      Propone derogar la disposición adicional décima de la Ley de Extranjería (rechazo en frontera),
+      crear un mecanismo independiente de control de derechos humanos en la Frontera Sur y cerrar los
+      Centros de Internamiento de Extranjeros. En los procedimientos de asilo en frontera, la detención
+      sería solo un último recurso excepcional.
+    fuente: frente-amplio-programa-29n
+    pagina: "149-150"
+  - subtema: asilo
+    resumen: >-
+      Plantea permitir solicitar protección internacional en embajadas y consulados, eliminar la lista
+      nacional de países seguros y rechazar los centros de retorno en terceros países. La ayuda al
+      desarrollo y los acuerdos comerciales no se condicionarían a la colaboración en los retornos.
+    fuente: frente-amplio-programa-29n
+    pagina: 150
+  - subtema: asilo
+    resumen: >-
+      Propone crear una Agencia de Asilo unificada, dependiente de la Presidencia del Gobierno, con
+      registro de la solicitud en 5 días y formalización en 21; si se superan, se expediría
+      automáticamente el documento de solicitante. Fija 3 meses para resolver la reagrupación familiar,
+      con silencio administrativo positivo.
+    fuente: frente-amplio-programa-29n
+    pagina: 151
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n

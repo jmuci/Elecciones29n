@@ -1,32 +1,56 @@
-# Fase 4: Podemos no tiene programa publicado (podemos.info sigue bloqueado por Cloudflare el 2-nov; en
-# Wayback no hay documentos nuevos para el 29N). Se resume su documento político de la V Asamblea (2025).
+# Programa electoral de Podemos para el 29N, capítulo «España, república plurinacional»: medidas de
+# justicia y control del poder 409-428 (pp. 128-133), revisadas el 2026-11-22. Sustituye al documento
+# político de la V Asamblea (anterior a la convocatoria, CONTRIBUTING §1.4). Selección de 5
+# propuestas (CONTRIBUTING §1.13-14), una o dos por subtema. Pendiente de revisión humana contra la
+# fuente.
+# Fuera de la selección: proceso constituyente, privilegios de la Corona y financiación bancaria de
+# las campañas (406-408, p. 128), debates electorales obligatorios y reforma electoral (410-411,
+# p. 129), transparencia y rendición de cuentas del Poder Judicial (418, pp. 130-131), justicia de
+# calidad y justicia universal (419, 421, p. 131), protección judicial de los derechos (422, pp.
+# 131-132), caso Pegasus y Ley de Secretos Oficiales (425-426, pp. 132-133).
 partido: podemos
 tema: regeneracion
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
-  - subtema: justicia
-    resumen: Propone democratizar el poder judicial.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 40
-  - resumen: >-
-      Plantea limitar de forma drástica lo que califica de "control oligárquico" de los medios de
-      comunicación.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 40
-  - resumen: >-
-      Propone hacer habituales mecanismos de participación ciudadana como los referéndums y los
-      presupuestos participativos.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 40
-  - resumen: >-
-      Plantea reformas para poner bajo control democrático a todos los cuerpos funcionariales del
-      Estado, en especial a los que tienen el monopolio del uso de la fuerza.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 40
   - subtema: corrupción
-    resumen: Plantea que quienes cometan delitos de corrupción devuelvan todo lo sustraído.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 22
+    resumen: >-
+      Propone prohibir la contratación con las administraciones públicas de las empresas privadas
+      implicadas en casos de corrupción desde que existan indicios judiciales, mediante medidas
+      cautelares, y dejar sin efecto los contratos públicos vigentes con ellas con las garantías
+      legales necesarias.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 133
+  - subtema: corrupción
+    resumen: >-
+      Plantea crear un nuevo delito de utilización de estructuras y recursos de seguridad del Estado
+      para delinquir, con penas agravadas, un régimen sancionador para los agentes implicados, que
+      podría incluir la expulsión del cuerpo, y la prohibición de la infiltración de agentes policiales
+      en movimientos sociales pacíficos.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 132
+  - subtema: independencia de órganos
+    resumen: >-
+      Propone reformar la Ley Orgánica del Poder Judicial para que la elección por el Congreso de los
+      doce vocales del turno judicial del CGPJ requiera mayoría absoluta y el respaldo de al menos la
+      mitad de los grupos parlamentarios, y establecer mecanismos de cese y sustitución de los miembros
+      del CGPJ y del Tribunal Constitucional una vez agotados sus mandatos.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 129
+  - subtema: justicia
+    resumen: >-
+      Plantea encomendar la instrucción de las causas penales al Ministerio Fiscal bajo la supervisión
+      de un juez o jueza de garantías y suprimir la Audiencia Nacional, redistribuyendo sus
+      competencias entre los órganos de la jurisdicción ordinaria.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "130-131"
+  - subtema: justicia
+    resumen: >-
+      Propone suprimir los aforamientos y reformar el acceso a la carrera judicial para que la mitad de
+      las plazas sean por concurso, con prácticas de al menos dos años en el turno de oficio o en un
+      servicio de orientación jurídica para todos los jueces.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: "128-130"
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea

@@ -8,8 +8,8 @@ opciones:
   - texto: Actualizarlas cada año con el IPC y reconstruir el Pacto de Toledo como compromiso de Estado.
     partidos:
       - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: "42-43" }
-  - texto: Que ninguna pensión quede por debajo del salario mínimo.
+  - texto: Equiparar la pensión mínima al salario mínimo.
     partidos:
-      - { partido: frente-amplio, fuente: frente-amplio-nota-pensiones-minimas-jubilacion-65, pagina: Salario mínimo = pensión mínima }
-      - { partido: podemos, fuente: podemos-documento-politico-v-asamblea, pagina: 37 }
-revisado: 2026-11-15
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: "63-64" }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 44 }
+revisado: 2026-11-22

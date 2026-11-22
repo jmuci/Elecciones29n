@@ -1,9 +1,49 @@
-# Revisado en Fase 4: frenteamplio.info no tiene programa ni documento sobre educación. Sus notas de
-# prensa (vivienda, pensiones, tren, IA en campaña, candidaturas) no tratan el tema.
+# Programa electoral de Frente Amplio para el 29N, apartado 2.5 «Una educación pública para la
+# igualdad de oportunidades» (pp. 35-37) revisado entero el 2026-11-22. Selección de 5 propuestas
+# (CONTRIBUTING §1.13-14): financiación y modelo (que destaca la introducción, p. 10) y las más
+# concretas de cada bloque. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: plan contra la segregación escolar y atención al alumnado con necesidades
+# específicas (pp. 35-36), plan estatal de lenguas cooficiales (p. 36), salud mental y acoso escolar
+# (p. 36), IA y móviles en los centros (p. 36), infraestructuras y escuela rural (p. 36), gratuidad de
+# comedor, transporte y material (p. 36), carga lectiva y Estatuto del Docente (pp. 36-37), estándares
+# de las universidades privadas, UNED, investigación y ANECA (p. 37).
 partido: frente-amplio
 tema: educacion
-estado: no_publicado
-revisado: 2026-11-02
-propuestas: []
+estado: completo
+revisado: 2026-11-22
+propuestas:
+  - resumen: >-
+      Propone una Ley de Financiación Educativa que fije un porcentaje mínimo de inversión estatal en
+      educación pública, que debería llegar al 7 % del PIB en 2030.
+    fuente: frente-amplio-programa-29n
+    pagina: 35
+  - subtema: 0–3 años
+    resumen: >-
+      Plantea crear plazas públicas en todas las etapas, incluida la de 0 a 3 años, con una hoja de
+      ruta para que todo el alumnado pueda cursar educación pública y el objetivo de que el 100 % de
+      los fondos públicos vayan a la educación pública. Prohibiría de inmediato las cuotas obligatorias
+      en los centros sostenidos con fondos públicos.
+    fuente: frente-amplio-programa-29n
+    pagina: 35
+  - resumen: >-
+      Propone fijar por ley ratios máximas por aula: 4 niños y niñas de 0 a 1 año, 6 de 1 a 2 y 8 de 2 a
+      3, y 15 en Primaria y FP, 20 en Secundaria y 23 en Bachillerato; el alumnado con necesidades
+      específicas computaría el doble.
+    fuente: frente-amplio-programa-29n
+    pagina: 35
+  - subtema: becas
+    resumen: >-
+      Plantea aumentar las becas postobligatorias hasta el 0,44 % del PIB, con cobro al inicio de curso
+      y becas-salario, y duplicar las becas de las etapas obligatorias para el alumnado de familias
+      vulnerables de la escuela pública, con 500.000 estudiantes más.
+    fuente: frente-amplio-programa-29n
+    pagina: 36
+  - subtema: universidad
+    resumen: >-
+      Propone modificar la LOSU para que las comunidades autónomas destinen al menos el 1 % de su PIB
+      regional a las universidades públicas, ampliar las plazas públicas de grado y máster y reducir
+      sus precios.
+    fuente: frente-amplio-programa-29n
+    pagina: 37
 fuentes_revisadas:
-  - frente-amplio-nota-impuesto-acumulacion-vivienda
+  - frente-amplio-programa-29n

@@ -1,27 +1,56 @@
-# Fase 4: Podemos no tiene programa publicado; se resume su documento político de la V Asamblea
-# (2025). podemos.info sigue bloqueado por Cloudflare (2-nov-2026); se revisó la lista de documentos
-# en Wayback Machine (captura del 2-oct-2026).
+# Programa electoral de Podemos para el 29N, apartado «Servicios públicos para garantizar vidas
+# dignas»: medidas de sanidad 300-312 (pp. 88-93) revisadas el 2026-11-22. Sustituye al documento
+# político de la V Asamblea (anterior a la convocatoria, CONTRIBUTING §1.4). Selección de 5
+# propuestas (CONTRIBUTING §1.13-14): las primeras medidas del apartado, que el programa ordena por
+# prioridad, y las de cada subtema del tema. Pendiente de revisión humana contra la fuente.
+# Fuera de la selección: industria sanitaria y farmacéutica pública (301, pp. 88-89), Ley de Calidad
+# del SNS (303, pp. 89-90), universalidad, cobertura del 100 % de las prestaciones bucodental,
+# oftalmológica y auditiva y copago farmacéutico (307, pp. 91-92), profesionales sanitarios,
+# medicamentos, independencia frente a los intereses de la industria, participación y atención
+# integral (308-312, pp. 92-93).
 partido: podemos
 tema: sanidad
-estado: parcial
-revisado: 2026-11-02
+estado: completo
+revisado: 2026-11-22
 propuestas:
   - resumen: >-
-      Propone derogar de inmediato todas las leyes que permiten la privatización de la sanidad.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+      Propone derogar la Ley 15/1997 y los artículos 66, 67 y 90 de la Ley General de Sanidad, y
+      establecer la titularidad y la gestión pública directa como modelo obligatorio del Sistema
+      Nacional de Salud, con prohibición de externalizar centros y servicios y recuperación de los
+      servicios privatizados a medida que venzan los contratos.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 88
   - resumen: >-
-      Plantea aumentar de forma muy significativa la financiación pública de la sanidad, en lugar de
-      aumentar el gasto en armamento.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+      Plantea elevar progresivamente la financiación del Sistema Nacional de Salud hasta un mínimo de
+      2.900 euros por habitante y año, frente a los 2.247 actuales, con un fondo estatal destinado solo
+      a la sanidad pública de gestión directa, de los que al menos el 30 % iría a Atención Primaria y
+      el 20 % a salud mental.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 89
   - subtema: atención primaria
-    resumen: Propone reforzar la atención primaria y garantizar la atención sanitaria en el medio rural.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+    resumen: >-
+      Propone una Ley integral de Atención Primaria que destine al menos el 25 % del presupuesto
+      sanitario a este nivel, fije un máximo de 1.300 pacientes por profesional de medicina de familia
+      y 800 menores por profesional de pediatría, y garantice una cita en un máximo de 48 horas
+      hábiles.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 90
   - subtema: listas de espera
-    resumen: Propone reducir al mínimo las listas de espera sanitarias.
-    fuente: podemos-documento-politico-v-asamblea
-    pagina: 36
+    resumen: >-
+      Plantea reducir las listas de espera con más recursos públicos y mejor coordinación entre
+      Atención Primaria y hospitalaria, contabilizar los tiempos desde la primera indicación clínica,
+      eliminar las listas de espera no estructurales y cumplir los tiempos máximos acordados en el
+      Consejo Interterritorial.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 90
+  - subtema: salud mental
+    resumen: >-
+      Propone una Ley General de Salud Mental con ratios mínimas de 18 psiquiatras, 18 psicólogos
+      clínicos y 23 enfermeros especialistas por cada 100.000 habitantes, el fin de la contención
+      mecánica y el acceso universal y gratuito a la atención psicológica en el Sistema Nacional de
+      Salud.
+    fuente: podemos-programa-paz-casa-trabajo
+    pagina: 91
 fuentes_revisadas:
+  - podemos-programa-paz-casa-trabajo
   - podemos-documento-politico-v-asamblea
