@@ -1,0 +1,32 @@
+tema: vivienda
+orden: 2
+pregunta: "¿Cuál debería ser la prioridad principal para que haya más vivienda asequible?"
+opciones:
+  - titulo: "Liberar suelo y agilizar los trámites para que se construya más"
+    detalle:
+      - "Nueva Ley del Suelo, o reforma de la actual, para ampliar el suelo disponible."
+      - "Trámites y licencias de obra más ágiles."
+      - "Colaboración entre administraciones y sector privado para construir más vivienda."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 53 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 23 }
+  - titulo: "Destinar cada año el 1 % del PIB a vivienda pública"
+    detalle:
+      - "Inversión pública fija para garantizar el acceso a la vivienda: el 1 % del PIB cada año."
+      - "Una de las propuestas lo dirige a un parque público de vivienda en alquiler, con 1,5 millones de viviendas públicas en 12 años."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 28 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 13 }
+  - titulo: "Ampliar el alquiler social con las viviendas de los grandes tenedores"
+    detalle:
+      - "Expropiación de uso por interés social de las viviendas que superen las diez en manos de grandes tenedores, fondos de inversión, entidades financieras y bancos."
+      - "Las viviendas vacías o de uso turístico se incorporarían al parque público y se destinarían al alquiler social."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 8 }
+  - titulo: "Crear un fondo público con los fondos europeos no ejecutados"
+    detalle:
+      - "Los fondos europeos no ejecutados se reasignarían a un Fondo Público Soberano."
+      - "El fondo construiría vivienda asequible y protegida."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 3 }
+revisado: 2026-11-22

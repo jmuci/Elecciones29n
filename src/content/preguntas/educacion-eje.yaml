@@ -1,0 +1,36 @@
+tema: educacion
+orden: 2
+pregunta: "¿Cuál debería ser el eje de la política educativa?"
+opciones:
+  - titulo: "Sustituir la LOMLOE por un nuevo marco educativo pactado"
+    detalle:
+      - "El marco se acordaría con docentes, inspectores, expertos y familias."
+      - "Refuerzo específico en el mismo curso para el alumnado con dificultades de lectura y cálculo."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 67 }
+  - titulo: "Derogar la LOMLOE y reforzar la exigencia y la autoridad del profesor"
+    detalle:
+      - "Eliminar los contenidos que califica de «ideológicos»."
+      - "Poner fin a los móviles en clase y aprobar un plan nacional contra el acoso escolar."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 41 }
+  - titulo: "Elevar la inversión pública en educación hasta el 7 % del PIB"
+    detalle:
+      - "La inversión llegaría al 7 % del PIB: en 2030 en una propuesta y durante la próxima legislatura en otra."
+      - "Una propuesta crea un fondo estatal para reforzar la educación pública de gestión directa; la otra, una ley que fije un porcentaje mínimo de inversión estatal en educación pública."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 80 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 35 }
+  - titulo: "Reducir el abandono escolar temprano y reforzar la orientación"
+    detalle:
+      - "Bajar la tasa de abandono escolar temprano por debajo del 10 % antes de 2030."
+      - "Alcanzar un profesional de orientación por cada 250 estudiantes."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 53 }
+  - titulo: "Aprobar un plan estatal con un objetivo en las pruebas PISA"
+    detalle:
+      - "Situar a España en el top 10 europeo en las tres áreas de PISA en un plazo máximo de 8 años."
+      - "Más horas para las materias instrumentales."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-educacion-en-el-centro, pagina: 3 }
+revisado: 2026-11-22

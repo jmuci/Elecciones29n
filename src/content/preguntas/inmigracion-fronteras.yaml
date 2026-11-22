@@ -1,0 +1,26 @@
+tema: inmigracion
+orden: 3
+pregunta: "¿Qué enfoque debería tener el control de fronteras y las expulsiones?"
+opciones:
+  - titulo: "Reforzar la frontera con más medios y apoyo de las Fuerzas Armadas"
+    detalle:
+      - "Más agentes, vigilancia e infraestructuras, con apoyo de las Fuerzas Armadas cuando lo exija la seguridad nacional (una propuesta) o con militarización de la frontera de Ceuta y Melilla (otra)."
+      - "Rechazo en frontera ampliado a las entradas a nado en Ceuta y Melilla (una propuesta) o expulsión inmediata de quienes a su juicio son «invasores» en Ceuta (otra)."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 21 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 7 }
+  - titulo: "Derogar el rechazo en frontera y cerrar los Centros de Internamiento de Extranjeros"
+    detalle:
+      - "Acabar con las disposiciones que permiten las devoluciones en caliente en las fronteras."
+      - "Cerrar los Centros de Internamiento de Extranjeros, con alternativas comunitarias."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: "149-150" }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 65 }
+  - titulo: "Aplicar una política europea común de migración y asilo"
+    detalle:
+      - "Una propuesta aplica completo y sin retrasos el Pacto Europeo de Migración y Asilo, con identificación y control sanitario y de seguridad de cada llegada irregular y asilo resuelto en semanas."
+      - "Otra defiende en la UE una política basada en la solidaridad, las necesidades del mercado de trabajo y los derechos humanos, que combine la lucha contra las mafias con la gestión del asilo, las fronteras y las vías legales y seguras."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 111 }
+      - { partido: democracia-21, fuente: democracia-21-politica-migratoria-con-cabeza, pagina: "3-4" }
+revisado: 2026-11-22

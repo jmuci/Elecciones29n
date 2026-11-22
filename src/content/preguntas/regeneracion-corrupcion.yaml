@@ -1,0 +1,31 @@
+tema: regeneracion
+orden: 3
+pregunta: "¿Qué medida contra la corrupción debería priorizarse?"
+opciones:
+  - titulo: "Impedir que las empresas implicadas en corrupción contraten con el sector público"
+    detalle:
+      - "Una propuesta lo prohíbe desde que existan indicios judiciales, con medidas cautelares, y deja sin efecto los contratos vigentes; la otra lo prohíbe durante veinte años a las empresas y personas condenadas."
+      - "Una propuesta añade el decomiso administrativo o preventivo de bienes vinculados a actividades delictivas, sin necesidad de condena previa."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 133 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 169 }
+  - titulo: "Más control del dinero público y recuperación de lo desviado"
+    detalle:
+      - "Una propuesta restablece las penas por malversación y crea un sistema único de trazabilidad digital de contratos, subvenciones y grandes transferencias de fondos públicos."
+      - "Otra plantea una auditoría integral de todas las administraciones y que los cargos públicos condenados respondan con todos sus bienes presentes y futuros hasta recuperar los fondos desviados."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 34 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 57 }
+  - titulo: "Una agencia independiente de integridad pública y más transparencia de los cargos públicos"
+    detalle:
+      - "Ley Orgánica de Integridad Pública, Estrategia Nacional Anticorrupción y Agencia Independiente de Integridad Pública que proteja a quienes denuncian."
+      - "Ley de grupos de interés con registro obligatorio y más transparencia sobre el patrimonio y las incompatibilidades de los cargos públicos."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 103 }
+  - titulo: "Que los delitos de corrupción no prescriban y los condenados queden inhabilitados de por vida"
+    detalle:
+      - "Imprescriptibilidad de los delitos de corrupción."
+      - "Inhabilitación de por vida de los condenados por sentencia firme por corrupción, malversación, tráfico de influencias o desvío de fondos públicos."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-espana-limpia, pagina: 7 }
+revisado: 2026-11-22

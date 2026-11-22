@@ -1,0 +1,31 @@
+tema: exterior-defensa
+orden: 1
+pregunta: "¿Qué política de defensa y alianzas debería seguir España?"
+opciones:
+  - titulo: "Aumentar la inversión en defensa y los efectivos de las Fuerzas Armadas"
+    detalle:
+      - "Más inversión en Defensa y mejores retribuciones militares, y reconocer el servicio en las Fuerzas Armadas como profesión de riesgo."
+      - "Una propuesta prevé una ley de programación y financiación de la defensa y reforzar, cuando sea necesario, los contingentes españoles de la OTAN."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 26 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 47 }
+  - titulo: "Reforzar la defensa común europea y la eficiencia del gasto"
+    detalle:
+      - "Compras conjuntas de armamento y más cooperación industrial en proyectos europeos."
+      - "Una propuesta refuerza el pilar europeo dentro de la OTAN y la Hoja de Ruta de Preparación en Materia de Defensa 2030; otra, las capacidades comunes de seguridad y defensa de la UE."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 113 }
+      - { partido: democracia-21, fuente: democracia-21-union-europea-siglo-21, pagina: 3 }
+  - titulo: "Rechazar el compromiso del 5 % del PIB en gasto militar y reducir las partidas militares"
+    detalle:
+      - "Rechazar de forma explícita el compromiso de destinar el 5 % del PIB a gasto militar en el marco de la OTAN."
+      - "Reorientar esos recursos hacia la seguridad humana, la protección civil, las emergencias climáticas, la sanidad y la educación."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 155 }
+  - titulo: "Salir de la OTAN y congelar el gasto militar"
+    detalle:
+      - "Denunciar el Tratado del Atlántico Norte y poner fin a la presencia militar estadounidense, incluidas las bases de Rota y Morón."
+      - "Congelar el gasto militar toda la legislatura, salvo para mejorar salarios, condiciones laborales y alojamiento de la tropa."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 28 }
+revisado: 2026-11-22

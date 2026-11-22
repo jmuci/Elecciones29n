@@ -1,0 +1,33 @@
+tema: pensiones
+orden: 3
+pregunta: "¿Qué debería cambiar sobre la edad de jubilación?"
+opciones:
+  - titulo: "Adelantar la edad ordinaria de jubilación a los 63 años"
+    detalle:
+      - "El sistema se financiaría con cargo a los Presupuestos Generales del Estado."
+      - "Eliminar de forma retroactiva las penalizaciones por jubilación anticipada de quienes tienen 40 o más años cotizados."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 41 }
+  - titulo: "Fijar la edad en 65 años y permitir jubilarse a los 60 en oficios de especial penosidad"
+    detalle:
+      - "Jubilación a los 60 en construcción, limpieza, ayuda a domicilio, camareras de piso y pesca."
+      - "Eliminar los coeficientes reductores en las jubilaciones anticipadas involuntarias de quienes han cotizado más de 40 años."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 64 }
+  - titulo: "Mejorar los coeficientes reductores por penosidad y reducir las penalizaciones por jubilación anticipada involuntaria"
+    detalle:
+      - "Evaluar mejores coeficientes reductores, aplicados con una cuenta individual."
+      - "Menores penalizaciones en carreras largas; su coste podrían compensarlo empresas con beneficios que hagan ERE."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 41 }
+  - titulo: "Jubilación anticipada sin recorte de pensión para las profesiones de riesgo"
+    detalle:
+      - "Por ley, para la Policía Nacional, la Guardia Civil, el Servicio de Vigilancia Aduanera y todo el personal militar."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-seguridad-defensa-mundo-hoy, pagina: "3-4" }
+  - titulo: "Incentivar la jubilación activa con deducciones en el IRPF"
+    detalle:
+      - "Deducciones en el IRPF para quienes sigan trabajando."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 43 }
+revisado: 2026-11-22

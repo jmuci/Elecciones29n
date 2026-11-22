@@ -1,0 +1,24 @@
+tema: exterior-defensa
+orden: 2
+pregunta: "¿Qué política debería seguir España hacia Marruecos y el Sáhara?"
+opciones:
+  - titulo: "Una política de equilibrio con Marruecos y Argelia, defendiendo la integridad territorial"
+    detalle:
+      - "Defender la integridad territorial de Ceuta, Melilla, Canarias y los demás territorios españoles en el norte de África."
+      - "Exigir a Bruselas para Ceuta y Melilla el trato que dio en 2025 a sus regiones fronterizas con Rusia."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 74 }
+  - titulo: "Sancionar a Marruecos y suspender acuerdos hasta que respete las fronteras de España"
+    detalle:
+      - "Sanciones, suspensión de acuerdos internacionales y revisión de las relaciones diplomáticas."
+      - "Militarizar la frontera de Ceuta y Melilla."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 7 }
+  - titulo: "Apoyar un referéndum de autodeterminación del pueblo saharaui"
+    detalle:
+      - "Referéndum de autodeterminación del pueblo saharaui, supervisado por la ONU y con la opción de la independencia en una propuesta."
+      - "Una propuesta retira el apoyo al plan de autonomía marroquí; otra plantea el reconocimiento diplomático de la República Árabe Saharaui Democrática."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: "156-157" }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "34-36" }
+revisado: 2026-11-22

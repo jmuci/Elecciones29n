@@ -1,0 +1,33 @@
+tema: vivienda
+orden: 1
+pregunta: "¿Qué debería hacer el Estado con el precio del alquiler?"
+opciones:
+  - titulo: "Reducir por ley los alquileres en todo el país"
+    detalle:
+      - "Reducción extraordinaria del 40 % de los precios, aplicable a los contratos vigentes, a las renovaciones y a los nuevos."
+      - "El precio resultante no podría quedar por debajo del 60 % del precio medio actual de la zona."
+      - "Los contratos de alquiler de vivienda habitual serían indefinidos por defecto."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 8 }
+  - titulo: "Fijar por ley un precio máximo del alquiler en las zonas tensionadas"
+    detalle:
+      - "La mensualidad máxima sería la menor entre el 25 % de la renta neta media por hogar de la sección censal y el tope del índice SERPAVI."
+      - "En municipios de más de 200.000 habitantes o con masificación turística severa, habría una rebaja adicional obligatoria del 30 %."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 16 }
+  - titulo: "Limitar o congelar los alquileres de forma temporal en las zonas tensionadas"
+    detalle:
+      - "Solo en las zonas tensionadas y durante un tiempo limitado."
+      - "La limitación va acompañada de una garantía pública frente al impago del alquiler."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: "31-32" }
+      - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 4 }
+  - titulo: "Derogar la Ley de Vivienda y apoyar el alquiler con incentivos fiscales"
+    detalle:
+      - "Derogación de la Ley de Vivienda."
+      - "Deducciones fiscales para los inquilinos."
+      - "Incentivos fiscales para el alquiler de larga duración."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 53 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "23-24" }
+revisado: 2026-11-22

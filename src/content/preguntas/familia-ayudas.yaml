@@ -1,0 +1,31 @@
+tema: familia
+orden: 1
+pregunta: "¿Cómo debería apoyar económicamente el Estado a las familias con hijos?"
+opciones:
+  - titulo: "Una prestación mensual universal por cada hijo"
+    detalle:
+      - "Prestación mensual por cada menor a cargo, desvinculada de los ingresos: 200 euros al mes hasta los 18 años en una propuesta; el 15 % del SMI hasta los 21 años en otra."
+      - "Una propuesta la abona la Agencia Tributaria como deducción reembolsable del IRPF y la implanta en tres fases durante la legislatura."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 25 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 60 }
+  - titulo: "Una prestación por crianza que dependa de la renta del hogar"
+    detalle:
+      - "Prestación progresiva, con más protección para los hogares de renta baja."
+      - "Una propuesta la dirige a todos los hogares con menores y la financia con la nueva tributación de los grandes patrimonios y las rentas del capital; otra la activa al inscribir al recién nacido y la reduce hasta desaparecer en las rentas más altas."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 57 }
+      - { partido: democracia-21, fuente: democracia-21-contigo-y-con-tu-familia, pagina: "2-3" }
+  - titulo: "Unificar las deducciones familiares del IRPF en una sola, reembolsable y de abono mensual"
+    detalle:
+      - "Actualizar con la inflación todos los mínimos familiares."
+      - "La deducción llegaría también a las familias sin cuota suficiente en el IRPF."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 56 }
+  - titulo: "Extender a todas las familias, desde el primer hijo, los beneficios de las familias numerosas"
+    detalle:
+      - "Plan nacional de natalidad."
+      - "Más ayudas y bonificaciones según el número de hijos."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 51 }
+revisado: 2026-11-22

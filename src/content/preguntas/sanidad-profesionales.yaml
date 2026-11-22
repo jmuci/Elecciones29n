@@ -1,0 +1,26 @@
+tema: sanidad
+orden: 2
+pregunta: "¿Qué debería priorizarse en el personal y la atención primaria?"
+opciones:
+  - titulo: "Más profesionales sanitarios y mejores condiciones de trabajo"
+    detalle:
+      - "Más plantilla: al menos 4.500 médicos más en Atención Primaria en una propuesta; ratios de médicos, enfermeros y TCAE por paciente iguales a la media de la UE, con calendario vinculante, en otra; retribuciones mejores en la tercera."
+      - "Mejores condiciones: conciliación y retribución, contratos estables e incentivos para las plazas rurales o de difícil cobertura, según la propuesta."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 69 }
+      - { partido: democracia-21, fuente: democracia-21-sanidad-publica, pagina: 4 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "37-38" }
+  - titulo: "Equipos multidisciplinares y atención psicológica gratuita en la sanidad pública"
+    detalle:
+      - "Atención primaria con equipos multidisciplinares y más capacidad diagnóstica."
+      - "Atención psicológica gratuita, con una primera consulta en un plazo máximo de 30 días."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 51 }
+  - titulo: "Destinar al menos el 25 % del presupuesto sanitario a la atención primaria"
+    detalle:
+      - "Aumento de los fondos de Atención Primaria hasta el 25 % del presupuesto sanitario."
+      - "Una propuesta añade un máximo de 1.300 pacientes por profesional de medicina de familia y una cita en 48 horas hábiles como máximo."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 30 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 90 }
+revisado: 2026-11-22

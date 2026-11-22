@@ -1,0 +1,23 @@
+tema: sanidad
+orden: 3
+pregunta: "¿Qué papel debería tener la gestión privada en la sanidad pública?"
+opciones:
+  - titulo: "Gestión pública directa obligatoria y prohibición de externalizar"
+    detalle:
+      - "Derogar la Ley 15/1997 y establecer la titularidad y la gestión pública directa como modelo obligatorio del Sistema Nacional de Salud."
+      - "Prohibir externalizar centros y servicios y recuperar los servicios privatizados a medida que venzan los contratos."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 88 }
+  - titulo: "Gestión pública directa como vía general y la indirecta como excepción"
+    detalle:
+      - "Ley de Gestión Pública e Integridad del Sistema Nacional de Salud que derogue la Ley 15/1997."
+      - "Planes de internalización paulatina de los servicios hoy privatizados."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 30 }
+  - titulo: "Limitar la privatización, con la gestión directa como modalidad preferente"
+    detalle:
+      - "Gestión directa como modalidad preferente en la sanidad pública."
+      - "Ley de Buen Gobierno y Buena Gestión del Sistema Nacional de Salud."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: "50-51" }
+revisado: 2026-11-22

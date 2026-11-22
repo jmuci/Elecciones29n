@@ -1,0 +1,19 @@
+tema: territorial
+orden: 1
+pregunta: "¿Qué modelo de Estado y de unidad territorial debería defenderse?"
+opciones:
+  - titulo: "Recuperar el delito de sedición y el de convocatoria de referéndum ilegal"
+    detalle:
+      - "Recuperar en el Código Penal el delito de sedición."
+      - "Una propuesta recupera también el delito de convocatoria de referéndum ilegal; otra prohíbe los indultos por delitos contra la integridad territorial e ilegaliza los partidos y organizaciones que atenten contra la unidad de España."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 16 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: "55-56" }
+  - titulo: "Avanzar hacia una república federal o plurinacional con referéndum"
+    detalle:
+      - "Una propuesta plantea un Estado republicano, federal y plurinacional que regule el referéndum y el derecho a decidir, con un pacto territorial que desarrolle los Estatutos."
+      - "Otra plantea un proceso constituyente que culmine en una constitución republicana y un referéndum entre monarquía y república."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 167 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 128 }
+revisado: 2026-11-22

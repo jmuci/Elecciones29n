@@ -1,0 +1,26 @@
+tema: vivienda
+orden: 5
+pregunta: "¿Qué debería hacer el Estado respecto a la compra de vivienda?"
+opciones:
+  - titulo: "Prohibir por ley comprar vivienda con fines distintos de la residencia habitual"
+    detalle:
+      - "Quedaría prohibido comprar vivienda residencial que no vaya a ser residencia habitual de quien compra."
+      - "Las excepciones varían según la propuesta: el alquiler asequible regulado, los familiares hasta segundo grado o la segunda residencia de uso propio."
+      - "Una de las propuestas hace la prohibición absoluta para las personas jurídicas con ánimo de lucro, como fondos de inversión, SOCIMI, inmobiliarias y bancos."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 14 }
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 8 }
+  - titulo: "Facilitar la compra a los jóvenes con avales públicos y ahorro con ventajas fiscales"
+    detalle:
+      - "Ampliar a los menores de 40 años el aval público, que cubre hasta el 20 % del valor de la vivienda."
+      - "Cuenta de ahorro con aportaciones de hasta 2.000 € al año, deducción fiscal del 20 % y rendimientos exentos si se destina a la primera vivienda."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 55 }
+  - titulo: "Reducir o eliminar los impuestos que se pagan al comprar la vivienda habitual"
+    detalle:
+      - "IVA del 0 % en la vivienda nueva y bonificación del 100 % del ITP en la usada para la primera vivienda habitual de una familia española (una propuesta); sin IVA, ITP ni AJD para menores de 35 años, e ITP del 2 % para el resto, hasta 400.000 € (otra)."
+      - "Una de las propuestas recupera la deducción por inversión en vivienda habitual."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 24 }
+      - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 5 }
+revisado: 2026-11-22

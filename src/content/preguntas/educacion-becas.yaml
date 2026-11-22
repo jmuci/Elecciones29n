@@ -1,0 +1,31 @@
+tema: educacion
+orden: 3
+pregunta: "¿Cómo debería ayudarse a quienes no pueden costearse los estudios?"
+opciones:
+  - titulo: "Gratuidad total de las tasas de la universidad pública"
+    detalle:
+      - "Gratuidad progresiva, durante la legislatura, de las tasas de grado, máster y doctorado en las universidades públicas."
+      - "Sistema de becas-salario de hasta 800 euros mensuales según la renta familiar."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "85-86" }
+  - titulo: "Ampliar las becas y las ayudas al estudio"
+    detalle:
+      - "Más becas para que la falta de recursos no impida estudiar."
+      - "Una propuesta actualiza los umbrales de renta y refuerza las ayudas de transporte, residencia y discapacidad; otra eleva las becas postobligatorias al 0,44 % del PIB, con becas-salario y cobro al inicio de curso."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 53 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 36 }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 41 }
+  - titulo: "Una beca como derecho por ley, con los mismos umbrales en la universidad y en la FP"
+    detalle:
+      - "La beca sería un derecho por ley para quien la necesite y apruebe."
+      - "Matrícula gratuita en los ciclos de FP de alta demanda de empleo."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 68 }
+  - titulo: "Pagar las becas al inicio del curso"
+    detalle:
+      - "Unificar los calendarios académicos antes del verano."
+      - "Evaluar la renta fiscal de dos años antes y asignar la revisión económica al Ministerio de Hacienda."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-educacion-en-el-centro, pagina: "6-7" }
+revisado: 2026-11-22

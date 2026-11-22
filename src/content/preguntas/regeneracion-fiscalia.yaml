@@ -1,0 +1,29 @@
+tema: regeneracion
+orden: 2
+pregunta: "¿Cómo debería funcionar la Fiscalía?"
+opciones:
+  - titulo: "Un fiscal general con mandato de cinco años desvinculado del Gobierno"
+    detalle:
+      - "Mandato de cinco años que no cese con el Gobierno que lo propuso (mandato único, en una propuesta)."
+      - "Una propuesta añade un informe vinculante del CGPJ sobre su idoneidad; otra, prohibir las instrucciones del Gobierno sobre casos concretos."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 31 }
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 101 }
+  - titulo: "Que el Gobierno elija al fiscal general entre una terna votada por 3/5 del Congreso"
+    detalle:
+      - "Terna votada en el Congreso por mayoría de 3/5."
+      - "El Gobierno elegiría al fiscal general entre esa terna."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-espana-limpia, pagina: 8 }
+  - titulo: "Encomendar la instrucción penal a la Fiscalía, bajo la supervisión de un juez de garantías"
+    detalle:
+      - "La instrucción de las causas penales la haría el Ministerio Fiscal, supervisado por un juez o jueza de garantías."
+      - "Supresión de la Audiencia Nacional, con sus competencias redistribuidas entre los órganos de la jurisdicción ordinaria."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: "130-131" }
+  - titulo: "Garantizar la imparcialidad e independencia del Fiscal General del Estado"
+    detalle:
+      - "Garantizar la imparcialidad e independencia del Fiscal General del Estado."
+    partidos:
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 55 }
+revisado: 2026-11-22

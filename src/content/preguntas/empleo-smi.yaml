@@ -1,0 +1,28 @@
+tema: empleo
+orden: 1
+pregunta: "¿Qué debería hacerse con el salario mínimo?"
+opciones:
+  - titulo: "Fijar por ley un suelo del salario mínimo del 60 % del salario medio"
+    detalle:
+      - "El salario mínimo no bajaría del 60 % del salario medio (el neto, en una de las propuestas)."
+      - "Las subidas no podrían quedar absorbidas por complementos o pluses salariales."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 38 }
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: 57 }
+  - titulo: "Subir el salario mínimo hasta 1.800 euros mensuales en una legislatura"
+    detalle:
+      - "Fijar por ley que nunca sea inferior al 75 % del salario mediano."
+      - "Subida automática de los conceptos salariales conforme al coste de la vida cuando la negociación colectiva no pacte mejoras."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 41 }
+  - titulo: "Que un órgano técnico independiente lo actualice cada año"
+    detalle:
+      - "Senda plurianual con el objetivo de que no baje de los 2/3 de la mediana salarial."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-mas-salario-mas-productividad, pagina: 3 }
+  - titulo: "Que quien cobre el salario mínimo no pague IRPF"
+    detalle:
+      - "El umbral de exención subiría por ley cada vez que suba el salario mínimo."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 60 }
+revisado: 2026-11-22

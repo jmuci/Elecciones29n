@@ -1,0 +1,26 @@
+tema: seguridad-justicia
+orden: 3
+pregunta: "¿Qué hacer ante la ocupación ilegal de viviendas y los conflictos por impago de alquiler?"
+opciones:
+  - titulo: "Desalojar en horas las viviendas ocupadas ilegalmente"
+    detalle:
+      - "Desalojo en 48 horas (dos propuestas) o en menos de 24 horas (otra)."
+      - "Más recursos para los juzgados de guardia, o endurecimiento del Código Penal, según la propuesta."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 55 }
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: "101-102" }
+      - { partido: vox, fuente: vox-programa-es-sentido-comun, pagina: 24 }
+  - titulo: "Mediación gratuita y juzgados especializados en los conflictos de alquiler"
+    detalle:
+      - "Servicio gratuito y vinculante de mediación en arrendamientos (30 días) y juzgados especializados (60 días más)."
+      - "Tipificar como estafa firmar un contrato con intención premeditada de no pagar."
+    partidos:
+      - { partido: democracia-21, fuente: democracia-21-vivienda-prioridad-1, pagina: 4 }
+  - titulo: "Prohibir los desalojos extrajudiciales y sancionar el acoso inmobiliario"
+    detalle:
+      - "Prohibición de los desalojos extrajudiciales."
+      - "Tipificar el acoso inmobiliario y reforzar sus sanciones."
+      - "Impulsar la ilegalización de las empresas que realizan desalojos al margen de los procedimientos judiciales."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 9 }
+revisado: 2026-11-22

@@ -1,0 +1,30 @@
+tema: empleo
+orden: 2
+pregunta: "¿Cómo debería cambiar la jornada laboral?"
+opciones:
+  - titulo: "Completar la reducción a 37,5 horas y avanzar hacia las 35 por negociación colectiva"
+    detalle:
+      - "Reducción de la jornada sin pérdida de salario."
+      - "Incentivos para que la negociación colectiva avance hacia las 35 horas."
+      - "Registro horario digital."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 42 }
+  - titulo: "Reducir la jornada por ley de forma progresiva hasta 32 horas semanales"
+    detalle:
+      - "Jornada de 37,5 horas de inmediato, en 2026, y de 35 horas en el sector público."
+      - "Reducción posterior hasta 32 horas semanales, sin reducción salarial."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: "61-62" }
+  - titulo: "Reducir la jornada a 30 horas semanales durante la legislatura"
+    detalle:
+      - "Sin reducir los salarios, empezando por 35 horas."
+      - "Posibilidad de una semana de cuatro días y de teletrabajo dos días a la semana en los puestos en que sea posible."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 41 }
+  - titulo: "Extender los bancos de horas y los horarios flexibles para conciliar"
+    detalle:
+      - "Bancos de horas para que quienes tengan hijos o personas dependientes a cargo adapten parte de su jornada."
+      - "Horarios flexibles de entrada y salida y teletrabajo cuando el puesto lo permita."
+    partidos:
+      - { partido: pp, fuente: pp-programa-reconstruccion-nacional, pagina: 57 }
+revisado: 2026-11-22

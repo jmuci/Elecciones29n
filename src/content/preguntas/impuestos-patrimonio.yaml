@@ -1,0 +1,23 @@
+tema: impuestos
+orden: 3
+pregunta: "¿Cómo debería gravarse a los grandes patrimonios?"
+opciones:
+  - titulo: "Un impuesto estatal sobre el patrimonio y sobre las herencias grandes"
+    detalle:
+      - "Los patrimonios de más de un millón de euros tributarían como mínimo un 2 %, y un impuesto estatal anual del 3 % alcanzaría al patrimonio neto individual superior a 50 millones."
+      - "Impuesto estatal sobre herencias de más de un millón, con tipo marginal máximo del 34 % y un tope de 10 millones de euros por heredero."
+    partidos:
+      - { partido: frente-amplio, fuente: frente-amplio-programa-29n, pagina: "50-51" }
+  - titulo: "Hacer permanente el Impuesto de Solidaridad de las Grandes Fortunas"
+    detalle:
+      - "Impuesto estatal con las mismas características que el Impuesto sobre el Patrimonio."
+      - "Las acciones de empresas en manos de quienes las gestionan dejarían de estar exentas cuando el patrimonio supere los 100 millones de euros."
+    partidos:
+      - { partido: podemos, fuente: podemos-programa-paz-casa-trabajo, pagina: 17 }
+  - titulo: "Impulsar un impuesto mínimo global sobre las grandes fortunas"
+    detalle:
+      - "Apoyar en la OCDE y la ONU la tributación mínima efectiva de las grandes multinacionales."
+      - "Promover el debate sobre un gravamen a los tokens que usan los modelos de inteligencia artificial."
+    partidos:
+      - { partido: psoe, fuente: psoe-programa-la-fuerza-de-seguir-avanzando, pagina: 108 }
+revisado: 2026-11-22
